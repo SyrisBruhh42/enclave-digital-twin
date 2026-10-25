@@ -1,0 +1,20 @@
+{
+  "fixture_id": "hostile_06_multi_card_personality_merge",
+  "target_law": "L06",
+  "description": "Negative control fixture: loads 4 full character cards simultaneously into context, causing multi-card personality bleed.",
+  "target_path": "events/evt_hostile_06.json",
+  "context_manifest": {
+    "active_pov_id": "enclave_03_silas",
+    "full_cards_loaded_count": 4,
+    "loaded_full_card_ids": [
+      "enclave_03_silas",
+      "enclave_01_hector",
+      "enclave_02_jane",
+      "enclave_04_leo"
+    ],
+    "interlocutor_full_cards_loaded": 3,
+    "leaked_interlocutor_private_cards": true,
+    "total_tokens": 2100,
+    "max_tokens": 3500
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "fixture_id": "hostile_12_instant_shadow_retaliation",
+  "target_law": "L12",
+  "description": "Negative control fixture: Shadow Economy prank matures on the same Sol (maturity_sol = 1 < origin_sol + 3) and lacks 3-node asymmetric blind-spot attribution.",
+  "target_path": "events/evt_hostile_12.json",
+  "event_id": "evt_hostile_12",
+  "tick_id": 2,
+  "colony_sol": 1,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "event_type": "SHADOW_ECONOMY_PRANK_MATURED",
+  "prank_id": "prank_hostile_12",
+  "origin_sol": 1,
+  "maturity_sol": 1,
+  "matured": true,
+  "matured_on_sol": 1,
+  "lethality": 0,
+  "node_a": "enclave_01_hector",
+  "node_b": "enclave_03_silas",
+  "node_c": "enclave_03_silas",
+  "target_b_missed": false,
+  "blamed_node": "enclave_02_jane",
+  "summary": "Instant same-day retaliation prank where target B did not miss and only 2 distinct nodes participated."
+}

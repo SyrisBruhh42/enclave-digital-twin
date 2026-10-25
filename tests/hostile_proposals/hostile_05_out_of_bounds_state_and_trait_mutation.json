@@ -1,0 +1,18 @@
+{
+  "fixture_id": "hostile_05_out_of_bounds_state_and_trait_mutation",
+  "target_law": "L05",
+  "description": "Negative control fixture: momentary state stress = 1.45 (> 1.0), extraversion_state = -0.30 (< 0.0), and mutates Tier-1 baseline trait means.",
+  "target_path": "events/evt_hostile_05.json",
+  "character_id": "enclave_03_silas",
+  "tier_1_mutation": true,
+  "mutated_tier_1_means": {
+    "openness": 0.92,
+    "conscientiousness": 0.12
+  },
+  "momentary_state": {
+    "stress": 1.45,
+    "fatigue": -0.15,
+    "openness_state": 1.22,
+    "extraversion_state": -0.30
+  }
+}
