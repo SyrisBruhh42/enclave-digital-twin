@@ -444,6 +444,165 @@ class TestEnclaveCrucible(unittest.TestCase):
     def test_11_live_jules_api_request_schema_oasis_twin_bridge_and_4fleet_governor(self) -> None:
         test_live_jules_api_schema_oasis_twin_bridge_and_4fleet_governor()
 
+    def test_12_enclave_voxel_city_and_willow_animal_crossing_sim(self) -> None:
+        test_enclave_voxel_city_and_willow_animal_crossing_sim()
+
+
+def test_enclave_voxel_city_and_willow_animal_crossing_sim() -> None:
+    from engine.enclave_city_sim import (
+        DIY_RECIPES,
+        ENCLAVE_BIOMES,
+        ENCLAVE_BUILDINGS,
+        MUSEUM_CATALOG,
+        SUITE_SYNERGY_ATLAS,
+        WILLOW_AC_TOOLS,
+        EnclaveVoxelCityEngine,
+        generate_enclave_city_state,
+        perform_willow_ac_action,
+        summarize_enclave_city_state,
+    )
+    from engine.oasis_twin_bridge import (
+        extract_enclave_twin_live_state,
+        sync_enclave_oasis_save_and_bridge,
+    )
+
+    # 1. Verify 5 Biomes, 18 Buildings, 6 Tools, 16 Museum Specimens, 12 DIY Recipes & Suite Synergy Atlas
+    assert len(ENCLAVE_BIOMES) == 5
+    assert len(ENCLAVE_BUILDINGS) == 18
+    assert len(WILLOW_AC_TOOLS) == 6
+    assert len(MUSEUM_CATALOG) == 16
+    assert len(DIY_RECIPES) == 12
+    assert {"SR-02", "SR-04", "SR-05", "SR-08"} <= set(SUITE_SYNERGY_ATLAS.keys())
+
+    recipe_ids = {r["recipe_id"] for r in DIY_RECIPES}
+    assert "theme_enclave_first_forge" in recipe_ids
+    assert "theme_enclave_living_atlas" in recipe_ids
+
+    hearth_biomes = {b["hearth_biome"] for b in ENCLAVE_BUILDINGS}
+    assert hearth_biomes == {"Porch Hearth", "Rain Garden", "Flow Hourglass", "Alchemist Crucible"}
+
+    epistemic_tiers = {m["epistemic_tier"] for m in MUSEUM_CATALOG}
+    assert epistemic_tiers == {
+        "TIER_1_VERIFIED_EVENT",
+        "TIER_2_EMPIRICAL_SPECIMEN",
+        "TIER_3_ORAL_BALLAD",
+        "TIER_4_SPECULATIVE_HYPOTHESIS",
+    }
+
+    city_a = generate_enclave_city_state(REPO_ROOT, seed="enclave_sol_001", biome_id="crater_valley")
+    city_b = generate_enclave_city_state(REPO_ROOT, seed="enclave_sol_001", biome_id="crater_valley")
+    assert city_a == city_b
+    assert city_a["schema"] == "enclave-voxel-city-v2"
+    assert city_a["grid_size"] == 48
+    assert len(city_a["citizens"]) == 16
+    assert len(city_a["buildings"]) == 18
+    assert {c["character_id"] for c in city_a["citizens"]} == set(CANONICAL_16_CHARACTER_IDS)
+    assert {c["mbti_type"] for c in city_a["citizens"]} == CANONICAL_16_MBTI
+    assert "chronosphere" in city_a
+    assert "weather" in city_a
+    assert "drama_beat" in city_a
+    assert "willow_silas_domain_friction" in city_a
+    assert "cross_capsule_synergies" in city_a
+
+    building_ids = {b["building_id"] for b in city_a["buildings"]}
+    assert "bldg_willow_homestead" in building_ids
+    assert "proj_07_living_atlas" in building_ids
+    assert "proj_08_hearth_metabolic_engine" in building_ids
+
+    # 2. Verify all Willow Animal Crossing Actions, 5 Constitutional Catalysts & Direct Engine Tick Reuse
+    engine = EnclaveVoxelCityEngine(repo_root=REPO_ROOT, seed="enclave_sol_001")
+    for act_type, payload in (
+        ("forage_dig", {"specimen_id": "spec_geode_bismuth"}),
+        ("catch_critter", {"specimen_id": "spec_critter_prism_moth"}),
+        ("catch_fish", {"specimen_id": "spec_fish_ammonite"}),
+        ("water_crop", {}),
+        ("craft_diy", {"recipe_id": "diy_herbal_liniment"}),
+        ("craft_diy", {"recipe_id": "theme_enclave_first_forge"}),
+        ("place_decor", {"recipe_id": "diy_bismuth_lantern", "x": 19, "y": 29}),
+        ("gift_citizen", {"target_id": "enclave_03_silas", "item_id": "diy_herbal_liniment"}),
+        ("complete_daily_favor", {}),
+        ("donate_museum", {"specimen_id": "spec_geode_bismuth"}),
+    ):
+        res = engine.perform_action(act_type, payload)
+        assert res["ok"] is True
+        assert res["rup_earned"] > 0
+        assert res["feed_entry"]["lethality"] == 0
+
+    for cat in ("feast", "prank", "expedition", "solar_flare", "harvest_moot"):
+        cat_res = perform_willow_ac_action(engine.state, "trigger_catalyst", {"catalyst": cat})
+        assert cat_res["ok"] is True
+        assert cat_res["feed_entry"]["lethality"] == 0
+        if cat == "feast":
+            assert len(cat_res["feed_entry"]["actors"]) == 16
+
+    tick_res = engine.advance_tick()
+    assert tick_res["schema"] == "enclave-voxel-city-v2"
+    assert engine.state["chronosphere"]["tick_id"] >= 2
+    assert "kp_exo" in engine.state["weather"]
+
+    summary = summarize_enclave_city_state(engine.state)
+    assert summary["currency_code"] == "RUP"
+    assert summary["in_world_economy_monetary"] is False
+    assert summary["museum_donations_count"] >= 3
+    assert summary["daily_favors_completed"] >= 1
+    assert summary["willow_homestead_comfort_score"] > 100
+    assert summary["bridge_global"] == "window.ArcadeAssetBridge"
+
+    # 3. Verify Oasis Twin Bridge integration (enclaveCitySummary & enclave_city_state.json)
+    live_state = extract_enclave_twin_live_state(REPO_ROOT)
+    assert "enclaveCitySummary" in live_state
+    assert live_state["enclaveCitySummary"]["schema"] == "enclave-voxel-city-v2"
+
+    with tempfile.TemporaryDirectory() as td:
+        base = Path(td)
+        save_dir = base / "saves"
+        bridge_file = base / "aegis_asset_bridge.json"
+        sync_out = engine.sync_oasis_bridge(save_root=save_dir, bridge_path=bridge_file)
+        assert (save_dir / "enclave_city_state.json").is_file()
+        assert "enclave_city_state.json" in sync_out["sync_result"]["saved_files"]
+        bridge_data = json.loads(bridge_file.read_text(encoding="utf-8"))
+        assert bridge_data["currency_code"] == "RUP"
+        assert bridge_data["currencyCode"] == "RUP"
+        assert "enclaveCitySummary" in bridge_data
+
+    # 4. Verify UI files (ui/enclave_city.html & ui/dispatch_viewer.html link + SR-02/04/05/08)
+    city_html_path = REPO_ROOT / "ui" / "enclave_city.html"
+    dispatch_html_path = REPO_ROOT / "ui" / "dispatch_viewer.html"
+    assert city_html_path.is_file()
+    city_html = city_html_path.read_text(encoding="utf-8")
+    assert 'id="town-canvas"' in city_html
+    assert "evergreen-dark" in city_html
+    assert "evergreen-light" in city_html
+    assert "high-contrast" in city_html
+    assert "enclave_07_willow" in city_html
+    assert "theme_enclave_first_forge" in city_html
+    assert "theme_enclave_living_atlas" in city_html
+    assert "Porch Hearth" in city_html
+    assert "TIER_1_VERIFIED_EVENT" in city_html
+    assert "window.ArcadeAssetBridge" in city_html
+    assert "enclave_art_lighting.js" in city_html
+    assert "EnclaveArtLighting.renderWorldPass" in city_html
+    assert "EnclaveArtLighting.renderScreenPass" in city_html
+    assert "dispatch_viewer.html" in city_html
+    assert "https://cdn." not in city_html
+
+    art_lighting_path = REPO_ROOT / "ui" / "enclave_art_lighting.js"
+    assert art_lighting_path.is_file()
+    art_lighting_js = art_lighting_path.read_text(encoding="utf-8")
+    assert "computeAtmosphericState" in art_lighting_js
+    assert "renderWorldPass" in art_lighting_js
+    assert "renderScreenPass" in art_lighting_js
+    assert "reducedMotion" in art_lighting_js
+
+    antifragile_schema_path = REPO_ROOT / "canon" / "schemas" / "enclave_city_antifragile_contract.json"
+    assert antifragile_schema_path.is_file()
+    antifragile_contract = json.loads(antifragile_schema_path.read_text(encoding="utf-8"))
+    assert antifragile_contract["schema_version"] == "enclave_city_antifragile_contract_v2.0.0"
+    assert antifragile_contract["contract_id"] == "lfs-enclave-city-antifragile-contract-v2"
+
+    dispatch_html = dispatch_html_path.read_text(encoding="utf-8")
+    assert 'href="enclave_city.html"' in dispatch_html
+
 
 def test_live_jules_api_schema_oasis_twin_bridge_and_4fleet_governor() -> None:
     from engine.oasis_twin_bridge import sync_enclave_oasis_save_and_bridge
@@ -581,14 +740,18 @@ def test_live_jules_api_schema_oasis_twin_bridge_and_4fleet_governor() -> None:
             bridge_path=bridge_file,
         )
         assert (save_dir / "save.lineage.json").is_file()
+        assert (save_dir / "enclave_city_state.json").is_file()
         assert sync_res["lineage"]["schema"] == "aegisEnvelopeV1-save-lineage"
         assert sync_res["lineage"]["project_id"] == "PA-15"
         assert sync_res["meta_rewards"]["currency_code"] == "RUP"
         assert sync_res["meta_rewards"]["total_earned_rupees"] >= 35
         assert sync_res["meta_rewards"]["in_world_economy_monetary"] is False
         bridge_json = json.loads(bridge_file.read_text(encoding="utf-8"))
+        assert bridge_json["currency_code"] == "RUP"
+        assert bridge_json["currencyCode"] == "RUP"
         assert "enclave_07_willow" in bridge_json["enclaveTwinLiveState"]["character_states"]
         assert bridge_json["enclaveTwinLiveState"]["willow_resonance"]["character_id"] == "enclave_07_willow"
+        assert bridge_json["enclaveCitySummary"]["schema"] == "enclave-voxel-city-v2"
 
     # 4. Verify 4-factory telemetry, PA-15 project_id, manifest entrypoint & zero hardcoded home paths (UMB-01)
     telemetry = compute_cross_fleet_rolling_telemetry(repo_root=REPO_ROOT)

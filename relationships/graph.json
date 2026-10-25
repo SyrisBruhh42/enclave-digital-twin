@@ -36,8 +36,8 @@
       "squad_a": "The Forge",
       "squad_b": "The Forge",
       "relationship_type": "Mentor_Mentee",
-      "bond_strength": 0.94,
-      "trust": 0.95,
+      "bond_strength": 0.95,
+      "trust": 0.96,
       "affection": 0.91,
       "intellectual_friction": 0.4,
       "how_a_sees_b": "Reveres Silas as the gruff grandfather who taught him how metal breathes under strain, and deliberately leaves small tool-puzzles on the bench to make the old man feel needed.",
@@ -45,7 +45,8 @@
       "shared_history_hook": "Silas forged Hector's first insulated spanner when Hector was ten and still inspects its bismuth grip before every high-Kp storm ascent.",
       "evidence_refs": [
         "evt_s001_t0001_dawn_shift",
-        "evt_s001_t0004_the_feast"
+        "evt_s001_t0004_the_feast",
+        "evt_s004_t0013_morning_intent"
       ]
     },
     {
@@ -6533,6 +6534,6 @@
       }
     }
   },
-  "updated_at_tick": 4,
-  "applied_event_count": 6
+  "updated_at_tick": 13,
+  "applied_event_count": 7
 }

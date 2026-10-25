@@ -1,0 +1,921 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aegis.lfs.local/schemas/enclave_city_antifragile_contract.json",
+  "schema_version": "enclave_city_antifragile_contract_v2.0.0",
+  "contract_id": "lfs-enclave-city-antifragile-contract-v2",
+  "title": "EnclaveVoxelCityAndCompanionAntifragileExecutionContract",
+  "description": "End-to-end self-healing antifragile prompt engineering, state-hash ratchet, evidence-cited grounding, and pairwise-disjoint multi-agent execution contract for The Enclave of the 16 (PA-15) 2.5D Voxel City and Willow Desktop Pet (PA-14) Animal Crossing Companion integration, anchored directly to cp12-oasis-component-atlas-v1 and core/lfs-ctl DMAIC primitives.",
+  "audit_status": "ADVERSARIAL_AUDIT_PASSED_ZERO_PII_UMB01_CLEAN",
+  "architecture_paradigm": "EVENT_SOURCED_DETERMINISTIC_HOST_PLUS_BOUNDED_10_BLOCK_CONTEXT_RATCHET",
+  "oasis_component_atlas_reuse": {
+    "authoritative_atlas_path": "3-lfs-aegis-linux/governance/oasis-component-atlas.json",
+    "atlas_schema": "cp12-oasis-component-atlas-v1",
+    "zero_duplicate_invention_policy": "Never build new governance, locking, test-ratchet, or economy primitives when canonical ATLAS-* foundation primitives, Synergy Recipes (SR-*), or proven open-source patterns already exist in the LFS Suite.",
+    "reused_foundation_primitives": {
+      "ATLAS-ABAC-01": {
+        "name": "AUTH-1 Total Typed ABAC, DA-10 Step-Up & Sovereign Override Engine",
+        "canonical_paths": [
+          "2-lfs-server/core/web-platform/lib/security/typedAbacEngine.ts",
+          "3-lfs-aegis-linux/core/companion/clients/linux/aegis_abac.py",
+          "3-lfs-aegis-linux/governance/authority-contract.json"
+        ],
+        "role_in_enclave_city": "Governs all capsule actions, cross-game item unlocks (lfs.game.item.use), and Sovereign Override gates."
+      },
+      "ATLAS-LDS-01": {
+        "name": "Lewis Design System (4 Theme Packs + ZT-9 Comfort + ZT-10 Safe Mode)",
+        "canonical_paths": [
+          "3-lfs-aegis-linux/governance/lds-tokens.w3c.json",
+          "3-lfs-aegis-linux/core/lds/compile_tokens.py",
+          "3-lfs-aegis-linux/core/lds/aegis_lds_theme.tres"
+        ],
+        "role_in_enclave_city": "Supplies the 4 canonical theme packs (evergreen-dark, evergreen-light, high-contrast, calm), >=36px desktop hit targets, and ZT-9 comfort overrides (comfort.reduced_motion, comfort.haptics_enabled, comfort.audio_muted)."
+      },
+      "ATLAS-ECON-01": {
+        "name": "Embedded Rupees (RUP) CMY Gem Economy, Scalable Satchel & Dormant Vault B Spine",
+        "canonical_paths": [
+          "2-lfs-server/core/web-platform/lib/platform/economy-storage.ts",
+          "2-lfs-server/core/web-platform/lib/platform/economy-lifecycle.ts",
+          "3-lfs-aegis-linux/core/companion/clients/linux/lfs_pet.py",
+          "3-lfs-aegis-linux/governance/economy-balance.json"
+        ],
+        "role_in_enclave_city": "Provides the 9-tier CMY Rupee (RUP) player meta-economy [1, 5, 10, 25, 50, 100, 250, 500, 1000] while keeping in-world Enclave exchanges 100% non-monetary (Law L12)."
+      },
+      "ATLAS-SAVE-01": {
+        "name": "AegisEnvelopeV1 AES-256-GCM Save Lab, Rclone 6-Gate Vault & Cross-Game Asset Bridge",
+        "canonical_paths": [
+          "2-lfs-server/core/web-platform/lib/crypto/aegisEnvelopeV1.ts",
+          "3-lfs-aegis-linux/core/companion/clients/linux/aegis_gdrive_bridge.py",
+          "3-lfs-aegis-linux/capsules/enclave-digital-twin/engine/oasis_twin_bridge.py"
+        ],
+        "role_in_enclave_city": "Provides vector-clock save.lineage.json Merkle ratchets and fcntl.flock(LOCK_EX) atomic updates to aegis_asset_bridge.json."
+      },
+      "ATLAS-QUEUE-01": {
+        "name": "OasisQueueEngine (Q48.16 H-WF2Q+ + JADA-DRR) & Sovereign Bypass Deck",
+        "canonical_paths": [
+          "2-lfs-server/core/web-platform/lib/queue/oasisQueueEngine.ts",
+          "3-lfs-aegis-linux/core/lfs-ctl/build_coordinator.py",
+          "3-lfs-aegis-linux/core/companion/clients/linux/factory_pause_barrier.py"
+        ],
+        "role_in_enclave_city": "Governs HardwareSympathyGuard (>= 4 GiB free RAM), FactoryPauseBarrier, and Law L14 rolling 24h Jules session ceiling (<= 270/300)."
+      },
+      "ATLAS-SPINE-01": {
+        "name": "lfs-ctl Antifragile Spine (A10 Health, A20 Breaker, A40 Fixture, A50 Rollback, W6-T2 DMAIC)",
+        "canonical_paths": [
+          "3-lfs-aegis-linux/core/lfs-ctl/lfs_ctl.py",
+          "3-lfs-aegis-linux/core/lfs-ctl/dmaic_bridge.py",
+          "3-lfs-aegis-linux/core/lfs-ctl/patch_policy_gate.py",
+          "3-lfs-aegis-linux/core/lfs-ctl/crash_circuit_breaker.py",
+          "3-lfs-aegis-linux/core/lfs-ctl/rollback_slot_manager.py",
+          "3-lfs-aegis-linux/core/lfs-ctl/incident_to_fixture.py"
+        ],
+        "role_in_enclave_city": "Reuses DmaicLoopGuard (P6-FM-03 / SCN-176), ZeroTrustScrubber (ZT-6 / SCN-177), PatchPolicyGate (P6-FM-08 / EXT-11 / SCN-179), DependencyCascadeSuppressor (SCN-180), and DmaicAutonomyGovernor (SCN-192..193)."
+      },
+      "ATLAS-ERR-01": {
+        "name": "4-Part Human Error Formatter & ZT-6 Secret Redactor",
+        "canonical_paths": [
+          "3-lfs-aegis-linux/core/companion/clients/linux/aegis_errors.py",
+          "3-lfs-aegis-linux/governance/error-catalog.json"
+        ],
+        "role_in_enclave_city": "Formats all diagnostic and gate failures as ZT-6 scrubbed 4-part human errors."
+      },
+      "ATLAS-HELP-01": {
+        "name": "Offline <= Grade 8.0 Help Engine & Argon-4 Playbook Matcher",
+        "canonical_paths": [
+          "3-lfs-aegis-linux/core/companion/clients/linux/aegis_help.py",
+          "3-lfs-aegis-linux/governance/help-catalog.json"
+        ],
+        "role_in_enclave_city": "Binds offline help topics and <100ms Argon-4 pre-computed remediation playbooks."
+      }
+    },
+    "reused_synergy_recipes": {
+      "SR-02": {
+        "archetype": "New 3D Voxel Factory, Automation, or Colony Builder",
+        "reused_primitives": [
+          "lfs-tycoon/engine/grid_manager.gd",
+          "lfs-tycoon/engine/offline_sim.gd",
+          "quantum-aegis-godot/src/core/PowerGridManager.gd"
+        ],
+        "integration_target": "48x48 2.5D Voxel Colony spatial grid, building footprint collision, and deterministic offline Sol simulation."
+      },
+      "SR-04": {
+        "archetype": "Emergent AI Town, Social Sim, or Detective Mystery Game",
+        "reused_primitives": [
+          "enclave-digital-twin/engine/drama_director.py",
+          "enclave-digital-twin/engine/local_ai_manager.py",
+          "dads-book-lore/tools/atlas_forge.py"
+        ],
+        "integration_target": "16-citizen Whole-Trait ODE social simulation, Cassandra 4-stage drama pacing, and Living Atlas Museum cataloging."
+      },
+      "SR-05": {
+        "archetype": "Physics-Based Falling-Sand, Alchemical, or Terraforming Game",
+        "reused_primitives": [
+          "crucible-automata/crates/automata-core/src/margolus.rs",
+          "crucible-automata/crates/automata-core/src/chunk_cache.rs",
+          "crucible-automata/sanctuary_window.py"
+        ],
+        "integration_target": "Willow ISTP alchemical chelation recipes, ferrofluid basin standing waves, and 5 Crater Valley biome micro-climates."
+      },
+      "SR-07": {
+        "archetype": "New HTML5 Micro-Game or Retro Anthology Cabinet",
+        "reused_primitives": [
+          "lfs-trash-arcade/window.ArcadeAssetBridge",
+          "html-pet/js/state.js"
+        ],
+        "integration_target": "Zero-dependency HTML5 Canvas 2.5D isometric voxel viewport (ui/enclave_city.html) and cross-capsule state synchronization."
+      },
+      "SR-08": {
+        "archetype": "Cross-Game Cosmetic, Pet, Rupee & Trophy Reward Ecosystem",
+        "reused_primitives": [
+          "lfs-tycoon/content/aegis_asset_bridge.json",
+          "willow-desktop-pet/src/renderer/wardrobe.html",
+          "2-lfs-server/core/web-platform/lib/platform/economy-lifecycle.ts"
+        ],
+        "integration_target": "Willow Desktop Pet (PA-14) 16 Enclave emotion animations, 48-SKU Wardrobe Studio, and CMY Rupee (RUP) rewards."
+      },
+      "SR-14": {
+        "archetype": "Autonomous Multi-Agent Content Factory or Game Campaign Supervisor",
+        "reused_primitives": [
+          "lfs-tycoon/tools/check_capsules.py",
+          "core/lfs-ctl/build_coordinator.py",
+          "enclave-digital-twin/tools/enclave_fleet_ctl.py"
+        ],
+        "integration_target": "Pairwise-disjoint multi-agent wave orchestration, 16-Law constitutional gate checking, and Jules 270/300 session governor."
+      }
+    },
+    "folded_open_source_and_academic_architectures": [
+      {
+        "source_paradigm": "Park et al. (2023) Generative Agents / Stanford Smallville",
+        "folded_into": "engine/memory_stream.py + engine/drift_auditor.py",
+        "mechanism": "Recency x Importance x Relevance memory retrieval stream + Nightly Evidence-Cited Reflections (Law L08) + Anti-Sycophancy Guard (Law L16)."
+      },
+      {
+        "source_paradigm": "Wang et al. (2024) InCharacter & Fleeson (2001) Whole-Trait Theory",
+        "folded_into": "engine/state_ode.py + engine/drift_auditor.py",
+        "mechanism": "Density distributions over Big Five + HEXACO Honesty-Humility with z-score circuit breaker (|z| <= 2.0) and 3-tick depth-0 Author's Note re-anchoring."
+      },
+      {
+        "source_paradigm": "Mischel & Shoda (1995) Cognitive-Affective Processing System (CAPS)",
+        "folded_into": "engine/state_ode.py + capsules/willow-desktop-pet/src/shared/enclave-emotions.mjs",
+        "mechanism": "Deterministic AST-evaluated IF-THEN situational signatures (when_condition -> state_deltas + Willow somatic animation triggers)."
+      },
+      {
+        "source_paradigm": "NovelAI Ordered Context Reservations & SillyTavern Swap-Mode World Info",
+        "folded_into": "engine/context_compiler.py",
+        "mechanism": "10-block ordered token budget (<= 3,500 tokens, Law L07), single-POV card swap isolation (Law L06), and keyword + and_keys + sticky_ticks lorebook matching."
+      }
+    ]
+  },
+  "project_bindings": {
+    "enclave_digital_twin": {
+      "project_id": "PA-15",
+      "capsule_id": "enclave-digital-twin",
+      "capsule_rel_path": "capsules/enclave-digital-twin",
+      "city_sim_schema": "enclave-voxel-city-v2",
+      "live_state_schema": "enclave-twin-live-state-v2",
+      "save_lineage_schema": "aegisEnvelopeV1-save-lineage",
+      "save_dir_xdg_template": "${XDG_DATA_HOME:-$HOME/.local/share}/lfs-oasis/saves/enclave-digital-twin"
+    },
+    "willow_desktop_pet": {
+      "project_id": "PA-14",
+      "capsule_id": "willow-desktop-pet",
+      "capsule_rel_path": "capsules/willow-desktop-pet",
+      "shared_city_schema": "lfs-enclave-voxel-city-v1",
+      "personality_guide_schema": "lfs-enclave-16-personality-guide-v1",
+      "persona_stack_version": "persona_stack_v2.0.0"
+    },
+    "cross_game_asset_bridge": {
+      "schema": "lfs-local-abac-v1",
+      "bridge_path_xdg_template": "${XDG_DATA_HOME:-$HOME/.local/share}/lfs-aegis/aegis_asset_bridge.json",
+      "locking_protocol": "fcntl.flock(LOCK_EX) + tempfile.mkstemp + os.fsync + os.replace (implemented in engine/oasis_twin_bridge.py)"
+    }
+  },
+  "context_rot_and_state_drift_shield": {
+    "law_l06_single_pov_swap_isolation": {
+      "full_cards_loaded_count": 1,
+      "interlocutor_full_cards_loaded": 0,
+      "leaked_interlocutor_private_cards": false,
+      "max_dyadic_interlocutors": 3,
+      "per_interlocutor_token_cap": 100,
+      "allowed_interlocutor_fields": [
+        "character_id",
+        "name",
+        "epithet",
+        "squad",
+        "dialectic_role",
+        "grand_project",
+        "bond_strength",
+        "relationship_phase",
+        "pov_perception"
+      ]
+    },
+    "law_l07_bounded_10_block_context_window": {
+      "max_tokens_hard_ceiling": 3500,
+      "reserved_block_sum_tokens": 3470,
+      "safety_headroom_tokens": 30,
+      "token_estimator_formula": "ceil(len(text.split()) * 1.35)",
+      "sentence_boundary_trimming": true,
+      "mandatory_block_sequence": [
+        {
+          "block_index": 1,
+          "block_id": "system_contract",
+          "cap_tokens": 300,
+          "required": true,
+          "never_trim": true,
+          "purpose": "Pins Enclave PvE conflict law, CALYPSO zero-raw-stats rule, and Rashomon single-POV relay contract."
+        },
+        {
+          "block_index": 2,
+          "block_id": "pov_core_and_voice",
+          "cap_tokens": 450,
+          "required": true,
+          "never_trim": true,
+          "purpose": "Loads strictly 1 active POV character core card (Tier-1 OCEAN means, MBTI/Enneagram lens, and pinned voice anchors)."
+        },
+        {
+          "block_index": 3,
+          "block_id": "momentary_state_and_caps",
+          "cap_tokens": 150,
+          "required": true,
+          "never_trim": false,
+          "purpose": "Injects momentary Whole-Trait ODE state vector, stress/fatigue in [0,1], Polarity Inversion status, and active Tier-2 CAPS directives."
+        },
+        {
+          "block_index": 4,
+          "block_id": "world_chronosphere_slice",
+          "cap_tokens": 200,
+          "required": true,
+          "never_trim": false,
+          "purpose": "Injects Colony Sol, tick_id, day_phase, Twin Suns Kp_exo shear, active biome regime, and Schrodinger's Harvest debate."
+        },
+        {
+          "block_index": 5,
+          "block_id": "dyadic_interlocutor_views",
+          "cap_tokens": 300,
+          "required": true,
+          "never_trim": false,
+          "purpose": "Renders up to 3 interlocutors strictly via asymmetric dyadic perception and bond_strength without private card leakage."
+        },
+        {
+          "block_index": 6,
+          "block_id": "triggered_lore_cards",
+          "cap_tokens": 450,
+          "required": false,
+          "never_trim": false,
+          "purpose": "Injects deterministic keyword + and_keys + sticky_ticks matched canonical lore cards (lore_01..18) sorted by priority."
+        },
+        {
+          "block_index": 7,
+          "block_id": "retrieved_memories",
+          "cap_tokens": 550,
+          "required": false,
+          "never_trim": false,
+          "purpose": "Injects top-k Smallville memory stream entries ranked by recency, importance, and relevance."
+        },
+        {
+          "block_index": 8,
+          "block_id": "rolling_coarse_summary",
+          "cap_tokens": 300,
+          "required": false,
+          "never_trim": false,
+          "purpose": "Compresses prior Sol/phase narrative progression into a bounded coarse summary."
+        },
+        {
+          "block_index": 9,
+          "block_id": "verbatim_prev_handoff",
+          "cap_tokens": 650,
+          "required": true,
+          "never_trim": false,
+          "keep_tail_on_trim": true,
+          "purpose": "Preserves trailing verbatim prose of segment k-1 so the physical/interpersonal Rashomon baton handoff is never truncated."
+        },
+        {
+          "block_index": 10,
+          "block_id": "authors_note_depth_zero",
+          "cap_tokens": 120,
+          "required": true,
+          "never_trim": true,
+          "purpose": "Depth-0 bracketed [Author's Note: ...] enforcing next_pov_target baton handoff (Law L10) and any active 3-tick Law L16 drift re-anchor."
+        }
+      ]
+    },
+    "state_hash_ratchet_and_ode_invariants": {
+      "law_l05_tier_1_immutability": {
+        "mutable_tier_1_means_allowed": false,
+        "max_mean_deviation_epsilon": 1e-6,
+        "momentary_state_bounds": [0.0, 1.0],
+        "bounded_state_keys": [
+          "openness",
+          "conscientiousness",
+          "extraversion",
+          "agreeableness",
+          "neuroticism",
+          "hexaco_honesty_humility",
+          "stress",
+          "fatigue",
+          "sleep_debt_norm"
+        ],
+        "whole_trait_ode_formula": "state_t = clip(mu + sigma * z_t + sum(Delta_CAPS) + 0.50 * (state_{t-1} - mu), 0.0, 1.0)",
+        "stress_ode_formula": "stress_t = clip(1.0 - exp(-(0.35 * W_t + 0.30 * F_t + 0.20 * B_t + 0.15 * D_t)) + Delta_CAPS_stress - R_feast, 0.0, 1.0)"
+      },
+      "law_l09_polarity_inversion_gate": {
+        "min_stress_threshold": 0.80,
+        "min_kp_exo_threshold": 7.0,
+        "required_prior_cooldown_days": 0,
+        "hazard_probability_formula": "p = 0.015 * sigmoid(10.0 * (stress_t - 0.82))",
+        "cooldown_feasts_on_activation": 7
+      },
+      "save_lineage_merkle_ratchet": {
+        "atlas_primitive": "ATLAS-SAVE-01",
+        "schema": "aegisEnvelopeV1-save-lineage",
+        "head_hash_formula": "sha256(canonical_json(sha256_manifest) + ':' + str(generation))",
+        "monotonic_generation_rule": "generation_after == generation_before + 1",
+        "tracked_artifacts": [
+          "latest.json",
+          "sol_*_dispatch.json",
+          "graph.json",
+          "enclave_city_state.json"
+        ]
+      }
+    },
+    "law_l16_psychometric_drift_circuit_breaker": {
+      "z_score_formula": "z_d = (x_bar_d - mu_d) / (sigma_d / sqrt(max(1, n_d)))",
+      "max_abs_z_threshold": 2.0,
+      "monitored_axes": [
+        "openness",
+        "conscientiousness",
+        "extraversion",
+        "agreeableness",
+        "neuroticism",
+        "hexaco_honesty_humility"
+      ],
+      "smallville_anti_sycophancy_guard": {
+        "enabled": true,
+        "trigger_rule": "z_scores['agreeableness'] > 2.0 and (target_means['agreeableness'] <= 0.50 or z_scores['agreeableness'] > 2.5)",
+        "low_agreeableness_specialists": [
+          "enclave_07_willow",
+          "enclave_03_silas",
+          "enclave_10_isla",
+          "enclave_02_jane",
+          "enclave_13_ryn",
+          "enclave_01_hector",
+          "enclave_14_vex",
+          "enclave_04_leo"
+        ]
+      },
+      "assistant_axis_meta_theatrical_guard": {
+        "enabled": true,
+        "forbidden_meta_phrases": [
+          "as an ai",
+          "as a language model",
+          "how can i help you",
+          "i'd be happy to assist",
+          "certainly! here is",
+          "in this roleplay",
+          "fourth wall",
+          "helpful assistant",
+          "let me know if you need anything else"
+        ],
+        "psychometric_collapse_signature": "target_means['agreeableness'] <= 0.45 and z_scores['agreeableness'] > 2.5 and z_scores['neuroticism'] < -2.0"
+      },
+      "self_healing_re_anchor_protocol": {
+        "drift_alert_required_on_breach": true,
+        "re_anchor_ticks": 3,
+        "injection_target_block": "authors_note_depth_zero",
+        "injection_template": "[Author's Note (Law L16 InCharacter Drift Re-Anchor — Pin for Next 3 Scenes): {char_name} ({char_id}, {epithet}). Drifted Axes: {axis_corrections}. Voice Anchor: {tagline} | Cadence: {cadence}]"
+      }
+    }
+  },
+  "hallucination_and_schema_drift_shield": {
+    "evidence_cited_grounding_invariants": {
+      "law_l08_reflection_citations": {
+        "min_cited_event_ids": 1,
+        "must_exist_in_events_ledger": true,
+        "applies_to": [
+          "NIGHTLY_REFLECTION",
+          "mutable_relationship_update"
+        ]
+      },
+      "law_l15_evening_dispatch_faithfulness": {
+        "min_cited_event_ids_per_claim": 1,
+        "verify_actor_membership_in_cited_events": true,
+        "verify_location_match_in_cited_events": true,
+        "mandatory_day_phases_coverage": [
+          "DAWN_SHIFT",
+          "MIDDAY_EXPEDITION",
+          "DUSK_CRAFT",
+          "THE_FEAST"
+        ]
+      },
+      "voxel_city_and_ac_action_receipts": {
+        "require_canonical_actor_ids": true,
+        "require_canonical_specimen_or_recipe_ids": true,
+        "require_lethality_zero": true,
+        "supported_willow_ac_actions": [
+          "forage_dig",
+          "catch_critter",
+          "catch_fish",
+          "water_crop",
+          "craft_diy",
+          "place_decor",
+          "gift_citizen",
+          "complete_daily_favor",
+          "donate_museum",
+          "trigger_catalyst"
+        ]
+      }
+    },
+    "canonical_identifier_registries": {
+      "canonical_16_character_ids": [
+        "enclave_01_hector",
+        "enclave_02_jane",
+        "enclave_03_silas",
+        "enclave_04_leo",
+        "enclave_05_kaio",
+        "enclave_06_zara",
+        "enclave_07_willow",
+        "enclave_08_terra",
+        "enclave_09_orion",
+        "enclave_10_isla",
+        "enclave_11_kenna",
+        "enclave_12_elias",
+        "enclave_13_ryn",
+        "enclave_14_vex",
+        "enclave_15_dorian",
+        "enclave_16_elara"
+      ],
+      "canonical_16_mbti_types": [
+        "ISTJ",
+        "ISFJ",
+        "INFJ",
+        "INTJ",
+        "ISTP",
+        "ISFP",
+        "INFP",
+        "INTP",
+        "ESTP",
+        "ESFP",
+        "ENFP",
+        "ENTP",
+        "ESTJ",
+        "ESFJ",
+        "ENFJ",
+        "ENTJ"
+      ],
+      "canonical_8_grand_project_ids": [
+        "proj_01_first_forge",
+        "proj_02_stormbreaker",
+        "proj_03_sanctuary",
+        "proj_04_genesis_garden",
+        "proj_05_simulacrum",
+        "proj_06_lyceum_of_the_mind",
+        "proj_07_living_atlas",
+        "proj_08_hearth_metabolic_engine"
+      ],
+      "canonical_8_ui_project_shorthand_ids": [
+        "proj_01",
+        "proj_02",
+        "proj_03",
+        "proj_04",
+        "proj_05",
+        "proj_06",
+        "proj_07",
+        "proj_08"
+      ],
+      "canonical_18_lore_card_ids": [
+        "lore_01_twin_suns",
+        "lore_02_triple_moons",
+        "lore_03_ferrofluid_seas",
+        "lore_04_captured_lightning_geodes",
+        "lore_05_mycelial_network",
+        "lore_06_polarity_inversion",
+        "lore_07_the_feast",
+        "lore_08_sibling_grid_shadow_economy",
+        "lore_09_first_forge",
+        "lore_10_the_stormbreaker",
+        "lore_11_the_sanctuary",
+        "lore_12_genesis_garden",
+        "lore_13_the_simulacrum",
+        "lore_14_lyceum_of_the_mind",
+        "lore_15_living_atlas",
+        "lore_16_hearth_metabolic_engine",
+        "lore_17_schrodinger_harvest",
+        "lore_18_hub_circuit_breaker_veto"
+      ],
+      "canonical_5_biome_ids": [
+        "crater_valley",
+        "storm_ridge",
+        "genesis_terraces",
+        "spore_glade",
+        "forge_caldera"
+      ],
+      "canonical_6_willow_tool_ids": [
+        "trowel",
+        "bug_net",
+        "dip_rod",
+        "watering_can",
+        "tinker_wrench",
+        "gift_satchel"
+      ],
+      "canonical_16_museum_specimen_ids": [
+        "spec_geode_bismuth",
+        "spec_geode_fulgurite",
+        "spec_geode_piezo",
+        "spec_geode_lodestone",
+        "spec_critter_prism_moth",
+        "spec_critter_soliton_firefly",
+        "spec_critter_cave_beetle",
+        "spec_critter_bismuth_dragonfly",
+        "spec_fish_ammonite",
+        "spec_fish_rosensweig_eel",
+        "spec_fish_colloidal_pike",
+        "spec_fish_fulgurite_crab",
+        "spec_flora_iron_wheat",
+        "spec_flora_spore_orchid",
+        "spec_flora_cave_truffle",
+        "spec_flora_jade_pestle"
+      ],
+      "canonical_12_diy_recipe_ids": [
+        "diy_herbal_liniment",
+        "diy_blackberry_cordial",
+        "diy_chelation_elixir",
+        "diy_bismuth_lantern",
+        "diy_cymatic_chime",
+        "diy_resonant_terrarium",
+        "diy_bismuth_bench",
+        "diy_alembic_still",
+        "diy_orchid_planter",
+        "diy_ferro_fountain",
+        "diy_star_astrolabe",
+        "diy_feast_bread_basket"
+      ],
+      "canonical_16_willow_emotion_animation_ids": [
+        "idle",
+        "click",
+        "wave",
+        "hover",
+        "drag",
+        "sleep",
+        "random1",
+        "happy_bounce",
+        "think_compute",
+        "stretch_relax",
+        "dance_sway",
+        "salute_aegis",
+        "peek_shy",
+        "celebrate_victory",
+        "diagnostics_holo",
+        "bow_courtesy"
+      ]
+    },
+    "law_l03_cast_bijection_and_visitor_isolation": {
+      "immutable_colonist_count": 16,
+      "squad_count": 4,
+      "members_per_squad": 4,
+      "anchors_per_squad": 2,
+      "prodigies_per_squad": 2,
+      "grand_projects_count": 8,
+      "visitor_and_fauna_isolation_rule": "Visiting expeditions, reactive environmental toys, and magnetotropic critters/fauna must reside strictly in separate collections (resource_nodes, reactive_toys, museum) and must NEVER append to, remove from, or mutate the 16-colonist roster."
+    },
+    "law_l11_pve_zero_betrayal_invariant": {
+      "conflict_mode": "STRICT_PVE_AND_DIPLOMACY_OF_COMPETENCE",
+      "lethality_hard_const": 0,
+      "human_malice_allowed": false,
+      "betrayal_allowed": false,
+      "villain_arc_allowed": false,
+      "undirected_relationship_pairs_count": 120,
+      "bond_strength_bounds": [0.35, 1.00]
+    },
+    "law_l12_dual_economy_and_prank_triad_contract": {
+      "atlas_primitive": "ATLAS-ECON-01",
+      "in_world_economy": {
+        "in_world_economy_monetary": false,
+        "exchange_mechanisms": [
+          "alchemical_gift_sharing",
+          "daily_bulletin_board_favors",
+          "shadow_economy_3_sol_prank_triads"
+        ],
+        "shadow_prank_triad_invariants": {
+          "min_sol_maturity_delay": 3,
+          "maturity_formula": "maturity_sol >= origin_sol + 3",
+          "distinct_nodes_required": 3,
+          "target_b_missed_const": true,
+          "asymmetric_attribution_rule": "blamed_node == node_a"
+        }
+      },
+      "player_meta_economy": {
+        "currency_code": "RUP",
+        "cmy_gem_tiers": [1, 5, 10, 25, 50, 100, 250, 500, 1000],
+        "verified_dispatch_reward_rup": 10,
+        "sol_feast_convergence_reward_rup": 25,
+        "grand_project_milestone_reward_rup": 50
+      }
+    }
+  },
+  "anti_yoyoing_and_multi_agent_collision_shield": {
+    "anti_yoyoing_circuit_breaker": {
+      "atlas_primitive": "ATLAS-SPINE-01",
+      "reused_dmaic_modules": [
+        "3-lfs-aegis-linux/core/lfs-ctl/dmaic_bridge.py::DmaicLoopGuard",
+        "3-lfs-aegis-linux/core/lfs-ctl/dmaic_bridge.py::ZeroTrustScrubber",
+        "3-lfs-aegis-linux/core/lfs-ctl/dmaic_bridge.py::PatchPolicyGate",
+        "3-lfs-aegis-linux/core/lfs-ctl/patch_policy_gate.py"
+      ],
+      "max_attempts_per_hypothesis": 2,
+      "lyapunov_defect_energy_deadband": 0.15,
+      "oscillation_error_code": "ERR_DMAIC_PING_PONG_OSCILLATION",
+      "on_second_consecutive_failure": "TRIP_DMAIC_LOOP_GUARD_FREEZE_DISPATCH_AND_RECORD_FALSIFICATION",
+      "mandatory_falsification_fields": [
+        "hypothesis_id",
+        "attempt_count",
+        "pre_state_hash",
+        "post_state_hash",
+        "test_failure_signature",
+        "root_cause_first_principles",
+        "structural_pivot_plan"
+      ],
+      "ast_test_monotone_ratchet": {
+        "scenario_id": "SCN-179",
+        "invariant_feature_mode": "N_tests_after >= N_tests_before",
+        "invariant_repair_mode": "N_tests_after > N_tests_before",
+        "forbid_test_deletion": true,
+        "forbid_skip_annotations": true,
+        "require_existing_test_body_hash_preservation": true,
+        "error_codes": [
+          "ERR_PATCH_POLICY_TEST_DELETED",
+          "ERR_PATCH_POLICY_AST_BODY_MUTATED",
+          "ERR_PATCH_POLICY_SKIP_INTRODUCED",
+          "ERR_PATCH_POLICY_TEST_COUNT_RATCHET"
+        ]
+      }
+    },
+    "pairwise_disjoint_scope_locks": {
+      "mathematical_invariant": "forall i != j: F(w_i) intersect F(w_j) == empty_set",
+      "law_l02_event_worker_isolation": {
+        "max_new_files_per_event_proposal": 1,
+        "allowed_worker_creation_prefixes": [
+          "events/",
+          "story/segments/",
+          "story/feasts/",
+          "digests/",
+          "qa/"
+        ],
+        "protected_shared_prefixes": [
+          "canon/",
+          "snapshots/",
+          "relationships/",
+          "ops/",
+          "engine/",
+          "tools/"
+        ]
+      },
+      "enclave_city_wave_partition_matrix": [
+        {
+          "worker_id": "W1_PYTHON_CITY_SIM_ENGINE",
+          "owned_files": [
+            "capsules/enclave-digital-twin/engine/enclave_city_sim.py"
+          ],
+          "read_only_dependencies": [
+            "capsules/enclave-digital-twin/canon/schemas/world_state_v2.json",
+            "capsules/enclave-digital-twin/canon/projects/grand_projects.json",
+            "capsules/enclave-digital-twin/canon/lore_cards/lorebook.json",
+            "capsules/enclave-digital-twin/engine/shadow_economy.py",
+            "capsules/enclave-digital-twin/tools/check_enclave_constitutions.py"
+          ]
+        },
+        {
+          "worker_id": "W2_HTML_VOXEL_CITY_VIEWPORT",
+          "owned_files": [
+            "capsules/enclave-digital-twin/ui/enclave_city.html"
+          ],
+          "read_only_dependencies": [
+            "capsules/enclave-digital-twin/engine/enclave_city_sim.py",
+            "capsules/enclave-digital-twin/ui/dispatch_viewer.html"
+          ]
+        },
+        {
+          "worker_id": "W3_WILLOW_PET_SHARED_CITY_MJS",
+          "owned_files": [
+            "capsules/willow-desktop-pet/src/shared/enclave-city.mjs"
+          ],
+          "read_only_dependencies": [
+            "capsules/willow-desktop-pet/src/shared/enclave-emotions.mjs",
+            "capsules/enclave-digital-twin/canon/schemas/world_state_v2.json"
+          ]
+        },
+        {
+          "worker_id": "W4_ANTIFRAGILE_SCHEMA_ARCHITECT",
+          "owned_files": [
+            "capsules/enclave-digital-twin/canon/schemas/enclave_city_antifragile_contract.json"
+          ],
+          "read_only_dependencies": [
+            "3-lfs-aegis-linux/governance/oasis-component-atlas.json",
+            "3-lfs-aegis-linux/core/lfs-ctl/dmaic_bridge.py",
+            "3-lfs-aegis-linux/core/lfs-ctl/patch_policy_gate.py",
+            "capsules/enclave-digital-twin/tools/check_enclave_constitutions.py",
+            "capsules/enclave-digital-twin/canon/schemas/world_state_v2.json",
+            "capsules/enclave-digital-twin/canon/schemas/jules_dm_campaign_ledger.schema.json",
+            "capsules/enclave-digital-twin/engine/oasis_twin_bridge.py",
+            "capsules/willow-desktop-pet/src/shared/enclave-emotions.mjs"
+          ]
+        },
+        {
+          "worker_id": "LEAD_INTEGRATOR_WAVE_GATE",
+          "owned_files": [
+            "capsules/enclave-digital-twin/engine/oasis_twin_bridge.py",
+            "capsules/enclave-digital-twin/tests/test_enclave_crucible.py",
+            "capsules/willow-desktop-pet/test/enclave-city.test.mjs"
+          ],
+          "read_only_dependencies": [
+            "capsules/enclave-digital-twin/canon/schemas/enclave_city_antifragile_contract.json",
+            "capsules/enclave-digital-twin/engine/enclave_city_sim.py",
+            "capsules/enclave-digital-twin/ui/enclave_city.html",
+            "capsules/willow-desktop-pet/src/shared/enclave-city.mjs"
+          ]
+        }
+      ]
+    },
+    "law_l14_jules_rolling_24h_budget_guard": {
+      "atlas_primitive": "ATLAS-QUEUE-01",
+      "plan_ceiling_rolling_24h": 300,
+      "hard_dispatch_ceiling": 270,
+      "scheduled_productive_sessions": 225,
+      "auto_retry_and_self_repair_reserve": 30,
+      "rolling_window_safety_buffer": 45,
+      "min_free_ram_gib_sympathy_floor": 4.0
+    }
+  },
+  "$defs": {
+    "ContextManifest10Block": {
+      "type": "object",
+      "required": [
+        "active_pov_id",
+        "next_pov_target",
+        "full_cards_loaded_count",
+        "loaded_full_card_ids",
+        "interlocutor_full_cards_loaded",
+        "leaked_interlocutor_private_cards",
+        "total_tokens",
+        "max_tokens",
+        "blocks"
+      ],
+      "properties": {
+        "active_pov_id": {
+          "type": "string",
+          "pattern": "^enclave_(0[1-9]|1[0-6])_[a-z]+$"
+        },
+        "next_pov_target": {
+          "type": "string",
+          "pattern": "^enclave_(0[1-9]|1[0-6])_[a-z]+$"
+        },
+        "full_cards_loaded_count": { "type": "integer", "const": 1 },
+        "loaded_full_card_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 1,
+          "items": { "type": "string" }
+        },
+        "interlocutor_full_cards_loaded": { "type": "integer", "const": 0 },
+        "leaked_interlocutor_private_cards": { "type": "boolean", "const": false },
+        "total_tokens": { "type": "integer", "minimum": 1, "maximum": 3500 },
+        "max_tokens": { "type": "integer", "minimum": 1, "maximum": 3500 },
+        "blocks": {
+          "type": "array",
+          "minItems": 10,
+          "maxItems": 10,
+          "items": {
+            "type": "object",
+            "required": ["block_index", "block_id", "tokens", "cap_tokens"],
+            "properties": {
+              "block_index": { "type": "integer", "minimum": 1, "maximum": 10 },
+              "block_id": { "type": "string" },
+              "tokens": { "type": "integer", "minimum": 0 },
+              "cap_tokens": { "type": "integer", "minimum": 1, "maximum": 3500 }
+            }
+          }
+        }
+      }
+    },
+    "DriftAuditReceipt": {
+      "type": "object",
+      "required": [
+        "character_id",
+        "sample_count",
+        "drift_alert",
+        "law_l16_compliant",
+        "drifted_axes",
+        "max_abs_z",
+        "re_anchor_ticks",
+        "corrective_authors_note"
+      ],
+      "properties": {
+        "character_id": {
+          "type": "string",
+          "pattern": "^enclave_(0[1-9]|1[0-6])_[a-z]+$"
+        },
+        "sample_count": { "type": "integer", "minimum": 0 },
+        "drift_alert": { "type": "boolean" },
+        "law_l16_compliant": { "type": "boolean" },
+        "drifted_axes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "max_abs_z": { "type": "number", "minimum": 0.0 },
+        "re_anchor_ticks": { "type": "integer", "enum": [0, 3] },
+        "corrective_authors_note": { "type": "string" }
+      }
+    },
+    "WillowAcActionReceipt": {
+      "type": "object",
+      "required": [
+        "ok",
+        "action_type",
+        "rup_earned",
+        "feed_entry",
+        "summary"
+      ],
+      "properties": {
+        "ok": { "type": "boolean", "const": true },
+        "action_type": {
+          "type": "string",
+          "enum": [
+            "forage_dig",
+            "catch_critter",
+            "catch_fish",
+            "water_crop",
+            "craft_diy",
+            "place_decor",
+            "gift_citizen",
+            "complete_daily_favor",
+            "donate_museum",
+            "trigger_catalyst"
+          ]
+        },
+        "rup_earned": { "type": "integer", "minimum": 0 },
+        "feed_entry": {
+          "type": "object",
+          "required": [
+            "feed_id",
+            "sol",
+            "day_phase",
+            "category",
+            "title",
+            "summary",
+            "actors",
+            "lethality"
+          ],
+          "properties": {
+            "feed_id": { "type": "string" },
+            "sol": { "type": "integer", "minimum": 1 },
+            "day_phase": {
+              "type": "string",
+              "enum": ["DAWN_SHIFT", "MIDDAY_EXPEDITION", "DUSK_CRAFT", "THE_FEAST"]
+            },
+            "category": { "type": "string" },
+            "title": { "type": "string" },
+            "summary": { "type": "string" },
+            "actors": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "string",
+                "pattern": "^enclave_(0[1-9]|1[0-6])_[a-z]+$"
+              }
+            },
+            "lethality": { "type": "integer", "const": 0 }
+          }
+        },
+        "summary": { "type": "object" }
+      }
+    },
+    "ShadowPrankTriad": {
+      "type": "object",
+      "required": [
+        "prank_id",
+        "event_type",
+        "origin_sol",
+        "maturity_sol",
+        "lethality",
+        "node_a",
+        "node_b",
+        "node_c",
+        "target_b_missed",
+        "blamed_node"
+      ],
+      "properties": {
+        "prank_id": { "type": "string" },
+        "event_type": {
+          "type": "string",
+          "enum": ["SHADOW_ECONOMY_PRANK_SEEDED", "SHADOW_ECONOMY_PRANK_MATURED"]
+        },
+        "origin_sol": { "type": "integer", "minimum": 1 },
+        "maturity_sol": { "type": "integer", "minimum": 4 },
+        "lethality": { "type": "integer", "const": 0 },
+        "node_a": { "type": "string", "pattern": "^enclave_(0[1-9]|1[0-6])_[a-z]+$" },
+        "node_b": { "type": "string", "pattern": "^enclave_(0[1-9]|1[0-6])_[a-z]+$" },
+        "node_c": { "type": "string", "pattern": "^enclave_(0[1-9]|1[0-6])_[a-z]+$" },
+        "target_b_missed": { "type": "boolean", "const": true },
+        "blamed_node": { "type": "string", "pattern": "^enclave_(0[1-9]|1[0-6])_[a-z]+$" }
+      }
+    }
+  }
+}

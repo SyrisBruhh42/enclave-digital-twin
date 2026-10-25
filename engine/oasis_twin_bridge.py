@@ -25,6 +25,10 @@ import shutil
 import tempfile
 from typing import Any
 
+from engine.enclave_city_sim import (
+    generate_enclave_city_state,
+    summarize_enclave_city_state,
+)
 from tools.check_enclave_constitutions import CANONICAL_16_CHARACTER_IDS
 
 OASIS_CMY_RUPEE_GEM_TIERS: tuple[int, ...] = (1, 5, 10, 25, 50, 100, 250, 500, 1000)
@@ -187,6 +191,8 @@ def extract_enclave_twin_live_state(repo_root: Path) -> dict[str, Any]:
         }
 
     willow_state = character_states.get("enclave_07_willow", {})
+    city_state = generate_enclave_city_state(root, seed=f"enclave_sol_{colony_sol:03d}")
+    city_summary = summarize_enclave_city_state(city_state)
     return {
         "schema": "enclave-twin-live-state-v2",
         "project_id": "PA-15",
@@ -199,6 +205,7 @@ def extract_enclave_twin_live_state(repo_root: Path) -> dict[str, Any]:
         "micro_climate_regime": str(weather.get("micro_climate_regime") or "Nominal_ Valley_Breeze"),
         "active_biome_cell": str(weather.get("active_biome_cell") or "Enclave_Crater_Valley"),
         "willow_resonance": willow_state,
+        "enclaveCitySummary": city_summary,
         "character_states": character_states,
     }
 
@@ -252,6 +259,13 @@ def sync_enclave_oasis_save_and_bridge(
         sha256_manifest["graph.json"] = _sha256_file(dst_graph)
         copied_files.append("graph.json")
 
+    city_state = generate_enclave_city_state(root)
+    city_summary = summarize_enclave_city_state(city_state)
+    dst_city = resolved_save_dir / "enclave_city_state.json"
+    _atomic_write_json(dst_city, city_state)
+    sha256_manifest["enclave_city_state.json"] = _sha256_file(dst_city)
+    copied_files.append("enclave_city_state.json")
+
     lineage_path = resolved_save_dir / "save.lineage.json"
     prev_generation = 0
     parent_hashes: list[str] = []
@@ -293,6 +307,7 @@ def sync_enclave_oasis_save_and_bridge(
         "earned_rupees_total": meta_rewards["total_earned_rupees"],
         "colony_sol": live_state["colony_sol"],
         "tick_id": live_state["tick_id"],
+        "enclave_city_summary": city_summary,
         "updated_at_iso": now_iso,
     }
     _atomic_write_json(lineage_path, lineage_payload)
@@ -316,7 +331,10 @@ def sync_enclave_oasis_save_and_bridge(
 
             bridge_data.setdefault("schema", "lfs-local-abac-v1")
             bridge_data["updated_at_iso"] = now_iso
+            bridge_data["currency_code"] = "RUP"
+            bridge_data["currencyCode"] = "RUP"
             bridge_data["enclaveTwinLiveState"] = live_state
+            bridge_data["enclaveCitySummary"] = city_summary
             bridge_data["enclaveMetaRewards"] = meta_rewards
 
             prev_enclave_rup = int(bridge_data.get("enclaveRupeeContribution", 0) or 0)
@@ -339,7 +357,10 @@ def sync_enclave_oasis_save_and_bridge(
                     "rupeeBalance": 0,
                 },
             )
+            part["currency_code"] = "RUP"
+            part["currencyCode"] = "RUP"
             part["enclaveTwinLiveState"] = live_state
+            part["enclaveCitySummary"] = city_summary
             part["enclaveMetaRewards"] = meta_rewards
             part["rupeeBalance"] = max(int(part.get("rupeeBalance", 0) or 0), updated_balance)
             part["updated_at_iso"] = now_iso
@@ -355,5 +376,6 @@ def sync_enclave_oasis_save_and_bridge(
         "bridge_path": str(resolved_bridge_path),
         "lineage": lineage_payload,
         "meta_rewards": meta_rewards,
+        "enclave_city_summary": city_summary,
         "enclave_twin_live_state": live_state,
     }

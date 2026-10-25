@@ -814,11 +814,18 @@ def run_simulation(
             f"Post-simulation Constitutional Audit failed on {repo_audit['violated_laws']}: {repo_audit['errors']}"
         )
 
+    from engine.enclave_city_sim import (
+        generate_enclave_city_state,
+        summarize_enclave_city_state,
+    )
+
     budget_status = dispatcher.load_budget()
     domain_friction_sample = compute_domain_friction(
         [0.15, 0.96, 0.15, 0.22, 0.58],
         [0.96, 0.15, 0.90, 0.80, 0.48],
     )
+    city_state = generate_enclave_city_state(root, seed=epoch_seed)
+    city_summary = summarize_enclave_city_state(city_state)
 
     health_report = {
         "schema_version": "enclave_ops_health_v2.0.0",
@@ -837,6 +844,7 @@ def run_simulation(
         "jules_rolling_24h_dispatched": budget_status["rolling_24h_dispatched"],
         "jules_remaining_hard_ceiling": budget_status["remaining_hard_ceiling"],
         "sample_domain_friction": domain_friction_sample,
+        "enclave_city_summary": city_summary,
         "wp4_modules_linked": {
             "story_sifter": HAS_WP4_SIFTER,
             "evening_dispatch": HAS_WP4_DISPATCH,
@@ -867,6 +875,7 @@ def run_simulation(
         "dispatches_written": dispatches_written,
         "qa_files_written": qa_files_written,
         "constitutional_audit": repo_audit,
+        "enclave_city_summary": city_summary,
         "oasis_bridge_sync": oasis_bridge_sync,
     }
 
