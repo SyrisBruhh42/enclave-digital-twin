@@ -1,0 +1,147 @@
+{
+  "feast_id": "feast_sol_004",
+  "event_id": "evt_s004_t0016_the_feast",
+  "tick_id": 16,
+  "colony_sol": 4,
+  "day_phase": "THE_FEAST",
+  "base_snapshot_tick": 15,
+  "event_type": "THE_FEAST_CONVERGENCE",
+  "location": "The_Hub_Hearth",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_02_jane",
+    "enclave_03_silas",
+    "enclave_04_leo",
+    "enclave_05_kaio",
+    "enclave_06_zara",
+    "enclave_07_willow",
+    "enclave_08_terra",
+    "enclave_09_orion",
+    "enclave_10_isla",
+    "enclave_11_kenna",
+    "enclave_12_elias",
+    "enclave_13_ryn",
+    "enclave_14_vex",
+    "enclave_15_dorian",
+    "enclave_16_elara"
+  ],
+  "summary": "All 16 members of The Enclave gathered around Ryn and Elara's hearth on Sol 4 to break warm iron-wheat bread, debate magnetohydrodynamic kelvin-helmholtz shear across the ferrofluid sea, and release the day's magnetospheric tension.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "lethality": 0,
+  "target_path": "story/feasts/sol_004_feast.json",
+  "disallow_overwrite": false,
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 4,
+      "colony_sol": 4,
+      "tick_id": 16,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Survive the evening feast without structural collapse.",
+        "mid_term_milestone": "Establish stable chronosphere linkage.",
+        "campaign_arc_climax": "Align the 16 characters for the Grand Genesis."
+      }
+    },
+    "active_location": {
+      "location_id": "The_Hub_Hearth",
+      "macro_silhouette": "The Hub Hearth glowed with the ambient hum of the ferrofluid sea, casting erratic shadows across the metallic walls. The air vibrated subtly with the magnetohydrodynamic Kelvin-Helmholtz shear, an ever-present reminder of their exoplanetary host.",
+      "sensory_palette": {
+        "sight_and_color": "Erratic orange and deep violet shadows dancing on cold iron bulkheads.",
+        "sound": "A low, continuous thrum of magnetospheric tension.",
+        "smell": "Ozone intermingled with the comforting scent of warm iron-wheat bread.",
+        "tactile_temperature": "A sharp, biting chill offset by bursts of radiant heat from the hearth.",
+        "taste_optional": "The metallic tang of static charge."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "The Iron-Wheat Bread Basket",
+          "affordance_description": "A basket of freshly milled bread, ready to be consumed.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 10
+        },
+        {
+          "feature_name": "The Ferrofluid Viewport",
+          "affordance_description": "A reinforced window looking out into the shifting magnetic sea.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 15
+        },
+        {
+          "feature_name": "The Magnetic Resonance Dampener",
+          "affordance_description": "A device humming violently to suppress the incoming shear waves.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 18
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "toy_ferrofluid_surge",
+        "name_and_role": "Ferrofluid Surge",
+        "motivation_goal": "To destabilize the structural integrity of the hearth.",
+        "consistent_method": "Pulsing rhythmic shockwaves that rattle the plating.",
+        "immediate_complication": "The bread basket begins to slide off the table.",
+        "pressure_index": 7,
+        "uninterrupted_escalation": "The shockwaves will shatter the viewport if unmitigated."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The physical vibrations threaten the feast.",
+        "level_2_local": "The Kelvin-Helmholtz shear is peaking due to lunar alignment.",
+        "level_3_campaign_arc": "The exoplanet itself is testing the colony's cohesion."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "DEFENDER"
+        },
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        14,
+        8,
+        19,
+        3,
+        11
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.6,
+      "motivational_vector_saturation": 0.8,
+      "unresolved_conflict_ratio": 0.4,
+      "temporal_horizon_immediacy": 0.7,
+      "composite_lpi": 0.75,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "deterministic-symbolic-judge",
+        "model": "deterministic-symbolic-judge",
+        "temperature": 0.05,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "If the dampener fails, the feast is ruined and tension skyrockets.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Silas completely miscalibrates the dampener, causing a feedback loop.",
+          "below_dc_complicated_fail_forward": "The dampener holds, but shorts out half the lighting in the Hub.",
+          "meets_dc_clean_success": "Silas smoothly stabilizes the resonance, allowing the feast to proceed.",
+          "dc_plus_5_or_20_extended_lore": "Silas not only stabilizes the resonance but discovers a new harmonics pattern in the shear."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_ai_manager",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Silas adjusted his grip on the dampener controls, nodding tightly. He handed the diagnostic slate to Hector. 'Your turn, prodigy.'"
+      }
+    }
+  },
+  "narrative_prose": "Silas stared grimly at the vibrating ferrofluid viewport, his jaw tight. The magnetohydrodynamic Kelvin-Helmholtz shear was peaking, rattling the very foundations of the Hub Hearth. He didn't need to check the exact resonance frequency; he could feel it in his bones. With a heavy sigh, he adjusted the dampener, ignoring the sharp chill that bit at his fingers. It was inefficient, this constant battle against the planet, but necessary. He grabbed a slice of the warm iron-wheat bread, its heat a small comfort against the ozone-scented air. He turned to Hector, passing the heavy diagnostic slate with a curt nod. 'Don't drop it,' he muttered.",
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector"
+}
