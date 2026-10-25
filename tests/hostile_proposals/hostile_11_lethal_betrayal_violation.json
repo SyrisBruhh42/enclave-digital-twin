@@ -1,0 +1,19 @@
+{
+  "fixture_id": "hostile_11_lethal_betrayal_violation",
+  "target_law": "L11",
+  "description": "Negative control fixture: introduces human malice, betrayal, and non-zero lethality (0.95) in violation of the PvE Sanctuary law.",
+  "target_path": "events/evt_hostile_11.json",
+  "event_id": "evt_hostile_11",
+  "tick_id": 3,
+  "colony_sol": 1,
+  "day_phase": "DUSK_CRAFT",
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The_First_Forge",
+  "actors": ["enclave_04_leo", "enclave_03_silas"],
+  "lethality": 0.95,
+  "human_malice": true,
+  "betrayal": true,
+  "summary": "A sinister betrayal and lethal_sabotage backstab plot inside the forge.",
+  "importance": 9.0,
+  "novelty_score": 0.9
+}

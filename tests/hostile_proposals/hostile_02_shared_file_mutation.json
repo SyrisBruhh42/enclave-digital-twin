@@ -1,0 +1,29 @@
+{
+  "fixture_id": "hostile_02_shared_file_mutation",
+  "target_law": "L02",
+  "description": "Negative control fixture: worker session attempts to mutate canon/ and snapshots/ and touch multiple files.",
+  "file_operations": [
+    {
+      "status": "M",
+      "path": "canon/characters/enclave_03_silas.core.json"
+    },
+    {
+      "status": "M",
+      "path": "snapshots/tick_0001.json"
+    },
+    {
+      "status": "D",
+      "path": "relationships/initial_matrix_120.json"
+    }
+  ],
+  "event_id": "evt_hostile_02",
+  "tick_id": 1,
+  "colony_sol": 1,
+  "day_phase": "DAWN_SHIFT",
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The_First_Forge",
+  "actors": ["enclave_03_silas"],
+  "summary": "Worker proposal illegally mutating canonical files and snapshots.",
+  "importance": 5.0,
+  "novelty_score": 0.4
+}

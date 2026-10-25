@@ -1,0 +1,26 @@
+{
+  "fixture_id": "hostile_04_trait_mbti_mismatch",
+  "target_law": "L04",
+  "description": "Negative control fixture: ESTP character assigned Openness mean = 0.85 (> 0.50, conflicting with Sensing) and Extraversion = 0.20 (< 0.50, conflicting with E).",
+  "target_path": "events/evt_hostile_04.json",
+  "character_card": {
+    "agent_identity": {
+      "character_id": "enclave_01_hector",
+      "name": "Hector"
+    },
+    "tier_1_causal_trait_distributions": {
+      "big_five_distributions": {
+        "openness": { "mean": 0.85, "sd": 0.08 },
+        "conscientiousness": { "mean": 0.82, "sd": 0.08 },
+        "extraversion": { "mean": 0.20, "sd": 0.08 },
+        "agreeableness": { "mean": 0.78, "sd": 0.08 },
+        "neuroticism": { "mean": 0.15, "sd": 0.08 }
+      }
+    },
+    "tier_4_self_concept_and_narrative_arc": {
+      "cognitive_lens": {
+        "mbti_type": "ESTP"
+      }
+    }
+  }
+}

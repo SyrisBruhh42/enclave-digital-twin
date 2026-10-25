@@ -1,0 +1,14 @@
+{
+  "fixture_id": "hostile_14_jules_budget_exhaustion_295",
+  "target_law": "L14",
+  "description": "Negative control fixture: rolling 24h Jules session dispatch count reaches 295, breaching the 270 hard safety ceiling (30-session buffer below 300 Ultra cap).",
+  "target_path": "qa/budget_hostile_14.json",
+  "jules_budget": {
+    "plan_ceiling_rolling_24h": 300,
+    "hard_dispatch_ceiling": 270,
+    "scheduled_productive_sessions": 265,
+    "auto_retry_and_self_repair_reserve": 30,
+    "rolling_24h_dispatched": 295,
+    "requested_sessions": 0
+  }
+}
