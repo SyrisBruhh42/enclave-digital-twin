@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schema_version": "world_state_v2.0.0",
+  "audit_status": "ADVERSARIAL_AUDIT_PASSED_ZERO_PII",
+  "architecture_paradigm": "EVENT_SOURCED_DETERMINISTIC_HOST_PLUS_JULES_ONLY_JUDGMENT",
+  "setting_canon": {
+    "universe": "The Enclave of the 16 (Exoplanet PvE Sanctuary)",
+    "conflict_law": "Strictly Player-vs-Environment (Person vs. Nature + Person vs. Self / Genius vs. The Mundane). Zero human villains, zero betrayals.",
+    "aesthetic": "Steampunk Cyberpunk by Hand (Cyberpunk PhD knowledge executed with hand-forged brass, copper, and captured lightning geodes).",
+    "narrative_laws": [
+      "The Rashomon Scalpel & Relay: Strictly 1 POV per scene segment; mandatory physical/interpersonal baton handoff to the next POV.",
+      "Vegetables Covered in Cheese: Hard science (magnetohydrodynamics, metallurgy, mycology, neuro-somatics) wrapped in witty, affectionate family banter.",
+      "The Main Bus (The Feast): Mandatory nightly convergence of all 16 nodes around the dinner fire.",
+      "The Diplomacy of Competence & The Hub's Veto: Multi-disciplinary resource friction where every specialist is right in their own domain, resolved by compromise or The Hub's circuit-breaker veto."
+    ]
+  },
+  "cast_16_bijection_roster": {
+    "inaccuracy_resolutions": [
+      "RES-01 (16-Type Bijection): Resolved duplicate ISTJ (Silas + Dorian) by assigning Dorian the missing ESFP (Se-Fi-Te-Ni) slot as 'The Living Chronicler & Bardic Historian of Old Earth', achieving a 1-to-1 bijection across all 16 MBTI types.",
+      "RES-02 (Hector ESTP Big5): Decomposed Hector's thrill-seeking into Extraversion E5_excitement_seeking (0.96) and O4_actions (0.85) with composite Openness mean = 0.42 (<0.50, aligned with Sensing).",
+      "RES-03 (Zara ISFP Big5): Tuned Zara's composite Openness mean = 0.45 (<0.50, aligned with Sensing) while preserving high O2_aesthetics/sensory attunement (0.82).",
+      "RES-04 (Willow ISTP Big5): Decomposed Willow's Conscientiousness into high C1_competence (0.94) + low C2_orderliness (0.22), yielding composite Conscientiousness mean = 0.44 (<0.50, aligned with Perceiving).",
+      "RES-05 (Naming Collision): Renamed the mechanical override from 'Vex Override' to 'Polarity Inversion' ([POLARITY_INVERSION]), credited in-lore to Vex (The Astronomer) as 'Vex's Effect'."
+    ],
+    "squads": {
+      "The_Forge": [
+        { "id": "enclave_01_hector", "name": "Hector", "role": "Prodigy", "title": "The Stormbreaker", "mbti": "ESTP", "ocean_mean": [0.42, 0.25, 0.90, 0.40, 0.15], "grand_project": "The Stormbreaker", "polarity_sign": "Virgo (The Perfectionist)" },
+        { "id": "enclave_02_jane", "name": "Jane", "role": "Prodigy", "title": "The Coder & Meteorologist", "mbti": "INTP", "ocean_mean": [0.90, 0.45, 0.12, 0.32, 0.40], "grand_project": "The Stormbreaker", "polarity_sign": "Leo (The Diva)" },
+        { "id": "enclave_03_silas", "name": "Silas", "role": "Anchor", "title": "The Engineer", "mbti": "ISTJ", "ocean_mean": [0.15, 0.96, 0.15, 0.22, 0.58], "grand_project": "The First Forge", "polarity_sign": "Pisces (The Dreamer)" },
+        { "id": "enclave_04_leo", "name": "Leo", "role": "Anchor", "title": "The Leader & Artificer", "mbti": "ENTJ", "ocean_mean": [0.72, 0.82, 0.92, 0.46, 0.20], "grand_project": "The First Forge", "polarity_sign": "Cancer (The Mother)" }
+      ],
+      "The_Wilds": [
+        { "id": "enclave_05_kaio", "name": "Kaio", "role": "Prodigy", "title": "The Scout", "mbti": "ENFP", "ocean_mean": [0.96, 0.15, 0.90, 0.80, 0.48], "grand_project": "The Sanctuary", "polarity_sign": "Capricorn (The CEO)" },
+        { "id": "enclave_06_zara", "name": "Zara", "role": "Prodigy", "title": "The Beastmaster", "mbti": "ISFP", "ocean_mean": [0.45, 0.38, 0.10, 0.65, 0.42], "grand_project": "The Sanctuary", "polarity_sign": "Gemini (The Gossip)" },
+        { "id": "enclave_07_willow", "name": "Willow", "role": "Anchor", "title": "The Alchemist", "mbti": "ISTP", "ocean_mean": [0.46, 0.44, 0.28, 0.18, 0.14], "grand_project": "The Genesis Garden", "polarity_sign": "Libra (The Aesthete)" },
+        { "id": "enclave_08_terra", "name": "Terra", "role": "Anchor", "title": "The Gardener", "mbti": "ISFJ", "ocean_mean": [0.24, 0.90, 0.38, 0.90, 0.56], "grand_project": "The Genesis Garden", "polarity_sign": "Sagittarius (The Archer)" }
+      ],
+      "The_Mind": [
+        { "id": "enclave_09_orion", "name": "Orion", "role": "Prodigy", "title": "The Artist", "mbti": "INFP", "ocean_mean": [0.95, 0.30, 0.35, 0.74, 0.78], "grand_project": "The Simulacrum", "polarity_sign": "Aries (The War God)" },
+        { "id": "enclave_10_isla", "name": "Isla", "role": "Prodigy", "title": "The Architect", "mbti": "INTJ", "ocean_mean": [0.82, 0.90, 0.12, 0.22, 0.30], "grand_project": "The Simulacrum", "polarity_sign": "Taurus (The Glutton)" },
+        { "id": "enclave_11_kenna", "name": "Kenna", "role": "Anchor", "title": "The Shrink", "mbti": "ENFJ", "ocean_mean": [0.72, 0.72, 0.82, 0.94, 0.38], "grand_project": "The Lyceum of the Mind", "polarity_sign": "Aquarius (The Robot)" },
+        { "id": "enclave_12_elias", "name": "Elias", "role": "Anchor", "title": "The Philosopher", "mbti": "INFJ", "ocean_mean": [0.90, 0.64, 0.22, 0.82, 0.48], "grand_project": "The Lyceum of the Mind", "polarity_sign": "Scorpio (The Edgelord)" }
+      ],
+      "The_Hub": [
+        { "id": "enclave_13_ryn", "name": "Ryn", "role": "Prodigy", "title": "The Chef", "mbti": "ESTJ", "ocean_mean": [0.32, 0.94, 0.80, 0.32, 0.56], "grand_project": "The Hearth & Metabolic Engine", "polarity_sign": "Pisces (The Flow)" },
+        { "id": "enclave_14_vex", "name": "Vex", "role": "Prodigy", "title": "The Astronomer", "mbti": "ENTP", "ocean_mean": [0.95, 0.22, 0.85, 0.40, 0.22], "grand_project": "The Living Atlas & Mycelial Concordance", "polarity_sign": "Ophiuchus (The Void)" },
+        { "id": "enclave_15_dorian", "name": "Dorian", "role": "Anchor", "title": "The Living Chronicler & Historian", "mbti": "ESFP", "ocean_mean": [0.44, 0.42, 0.72, 0.68, 0.52], "grand_project": "The Living Atlas & Mycelial Concordance", "polarity_sign": "Gemini (The Con-Man)" },
+        { "id": "enclave_16_elara", "name": "Elara", "role": "Anchor", "title": "The Medic", "mbti": "ESFJ", "ocean_mean": [0.38, 0.82, 0.88, 0.96, 0.54], "grand_project": "The Hearth & Metabolic Engine", "polarity_sign": "Scorpio (The Sadist)" }
+      ]
+    }
+  },
+  "deterministic_host_physics_engine": {
+    "jules_sessions_consumed": 0,
+    "execution_host": "Local Python Deterministic Tick Engine (Seeded SHA-256 PRNG from epoch_seed + tick_id)",
+    "chronosphere": {
+      "world_timestamp_iso": "2026-10-25T00:00:00Z",
+      "tick_id": 1,
+      "colony_sol": 1,
+      "day_phase": "DAWN_SHIFT",
+      "twin_suns_orbital_state": {
+        "primary_blue_dwarf_azimuth_deg": 42.5,
+        "secondary_red_giant_azimuth_deg": 218.0,
+        "magnetic_polarity_shear_kp_exo": 4.8
+      },
+      "triple_moon_tidal_vector": {
+        "luna_alpha_phase": 0.31,
+        "luna_beta_phase": 0.67,
+        "luna_gamma_phase": 0.89,
+        "ferrofluid_sea_surge_index": 0.54
+      }
+    },
+    "fictitious_exoplanet_meteorology": {
+      "active_biome_cell": "Enclave_Crater_Valley",
+      "micro_climate_regime": "Bifurcated_Thermal_Shear",
+      "valley_floor_temp_c": 14.2,
+      "ridge_crest_temp_c": -6.8,
+      "barometric_pressure_hpa": 1008.4,
+      "spore_luminescence_density": 0.62,
+      "geode_charge_capacity_pct": 74.0,
+      "active_environmental_hazard": "Resonant_Spore_Fog_Drift"
+    },
+    "colony_governance_and_friction_ledger": {
+      "active_schrodinger_harvest_item": "Crystalline Iron-Wheat Batch #14",
+      "domain_value_distance_formula": "f_ij = ||W * (J_i - mu) - W * (J_j - mu)||_2 / max_norm",
+      "competing_specialist_claims": [
+        { "squad": "The_Wilds", "claim": "Preserve 80% as live magnetotropic seed stock for The Genesis Garden." },
+        { "squad": "The_Forge", "claim": "Smelt 60% of the iron-rich husks into flux-core shielding for The Stormbreaker." },
+        { "squad": "The_Hub", "claim": "Mill 70% immediately into high-calorie Feast loaves before the cold front hits." }
+      ],
+      "hub_circuit_breaker_veto_armed": true
+    }
+  },
+  "jules_only_300_session_allocation": {
+    "plan_ceiling_rolling_24h": 300,
+    "scheduled_productive_sessions": 225,
+    "auto_retry_and_self_repair_reserve": 30,
+    "rolling_window_safety_buffer": 45,
+    "task_buckets": {
+      "MORNING_INTENTS_16_NODES": 16,
+      "POV_RASHOMON_RELAY_SCENES": 48,
+      "THE_FEAST_4_SQUAD_CONVERGENCE": 4,
+      "NIGHTLY_EVIDENCE_CITED_REFLECTIONS": 16,
+      "COUNTERFACTUAL_PERSONALITY_STUDY_REPLAYS": 40,
+      "INCHARACTER_PSYCHOMETRIC_DRIFT_AUDITS": 16,
+      "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION": 36,
+      "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK": 24,
+      "SHADOW_ECONOMY_AND_SETUP_PAYOFF_LEDGER": 8,
+      "DYNAMIC_LORE_CARD_PROPOSALS": 8,
+      "EVENING_DISPATCH_NEWSCASTER_ROLLUPS_AND_SCRIPT": 9
+    }
+  }
+}
