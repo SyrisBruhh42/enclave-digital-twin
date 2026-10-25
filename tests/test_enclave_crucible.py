@@ -336,6 +336,76 @@ def test_full_sol_simulation_deterministic_replay_and_rollback_self_repair(tmp_p
         assert rb["latest_snapshot"]["day_phase"] == "MIDDAY_EXPEDITION"
 
 
+def test_showrunner_dm_lpi_local_ai_manager_and_300_session_standby() -> None:
+    from engine.drama_director import compute_living_playability_index
+    from engine.local_ai_manager import LocalContextAwareManager, verify_calypso_narrative_purity
+    from tools.check_enclave_constitutions import validate_showrunner_storytelling_contract
+    from tools.enclave_fleet_ctl import compute_cross_fleet_rolling_telemetry, run_reaper_tick, run_wave_tick
+    from tools.jules_enclave_dispatcher import CANONICAL_TASK_BUCKETS
+
+    # 1. Verify Showrunner DM ledger & LPI classification
+    beat = evaluate_pacing_and_beat([], colony_sol=1, day_phase="MIDDAY_EXPEDITION")
+    assert "showrunner_ledger" in beat
+    sr_val = validate_showrunner_storytelling_contract(beat)
+    assert sr_val["valid"] is True, f"Showrunner validation failed: {sr_val['errors']}"
+    assert beat["lpi_metrics"]["classification"] == "Campaign-Ready"
+
+    unplayable = compute_living_playability_index(0.15, 0.20, 0.10, 0.15)
+    assert unplayable["classification"] == "Unplayable Draft"
+    bad_val = validate_showrunner_storytelling_contract(
+        {"lpi_metrics": unplayable, "prose": "Hector rolled against AC: 18 and took HP = 24 damage."}
+    )
+    assert bad_val["valid"] is False
+    assert any("Unplayable Draft" in e for e in bad_val["errors"])
+    assert any("CALYPSO violation" in e for e in bad_val["errors"])
+
+    cal_ok, _ = verify_calypso_narrative_purity("Silas adjusted the phosphor-bronze louver as sparks danced.")
+    assert cal_ok is True
+
+    # 2. Verify LocalContextAwareManager & 5-Section Task Card
+    mgr = LocalContextAwareManager(repo_root=REPO_ROOT)
+    sympathy = mgr.evaluate_hardware_sympathy()
+    assert "allowed" in sympathy
+    card = mgr.compile_enclave_5section_task_card(
+        task_bucket="POV_RASHOMON_RELAY_SCENES",
+        colony_sol=1,
+        tick_id=2,
+        day_phase="MIDDAY_EXPEDITION",
+        target_path="story/segments/seg_s001_t0002_test.json",
+        showrunner_pacing_mode="MULLIGAN_CRISIS",
+        failure_lesson="Ensure strict single-POV Rashomon baton handoff.",
+        use_local_ollama=False,
+    )
+    assert card["status"] == "COMPILED"
+    assert len(card["sections"]) == 6
+    assert "DO NOT call get_workspace on Linear" in card["prompt"]
+    assert "@ENT[" in card["prompt"]
+
+    # 3. Verify 36-Wave x 40m = 1,440m (300-Session Rolling-24h) Schedule Simulation
+    dispatcher = JulesEnclaveDispatcher(repo_root=REPO_ROOT, dry_run=True)
+    sim24 = dispatcher.simulate_24h_300_session_plan()
+    assert sim24["valid_300_session_plan"] is True
+    assert sim24["total_waves"] == 36
+    assert sim24["total_span_minutes"] == 1440
+    assert sim24["scheduled_dispatched_24h"] == 225
+    assert sim24["auto_retry_reserve_available"] == 30
+    assert sim24["rolling_safety_buffer"] == 45
+    assert sim24["max_concurrent_vms_per_wave"] == 8
+    assert sim24["task_buckets_consumed"] == CANONICAL_TASK_BUCKETS
+    assert sim24["slot_reclamation_verified_at_24h02m"]["reclaimed_slots"] == 4
+
+    # 4. Verify Standby Launch Gate & CP-11 Manifest
+    wave_noop = run_wave_tick(repo_root=REPO_ROOT)
+    assert wave_noop["status"] == "STANDBY_NOOP"
+    assert wave_noop["sessions_dispatched"] == 0
+    reap_noop = run_reaper_tick(repo_root=REPO_ROOT)
+    assert reap_noop["status"] == "STANDBY_REAPER_HEARTBEAT"
+    telemetry = compute_cross_fleet_rolling_telemetry(repo_root=REPO_ROOT)
+    assert telemetry["enclave_launch_state"] == "STANDBY"
+    assert (REPO_ROOT / "capsule.manifest.json").is_file()
+    assert (REPO_ROOT / "aegis_lds_theme.tres").is_file()
+
+
 class TestEnclaveCrucible(unittest.TestCase):
     """Unittest runner wrapper for environments without pytest installed."""
 
@@ -368,6 +438,10 @@ class TestEnclaveCrucible(unittest.TestCase):
     def test_09_full_sol_simulation_deterministic_replay_and_rollback_self_repair(self) -> None:
         test_full_sol_simulation_deterministic_replay_and_rollback_self_repair()
 
+    def test_10_showrunner_dm_lpi_local_ai_manager_and_300_session_standby(self) -> None:
+        test_showrunner_dm_lpi_local_ai_manager_and_300_session_standby()
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
+
