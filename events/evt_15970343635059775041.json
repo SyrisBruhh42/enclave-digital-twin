@@ -1,0 +1,133 @@
+{
+  "event_id": "evt_15970343635059775041",
+  "tick_id": 1,
+  "colony_sol": 1,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-10-25T00:00:00Z",
+  "base_snapshot_tick": 1,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The_First_Forge",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "summary": "Silas hands Hector the baton.",
+  "importance": 7.5,
+  "novelty_score": 0.72,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {
+    "stress_delta": 0.04
+  },
+  "relationship_deltas": [
+    {
+      "from": "enclave_03_silas",
+      "to": "enclave_01_hector",
+      "bond_delta": 0.02,
+      "trust_delta": 0.02
+    }
+  ],
+  "evidence_refs": [],
+  "target_path": "events/evt_15970343635059775041.json",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 1,
+      "tick_id": 1,
+      "pacing_mode": "MERCER_EXPLORATION",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Pass baton.",
+        "mid_term_milestone": "Survive.",
+        "campaign_arc_climax": "Escape."
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "A huge forge. It is very hot. Metal clinks.",
+      "sensory_palette": {
+        "sight_and_color": "Red glowing.",
+        "sound": "Clink clank.",
+        "smell": "Ozone.",
+        "tactile_temperature": "Hot."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Forge Door",
+          "affordance_description": "Can be closed.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 10
+        },
+        {
+          "feature_name": "Magnetite Vein",
+          "affordance_description": "Pulls iron.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 10
+        },
+        {
+          "feature_name": "Ash Pit",
+          "affordance_description": "Hides things.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 10
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "Forge Spirit",
+        "name_and_role": "Spirit of the Forge",
+        "motivation_goal": "Burn things.",
+        "consistent_method": "Heats up.",
+        "immediate_complication": "Too hot.",
+        "pressure_index": 5,
+        "uninterrupted_escalation": "Burns down."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Needs doing.",
+        "level_2_local": "Helps colony.",
+        "level_3_campaign_arc": "Saves world."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "LEADER"
+        }
+      ],
+      "strain_accumulated_upward": 0,
+      "prerolled_hazard_queue": [1, 2, 3, 4, 5]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.5,
+      "motivational_vector_saturation": 0.5,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.5,
+      "composite_lpi": 0.5,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "Ollama",
+        "model": "qwen3.5:4b-q4_K_M",
+        "temperature": 0.05,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "Baton drops.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Drops on foot.",
+          "below_dc_complicated_fail_forward": "Drops.",
+          "meets_dc_clean_success": "Caught.",
+          "dc_plus_5_or_20_extended_lore": "Caught gracefully."
+        }
+      },
+      "master_narrator": {
+        "executor": "Ollama",
+        "temperature": 0.35,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Hector, take it."
+      }
+    }
+  }
+}
