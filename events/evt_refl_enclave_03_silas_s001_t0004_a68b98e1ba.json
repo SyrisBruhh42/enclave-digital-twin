@@ -1,0 +1,41 @@
+{
+  "event_id": "evt_refl_enclave_03_silas_s001_t0004_a68b98e1ba",
+  "memory_id": "evt_refl_enclave_03_silas_s001_t0004_a68b98e1ba",
+  "character_id": "enclave_03_silas",
+  "tick_id": 4,
+  "colony_sol": 1,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-10-25T23:00:00Z",
+  "base_snapshot_tick": 4,
+  "event_type": "NIGHTLY_REFLECTION",
+  "memory_type": "reflection",
+  "location": "Enclave_Quarters",
+  "actors": [
+    "enclave_03_silas"
+  ],
+  "insight_text": "Silas reflected on Sol 1 that Hector's high-spire rigging and Kaio's field surveys complemented The First Forge's containment tolerances.",
+  "summary": "Silas reflected on Sol 1 that Hector's high-spire rigging and Kaio's field surveys complemented The First Forge's containment tolerances.",
+  "text": "Silas reflected on Sol 1 that Hector's high-spire rigging and Kaio's field surveys complemented The First Forge's containment tolerances.",
+  "importance": 8.0,
+  "novelty_score": 0.75,
+  "science_vegetable": "Autobiographical memory consolidation and schema synthesis",
+  "state_deltas": {
+    "stress_delta": -0.05
+  },
+  "relationship_deltas": {},
+  "cited_event_ids": [
+    "evt_s001_t0001_dawn_shift",
+    "evt_s001_t0002_midday_expedition",
+    "evt_s001_t0002_shadow_prank"
+  ],
+  "evidence_refs": [
+    "evt_s001_t0001_dawn_shift",
+    "evt_s001_t0002_midday_expedition",
+    "evt_s001_t0002_shadow_prank"
+  ],
+  "created_hour": 4.0,
+  "last_accessed_hour": 4.0,
+  "access_count": 1,
+  "reflected": true,
+  "target_path": "events/evt_refl_enclave_03_silas_s001_t0004_a68b98e1ba.json"
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "enclave_ops_health_v2.0.0",
+  "status": "HEALTHY",
+  "sols_completed": 1,
+  "ticks_completed": 4,
+  "events_integrated": 6,
+  "manifests_compiled": 3,
+  "segments_written": 3,
+  "feasts_written": 1,
+  "dispatches_written": 1,
+  "qa_audits_written": 2,
+  "constitutional_laws_passed": "16/16",
+  "constitutional_audit_valid": true,
+  "dispatch_faithfulness_verified": true,
+  "jules_rolling_24h_dispatched": 10,
+  "jules_remaining_hard_ceiling": 260,
+  "sample_domain_friction": 0.586589,
+  "wp4_modules_linked": {
+    "story_sifter": true,
+    "evening_dispatch": true,
+    "drift_auditor": true
+  },
+  "latest_tick": 4
+}

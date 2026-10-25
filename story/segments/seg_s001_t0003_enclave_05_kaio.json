@@ -1,0 +1,16 @@
+{
+  "segment_id": "seg_s001_t0003_enclave_05_kaio",
+  "segment_index": 3,
+  "tick_id": 3,
+  "colony_sol": 1,
+  "day_phase": "DUSK_CRAFT",
+  "base_snapshot_tick": 2,
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_09_orion",
+  "location": "The_Simulacrum",
+  "science_vegetable": "Polyvagal neuro-somatic thermal regulation under bifurcated crater micro-climates",
+  "text": "[DUSK_CRAFT at The_Simulacrum] Kaio calibrated the hand-forged brass instrumentation against polyvagal neuro-somatic thermal regulation under bifurcated crater micro-climates, then passed the warm copper calibration baton directly into Orion's hands.",
+  "context_manifest_path": "context/manifests/manifest_s001_t0003_enclave_05_kaio.json",
+  "total_prompt_tokens": 886,
+  "target_path": "story/segments/seg_s001_t0003_enclave_05_kaio.json"
+}

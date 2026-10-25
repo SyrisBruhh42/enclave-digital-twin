@@ -1,0 +1,55 @@
+{
+  "prank_id": "prank_sol01_d5a58898fd",
+  "entry_id": "prank_sol01_d5a58898fd",
+  "event_id": "evt_s001_t0002_shadow_prank",
+  "event_type": "SHADOW_ECONOMY_PRANK_SEEDED",
+  "status": "PENDING",
+  "matured": false,
+  "origin_sol": 1,
+  "maturity_sol": 4,
+  "feast_delay": 3,
+  "lethality": 0,
+  "law_l11_clamped": false,
+  "severity": "PETTY_AFFECTIONATE_INCONVENIENCE",
+  "node_a": "enclave_01_hector",
+  "node_b": "enclave_03_silas",
+  "node_c": "enclave_13_ryn",
+  "instigator": "enclave_01_hector",
+  "intended_target": "enclave_03_silas",
+  "collateral_recipient": "enclave_13_ryn",
+  "target_b_missed": true,
+  "blamed_node": "enclave_01_hector",
+  "attributed_to": "enclave_01_hector",
+  "prank_description": "Replaced the brass pressure-gauge bezel with an engraved 'Inefficient' dial plate",
+  "summary": "enclave_01_hector rigged a harmless prank for enclave_03_silas (Replaced the brass pressure-gauge bezel with an engraved 'Inefficient' dial plate); enclave_03_silas completely missed it, leaving enclave_13_ryn mildly inconvenienced and grumbling at enclave_01_hector.",
+  "blind_spot_attribution": {
+    "instigator_node_a": "enclave_01_hector",
+    "oblivious_target_node_b": "enclave_03_silas",
+    "target_b_missed": true,
+    "inconvenienced_node_c": "enclave_13_ryn",
+    "blamed_by_c": "enclave_01_hector",
+    "asymmetric_loop_closed": true
+  },
+  "tick_id": 2,
+  "colony_sol": 1,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-10-25T06:00:00Z",
+  "base_snapshot_tick": 1,
+  "location": "The_First_Forge",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_03_silas",
+    "enclave_13_ryn"
+  ],
+  "importance": 6.0,
+  "novelty_score": 0.68,
+  "science_vegetable": "Relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron",
+  "state_deltas": {
+    "stress_delta": -0.02
+  },
+  "relationship_deltas": [],
+  "evidence_refs": [
+    "evt_s001_t0002_midday_expedition"
+  ],
+  "target_path": "events/evt_s001_t0002_shadow_prank.json"
+}

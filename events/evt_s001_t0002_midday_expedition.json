@@ -1,0 +1,36 @@
+{
+  "event_id": "evt_s001_t0002_midday_expedition",
+  "tick_id": 2,
+  "colony_sol": 1,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-10-25T06:00:00Z",
+  "base_snapshot_tick": 1,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "Basalt_Spire_Ridge",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_05_kaio"
+  ],
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "summary": "[MIDDAY_EXPEDITION at Basalt_Spire_Ridge] Hector calibrated the hand-forged brass instrumentation against relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron, then passed the warm copper calibration baton directly into Kaio's hands.",
+  "importance": 7.5,
+  "novelty_score": 0.72,
+  "lethality": 0,
+  "science_vegetable": "Relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron",
+  "state_deltas": {
+    "stress_delta": 0.04
+  },
+  "relationship_deltas": [
+    {
+      "from": "enclave_01_hector",
+      "to": "enclave_05_kaio",
+      "bond_delta": 0.02,
+      "trust_delta": 0.02
+    }
+  ],
+  "evidence_refs": [
+    "seg_s001_t0002_enclave_01_hector"
+  ],
+  "target_path": "events/evt_s001_t0002_midday_expedition.json"
+}
