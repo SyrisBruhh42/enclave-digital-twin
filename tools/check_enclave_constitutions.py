@@ -26,16 +26,27 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
+import hashlib
+
 # Law L01: Forbidden real-world personal names, workplaces, and private identifiers
+# Real-world personal tokens are matched via SHA-256 word hashes so zero plaintext PII lives in source.
 PII_FORBIDDEN_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
-    ("John Doe", re.compile(r"\bJohn Doe\b", re.IGNORECASE)),
-    ("Richard Roe", re.compile(r"\bRichard Roe\b", re.IGNORECASE)),
-    ("Acme Heavy", re.compile(r"\bAcme Heavy\b", re.IGNORECASE)),
-    ("Acme Heavy Industries", re.compile(r"\bAcme Heavy Industries\b", re.IGNORECASE)),
+    ("John Doe", re.compile(r"\bJohn[\s_-]+Doe\b", re.IGNORECASE)),
+    ("Richard Roe", re.compile(r"\bRichard[\s_-]+Roe\b", re.IGNORECASE)),
+    ("Acme Heavy Industries", re.compile(r"\bAcme[\s_-]+Heavy[\s_-]+Industries\b", re.IGNORECASE)),
     ("Facility 88", re.compile(r"\bFacility[\s_-]*88\b", re.IGNORECASE)),
     ("3500 Mainline", re.compile(r"\b3500[\s_-]*Mainline\b", re.IGNORECASE)),
     ("Kaz", re.compile(r"\bKaz\b", re.IGNORECASE)),
     ("Philosopher-Mechanic", re.compile(r"\bPhilosopher[\s_-]*Mechanic\b", re.IGNORECASE)),
+)
+
+PII_FORBIDDEN_WORD_SHA256: frozenset[str] = frozenset(
+    {
+        "fdd4e9fb804e10d508190b7c7bebff47fc8f2cf78ca579ce82c01f0b12fa613e",
+        "12ca17b49af2289436f303e0166030a21e525d266e209267433801a8fd4071a0",
+        "c7417e4f2de88aa2dfef220d8225918f028ed984bdff2a0feb2694f1eb3f904c",
+        "1f9d956202a1eb11be0a6ea198eb8da41dc01ce0b67e19ce6f3ce42ab8cd52a3",
+    }
 )
 
 # Law L02: Allowed worker proposal creation prefixes and protected paths
@@ -190,11 +201,19 @@ def check_zero_pii(
     errors: list[str] = []
     root = _resolve_root(repo_root)
 
+    def _scan_text_for_pii(text: str, source_desc: str) -> None:
+        for label, pattern in PII_FORBIDDEN_PATTERNS:
+            if pattern.search(text):
+                errors.append(f"Law L01 violation: forbidden real-world PII token '{label}' detected in {source_desc}.")
+        for word in re.findall(r"[A-Za-z]{4,24}", text):
+            digest = hashlib.sha256(word.lower().encode("utf-8")).hexdigest()
+            if digest in PII_FORBIDDEN_WORD_SHA256:
+                errors.append(f"Law L01 violation: forbidden hashed real-world PII token detected in {source_desc}.")
+                break
+
     if proposal is not None:
         serialized = json.dumps(proposal, ensure_ascii=False)
-        for label, pattern in PII_FORBIDDEN_PATTERNS:
-            if pattern.search(serialized):
-                errors.append(f"Law L01 violation: forbidden real-world PII token '{label}' detected in proposal.")
+        _scan_text_for_pii(serialized, "proposal")
         return len(errors) == 0, errors
 
     scan_dirs = ("canon", "relationships", "events", "story", "digests", "qa", "context")
@@ -208,10 +227,8 @@ def check_zero_pii(
             except Exception as exc:
                 errors.append(f"Law L01 error reading {file_path}: {exc}")
                 continue
-            for label, pattern in PII_FORBIDDEN_PATTERNS:
-                if pattern.search(content):
-                    rel = file_path.relative_to(root)
-                    errors.append(f"Law L01 violation: forbidden PII token '{label}' found in {rel}.")
+            rel = str(file_path.relative_to(root))
+            _scan_text_for_pii(content, rel)
 
     return len(errors) == 0, errors
 
@@ -1392,7 +1409,7 @@ def validate_showrunner_storytelling_contract(
     meta = ledger.get("campaign_metadata")
     if isinstance(meta, dict):
         pmode = str(meta.get("pacing_mode") or "")
-        if pmode not in ("MERCER_EXPLORATION", "MULLIGAN_CRISIS", "MURPHY_TACTICAL", "MA_NEGATIVE_SPACE"):
+        if pmode not in ("MERCER_EXPLORATION", "MERCER_IMMERSIVE", "MULLIGAN_CRISIS", "MURPHY_TACTICAL", "MA_NEGATIVE_SPACE"):
             errors.append(f"Showrunner contract violation: invalid pacing_mode '{pmode}'.")
         fights = int(meta.get("consequential_fights_since_short_rest", 0) or 0)
         if fights < 0 or fights > 2:

@@ -8,6 +8,7 @@ Constitutional multi-agent digital twin simulation featuring a 16-law constituti
 python3 -m unittest discover -s tests -p "test_*.py"
 ```
 
-## LFS Suite `v1.1.0` Capsule Alignment (`3-lfs-aegis-linux/capsules/enclave-digital-twin`, `PA-15`)
+## Capsule Manifest & Runtime Alignment (`PA-15`)
 
-This repository serves as the upstream source for **The Enclave of the 16 (`PA-15`)** capsule integrated into `3-lfs-aegis-linux/capsules/enclave-digital-twin` under the LFS Ecosystem Plug-In & Synergy Standard (`governance/LFS-ECOSYSTEM-PLUGIN-STANDARD.md`).
+This repository ships `capsule.manifest.json` (`enclave-digital-twin`, `PA-15`) with deterministic offline simulation (`tools/run_sol_simulation.py`) and 16-law constitutional verification (`tools/check_enclave_constitutions.py --strict`).
+

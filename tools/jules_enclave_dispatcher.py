@@ -1031,6 +1031,20 @@ class JulesEnclaveDispatcher:
                     except Exception:
                         pass
 
+                if not unidiff and pr_url:
+                    try:
+                        pr_diff_proc = subprocess.run(
+                            ["gh", "pr", "diff", pr_url],
+                            capture_output=True,
+                            text=True,
+                            timeout=20,
+                            check=False,
+                        )
+                        if pr_diff_proc.returncode == 0 and pr_diff_proc.stdout.strip():
+                            unidiff = pr_diff_proc.stdout
+                    except Exception:
+                        pass
+
                 default_target = str(sess.get("target_path") or "events/evt_salvaged.json")
                 extracted = _extract_proposal_from_unidiff(unidiff, default_target_path=default_target)
                 if extracted is None and isinstance(sess.get("candidate_proposal"), dict):
@@ -1048,15 +1062,46 @@ class JulesEnclaveDispatcher:
                             current_tick=int(proposal_obj.get("tick_id", sess.get("tick_id", 1)) or 1),
                         )
                         if int_res.get("integrated"):
+                            if pr_url:
+                                try:
+                                    subprocess.run(
+                                        ["gh", "pr", "merge", pr_url, "--squash", "--delete-branch"],
+                                        capture_output=True,
+                                        text=True,
+                                        timeout=25,
+                                        check=False,
+                                    )
+                                except Exception:
+                                    pass
                             integrated.append(
                                 {
                                     "session_id": sid,
                                     "target_path": target_rel,
+                                    "pr_url": pr_url or None,
                                     "integrated_at_iso": ts,
                                 }
                             )
                             continue
                     diag_errors = list(val_res.get("errors") or []) + list(sr_res.get("errors") or [])
+                    if pr_url:
+                        try:
+                            subprocess.run(
+                                [
+                                    "gh",
+                                    "pr",
+                                    "close",
+                                    pr_url,
+                                    "--delete-branch",
+                                    "-c",
+                                    f"F-120 Constitutional Gate Rejection: {'; '.join(diag_errors)[:200]}",
+                                ],
+                                capture_output=True,
+                                text=True,
+                                timeout=20,
+                                check=False,
+                            )
+                        except Exception:
+                            pass
                     eav_lesson = format_eav_lesson(
                         entity=f"enclave:{sid}",
                         attr="changeset_gate_rejection",
