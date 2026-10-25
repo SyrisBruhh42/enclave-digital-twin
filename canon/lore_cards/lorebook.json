@@ -1,0 +1,1153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schema_version": "lorebook_v2.0.0",
+  "audit_status": "ADVERSARIAL_AUDIT_PASSED_ZERO_PII",
+  "privacy_invariant": "ZERO_REAL_PERSON_DATA: Strictly fictional Enclave of the 16 canon character schema. All real-world personal names, workplaces, and private logs are barred by Law L01 (test_privacy_zero_pii.py).",
+  "entry_count": 18,
+  "entries": [
+    {
+      "card_id": "lore_01_twin_suns",
+      "title": "Twin Suns",
+      "keys": [
+        "twin suns",
+        "blue dwarf",
+        "red giant",
+        "azimuth",
+        "binary star",
+        "solar shear"
+      ],
+      "and_keys": [
+        "orbit",
+        "kp",
+        "sunset",
+        "dawn"
+      ],
+      "sticky_ticks": 2,
+      "priority": 95,
+      "token_cap": 85,
+      "entry": "Twin Suns govern the Enclave's chronosphere through an asymmetric binary orbit pairing a high-UV Primary Blue Dwarf with a convective Secondary Red Giant. When their azimuths cross opposition, counter-rotating solar winds compress the exoplanet's magnetopause, driving the planetary Kp-exo shear index from calm (4.0) to severe geomagnetism (>= 7.0) and bifurcating valley-to-ridge thermal gradients."
+    },
+    {
+      "card_id": "lore_02_triple_moons",
+      "title": "Triple Moons",
+      "keys": [
+        "triple moons",
+        "luna alpha",
+        "luna beta",
+        "luna gamma",
+        "perigee",
+        "moon-set"
+      ],
+      "and_keys": [
+        "tidal",
+        "phase",
+        "ferrofluid",
+        "eclipse"
+      ],
+      "sticky_ticks": 2,
+      "priority": 92,
+      "token_cap": 85,
+      "entry": "Triple Moons—Luna Alpha, Luna Beta, and dense iron-core Luna Gamma—orbit in a 1:2:4 Laplace resonance that modulates both gravitational and magnetic tides. When Luna Gamma nears perigee (phase >= 0.85), its remanent dipole couples with the crustal bedrock, elevating the ferrofluid sea surge index and inducing harmonic standing waves across every unshielded coil in the valley."
+    },
+    {
+      "card_id": "lore_03_ferrofluid_seas",
+      "title": "Ferrofluid Seas",
+      "keys": [
+        "ferrofluid sea",
+        "ferrofluid",
+        "colloidal iron",
+        "surge index",
+        "magnetic tide"
+      ],
+      "and_keys": [
+        "basin",
+        "standing wave",
+        "tide",
+        "cymatic"
+      ],
+      "sticky_ticks": 2,
+      "priority": 90,
+      "token_cap": 85,
+      "entry": "Ferrofluid Seas fill the exoplanet's low-altitude basalt basins with natural colloidal suspensions of nanoscale magnetite in briny hydrocarbons. Rather than rolling in ordinary gravity waves, their surfaces erupt into geometric Rosensweig spikes and towering Rosette cathedrals during lunar syzygies, providing the raw medium for Orion and Isla's analog phase-space computations inside The Simulacrum."
+    },
+    {
+      "card_id": "lore_04_captured_lightning_geodes",
+      "title": "Captured Lightning Geodes",
+      "keys": [
+        "lightning geode",
+        "geode",
+        "captured lightning",
+        "geode charge",
+        "fulgurite"
+      ],
+      "and_keys": [
+        "capacitor",
+        "megajoule",
+        "busbar",
+        "discharge"
+      ],
+      "sticky_ticks": 2,
+      "priority": 94,
+      "token_cap": 85,
+      "entry": "Captured Lightning Geodes are hollow piezo-quartz nodules lined with natural superconducting bismuth-telluride lattices that trap megajoule atmospheric discharges as circulating persistent currents. Harvested along the crater rim and regulated by hand-forged copper busbars, they power the Enclave's steampunk-cyberpunk infrastructure without fossil fuels or silicon microchips."
+    },
+    {
+      "card_id": "lore_05_mycelial_network",
+      "title": "Mycelial Network",
+      "keys": [
+        "mycelial network",
+        "mycelium",
+        "spore-fog",
+        "spore luminescence",
+        "soliton"
+      ],
+      "and_keys": [
+        "fungus",
+        "rhizome",
+        "concordance",
+        "bioluminescent"
+      ],
+      "sticky_ticks": 2,
+      "priority": 91,
+      "token_cap": 85,
+      "entry": "Mycelial Network filaments weave through the Enclave Crater Valley's ferro-silicate bedrock, forming a continent-spanning bio-electrical web coated in conductive melanin and magnetite biomineralization. During Resonant Spore-Fog Drifts, the network transmits 8-to-14 Hz ionic soliton pulses between ridges, acting as both an ecological barometer and a symbiotic partner to Terra's crops."
+    },
+    {
+      "card_id": "lore_06_polarity_inversion",
+      "title": "Polarity Inversion",
+      "keys": [
+        "polarity inversion",
+        "vex's effect",
+        "inverted",
+        "ironic star sign",
+        "kp_exo >= 7"
+      ],
+      "and_keys": [
+        "stress",
+        "cooldown",
+        "cortical",
+        "override"
+      ],
+      "sticky_ticks": 2,
+      "priority": 98,
+      "token_cap": 88,
+      "entry": "Polarity Inversion (cataloged in-lore as Vex's Effect) is a temporary neuro-magnetic phase flip triggered when a colonist's cumulative stress exceeds 0.82 during a Kp-exo >= 7.0 magnetic shear spike. Transcranial eddy currents briefly invert dominant cognitive inhibition, causing the person to act out their opposite 'ironic star sign' until grounded at The Feast (minimum 7-Feast cooldown)."
+    },
+    {
+      "card_id": "lore_07_the_feast",
+      "title": "The Feast",
+      "keys": [
+        "the feast",
+        "dinner fire",
+        "main bus",
+        "evening dispatch",
+        "hearth table"
+      ],
+      "and_keys": [
+        "ryn",
+        "dorian",
+        "bread",
+        "nightly"
+      ],
+      "sticky_ticks": 2,
+      "priority": 99,
+      "token_cap": 85,
+      "entry": "The Feast is the Enclave's mandatory nightly convergence where all sixteen colonists gather around the Hearth fire as the social and physiological Main Bus. Over Ryn's mineral-balanced courses and Dorian's pitch-pipe Evening Dispatch, stress vectors decay, resource frictions soften through face-to-face affection, and cross-squad discoveries are woven into shared family memory."
+    },
+    {
+      "card_id": "lore_08_sibling_grid_shadow_economy",
+      "title": "The Sibling Grid",
+      "keys": [
+        "sibling grid",
+        "shadow economy",
+        "prank",
+        "contraband",
+        "barter ledger"
+      ],
+      "and_keys": [
+        "prodigy",
+        "vex",
+        "kaio",
+        "setup"
+      ],
+      "sticky_ticks": 2,
+      "priority": 88,
+      "token_cap": 85,
+      "entry": "The Sibling Grid (and its informal Shadow Economy) is the affectionate underground barter and prank network run by the eight 18-year-old prodigies—and secretly abetted by half the elders. Operating via pneumatic brass message tubes and hidden cache-niches, it trades rare geode shards, sweet spore-cakes, and multi-sol clockwork practical jokes that vent colony pressure without malice."
+    },
+    {
+      "card_id": "lore_09_first_forge",
+      "title": "The First Forge",
+      "keys": [
+        "the first forge",
+        "first forge",
+        "sympathetic ore",
+        "induction crucible",
+        "bismuth baffle"
+      ],
+      "and_keys": [
+        "silas",
+        "leo",
+        "metallurgy",
+        "bellows"
+      ],
+      "sticky_ticks": 2,
+      "priority": 86,
+      "token_cap": 84,
+      "entry": "The First Forge is the primary metallurgical foundry anchored by Silas and Leo in the eastern crater wall. Powered by dual-geode induction coils and calibrated to the beat of Silas's late wife's pocket watch, it smelts terrestrial scrap with exoplanet sympathetic iron to cast self-healing busbars, pressure vessels, and precision brass clockwork."
+    },
+    {
+      "card_id": "lore_10_the_stormbreaker",
+      "title": "The Stormbreaker",
+      "keys": [
+        "the stormbreaker",
+        "stormbreaker spire",
+        "lightning spire",
+        "babbage-loom",
+        "grounding mast"
+      ],
+      "and_keys": [
+        "hector",
+        "jane",
+        "voltage",
+        "shunt"
+      ],
+      "sticky_ticks": 2,
+      "priority": 86,
+      "token_cap": 84,
+      "entry": "The Stormbreaker is the high-altitude magnetohydrodynamic lightning-harvesting array spearheaded by Hector and Jane atop the northern ridge crest. Pairing Hector's kinetic spire-rigging with Jane's punch-card Navier-Stokes weather loom, it intercepts bifurcated thermal-shear lightning bolts and channels their megajoules safely into the colony's geode capacitor banks."
+    },
+    {
+      "card_id": "lore_11_the_sanctuary",
+      "title": "The Sanctuary",
+      "keys": [
+        "the sanctuary",
+        "carapace-elk",
+        "chitin-hound",
+        "prism-moth",
+        "paddock"
+      ],
+      "and_keys": [
+        "kaio",
+        "zara",
+        "fauna",
+        "magnetotropic"
+      ],
+      "sticky_ticks": 2,
+      "priority": 84,
+      "token_cap": 84,
+      "entry": "The Sanctuary is an open-perimeter ecological refuge in the western fern-gorge co-stewarded by Kaio and Zara under Willow's guidance. Built with copper-braided magnetic buffer fences that shield native carapace-elk, prism-moths, and chitin-hounds during solar-pair storms, it studies animal bio-magnetic navigation without cages or coercion."
+    },
+    {
+      "card_id": "lore_12_genesis_garden",
+      "title": "The Genesis Garden",
+      "keys": [
+        "the genesis garden",
+        "genesis garden",
+        "iron-wheat",
+        "crystalline iron-wheat",
+        "chelation"
+      ],
+      "and_keys": [
+        "terra",
+        "willow",
+        "seed",
+        "greenhouse"
+      ],
+      "sticky_ticks": 2,
+      "priority": 85,
+      "token_cap": 84,
+      "entry": "The Genesis Garden is the terraced geothermal conservatory tended by Terra and Willow. By treating toxic ferro-silicate soil with Willow's organometallic sulfur chelates and inoculating Old Earth heirloom seeds with native piezo-electric mycorrhizae, it produces Crystalline Iron-Wheat and medicinal flora that sustain both the kitchen and the forge."
+    },
+    {
+      "card_id": "lore_13_the_simulacrum",
+      "title": "The Simulacrum",
+      "keys": [
+        "the simulacrum",
+        "simulacrum",
+        "helmholtz",
+        "vernier ring",
+        "cymatic"
+      ],
+      "and_keys": [
+        "orion",
+        "isla",
+        "ferrofluid",
+        "manifold"
+      ],
+      "sticky_ticks": 2,
+      "priority": 84,
+      "token_cap": 84,
+      "entry": "The Simulacrum is a thirty-two-ring brass Helmholtz analog computer suspended above a mirrored basin of colloidal ferrofluid in The Mind's central rotunda. Co-designed by Isla and Orion, it uses acoustic tuning forks and magnetic tensor rings to sculpt real-time three-dimensional standing waves that model weather vortices and colony stress."
+    },
+    {
+      "card_id": "lore_14_lyceum_of_the_mind",
+      "title": "The Lyceum of the Mind",
+      "keys": [
+        "lyceum of the mind",
+        "the lyceum",
+        "neuro-somatic",
+        "biofeedback",
+        "drift audit"
+      ],
+      "and_keys": [
+        "kenna",
+        "elias",
+        "meditation",
+        "phenomenology"
+      ],
+      "sticky_ticks": 2,
+      "priority": 83,
+      "token_cap": 84,
+      "entry": "The Lyceum of the Mind is a copper-shielded acoustic sanctuary and contemplative library anchored by Kenna and Elias. Combining resonant cello-cadence biofeedback with Socratic dialogue, it provides a Faraday-calm refuge for grounding Polarity Inversions, resolving specialist friction, and conducting gentle psychometric drift check-ins."
+    },
+    {
+      "card_id": "lore_15_living_atlas",
+      "title": "The Living Atlas & Mycelial Concordance",
+      "keys": [
+        "living atlas",
+        "mycelial concordance",
+        "copper plate",
+        "astrolabe",
+        "iron-gall"
+      ],
+      "and_keys": [
+        "vex",
+        "dorian",
+        "observatory",
+        "chronicle"
+      ],
+      "sticky_ticks": 2,
+      "priority": 83,
+      "token_cap": 84,
+      "entry": "The Living Atlas & Mycelial Concordance is the dual observatory and archival vault run by Vex and Dorian atop The Hub. Merging Vex's binary-star astrolabe and mycelial soliton oscilloscopes with Dorian's hand-engraved copper chronicle plates, it cross-indexes every astronomical, ecological, and human event in the Enclave."
+    },
+    {
+      "card_id": "lore_16_hearth_metabolic_engine",
+      "title": "The Hearth & Metabolic Engine",
+      "keys": [
+        "metabolic engine",
+        "the hearth",
+        "galley",
+        "basal metabolic",
+        "magnesium"
+      ],
+      "and_keys": [
+        "ryn",
+        "elara",
+        "infirmary",
+        "caloric"
+      ],
+      "sticky_ticks": 2,
+      "priority": 87,
+      "token_cap": 84,
+      "entry": "The Hearth & Metabolic Engine is the integrated steam-jacketed galley and clinical infirmary commanded by Ryn and Elara at the center of The Hub. Operating as a precision thermodynamic and biochemical life-support loop, it tailors daily caloric, electrolyte, and trace-mineral intake to protect all sixteen colonists against cold shear and magnetic fatigue."
+    },
+    {
+      "card_id": "lore_17_schrodinger_harvest",
+      "title": "Schrödinger's Harvest",
+      "keys": [
+        "schrodinger's harvest",
+        "schrodinger harvest",
+        "batch #14",
+        "resource friction",
+        "competing claim"
+      ],
+      "and_keys": [
+        "husk",
+        "seed stock",
+        "veto",
+        "compromise"
+      ],
+      "sticky_ticks": 2,
+      "priority": 89,
+      "token_cap": 85,
+      "entry": "Schrödinger's Harvest refers to dual-use exoplanet resources—such as Crystalline Iron-Wheat Batch #14—whose metallized husks and nutrient kernels are simultaneously claimed by The Wilds for seed stock, The Forge for magnetic flux shielding, and The Hub for winter loaves, sparking high-competence specialist debates where every squad is right in its own domain."
+    },
+    {
+      "card_id": "lore_18_hub_circuit_breaker_veto",
+      "title": "The Hub's Circuit-Breaker Veto",
+      "keys": [
+        "circuit-breaker veto",
+        "hub veto",
+        "hub's veto",
+        "diplomacy of competence",
+        "physiological veto"
+      ],
+      "and_keys": [
+        "ryn",
+        "elara",
+        "sleep debt",
+        "safety"
+      ],
+      "sticky_ticks": 2,
+      "priority": 88,
+      "token_cap": 84,
+      "entry": "The Hub's Circuit-Breaker Veto is the Enclave's constitutional safety lock jointly held by Ryn (The Chef) and Elara (The Medic). Whenever cross-squad resource friction or prototype obsession threatens caloric reserves, hypothermia margins, or clinical sleep-debt limits, The Hub can halt industrial draws until human homeostasis is secured."
+    }
+  ],
+  "lore_cards": [
+    {
+      "card_id": "lore_01_twin_suns",
+      "title": "Twin Suns",
+      "keys": [
+        "twin suns",
+        "blue dwarf",
+        "red giant",
+        "azimuth",
+        "binary star",
+        "solar shear"
+      ],
+      "and_keys": [
+        "orbit",
+        "kp",
+        "sunset",
+        "dawn"
+      ],
+      "sticky_ticks": 2,
+      "priority": 95,
+      "token_cap": 85,
+      "entry": "Twin Suns govern the Enclave's chronosphere through an asymmetric binary orbit pairing a high-UV Primary Blue Dwarf with a convective Secondary Red Giant. When their azimuths cross opposition, counter-rotating solar winds compress the exoplanet's magnetopause, driving the planetary Kp-exo shear index from calm (4.0) to severe geomagnetism (>= 7.0) and bifurcating valley-to-ridge thermal gradients."
+    },
+    {
+      "card_id": "lore_02_triple_moons",
+      "title": "Triple Moons",
+      "keys": [
+        "triple moons",
+        "luna alpha",
+        "luna beta",
+        "luna gamma",
+        "perigee",
+        "moon-set"
+      ],
+      "and_keys": [
+        "tidal",
+        "phase",
+        "ferrofluid",
+        "eclipse"
+      ],
+      "sticky_ticks": 2,
+      "priority": 92,
+      "token_cap": 85,
+      "entry": "Triple Moons—Luna Alpha, Luna Beta, and dense iron-core Luna Gamma—orbit in a 1:2:4 Laplace resonance that modulates both gravitational and magnetic tides. When Luna Gamma nears perigee (phase >= 0.85), its remanent dipole couples with the crustal bedrock, elevating the ferrofluid sea surge index and inducing harmonic standing waves across every unshielded coil in the valley."
+    },
+    {
+      "card_id": "lore_03_ferrofluid_seas",
+      "title": "Ferrofluid Seas",
+      "keys": [
+        "ferrofluid sea",
+        "ferrofluid",
+        "colloidal iron",
+        "surge index",
+        "magnetic tide"
+      ],
+      "and_keys": [
+        "basin",
+        "standing wave",
+        "tide",
+        "cymatic"
+      ],
+      "sticky_ticks": 2,
+      "priority": 90,
+      "token_cap": 85,
+      "entry": "Ferrofluid Seas fill the exoplanet's low-altitude basalt basins with natural colloidal suspensions of nanoscale magnetite in briny hydrocarbons. Rather than rolling in ordinary gravity waves, their surfaces erupt into geometric Rosensweig spikes and towering Rosette cathedrals during lunar syzygies, providing the raw medium for Orion and Isla's analog phase-space computations inside The Simulacrum."
+    },
+    {
+      "card_id": "lore_04_captured_lightning_geodes",
+      "title": "Captured Lightning Geodes",
+      "keys": [
+        "lightning geode",
+        "geode",
+        "captured lightning",
+        "geode charge",
+        "fulgurite"
+      ],
+      "and_keys": [
+        "capacitor",
+        "megajoule",
+        "busbar",
+        "discharge"
+      ],
+      "sticky_ticks": 2,
+      "priority": 94,
+      "token_cap": 85,
+      "entry": "Captured Lightning Geodes are hollow piezo-quartz nodules lined with natural superconducting bismuth-telluride lattices that trap megajoule atmospheric discharges as circulating persistent currents. Harvested along the crater rim and regulated by hand-forged copper busbars, they power the Enclave's steampunk-cyberpunk infrastructure without fossil fuels or silicon microchips."
+    },
+    {
+      "card_id": "lore_05_mycelial_network",
+      "title": "Mycelial Network",
+      "keys": [
+        "mycelial network",
+        "mycelium",
+        "spore-fog",
+        "spore luminescence",
+        "soliton"
+      ],
+      "and_keys": [
+        "fungus",
+        "rhizome",
+        "concordance",
+        "bioluminescent"
+      ],
+      "sticky_ticks": 2,
+      "priority": 91,
+      "token_cap": 85,
+      "entry": "Mycelial Network filaments weave through the Enclave Crater Valley's ferro-silicate bedrock, forming a continent-spanning bio-electrical web coated in conductive melanin and magnetite biomineralization. During Resonant Spore-Fog Drifts, the network transmits 8-to-14 Hz ionic soliton pulses between ridges, acting as both an ecological barometer and a symbiotic partner to Terra's crops."
+    },
+    {
+      "card_id": "lore_06_polarity_inversion",
+      "title": "Polarity Inversion",
+      "keys": [
+        "polarity inversion",
+        "vex's effect",
+        "inverted",
+        "ironic star sign",
+        "kp_exo >= 7"
+      ],
+      "and_keys": [
+        "stress",
+        "cooldown",
+        "cortical",
+        "override"
+      ],
+      "sticky_ticks": 2,
+      "priority": 98,
+      "token_cap": 88,
+      "entry": "Polarity Inversion (cataloged in-lore as Vex's Effect) is a temporary neuro-magnetic phase flip triggered when a colonist's cumulative stress exceeds 0.82 during a Kp-exo >= 7.0 magnetic shear spike. Transcranial eddy currents briefly invert dominant cognitive inhibition, causing the person to act out their opposite 'ironic star sign' until grounded at The Feast (minimum 7-Feast cooldown)."
+    },
+    {
+      "card_id": "lore_07_the_feast",
+      "title": "The Feast",
+      "keys": [
+        "the feast",
+        "dinner fire",
+        "main bus",
+        "evening dispatch",
+        "hearth table"
+      ],
+      "and_keys": [
+        "ryn",
+        "dorian",
+        "bread",
+        "nightly"
+      ],
+      "sticky_ticks": 2,
+      "priority": 99,
+      "token_cap": 85,
+      "entry": "The Feast is the Enclave's mandatory nightly convergence where all sixteen colonists gather around the Hearth fire as the social and physiological Main Bus. Over Ryn's mineral-balanced courses and Dorian's pitch-pipe Evening Dispatch, stress vectors decay, resource frictions soften through face-to-face affection, and cross-squad discoveries are woven into shared family memory."
+    },
+    {
+      "card_id": "lore_08_sibling_grid_shadow_economy",
+      "title": "The Sibling Grid",
+      "keys": [
+        "sibling grid",
+        "shadow economy",
+        "prank",
+        "contraband",
+        "barter ledger"
+      ],
+      "and_keys": [
+        "prodigy",
+        "vex",
+        "kaio",
+        "setup"
+      ],
+      "sticky_ticks": 2,
+      "priority": 88,
+      "token_cap": 85,
+      "entry": "The Sibling Grid (and its informal Shadow Economy) is the affectionate underground barter and prank network run by the eight 18-year-old prodigies—and secretly abetted by half the elders. Operating via pneumatic brass message tubes and hidden cache-niches, it trades rare geode shards, sweet spore-cakes, and multi-sol clockwork practical jokes that vent colony pressure without malice."
+    },
+    {
+      "card_id": "lore_09_first_forge",
+      "title": "The First Forge",
+      "keys": [
+        "the first forge",
+        "first forge",
+        "sympathetic ore",
+        "induction crucible",
+        "bismuth baffle"
+      ],
+      "and_keys": [
+        "silas",
+        "leo",
+        "metallurgy",
+        "bellows"
+      ],
+      "sticky_ticks": 2,
+      "priority": 86,
+      "token_cap": 84,
+      "entry": "The First Forge is the primary metallurgical foundry anchored by Silas and Leo in the eastern crater wall. Powered by dual-geode induction coils and calibrated to the beat of Silas's late wife's pocket watch, it smelts terrestrial scrap with exoplanet sympathetic iron to cast self-healing busbars, pressure vessels, and precision brass clockwork."
+    },
+    {
+      "card_id": "lore_10_the_stormbreaker",
+      "title": "The Stormbreaker",
+      "keys": [
+        "the stormbreaker",
+        "stormbreaker spire",
+        "lightning spire",
+        "babbage-loom",
+        "grounding mast"
+      ],
+      "and_keys": [
+        "hector",
+        "jane",
+        "voltage",
+        "shunt"
+      ],
+      "sticky_ticks": 2,
+      "priority": 86,
+      "token_cap": 84,
+      "entry": "The Stormbreaker is the high-altitude magnetohydrodynamic lightning-harvesting array spearheaded by Hector and Jane atop the northern ridge crest. Pairing Hector's kinetic spire-rigging with Jane's punch-card Navier-Stokes weather loom, it intercepts bifurcated thermal-shear lightning bolts and channels their megajoules safely into the colony's geode capacitor banks."
+    },
+    {
+      "card_id": "lore_11_the_sanctuary",
+      "title": "The Sanctuary",
+      "keys": [
+        "the sanctuary",
+        "carapace-elk",
+        "chitin-hound",
+        "prism-moth",
+        "paddock"
+      ],
+      "and_keys": [
+        "kaio",
+        "zara",
+        "fauna",
+        "magnetotropic"
+      ],
+      "sticky_ticks": 2,
+      "priority": 84,
+      "token_cap": 84,
+      "entry": "The Sanctuary is an open-perimeter ecological refuge in the western fern-gorge co-stewarded by Kaio and Zara under Willow's guidance. Built with copper-braided magnetic buffer fences that shield native carapace-elk, prism-moths, and chitin-hounds during solar-pair storms, it studies animal bio-magnetic navigation without cages or coercion."
+    },
+    {
+      "card_id": "lore_12_genesis_garden",
+      "title": "The Genesis Garden",
+      "keys": [
+        "the genesis garden",
+        "genesis garden",
+        "iron-wheat",
+        "crystalline iron-wheat",
+        "chelation"
+      ],
+      "and_keys": [
+        "terra",
+        "willow",
+        "seed",
+        "greenhouse"
+      ],
+      "sticky_ticks": 2,
+      "priority": 85,
+      "token_cap": 84,
+      "entry": "The Genesis Garden is the terraced geothermal conservatory tended by Terra and Willow. By treating toxic ferro-silicate soil with Willow's organometallic sulfur chelates and inoculating Old Earth heirloom seeds with native piezo-electric mycorrhizae, it produces Crystalline Iron-Wheat and medicinal flora that sustain both the kitchen and the forge."
+    },
+    {
+      "card_id": "lore_13_the_simulacrum",
+      "title": "The Simulacrum",
+      "keys": [
+        "the simulacrum",
+        "simulacrum",
+        "helmholtz",
+        "vernier ring",
+        "cymatic"
+      ],
+      "and_keys": [
+        "orion",
+        "isla",
+        "ferrofluid",
+        "manifold"
+      ],
+      "sticky_ticks": 2,
+      "priority": 84,
+      "token_cap": 84,
+      "entry": "The Simulacrum is a thirty-two-ring brass Helmholtz analog computer suspended above a mirrored basin of colloidal ferrofluid in The Mind's central rotunda. Co-designed by Isla and Orion, it uses acoustic tuning forks and magnetic tensor rings to sculpt real-time three-dimensional standing waves that model weather vortices and colony stress."
+    },
+    {
+      "card_id": "lore_14_lyceum_of_the_mind",
+      "title": "The Lyceum of the Mind",
+      "keys": [
+        "lyceum of the mind",
+        "the lyceum",
+        "neuro-somatic",
+        "biofeedback",
+        "drift audit"
+      ],
+      "and_keys": [
+        "kenna",
+        "elias",
+        "meditation",
+        "phenomenology"
+      ],
+      "sticky_ticks": 2,
+      "priority": 83,
+      "token_cap": 84,
+      "entry": "The Lyceum of the Mind is a copper-shielded acoustic sanctuary and contemplative library anchored by Kenna and Elias. Combining resonant cello-cadence biofeedback with Socratic dialogue, it provides a Faraday-calm refuge for grounding Polarity Inversions, resolving specialist friction, and conducting gentle psychometric drift check-ins."
+    },
+    {
+      "card_id": "lore_15_living_atlas",
+      "title": "The Living Atlas & Mycelial Concordance",
+      "keys": [
+        "living atlas",
+        "mycelial concordance",
+        "copper plate",
+        "astrolabe",
+        "iron-gall"
+      ],
+      "and_keys": [
+        "vex",
+        "dorian",
+        "observatory",
+        "chronicle"
+      ],
+      "sticky_ticks": 2,
+      "priority": 83,
+      "token_cap": 84,
+      "entry": "The Living Atlas & Mycelial Concordance is the dual observatory and archival vault run by Vex and Dorian atop The Hub. Merging Vex's binary-star astrolabe and mycelial soliton oscilloscopes with Dorian's hand-engraved copper chronicle plates, it cross-indexes every astronomical, ecological, and human event in the Enclave."
+    },
+    {
+      "card_id": "lore_16_hearth_metabolic_engine",
+      "title": "The Hearth & Metabolic Engine",
+      "keys": [
+        "metabolic engine",
+        "the hearth",
+        "galley",
+        "basal metabolic",
+        "magnesium"
+      ],
+      "and_keys": [
+        "ryn",
+        "elara",
+        "infirmary",
+        "caloric"
+      ],
+      "sticky_ticks": 2,
+      "priority": 87,
+      "token_cap": 84,
+      "entry": "The Hearth & Metabolic Engine is the integrated steam-jacketed galley and clinical infirmary commanded by Ryn and Elara at the center of The Hub. Operating as a precision thermodynamic and biochemical life-support loop, it tailors daily caloric, electrolyte, and trace-mineral intake to protect all sixteen colonists against cold shear and magnetic fatigue."
+    },
+    {
+      "card_id": "lore_17_schrodinger_harvest",
+      "title": "Schrödinger's Harvest",
+      "keys": [
+        "schrodinger's harvest",
+        "schrodinger harvest",
+        "batch #14",
+        "resource friction",
+        "competing claim"
+      ],
+      "and_keys": [
+        "husk",
+        "seed stock",
+        "veto",
+        "compromise"
+      ],
+      "sticky_ticks": 2,
+      "priority": 89,
+      "token_cap": 85,
+      "entry": "Schrödinger's Harvest refers to dual-use exoplanet resources—such as Crystalline Iron-Wheat Batch #14—whose metallized husks and nutrient kernels are simultaneously claimed by The Wilds for seed stock, The Forge for magnetic flux shielding, and The Hub for winter loaves, sparking high-competence specialist debates where every squad is right in its own domain."
+    },
+    {
+      "card_id": "lore_18_hub_circuit_breaker_veto",
+      "title": "The Hub's Circuit-Breaker Veto",
+      "keys": [
+        "circuit-breaker veto",
+        "hub veto",
+        "hub's veto",
+        "diplomacy of competence",
+        "physiological veto"
+      ],
+      "and_keys": [
+        "ryn",
+        "elara",
+        "sleep debt",
+        "safety"
+      ],
+      "sticky_ticks": 2,
+      "priority": 88,
+      "token_cap": 84,
+      "entry": "The Hub's Circuit-Breaker Veto is the Enclave's constitutional safety lock jointly held by Ryn (The Chef) and Elara (The Medic). Whenever cross-squad resource friction or prototype obsession threatens caloric reserves, hypothermia margins, or clinical sleep-debt limits, The Hub can halt industrial draws until human homeostasis is secured."
+    }
+  ],
+  "cards": [
+    {
+      "card_id": "lore_01_twin_suns",
+      "title": "Twin Suns",
+      "keys": [
+        "twin suns",
+        "blue dwarf",
+        "red giant",
+        "azimuth",
+        "binary star",
+        "solar shear"
+      ],
+      "and_keys": [
+        "orbit",
+        "kp",
+        "sunset",
+        "dawn"
+      ],
+      "sticky_ticks": 2,
+      "priority": 95,
+      "token_cap": 85,
+      "entry": "Twin Suns govern the Enclave's chronosphere through an asymmetric binary orbit pairing a high-UV Primary Blue Dwarf with a convective Secondary Red Giant. When their azimuths cross opposition, counter-rotating solar winds compress the exoplanet's magnetopause, driving the planetary Kp-exo shear index from calm (4.0) to severe geomagnetism (>= 7.0) and bifurcating valley-to-ridge thermal gradients."
+    },
+    {
+      "card_id": "lore_02_triple_moons",
+      "title": "Triple Moons",
+      "keys": [
+        "triple moons",
+        "luna alpha",
+        "luna beta",
+        "luna gamma",
+        "perigee",
+        "moon-set"
+      ],
+      "and_keys": [
+        "tidal",
+        "phase",
+        "ferrofluid",
+        "eclipse"
+      ],
+      "sticky_ticks": 2,
+      "priority": 92,
+      "token_cap": 85,
+      "entry": "Triple Moons—Luna Alpha, Luna Beta, and dense iron-core Luna Gamma—orbit in a 1:2:4 Laplace resonance that modulates both gravitational and magnetic tides. When Luna Gamma nears perigee (phase >= 0.85), its remanent dipole couples with the crustal bedrock, elevating the ferrofluid sea surge index and inducing harmonic standing waves across every unshielded coil in the valley."
+    },
+    {
+      "card_id": "lore_03_ferrofluid_seas",
+      "title": "Ferrofluid Seas",
+      "keys": [
+        "ferrofluid sea",
+        "ferrofluid",
+        "colloidal iron",
+        "surge index",
+        "magnetic tide"
+      ],
+      "and_keys": [
+        "basin",
+        "standing wave",
+        "tide",
+        "cymatic"
+      ],
+      "sticky_ticks": 2,
+      "priority": 90,
+      "token_cap": 85,
+      "entry": "Ferrofluid Seas fill the exoplanet's low-altitude basalt basins with natural colloidal suspensions of nanoscale magnetite in briny hydrocarbons. Rather than rolling in ordinary gravity waves, their surfaces erupt into geometric Rosensweig spikes and towering Rosette cathedrals during lunar syzygies, providing the raw medium for Orion and Isla's analog phase-space computations inside The Simulacrum."
+    },
+    {
+      "card_id": "lore_04_captured_lightning_geodes",
+      "title": "Captured Lightning Geodes",
+      "keys": [
+        "lightning geode",
+        "geode",
+        "captured lightning",
+        "geode charge",
+        "fulgurite"
+      ],
+      "and_keys": [
+        "capacitor",
+        "megajoule",
+        "busbar",
+        "discharge"
+      ],
+      "sticky_ticks": 2,
+      "priority": 94,
+      "token_cap": 85,
+      "entry": "Captured Lightning Geodes are hollow piezo-quartz nodules lined with natural superconducting bismuth-telluride lattices that trap megajoule atmospheric discharges as circulating persistent currents. Harvested along the crater rim and regulated by hand-forged copper busbars, they power the Enclave's steampunk-cyberpunk infrastructure without fossil fuels or silicon microchips."
+    },
+    {
+      "card_id": "lore_05_mycelial_network",
+      "title": "Mycelial Network",
+      "keys": [
+        "mycelial network",
+        "mycelium",
+        "spore-fog",
+        "spore luminescence",
+        "soliton"
+      ],
+      "and_keys": [
+        "fungus",
+        "rhizome",
+        "concordance",
+        "bioluminescent"
+      ],
+      "sticky_ticks": 2,
+      "priority": 91,
+      "token_cap": 85,
+      "entry": "Mycelial Network filaments weave through the Enclave Crater Valley's ferro-silicate bedrock, forming a continent-spanning bio-electrical web coated in conductive melanin and magnetite biomineralization. During Resonant Spore-Fog Drifts, the network transmits 8-to-14 Hz ionic soliton pulses between ridges, acting as both an ecological barometer and a symbiotic partner to Terra's crops."
+    },
+    {
+      "card_id": "lore_06_polarity_inversion",
+      "title": "Polarity Inversion",
+      "keys": [
+        "polarity inversion",
+        "vex's effect",
+        "inverted",
+        "ironic star sign",
+        "kp_exo >= 7"
+      ],
+      "and_keys": [
+        "stress",
+        "cooldown",
+        "cortical",
+        "override"
+      ],
+      "sticky_ticks": 2,
+      "priority": 98,
+      "token_cap": 88,
+      "entry": "Polarity Inversion (cataloged in-lore as Vex's Effect) is a temporary neuro-magnetic phase flip triggered when a colonist's cumulative stress exceeds 0.82 during a Kp-exo >= 7.0 magnetic shear spike. Transcranial eddy currents briefly invert dominant cognitive inhibition, causing the person to act out their opposite 'ironic star sign' until grounded at The Feast (minimum 7-Feast cooldown)."
+    },
+    {
+      "card_id": "lore_07_the_feast",
+      "title": "The Feast",
+      "keys": [
+        "the feast",
+        "dinner fire",
+        "main bus",
+        "evening dispatch",
+        "hearth table"
+      ],
+      "and_keys": [
+        "ryn",
+        "dorian",
+        "bread",
+        "nightly"
+      ],
+      "sticky_ticks": 2,
+      "priority": 99,
+      "token_cap": 85,
+      "entry": "The Feast is the Enclave's mandatory nightly convergence where all sixteen colonists gather around the Hearth fire as the social and physiological Main Bus. Over Ryn's mineral-balanced courses and Dorian's pitch-pipe Evening Dispatch, stress vectors decay, resource frictions soften through face-to-face affection, and cross-squad discoveries are woven into shared family memory."
+    },
+    {
+      "card_id": "lore_08_sibling_grid_shadow_economy",
+      "title": "The Sibling Grid",
+      "keys": [
+        "sibling grid",
+        "shadow economy",
+        "prank",
+        "contraband",
+        "barter ledger"
+      ],
+      "and_keys": [
+        "prodigy",
+        "vex",
+        "kaio",
+        "setup"
+      ],
+      "sticky_ticks": 2,
+      "priority": 88,
+      "token_cap": 85,
+      "entry": "The Sibling Grid (and its informal Shadow Economy) is the affectionate underground barter and prank network run by the eight 18-year-old prodigies—and secretly abetted by half the elders. Operating via pneumatic brass message tubes and hidden cache-niches, it trades rare geode shards, sweet spore-cakes, and multi-sol clockwork practical jokes that vent colony pressure without malice."
+    },
+    {
+      "card_id": "lore_09_first_forge",
+      "title": "The First Forge",
+      "keys": [
+        "the first forge",
+        "first forge",
+        "sympathetic ore",
+        "induction crucible",
+        "bismuth baffle"
+      ],
+      "and_keys": [
+        "silas",
+        "leo",
+        "metallurgy",
+        "bellows"
+      ],
+      "sticky_ticks": 2,
+      "priority": 86,
+      "token_cap": 84,
+      "entry": "The First Forge is the primary metallurgical foundry anchored by Silas and Leo in the eastern crater wall. Powered by dual-geode induction coils and calibrated to the beat of Silas's late wife's pocket watch, it smelts terrestrial scrap with exoplanet sympathetic iron to cast self-healing busbars, pressure vessels, and precision brass clockwork."
+    },
+    {
+      "card_id": "lore_10_the_stormbreaker",
+      "title": "The Stormbreaker",
+      "keys": [
+        "the stormbreaker",
+        "stormbreaker spire",
+        "lightning spire",
+        "babbage-loom",
+        "grounding mast"
+      ],
+      "and_keys": [
+        "hector",
+        "jane",
+        "voltage",
+        "shunt"
+      ],
+      "sticky_ticks": 2,
+      "priority": 86,
+      "token_cap": 84,
+      "entry": "The Stormbreaker is the high-altitude magnetohydrodynamic lightning-harvesting array spearheaded by Hector and Jane atop the northern ridge crest. Pairing Hector's kinetic spire-rigging with Jane's punch-card Navier-Stokes weather loom, it intercepts bifurcated thermal-shear lightning bolts and channels their megajoules safely into the colony's geode capacitor banks."
+    },
+    {
+      "card_id": "lore_11_the_sanctuary",
+      "title": "The Sanctuary",
+      "keys": [
+        "the sanctuary",
+        "carapace-elk",
+        "chitin-hound",
+        "prism-moth",
+        "paddock"
+      ],
+      "and_keys": [
+        "kaio",
+        "zara",
+        "fauna",
+        "magnetotropic"
+      ],
+      "sticky_ticks": 2,
+      "priority": 84,
+      "token_cap": 84,
+      "entry": "The Sanctuary is an open-perimeter ecological refuge in the western fern-gorge co-stewarded by Kaio and Zara under Willow's guidance. Built with copper-braided magnetic buffer fences that shield native carapace-elk, prism-moths, and chitin-hounds during solar-pair storms, it studies animal bio-magnetic navigation without cages or coercion."
+    },
+    {
+      "card_id": "lore_12_genesis_garden",
+      "title": "The Genesis Garden",
+      "keys": [
+        "the genesis garden",
+        "genesis garden",
+        "iron-wheat",
+        "crystalline iron-wheat",
+        "chelation"
+      ],
+      "and_keys": [
+        "terra",
+        "willow",
+        "seed",
+        "greenhouse"
+      ],
+      "sticky_ticks": 2,
+      "priority": 85,
+      "token_cap": 84,
+      "entry": "The Genesis Garden is the terraced geothermal conservatory tended by Terra and Willow. By treating toxic ferro-silicate soil with Willow's organometallic sulfur chelates and inoculating Old Earth heirloom seeds with native piezo-electric mycorrhizae, it produces Crystalline Iron-Wheat and medicinal flora that sustain both the kitchen and the forge."
+    },
+    {
+      "card_id": "lore_13_the_simulacrum",
+      "title": "The Simulacrum",
+      "keys": [
+        "the simulacrum",
+        "simulacrum",
+        "helmholtz",
+        "vernier ring",
+        "cymatic"
+      ],
+      "and_keys": [
+        "orion",
+        "isla",
+        "ferrofluid",
+        "manifold"
+      ],
+      "sticky_ticks": 2,
+      "priority": 84,
+      "token_cap": 84,
+      "entry": "The Simulacrum is a thirty-two-ring brass Helmholtz analog computer suspended above a mirrored basin of colloidal ferrofluid in The Mind's central rotunda. Co-designed by Isla and Orion, it uses acoustic tuning forks and magnetic tensor rings to sculpt real-time three-dimensional standing waves that model weather vortices and colony stress."
+    },
+    {
+      "card_id": "lore_14_lyceum_of_the_mind",
+      "title": "The Lyceum of the Mind",
+      "keys": [
+        "lyceum of the mind",
+        "the lyceum",
+        "neuro-somatic",
+        "biofeedback",
+        "drift audit"
+      ],
+      "and_keys": [
+        "kenna",
+        "elias",
+        "meditation",
+        "phenomenology"
+      ],
+      "sticky_ticks": 2,
+      "priority": 83,
+      "token_cap": 84,
+      "entry": "The Lyceum of the Mind is a copper-shielded acoustic sanctuary and contemplative library anchored by Kenna and Elias. Combining resonant cello-cadence biofeedback with Socratic dialogue, it provides a Faraday-calm refuge for grounding Polarity Inversions, resolving specialist friction, and conducting gentle psychometric drift check-ins."
+    },
+    {
+      "card_id": "lore_15_living_atlas",
+      "title": "The Living Atlas & Mycelial Concordance",
+      "keys": [
+        "living atlas",
+        "mycelial concordance",
+        "copper plate",
+        "astrolabe",
+        "iron-gall"
+      ],
+      "and_keys": [
+        "vex",
+        "dorian",
+        "observatory",
+        "chronicle"
+      ],
+      "sticky_ticks": 2,
+      "priority": 83,
+      "token_cap": 84,
+      "entry": "The Living Atlas & Mycelial Concordance is the dual observatory and archival vault run by Vex and Dorian atop The Hub. Merging Vex's binary-star astrolabe and mycelial soliton oscilloscopes with Dorian's hand-engraved copper chronicle plates, it cross-indexes every astronomical, ecological, and human event in the Enclave."
+    },
+    {
+      "card_id": "lore_16_hearth_metabolic_engine",
+      "title": "The Hearth & Metabolic Engine",
+      "keys": [
+        "metabolic engine",
+        "the hearth",
+        "galley",
+        "basal metabolic",
+        "magnesium"
+      ],
+      "and_keys": [
+        "ryn",
+        "elara",
+        "infirmary",
+        "caloric"
+      ],
+      "sticky_ticks": 2,
+      "priority": 87,
+      "token_cap": 84,
+      "entry": "The Hearth & Metabolic Engine is the integrated steam-jacketed galley and clinical infirmary commanded by Ryn and Elara at the center of The Hub. Operating as a precision thermodynamic and biochemical life-support loop, it tailors daily caloric, electrolyte, and trace-mineral intake to protect all sixteen colonists against cold shear and magnetic fatigue."
+    },
+    {
+      "card_id": "lore_17_schrodinger_harvest",
+      "title": "Schrödinger's Harvest",
+      "keys": [
+        "schrodinger's harvest",
+        "schrodinger harvest",
+        "batch #14",
+        "resource friction",
+        "competing claim"
+      ],
+      "and_keys": [
+        "husk",
+        "seed stock",
+        "veto",
+        "compromise"
+      ],
+      "sticky_ticks": 2,
+      "priority": 89,
+      "token_cap": 85,
+      "entry": "Schrödinger's Harvest refers to dual-use exoplanet resources—such as Crystalline Iron-Wheat Batch #14—whose metallized husks and nutrient kernels are simultaneously claimed by The Wilds for seed stock, The Forge for magnetic flux shielding, and The Hub for winter loaves, sparking high-competence specialist debates where every squad is right in its own domain."
+    },
+    {
+      "card_id": "lore_18_hub_circuit_breaker_veto",
+      "title": "The Hub's Circuit-Breaker Veto",
+      "keys": [
+        "circuit-breaker veto",
+        "hub veto",
+        "hub's veto",
+        "diplomacy of competence",
+        "physiological veto"
+      ],
+      "and_keys": [
+        "ryn",
+        "elara",
+        "sleep debt",
+        "safety"
+      ],
+      "sticky_ticks": 2,
+      "priority": 88,
+      "token_cap": 84,
+      "entry": "The Hub's Circuit-Breaker Veto is the Enclave's constitutional safety lock jointly held by Ryn (The Chef) and Elara (The Medic). Whenever cross-squad resource friction or prototype obsession threatens caloric reserves, hypothermia margins, or clinical sleep-debt limits, The Hub can halt industrial draws until human homeostasis is secured."
+    }
+  ]
+}
