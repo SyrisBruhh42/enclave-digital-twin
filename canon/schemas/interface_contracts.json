@@ -1,0 +1,97 @@
+{
+  "contract_version": "1.0.0",
+  "repository_root": "/home/joe/.gemini/antigravity/scratch/enclave-digital-twin",
+  "event_record_schema": {
+    "required_fields": [
+      "event_id",
+      "tick_id",
+      "colony_sol",
+      "day_phase",
+      "world_timestamp_iso",
+      "base_snapshot_tick",
+      "event_type",
+      "location",
+      "actors",
+      "summary",
+      "importance",
+      "novelty_score",
+      "science_vegetable",
+      "state_deltas",
+      "relationship_deltas",
+      "evidence_refs"
+    ],
+    "valid_event_types": [
+      "CHRONOSPHERE_TICK",
+      "MORNING_INTENT",
+      "POV_SCENE_SEGMENT",
+      "EXPEDITION_DISCOVERY",
+      "MUNDANE_FRUSTRATION",
+      "SCHRODINGER_HARVEST_DEBATE",
+      "HUB_CIRCUIT_BREAKER_VETO",
+      "POLARITY_INVERSION",
+      "SHADOW_ECONOMY_PRANK_SEEDED",
+      "SHADOW_ECONOMY_PRANK_MATURED",
+      "THE_FEAST_CONVERGENCE",
+      "NIGHTLY_REFLECTION",
+      "COUNTERFACTUAL_REPLAY",
+      "DRIFT_AUDIT"
+    ]
+  },
+  "module_interfaces": {
+    "WP1_canon_and_lore": {
+      "character_files_glob": "canon/characters/*.core.json",
+      "character_count": 16,
+      "projects_file": "canon/projects/grand_projects.json",
+      "lore_cards_file": "canon/lore_cards/lorebook.json",
+      "initial_relationships_file": "relationships/initial_matrix_120.json"
+    },
+    "WP2_exoplanet_physics_and_ode": {
+      "chronosphere_module": "engine/chronosphere.py",
+      "magneto_weather_module": "engine/magneto_weather.py",
+      "state_ode_module": "engine/state_ode.py",
+      "drama_director_module": "engine/drama_director.py",
+      "shadow_economy_module": "engine/shadow_economy.py",
+      "exported_functions": {
+        "engine.chronosphere.advance_tick": "(prev_snapshot: dict, epoch_seed: str) -> dict",
+        "engine.magneto_weather.compute_exoplanet_weather": "(tick_id: int, colony_sol: int, day_phase: str, epoch_seed: str) -> dict",
+        "engine.state_ode.sample_character_state": "(core_card: dict, prev_state: dict, world_slice: dict, active_situation: dict, rng_seed: str) -> dict",
+        "engine.state_ode.compute_domain_friction": "(vec_i: list[float], vec_j: list[float], weights: list[float] | None) -> float",
+        "engine.drama_director.evaluate_pacing_and_beat": "(recent_events: list[dict], colony_sol: int, day_phase: str) -> dict",
+        "engine.shadow_economy.process_shadow_ledger": "(ledger_entries: list[dict], current_sol: int) -> tuple[list[dict], list[dict]]"
+      }
+    },
+    "WP3_context_and_memory": {
+      "context_compiler_module": "engine/context_compiler.py",
+      "memory_stream_module": "engine/memory_stream.py",
+      "counterfactual_lab_module": "engine/counterfactual_lab.py",
+      "exported_functions": {
+        "engine.context_compiler.compile_scene_context": "(pov_core: dict, pov_state: dict, world_snapshot: dict, interlocutor_cores: list[dict], relationships: dict, lorebook: list[dict], memories: list[dict], rolling_summary: str, prev_segment_text: str, authors_note: dict, max_tokens: int = 3500) -> dict",
+        "engine.memory_stream.retrieve_top_memories": "(memories: list[dict], query_text: str, current_hour: float, top_k: int = 8) -> list[dict]",
+        "engine.memory_stream.should_trigger_reflection": "(recent_memories: list[dict], threshold: float = 150.0, is_sleep_tick: bool = False) -> bool",
+        "engine.memory_stream.build_reflection_record": "(character_id: str, tick_id: int, colony_sol: int, insight_text: str, cited_event_ids: list[str], valid_event_ids: set[str]) -> dict",
+        "engine.counterfactual_lab.build_counterfactual_variants": "(base_core: dict, scene_spec: dict, trait_axis: str, delta: float) -> dict"
+      }
+    },
+    "WP4_sifter_dispatch_and_drift": {
+      "story_sifter_module": "engine/story_sifter.py",
+      "evening_dispatch_module": "engine/evening_dispatch.py",
+      "drift_auditor_module": "engine/drift_auditor.py",
+      "ui_dashboard_file": "ui/dispatch_viewer.html",
+      "exported_functions": {
+        "engine.story_sifter.sift_events": "(events: list[dict], character_cores: dict[str, dict]) -> dict",
+        "engine.story_sifter.score_event_salience": "(event: dict, actor_core: dict | None) -> float",
+        "engine.evening_dispatch.compile_evening_dispatch": "(colony_sol: int, events: list[dict], sifted_stories: dict, weather_report: dict, shadow_rumors: list[dict]) -> dict",
+        "engine.evening_dispatch.verify_dispatch_faithfulness": "(dispatch_obj: dict, valid_events_by_id: dict[str, dict]) -> tuple[bool, list[str]]",
+        "engine.drift_auditor.audit_character_drift": "(character_core: dict, observed_trait_samples: list[dict]) -> dict"
+      }
+    },
+    "WP5_orchestrator_integrator_and_gates": {
+      "dispatcher_script": "tools/jules_enclave_dispatcher.py",
+      "integrator_script": "tools/integrator.py",
+      "constitution_checker": "tools/check_enclave_constitutions.py",
+      "hostile_checker": "tools/check_hostile_proposals.py",
+      "simulation_runner": "tools/run_sol_simulation.py",
+      "test_suite": "tests/test_enclave_crucible.py"
+    }
+  }
+}
