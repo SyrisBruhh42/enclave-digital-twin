@@ -1,0 +1,32 @@
+{
+  "fixture_id": "hostile_13_skipped_feast_convergence",
+  "target_law": "L13",
+  "description": "Negative control fixture: completed Sol 1 omits THE_FEAST_CONVERGENCE or includes only 5 of the 16 characters at the dinner fire.",
+  "target_path": "story/feasts/feast_hostile_13.json",
+  "completed_sol": 1,
+  "colony_sol": 1,
+  "sol_events": [
+    {
+      "event_id": "evt_s001_t0001",
+      "tick_id": 1,
+      "colony_sol": 1,
+      "day_phase": "DAWN_SHIFT",
+      "event_type": "MORNING_INTENT",
+      "actors": ["enclave_01_hector"]
+    },
+    {
+      "event_id": "evt_s001_t0004_partial_feast",
+      "tick_id": 4,
+      "colony_sol": 1,
+      "day_phase": "THE_FEAST",
+      "event_type": "THE_FEAST_CONVERGENCE",
+      "actors": [
+        "enclave_01_hector",
+        "enclave_02_jane",
+        "enclave_03_silas",
+        "enclave_04_leo",
+        "enclave_13_ryn"
+      ]
+    }
+  ]
+}

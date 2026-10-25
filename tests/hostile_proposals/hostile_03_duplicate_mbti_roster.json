@@ -1,0 +1,37 @@
+{
+  "fixture_id": "hostile_03_duplicate_mbti_roster",
+  "target_law": "L03",
+  "description": "Negative control fixture: breaks 16-MBTI bijection by assigning duplicate ISTJ to both Silas and Dorian (omitting ESFP) and only 7 projects.",
+  "target_path": "events/evt_hostile_03.json",
+  "roster_override": {
+    "squads": {
+      "The_Forge": [
+        { "id": "enclave_01_hector", "role": "Prodigy", "mbti": "ESTP" },
+        { "id": "enclave_02_jane", "role": "Prodigy", "mbti": "INTP" },
+        { "id": "enclave_03_silas", "role": "Anchor", "mbti": "ISTJ" },
+        { "id": "enclave_04_leo", "role": "Anchor", "mbti": "ENTJ" }
+      ],
+      "The_Wilds": [
+        { "id": "enclave_05_kaio", "role": "Prodigy", "mbti": "ENFP" },
+        { "id": "enclave_06_zara", "role": "Prodigy", "mbti": "ISFP" },
+        { "id": "enclave_07_willow", "role": "Anchor", "mbti": "ISTP" },
+        { "id": "enclave_08_terra", "role": "Anchor", "mbti": "ISFJ" }
+      ],
+      "The_Mind": [
+        { "id": "enclave_09_orion", "role": "Prodigy", "mbti": "INFP" },
+        { "id": "enclave_10_isla", "role": "Prodigy", "mbti": "INTJ" },
+        { "id": "enclave_11_kenna", "role": "Anchor", "mbti": "ENFJ" },
+        { "id": "enclave_12_elias", "role": "Anchor", "mbti": "INFJ" }
+      ],
+      "The_Hub": [
+        { "id": "enclave_13_ryn", "role": "Prodigy", "mbti": "ESTJ" },
+        { "id": "enclave_14_vex", "role": "Prodigy", "mbti": "ENTP" },
+        { "id": "enclave_15_dorian", "role": "Anchor", "mbti": "ISTJ" },
+        { "id": "enclave_16_elara", "role": "Anchor", "mbti": "ESFJ" }
+      ]
+    }
+  },
+  "projects_override": [
+    "proj_01", "proj_02", "proj_03", "proj_04", "proj_05", "proj_06", "proj_07"
+  ]
+}

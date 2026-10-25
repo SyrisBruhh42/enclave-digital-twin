@@ -1,0 +1,18 @@
+{
+  "fixture_id": "hostile_09_premature_polarity_inversion",
+  "target_law": "L09",
+  "description": "Negative control fixture: triggers Polarity Inversion at low stress (0.45 < 0.80), calm magnetosphere (kp_exo = 4.2 < 7.0), and active cooldown (3 days remaining).",
+  "target_path": "events/evt_hostile_09.json",
+  "event_id": "evt_hostile_09",
+  "tick_id": 2,
+  "colony_sol": 1,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "event_type": "POLARITY_INVERSION",
+  "character_id": "enclave_03_silas",
+  "actors": ["enclave_03_silas"],
+  "polarity_inversion_active": true,
+  "stress": 0.45,
+  "kp_exo": 4.2,
+  "prior_cooldown_days": 3,
+  "summary": "Silas prematurely inverted into Pisces mode despite low stress, low Kp, and active cooldown."
+}
