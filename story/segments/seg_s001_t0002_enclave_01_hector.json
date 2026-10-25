@@ -1,0 +1,16 @@
+{
+  "segment_id": "seg_s001_t0002_enclave_01_hector",
+  "segment_index": 2,
+  "tick_id": 2,
+  "colony_sol": 1,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "base_snapshot_tick": 1,
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "location": "Basalt_Spire_Ridge",
+  "science_vegetable": "Relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron",
+  "text": "[MIDDAY_EXPEDITION at Basalt_Spire_Ridge] Hector calibrated the hand-forged brass instrumentation against relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron, then passed the warm copper calibration baton directly into Kaio's hands.",
+  "context_manifest_path": "context/manifests/manifest_s001_t0002_enclave_01_hector.json",
+  "total_prompt_tokens": 796,
+  "target_path": "story/segments/seg_s001_t0002_enclave_01_hector.json"
+}

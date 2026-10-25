@@ -1,0 +1,36 @@
+{
+  "event_id": "evt_s001_t0001_dawn_shift",
+  "tick_id": 1,
+  "colony_sol": 1,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-10-25T00:00:00Z",
+  "base_snapshot_tick": 1,
+  "event_type": "EXPEDITION_DISCOVERY",
+  "location": "The_First_Forge",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "summary": "[DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands.",
+  "importance": 7.5,
+  "novelty_score": 0.72,
+  "lethality": 0,
+  "science_vegetable": "Capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers",
+  "state_deltas": {
+    "stress_delta": 0.04
+  },
+  "relationship_deltas": [
+    {
+      "from": "enclave_03_silas",
+      "to": "enclave_01_hector",
+      "bond_delta": 0.02,
+      "trust_delta": 0.02
+    }
+  ],
+  "evidence_refs": [
+    "seg_s001_t0001_enclave_03_silas"
+  ],
+  "target_path": "events/evt_s001_t0001_dawn_shift.json"
+}

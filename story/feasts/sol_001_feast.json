@@ -1,0 +1,32 @@
+{
+  "feast_id": "feast_sol_001",
+  "event_id": "evt_s001_t0004_the_feast",
+  "tick_id": 4,
+  "colony_sol": 1,
+  "day_phase": "THE_FEAST",
+  "base_snapshot_tick": 3,
+  "event_type": "THE_FEAST_CONVERGENCE",
+  "location": "The_Hub_Hearth",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_02_jane",
+    "enclave_03_silas",
+    "enclave_04_leo",
+    "enclave_05_kaio",
+    "enclave_06_zara",
+    "enclave_07_willow",
+    "enclave_08_terra",
+    "enclave_09_orion",
+    "enclave_10_isla",
+    "enclave_11_kenna",
+    "enclave_12_elias",
+    "enclave_13_ryn",
+    "enclave_14_vex",
+    "enclave_15_dorian",
+    "enclave_16_elara"
+  ],
+  "summary": "All 16 members of The Enclave gathered around Ryn and Elara's hearth on Sol 1 to break warm iron-wheat bread, debate magnetohydrodynamic kelvin-helmholtz shear across the ferrofluid sea, and release the day's magnetospheric tension.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "lethality": 0,
+  "target_path": "story/feasts/sol_001_feast.json"
+}
