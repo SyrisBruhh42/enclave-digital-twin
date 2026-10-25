@@ -25,6 +25,8 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import re
+import subprocess
 import sys
 from typing import Any, Callable
 import urllib.error
@@ -35,6 +37,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from tools.check_enclave_constitutions import (
+    ALLOWED_WORKER_PREFIXES,
     check_jules_rolling_24h_budget,
     validate_proposal,
     validate_showrunner_storytelling_contract,
@@ -103,6 +106,7 @@ def default_budget_state(now_iso: str | None = None) -> dict[str, Any]:
         "active_sessions": [],
         "session_ledger_24h": [],
         "reaped_sessions": [],
+        "eav_lessons": [],
     }
 
 
@@ -183,24 +187,102 @@ def _extract_proposal_from_unidiff(
     """Extract a single-file JSON proposal from a unified git diff (`changeSet.gitPatch.unidiffPatch`)."""
     if not unidiff_text or not unidiff_text.strip():
         return None
-    target_path = default_target_path
-    added_lines: list[str] = []
+    files_added: dict[str, list[str]] = {}
+    current_path = default_target_path
     for raw_line in unidiff_text.splitlines():
         if raw_line.startswith("+++ b/"):
             candidate = raw_line[len("+++ b/") :].strip()
             if candidate and candidate != "/dev/null":
-                target_path = candidate
+                current_path = candidate
+                files_added.setdefault(current_path, [])
         elif raw_line.startswith("+") and not raw_line.startswith("+++"):
-            added_lines.append(raw_line[1:])
-    if not added_lines:
+            files_added.setdefault(current_path, []).append(raw_line[1:])
+
+    if not files_added:
         return None
-    try:
-        parsed = json.loads("\n".join(added_lines))
-        if isinstance(parsed, dict):
-            return target_path, parsed
-    except Exception:
-        return None
+
+    ordered_candidates: list[str] = []
+    if default_target_path in files_added:
+        ordered_candidates.append(default_target_path)
+    for path_key in files_added:
+        if path_key not in ordered_candidates and path_key.endswith(".json") and any(
+            path_key.startswith(pref) for pref in ALLOWED_WORKER_PREFIXES
+        ):
+            ordered_candidates.append(path_key)
+    for path_key in files_added:
+        if path_key not in ordered_candidates:
+            ordered_candidates.append(path_key)
+
+    for cand_path in ordered_candidates:
+        lines = files_added.get(cand_path) or []
+        if not lines:
+            continue
+        try:
+            parsed = json.loads("\n".join(lines))
+            if isinstance(parsed, dict):
+                return cand_path, parsed
+        except Exception:
+            continue
     return None
+
+
+def extract_changeset_from_activities(
+    rest_client: "JulesRestClient",
+    session_id: str,
+    remote_info: dict[str, Any] | None = None,
+    pr_url: str = "",
+    default_target_path: str = "events/evt_salvaged.json",
+) -> tuple[str, dict[str, Any]] | None:
+    """Extract a valid single-file proposal from session outputs, activities stream, or PR diff."""
+    unidiff = ""
+    outputs_list = (
+        remote_info.get("outputs")
+        if isinstance(remote_info, dict) and isinstance(remote_info.get("outputs"), list)
+        else []
+    )
+    for out_item in outputs_list:
+        if isinstance(out_item, dict):
+            cs = out_item.get("changeSet") or {}
+            gp = cs.get("gitPatch") if isinstance(cs, dict) else {}
+            if isinstance(gp, dict) and gp.get("unidiffPatch"):
+                unidiff = str(gp["unidiffPatch"])
+                break
+
+    if not unidiff:
+        try:
+            page_token = ""
+            for _ in range(5):
+                acts_resp = rest_client.list_activities(session_id, page_size=50, page_token=page_token) or {}
+                for act in (acts_resp.get("activities") or []):
+                    if not isinstance(act, dict):
+                        continue
+                    for art in (act.get("artifacts") or []):
+                        if isinstance(art, dict):
+                            cs = art.get("changeSet") or {}
+                            gp = cs.get("gitPatch") if isinstance(cs, dict) else {}
+                            if isinstance(gp, dict) and gp.get("unidiffPatch"):
+                                unidiff = str(gp["unidiffPatch"])
+                page_token = str(acts_resp.get("nextPageToken") or "").strip()
+                if not page_token:
+                    break
+        except Exception:
+            pass
+
+    if not unidiff and pr_url:
+        try:
+            pr_diff_proc = subprocess.run(
+                ["gh", "pr", "diff", pr_url],
+                capture_output=True,
+                text=True,
+                timeout=20,
+                check=False,
+            )
+            if pr_diff_proc.returncode == 0 and pr_diff_proc.stdout.strip():
+                unidiff = pr_diff_proc.stdout
+        except Exception:
+            pass
+
+    return _extract_proposal_from_unidiff(unidiff, default_target_path=default_target_path)
 
 
 class JulesRestClient:
@@ -306,9 +388,12 @@ class JulesRestClient:
         sid = self._clean_sid(session_id)
         return self._request("POST", f"{self.resolve_base_url()}/{sid}:sendMessage", {"prompt": str(prompt)})
 
-    def list_activities(self, session_id: str, page_size: int = 50) -> dict[str, Any]:
+    def list_activities(self, session_id: str, page_size: int = 50, page_token: str = "") -> dict[str, Any]:
         sid = self._clean_sid(session_id)
-        return self._request("GET", f"{self.resolve_base_url()}/{sid}/activities?pageSize={int(page_size)}", None)
+        url = f"{self.resolve_base_url()}/{sid}/activities?pageSize={int(page_size)}"
+        if page_token:
+            url += f"&pageToken={page_token}"
+        return self._request("GET", url, None)
 
 
 def _count_peer_factory_sessions_24h(now_dt: datetime) -> dict[str, int]:
@@ -489,6 +574,7 @@ class JulesEnclaveDispatcher:
         state["task_buckets_consumed"] = bucket_counts
         state.setdefault("active_sessions", [])
         state.setdefault("reaped_sessions", [])
+        state.setdefault("eav_lessons", [])
         return state
 
     def can_dispatch(
@@ -575,13 +661,15 @@ class JulesEnclaveDispatcher:
         payload: dict[str, Any],
         now_iso: str | None = None,
         persist: bool = True,
+        state_override: dict[str, Any] | None = None,
     ) -> dict[str, Any]:
         """Record and dispatch a single session payload (offline safe in dry_run mode)."""
         ts = now_iso or _utc_now_iso()
-        state = self.load_budget(now_iso=ts)
+        state = state_override if state_override is not None else self.load_budget(now_iso=ts)
         meta = payload.get("metadata") or {}
         task_bucket = str(meta.get("task_bucket") or "POV_RASHOMON_RELAY_SCENES")
         is_retry = bool(meta.get("is_retry", False))
+        retry_attempt = int(meta.get("retry_attempt", 1 if is_retry else 0) or 0)
 
         if payload.get("requirePlanApproval") is not False:
             raise ValueError("F-120 Guard: requirePlanApproval must be False.")
@@ -618,6 +706,7 @@ class JulesEnclaveDispatcher:
             "colony_sol": int(meta.get("colony_sol", 1)),
             "target_path": meta.get("target_path"),
             "is_retry": is_retry,
+            "retry_attempt": retry_attempt,
             "dispatched_at_iso": ts,
             "state": "COMPLETED_DRY_RUN" if self.dry_run else "RUNNING",
             "requirePlanApproval": False,
@@ -635,6 +724,8 @@ class JulesEnclaveDispatcher:
                     "target_path": meta.get("target_path"),
                     "started_at_iso": ts,
                     "state": "RUNNING",
+                    "nudges": 0,
+                    "retry_attempt": retry_attempt,
                 }
             )
         state = self._recompute_rolling_window(state, now_iso=ts)
@@ -748,6 +839,13 @@ class JulesEnclaveDispatcher:
 
         day_phase_names = ("DAWN_SHIFT", "MIDDAY_EXPEDITION", "DUSK_CRAFT", "THE_FEAST")
         day_phase = day_phase_names[phase_idx]
+        pov_chain = (
+            ("enclave_03_silas", "enclave_01_hector"),
+            ("enclave_01_hector", "enclave_05_kaio"),
+            ("enclave_05_kaio", "enclave_13_ryn"),
+            ("enclave_13_ryn", "enclave_03_silas"),
+        )
+        active_pov_id, next_pov_target = pov_chain[phase_idx]
         local_mgr = None
         if not self.dry_run:
             from engine.local_ai_manager import LocalContextAwareManager
@@ -765,6 +863,8 @@ class JulesEnclaveDispatcher:
                         tick_id=safe_tick,
                         day_phase=day_phase,
                         target_path=target_path,
+                        active_pov_id=active_pov_id,
+                        next_pov_target=next_pov_target,
                         showrunner_pacing_mode="MERCER_IMMERSIVE" if phase_idx != 1 else "MULLIGAN_CRISIS",
                         use_local_ollama=False,
                     )
@@ -936,6 +1036,116 @@ class JulesEnclaveDispatcher:
             "waves": wave_logs,
         }
 
+    def extract_changeset_from_activities(
+        self,
+        session_id: str,
+        remote_info: dict[str, Any] | None = None,
+        pr_url: str = "",
+        default_target_path: str = "events/evt_salvaged.json",
+    ) -> tuple[str, dict[str, Any]] | None:
+        return extract_changeset_from_activities(
+            self.rest_client,
+            session_id=session_id,
+            remote_info=remote_info,
+            pr_url=pr_url,
+            default_target_path=default_target_path,
+        )
+
+    def _auto_merge_or_close_pr(self, pr_url: str) -> None:
+        """Merge a clean PR via `gh api` or close it if `.pyc` or forbidden paths are touched."""
+        if not pr_url or self.dry_run:
+            return
+        cfg = self.load_config()
+        default_slug = str(cfg.get("repo_slug") or "SyrisBruhh42/enclave-digital-twin")
+        m = re.search(r"github\.com/([^/]+/[^/]+)/pull/(\d+)", pr_url)
+        repo_slug = m.group(1) if m else default_slug
+        pr_num = m.group(2) if m else ""
+        if not pr_num:
+            return
+        try:
+            files_proc = subprocess.run(
+                ["gh", "api", f"repos/{repo_slug}/pulls/{pr_num}/files"],
+                capture_output=True,
+                text=True,
+                timeout=20,
+                check=False,
+            )
+            has_forbidden = False
+            if files_proc.returncode == 0 and files_proc.stdout.strip():
+                pr_files = json.loads(files_proc.stdout)
+                if isinstance(pr_files, list):
+                    for fobj in pr_files:
+                        if not isinstance(fobj, dict):
+                            continue
+                        fname = str(fobj.get("filename") or "")
+                        if (
+                            fname.endswith((".pyc", ".pyo", ".pyd"))
+                            or "__pycache__" in fname
+                            or not any(fname.startswith(pref) for pref in ALLOWED_WORKER_PREFIXES)
+                        ):
+                            has_forbidden = True
+                            break
+            if has_forbidden:
+                subprocess.run(
+                    [
+                        "gh",
+                        "pr",
+                        "close",
+                        pr_url,
+                        "--delete-branch",
+                        "-c",
+                        "F-120 Guard: Valid JSON proposal extracted locally; closing PR due to .pyc or forbidden path artifacts.",
+                    ],
+                    capture_output=True,
+                    text=True,
+                    timeout=20,
+                    check=False,
+                )
+                return
+
+            head_ref = ""
+            pr_info_proc = subprocess.run(
+                ["gh", "api", f"repos/{repo_slug}/pulls/{pr_num}", "--jq", ".head.ref"],
+                capture_output=True,
+                text=True,
+                timeout=15,
+                check=False,
+            )
+            if pr_info_proc.returncode == 0:
+                head_ref = pr_info_proc.stdout.strip()
+
+            merge_proc = subprocess.run(
+                [
+                    "gh",
+                    "api",
+                    "--method",
+                    "PUT",
+                    f"repos/{repo_slug}/pulls/{pr_num}/merge",
+                    "-f",
+                    "merge_method=squash",
+                ],
+                capture_output=True,
+                text=True,
+                timeout=25,
+                check=False,
+            )
+            if merge_proc.returncode == 0 and head_ref:
+                subprocess.run(
+                    [
+                        "gh",
+                        "api",
+                        "--method",
+                        "DELETE",
+                        f"repos/{repo_slug}/git/refs/heads/{head_ref}",
+                    ],
+                    capture_output=True,
+                    text=True,
+                    timeout=15,
+                    check=False,
+                )
+        except Exception:
+            pass
+
     def reap_stalled_sessions(
         self,
         sessions: list[dict[str, Any]] | None = None,
@@ -961,6 +1171,14 @@ class JulesEnclaveDispatcher:
         retried: list[dict[str, Any]] = []
         still_running: list[dict[str, Any]] = []
         integrated: list[dict[str, Any]] = []
+        pending_retries: list[dict[str, Any]] = []
+
+        pov_chain = (
+            ("enclave_03_silas", "enclave_01_hector"),
+            ("enclave_01_hector", "enclave_05_kaio"),
+            ("enclave_05_kaio", "enclave_13_ryn"),
+            ("enclave_13_ryn", "enclave_03_silas"),
+        )
 
         for sess in candidate_sessions:
             if not isinstance(sess, dict):
@@ -985,6 +1203,53 @@ class JulesEnclaveDispatcher:
                 started_dt = now_dt
             elapsed_min = (now_dt - started_dt).total_seconds() / 60.0
 
+            nudges = int(sess.get("nudges", 0) or 0)
+            last_nudge_at = str(sess.get("last_nudge_at") or "").strip()
+            if last_nudge_at:
+                try:
+                    since_nudge_min = (now_dt - _parse_iso(last_nudge_at)).total_seconds() / 60.0
+                except Exception:
+                    since_nudge_min = 999.0
+            else:
+                since_nudge_min = 999.0
+
+            # When s_state == "IN_PROGRESS", inspect /activities?pageSize=5 for immediate feedback/plan detection
+            if not self.dry_run and s_state == "IN_PROGRESS":
+                try:
+                    recent_acts_resp = self.rest_client.list_activities(sid, page_size=5) or {}
+                    recent_acts = [a for a in (recent_acts_resp.get("activities") or []) if isinstance(a, dict)]
+                    if recent_acts:
+                        latest_act = recent_acts[-1]
+                        agent_act = (
+                            latest_act.get("agentActivity")
+                            if isinstance(latest_act.get("agentActivity"), dict)
+                            else {}
+                        )
+                        if (
+                            "agentMessaged" in latest_act
+                            or "agentMessaged" in agent_act
+                            or latest_act.get("type") == "agentMessaged"
+                        ):
+                            s_state = "AWAITING_USER_FEEDBACK"
+                            msg_obj = latest_act.get("agentMessaged") or agent_act.get("agentMessaged") or {}
+                            if isinstance(msg_obj, dict):
+                                q_txt = str(
+                                    msg_obj.get("agentMessage") or msg_obj.get("text") or msg_obj.get("message") or ""
+                                ).strip()
+                                if q_txt:
+                                    sess = dict(sess)
+                                    sess["question_text"] = q_txt
+                        elif (
+                            "planGenerated" in latest_act
+                            or "planCreated" in latest_act
+                            or "planGenerated" in agent_act
+                            or "planCreated" in agent_act
+                            or latest_act.get("type") in ("planGenerated", "planCreated")
+                        ):
+                            s_state = "AWAITING_PLAN_APPROVAL"
+                except Exception:
+                    pass
+
             # Extract PR URL if present in remote outputs or session metadata
             pr_url = str(sess.get("pr_url") or sess.get("pr") or "").strip()
             outputs_list = remote_info.get("outputs") if isinstance(remote_info.get("outputs"), list) else (
@@ -1006,47 +1271,16 @@ class JulesEnclaveDispatcher:
                 still_running.append(updated_sess)
                 continue
 
+            default_target = str(sess.get("target_path") or "events/evt_salvaged.json")
+
             # 2. COMPLETED session salvage / single-file proposal integration (`outputs: []` or `changeSet`)
             if not self.dry_run and s_state == "COMPLETED":
-                unidiff = ""
-                for out_item in outputs_list:
-                    if isinstance(out_item, dict):
-                        cs = out_item.get("changeSet") or {}
-                        gp = cs.get("gitPatch") if isinstance(cs, dict) else {}
-                        if isinstance(gp, dict) and gp.get("unidiffPatch"):
-                            unidiff = str(gp["unidiffPatch"])
-                            break
-                if not unidiff:
-                    try:
-                        acts_resp = self.rest_client.list_activities(sid, page_size=50) or {}
-                        for act in (acts_resp.get("activities") or []):
-                            if not isinstance(act, dict):
-                                continue
-                            for art in (act.get("artifacts") or []):
-                                if isinstance(art, dict):
-                                    cs = art.get("changeSet") or {}
-                                    gp = cs.get("gitPatch") if isinstance(cs, dict) else {}
-                                    if isinstance(gp, dict) and gp.get("unidiffPatch"):
-                                        unidiff = str(gp["unidiffPatch"])
-                    except Exception:
-                        pass
-
-                if not unidiff and pr_url:
-                    try:
-                        pr_diff_proc = subprocess.run(
-                            ["gh", "pr", "diff", pr_url],
-                            capture_output=True,
-                            text=True,
-                            timeout=20,
-                            check=False,
-                        )
-                        if pr_diff_proc.returncode == 0 and pr_diff_proc.stdout.strip():
-                            unidiff = pr_diff_proc.stdout
-                    except Exception:
-                        pass
-
-                default_target = str(sess.get("target_path") or "events/evt_salvaged.json")
-                extracted = _extract_proposal_from_unidiff(unidiff, default_target_path=default_target)
+                extracted = self.extract_changeset_from_activities(
+                    sid,
+                    remote_info=remote_info,
+                    pr_url=pr_url,
+                    default_target_path=default_target,
+                )
                 if extracted is None and isinstance(sess.get("candidate_proposal"), dict):
                     extracted = (default_target, dict(sess["candidate_proposal"]))
 
@@ -1063,16 +1297,7 @@ class JulesEnclaveDispatcher:
                         )
                         if int_res.get("integrated"):
                             if pr_url:
-                                try:
-                                    subprocess.run(
-                                        ["gh", "pr", "merge", pr_url, "--squash", "--delete-branch"],
-                                        capture_output=True,
-                                        text=True,
-                                        timeout=25,
-                                        check=False,
-                                    )
-                                except Exception:
-                                    pass
+                                self._auto_merge_or_close_pr(pr_url)
                             integrated.append(
                                 {
                                     "session_id": sid,
@@ -1082,7 +1307,9 @@ class JulesEnclaveDispatcher:
                                 }
                             )
                             continue
-                    diag_errors = list(val_res.get("errors") or []) + list(sr_res.get("errors") or [])
+                        diag_errors = list(int_res.get("errors") or [])
+                    else:
+                        diag_errors = list(val_res.get("errors") or []) + list(sr_res.get("errors") or [])
                     if pr_url:
                         try:
                             subprocess.run(
@@ -1119,41 +1346,92 @@ class JulesEnclaveDispatcher:
                     }
                     reaped.append(reap_rec)
                     state.setdefault("reaped_sessions", []).append(reap_rec)
+                    state.setdefault("eav_lessons", []).append(eav_lesson)
                 continue
 
+            should_cut_loss = False
             if s_state in ("AWAITING_PLAN_APPROVAL", "AWAITING_USER_FEEDBACK"):
-                fb_res = local_mgr.resolve_stalled_or_feedback_session(
-                    session_id=sid,
-                    question_text=str(sess.get("question_text") or "Proceed with plan approval"),
-                    target_path=str(sess.get("target_path") or "events/evt_auto.json"),
-                    task_bucket=str(sess.get("task_bucket") or "POV_RASHOMON_RELAY_SCENES"),
-                    use_local_ollama=False,
-                )
-                msg_text = (
-                    "F-120 Supervisor Auto-Reply: Proceed immediately without human plan approval. "
-                    f"Enforce append-only single-file output and Laws L01..L16. ({fb_res.get('reply', '')})"
-                )
-                if not self.dry_run:
-                    try:
-                        if s_state == "AWAITING_PLAN_APPROVAL":
-                            self.rest_client.approve_plan(sid)
-                        else:
-                            self.rest_client.send_message(sid, msg_text)
-                    except Exception:
-                        pass
-                action_rec = {
-                    "session_id": sid,
-                    "previous_state": s_state,
-                    "supervisor_action": "AUTO_APPROVE_AND_CONTINUE",
-                    "message": msg_text,
-                    "resolved_at_iso": ts,
-                }
-                auto_replied.append(action_rec)
-                updated_sess = dict(sess)
-                updated_sess["state"] = "RUNNING"
-                updated_sess["f120_auto_replied"] = True
-                still_running.append(updated_sess)
+                if nudges < 2:
+                    if since_nudge_min >= 5.0:
+                        fb_res = local_mgr.resolve_stalled_or_feedback_session(
+                            session_id=sid,
+                            question_text=str(sess.get("question_text") or "Proceed with plan approval"),
+                            target_path=str(sess.get("target_path") or "events/evt_auto.json"),
+                            task_bucket=str(sess.get("task_bucket") or "POV_RASHOMON_RELAY_SCENES"),
+                            use_local_ollama=False,
+                        )
+                        msg_text = (
+                            "F-120 Supervisor Auto-Reply: Proceed immediately without human plan approval. "
+                            f"Enforce append-only single-file output and Laws L01..L16. ({fb_res.get('reply', '')})"
+                        )
+                        if not self.dry_run:
+                            try:
+                                if s_state == "AWAITING_PLAN_APPROVAL":
+                                    self.rest_client.approve_plan(sid)
+                                else:
+                                    self.rest_client.send_message(sid, msg_text)
+                            except Exception:
+                                pass
+                        action_rec = {
+                            "session_id": sid,
+                            "previous_state": s_state,
+                            "supervisor_action": "AUTO_APPROVE_AND_CONTINUE",
+                            "message": msg_text,
+                            "nudges": nudges + 1,
+                            "resolved_at_iso": ts,
+                        }
+                        auto_replied.append(action_rec)
+                        updated_sess = dict(sess)
+                        updated_sess["state"] = "RUNNING"
+                        updated_sess["f120_auto_replied"] = True
+                        updated_sess["nudges"] = nudges + 1
+                        updated_sess["last_nudge_at"] = ts
+                        still_running.append(updated_sess)
+                    else:
+                        still_running.append(sess)
+                    continue
+                elif since_nudge_min >= 10.0 or elapsed_min > float(timeout_minutes):
+                    should_cut_loss = True
+                else:
+                    still_running.append(sess)
+                    continue
             elif elapsed_min > float(timeout_minutes) or s_state in ("STALLED", "TIMED_OUT", "DEADLOCKED", "FAILED"):
+                should_cut_loss = True
+
+            if should_cut_loss:
+                # Attempt extract_changeset_from_activities salvage first before cutting loss
+                if not self.dry_run:
+                    extracted = self.extract_changeset_from_activities(
+                        sid,
+                        remote_info=remote_info,
+                        pr_url=pr_url,
+                        default_target_path=default_target,
+                    )
+                    if extracted is not None:
+                        target_rel, proposal_obj = extracted
+                        val_res = validate_proposal(proposal_obj, repo_root=self.repo_root)
+                        sr_res = validate_showrunner_storytelling_contract(proposal_obj)
+                        if val_res["valid"] and sr_res["valid"]:
+                            int_res = integrator.integrate_proposal(
+                                proposal_obj,
+                                target_rel_path=target_rel,
+                                rebuild_snapshots=target_rel.startswith("events/"),
+                                current_tick=int(proposal_obj.get("tick_id", sess.get("tick_id", 1)) or 1),
+                            )
+                            if int_res.get("integrated"):
+                                if pr_url:
+                                    self._auto_merge_or_close_pr(pr_url)
+                                integrated.append(
+                                    {
+                                        "session_id": sid,
+                                        "target_path": target_rel,
+                                        "pr_url": pr_url or None,
+                                        "salvaged_from_stalled": True,
+                                        "integrated_at_iso": ts,
+                                    }
+                                )
+                                continue
+
                 eav_lesson = format_eav_lesson(
                     entity=f"enclave:{sid}",
                     attr="f120_stall_timeout",
@@ -1171,34 +1449,83 @@ class JulesEnclaveDispatcher:
                 }
                 reaped.append(reap_rec)
                 state.setdefault("reaped_sessions", []).append(reap_rec)
+                state.setdefault("eav_lessons", []).append(eav_lesson)
 
-                # Attempt bounded auto-retry from the 30/day reserve if budget allows
                 bucket = str(sess.get("task_bucket") or "POV_RASHOMON_RELAY_SCENES")
                 if bucket not in CANONICAL_TASK_BUCKETS:
                     bucket = "POV_RASHOMON_RELAY_SCENES"
-                can_retry, _ = self.can_dispatch(state, requested_count=1, is_retry=True, task_bucket=bucket)
-                if can_retry and int(sess.get("retry_attempt", 0)) < 2:
-                    retry_payload = build_session_payload(
-                        task_bucket=bucket,
-                        tick_id=int(sess.get("tick_id", 1)),
-                        colony_sol=int(sess.get("colony_sol", 1)),
-                        target_path=str(sess.get("target_path") or "events/evt_retry.json"),
-                        prompt_text=(
-                            f"[F-120 Auto-Retry for {sid}] Complete single-file task deterministically. "
-                            f"EAV Lesson: {eav_lesson}"
-                        ),
-                        is_retry=True,
+                retry_attempt = int(sess.get("retry_attempt", 0) or 0)
+                if retry_attempt < 2:
+                    pending_retries.append(
+                        {
+                            "source_session_id": sid,
+                            "task_bucket": bucket,
+                            "tick_id": int(sess.get("tick_id", 1) or 1),
+                            "colony_sol": int(sess.get("colony_sol", 1) or 1),
+                            "target_path": str(sess.get("target_path") or "events/evt_retry.json"),
+                            "eav_lesson": eav_lesson,
+                            "retry_attempt": retry_attempt + 1,
+                        }
                     )
-                    retry_res = self.dispatch_session(retry_payload, now_iso=ts, persist=False)
-                    if retry_res.get("dispatched"):
-                        retried.append(retry_res)
-                        state = self.load_budget(now_iso=ts) if persist else state
             else:
                 still_running.append(sess)
 
+        # 1. Persist active_sessions = still_running and eav_lessons BEFORE dispatching retries
         state["active_sessions"] = still_running
+        state.setdefault("eav_lessons", [])
         if persist:
             self.save_budget(state)
+
+        # 2. Compile full 5-Section Task Cards and dispatch bounded retries from the 30/day reserve
+        for retry_item in pending_retries:
+            r_bucket = str(retry_item["task_bucket"])
+            r_tick = int(retry_item["tick_id"])
+            r_sol = int(retry_item["colony_sol"])
+            r_target = str(retry_item["target_path"])
+            r_lesson = str(retry_item["eav_lesson"])
+            r_attempt = int(retry_item["retry_attempt"])
+            phase_idx = (r_tick - 1) % 4
+            r_phase = ("DAWN_SHIFT", "MIDDAY_EXPEDITION", "DUSK_CRAFT", "THE_FEAST")[phase_idx]
+            active_pov_id, next_pov_target = pov_chain[phase_idx]
+
+            cur_state = self.load_budget(now_iso=ts) if persist else state
+            can_retry, _ = self.can_dispatch(cur_state, requested_count=1, is_retry=True, task_bucket=r_bucket)
+            if not can_retry:
+                continue
+
+            card = local_mgr.compile_enclave_5section_task_card(
+                task_bucket=r_bucket,
+                colony_sol=r_sol,
+                tick_id=r_tick,
+                day_phase=r_phase,
+                target_path=r_target,
+                active_pov_id=active_pov_id,
+                next_pov_target=next_pov_target,
+                showrunner_pacing_mode="MERCER_IMMERSIVE" if phase_idx != 1 else "MULLIGAN_CRISIS",
+                is_retry=True,
+                failure_lesson=r_lesson,
+                use_local_ollama=False,
+            )
+            retry_payload = build_session_payload(
+                task_bucket=r_bucket,
+                tick_id=r_tick,
+                colony_sol=r_sol,
+                target_path=r_target,
+                prompt_text=str(card.get("prompt") or ""),
+                base_snapshot_tick=max(1, r_tick - 1),
+                is_retry=True,
+            )
+            retry_payload.setdefault("metadata", {})["retry_attempt"] = r_attempt
+            retry_res = self.dispatch_session(
+                retry_payload,
+                now_iso=ts,
+                persist=persist,
+                state_override=None if persist else state,
+            )
+            if retry_res.get("dispatched"):
+                retried.append(retry_res)
+                if persist:
+                    state = self.load_budget(now_iso=ts)
 
         return {
             "checked_count": len(candidate_sessions),

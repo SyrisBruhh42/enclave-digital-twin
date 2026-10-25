@@ -1104,8 +1104,11 @@ def check_feast_daily_convergence(
         return len(errors) == 0, errors
 
     events_dir = root / "events"
+    feasts_dir = root / "story" / "feasts"
+    events_by_sol: dict[int, list[dict[str, Any]]] = {}
+    feast_artifact_sols: set[int] = set()
+
     if events_dir.is_dir():
-        events_by_sol: dict[int, list[dict[str, Any]]] = {}
         for p in sorted(events_dir.glob("*.json")):
             try:
                 ev = _load_json(p)
@@ -1115,10 +1118,38 @@ def check_feast_daily_convergence(
             except Exception as exc:
                 errors.append(f"Law L13 error reading {p.name}: {exc}")
 
-        for sol, ev_list in sorted(events_by_sol.items()):
+    if feasts_dir.is_dir():
+        for p in sorted(feasts_dir.glob("*.json")):
+            try:
+                fev = _load_json(p)
+                if isinstance(fev, dict):
+                    sol = int(fev.get("colony_sol", 1) or 1)
+                    feast_artifact_sols.add(sol)
+                    events_by_sol.setdefault(sol, []).append(fev)
+            except Exception as exc:
+                errors.append(f"Law L13 error reading {p.name}: {exc}")
+
+    if events_by_sol:
+        snap_sol = 1
+        latest_snap_path = root / "snapshots" / "latest.json"
+        if latest_snap_path.is_file():
+            try:
+                snap_obj = _load_json(latest_snap_path)
+                if isinstance(snap_obj, dict):
+                    snap_sol = int(
+                        snap_obj.get("colony_sol")
+                        or (snap_obj.get("chronosphere") or {}).get("colony_sol")
+                        or 1
+                    )
+            except Exception:
+                snap_sol = 1
+        current_active_sol = max([snap_sol, *events_by_sol.keys()])
+
+        for sol_num, ev_list in sorted(events_by_sol.items()):
             phases_seen = {str(e.get("day_phase") or "") for e in ev_list}
-            if DAY_PHASES_ORDER[3] in phases_seen or len(phases_seen & set(DAY_PHASES_ORDER)) == 4:
-                _inspect_feast_events(sol, ev_list, f"repo_events[sol={sol}]")
+            all_4_phases = len(phases_seen & set(DAY_PHASES_ORDER)) == 4
+            if all_4_phases and (sol_num in feast_artifact_sols or sol_num < current_active_sol):
+                _inspect_feast_events(sol_num, ev_list, f"repo_events[sol={sol_num}]")
 
     return len(errors) == 0, errors
 

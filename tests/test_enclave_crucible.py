@@ -300,6 +300,15 @@ def test_jules_dispatcher_budget_guard_and_f120_reaper(tmp_path: Path | None = N
         assert reap_res["auto_replied_count"] == 1
         assert reap_res["reaped_count"] == 1
         assert reap_res["retried_count"] == 1
+        retry_prompt = reap_res["retried"][0]["payload"]["prompt"]
+        assert "# Aegis 5-Section Jules Task Card" in retry_prompt
+        assert "## 2. MCP Directives" in retry_prompt
+        saved_state = dispatcher.load_budget(now_iso="2026-10-25T01:00:00Z")
+        assert saved_state["rolling_24h_dispatched"] == 3
+        assert saved_state["retry_dispatched_24h"] == 1
+        assert len(saved_state["eav_lessons"]) == 1
+        assert saved_state["active_sessions"][0]["nudges"] == 1
+        assert saved_state["active_sessions"][0]["last_nudge_at"] == "2026-10-25T01:00:00Z"
 
 
 def test_full_sol_simulation_deterministic_replay_and_rollback_self_repair(tmp_path: Path | None = None) -> None:
