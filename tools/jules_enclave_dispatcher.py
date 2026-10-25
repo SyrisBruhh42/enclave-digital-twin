@@ -232,6 +232,12 @@ class JulesRestClient:
                     return cred_file.read_text(encoding="utf-8").strip()
                 except OSError:
                     pass
+        key_file = Path(os.environ.get("JULES_API_KEY_FILE") or (Path.home() / ".secrets" / "jules_api_key"))
+        if key_file.is_file():
+            try:
+                return key_file.read_text(encoding="utf-8").strip()
+            except OSError:
+                pass
         return ""
 
     def resolve_base_url(self) -> str:
@@ -241,7 +247,20 @@ class JulesRestClient:
         gateway = os.environ.get("LFS_JULES_GATEWAY_URL", "").strip()
         if gateway:
             base = gateway.rstrip("/")
-            return base if base.endswith("/v1alpha/sessions") else f"{base}/v1alpha/sessions"
+            full = base if base.endswith("/v1alpha/sessions") else f"{base}/v1alpha/sessions"
+            if self._transport is not None:
+                return full
+            try:
+                import socket
+                import urllib.parse
+
+                parsed = urllib.parse.urlparse(full)
+                host = parsed.hostname or "127.0.0.1"
+                port = parsed.port or (443 if parsed.scheme == "https" else 80)
+                with socket.create_connection((host, port), timeout=0.3):
+                    return full
+            except OSError:
+                pass
         return "https://jules.googleapis.com/v1alpha/sessions"
 
     def _request(
@@ -348,18 +367,30 @@ class JulesEnclaveDispatcher:
         self.rest_client = rest_client or JulesRestClient()
 
     def load_config(self) -> dict[str, Any]:
-        """Load ops/config.json (defaults to STANDBY with enabled=False)."""
-        if self.config_file.is_file():
-            try:
-                return json.loads(self.config_file.read_text(encoding="utf-8"))
-            except Exception:
-                pass
-        return {
+        """Load ops/config.json (and externalized runtime config override when LFS_ENCLAVE_RUNTIME_CONFIG=1)."""
+        cfg: dict[str, Any] = {
             "enabled": False,
             "launch_state": "STANDBY",
             "fleet_mode": "UNIFIED_FLEET",
             "shared_fleet_budget_path": str(_xdg_state_home() / "lfs-jules-fleet" / "rolling_budget_300.json"),
         }
+        if self.config_file.is_file():
+            try:
+                loaded = json.loads(self.config_file.read_text(encoding="utf-8"))
+                if isinstance(loaded, dict):
+                    cfg.update(loaded)
+            except Exception:
+                pass
+        if self.repo_root == REPO_ROOT and os.environ.get("LFS_ENCLAVE_RUNTIME_CONFIG") == "1":
+            rt_cfg_path = _xdg_state_home() / "lfs-enclave-factory" / "config.json"
+            if rt_cfg_path.is_file():
+                try:
+                    rt_loaded = json.loads(rt_cfg_path.read_text(encoding="utf-8"))
+                    if isinstance(rt_loaded, dict):
+                        cfg.update(rt_loaded)
+                except Exception:
+                    pass
+        return cfg
 
     def check_standby_or_paused(self) -> dict[str, Any]:
         """Return standby/pause status so live systemd timers never burn quota while on STANDBY."""

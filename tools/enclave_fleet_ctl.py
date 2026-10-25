@@ -227,14 +227,31 @@ def set_launch_state(
     arm: bool,
     fleet_mode: str | None = None,
 ) -> dict[str, Any]:
-    """Arm (`LAUNCHED` / `ARMED`) or disarm (`STANDBY`) the Enclave 300-session fleet in `ops/config.json`."""
-    cfg_path = repo_root / "ops" / "config.json"
+    """Arm (`LAUNCHED` / `ARMED`) or disarm (`STANDBY`) the Enclave fleet in externalized runtime config."""
+    os.environ["LFS_ENCLAVE_RUNTIME_CONFIG"] = "1"
+    resolved_root = Path(repo_root).resolve()
+    cfg_path = (
+        (_xdg_state_home() / "lfs-enclave-factory" / "config.json")
+        if resolved_root == REPO_ROOT
+        else (resolved_root / "ops" / "config.json")
+    )
     dispatcher = JulesEnclaveDispatcher(repo_root=repo_root, dry_run=True)
     cfg = dispatcher.load_config()
     cfg["enabled"] = bool(arm)
     cfg["launch_state"] = "ARMED" if arm else "STANDBY"
     if fleet_mode in ("UNIFIED_FLEET", "ENCLAVE_DEDICATED_300"):
         cfg["fleet_mode"] = fleet_mode
+    cfg["unified_4fleet_allocation_24h"] = {
+        "enclave_digital_twin": 96,
+        "lfs_trash_arcade": 72,
+        "lfs_tycoon": 48,
+        "willow_guild": 24,
+        "scheduled_total_24h": 240,
+        "auto_retry_reserve_24h": 30,
+        "hard_ceiling_24h": 270,
+        "safety_buffer_24h": 30,
+        "plan_ceiling_24h": 300,
+    }
     cfg["updated_at_iso"] = _utc_now_iso()
     cfg_path.parent.mkdir(parents=True, exist_ok=True)
     cfg_path.write_text(json.dumps(cfg, indent=2) + "\n", encoding="utf-8")
@@ -244,6 +261,7 @@ def set_launch_state(
         "enabled": cfg["enabled"],
         "launch_state": cfg["launch_state"],
         "fleet_mode": cfg.get("fleet_mode", "UNIFIED_FLEET"),
+        "config_path": str(cfg_path),
         "updated_at_iso": cfg["updated_at_iso"],
         "telemetry": telemetry["cross_fleet_rolling_24h"],
     }
@@ -300,7 +318,7 @@ def install_systemd_units(repo_root: Path = REPO_ROOT, enable_timers: bool = Tru
 
 
 def run_wave_tick(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
-    """Execute a 40-minute wave tick (no-op heartbeat when `ops/config.json` is on `STANDBY`)."""
+    """Execute a wave tick (no-op heartbeat when on `STANDBY`)."""
     runtime_budget = _resolve_runtime_budget_file(repo_root)
     guard_dispatcher = JulesEnclaveDispatcher(repo_root=repo_root, budget_file=runtime_budget, dry_run=True)
     standby = guard_dispatcher.check_standby_or_paused()
@@ -315,7 +333,7 @@ def run_wave_tick(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
             "cross_fleet_rolling_24h": telemetry["cross_fleet_rolling_24h"],
         }
 
-    # Determine current wave index (1..36) from UTC minute of day
+    # Determine current wave index from UTC hour/minute
     live_dispatcher = JulesEnclaveDispatcher(
         repo_root=repo_root,
         budget_file=runtime_budget,
@@ -323,12 +341,12 @@ def run_wave_tick(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
     )
     now_dt = datetime.now(timezone.utc)
     minute_of_day = now_dt.hour * 60 + now_dt.minute
-    wave_idx = (minute_of_day // 40) % 36 + 1
-    tick_id = ((wave_idx - 1) // 9) * 4 + ((wave_idx - 1) % 4) + 1
+    wave_idx = (minute_of_day // 60) % 24 + 1
+    tick_id = ((wave_idx - 1) // 6) * 4 + ((wave_idx - 1) % 4) + 1
     res = live_dispatcher.dispatch_tick_sessions(tick_id=tick_id, persist=True)
     return {
         "status": "WAVE_DISPATCHED",
-        "wave_index_1_to_36": wave_idx,
+        "wave_index_1_to_24": wave_idx,
         "dispatch_result": res,
     }
 
@@ -356,12 +374,13 @@ def run_reaper_tick(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
 
 
 def main(argv: list[str] | None = None) -> int:
+    os.environ.setdefault("LFS_ENCLAVE_RUNTIME_CONFIG", "1")
     parser = argparse.ArgumentParser(
         description="Enclave of the 16 — 300-Session Rolling-Window Fleet Controller & Standby Manager."
     )
     parser.add_argument("--status", action="store_true", help="Show cross-fleet 300-session rolling-window & standby status.")
     parser.add_argument("--dry-run-24h", action="store_true", help="Simulate all 36 waves (300-session 24h plan) offline.")
-    parser.add_argument("--tick", action="store_true", help="Execute 40-minute wave tick (standby-gated).")
+    parser.add_argument("--tick", action="store_true", help="Execute wave tick (standby-gated).")
     parser.add_argument("--reap", action="store_true", help="Execute 5-minute F-120 stalled-session reaper (standby-gated).")
     parser.add_argument("--arm-launch", action="store_true", help="Arm the Enclave fleet for live launch.")
     parser.add_argument("--standby", action="store_true", help="Place the Enclave fleet on STANDBY (enabled=false).")
