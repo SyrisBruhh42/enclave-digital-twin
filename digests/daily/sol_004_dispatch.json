@@ -1,274 +1,328 @@
 {
-  "dispatch_id": "dispatch_sol_004",
-  "colony_sol": 4,
-  "tick_id": 16,
-  "file_operations": [
-    {
-      "op": "A",
-      "path": "digests/daily/sol_004_dispatch.json"
-    }
-  ],
-  "target_path": "digests/daily/sol_004_dispatch.json",
-  "disallow_overwrite": false,
-  "headline": "SOL 4 EVENING DISPATCH: The Feast Under Shear",
-  "anchor_intro": "[VEX]: Good evening Enclave! [DORIAN]: Another sol, another dispatch.",
-  "lead_stories": [
-    {
-      "story_id": "story_004_01",
-      "pattern_type": "SCHRODINGER_HARVEST_STANDOFF",
-      "story_title": "Magnetohydrodynamic Shear at The Forge",
-      "narrative_summary": "Silas hands off the warm copper calibration baton to Hector.",
-      "cited_event_ids": [
-        "evt_s001_t0001_dawn_shift",
-        "evt_s001_t0002_midday_expedition",
-        "evt_s001_t0003_dusk_craft",
+    "dispatch_id": "dispatch_sol_004",
+    "colony_sol": 4,
+    "tick_id": 16,
+    "file_operations": [
+        {
+            "op": "A",
+            "path": "digests/daily/sol_004_dispatch.json"
+        }
+    ],
+    "target_path": "digests/daily/sol_004_dispatch.json",
+    "disallow_overwrite": false,
+    "headline": "SOL 4 EVENING DISPATCH: The Feast Under Shear",
+    "anchor_intro": "[VEX]: Good evening Enclave! [DORIAN]: Another sol, another dispatch.",
+    "lead_stories": [
+        {
+            "story_id": "story_004_01",
+            "pattern_type": "SCHRODINGER_HARVEST_STANDOFF",
+            "story_title": "Magnetohydrodynamic Shear at The Forge",
+            "narrative_summary": "Silas hands off the warm copper calibration baton to Hector.",
+            "cited_event_ids": [
+                "evt_s004_t0013_morning_intent",
+                "evt_s004_t0014_shadow_prank",
+                "evt_s004_t0016_reflection"
+            ],
+            "actors": [
+                "enclave_03_silas",
+                "enclave_01_hector"
+            ],
+            "location": "The_First_Forge",
+            "locations": [
+                "The_First_Forge"
+            ],
+            "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+            "salience_score": 85.0,
+            "read_full_scene_link": "#scene-evt_s004_t0016_reflection"
+        }
+    ],
+    "developing_stories": [],
+    "block_digests": [
+        {
+            "phase": "DAWN_SHIFT",
+            "cited_event_ids": [
+                "evt_s004_t0013_morning_intent"
+            ],
+            "actors": [
+                "enclave_03_silas",
+                "enclave_01_hector"
+            ],
+            "location": "The_First_Forge"
+        },
+        {
+            "phase": "MIDDAY_EXPEDITION",
+            "cited_event_ids": [
+                "evt_s004_t0014_shadow_prank"
+            ],
+            "actors": [
+                "enclave_03_silas",
+                "enclave_01_hector",
+                "enclave_13_ryn"
+            ],
+            "location": "The_First_Forge"
+        },
+        {
+            "phase": "DUSK_CRAFT",
+            "cited_event_ids": [
+                "evt_s004_t0016_reflection"
+            ],
+            "actors": [
+                "enclave_03_silas",
+                "enclave_01_hector"
+            ],
+            "location": "The_First_Forge"
+        },
+        {
+            "phase": "THE_FEAST",
+            "cited_event_ids": [
+                "evt_s001_t0004_the_feast"
+            ],
+            "actors": [
+                "enclave_01_hector",
+                "enclave_02_jane",
+                "enclave_03_silas",
+                "enclave_04_leo",
+                "enclave_05_kaio",
+                "enclave_06_zara",
+                "enclave_07_willow",
+                "enclave_08_terra",
+                "enclave_09_orion",
+                "enclave_10_isla",
+                "enclave_11_kenna",
+                "enclave_12_elias",
+                "enclave_13_ryn",
+                "enclave_14_vex",
+                "enclave_15_dorian",
+                "enclave_16_elara"
+            ],
+            "location": "The_Hub_Hearth"
+        }
+    ],
+    "magnetosphere_and_weather_report": {},
+    "sibling_grid_blind_spot_column": {},
+    "quote_of_the_sol": "",
+    "read_full_scene_links": [],
+    "broadcast_markdown": "",
+    "title": "SOL 4 EVENING DISPATCH",
+    "newscaster_anchors": [
+        "enclave_14_vex",
+        "enclave_15_dorian"
+    ],
+    "lead_story": {
+        "story_id": "story_004_01",
+        "pattern_type": "SCHRODINGER_HARVEST_STANDOFF",
+        "story_title": "Magnetohydrodynamic Shear at The Forge",
+        "narrative_summary": "Silas hands off the warm copper calibration baton to Hector.",
+        "cited_event_ids": [
+            "evt_s004_t0013_morning_intent",
+            "evt_s004_t0014_shadow_prank",
+            "evt_s004_t0016_reflection"
+        ],
+        "actors": [
+            "enclave_03_silas",
+            "enclave_01_hector"
+        ],
+        "location": "The_First_Forge",
+        "locations": [
+            "The_First_Forge"
+        ],
+        "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+        "salience_score": 85.0,
+        "read_full_scene_link": "#scene-evt_s004_t0016_reflection"
+    },
+    "four_block_digests": [
+        {
+            "phase": "DAWN_SHIFT",
+            "cited_event_ids": [
+                "evt_s004_t0013_morning_intent"
+            ],
+            "actors": [
+                "enclave_03_silas",
+                "enclave_01_hector"
+            ],
+            "location": "The_First_Forge"
+        },
+        {
+            "phase": "MIDDAY_EXPEDITION",
+            "cited_event_ids": [
+                "evt_s004_t0014_shadow_prank"
+            ],
+            "actors": [
+                "enclave_03_silas",
+                "enclave_01_hector",
+                "enclave_13_ryn"
+            ],
+            "location": "The_First_Forge"
+        },
+        {
+            "phase": "DUSK_CRAFT",
+            "cited_event_ids": [
+                "evt_s004_t0016_reflection"
+            ],
+            "actors": [
+                "enclave_03_silas",
+                "enclave_01_hector"
+            ],
+            "location": "The_First_Forge"
+        },
+        {
+            "phase": "THE_FEAST",
+            "cited_event_ids": [
+                "evt_s001_t0004_the_feast"
+            ],
+            "actors": [
+                "enclave_01_hector",
+                "enclave_02_jane",
+                "enclave_03_silas",
+                "enclave_04_leo",
+                "enclave_05_kaio",
+                "enclave_06_zara",
+                "enclave_07_willow",
+                "enclave_08_terra",
+                "enclave_09_orion",
+                "enclave_10_isla",
+                "enclave_11_kenna",
+                "enclave_12_elias",
+                "enclave_13_ryn",
+                "enclave_14_vex",
+                "enclave_15_dorian",
+                "enclave_16_elara"
+            ],
+            "location": "The_Hub_Hearth"
+        }
+    ],
+    "gossip_and_shadow_column": {},
+    "gossip_items": [],
+    "exoplanet_weather_almanac": {},
+    "weather_report": {},
+    "covered_day_phases": [
+        "DAWN_SHIFT",
+        "MIDDAY_EXPEDITION",
+        "DUSK_CRAFT",
+        "THE_FEAST"
+    ],
+    "all_cited_event_ids": [
+        "evt_s004_t0013_morning_intent",
+        "evt_s004_t0014_shadow_prank",
+        "evt_s004_t0016_reflection",
         "evt_s001_t0004_the_feast"
-      ],
-      "actors": [
-        "enclave_03_silas",
-        "enclave_01_hector"
-      ],
-      "location": "The_First_Forge",
-      "locations": [
-        "The_First_Forge"
-      ],
-      "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
-      "salience_score": 85.0,
-      "read_full_scene_link": "#scene-evt_s004_t0016_the_feast"
-    }
-  ],
-  "developing_stories": [],
-  "block_digests": [],
-  "magnetosphere_and_weather_report": {},
-  "sibling_grid_blind_spot_column": {},
-  "quote_of_the_sol": "",
-  "read_full_scene_links": [],
-  "broadcast_markdown": "",
-  "title": "SOL 4 EVENING DISPATCH",
-  "newscaster_anchors": [
-    "enclave_14_vex",
-    "enclave_15_dorian"
-  ],
-  "lead_story": {
-    "story_id": "story_004_01",
-    "pattern_type": "SCHRODINGER_HARVEST_STANDOFF",
-    "story_title": "Magnetohydrodynamic Shear at The Forge",
-    "narrative_summary": "Silas hands off the warm copper calibration baton to Hector.",
-    "cited_event_ids": [
-      "evt_s001_t0001_dawn_shift",
-      "evt_s001_t0002_midday_expedition",
-      "evt_s001_t0003_dusk_craft",
-      "evt_s001_t0004_the_feast"
     ],
-    "actors": [
-      "enclave_03_silas",
-      "enclave_01_hector"
-    ],
-    "location": "The_First_Forge",
-    "locations": [
-      "The_First_Forge"
-    ],
-    "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
-    "salience_score": 85.0,
-    "read_full_scene_link": "#scene-evt_s004_t0016_the_feast"
-  },
-  "four_block_digests": [],
-  "gossip_and_shadow_column": {},
-  "gossip_items": [],
-  "exoplanet_weather_almanac": {},
-  "weather_report": {},
-  "covered_day_phases": [
-    "DAWN_SHIFT",
-    "MIDDAY_EXPEDITION",
-    "DUSK_CRAFT",
-    "THE_FEAST"
-  ],
-  "all_cited_event_ids": [
-    "evt_s001_t0001_dawn_shift",
-    "evt_s001_t0002_midday_expedition",
-    "evt_s001_t0003_dusk_craft",
-    "evt_s001_t0004_the_feast"
-  ],
-  "broadcast_script": "The heavy brass condenser hummed. Silas tightened the seal. Silas handed the warm copper calibration baton directly to Hector.",
-  "base_snapshot_tick": 16,
-  "known_events": {
-    "evt_s004_t0016_the_feast": {
-      "event_id": "evt_s004_t0016_the_feast",
-      "actors": [
-        "enclave_03_silas",
-        "enclave_01_hector"
-      ],
-      "location": "The_First_Forge"
-    },
-    "evt_s004_t0013_dawn_shift": {
-      "event_id": "evt_s004_t0013_dawn_shift",
-      "actors": [
-        "enclave_03_silas",
-        "enclave_01_hector"
-      ],
-      "location": "The_First_Forge"
-    },
-    "evt_s004_t0014_midday_expedition": {
-      "event_id": "evt_s004_t0014_midday_expedition",
-      "actors": [
-        "enclave_03_silas",
-        "enclave_01_hector"
-      ],
-      "location": "The_First_Forge"
-    },
-    "evt_s004_t0015_dusk_craft": {
-      "event_id": "evt_s004_t0015_dusk_craft",
-      "actors": [
-        "enclave_03_silas",
-        "enclave_01_hector"
-      ],
-      "location": "The_First_Forge"
-    }
-  },
-  "valid_events_by_id": {
-    "evt_s004_t0016_the_feast": {
-      "event_id": "evt_s004_t0016_the_feast",
-      "actors": [
-        "enclave_03_silas",
-        "enclave_01_hector"
-      ],
-      "location": "The_First_Forge"
-    },
-    "evt_s004_t0013_dawn_shift": {
-      "event_id": "evt_s004_t0013_dawn_shift",
-      "actors": [
-        "enclave_03_silas",
-        "enclave_01_hector"
-      ],
-      "location": "The_First_Forge"
-    },
-    "evt_s004_t0014_midday_expedition": {
-      "event_id": "evt_s004_t0014_midday_expedition",
-      "actors": [
-        "enclave_03_silas",
-        "enclave_01_hector"
-      ],
-      "location": "The_First_Forge"
-    },
-    "evt_s004_t0015_dusk_craft": {
-      "event_id": "evt_s004_t0015_dusk_craft",
-      "actors": [
-        "enclave_03_silas",
-        "enclave_01_hector"
-      ],
-      "location": "The_First_Forge"
-    }
-  },
-  "showrunner_ledger": {
-    "campaign_metadata": {
-      "session_number": 4,
-      "colony_sol": 4,
-      "tick_id": 16,
-      "pacing_mode": "MERCER_IMMERSIVE",
-      "consequential_fights_since_short_rest": 0,
-      "horizon_goals": {
-        "immediate_session_goal": "Survive the shear",
-        "mid_term_milestone": "Build the Forge",
-        "campaign_arc_climax": "Tame the planet"
-      },
-      "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC"
-    },
-    "active_location": {
-      "location_id": "The_First_Forge",
-      "macro_silhouette": "The forge is loud. It is very hot. Metal clangs.",
-      "sensory_palette": {
-        "sight_and_color": "Bright orange arcs of lightning geode.",
-        "sound": "Deafening clang of heavy hammer on brass.",
-        "smell": "Ozone and burnt metallic dust.",
-        "tactile_temperature": "Oppressively hot and dry.",
-        "taste_optional": "Copper on the tongue."
-      },
-      "interactive_features": [
-        {
-          "feature_name": "Brass Bellows",
-          "affordance_description": "Can be pumped to increase forge heat.",
-          "system_verb": "ATTRACT",
-          "associated_check_dc": 14
+    "broadcast_script": "The Hub Hearth crackled with a comforting warmth, radiating against the cool slate walls. The aroma of Ryn's roasting root vegetables filled the air. Crimson embers glowed, casting dancing shadows. The murmur of all sixteen Enclave members returning for the evening feast provided a steady hum. Ryn, the active chef tonight, adjusted the heavy brass spit to DEFEND against uneven cooking, ATTRACT the heat towards the center, and CONCEAL a smaller pot of herbs boiling near the edge. Ryn grabbed a warm copper ladle and slapped it firmly into Silas' hand. The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea tested their resolve today, but tonight they dine together.",
+    "base_snapshot_tick": 16,
+    "known_events": {},
+    "valid_events_by_id": {},
+    "active_pov_id": "enclave_13_ryn",
+    "next_pov_target": "enclave_03_silas",
+    "showrunner_ledger": {
+        "campaign_metadata": {
+            "session_number": 4,
+            "colony_sol": 4,
+            "tick_id": 16,
+            "pacing_mode": "MERCER_IMMERSIVE",
+            "consequential_fights_since_short_rest": 0,
+            "horizon_goals": {
+                "immediate_session_goal": "Survive the shear",
+                "mid_term_milestone": "Build the Forge",
+                "campaign_arc_climax": "Tame the planet"
+            },
+            "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC"
         },
-        {
-          "feature_name": "Lightning Geode Condenser",
-          "affordance_description": "Can overload if not carefully monitored.",
-          "system_verb": "DEFEND",
-          "associated_check_dc": 14
+        "active_location": {
+            "location_id": "The_Hub_Hearth",
+            "macro_silhouette": "The Hub Hearth crackled with a comforting warmth, radiating against the cool slate walls. The aroma of Ryn's roasting root vegetables filled the air.",
+            "sensory_palette": {
+                "sight_and_color": "Crimson embers glowed, casting dancing shadows.",
+                "sound": "The murmur of all sixteen Enclave members returning for the evening feast provided a steady hum.",
+                "smell": "The aroma of Ryn's roasting root vegetables filled the air.",
+                "tactile_temperature": "A comforting warmth against the cool slate walls.",
+                "taste_optional": "The savory tang of root vegetables."
+            },
+            "interactive_features": [
+                {
+                    "feature_name": "Heavy Brass Spit",
+                    "affordance_description": "Can be adjusted to manage cooking temperatures.",
+                    "system_verb": "DEFEND",
+                    "associated_check_dc": 14
+                },
+                {
+                    "feature_name": "Central Ember Pit",
+                    "affordance_description": "Pulls in ambient heat for efficient cooking.",
+                    "system_verb": "ATTRACT",
+                    "associated_check_dc": 14
+                },
+                {
+                    "feature_name": "Edge Pot",
+                    "affordance_description": "Can hide boiling herbs for flavor enhancement.",
+                    "system_verb": "CONCEAL",
+                    "associated_check_dc": 14
+                }
+            ]
         },
-        {
-          "feature_name": "Coolant Vat",
-          "affordance_description": "Can quench overheating metals.",
-          "system_verb": "CONSUME",
-          "associated_check_dc": 14
-        }
-      ]
-    },
-    "reactive_toys": [
-      {
-        "entity_id": "toy_01",
-        "name_and_role": "Ferrofluid Surge",
-        "motivation_goal": "Overwhelm the forge.",
-        "consistent_method": "Rising tides of metallic fluid.",
-        "immediate_complication": "Breaches the lower seal.",
-        "pressure_index": 8,
-        "uninterrupted_escalation": "Will flood the floor in 3 rounds."
-      }
-    ],
-    "encounter_matrix": {
-      "three_levels_of_why": {
-        "level_1_immediate": "The shear is tearing the forge.",
-        "level_2_local": "The ferrofluid sea is angry.",
-        "level_3_campaign_arc": "The planet is testing them."
-      },
-      "active_specialist_roles": [
-        {
-          "actor_id": "enclave_03_silas",
-          "tactical_role": "DEFENDER"
+        "reactive_toys": [
+            {
+                "entity_id": "toy_01",
+                "name_and_role": "Ferrofluid Surge",
+                "motivation_goal": "Overwhelm the forge.",
+                "consistent_method": "Rising tides of metallic fluid.",
+                "immediate_complication": "Breaches the lower seal.",
+                "pressure_index": 8,
+                "uninterrupted_escalation": "Will flood the floor in 3 rounds."
+            }
+        ],
+        "encounter_matrix": {
+            "three_levels_of_why": {
+                "level_1_immediate": "The shear is tearing the forge.",
+                "level_2_local": "The ferrofluid sea is angry.",
+                "level_3_campaign_arc": "The planet is testing them."
+            },
+            "active_specialist_roles": [
+                {
+                    "actor_id": "enclave_13_ryn",
+                    "tactical_role": "STRIKER"
+                },
+                {
+                    "actor_id": "enclave_03_silas",
+                    "tactical_role": "DEFENDER"
+                }
+            ],
+            "strain_accumulated_upward": 1,
+            "prerolled_hazard_queue": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
         },
-        {
-          "actor_id": "enclave_01_hector",
-          "tactical_role": "STRIKER"
+        "lpi_metrics": {
+            "relational_tension_density": 0.8,
+            "motivational_vector_saturation": 0.7,
+            "unresolved_conflict_ratio": 0.6,
+            "temporal_horizon_immediacy": 0.9,
+            "composite_lpi": 0.75,
+            "classification": "Campaign-Ready"
+        },
+        "dual_agent_contract": {
+            "judge_tactician": {
+                "provider": "local",
+                "model": "llama",
+                "temperature": 0.2,
+                "explicit_pre_roll_dc": 14,
+                "failure_stakes_declared": "The forge overheats.",
+                "graduated_outcomes": {
+                    "nat_1_false_intuition": "Total blowout.",
+                    "below_dc_complicated_fail_forward": "It holds, but damages the bellows.",
+                    "meets_dc_clean_success": "Flawless calibration.",
+                    "dc_plus_5_or_20_extended_lore": "You discover a new alloy property."
+                }
+            },
+            "master_narrator": {
+                "executor": "local",
+                "temperature": 0.7,
+                "calypso_zero_raw_stats": true,
+                "prosodic_micro_pauses_enabled": true,
+                "agency_handoff_prompt": "Silas, what do you do?"
+            }
         }
-      ],
-      "strain_accumulated_upward": 1,
-      "prerolled_hazard_queue": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    },
-    "lpi_metrics": {
-      "relational_tension_density": 0.8,
-      "motivational_vector_saturation": 0.7,
-      "unresolved_conflict_ratio": 0.6,
-      "temporal_horizon_immediacy": 0.9,
-      "composite_lpi": 0.75,
-      "classification": "Campaign-Ready"
-    },
-    "dual_agent_contract": {
-      "judge_tactician": {
-        "provider": "local",
-        "model": "llama",
-        "temperature": 0.2,
-        "explicit_pre_roll_dc": 14,
-        "failure_stakes_declared": "The forge overheats.",
-        "graduated_outcomes": {
-          "nat_1_false_intuition": "Total blowout.",
-          "below_dc_complicated_fail_forward": "It holds, but damages the bellows.",
-          "meets_dc_clean_success": "Flawless calibration.",
-          "dc_plus_5_or_20_extended_lore": "You discover a new alloy property."
-        }
-      },
-      "master_narrator": {
-        "executor": "local",
-        "temperature": 0.7,
-        "calypso_zero_raw_stats": true,
-        "prosodic_micro_pauses_enabled": true,
-        "agency_handoff_prompt": "Silas, what do you do?"
-      }
     }
-  }
 }
