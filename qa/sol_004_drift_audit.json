@@ -1,9 +1,9 @@
 {
-  "entity_id": "enclave_03_silas",
+  "entity_id": "enclave_13_ryn",
   "audit_type": "psychometric_drift",
   "colony_sol": 4,
   "tick_id": 16,
-  "narrative_prose": "Silas squints into the swirling dark of the underground cavern. The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea rips the surface into jagged, impossible peaks, defying gravity in eerie silence. A heavy smell of ozone hangs in the stagnant air, biting the back of his throat. He adjusts his grip on his hammer. If they cannot stabilize the resonance before the next wave, the entire colony structure will succumb to the shearing forces.",
+  "narrative_prose": "Ryn wiped oxidized copper dust from her brow, staring out at the churning chaos below where the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea threw towering obsidian spikes into the violet sky. The acrid stench of ozone burned her nostrils, competing with the warm, yeasty aroma of the Feast loaves she had to deliver before the night shift missed its precise caloric baseline. Grabbing her heavy steel climbing anchor, she pivoted as Silas approached through the static-charged fog. She shoved the rusted baton squarely into his chest, barking, 'Take this and secure the relay, Silas, unless you want to eat cold slag for supper!'",
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 1,
@@ -12,19 +12,19 @@
       "pacing_mode": "MERCER_IMMERSIVE",
       "consequential_fights_since_short_rest": 0,
       "horizon_goals": {
-        "immediate_session_goal": "audit drift",
+        "immediate_session_goal": "deliver Feast loaves across the ridge",
         "mid_term_milestone": "survive",
         "campaign_arc_climax": "win"
       }
     },
     "active_location": {
       "location_id": "ferrofluid_sea",
-      "macro_silhouette": "The vast expanse of the cavern is dominated by the churning black mirror of the ferrofluid sea. The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea creates towering spikes that collapse just as quickly.",
+      "macro_silhouette": "The exterior ridge of the colony offered a terrifying view of the volatile exoplanet. Below, the vast expanse was dominated by the churning black mirror of the ferrofluid sea. The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea created towering spikes that collapsed just as quickly under the violet sky.",
       "sensory_palette": {
-        "sight_and_color": "obsidian black and silver highlights",
-        "sound": "whooshing, cracking hum of magnetic fields",
-        "smell": "acrid ozone and metallic dust",
-        "tactile_temperature": "starkly cold"
+        "sight_and_color": "obsidian black, violet flashes, and silver highlights",
+        "sound": "deafening crash of collapsing magnetic spikes, whooshing hum of magnetic fields",
+        "smell": "acrid ozone, metallic dust, and fresh yeasty bread",
+        "tactile_temperature": "biting cold with static-charged air"
       },
       "interactive_features": [
         {
@@ -60,14 +60,14 @@
     ],
     "encounter_matrix": {
       "three_levels_of_why": {
-        "level_1_immediate": "The magnetic shear is destabilizing the local environment.",
-        "level_2_local": "Silas needs to prove that intuitive leaps can solve problems beyond micrometer measurement.",
-        "level_3_campaign_arc": "The colony's survival depends on mastering the planet's magnetosphere."
+        "level_1_immediate": "The magnetic shear is destabilizing the local environment and threatening the food transport route.",
+        "level_2_local": "Ryn must ensure the caloric baseline is met despite the extreme weather.",
+        "level_3_campaign_arc": "The colony's survival depends on mastering the planet's magnetosphere while maintaining morale through the Feast."
       },
       "active_specialist_roles": [
         {
-          "actor_id": "enclave_03_silas",
-          "tactical_role": "DEFENDER"
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "LEADER"
         }
       ],
       "strain_accumulated_upward": 0,
@@ -89,7 +89,7 @@
     },
     "dual_agent_contract": {
       "judge_tactician": {
-        "provider": "local_ai",
+        "provider": "deterministic-enclave-5section-v2",
         "model": "ollama",
         "temperature": 0.7,
         "explicit_pre_roll_dc": 14,
@@ -102,24 +102,36 @@
         }
       },
       "master_narrator": {
-        "executor": "jules_standby",
+        "executor": "deterministic-enclave-5section-v2",
         "temperature": 0.6,
         "calypso_zero_raw_stats": true,
         "prosodic_micro_pauses_enabled": true,
-        "agency_handoff_prompt": "Silas looks back toward the entrance, calling for Hector to bring the heavy lifter. What does Hector do?"
+        "agency_handoff_prompt": "Ryn forcefully hands the baton to Silas. What does Silas do?"
       }
     }
   },
-  "prev_next_pov_target": "enclave_03_silas",
-  "active_pov_id": "enclave_03_silas",
-  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
   "drift_audit": {
     "max_abs_z": 2.2,
     "axis_z_scores": {
       "x": 2.2
     },
     "drift_alert": true,
-    "corrective_authors_note": "Silas is relying too heavily on raw intuition. He needs to ground his actions in measurable facts to re-align with his core traits.",
+    "corrective_authors_note": "Ryn's focus on caloric efficiency should not overshadow her fierce protective nature toward the squad. She must balance logistical severity with relational warmth.",
     "re_anchor_ticks": 3
-  }
+  },
+  "disallow_overwrite": false,
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
+    "active_pov_id": "enclave_13_ryn",
+    "interlocutor_full_cards_loaded": 0,
+    "leaked_interlocutor_private_cards": false
+  },
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "operation": "ADD"
 }
