@@ -8,9 +8,9 @@ Manages:
      without consuming any Google Jules sessions.
    - Single command (`python3 tools/enclave_fleet_ctl.py --arm-launch`) arms the 36-wave / 300-session
      rolling-window fleet; `--standby` disarms it immediately.
-2. Cross-Fleet 300-Session Rolling-Window Token Bucket (`/home/joe/.local/state/lfs-jules-fleet/rolling_budget_300.json`):
-   - Coordinates `enclave-digital-twin`, `lfs-tycoon-factory` (`StrataPaper`), and `lfs-trasharcade-factory`
-     across the Google Jules Ultra 300-session rolling 24h window and 60-concurrent-VM ceiling.
+2. Cross-Fleet 300-Session Rolling-Window Token Bucket (`${XDG_STATE_HOME:-$HOME/.local/state}/lfs-jules-fleet/rolling_budget_300.json`):
+   - Coordinates `enclave-digital-twin`, `lfs-tycoon-factory` (`StrataPaper`), `lfs-trasharcade-factory`,
+     and `willow-guild-factory` across the Google Jules Ultra 300-session rolling 24h window and 60-concurrent-VM ceiling.
 3. Lightweight Self-Hosted Local AI Context-Aware Managers (`aegis-ollama.service` @ `127.0.0.1:11434`):
    - `qwen3.5:4b-q4_K_M`: Judge & Tactician ($T=0.05$, LPI gate, DC calculation, CALYPSO rule).
    - `gemma4:e4b-it-q4_K_M`: Showrunner Context Steward ($T=0.35$, Mulligan "Toys, Not Plots" & Mercer 5-sense).
@@ -49,17 +49,51 @@ from tools.jules_enclave_dispatcher import (
     ROLLING_SAFETY_BUFFER,
     SCHEDULED_PRODUCTIVE_CAP,
     JulesEnclaveDispatcher,
+    default_budget_state,
 )
 
-SHARED_FLEET_STATE_DIR = Path("/home/joe/.local/state/lfs-jules-fleet")
+
+def _xdg_state_home() -> Path:
+    return Path(os.environ.get("XDG_STATE_HOME") or (Path.home() / ".local" / "state"))
+
+
+SHARED_FLEET_STATE_DIR = _xdg_state_home() / "lfs-jules-fleet"
 SHARED_FLEET_BUDGET_FILE = SHARED_FLEET_STATE_DIR / "rolling_budget_300.json"
-TYCOON_STATE_FILE = Path("/home/joe/.local/state/lfs-tycoon-factory/state.json")
-TRASHARCADE_STATE_FILE = Path("/home/joe/.local/state/lfs-trasharcade-factory/state.json")
+ENCLAVE_RUNTIME_STATE_DIR = _xdg_state_home() / "lfs-enclave-factory"
+TYCOON_STATE_FILE = _xdg_state_home() / "lfs-tycoon-factory" / "state.json"
+TRASHARCADE_STATE_FILE = _xdg_state_home() / "lfs-trasharcade-factory" / "state.json"
+WILLOW_GUILD_STATE_FILE = _xdg_state_home() / "lfs-willow-guild-factory" / "state.json"
 SYSTEMD_USER_DIR = Path.home() / ".config" / "systemd" / "user"
 
 
 def _utc_now_iso() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def _resolve_runtime_budget_file(repo_root: Path = REPO_ROOT) -> Path:
+    """Resolve the externalized runtime budget state path (`$XDG_STATE_HOME/lfs-enclave-factory/budget.json`).
+
+    Seeds from `ops/budget.json` if absent so the git working tree (`ops/budget.json`) remains 100% clean.
+    """
+    resolved_root = Path(repo_root).resolve()
+    if resolved_root != REPO_ROOT:
+        return resolved_root / "ops" / "budget.json"
+    state_dir = _xdg_state_home() / "lfs-enclave-factory"
+    runtime_budget = state_dir / "budget.json"
+    if not runtime_budget.is_file():
+        try:
+            state_dir.mkdir(parents=True, exist_ok=True)
+            seed_file = resolved_root / "ops" / "budget.json"
+            if seed_file.is_file():
+                shutil.copy2(str(seed_file), str(runtime_budget))
+            else:
+                runtime_budget.write_text(
+                    json.dumps(default_budget_state(), indent=2) + "\n",
+                    encoding="utf-8",
+                )
+        except OSError:
+            return resolved_root / "ops" / "budget.json"
+    return runtime_budget
 
 
 def _count_factory_sessions_24h(state_path: Path, now_dt: datetime) -> dict[str, int]:
@@ -79,7 +113,7 @@ def _count_factory_sessions_24h(state_path: Path, now_dt: datetime) -> dict[str,
             continue
         if rec.get("outcome") is None:
             in_flight += 1
-        created_str = str(rec.get("created_at") or rec.get("dispatched_at_iso") or "")
+        created_str = str(rec.get("created_at") or rec.get("created") or rec.get("dispatched_at_iso") or "")
         if created_str:
             try:
                 c_str = created_str[:-1] + "+00:00" if created_str.endswith("Z") else created_str
@@ -94,18 +128,21 @@ def _count_factory_sessions_24h(state_path: Path, now_dt: datetime) -> dict[str,
 
 
 def compute_cross_fleet_rolling_telemetry(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
-    """Compute unified 300-session rolling-24h telemetry across Enclave, LFS-Tycoon, and LFS_TrashArcade."""
+    """Compute unified 300-session rolling-24h telemetry across Enclave, LFS-Tycoon, LFS_TrashArcade, and Willow Guild."""
     now_iso = _utc_now_iso()
     now_dt = datetime.now(timezone.utc)
-    dispatcher = JulesEnclaveDispatcher(repo_root=repo_root, dry_run=True)
+    runtime_budget = _resolve_runtime_budget_file(repo_root)
+    dispatcher = JulesEnclaveDispatcher(repo_root=repo_root, budget_file=runtime_budget, dry_run=True)
     local_mgr = LocalContextAwareManager(repo_root=repo_root)
 
     enclave_budget = dispatcher.load_budget(now_iso=now_iso)
     standby_guard = dispatcher.check_standby_or_paused()
     sympathy = local_mgr.evaluate_hardware_sympathy()
 
-    tycoon_stats = _count_factory_sessions_24h(TYCOON_STATE_FILE, now_dt)
-    arcade_stats = _count_factory_sessions_24h(TRASHARCADE_STATE_FILE, now_dt)
+    state_home = _xdg_state_home()
+    tycoon_stats = _count_factory_sessions_24h(state_home / "lfs-tycoon-factory" / "state.json", now_dt)
+    arcade_stats = _count_factory_sessions_24h(state_home / "lfs-trasharcade-factory" / "state.json", now_dt)
+    willow_stats = _count_factory_sessions_24h(state_home / "lfs-willow-guild-factory" / "state.json", now_dt)
     enclave_live_24h = sum(
         1
         for e in (enclave_budget.get("session_ledger_24h") or [])
@@ -113,11 +150,17 @@ def compute_cross_fleet_rolling_telemetry(repo_root: Path = REPO_ROOT) -> dict[s
     )
     enclave_dryrun_24h = int(enclave_budget.get("rolling_24h_dispatched", 0))
 
-    total_live_24h = enclave_live_24h + tycoon_stats["dispatched_24h"] + arcade_stats["dispatched_24h"]
+    total_live_24h = (
+        enclave_live_24h
+        + tycoon_stats["dispatched_24h"]
+        + arcade_stats["dispatched_24h"]
+        + willow_stats["dispatched_24h"]
+    )
     total_in_flight = (
         len(enclave_budget.get("active_sessions") or [])
         + tycoon_stats["in_flight"]
         + arcade_stats["in_flight"]
+        + willow_stats["in_flight"]
     )
 
     payload = {
@@ -131,10 +174,17 @@ def compute_cross_fleet_rolling_telemetry(repo_root: Path = REPO_ROOT) -> dict[s
         "fleet_mode": standby_guard["fleet_mode"],
         "standby_reasons": standby_guard["reasons"],
         "cross_fleet_rolling_24h": {
+            "factories_tracked": [
+                "enclave-digital-twin",
+                "lfs-tycoon-factory",
+                "lfs-trasharcade-factory",
+                "willow-guild-factory",
+            ],
             "enclave_live_dispatched_24h": enclave_live_24h,
             "enclave_dry_run_simulated_24h": enclave_dryrun_24h,
             "lfs_tycoon_dispatched_24h": tycoon_stats["dispatched_24h"],
             "lfs_trasharcade_dispatched_24h": arcade_stats["dispatched_24h"],
+            "willow_guild_dispatched_24h": willow_stats["dispatched_24h"],
             "total_live_dispatched_24h": total_live_24h,
             "remaining_hard_ceiling_24h": max(0, HARD_DISPATCH_CEILING_24H - total_live_24h),
             "remaining_plan_ceiling_24h": max(0, PLAN_CEILING_24H - total_live_24h),
@@ -160,8 +210,12 @@ def compute_cross_fleet_rolling_telemetry(repo_root: Path = REPO_ROOT) -> dict[s
     }
 
     try:
-        SHARED_FLEET_STATE_DIR.mkdir(parents=True, exist_ok=True)
-        SHARED_FLEET_BUDGET_FILE.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+        fleet_dir = _xdg_state_home() / "lfs-jules-fleet"
+        fleet_dir.mkdir(parents=True, exist_ok=True)
+        (fleet_dir / "rolling_budget_300.json").write_text(
+            json.dumps(payload, indent=2) + "\n",
+            encoding="utf-8",
+        )
     except OSError:
         pass
 
@@ -247,8 +301,9 @@ def install_systemd_units(repo_root: Path = REPO_ROOT, enable_timers: bool = Tru
 
 def run_wave_tick(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
     """Execute a 40-minute wave tick (no-op heartbeat when `ops/config.json` is on `STANDBY`)."""
-    dispatcher = JulesEnclaveDispatcher(repo_root=repo_root, dry_run=True)
-    standby = dispatcher.check_standby_or_paused()
+    runtime_budget = _resolve_runtime_budget_file(repo_root)
+    guard_dispatcher = JulesEnclaveDispatcher(repo_root=repo_root, budget_file=runtime_budget, dry_run=True)
+    standby = guard_dispatcher.check_standby_or_paused()
     telemetry = compute_cross_fleet_rolling_telemetry(repo_root=repo_root)
     if standby["standby_or_paused"]:
         return {
@@ -261,11 +316,16 @@ def run_wave_tick(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
         }
 
     # Determine current wave index (1..36) from UTC minute of day
+    live_dispatcher = JulesEnclaveDispatcher(
+        repo_root=repo_root,
+        budget_file=runtime_budget,
+        dry_run=False,
+    )
     now_dt = datetime.now(timezone.utc)
     minute_of_day = now_dt.hour * 60 + now_dt.minute
     wave_idx = (minute_of_day // 40) % 36 + 1
     tick_id = ((wave_idx - 1) // 9) * 4 + ((wave_idx - 1) % 4) + 1
-    res = dispatcher.dispatch_tick_sessions(tick_id=tick_id, persist=True)
+    res = live_dispatcher.dispatch_tick_sessions(tick_id=tick_id, persist=True)
     return {
         "status": "WAVE_DISPATCHED",
         "wave_index_1_to_36": wave_idx,
@@ -275,8 +335,9 @@ def run_wave_tick(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
 
 def run_reaper_tick(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
     """Execute the 5-minute F-120 stalled-session reaper (no-op heartbeat when on `STANDBY`)."""
-    dispatcher = JulesEnclaveDispatcher(repo_root=repo_root, dry_run=True)
-    standby = dispatcher.check_standby_or_paused()
+    runtime_budget = _resolve_runtime_budget_file(repo_root)
+    guard_dispatcher = JulesEnclaveDispatcher(repo_root=repo_root, budget_file=runtime_budget, dry_run=True)
+    standby = guard_dispatcher.check_standby_or_paused()
     telemetry = compute_cross_fleet_rolling_telemetry(repo_root=repo_root)
     if standby["standby_or_paused"]:
         return {
@@ -286,7 +347,12 @@ def run_reaper_tick(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
             "reasons": standby["reasons"],
             "cross_fleet_rolling_24h": telemetry["cross_fleet_rolling_24h"],
         }
-    return dispatcher.reap_stalled_sessions(persist=True)
+    live_dispatcher = JulesEnclaveDispatcher(
+        repo_root=repo_root,
+        budget_file=runtime_budget,
+        dry_run=False,
+    )
+    return live_dispatcher.reap_stalled_sessions(persist=True)
 
 
 def main(argv: list[str] | None = None) -> int:

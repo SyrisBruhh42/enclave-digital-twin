@@ -1,6 +1,6 @@
 {
   "contract_version": "1.0.0",
-  "repository_root": "/home/joe/.gemini/antigravity/scratch/enclave-digital-twin",
+  "repository_root": "capsules/enclave-digital-twin",
   "event_record_schema": {
     "required_fields": [
       "event_id",

@@ -1,14 +1,15 @@
 {
   "schema_version": "enclave_fleet_config_v2.0.0",
-  "project_id": "PF-08",
+  "project_id": "PA-15",
   "repo_slug": "SyrisBruhh42/enclave-digital-twin",
   "enabled": false,
   "launch_state": "STANDBY",
   "fleet_mode": "UNIFIED_FLEET",
-  "shared_fleet_budget_path": "/home/joe/.local/state/lfs-jules-fleet/rolling_budget_300.json",
+  "shared_fleet_budget_path": "${XDG_STATE_HOME:-$HOME/.local/state}/lfs-jules-fleet/rolling_budget_300.json",
   "jules_api": {
     "endpoint": "https://jules.googleapis.com/v1alpha/sessions",
-    "secret_key_file": "/home/joe/.secrets/jules_api_key",
+    "gateway_url": "http://127.0.0.1:9445",
+    "api_key_env": "JULES_API_KEY",
     "capability_vault_scoped": true,
     "require_plan_approval": false,
     "auto_create_pr": true,

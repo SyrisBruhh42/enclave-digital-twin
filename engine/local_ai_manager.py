@@ -15,7 +15,7 @@ Aligns `enclave-digital-twin` with the LFS Aegis Local AI + 100% Google Jules Pi
    - `qwen2.5-coder:3b-instruct-q4_K_M` (1.9 GB): 5-Section Aegis Jules Task Card compiler,
      6-stage sanitized feedback responder, and declarative EAV failure-lesson formatter.
 3. Hardware Sympathy & Zero-Raw-Secret Vault Integration:
-   - Directly links with `/home/joe/.gemini/antigravity/scratch/PC-Pet-Helper/clients/linux/aegis_brain.py`
+   - Directly links with `core/companion/clients/linux/aegis_brain.py`
      (`HardwareSympathyGuard`, `CapabilityVaultBridge`, `UnifiedQwenJulesBrain`, `sanitize_untrusted_text`,
      `format_eav_lesson`) when present on the workstation, with built-in standalone equivalents for CI.
 """
@@ -46,7 +46,15 @@ SHOWRUNNER_STEWARD_MODEL = "gemma4:e4b-it-q4_K_M"
 TASK_CARD_COMPILER_MODEL = "qwen2.5-coder:3b-instruct-q4_K_M"
 
 # Optional direct link to workstation `aegis_brain.py`
-AEGIS_LINUX_CLIENT_DIR = Path("/home/joe/.gemini/antigravity/scratch/PC-Pet-Helper/clients/linux")
+_DEFAULT_U3_ROOT = Path(
+    os.environ.get("LFS_AEGIS_LINUX_ROOT")
+    or (
+        Path(os.environ["LFS_SUITE_ROOT"]) / "3-lfs-aegis-linux"
+        if os.environ.get("LFS_SUITE_ROOT")
+        else Path(__file__).resolve().parents[3]
+    )
+)
+AEGIS_LINUX_CLIENT_DIR = _DEFAULT_U3_ROOT / "core" / "companion" / "clients" / "linux"
 _aegis_brain: Any = None
 if AEGIS_LINUX_CLIENT_DIR.is_dir():
     if str(AEGIS_LINUX_CLIENT_DIR) not in sys.path:
@@ -162,11 +170,15 @@ class LocalContextAwareManager:
             else None
         )
 
-    def evaluate_hardware_sympathy(self) -> dict[str, Any]:
+    def evaluate_hardware_sympathy(self, evict_vram_on_yield: bool = True) -> dict[str, Any]:
         """Return workstation thermal/PSI/workload sympathy status before invoking local Ollama."""
         if self.sympathy_guard is not None:
             try:
-                return dict(self.sympathy_guard.evaluate_dispatch_sympathy(evict_vram_on_yield=False))
+                return dict(
+                    self.sympathy_guard.evaluate_dispatch_sympathy(
+                        evict_vram_on_yield=evict_vram_on_yield
+                    )
+                )
             except Exception:
                 pass
         return {
@@ -176,6 +188,9 @@ class LocalContextAwareManager:
             "judge_model": JUDGE_TACTICIAN_MODEL,
             "steward_model": SHOWRUNNER_STEWARD_MODEL,
             "keep_alive": "180s",
+            "evict_vram_on_yield": evict_vram_on_yield,
+            "priority_multiplier": int(os.environ.get("LFS_PRIORITY_MULTIPLIER", "10000")),
+            "bypass_mode": os.environ.get("LFS_BYPASS_MODE", "MODE_FAIR_SHARE"),
             "cpu_temp_c": 45.0,
             "load_1m": 1.0,
             "active_heavy_workloads": [],
@@ -429,7 +444,7 @@ class LocalContextAwareManager:
             f"- Run deterministic Constitutional Gate: `python3 tools/check_enclave_constitutions.py --proposal-file {target_path}`\n"
             f"- Confirm `git status --porcelain` shows only `A  {target_path}`.\n\n"
             f"## 5. Functional Capability Ontology\n"
-            f"- **Suite Domain**: `FC04 / FC18 / FC21 / FC27` (`PF-08 enclave-digital-twin`)\n"
+            f"- **Suite Domain**: `FC04 / FC18 / FC21 / FC27` (`PA-15 enclave-digital-twin`)\n"
             f"- **Declarative EAV Failure Lessons**:\n{eav_block}\n"
         )
 

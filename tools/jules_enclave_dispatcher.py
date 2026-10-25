@@ -23,15 +23,22 @@ import argparse
 from datetime import datetime, timedelta, timezone
 import hashlib
 import json
+import os
 from pathlib import Path
 import sys
-from typing import Any
+from typing import Any, Callable
+import urllib.error
+import urllib.request
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from tools.check_enclave_constitutions import check_jules_rolling_24h_budget
+from tools.check_enclave_constitutions import (
+    check_jules_rolling_24h_budget,
+    validate_proposal,
+    validate_showrunner_storytelling_contract,
+)
 
 PLAN_CEILING_24H = 300
 HARD_DISPATCH_CEILING_24H = 270
@@ -39,6 +46,7 @@ SCHEDULED_PRODUCTIVE_CAP = 225
 AUTO_RETRY_RESERVE_CAP = 30
 ROLLING_SAFETY_BUFFER = 45
 STALLED_TIMEOUT_MINUTES = 25
+UNIFIED_FLEET_CONCURRENT_VM_CAP = 48
 
 CANONICAL_TASK_BUCKETS: dict[str, int] = {
     "MORNING_INTENTS_16_NODES": 16,
@@ -53,6 +61,10 @@ CANONICAL_TASK_BUCKETS: dict[str, int] = {
     "DYNAMIC_LORE_CARD_PROPOSALS": 8,
     "EVENING_DISPATCH_NEWSCASTER_ROLLUPS_AND_SCRIPT": 9,
 }
+
+
+def _xdg_state_home() -> Path:
+    return Path(os.environ.get("XDG_STATE_HOME") or (Path.home() / ".local" / "state"))
 
 
 def _utc_now_iso() -> str:
@@ -142,6 +154,178 @@ def build_session_payload(
     }
 
 
+def build_live_jules_api_request(
+    payload: dict[str, Any],
+    repo_slug: str = "SyrisBruhh42/enclave-digital-twin",
+    starting_branch: str = "main",
+) -> dict[str, Any]:
+    """Convert an internal Enclave session payload into the canonical Google Jules `/v1alpha/sessions` body."""
+    if payload.get("requirePlanApproval") is not False:
+        raise ValueError("F-120 Guard: requirePlanApproval must be False.")
+    return {
+        "title": str(payload.get("title") or ""),
+        "prompt": str(payload.get("prompt") or ""),
+        "requirePlanApproval": False,
+        "automationMode": "AUTO_CREATE_PR",
+        "sourceContext": {
+            "source": f"sources/github/{repo_slug}",
+            "githubRepoContext": {
+                "startingBranch": starting_branch,
+            },
+        },
+    }
+
+
+def _extract_proposal_from_unidiff(
+    unidiff_text: str,
+    default_target_path: str = "events/evt_salvaged.json",
+) -> tuple[str, dict[str, Any]] | None:
+    """Extract a single-file JSON proposal from a unified git diff (`changeSet.gitPatch.unidiffPatch`)."""
+    if not unidiff_text or not unidiff_text.strip():
+        return None
+    target_path = default_target_path
+    added_lines: list[str] = []
+    for raw_line in unidiff_text.splitlines():
+        if raw_line.startswith("+++ b/"):
+            candidate = raw_line[len("+++ b/") :].strip()
+            if candidate and candidate != "/dev/null":
+                target_path = candidate
+        elif raw_line.startswith("+") and not raw_line.startswith("+++"):
+            added_lines.append(raw_line[1:])
+    if not added_lines:
+        return None
+    try:
+        parsed = json.loads("\n".join(added_lines))
+        if isinstance(parsed, dict):
+            return target_path, parsed
+    except Exception:
+        return None
+    return None
+
+
+class JulesRestClient:
+    """REST client for Google Jules `/v1alpha/sessions` routing via `LFS_JULES_GATEWAY_URL` or `JULES_API_KEY`."""
+
+    def __init__(
+        self,
+        base_url: str | None = None,
+        api_key: str | None = None,
+        timeout_sec: float = 20.0,
+        transport: Callable[[str, str, dict[str, Any] | None], dict[str, Any]] | None = None,
+    ) -> None:
+        self._explicit_base_url = base_url
+        self._explicit_api_key = api_key
+        self.timeout_sec = float(timeout_sec)
+        self._transport = transport
+
+    def resolve_api_key(self) -> str:
+        if self._explicit_api_key:
+            return self._explicit_api_key.strip()
+        env_key = os.environ.get("JULES_API_KEY", "").strip()
+        if env_key:
+            return env_key
+        cred_dir = os.environ.get("CREDENTIALS_DIRECTORY", "").strip()
+        if cred_dir:
+            cred_file = Path(cred_dir) / "jules_api_key"
+            if cred_file.is_file():
+                try:
+                    return cred_file.read_text(encoding="utf-8").strip()
+                except OSError:
+                    pass
+        return ""
+
+    def resolve_base_url(self) -> str:
+        if self._explicit_base_url:
+            base = self._explicit_base_url.rstrip("/")
+            return base if base.endswith("/v1alpha/sessions") else f"{base}/v1alpha/sessions"
+        gateway = os.environ.get("LFS_JULES_GATEWAY_URL", "").strip()
+        if gateway:
+            base = gateway.rstrip("/")
+            return base if base.endswith("/v1alpha/sessions") else f"{base}/v1alpha/sessions"
+        return "https://jules.googleapis.com/v1alpha/sessions"
+
+    def _request(
+        self,
+        method: str,
+        url: str,
+        body: dict[str, Any] | None = None,
+    ) -> dict[str, Any]:
+        if self._transport is not None:
+            return self._transport(method, url, body)
+        headers: dict[str, str] = {"Accept": "application/json"}
+        data_bytes: bytes | None = None
+        if body is not None:
+            headers["Content-Type"] = "application/json"
+            data_bytes = json.dumps(body).encode("utf-8")
+        api_key = self.resolve_api_key()
+        if api_key:
+            headers["X-Goog-Api-Key"] = api_key
+        req = urllib.request.Request(url, data=data_bytes, headers=headers, method=method)
+        with urllib.request.urlopen(req, timeout=self.timeout_sec) as resp:
+            raw = resp.read().decode("utf-8")
+            return json.loads(raw) if raw.strip() else {}
+
+    @staticmethod
+    def _clean_sid(session_id: str) -> str:
+        cleaned = str(session_id or "").strip()
+        if "/" in cleaned:
+            cleaned = cleaned.split("/")[-1]
+        return cleaned
+
+    def create_session(self, request_body: dict[str, Any]) -> dict[str, Any]:
+        return self._request("POST", self.resolve_base_url(), request_body)
+
+    def get_session(self, session_id: str) -> dict[str, Any]:
+        sid = self._clean_sid(session_id)
+        return self._request("GET", f"{self.resolve_base_url()}/{sid}", None)
+
+    def approve_plan(self, session_id: str) -> dict[str, Any]:
+        sid = self._clean_sid(session_id)
+        return self._request("POST", f"{self.resolve_base_url()}/{sid}:approvePlan", {})
+
+    def send_message(self, session_id: str, prompt: str) -> dict[str, Any]:
+        sid = self._clean_sid(session_id)
+        return self._request("POST", f"{self.resolve_base_url()}/{sid}:sendMessage", {"prompt": str(prompt)})
+
+    def list_activities(self, session_id: str, page_size: int = 50) -> dict[str, Any]:
+        sid = self._clean_sid(session_id)
+        return self._request("GET", f"{self.resolve_base_url()}/{sid}/activities?pageSize={int(page_size)}", None)
+
+
+def _count_peer_factory_sessions_24h(now_dt: datetime) -> dict[str, int]:
+    """Count live 24h dispatches and in-flight VMs across peer factories (`PF-07`, `PF-08`, `PA-14`)."""
+    state_home = _xdg_state_home()
+    peer_files = (
+        state_home / "lfs-tycoon-factory" / "state.json",
+        state_home / "lfs-trasharcade-factory" / "state.json",
+        state_home / "lfs-willow-guild-factory" / "state.json",
+    )
+    cutoff = now_dt - timedelta(hours=24)
+    dispatched_24h = 0
+    in_flight = 0
+    for sf in peer_files:
+        if not sf.is_file():
+            continue
+        try:
+            data = json.loads(sf.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        for rec in (data.get("sessions") or {}).values():
+            if not isinstance(rec, dict):
+                continue
+            if rec.get("outcome") is None:
+                in_flight += 1
+            created_str = str(rec.get("created_at") or rec.get("created") or rec.get("dispatched_at_iso") or "")
+            if created_str:
+                try:
+                    c_dt = _parse_iso(created_str)
+                    if c_dt >= cutoff:
+                        dispatched_24h += 1
+                except Exception:
+                    pass
+    return {"dispatched_24h": dispatched_24h, "in_flight": in_flight}
+
+
 class JulesEnclaveDispatcher:
     """Rolling 24h Token-Bucket Orchestrator, 36-Wave Scheduler & F-120 Stalled-Session Reaper."""
 
@@ -150,6 +334,7 @@ class JulesEnclaveDispatcher:
         repo_root: Path | str | None = None,
         budget_file: Path | str | None = None,
         dry_run: bool = True,
+        rest_client: JulesRestClient | None = None,
     ) -> None:
         self.repo_root = Path(repo_root).resolve() if repo_root else REPO_ROOT
         self.budget_file = (
@@ -160,6 +345,7 @@ class JulesEnclaveDispatcher:
         self.config_file = self.repo_root / "ops" / "config.json"
         self.schedule_file = self.repo_root / "ops" / "fleet_300_schedule.json"
         self.dry_run = bool(dry_run)
+        self.rest_client = rest_client or JulesRestClient()
 
     def load_config(self) -> dict[str, Any]:
         """Load ops/config.json (defaults to STANDBY with enabled=False)."""
@@ -172,7 +358,7 @@ class JulesEnclaveDispatcher:
             "enabled": False,
             "launch_state": "STANDBY",
             "fleet_mode": "UNIFIED_FLEET",
-            "shared_fleet_budget_path": "/home/joe/.local/state/lfs-jules-fleet/rolling_budget_300.json",
+            "shared_fleet_budget_path": str(_xdg_state_home() / "lfs-jules-fleet" / "rolling_budget_300.json"),
         }
 
     def check_standby_or_paused(self) -> dict[str, Any]:
@@ -186,7 +372,7 @@ class JulesEnclaveDispatcher:
                 reasons.append(f"repo_sentinel:{sentinel}")
             if (self.repo_root / "ops" / sentinel).exists():
                 reasons.append(f"ops_sentinel:{sentinel}")
-        conductor_pause = Path("/home/joe/.local/state/lfs-aegis-conductor/.factory-pause")
+        conductor_pause = _xdg_state_home() / "lfs-aegis-conductor" / ".factory-pause"
         if conductor_pause.exists():
             reasons.append("conductor:.factory-pause")
         return {
@@ -293,6 +479,29 @@ class JulesEnclaveDispatcher:
                 f"Law L14 hard ceiling reached: {dispatched} + {req} > {HARD_DISPATCH_CEILING_24H} (30-session buffer locked).",
             )
 
+        if not self.dry_run and str(self.load_config().get("fleet_mode", "UNIFIED_FLEET")).upper() == "UNIFIED_FLEET":
+            now_dt = _parse_iso(str(state.get("updated_at_iso") or _utc_now_iso()))
+            peer_stats = (
+                {
+                    "dispatched_24h": int(state["peer_live_dispatched_24h"]),
+                    "in_flight": int(state.get("peer_in_flight_vms", 0)),
+                }
+                if "peer_live_dispatched_24h" in state
+                else _count_peer_factory_sessions_24h(now_dt)
+            )
+            cross_fleet_total = dispatched + peer_stats["dispatched_24h"]
+            if cross_fleet_total + req > HARD_DISPATCH_CEILING_24H:
+                return (
+                    False,
+                    f"Law L14 unified 4-fleet hard ceiling reached: {cross_fleet_total} + {req} > {HARD_DISPATCH_CEILING_24H} (30-session buffer locked).",
+                )
+            in_flight_total = len(state.get("active_sessions") or []) + peer_stats["in_flight"]
+            if in_flight_total + req > UNIFIED_FLEET_CONCURRENT_VM_CAP:
+                return (
+                    False,
+                    f"Law L14 unified 4-fleet concurrent VM guard reached: {in_flight_total} + {req} > {UNIFIED_FLEET_CONCURRENT_VM_CAP}.",
+                )
+
         if is_retry:
             if retries + req > AUTO_RETRY_RESERVE_CAP:
                 return (
@@ -360,8 +569,19 @@ class JulesEnclaveDispatcher:
                 "rolling_24h_dispatched": state["rolling_24h_dispatched"],
             }
 
+        remote_session_id = str(payload["sessionId"])
+        live_api_request: dict[str, Any] | None = None
+        if not self.dry_run:
+            cfg = self.load_config()
+            repo_slug = str(cfg.get("repo_slug") or "SyrisBruhh42/enclave-digital-twin")
+            live_api_request = build_live_jules_api_request(payload, repo_slug=repo_slug)
+            api_resp = self.rest_client.create_session(live_api_request)
+            remote_name = str(api_resp.get("name") or api_resp.get("id") or payload["sessionId"]).strip()
+            remote_session_id = remote_name.split("/")[-1] if "/" in remote_name else remote_name
+
         ledger_entry = {
             "session_id": payload["sessionId"],
+            "remote_session_id": remote_session_id,
             "task_bucket": task_bucket,
             "tick_id": int(meta.get("tick_id", 1)),
             "colony_sol": int(meta.get("colony_sol", 1)),
@@ -373,21 +593,38 @@ class JulesEnclaveDispatcher:
             "autoCreatePr": False,
         }
         state["session_ledger_24h"].append(ledger_entry)
+        if not self.dry_run:
+            state.setdefault("active_sessions", []).append(
+                {
+                    "session_id": remote_session_id,
+                    "local_session_id": payload["sessionId"],
+                    "task_bucket": task_bucket,
+                    "tick_id": int(meta.get("tick_id", 1)),
+                    "colony_sol": int(meta.get("colony_sol", 1)),
+                    "target_path": meta.get("target_path"),
+                    "started_at_iso": ts,
+                    "state": "RUNNING",
+                }
+            )
         state = self._recompute_rolling_window(state, now_iso=ts)
 
         if persist:
             self.save_budget(state)
 
-        return {
+        res: dict[str, Any] = {
             "dispatched": True,
             "dry_run": self.dry_run,
             "session_id": payload["sessionId"],
+            "remote_session_id": remote_session_id,
             "task_bucket": task_bucket,
             "target_path": meta.get("target_path"),
             "rolling_24h_dispatched": state["rolling_24h_dispatched"],
             "remaining_hard_ceiling": state["remaining_hard_ceiling"],
             "payload": payload,
         }
+        if live_api_request is not None:
+            res["live_api_request"] = live_api_request
+        return res
 
     def dispatch_tick_sessions(
         self,
@@ -654,8 +891,10 @@ class JulesEnclaveDispatcher:
     ) -> dict[str, Any]:
         """F-120 Stalled-Session Supervisor: auto-resolve AWAITING_* or reap timed-out sessions."""
         from engine.local_ai_manager import LocalContextAwareManager, format_eav_lesson
+        from tools.integrator import SingleIntegrator
 
         local_mgr = LocalContextAwareManager(repo_root=self.repo_root)
+        integrator = SingleIntegrator(repo_root=self.repo_root, max_staleness_ticks=4)
         ts = now_iso or _utc_now_iso()
         now_dt = _parse_iso(ts)
         state = self.load_budget(now_iso=ts)
@@ -667,18 +906,121 @@ class JulesEnclaveDispatcher:
         reaped: list[dict[str, Any]] = []
         retried: list[dict[str, Any]] = []
         still_running: list[dict[str, Any]] = []
+        integrated: list[dict[str, Any]] = []
 
         for sess in candidate_sessions:
             if not isinstance(sess, dict):
                 continue
             sid = str(sess.get("session_id") or sess.get("sessionId") or "unknown_session")
-            s_state = str(sess.get("state") or sess.get("status") or "RUNNING").strip().upper()
-            started_str = str(sess.get("started_at_iso") or sess.get("dispatched_at_iso") or ts)
+            remote_info: dict[str, Any] = {}
+            if not self.dry_run:
+                try:
+                    remote_info = self.rest_client.get_session(sid) or {}
+                except Exception:
+                    remote_info = {}
+
+            s_state = str(
+                remote_info.get("state") or sess.get("state") or sess.get("status") or "RUNNING"
+            ).strip().upper()
+            started_str = str(
+                remote_info.get("createTime") or sess.get("started_at_iso") or sess.get("dispatched_at_iso") or ts
+            )
             try:
                 started_dt = _parse_iso(started_str)
             except Exception:
                 started_dt = now_dt
             elapsed_min = (now_dt - started_dt).total_seconds() / 60.0
+
+            # Extract PR URL if present in remote outputs or session metadata
+            pr_url = str(sess.get("pr_url") or sess.get("pr") or "").strip()
+            outputs_list = remote_info.get("outputs") if isinstance(remote_info.get("outputs"), list) else (
+                sess.get("outputs") if isinstance(sess.get("outputs"), list) else []
+            )
+            for out_item in outputs_list:
+                if isinstance(out_item, dict):
+                    pr_obj = out_item.get("pullRequest") or {}
+                    if isinstance(pr_obj, dict) and pr_obj.get("url"):
+                        pr_url = str(pr_obj["url"]).strip()
+                        break
+
+            # 1. PR-First Protection: Protect open green PRs from cut-loss even in AWAITING_USER_FEEDBACK
+            if not self.dry_run and pr_url and bool(sess.get("pr_checks_green", True)):
+                updated_sess = dict(sess)
+                updated_sess["pr_url"] = pr_url
+                updated_sess["state"] = s_state
+                updated_sess["protected_open_pr"] = True
+                still_running.append(updated_sess)
+                continue
+
+            # 2. COMPLETED session salvage / single-file proposal integration (`outputs: []` or `changeSet`)
+            if not self.dry_run and s_state == "COMPLETED":
+                unidiff = ""
+                for out_item in outputs_list:
+                    if isinstance(out_item, dict):
+                        cs = out_item.get("changeSet") or {}
+                        gp = cs.get("gitPatch") if isinstance(cs, dict) else {}
+                        if isinstance(gp, dict) and gp.get("unidiffPatch"):
+                            unidiff = str(gp["unidiffPatch"])
+                            break
+                if not unidiff:
+                    try:
+                        acts_resp = self.rest_client.list_activities(sid, page_size=50) or {}
+                        for act in (acts_resp.get("activities") or []):
+                            if not isinstance(act, dict):
+                                continue
+                            for art in (act.get("artifacts") or []):
+                                if isinstance(art, dict):
+                                    cs = art.get("changeSet") or {}
+                                    gp = cs.get("gitPatch") if isinstance(cs, dict) else {}
+                                    if isinstance(gp, dict) and gp.get("unidiffPatch"):
+                                        unidiff = str(gp["unidiffPatch"])
+                    except Exception:
+                        pass
+
+                default_target = str(sess.get("target_path") or "events/evt_salvaged.json")
+                extracted = _extract_proposal_from_unidiff(unidiff, default_target_path=default_target)
+                if extracted is None and isinstance(sess.get("candidate_proposal"), dict):
+                    extracted = (default_target, dict(sess["candidate_proposal"]))
+
+                if extracted is not None:
+                    target_rel, proposal_obj = extracted
+                    val_res = validate_proposal(proposal_obj, repo_root=self.repo_root)
+                    sr_res = validate_showrunner_storytelling_contract(proposal_obj)
+                    if val_res["valid"] and sr_res["valid"]:
+                        int_res = integrator.integrate_proposal(
+                            proposal_obj,
+                            target_rel_path=target_rel,
+                            rebuild_snapshots=target_rel.startswith("events/"),
+                            current_tick=int(proposal_obj.get("tick_id", sess.get("tick_id", 1)) or 1),
+                        )
+                        if int_res.get("integrated"):
+                            integrated.append(
+                                {
+                                    "session_id": sid,
+                                    "target_path": target_rel,
+                                    "integrated_at_iso": ts,
+                                }
+                            )
+                            continue
+                    diag_errors = list(val_res.get("errors") or []) + list(sr_res.get("errors") or [])
+                    eav_lesson = format_eav_lesson(
+                        entity=f"enclave:{sid}",
+                        attr="changeset_gate_rejection",
+                        value="; ".join(diag_errors)[:220] or "proposal_failed_constitutional_gate",
+                        confidence=1.0,
+                        prov_hash="f120_salvage_gate",
+                    )
+                    reap_rec = {
+                        "session_id": sid,
+                        "previous_state": s_state,
+                        "elapsed_minutes": round(elapsed_min, 2),
+                        "supervisor_action": "REJECTED_CHANGESET_REAP",
+                        "eav_lesson": eav_lesson,
+                        "reaped_at_iso": ts,
+                    }
+                    reaped.append(reap_rec)
+                    state.setdefault("reaped_sessions", []).append(reap_rec)
+                continue
 
             if s_state in ("AWAITING_PLAN_APPROVAL", "AWAITING_USER_FEEDBACK"):
                 fb_res = local_mgr.resolve_stalled_or_feedback_session(
@@ -688,14 +1030,23 @@ class JulesEnclaveDispatcher:
                     task_bucket=str(sess.get("task_bucket") or "POV_RASHOMON_RELAY_SCENES"),
                     use_local_ollama=False,
                 )
+                msg_text = (
+                    "F-120 Supervisor Auto-Reply: Proceed immediately without human plan approval. "
+                    f"Enforce append-only single-file output and Laws L01..L16. ({fb_res.get('reply', '')})"
+                )
+                if not self.dry_run:
+                    try:
+                        if s_state == "AWAITING_PLAN_APPROVAL":
+                            self.rest_client.approve_plan(sid)
+                        else:
+                            self.rest_client.send_message(sid, msg_text)
+                    except Exception:
+                        pass
                 action_rec = {
                     "session_id": sid,
                     "previous_state": s_state,
                     "supervisor_action": "AUTO_APPROVE_AND_CONTINUE",
-                    "message": (
-                        "F-120 Supervisor Auto-Reply: Proceed immediately without human plan approval. "
-                        f"Enforce append-only single-file output and Laws L01..L16. ({fb_res.get('reply', '')})"
-                    ),
+                    "message": msg_text,
                     "resolved_at_iso": ts,
                 }
                 auto_replied.append(action_rec)
@@ -703,7 +1054,7 @@ class JulesEnclaveDispatcher:
                 updated_sess["state"] = "RUNNING"
                 updated_sess["f120_auto_replied"] = True
                 still_running.append(updated_sess)
-            elif elapsed_min > float(timeout_minutes) or s_state in ("STALLED", "TIMED_OUT", "DEADLOCKED"):
+            elif elapsed_min > float(timeout_minutes) or s_state in ("STALLED", "TIMED_OUT", "DEADLOCKED", "FAILED"):
                 eav_lesson = format_eav_lesson(
                     entity=f"enclave:{sid}",
                     attr="f120_stall_timeout",
@@ -755,9 +1106,11 @@ class JulesEnclaveDispatcher:
             "auto_replied_count": len(auto_replied),
             "reaped_count": len(reaped),
             "retried_count": len(retried),
+            "integrated_count": len(integrated),
             "auto_replied": auto_replied,
             "reaped": reaped,
             "retried": retried,
+            "integrated": integrated,
             "still_running_count": len(still_running),
         }
 

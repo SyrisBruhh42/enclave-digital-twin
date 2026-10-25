@@ -1,43 +1,68 @@
 {
-  "schema_version": "1.0.0",
-  "capsule_id": "enclave-digital-twin",
-  "project_id": "PF-08",
-  "title": "The Enclave of the 16: Neuro-Symbolic Digital Twin & Showrunner DM Engine",
-  "target_umbrella": "3-lfs-aegis-linux",
-  "target_Relpath": "capsules/enclave-digital-twin",
-  "runtime": "python-3.12-deterministic-tick-plus-jules-300",
-  "ai_pipeline": {
-    "cloud_worker": "google_jules_v1alpha_sessions",
-    "local_context_managers": {
-      "ollama_endpoint": "http://127.0.0.1:11434",
-      "systemd_unit": "aegis-ollama.service",
-      "judge_tactician_model": "qwen3.5:4b-q4_K_M",
-      "showrunner_steward_model": "gemma4:e4b-it-q4_K_M",
-      "task_card_compiler_model": "qwen2.5-coder:3b-instruct-q4_K_M",
-      "hardware_sympathy_guard": true
-    }
-  },
-  "lds_theme_pack": "res://aegis_lds_theme.tres",
-  "lds_tokens_source": "../../governance/lds-tokens.w3c.json",
-  "entrypoints": {
-    "simulation": "tools/run_sol_simulation.py",
-    "constitutional_gate": "tools/check_enclave_constitutions.py",
-    "hostile_gate": "tools/check_hostile_proposals.py",
-    "fleet_controller": "tools/enclave_fleet_ctl.py",
-    "jules_dispatcher": "tools/jules_enclave_dispatcher.py",
-    "crucible_tests": "tests/test_enclave_crucible.py",
-    "dispatch_viewer": "ui/dispatch_viewer.html"
-  },
-  "capabilities": [
-    "FC04",
-    "FC18",
-    "FC21",
-    "FC27"
+  "abac_action_id": "desktop.capsule.launch",
+  "action_ids": [
+    "GAME-001",
+    "desktop.capsule.launch"
   ],
-  "zero_touch_contracts": {
-    "ZT-1_provenance": true,
-    "ZT-5_offline_resilience": true,
-    "ZT-9_comfort_accessibility": true,
-    "ZT-10_safe_mode_recovery": true
-  }
+  "aegis_lds_theme_sha256": "887f8df1a23fffd125c449d787dd9e9ac8d4ee01651869213288ed1cf0402940",
+  "alias_of": null,
+  "canonical_abac_action": "desktop.capsule.launch",
+  "capsule_id": "enclave-digital-twin",
+  "category": "simulation",
+  "comfort_overrides": {
+    "precedence_authority": "ZT-9",
+    "respects_audio_mute": true,
+    "respects_haptics_off": true,
+    "respects_reduced_motion": true
+  },
+  "default_theme_pack": "evergreen-dark",
+  "entrypoint": "tools/run_sol_simulation.py",
+  "godot_lds_theme_path": "aegis_lds_theme.tres",
+  "godot_lds_theme_sha256": "887f8df1a23fffd125c449d787dd9e9ac8d4ee01651869213288ed1cf0402940",
+  "help_id": "help-enclave-digital-twin",
+  "help_topic_id": "help-enclave-digital-twin",
+  "is_alias": false,
+  "lds_theme_pack_support": [
+    "evergreen-dark",
+    "evergreen-light",
+    "high-contrast",
+    "calm"
+  ],
+  "path": "capsules/enclave-digital-twin",
+  "project_id": "PA-15",
+  "quarantine_status": {
+    "authority_directive": "C-07",
+    "auto_execute_allowed": true,
+    "csd_vit_l_restricted_quarantine": true,
+    "model_id": null,
+    "quarantined_models": [
+      "CSD-ViT-L"
+    ],
+    "reason": "Standard desktop capsule sandbox boundary (ZT-10); CSD-ViT-L remains quarantined under C-07.",
+    "requires_step_up": false,
+    "restricted_quarantine": false
+  },
+  "safe_mode": {
+    "disables_shaders_and_particles": true,
+    "forces_reduced_motion": true,
+    "isolation_policy": "ZT-10",
+    "mutes_autoplay_audio": true,
+    "supported": true
+  },
+  "schema": "cp11-capsule-manifest-v1",
+  "settings_schema": {
+    "keys": [
+      "theme.pack",
+      "comfort.reduced_motion",
+      "comfort.haptics_enabled",
+      "comfort.audio_muted"
+    ],
+    "registry": "governance/settings-registry.json"
+  },
+  "stacks": [
+    "python",
+    "web"
+  ],
+  "target_project_id": null,
+  "title": "The Enclave of the 16 (Digital Twin)"
 }
