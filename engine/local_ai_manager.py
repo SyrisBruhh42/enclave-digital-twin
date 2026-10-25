@@ -51,7 +51,7 @@ _DEFAULT_U3_ROOT = Path(
     or (
         Path(os.environ["LFS_SUITE_ROOT"]) / "3-lfs-aegis-linux"
         if os.environ.get("LFS_SUITE_ROOT")
-        else Path(__file__).resolve().parents[3]
+        else (Path(__file__).resolve().parents[3] if len(Path(__file__).resolve().parents) > 3 else Path(__file__).resolve().parent.parent)
     )
 )
 AEGIS_LINUX_CLIENT_DIR = _DEFAULT_U3_ROOT / "core" / "companion" / "clients" / "linux"
@@ -86,7 +86,7 @@ def sanitize_untrusted_text(raw: str, source_hash: str = "") -> str:
         stage1,
     )
     stage3 = re.sub(r"[\uE000-\uF8FF]", "", stage2)
-    stage4 = re.sub(r"(?is)<(script|style)\b[^>]*>.*?</\1\s*>|(?s)<!--.*?-->", "", stage3)
+    stage4 = re.sub(r"(?is:<(script|style)\b[^>]*>.*?</\1\s*>)|(?s:<!--.*?-->)", "", stage3)
     stage5 = (
         stage4.replace("&", "&amp;")
         .replace("<", "&lt;")
