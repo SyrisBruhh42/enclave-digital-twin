@@ -28,6 +28,9 @@ from engine.magneto_weather import compute_exoplanet_weather
 from engine.state_ode import sample_character_state
 from tools.check_enclave_constitutions import (
     ALLOWED_WORKER_PREFIXES,
+    check_baton_handoff_continuity,
+    check_dispatch_claim_event_citations,
+    check_feast_daily_convergence,
     validate_proposal,
 )
 
@@ -452,6 +455,37 @@ class SingleIntegrator:
         record_to_write = copy.deepcopy(payload)
         record_to_write.pop("disallow_overwrite", None)
         _write_json(dest_path, record_to_write)
+
+        if resolved_rel.startswith("story/segments/"):
+            l10_ok, l10_errs = check_baton_handoff_continuity(proposal=None, repo_root=self.repo_root)
+            if not l10_ok:
+                dest_path.unlink(missing_ok=True)
+                return {
+                    "integrated": False,
+                    "stale": False,
+                    "violated_laws": ["L10"],
+                    "errors": l10_errs,
+                }
+        elif resolved_rel.startswith("events/"):
+            l13_ok, l13_errs = check_feast_daily_convergence(proposal=None, repo_root=self.repo_root)
+            if not l13_ok:
+                dest_path.unlink(missing_ok=True)
+                return {
+                    "integrated": False,
+                    "stale": False,
+                    "violated_laws": ["L13"],
+                    "errors": l13_errs,
+                }
+        elif resolved_rel.startswith("digests/"):
+            l15_ok, l15_errs = check_dispatch_claim_event_citations(proposal=None, repo_root=self.repo_root)
+            if not l15_ok:
+                dest_path.unlink(missing_ok=True)
+                return {
+                    "integrated": False,
+                    "stale": False,
+                    "violated_laws": ["L15"],
+                    "errors": l15_errs,
+                }
 
         rebuilt_summary: dict[str, Any] = {}
         if rebuild_snapshots:

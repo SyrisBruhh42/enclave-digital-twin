@@ -2,7 +2,12 @@
   "abac_action_id": "desktop.capsule.launch",
   "action_ids": [
     "GAME-001",
-    "desktop.capsule.launch"
+    "desktop.capsule.launch",
+    "enclave.twin.launch",
+    "enclave.twin.inject_directive",
+    "enclave.twin.override_locks",
+    "enclave.city.open",
+    "enclave.city.sync"
   ],
   "aegis_lds_theme_sha256": "887f8df1a23fffd125c449d787dd9e9ac8d4ee01651869213288ed1cf0402940",
   "alias_of": null,
