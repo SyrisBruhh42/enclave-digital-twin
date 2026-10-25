@@ -1,32 +1,74 @@
 {
   "event_id": "evt_s004_t0016_reflection",
   "memory_id": "evt_s004_t0016_reflection",
-  "character_id": "enclave_03_silas",
+  "character_id": "enclave_13_ryn",
   "tick_id": 16,
   "colony_sol": 4,
   "event_type": "NIGHTLY_REFLECTION",
   "memory_type": "reflection",
-  "active_pov_id": "enclave_03_silas",
-  "next_pov_target": "enclave_01_hector",
-  "location": "The_First_Forge",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "location": "The_Hearth",
   "actors": [
-    "enclave_03_silas",
-    "enclave_01_hector"
+    "enclave_13_ryn",
+    "enclave_03_silas"
   ],
   "lethality": 0,
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
-  "insight_text": "The First Forge hummed with a low-frequency drone that smelled sharply of ozone and roasting root vegetables, leaving a faint, metallic taste on the tongue. Silas visually traced the glowing blue plasma arcs and ran a calloused thumb over the oxidized copper busbar, feeling the sharp static bite of the containment field. He adjusted the primary induction coils to DEFEND against the micro-fractures caused by the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. Then, he angled the tertiary capacitors to ATTRACT stray geode lightning into a stabilized grid. Finally, he recalibrated the exhaust vents to CONSUME excess plasma buildup before it reached critical pressure. The immediate challenge was stabilizing the local power draw, but the broader necessity was ensuring the entire enclave had reliable shielding, ultimately pointing toward their long-term survival in this sanctuary. The stakes were high; a miscalculation would mean localized power grid disruptions and extra shifts, allowing the prodigies to learn from the fail-forward complications. Standing up with an affectionate grumble, Silas firmly pressed the warm brass calibration baton into Hector's waiting palm.",
-  "summary": "Silas adjusts The First Forge to manage the Magnetohydrodynamic Kelvin-Helmholtz shear, completing his task by handing the calibration baton to Hector.",
-  "text": "The First Forge hummed with a low-frequency drone that smelled sharply of ozone and roasting root vegetables, leaving a faint, metallic taste on the tongue. Silas visually traced the glowing blue plasma arcs and ran a calloused thumb over the oxidized copper busbar, feeling the sharp static bite of the containment field. He adjusted the primary induction coils to DEFEND against the micro-fractures caused by the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. Then, he angled the tertiary capacitors to ATTRACT stray geode lightning into a stabilized grid. Finally, he recalibrated the exhaust vents to CONSUME excess plasma buildup before it reached critical pressure. The immediate challenge was stabilizing the local power draw, but the broader necessity was ensuring the entire enclave had reliable shielding, ultimately pointing toward their long-term survival in this sanctuary. The stakes were high; a miscalculation would mean localized power grid disruptions and extra shifts, allowing the prodigies to learn from the fail-forward complications. Standing up with an affectionate grumble, Silas firmly pressed the warm brass calibration baton into Hector's waiting palm.",
+  "summary": "Ryn stabilizes the power draw at The Hearth using the induction coils, capacitors, and exhaust vents, overcoming stray geode lightning and handing the calibration baton to Silas.",
+  "text": "The Hearth hummed with a low-frequency drone that smelled sharply of ozone and roasting root vegetables, leaving a faint, metallic taste on the tongue. Ryn visually traced the glowing blue plasma arcs and ran a calloused thumb over the oxidized copper busbar, feeling the sharp static bite of the containment field. She adjusted the primary induction coils to DEFEND against the micro-fractures caused by the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. Then, she angled the tertiary capacitors to ATTRACT stray geode lightning into a stabilized grid. Finally, she recalibrated the exhaust vents to CONSUME excess plasma buildup before it reached critical pressure. The immediate challenge was stabilizing the local power draw, but the broader necessity was ensuring the entire enclave had reliable shielding, ultimately pointing toward their long-term survival in this sanctuary. The stakes were high; a miscalculation would mean localized power grid disruptions and extra shifts, allowing the prodigies to learn from the fail-forward complications. Standing up with an affectionate grumble, Ryn firmly pressed the warm brass calibration baton into Silas's waiting palm.",
   "importance": 8.0,
   "novelty_score": 0.8,
   "state_deltas": {
     "stress_delta": -0.05
   },
   "cited_event_ids": [
-    "evt_s001_t0001_dawn_shift"
+    "evt_s004_t0013_morning_intent"
   ],
   "evidence_refs": [
-    "evt_s001_t0001_dawn_shift"
-  ]
+    "evt_s004_t0013_morning_intent"
+  ],
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "explicit_pre_roll_check_dc": 14,
+      "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC"
+    },
+    "active_location": {
+      "interactive_features": [
+        {
+          "system_verb": "DEFEND"
+        },
+        {
+          "system_verb": "ATTRACT"
+        },
+        {
+          "system_verb": "CONSUME"
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "pressure_index": 5,
+        "motivation_goal": "stabilize local power draw",
+        "consistent_method": "recalibrate exhaust vents",
+        "immediate_complication": "stray geode lightning",
+        "uninterrupted_escalation": "power grid disruptions"
+      }
+    ],
+    "lpi_metrics": {
+      "composite_lpi": 0.8,
+      "classification": "Solid Draft"
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
+    "active_pov_id": "enclave_13_ryn"
+  },
+  "disallow_overwrite": false
 }
