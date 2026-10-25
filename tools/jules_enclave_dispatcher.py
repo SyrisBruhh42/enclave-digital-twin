@@ -682,7 +682,7 @@ class JulesEnclaveDispatcher:
             planned_specs.append(
                 (
                     "POV_RASHOMON_RELAY_SCENES",
-                    f"story/segments/seg_s{safe_sol:03d}_t{safe_tick:04d}_dawn.json",
+                    f"story/segments/seg_s{safe_sol:03d}_t{safe_tick:04d}_enclave_03_silas.json",
                     "Write Dawn Shift Rashomon Relay POV segment with physical baton handoff.",
                 )
             )
@@ -690,7 +690,7 @@ class JulesEnclaveDispatcher:
             planned_specs.append(
                 (
                     "POV_RASHOMON_RELAY_SCENES",
-                    f"story/segments/seg_s{safe_sol:03d}_t{safe_tick:04d}_midday.json",
+                    f"story/segments/seg_s{safe_sol:03d}_t{safe_tick:04d}_enclave_01_hector.json",
                     "Write Midday Expedition Rashomon Relay POV segment.",
                 )
             )
@@ -705,7 +705,7 @@ class JulesEnclaveDispatcher:
             planned_specs.append(
                 (
                     "POV_RASHOMON_RELAY_SCENES",
-                    f"story/segments/seg_s{safe_sol:03d}_t{safe_tick:04d}_dusk.json",
+                    f"story/segments/seg_s{safe_sol:03d}_t{safe_tick:04d}_enclave_05_kaio.json",
                     "Write Dusk Craft Rashomon Relay POV segment.",
                 )
             )
