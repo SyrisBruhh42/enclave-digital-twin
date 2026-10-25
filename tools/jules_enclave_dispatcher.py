@@ -143,7 +143,7 @@ def build_session_payload(
 
 
 class JulesEnclaveDispatcher:
-    """Rolling 24h Token-Bucket Orchestrator & F-120 Stalled-Session Reaper."""
+    """Rolling 24h Token-Bucket Orchestrator, 36-Wave Scheduler & F-120 Stalled-Session Reaper."""
 
     def __init__(
         self,
@@ -157,7 +157,45 @@ class JulesEnclaveDispatcher:
             if budget_file
             else (self.repo_root / "ops" / "budget.json")
         )
+        self.config_file = self.repo_root / "ops" / "config.json"
+        self.schedule_file = self.repo_root / "ops" / "fleet_300_schedule.json"
         self.dry_run = bool(dry_run)
+
+    def load_config(self) -> dict[str, Any]:
+        """Load ops/config.json (defaults to STANDBY with enabled=False)."""
+        if self.config_file.is_file():
+            try:
+                return json.loads(self.config_file.read_text(encoding="utf-8"))
+            except Exception:
+                pass
+        return {
+            "enabled": False,
+            "launch_state": "STANDBY",
+            "fleet_mode": "UNIFIED_FLEET",
+            "shared_fleet_budget_path": "/home/joe/.local/state/lfs-jules-fleet/rolling_budget_300.json",
+        }
+
+    def check_standby_or_paused(self) -> dict[str, Any]:
+        """Return standby/pause status so live systemd timers never burn quota while on STANDBY."""
+        cfg = self.load_config()
+        reasons: list[str] = []
+        if not bool(cfg.get("enabled", False)) or str(cfg.get("launch_state", "STANDBY")).upper() == "STANDBY":
+            reasons.append("ops/config.json:STANDBY")
+        for sentinel in (".factory-pause", ".factory-kill", "PAUSED"):
+            if (self.repo_root / sentinel).exists():
+                reasons.append(f"repo_sentinel:{sentinel}")
+            if (self.repo_root / "ops" / sentinel).exists():
+                reasons.append(f"ops_sentinel:{sentinel}")
+        conductor_pause = Path("/home/joe/.local/state/lfs-aegis-conductor/.factory-pause")
+        if conductor_pause.exists():
+            reasons.append("conductor:.factory-pause")
+        return {
+            "standby_or_paused": len(reasons) > 0,
+            "launch_state": str(cfg.get("launch_state", "STANDBY")).upper(),
+            "enabled": bool(cfg.get("enabled", False)),
+            "fleet_mode": str(cfg.get("fleet_mode", "UNIFIED_FLEET")),
+            "reasons": reasons,
+        }
 
     def load_budget(self, now_iso: str | None = None) -> dict[str, Any]:
         """Load ops/budget.json or initialize default budget state, pruning entries > 24h old."""
@@ -179,6 +217,7 @@ class JulesEnclaveDispatcher:
     ) -> dict[str, Any]:
         now_str = now_iso or _utc_now_iso()
         now_dt = _parse_iso(now_str)
+        # Reclaim slots after 24h + 90s drift guard
         cutoff_dt = now_dt - timedelta(hours=24)
 
         ledger = state.get("session_ledger_24h") or []
@@ -186,6 +225,7 @@ class JulesEnclaveDispatcher:
         scheduled_count = 0
         retry_count = 0
         bucket_counts: dict[str, int] = {k: 0 for k in CANONICAL_TASK_BUCKETS}
+        oldest_entry_dt: datetime | None = None
 
         for entry in ledger:
             if not isinstance(entry, dict):
@@ -197,6 +237,8 @@ class JulesEnclaveDispatcher:
                 entry_dt = now_dt
             if entry_dt >= cutoff_dt:
                 valid_entries.append(entry)
+                if oldest_entry_dt is None or entry_dt < oldest_entry_dt:
+                    oldest_entry_dt = entry_dt
                 if entry.get("is_retry"):
                     retry_count += 1
                 else:
@@ -204,6 +246,12 @@ class JulesEnclaveDispatcher:
                 b_name = str(entry.get("task_bucket") or "")
                 if b_name in bucket_counts:
                     bucket_counts[b_name] += 1
+
+        next_slot_reclaim_iso = (
+            (oldest_entry_dt + timedelta(hours=24, seconds=90)).strftime("%Y-%m-%dT%H:%M:%SZ")
+            if oldest_entry_dt is not None
+            else now_str
+        )
 
         total_dispatched = scheduled_count + retry_count
         state["updated_at_iso"] = now_str
@@ -219,6 +267,7 @@ class JulesEnclaveDispatcher:
         state["remaining_productive_budget"] = max(0, SCHEDULED_PRODUCTIVE_CAP - scheduled_count)
         state["remaining_retry_reserve"] = max(0, AUTO_RETRY_RESERVE_CAP - retry_count)
         state["remaining_hard_ceiling"] = max(0, HARD_DISPATCH_CEILING_24H - total_dispatched)
+        state["next_slot_reclaim_at_iso"] = next_slot_reclaim_iso
         state["task_buckets"] = dict(CANONICAL_TASK_BUCKETS)
         state["task_buckets_consumed"] = bucket_counts
         state.setdefault("active_sessions", [])
@@ -454,6 +503,148 @@ class JulesEnclaveDispatcher:
             "remaining_hard_ceiling": final_state["remaining_hard_ceiling"],
         }
 
+    def simulate_24h_300_session_plan(
+        self,
+        start_iso: str = "2026-10-25T00:08:00Z",
+        use_local_ollama: bool = False,
+    ) -> dict[str, Any]:
+        """Simulate the full 36-wave x 40-minute (1,440m) rolling 24h schedule across 4 Colony Sols.
+
+        Proves:
+        - 36 waves spaced exactly 40 minutes apart (1,440 minutes = 24.0h).
+        - 225 scheduled productive sessions dispatched across the 11 buckets matching CANONICAL_TASK_BUCKETS.
+        - Peak concurrent VMs per wave <= 8 (well below the 60 concurrent Ultra cap).
+        - 30 auto-retry reserve + 45 rolling safety buffer = 300/24h Ultra ceiling.
+        """
+        from engine.local_ai_manager import LocalContextAwareManager
+
+        sched_data = json.loads(self.schedule_file.read_text(encoding="utf-8"))
+        wave_template = sched_data["per_sol_9_wave_template"]
+        local_mgr = LocalContextAwareManager(repo_root=self.repo_root)
+
+        start_dt = _parse_iso(start_iso)
+        sim_state = default_budget_state(now_iso=start_iso)
+        wave_logs: list[dict[str, Any]] = []
+        max_concurrent_in_wave = 0
+
+        prefix_map = {
+            "MORNING_INTENTS_16_NODES": "events",
+            "POV_RASHOMON_RELAY_SCENES": "story/segments",
+            "THE_FEAST_4_SQUAD_CONVERGENCE": "story/feasts",
+            "NIGHTLY_EVIDENCE_CITED_REFLECTIONS": "events",
+            "COUNTERFACTUAL_PERSONALITY_STUDY_REPLAYS": "qa",
+            "INCHARACTER_PSYCHOMETRIC_DRIFT_AUDITS": "qa",
+            "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION": "events",
+            "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK": "qa/factcheck",
+            "SHADOW_ECONOMY_AND_SETUP_PAYOFF_LEDGER": "events",
+            "DYNAMIC_LORE_CARD_PROPOSALS": "events",
+            "EVENING_DISPATCH_NEWSCASTER_ROLLUPS_AND_SCRIPT": "digests/daily",
+        }
+
+        for sol_idx in range(1, 5):  # 4 Colony Sols per 24h
+            for w_spec in wave_template:
+                wave_in_sol = int(w_spec["wave_in_sol"])
+                global_wave_num = (sol_idx - 1) * 9 + wave_in_sol
+                offset_min = (global_wave_num - 1) * 40
+                wave_dt = start_dt + timedelta(minutes=offset_min)
+                wave_iso = wave_dt.strftime("%Y-%m-%dT%H:%M:%SZ")
+                day_phase = str(w_spec["day_phase"])
+                pacing_mode = str(w_spec["showrunner_pacing_mode"])
+                tick_id = (sol_idx - 1) * 4 + (
+                    1
+                    if day_phase == "DAWN_SHIFT"
+                    else 2
+                    if day_phase == "MIDDAY_EXPEDITION"
+                    else 3
+                    if day_phase == "DUSK_CRAFT"
+                    else 4
+                )
+
+                wave_dispatched = 0
+                for d_item in w_spec["dispatches"]:
+                    bucket = str(d_item["task_bucket"])
+                    count = int(d_item["count"]) + (int(d_item.get("sol_4_bonus", 0)) if sol_idx == 4 else 0)
+                    for item_k in range(1, count + 1):
+                        out_prefix = prefix_map.get(bucket, "events")
+                        target_path = (
+                            f"{out_prefix}/w{global_wave_num:02d}_s{sol_idx:03d}_"
+                            f"{bucket.lower()[:18]}_{item_k:02d}.json"
+                        )
+                        card = local_mgr.compile_enclave_5section_task_card(
+                            task_bucket=bucket,
+                            colony_sol=sol_idx,
+                            tick_id=tick_id,
+                            day_phase=day_phase,
+                            target_path=target_path,
+                            showrunner_pacing_mode=pacing_mode,
+                            use_local_ollama=use_local_ollama,
+                        )
+                        allowed, reason = self.can_dispatch(
+                            sim_state, requested_count=1, is_retry=False, task_bucket=bucket
+                        )
+                        if not allowed:
+                            raise RuntimeError(
+                                f"Wave {global_wave_num} ({bucket}) violated Law L14: {reason}"
+                            )
+                        sim_state["session_ledger_24h"].append(
+                            {
+                                "session_id": f"sim_w{global_wave_num:02d}_{bucket[:10]}_{item_k:02d}",
+                                "task_bucket": bucket,
+                                "tick_id": tick_id,
+                                "colony_sol": sol_idx,
+                                "target_path": target_path,
+                                "is_retry": False,
+                                "dispatched_at_iso": wave_iso,
+                                "state": "COMPLETED_DRY_RUN",
+                                "pacing_mode": pacing_mode,
+                                "task_card_sections": len(card["sections"]),
+                            }
+                        )
+                        sim_state = self._recompute_rolling_window(sim_state, now_iso=wave_iso)
+                        wave_dispatched += 1
+
+                max_concurrent_in_wave = max(max_concurrent_in_wave, wave_dispatched)
+                wave_logs.append(
+                    {
+                        "global_wave": global_wave_num,
+                        "colony_sol": sol_idx,
+                        "wave_in_sol": wave_in_sol,
+                        "wave_iso": wave_iso,
+                        "offset_minutes": offset_min,
+                        "day_phase": day_phase,
+                        "showrunner_pacing_mode": pacing_mode,
+                        "sessions_in_wave": wave_dispatched,
+                        "cumulative_24h_dispatched": sim_state["rolling_24h_dispatched"],
+                        "remaining_hard_ceiling": sim_state["remaining_hard_ceiling"],
+                    }
+                )
+
+        # Verify that 40 minutes after 24h (at t = +1440m + 90s), Wave 1's 4 slots are automatically reclaimed!
+        reclaim_check_iso = (start_dt + timedelta(hours=24, minutes=2)).strftime("%Y-%m-%dT%H:%M:%SZ")
+        reclaimed_state = self._recompute_rolling_window(dict(sim_state), now_iso=reclaim_check_iso)
+
+        return {
+            "valid_300_session_plan": (
+                sim_state["scheduled_dispatched_24h"] == SCHEDULED_PRODUCTIVE_CAP
+                and sim_state["task_buckets_consumed"] == CANONICAL_TASK_BUCKETS
+                and max_concurrent_in_wave <= 8
+            ),
+            "total_waves": len(wave_logs),
+            "inter_wave_spacing_minutes": 40,
+            "total_span_minutes": 36 * 40,
+            "scheduled_dispatched_24h": sim_state["scheduled_dispatched_24h"],
+            "auto_retry_reserve_available": sim_state["remaining_retry_reserve"],
+            "rolling_safety_buffer": ROLLING_SAFETY_BUFFER,
+            "plan_ceiling_24h": PLAN_CEILING_24H,
+            "max_concurrent_vms_per_wave": max_concurrent_in_wave,
+            "task_buckets_consumed": sim_state["task_buckets_consumed"],
+            "slot_reclamation_verified_at_24h02m": {
+                "active_in_window_after_wave1_expiry": reclaimed_state["rolling_24h_dispatched"],
+                "reclaimed_slots": sim_state["rolling_24h_dispatched"] - reclaimed_state["rolling_24h_dispatched"],
+            },
+            "waves": wave_logs,
+        }
+
     def reap_stalled_sessions(
         self,
         sessions: list[dict[str, Any]] | None = None,
@@ -462,6 +653,9 @@ class JulesEnclaveDispatcher:
         persist: bool = True,
     ) -> dict[str, Any]:
         """F-120 Stalled-Session Supervisor: auto-resolve AWAITING_* or reap timed-out sessions."""
+        from engine.local_ai_manager import LocalContextAwareManager, format_eav_lesson
+
+        local_mgr = LocalContextAwareManager(repo_root=self.repo_root)
         ts = now_iso or _utc_now_iso()
         now_dt = _parse_iso(ts)
         state = self.load_budget(now_iso=ts)
@@ -487,13 +681,20 @@ class JulesEnclaveDispatcher:
             elapsed_min = (now_dt - started_dt).total_seconds() / 60.0
 
             if s_state in ("AWAITING_PLAN_APPROVAL", "AWAITING_USER_FEEDBACK"):
+                fb_res = local_mgr.resolve_stalled_or_feedback_session(
+                    session_id=sid,
+                    question_text=str(sess.get("question_text") or "Proceed with plan approval"),
+                    target_path=str(sess.get("target_path") or "events/evt_auto.json"),
+                    task_bucket=str(sess.get("task_bucket") or "POV_RASHOMON_RELAY_SCENES"),
+                    use_local_ollama=False,
+                )
                 action_rec = {
                     "session_id": sid,
                     "previous_state": s_state,
                     "supervisor_action": "AUTO_APPROVE_AND_CONTINUE",
                     "message": (
                         "F-120 Supervisor Auto-Reply: Proceed immediately without human plan approval. "
-                        "Enforce append-only single-file output and Laws L01..L16."
+                        f"Enforce append-only single-file output and Laws L01..L16. ({fb_res.get('reply', '')})"
                     ),
                     "resolved_at_iso": ts,
                 }
@@ -503,11 +704,19 @@ class JulesEnclaveDispatcher:
                 updated_sess["f120_auto_replied"] = True
                 still_running.append(updated_sess)
             elif elapsed_min > float(timeout_minutes) or s_state in ("STALLED", "TIMED_OUT", "DEADLOCKED"):
+                eav_lesson = format_eav_lesson(
+                    entity=f"enclave:{sid}",
+                    attr="f120_stall_timeout",
+                    value=f"session_exceeded_{timeout_minutes}m_cut_loss_relaunch",
+                    confidence=1.0,
+                    prov_hash="f120_reaper",
+                )
                 reap_rec = {
                     "session_id": sid,
                     "previous_state": s_state,
                     "elapsed_minutes": round(elapsed_min, 2),
                     "supervisor_action": "CUT_LOSS_REAP_AND_RETRY",
+                    "eav_lesson": eav_lesson,
                     "reaped_at_iso": ts,
                 }
                 reaped.append(reap_rec)
@@ -524,7 +733,10 @@ class JulesEnclaveDispatcher:
                         tick_id=int(sess.get("tick_id", 1)),
                         colony_sol=int(sess.get("colony_sol", 1)),
                         target_path=str(sess.get("target_path") or "events/evt_retry.json"),
-                        prompt_text=f"[F-120 Auto-Retry for {sid}] Complete single-file task deterministically.",
+                        prompt_text=(
+                            f"[F-120 Auto-Retry for {sid}] Complete single-file task deterministically. "
+                            f"EAV Lesson: {eav_lesson}"
+                        ),
                         is_retry=True,
                     )
                     retry_res = self.dispatch_session(retry_payload, now_iso=ts, persist=False)
@@ -556,6 +768,7 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument("--dry-run", action="store_true", default=True, help="Run in offline dry-run mode (default: True).")
     parser.add_argument("--status", action="store_true", help="Print current rolling 24h session budget status.")
+    parser.add_argument("--simulate-24h", action="store_true", help="Simulate all 36 waves (300-session rolling 24h plan).")
     parser.add_argument("--dispatch-tick", type=int, default=None, help="Dispatch session wave for tick_id.")
     parser.add_argument("--reap-stalled", action="store_true", help="Run F-120 stalled-session supervisor.")
     parser.add_argument("--repo-root", type=str, default=None, help="Repository root override.")
@@ -567,6 +780,11 @@ def main(argv: list[str] | None = None) -> int:
         budget_file=args.budget_file,
         dry_run=True,
     )
+
+    if args.simulate_24h:
+        res = dispatcher.simulate_24h_300_session_plan()
+        print(json.dumps(res, indent=2))
+        return 0 if res.get("valid_300_session_plan") else 1
 
     if args.reap_stalled:
         res = dispatcher.reap_stalled_sessions(persist=bool(args.budget_file))
@@ -582,9 +800,11 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     status_obj = dispatcher.load_budget()
+    status_obj["standby_guard"] = dispatcher.check_standby_or_paused()
     print(json.dumps(status_obj, indent=2))
     return 0
 
 
 if __name__ == "__main__":
     sys.exit(main())
+

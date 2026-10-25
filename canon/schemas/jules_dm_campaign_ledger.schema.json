@@ -1,0 +1,289 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aegis.lfs.local/schemas/jules_dm_campaign_ledger.schema.json",
+  "title": "JulesDM_CampaignStateLedger",
+  "description": "Neuro-Symbolic AI Dungeon Master & Showrunner Pacing State Ledger (Brennan Lee Mulligan, Matthew Mercer, Brian Murphy, Aabria Iyengar, Griffin McElroy) integrated with The Enclave of the 16.",
+  "type": "object",
+  "required": [
+    "campaign_metadata",
+    "active_location",
+    "reactive_toys",
+    "encounter_matrix",
+    "lpi_metrics",
+    "dual_agent_contract"
+  ],
+  "properties": {
+    "campaign_metadata": {
+      "type": "object",
+      "required": [
+        "session_number",
+        "colony_sol",
+        "tick_id",
+        "pacing_mode",
+        "consequential_fights_since_short_rest",
+        "horizon_goals"
+      ],
+      "properties": {
+        "session_number": { "type": "integer", "minimum": 1 },
+        "colony_sol": { "type": "integer", "minimum": 1 },
+        "tick_id": { "type": "integer", "minimum": 1 },
+        "pacing_mode": {
+          "type": "string",
+          "enum": [
+            "MERCER_EXPLORATION",
+            "MULLIGAN_CRISIS",
+            "MURPHY_TACTICAL",
+            "MA_NEGATIVE_SPACE"
+          ],
+          "description": "Controls narrative sentence length, sensory density, temporal dilation, and mechanical intervention."
+        },
+        "consequential_fights_since_short_rest": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2,
+          "description": "Enforces Brian Murphy's Two-Fight Short-Rest Cadence (0..2 before mandatory decompression)."
+        },
+        "horizon_goals": {
+          "type": "object",
+          "required": [
+            "immediate_session_goal",
+            "mid_term_milestone",
+            "campaign_arc_climax"
+          ],
+          "properties": {
+            "immediate_session_goal": { "type": "string" },
+            "mid_term_milestone": { "type": "string" },
+            "campaign_arc_climax": { "type": "string" }
+          }
+        }
+      }
+    },
+    "active_location": {
+      "type": "object",
+      "required": [
+        "location_id",
+        "macro_silhouette",
+        "sensory_palette",
+        "interactive_features"
+      ],
+      "properties": {
+        "location_id": { "type": "string" },
+        "macro_silhouette": {
+          "type": "string",
+          "description": "Max 3-5 sentences for exterior vistas; 2-3 sentences for standard interior rooms."
+        },
+        "sensory_palette": {
+          "type": "object",
+          "required": [
+            "sight_and_color",
+            "sound",
+            "smell",
+            "tactile_temperature"
+          ],
+          "properties": {
+            "sight_and_color": { "type": "string" },
+            "sound": { "type": "string" },
+            "smell": { "type": "string" },
+            "tactile_temperature": { "type": "string" },
+            "taste_optional": { "type": "string" }
+          }
+        },
+        "interactive_features": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": [
+              "feature_name",
+              "affordance_description",
+              "system_verb",
+              "associated_check_dc"
+            ],
+            "properties": {
+              "feature_name": { "type": "string" },
+              "affordance_description": { "type": "string" },
+              "system_verb": {
+                "type": "string",
+                "enum": ["DEFEND", "ATTRACT", "CONSUME", "CONCEAL"]
+              },
+              "associated_check_dc": {
+                "type": "integer",
+                "minimum": 5,
+                "maximum": 30
+              }
+            }
+          }
+        }
+      }
+    },
+    "reactive_toys": {
+      "type": "array",
+      "description": "Brennan Lee Mulligan's 'Toys, Not Plots' — Autonomous reactive entities and environmental forces.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "entity_id",
+          "name_and_role",
+          "motivation_goal",
+          "consistent_method",
+          "immediate_complication",
+          "pressure_index",
+          "uninterrupted_escalation"
+        ],
+        "properties": {
+          "entity_id": { "type": "string" },
+          "name_and_role": { "type": "string" },
+          "motivation_goal": { "type": "string" },
+          "consistent_method": { "type": "string" },
+          "immediate_complication": { "type": "string" },
+          "pressure_index": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10
+          },
+          "uninterrupted_escalation": { "type": "string" }
+        }
+      }
+    },
+    "encounter_matrix": {
+      "type": "object",
+      "required": [
+        "three_levels_of_why",
+        "active_specialist_roles",
+        "strain_accumulated_upward",
+        "prerolled_hazard_queue"
+      ],
+      "properties": {
+        "three_levels_of_why": {
+          "type": "object",
+          "required": [
+            "level_1_immediate",
+            "level_2_local",
+            "level_3_campaign_arc"
+          ],
+          "properties": {
+            "level_1_immediate": { "type": "string" },
+            "level_2_local": { "type": "string" },
+            "level_3_campaign_arc": { "type": "string" }
+          }
+        },
+        "active_specialist_roles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["actor_id", "tactical_role"],
+            "properties": {
+              "actor_id": { "type": "string" },
+              "tactical_role": {
+                "type": "string",
+                "enum": [
+                  "STRIKER",
+                  "DEFENDER",
+                  "LEADER",
+                  "SQUISHY_DEBUFFER",
+                  "CLEAVE_MOOK",
+                  "PHASE_BOSS"
+                ]
+              }
+            }
+          }
+        },
+        "strain_accumulated_upward": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "prerolled_hazard_queue": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": { "type": "integer" }
+        }
+      }
+    },
+    "lpi_metrics": {
+      "type": "object",
+      "required": [
+        "relational_tension_density",
+        "motivational_vector_saturation",
+        "unresolved_conflict_ratio",
+        "temporal_horizon_immediacy",
+        "composite_lpi",
+        "classification"
+      ],
+      "properties": {
+        "relational_tension_density": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+        "motivational_vector_saturation": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+        "unresolved_conflict_ratio": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+        "temporal_horizon_immediacy": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+        "composite_lpi": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+        "classification": {
+          "type": "string",
+          "enum": [
+            "Campaign-Ready",
+            "Explosive but Shallow",
+            "Rich Lore, Flat Play",
+            "Unplayable Draft"
+          ]
+        }
+      }
+    },
+    "dual_agent_contract": {
+      "type": "object",
+      "required": ["judge_tactician", "master_narrator"],
+      "properties": {
+        "judge_tactician": {
+          "type": "object",
+          "required": [
+            "provider",
+            "model",
+            "temperature",
+            "explicit_pre_roll_dc",
+            "failure_stakes_declared",
+            "graduated_outcomes"
+          ],
+          "properties": {
+            "provider": { "type": "string" },
+            "model": { "type": "string" },
+            "temperature": { "type": "number" },
+            "explicit_pre_roll_dc": { "type": "integer", "minimum": 5, "maximum": 30 },
+            "failure_stakes_declared": { "type": "string" },
+            "graduated_outcomes": {
+              "type": "object",
+              "required": [
+                "nat_1_false_intuition",
+                "below_dc_complicated_fail_forward",
+                "meets_dc_clean_success",
+                "dc_plus_5_or_20_extended_lore"
+              ],
+              "properties": {
+                "nat_1_false_intuition": { "type": "string" },
+                "below_dc_complicated_fail_forward": { "type": "string" },
+                "meets_dc_clean_success": { "type": "string" },
+                "dc_plus_5_or_20_extended_lore": { "type": "string" }
+              }
+            }
+          }
+        },
+        "master_narrator": {
+          "type": "object",
+          "required": [
+            "executor",
+            "temperature",
+            "calypso_zero_raw_stats",
+            "prosodic_micro_pauses_enabled",
+            "agency_handoff_prompt"
+          ],
+          "properties": {
+            "executor": { "type": "string" },
+            "temperature": { "type": "number" },
+            "calypso_zero_raw_stats": { "type": "boolean", "const": true },
+            "prosodic_micro_pauses_enabled": { "type": "boolean" },
+            "agency_handoff_prompt": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

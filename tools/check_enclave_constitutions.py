@@ -1361,6 +1361,91 @@ def check_drift_zscore_circuit_breaker(
 
 
 # ============================================================================
+# SHOWRUNNER DM STORYTELLING & LPI CONTRACT VERIFIER (Mulligan / Mercer / Murphy)
+# ============================================================================
+def validate_showrunner_storytelling_contract(
+    proposal: dict[str, Any],
+) -> dict[str, Any]:
+    """Validate a scene or campaign ledger against the AI Dungeon Master Storytelling Guide:
+    - Living Playability Index (LPI >= 0.45, never 'Unplayable Draft')
+    - Showrunner pacing_mode in {MERCER_EXPLORATION, MULLIGAN_CRISIS, MURPHY_TACTICAL, MA_NEGATIVE_SPACE}
+    - Murph's Two-Fight Short-Rest Cadence (0 <= consequential_fights_since_short_rest <= 2)
+    - Mercer's 3 Interactive Features with system_verb in {DEFEND, ATTRACT, CONSUME, CONCEAL}
+    - Mulligan's 'Toys, Not Plots' reactive entities (pressure_index in 1..10)
+    - CALYPSO Zero-Raw-Stat-Numbers rule in narrative prose.
+    """
+    from engine.local_ai_manager import verify_calypso_narrative_purity
+
+    errors: list[str] = []
+    ledger = proposal.get("showrunner_ledger") if isinstance(proposal.get("showrunner_ledger"), dict) else proposal
+
+    meta = ledger.get("campaign_metadata")
+    if isinstance(meta, dict):
+        pmode = str(meta.get("pacing_mode") or "")
+        if pmode not in ("MERCER_EXPLORATION", "MULLIGAN_CRISIS", "MURPHY_TACTICAL", "MA_NEGATIVE_SPACE"):
+            errors.append(f"Showrunner contract violation: invalid pacing_mode '{pmode}'.")
+        fights = int(meta.get("consequential_fights_since_short_rest", 0) or 0)
+        if fights < 0 or fights > 2:
+            errors.append(
+                f"Showrunner contract violation (Murph Two-Fight Cadence): "
+                f"consequential_fights_since_short_rest={fights} outside [0, 2]."
+            )
+
+    loc = ledger.get("active_location")
+    if isinstance(loc, dict):
+        features = loc.get("interactive_features")
+        if not isinstance(features, list) or len(features) != 3:
+            errors.append("Showrunner contract violation (Mercer 3-Feature Rule): active_location requires exactly 3 interactive_features.")
+        else:
+            for idx, feat in enumerate(features):
+                verb = str((feat or {}).get("system_verb") or "")
+                if verb not in ("DEFEND", "ATTRACT", "CONSUME", "CONCEAL"):
+                    errors.append(
+                        f"Showrunner contract violation: feature[{idx}] has invalid system_verb '{verb}'."
+                    )
+
+    toys = ledger.get("reactive_toys")
+    if isinstance(toys, list):
+        if len(toys) == 0:
+            errors.append("Showrunner contract violation (Mulligan Toys-Not-Plots): reactive_toys cannot be empty.")
+        for idx, toy in enumerate(toys):
+            if not isinstance(toy, dict):
+                continue
+            p_idx = int(toy.get("pressure_index", 0) or 0)
+            if p_idx < 1 or p_idx > 10:
+                errors.append(
+                    f"Showrunner contract violation: reactive_toys[{idx}] pressure_index={p_idx} outside [1, 10]."
+                )
+            for req_key in ("motivation_goal", "consistent_method", "immediate_complication", "uninterrupted_escalation"):
+                if not str(toy.get(req_key) or "").strip():
+                    errors.append(f"Showrunner contract violation: reactive_toys[{idx}] missing '{req_key}'.")
+
+    lpi = ledger.get("lpi_metrics") or proposal.get("lpi_metrics")
+    if isinstance(lpi, dict):
+        comp = float(lpi.get("composite_lpi", 0.0) or 0.0)
+        cls_name = str(lpi.get("classification") or "")
+        if comp < 0.45 or cls_name == "Unplayable Draft":
+            errors.append(
+                f"Showrunner LPI Gate violation: composite_lpi={comp:.2f} ({cls_name}) rejected as Unplayable Draft (< 0.45)."
+            )
+
+    prose_candidates = [
+        str(proposal.get(k) or "")
+        for k in ("prose", "narrative_prose", "segment_text", "text", "body")
+        if proposal.get(k)
+    ]
+    for ptext in prose_candidates:
+        cal_ok, cal_errs = verify_calypso_narrative_purity(ptext)
+        if not cal_ok:
+            errors.extend(cal_errs)
+
+    return {
+        "valid": len(errors) == 0,
+        "errors": errors,
+    }
+
+
+# ============================================================================
 # MASTER REGISTRY & VALIDATION ENTRYPOINTS
 # ============================================================================
 LAWS_REGISTRY: tuple[tuple[str, str, Any], ...] = (

@@ -1,0 +1,20 @@
+[Unit]
+Description=Enclave of the 16 F-120 Stalled-Session Reaper & Local Ollama Feedback Resolver
+After=network-online.target aegis-ollama.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/joe/.gemini/antigravity/scratch/enclave-digital-twin
+Environment=PATH=/home/joe/.local/bin:/usr/local/bin:/usr/bin:/bin
+Environment=JULES_API_KEY_FILE=%h/.secrets/jules_api_key
+ExecStart=/usr/bin/python3 /home/joe/.gemini/antigravity/scratch/enclave-digital-twin/tools/enclave_fleet_ctl.py --reap
+TimeoutStartSec=300
+Slice=background.slice
+Nice=15
+CPUWeight=20
+IOWeight=20
+IOSchedulingClass=idle
+MemoryHigh=512M
+MemoryMax=1G
+OOMScoreAdjust=300

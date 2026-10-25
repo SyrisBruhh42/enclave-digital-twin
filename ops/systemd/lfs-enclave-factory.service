@@ -1,0 +1,20 @@
+[Unit]
+Description=Enclave of the 16 Jules Factory Wave Tick (36 Waves / 24h, Standby-Gated)
+After=network-online.target aegis-ollama.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/joe/.gemini/antigravity/scratch/enclave-digital-twin
+Environment=PATH=/home/joe/.local/bin:/usr/local/bin:/usr/bin:/bin
+Environment=JULES_API_KEY_FILE=%h/.secrets/jules_api_key
+ExecStart=/usr/bin/python3 /home/joe/.gemini/antigravity/scratch/enclave-digital-twin/tools/enclave_fleet_ctl.py --tick
+TimeoutStartSec=600
+Slice=background.slice
+Nice=15
+CPUWeight=20
+IOWeight=20
+IOSchedulingClass=idle
+MemoryHigh=1G
+MemoryMax=2G
+OOMScoreAdjust=300

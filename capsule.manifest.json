@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "capsule_id": "enclave-digital-twin",
+  "project_id": "PF-08",
+  "title": "The Enclave of the 16: Neuro-Symbolic Digital Twin & Showrunner DM Engine",
+  "target_umbrella": "3-lfs-aegis-linux",
+  "target_Relpath": "capsules/enclave-digital-twin",
+  "runtime": "python-3.12-deterministic-tick-plus-jules-300",
+  "ai_pipeline": {
+    "cloud_worker": "google_jules_v1alpha_sessions",
+    "local_context_managers": {
+      "ollama_endpoint": "http://127.0.0.1:11434",
+      "systemd_unit": "aegis-ollama.service",
+      "judge_tactician_model": "qwen3.5:4b-q4_K_M",
+      "showrunner_steward_model": "gemma4:e4b-it-q4_K_M",
+      "task_card_compiler_model": "qwen2.5-coder:3b-instruct-q4_K_M",
+      "hardware_sympathy_guard": true
+    }
+  },
+  "lds_theme_pack": "res://aegis_lds_theme.tres",
+  "lds_tokens_source": "../../governance/lds-tokens.w3c.json",
+  "entrypoints": {
+    "simulation": "tools/run_sol_simulation.py",
+    "constitutional_gate": "tools/check_enclave_constitutions.py",
+    "hostile_gate": "tools/check_hostile_proposals.py",
+    "fleet_controller": "tools/enclave_fleet_ctl.py",
+    "jules_dispatcher": "tools/jules_enclave_dispatcher.py",
+    "crucible_tests": "tests/test_enclave_crucible.py",
+    "dispatch_viewer": "ui/dispatch_viewer.html"
+  },
+  "capabilities": [
+    "FC04",
+    "FC18",
+    "FC21",
+    "FC27"
+  ],
+  "zero_touch_contracts": {
+    "ZT-1_provenance": true,
+    "ZT-5_offline_resilience": true,
+    "ZT-9_comfort_accessibility": true,
+    "ZT-10_safe_mode_recovery": true
+  }
+}

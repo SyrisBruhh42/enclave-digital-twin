@@ -1,0 +1,12 @@
+[Unit]
+Description=Enclave of the 16 Rolling-Window 40-Minute Wave Timer (Phase-Shifted +08m)
+
+[Timer]
+OnCalendar=*-*-* 00,02,04,06,08,10,12,14,16,18,20,22:08,48:00
+OnCalendar=*-*-* 01,03,05,07,09,11,13,15,17,19,21,23:28:00
+AccuracySec=1s
+Persistent=false
+Unit=lfs-enclave-factory.service
+
+[Install]
+WantedBy=timers.target

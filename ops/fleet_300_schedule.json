@@ -1,0 +1,169 @@
+{
+  "schema_version": "enclave_fleet_300_schedule_v2.0.0",
+  "title": "Exact 300-Session Rolling-24h Master Schedule & Spacing Matrix (36 Waves x 40m = 1,440m)",
+  "rolling_window_math": {
+    "plan_ceiling_24h": 300,
+    "hard_dispatch_ceiling_24h": 270,
+    "scheduled_productive_24h": 225,
+    "auto_retry_self_repair_reserve_24h": 30,
+    "rolling_safety_and_cross_fleet_buffer_24h": 45,
+    "slot_reclamation_formula": "t_reclaim(i) = t_created(i) + 86400s + 90s_drift_guard",
+    "inter_wave_spacing_minutes": 40,
+    "waves_per_colony_sol": 9,
+    "colony_sols_per_24h": 4,
+    "total_waves_per_24h": 36,
+    "minutes_per_24h": 1440,
+    "max_concurrent_vms_per_wave": 8,
+    "ultra_concurrent_vm_cap": 60,
+    "phase_shift_offset_minutes": 8,
+    "phase_shift_rationale": "Fires at minute +08/+48/+28 of the hour cycle, avoiding lfs-tycoon-factory (:00,:15,:30,:45), aegis-excel-sync-refresh (:04,:19,:34,:49), and aegis-offsite-checkpoint (:12,:42)."
+  },
+  "fleet_operating_modes": {
+    "ENCLAVE_DEDICATED_300": {
+      "description": "Full 300-session leverage dedicated to The Enclave of the 16 (4 Colony Sols/day).",
+      "enclave_scheduled_productive": 225,
+      "enclave_auto_retry_reserve": 30,
+      "lfs_tycoon_maintenance_cap": 15,
+      "lfs_trasharcade_maintenance_cap": 0,
+      "rolling_drift_safety_buffer": 30,
+      "total_allocated": 300
+    },
+    "UNIFIED_FLEET": {
+      "description": "Shared 300-session rolling window across Enclave, LFS-Tycoon (StrataPaper), and LFS_TrashArcade with automatic token-bucket borrowing.",
+      "enclave_scheduled_productive": 180,
+      "lfs_tycoon_productive": 48,
+      "lfs_trasharcade_productive": 18,
+      "shared_auto_retry_reserve": 24,
+      "rolling_drift_safety_buffer": 30,
+      "total_allocated": 300
+    }
+  },
+  "per_sol_9_wave_template": [
+    {
+      "wave_in_sol": 1,
+      "offset_minutes_in_sol": 0,
+      "day_phase": "DAWN_SHIFT",
+      "showrunner_pacing_mode": "MERCER_EXPLORATION",
+      "wave_label": "Dawn Shift A — 4-Squad Morning Intents & Horizon Alignment",
+      "dispatches": [
+        { "task_bucket": "MORNING_INTENTS_16_NODES", "count": 4 }
+      ],
+      "total_sessions": 4
+    },
+    {
+      "wave_in_sol": 2,
+      "offset_minutes_in_sol": 40,
+      "day_phase": "DAWN_SHIFT",
+      "showrunner_pacing_mode": "MERCER_EXPLORATION",
+      "wave_label": "Dawn Shift B — Rashomon Relay & Exoplanet Consequence",
+      "dispatches": [
+        { "task_bucket": "POV_RASHOMON_RELAY_SCENES", "count": 3 },
+        { "task_bucket": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION", "count": 3 }
+      ],
+      "total_sessions": 6
+    },
+    {
+      "wave_in_sol": 3,
+      "offset_minutes_in_sol": 80,
+      "day_phase": "DAWN_SHIFT",
+      "showrunner_pacing_mode": "MERCER_EXPLORATION",
+      "wave_label": "Dawn Shift C — Counterfactual Lab, Factcheck & Dynamic Lore",
+      "dispatches": [
+        { "task_bucket": "COUNTERFACTUAL_PERSONALITY_STUDY_REPLAYS", "count": 4 },
+        { "task_bucket": "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK", "count": 2 },
+        { "task_bucket": "DYNAMIC_LORE_CARD_PROPOSALS", "count": 1 }
+      ],
+      "total_sessions": 7
+    },
+    {
+      "wave_in_sol": 4,
+      "offset_minutes_in_sol": 120,
+      "day_phase": "MIDDAY_EXPEDITION",
+      "showrunner_pacing_mode": "MULLIGAN_CRISIS",
+      "wave_label": "Midday Expedition A — High-Concept Toys-Not-Plots & Shadow Setup",
+      "dispatches": [
+        { "task_bucket": "POV_RASHOMON_RELAY_SCENES", "count": 3 },
+        { "task_bucket": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION", "count": 3 },
+        { "task_bucket": "SHADOW_ECONOMY_AND_SETUP_PAYOFF_LEDGER", "count": 1 }
+      ],
+      "total_sessions": 7
+    },
+    {
+      "wave_in_sol": 5,
+      "offset_minutes_in_sol": 160,
+      "day_phase": "MIDDAY_EXPEDITION",
+      "showrunner_pacing_mode": "MURPHY_TACTICAL",
+      "wave_label": "Midday Expedition B — Asymmetric Specialist Roles & Counterfactuals",
+      "dispatches": [
+        { "task_bucket": "COUNTERFACTUAL_PERSONALITY_STUDY_REPLAYS", "count": 3 },
+        { "task_bucket": "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK", "count": 2 },
+        { "task_bucket": "DYNAMIC_LORE_CARD_PROPOSALS", "count": 1 }
+      ],
+      "total_sessions": 6
+    },
+    {
+      "wave_in_sol": 6,
+      "offset_minutes_in_sol": 200,
+      "day_phase": "DUSK_CRAFT",
+      "showrunner_pacing_mode": "MULLIGAN_CRISIS",
+      "wave_label": "Dusk Craft A — Schrodinger Harvest Debate & 3-Sol Shadow Ledger",
+      "dispatches": [
+        { "task_bucket": "POV_RASHOMON_RELAY_SCENES", "count": 3 },
+        { "task_bucket": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION", "count": 3 },
+        { "task_bucket": "SHADOW_ECONOMY_AND_SETUP_PAYOFF_LEDGER", "count": 1 }
+      ],
+      "total_sessions": 7
+    },
+    {
+      "wave_in_sol": 7,
+      "offset_minutes_in_sol": 240,
+      "day_phase": "DUSK_CRAFT",
+      "showrunner_pacing_mode": "MURPHY_TACTICAL",
+      "wave_label": "Dusk Craft B — Grand Project Synthesis & Continuity Gate",
+      "dispatches": [
+        { "task_bucket": "POV_RASHOMON_RELAY_SCENES", "count": 3 },
+        { "task_bucket": "COUNTERFACTUAL_PERSONALITY_STUDY_REPLAYS", "count": 3 },
+        { "task_bucket": "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK", "count": 2 }
+      ],
+      "total_sessions": 8
+    },
+    {
+      "wave_in_sol": 8,
+      "offset_minutes_in_sol": 280,
+      "day_phase": "THE_FEAST",
+      "showrunner_pacing_mode": "MA_NEGATIVE_SPACE",
+      "wave_label": "The Feast A — 16-Cast Hearth Convergence & Evidence-Cited Reflections",
+      "dispatches": [
+        { "task_bucket": "THE_FEAST_4_SQUAD_CONVERGENCE", "count": 1 },
+        { "task_bucket": "NIGHTLY_EVIDENCE_CITED_REFLECTIONS", "count": 4 }
+      ],
+      "total_sessions": 5
+    },
+    {
+      "wave_in_sol": 9,
+      "offset_minutes_in_sol": 320,
+      "day_phase": "THE_FEAST",
+      "showrunner_pacing_mode": "MA_NEGATIVE_SPACE",
+      "wave_label": "The Feast B — Psychometric Drift Z-Score Audits & Evening Dispatch",
+      "dispatches": [
+        { "task_bucket": "INCHARACTER_PSYCHOMETRIC_DRIFT_AUDITS", "count": 4 },
+        { "task_bucket": "EVENING_DISPATCH_NEWSCASTER_ROLLUPS_AND_SCRIPT", "count": 2, "sol_4_bonus": 1 }
+      ],
+      "total_sessions": 6,
+      "sol_4_total_sessions": 7
+    }
+  ],
+  "daily_bucket_totals_verification": {
+    "MORNING_INTENTS_16_NODES": 16,
+    "POV_RASHOMON_RELAY_SCENES": 48,
+    "THE_FEAST_4_SQUAD_CONVERGENCE": 4,
+    "NIGHTLY_EVIDENCE_CITED_REFLECTIONS": 16,
+    "COUNTERFACTUAL_PERSONALITY_STUDY_REPLAYS": 40,
+    "INCHARACTER_PSYCHOMETRIC_DRIFT_AUDITS": 16,
+    "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION": 36,
+    "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK": 24,
+    "SHADOW_ECONOMY_AND_SETUP_PAYOFF_LEDGER": 8,
+    "DYNAMIC_LORE_CARD_PROPOSALS": 8,
+    "EVENING_DISPATCH_NEWSCASTER_ROLLUPS_AND_SCRIPT": 9
+  }
+}
