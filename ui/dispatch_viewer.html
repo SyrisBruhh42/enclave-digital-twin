@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Enclave Evening Dispatch &amp; Digital Twin Command Slate</title>
+  <style>
+    :root {
+      --bg-obsidian: #080d14;
+      --bg-slate: #0e1724;
+      --bg-panel: #131f30;
+      --bg-panel-alt: #18273c;
+      --brass-bright: #e6ac55;
+      --brass-warm: #c88732;
+      --copper-deep: #8c5220;
+      --copper-border: rgba(200, 135, 50, 0.42);
+      --cyan-bio: #32f5c8;
+      --cyan-glow: #00d4ff;
+      --cyan-dim: rgba(50, 245, 200, 0.14);
+      --amber-warn: #ffb347;
+      --crimson-alert: #ff5c6c;
+      --emerald-ok: #38e595;
+      --text-ivory: #f4ead5;
+      --text-muted: #a9b8c9;
+      --text-dim: #73869c;
+      --font-serif: "Georgia", "Palatino Linotype", "Book Antiqua", serif;
+      --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --font-mono: "JetBrains Mono", "Fira Code", "Courier New", monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 15% 10%, rgba(50, 245, 200, 0.08), transparent 35%),
+        radial-gradient(circle at 85% 15%, rgba(230, 172, 85, 0.12), transparent 40%),
+        linear-gradient(180deg, var(--bg-obsidian) 0%, #0a121c 100%);
+      color: var(--text-ivory);
+      font-family: var(--font-sans);
+      line-height: 1.55;
+      min-height: 100vh;
+      padding-bottom: 4rem;
+    }
+
+    /* Top Brass & Bioluminescent Header */
+    .command-header {
+      background: linear-gradient(180deg, rgba(24, 39, 60, 0.96) 0%, rgba(14, 23, 36, 0.96) 100%);
+      border-bottom: 2px solid var(--brass-warm);
+      box-shadow: 0 6px 28px rgba(0, 0, 0, 0.65), 0 1px 0 rgba(50, 245, 200, 0.25);
+      padding: 1.25rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+
+    .header-inner {
+      max-width: 1480px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand-block {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .brand-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--cyan-bio);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--cyan-bio);
+      box-shadow: 0 0 10px var(--cyan-bio);
+      display: inline-block;
+    }
+
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--brass-bright);
+      text-shadow: 0 2px 10px rgba(230, 172, 85, 0.25);
+      letter-spacing: 0.02em;
+    }
+
+    .brand-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .header-controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .status-pill {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 229, 149, 0.45);
+      background: rgba(56, 229, 149, 0.1);
+      color: var(--emerald-ok);
+      letter-spacing: 0.04em;
+    }
+
+    .status-pill.brass {
+      border-color: var(--copper-border);
+      background: rgba(230, 172, 85, 0.12);
+      color: var(--brass-bright);
+    }
+
+    .btn-brass,
+    .file-label {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      padding: 0.48rem 0.9rem;
+      border-radius: 6px;
+      border: 1px solid var(--brass-warm);
+      background: linear-gradient(180deg, rgba(200, 135, 50, 0.24) 0%, rgba(140, 82, 32, 0.32) 100%);
+      color: var(--text-ivory);
+      cursor: pointer;
+      transition: all 0.18s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      text-decoration: none;
+    }
+
+    .btn-brass:hover,
+    .file-label:hover {
+      border-color: var(--cyan-bio);
+      box-shadow: 0 0 12px rgba(50, 245, 200, 0.25);
+      color: var(--cyan-bio);
+    }
+
+    #json-file-input {
+      display: none;
+    }
+
+    /* Drag and drop banner */
+    .dropzone-bar {
+      max-width: 1480px;
+      margin: 1rem auto 0;
+      padding: 0.65rem 1.25rem;
+      border: 1px dashed var(--copper-border);
+      border-radius: 8px;
+      background: rgba(19, 31, 48, 0.65);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      transition: all 0.2s ease;
+    }
+
+    .dropzone-bar.drag-active {
+      border-color: var(--cyan-bio);
+      background: rgba(50, 245, 200, 0.12);
+      color: var(--cyan-bio);
+      box-shadow: 0 0 20px rgba(50, 245, 200, 0.2);
+    }
+
+    /* Main Grid Container */
+    .slate-container {
+      max-width: 1480px;
+      margin: 1.25rem auto;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .panel {
+      background: linear-gradient(165deg, var(--bg-panel) 0%, var(--bg-slate) 100%);
+      border: 1px solid var(--copper-border);
+      border-radius: 10px;
+      padding: 1.35rem 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      position: relative;
+    }
+
+    .panel::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 16px;
+      right: 16px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--brass-warm), var(--cyan-bio), var(--brass-warm), transparent);
+      opacity: 0.55;
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.1rem;
+      padding-bottom: 0.65rem;
+      border-bottom: 1px solid rgba(200, 135, 50, 0.25);
+    }
+
+    .panel-title {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      color: var(--brass-bright);
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
+    .panel-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--cyan-bio);
+      background: var(--cyan-dim);
+      border: 1px solid rgba(50, 245, 200, 0.35);
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+    }
+
+    /* Newscaster Hero Banner */
+    .newscaster-hero {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 980px) {
+      .newscaster-hero {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .headline-banner {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--text-ivory);
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .anchor-script-box {
+      background: rgba(8, 13, 20, 0.65);
+      border-left: 3px solid var(--cyan-bio);
+      padding: 0.9rem 1.1rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.93rem;
+      color: var(--text-ivory);
+    }
+
+    .quote-box {
+      background: linear-gradient(145deg, rgba(200, 135, 50, 0.14), rgba(14, 23, 36, 0.85));
+      border: 1px solid var(--copper-border);
+      border-radius: 8px;
+      padding: 1rem 1.15rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.65rem;
+    }
+
+    .quote-text {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 0.96rem;
+      color: var(--brass-bright);
+    }
+
+    .quote-speaker {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--cyan-bio);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Lead Stories 3-Column Grid */
+    .lead-stories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.15rem;
+    }
+
+    @media (max-width: 1100px) {
+      .lead-stories-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .story-card {
+      background: var(--bg-panel-alt);
+      border: 1px solid rgba(200, 135, 50, 0.35);
+      border-radius: 8px;
+      padding: 1.1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.8rem;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .story-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--cyan-bio);
+    }
+
+    .story-meta-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+    }
+
+    .pattern-badge {
+      background: rgba(230, 172, 85, 0.16);
+      color: var(--brass-bright);
+      border: 1px solid var(--copper-border);
+      padding: 0.18rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .salience-badge {
+      color: var(--cyan-bio);
+      font-weight: 600;
+    }
+
+    .story-title {
+      font-family: var(--font-serif);
+      font-size: 1.08rem;
+      color: var(--text-ivory);
+    }
+
+    .story-summary {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .science-veg-box {
+      font-size: 0.78rem;
+      background: rgba(50, 245, 200, 0.07);
+      border-left: 2px solid var(--cyan-bio);
+      padding: 0.4rem 0.6rem;
+      color: #bfece0;
+      font-family: var(--font-mono);
+    }
+
+    .story-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      padding-top: 0.55rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .event-badge {
+      font-family: var(--font-mono);
+      font-size: 0.71rem;
+      background: rgba(0, 212, 255, 0.14);
+      color: var(--cyan-glow);
+      border: 1px solid rgba(0, 212, 255, 0.4);
+      padding: 0.18rem 0.48rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: inline-block;
+      margin-right: 0.3rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .event-badge:hover {
+      background: var(--cyan-bio);
+      color: var(--bg-obsidian);
+      font-weight: 600;
+    }
+
+    .rashomon-link {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--brass-bright);
+      text-decoration: underline;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    .rashomon-link:hover {
+      color: var(--cyan-bio);
+    }
+
+    /* 4-Phase Equal Coverage Timeline */
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    @media (max-width: 1024px) {
+      .timeline-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .phase-card {
+      background: var(--bg-panel-alt);
+      border: 1px solid rgba(50, 245, 200, 0.25);
+      border-radius: 8px;
+      padding: 0.95rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .phase-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+    }
+
+    .phase-name {
+      color: var(--cyan-bio);
+      font-weight: 700;
+    }
+
+    .phase-share {
+      color: var(--brass-bright);
+    }
+
+    .share-bar-track {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .share-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--brass-warm), var(--cyan-bio));
+    }
+
+    /* Two-column middle row: Weather & Sibling Grid */
+    .mid-split-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 1024px) {
+      .mid-split-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .weather-gauges {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    .gauge-box {
+      background: rgba(8, 13, 20, 0.65);
+      border: 1px solid var(--copper-border);
+      border-radius: 8px;
+      padding: 0.8rem;
+      text-align: center;
+    }
+
+    .gauge-label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .gauge-value {
+      font-family: var(--font-mono);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--cyan-bio);
+      margin: 0.25rem 0;
+    }
+
+    .gauge-value.brass {
+      color: var(--brass-bright);
+    }
+
+    .gauge-sub {
+      font-size: 0.73rem;
+      color: var(--text-dim);
+    }
+
+    .moons-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      background: rgba(24, 39, 60, 0.65);
+      border: 1px solid rgba(50, 245, 200, 0.2);
+      border-radius: 8px;
+      padding: 0.7rem 1rem;
+      margin-bottom: 0.9rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+    }
+
+    /* 16-Node Cast Matrix */
+    .squad-filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .filter-btn {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 0.35rem 0.8rem;
+      border-radius: 6px;
+      border: 1px solid var(--copper-border);
+      background: rgba(14, 23, 36, 0.8);
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .filter-btn.active {
+      background: rgba(50, 245, 200, 0.16);
+      border-color: var(--cyan-bio);
+      color: var(--cyan-bio);
+      font-weight: 600;
+    }
+
+    .cast-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.95rem;
+    }
+
+    @media (max-width: 1200px) {
+      .cast-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 680px) {
+      .cast-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .node-card {
+      background: var(--bg-panel-alt);
+      border: 1px solid rgba(200, 135, 50, 0.32);
+      border-radius: 8px;
+      padding: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      font-size: 0.82rem;
+    }
+
+    .node-card.drift-alert {
+      border-color: var(--crimson-alert);
+      box-shadow: 0 0 15px rgba(255, 92, 108, 0.25);
+    }
+
+    .node-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .node-name {
+      font-family: var(--font-serif);
+      font-size: 1.02rem;
+      color: var(--brass-bright);
+      font-weight: 700;
+    }
+
+    .node-epithet {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .mbti-pill {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      padding: 0.15rem 0.45rem;
+      border-radius: 4px;
+      background: rgba(50, 245, 200, 0.12);
+      color: var(--cyan-bio);
+      border: 1px solid rgba(50, 245, 200, 0.3);
+    }
+
+    .trait-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 0.26rem;
+      margin-top: 0.25rem;
+    }
+
+    .trait-row {
+      display: grid;
+      grid-template-columns: 22px 1fr 36px;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+    }
+
+    .trait-track {
+      height: 5px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .trait-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--brass-warm), var(--cyan-bio));
+    }
+
+    .trait-fill.stress {
+      background: linear-gradient(90deg, var(--amber-warn), var(--crimson-alert));
+    }
+
+    .drift-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 0.69rem;
+      padding-top: 0.4rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .drift-ok {
+      color: var(--emerald-ok);
+    }
+
+    .drift-warn {
+      color: var(--crimson-alert);
+      font-weight: 700;
+    }
+
+    /* NovelAI Context Manifest Table */
+    .manifest-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+    }
+
+    .manifest-table th,
+    .manifest-table td {
+      padding: 0.55rem 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(200, 135, 50, 0.18);
+    }
+
+    .manifest-table th {
+      color: var(--brass-bright);
+      background: rgba(8, 13, 20, 0.55);
+      text-transform: uppercase;
+      font-size: 0.7rem;
+    }
+
+    /* Modal for Rashomon Scene & Event Inspection */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 8, 14, 0.82);
+      backdrop-filter: blur(6px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      padding: 1.5rem;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-card {
+      background: var(--bg-panel);
+      border: 2px solid var(--brass-warm);
+      border-radius: 10px;
+      max-width: 780px;
+      width: 100%;
+      padding: 1.5rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85);
+      max-height: 85vh;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Command Header -->
+  <header class="command-header">
+    <div class="header-inner">
+      <div class="brand-block">
+        <div class="brand-eyebrow">
+          <span class="pulse-dot"></span>
+          <span>ENCLAVE OF THE 16 // CRYSTAL-SLATE BROADCAST TRANSCEIVER</span>
+        </div>
+        <h1 class="brand-title">The Enclave Evening Dispatch &amp; Digital Twin Command Slate</h1>
+        <div class="brand-subtitle">
+          Nightly Wu-Style Equal-Coverage Newscaster Digest &bull; Hosted by Vex (The Astronomer) &amp; Dorian (The Living Chronicler)
+        </div>
+      </div>
+      <div class="header-controls">
+        <span class="status-pill" id="law-l15-pill">LAW L15: 100% CITATION FAITHFUL</span>
+        <span class="status-pill brass" id="law-l01-pill">LAW L01: ZERO PII VERIFIED</span>
+        <label class="file-label" for="json-file-input">
+          <span>Load Dispatch / Snapshot JSON</span>
+        </label>
+        <input type="file" id="json-file-input" accept=".json" />
+        <button class="btn-brass" id="btn-toggle-drift" type="button">Test Law L16 Drift Alert</button>
+        <button class="btn-brass" id="btn-reset-sol1" type="button">Reset Sol 1 Sample</button>
+      </div>
+    </div>
+    <div class="dropzone-bar" id="dropzone-bar">
+      <span id="loaded-source-label">Active Payload: Embedded Canonical Sol 1 Evening Dispatch &amp; 16-Node Snapshot (`dispatch_sol_001`)</span>
+      <span>Drag &amp; drop any <code>digests/daily/*.json</code> or <code>snapshots/*.json</code> anywhere on this slate</span>
+    </div>
+  </header>
+
+  <main class="slate-container">
+
+    <!-- Section 1: Evening Dispatch Newscaster Hero -->
+    <section class="panel">
+      <div class="panel-header">
+        <h2 class="panel-title">I. Evening Dispatch Broadcast Header &amp; Quote of the Sol</h2>
+        <span class="panel-tag" id="sol-badge">COLONY SOL 1 // CLOSE OF THE FEAST</span>
+      </div>
+      <div class="newscaster-hero">
+        <div>
+          <h3 class="headline-banner" id="dispatch-headline"></h3>
+          <div class="anchor-script-box" id="dispatch-anchor-intro"></div>
+        </div>
+        <div class="quote-box">
+          <div class="quote-text" id="quote-text"></div>
+          <div class="quote-speaker">
+            <span id="quote-speaker"></span>
+            <span id="quote-citation"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Top 3 Salience-Ranked Lead Stories -->
+    <section class="panel">
+      <div class="panel-header">
+        <h2 class="panel-title">II. Top 3 Lead Stories (Winnow Story Sifter &amp; Salience Ranker)</h2>
+        <span class="panel-tag">CLICK [EVENT ID] OR [READ FULL RASHOMON SCENE] TO INSPECT SOURCE TRACE</span>
+      </div>
+      <div class="lead-stories-grid" id="lead-stories-container"></div>
+    </section>
+
+    <!-- Section 3: 4-Phase Equal Coverage Timeline -->
+    <section class="panel">
+      <div class="panel-header">
+        <h2 class="panel-title">III. 4-Phase Equal-Coverage Timeline (Wu et al. Anti-Recency Roll-Up)</h2>
+        <span class="panel-tag">25% DAWN_SHIFT &bull; 25% MIDDAY_EXPEDITION &bull; 25% DUSK_CRAFT &bull; 25% THE_FEAST</span>
+      </div>
+      <div class="timeline-grid" id="phase-timeline-container"></div>
+    </section>
+
+    <!-- Section 4: Twin-Sun Magnetosphere & Weather + Sibling Grid Gossip Column -->
+    <div class="mid-split-grid">
+      <!-- Weather & Magnetosphere -->
+      <section class="panel">
+        <div class="panel-header">
+          <h2 class="panel-title">IV. Twin-Sun Magnetosphere &amp; Exoplanet Weather Gauge</h2>
+          <span class="panel-tag" id="weather-regime-tag">BIFURCATED_THERMAL_SHEAR</span>
+        </div>
+        <div class="weather-gauges" id="weather-gauges-container"></div>
+        <div class="moons-row" id="triple-moons-bar"></div>
+        <div class="anchor-script-box" id="vex-weather-commentary"></div>
+      </section>
+
+      <!-- Sibling Grid Gossip Column & Developing Stories -->
+      <section class="panel">
+        <div class="panel-header">
+          <h2 class="panel-title">V. The Sibling Grid (Main Character Blind Spot) &amp; Developing Arcs</h2>
+          <span class="panel-tag">LAW L12: 3-FEAST DELAY &amp; ASYMMETRIC ATTRIBUTION</span>
+        </div>
+        <div id="sibling-grid-container" style="display:flex; flex-direction:column; gap:0.85rem;"></div>
+      </section>
+    </div>
+
+    <!-- Section 5: 16-Node Cast Matrix -->
+    <section class="panel">
+      <div class="panel-header">
+        <h2 class="panel-title">VI. 16-Node Bijection Cast Matrix (Whole-Trait OCEAN States &amp; Law L16 InCharacter Drift Auditor)</h2>
+        <div class="squad-filter-bar" id="squad-filter-bar">
+          <button class="filter-btn active" data-squad="ALL">All Squads (16)</button>
+          <button class="filter-btn" data-squad="The_Forge">The Forge (4)</button>
+          <button class="filter-btn" data-squad="The_Wilds">The Wilds (4)</button>
+          <button class="filter-btn" data-squad="The_Mind">The Mind (4)</button>
+          <button class="filter-btn" data-squad="The_Hub">The Hub (4)</button>
+        </div>
+      </div>
+      <div id="drift-reanchor-banner" style="display:none; margin-bottom:1rem; padding:0.85rem 1.1rem; border:1px solid var(--crimson-alert); background:rgba(255,92,108,0.12); border-radius:8px; font-family:var(--font-mono); font-size:0.8rem; color:#ffd4d8;"></div>
+      <div class="cast-grid" id="cast-matrix-container"></div>
+    </section>
+
+    <!-- Section 6: NovelAI-Style 10-Block Context Manifest Inspector -->
+    <section class="panel">
+      <div class="panel-header">
+        <h2 class="panel-title">VII. NovelAI-Style 10-Block Context Manifest Inspector (Law L06 / L07 / L10)</h2>
+        <span class="panel-tag" id="context-budget-tag">2,940 / 3,500 TOKENS COMPILED (SWAP-MODE SINGLE POV CARD)</span>
+      </div>
+      <div style="overflow-x:auto;">
+        <table class="manifest-table">
+          <thead>
+            <tr>
+              <th>Block #</th>
+              <th>Block ID</th>
+              <th>Policy</th>
+              <th>Used / Cap Tokens</th>
+              <th>Trimmed?</th>
+              <th>Included / Excluded Artifacts &amp; Preview</th>
+            </tr>
+          </thead>
+          <tbody id="context-manifest-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal for Inspecting Events & Full Rashomon Scenes -->
+  <div class="modal-backdrop" id="scene-modal">
+    <div class="modal-card">
+      <div class="panel-header">
+        <h3 class="panel-title" id="modal-title">Rashomon Scene &amp; Event Evidence Inspector</h3>
+        <button class="btn-brass" id="modal-close-btn" type="button">Close [ESC]</button>
+      </div>
+      <div id="modal-body" style="display:flex; flex-direction:column; gap:0.85rem; font-size:0.9rem;"></div>
+    </div>
+  </div>
+
+  <script>
+    // Embedded Canonical Sol 1 Dataset
+    const DEFAULT_SOL1_PAYLOAD = {
+      dispatch_id: "dispatch_sol_001",
+      colony_sol: 1,
+      headline: "SOL 1 EVENING DISPATCH: The Schrodinger Harvest Accord & Sympathetic Forge Breakthrough (Kp_exo 5.4)",
+      anchor_intro: "[VEX]: Good evening, Enclave! Live from the crystal-slate transmitter above Ryn's hearth at the close of Sol 1's Feast—the binary suns have dipped, Kp_exo is humming at 5.4, and nobody vaporized their eyebrows today! [DORIAN]: And a warm hearthside greeting from your Living Chronicler. Tonight's scroll gives equal 25% measure to Dawn's first hammer-strike, Midday's ridge expedition, Dusk's fine craft, and our communal Feast.",
+      quote_of_the_sol: {
+        speaker: "Silas (The Engineer)",
+        speaker_id: "enclave_03_silas",
+        cited_event_id: "evt_s001_t0003_craft",
+        cited_event_ids: ["evt_s001_t0003_craft"],
+        quote: "\"Inefficient. You're routing forty megajoules of raw geode lightning through a hand-soldered copper busbar because Kaio thought the blue sparks looked 'festive.' Give me the spanner—and save me a crust of Ryn's iron-wheat loaf.\""
+      },
+      events_by_id: {
+        "evt_s001_t0001_dawn": {
+          event_id: "evt_s001_t0001_dawn",
+          colony_sol: 1,
+          day_phase: "DAWN_SHIFT",
+          event_type: "MUNDANE_FRUSTRATION",
+          location: "The_First_Forge",
+          actors: ["enclave_03_silas", "enclave_01_hector"],
+          science_vegetable: "Relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron",
+          summary: "Silas calculated relativistic bcc-to-hcp lattice shear in his head while chiseling crystallized spore-fungus out of the primary phosphor-bronze bellows hinge alongside Hector.",
+          rashomon_scene_text: "POV: Silas (enclave_03_silas, ISTJ). The pocket watch on the anvil ticked 06:00. Silas could model the relativistic lattice shear of core-iron to four decimal places, yet here he crouched with a brass cold-chisel, flaking bioluminescent shelf-fungus off the bellows intake. He tossed the torque spanner to Hector—physical baton handoff complete."
+        },
+        "evt_s001_t0002_midday": {
+          event_id: "evt_s001_t0002_midday",
+          colony_sol: 1,
+          day_phase: "MIDDAY_EXPEDITION",
+          event_type: "EXPEDITION_DISCOVERY",
+          location: "Basalt_Spire_Ridge",
+          actors: ["enclave_01_hector", "enclave_02_jane", "enclave_05_kaio"],
+          science_vegetable: "Capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers",
+          summary: "Hector, Jane, and Kaio anchored a braided copper lightning tether across Basalt Spire Ridge during a Kp 5.4 gust, harvesting three supercharged quartz-iron geodes.",
+          rashomon_scene_text: "POV: Jane (enclave_02_jane, INTP). Wind shear over the basalt ridge bit at -6.8°C. While Hector braced the tripod, Jane tuned the capacitive dielectric bridge so the geode absorbed the 40-megajoule arc without vitrifying the casing, passing theinsulated slate to Kaio."
+        },
+        "evt_s001_t0003_craft": {
+          event_id: "evt_s001_t0003_craft",
+          colony_sol: 1,
+          day_phase: "DUSK_CRAFT",
+          event_type: "SCHRODINGER_HARVEST_DEBATE",
+          location: "The_First_Forge",
+          actors: ["enclave_03_silas", "enclave_07_willow", "enclave_13_ryn"],
+          science_vegetable: "Chemosynthetic iron-wheat rhizosphere stoichiometry under twin-sun UV-B flux",
+          summary: "Willow (The Wilds), Silas (The Forge), and Ryn (The Hub) debated the allocation of Crystalline Iron-Wheat Batch #14 before forging a 40/30/30 magnetotropic seed-and-shielding compromise.",
+          rashomon_scene_text: "POV: Willow (enclave_07_willow, ISTP). Every specialist was right in their own domain: Willow needed magnetotropic seed stock, Silas needed flux-core husks, and Ryn needed high-calorie Feast loaves. With The Hub's circuit-breaker armed, they struck a clean 40/30/30 stoichiometric split."
+        },
+        "evt_s001_t0004_feast": {
+          event_id: "evt_s001_t0004_feast",
+          colony_sol: 1,
+          day_phase: "THE_FEAST",
+          event_type: "THE_FEAST_CONVERGENCE",
+          location: "The_Hearth_Hub",
+          actors: ["enclave_13_ryn", "enclave_14_vex", "enclave_15_dorian", "enclave_03_silas"],
+          science_vegetable: "Polyvagal neuro-somatic thermal regulation under bifurcated crater micro-climates",
+          summary: "All 16 Enclave specialists converged around Ryn's hearth fire to break warm iron-wheat bread, decompressing daytime stress by -0.25 while Vex rigged a 3-Feast harmonic chime prank.",
+          rashomon_scene_text: "POV: Dorian (enclave_15_dorian, ESFP). Sixteen mugs clinked beneath the copper chandelier. Silas quietly slid the warmest heel of bread toward Jane while grumbling about Ryn's rosemary glaze, and Vex winked from the astrolabe balcony."
+        }
+      },
+      lead_stories: [
+        {
+          story_id: "story_schrodinger_harvest_01",
+          pattern_type: "SCHRODINGER_HARVEST_STANDOFF",
+          story_title: "The Schrodinger Harvest Accord: Crystalline Iron-Wheat Batch #14",
+          narrative_summary: "A three-squad Diplomacy of Competence standoff between Willow (The Wilds), Silas (The Forge), and Ryn (The Hub) over Crystalline Iron-Wheat Batch #14 concluded in a calibrated 40/30/30 seed, flux-husk, and Feast-loaf accord.",
+          cited_event_ids: ["evt_s001_t0003_craft", "evt_s001_t0004_feast"],
+          actors: ["enclave_03_silas", "enclave_07_willow", "enclave_13_ryn", "enclave_14_vex", "enclave_15_dorian"],
+          location: "The_First_Forge / The_Hearth_Hub",
+          science_vegetable: "Chemosynthetic iron-wheat rhizosphere stoichiometry under twin-sun UV-B flux",
+          salience_score: 91.4
+        },
+        {
+          story_id: "story_rivalry_breakthrough_02",
+          pattern_type: "RIVALRY_TO_BREAKTHROUGH",
+          story_title: "Ridge Dielectric Capture: Stormbreaker Geodes Charged at Kp 5.4",
+          narrative_summary: "Following dawn tolerances friction at The First Forge, Hector, Jane, and Kaio synchronized their braided copper condenser array on Basalt Spire Ridge to capture three 74%-charged lightning geodes.",
+          cited_event_ids: ["evt_s001_t0001_dawn", "evt_s001_t0002_midday"],
+          actors: ["enclave_03_silas", "enclave_01_hector", "enclave_02_jane", "enclave_05_kaio"],
+          location: "The_First_Forge / Basalt_Spire_Ridge",
+          science_vegetable: "Capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers",
+          salience_score: 86.2
+        },
+        {
+          story_id: "story_genius_mundane_03",
+          pattern_type: "GENIUS_VS_MUNDANE_COMEDY",
+          story_title: "Genius vs. The Mundane: Relativistic Metallurgy Meets Bellows Fungus",
+          narrative_summary: "Silas derived relativistic bcc-to-hcp lattice phase transitions mentally while spending forty minutes chiseling stubborn bioluminescent spore-crust out of the brass bellows hinge.",
+          cited_event_ids: ["evt_s001_t0001_dawn"],
+          actors: ["enclave_03_silas", "enclave_01_hector"],
+          location: "The_First_Forge",
+          science_vegetable: "Relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron",
+          salience_score: 79.8
+        }
+      ],
+      developing_stories: [
+        {
+          story_id: "dev_shadow_caper_sol1",
+          pattern_type: "SHADOW_GRID_MISATTRIBUTION",
+          story_title: "Dormant Caper on the Sibling Grid (Matures on Sol 4)",
+          narrative_summary: "Hector swapped metric-to-furlong conversion decals onto Silas's vernier calipers; scheduled to mature after 3 Feasts via Main Character Blind Spot onto Ryn's spice scales.",
+          cited_event_ids: ["evt_s001_t0004_feast"],
+          actors: ["enclave_01_hector", "enclave_03_silas", "enclave_13_ryn"],
+          location: "The_Hearth_Hub"
+        }
+      ],
+      block_digests: [
+        {
+          day_phase: "DAWN_SHIFT",
+          coverage_share: 0.25,
+          cited_event_ids: ["evt_s001_t0001_dawn"],
+          digest_summary: "Silas and Hector cleared mycorrhizal spore-crust from The First Forge bellows and calibrated the dawn relay."
+        },
+        {
+          day_phase: "MIDDAY_EXPEDITION",
+          coverage_share: 0.25,
+          cited_event_ids: ["evt_s001_t0002_midday"],
+          digest_summary: "Hector, Jane, and Kaio scaled Basalt Spire Ridge (-6.8°C) and harvested three charged lightning geodes."
+        },
+        {
+          day_phase: "DUSK_CRAFT",
+          coverage_share: 0.25,
+          cited_event_ids: ["evt_s001_t0003_craft"],
+          digest_summary: "Willow, Silas, and Ryn resolved the Crystalline Iron-Wheat Batch #14 debate via 3-squad stoichiometric accord."
+        },
+        {
+          day_phase: "THE_FEAST",
+          coverage_share: 0.25,
+          cited_event_ids: ["evt_s001_t0004_feast"],
+          digest_summary: "All 16 Enclave nodes gathered around Ryn's hearth for nightly bread-breaking (-0.25 stress recovery) and Vex & Dorian's broadcast."
+        }
+      ],
+      magnetosphere_and_weather_report: {
+        kp_exo: 5.4,
+        active_biome_cell: "Enclave_Crater_Valley",
+        micro_climate_regime: "Bifurcated_Thermal_Shear",
+        valley_floor_temp_c: 14.2,
+        ridge_crest_temp_c: -6.8,
+        barometric_pressure_hpa: 1008.4,
+        spore_luminescence_density: 0.62,
+        geode_charge_capacity_pct: 74.0,
+        active_environmental_hazard: "Resonant_Spore_Fog_Drift",
+        luna_alpha_phase: 0.31,
+        luna_beta_phase: 0.67,
+        luna_gamma_phase: 0.89,
+        ferrofluid_sea_surge_index: 0.54,
+        vex_commentary: "Vex here at the brass astrolabe: binary-star magnetic shear is sitting at Kp_exo 5.40 under a Bifurcated Thermal Shear regime. Valley floor is a balmy 14.2°C while Basalt Spire Ridge is -6.8°C (ΔT=21.0°C). Geodes are at 74.0% charge and spore luminescence is 0.62!"
+      },
+      sibling_grid_blind_spot_column: {
+        column_title: "The Sibling Grid: Main Character Blind Spot Ledger",
+        cited_event_ids: ["evt_s001_t0004_feast"],
+        omniscient_commentary: "Omniscient Blind-Spot Watch: Hector (node_a) rigged furlong conversion decals for Silas (node_b); Silas adjusted his spectacles and missed them completely, while Ryn (node_c) measured three furlongs of cayenne pepper and is already blaming Hector.",
+        entries: [
+          {
+            rumor_id: "prank_sol01_calipers",
+            status: "PENDING (Matures Sol 4 — 3-Feast Law L12 Delay)",
+            node_a: "enclave_01_hector (Hector)",
+            node_b: "enclave_03_silas (Silas — Oblivious)",
+            node_c: "enclave_13_ryn (Ryn — Collateral & Blames Hector)",
+            cited_event_ids: ["evt_s001_t0004_feast"],
+            summary: "Swapped brass vernier caliper labels with metric-to-furlong conversion decals."
+          }
+        ]
+      },
+      cast_16: [
+        { id: "enclave_01_hector", name: "Hector", title: "The Stormbreaker", squad: "The_Forge", role: "Prodigy", mbti: "ESTP", project: "The Stormbreaker", ocean: [0.42, 0.25, 0.90, 0.40, 0.15], h: 0.76, stress: 0.28, z_max: 0.42, sign: "Virgo (The Perfectionist)" },
+        { id: "enclave_02_jane", name: "Jane", title: "The Coder & Meteorologist", squad: "The_Forge", role: "Prodigy", mbti: "INTP", project: "The Stormbreaker", ocean: [0.90, 0.45, 0.12, 0.32, 0.40], h: 0.84, stress: 0.31, z_max: 0.51, sign: "Leo (The Diva)" },
+        { id: "enclave_03_silas", name: "Silas", title: "The Engineer", squad: "The_Forge", role: "Anchor", mbti: "ISTJ", project: "The First Forge", ocean: [0.15, 0.96, 0.15, 0.22, 0.58], h: 0.91, stress: 0.34, z_max: 0.38, sign: "Pisces (The Dreamer)" },
+        { id: "enclave_04_leo", name: "Leo", title: "The Leader & Artificer", squad: "The_Forge", role: "Anchor", mbti: "ENTJ", project: "The First Forge", ocean: [0.72, 0.82, 0.92, 0.46, 0.20], h: 0.82, stress: 0.25, z_max: 0.29, sign: "Cancer (The Mother)" },
+        { id: "enclave_05_kaio", name: "Kaio", title: "The Scout", squad: "The_Wilds", role: "Prodigy", mbti: "ENFP", project: "The Sanctuary", ocean: [0.96, 0.15, 0.90, 0.80, 0.48], h: 0.79, stress: 0.29, z_max: 0.64, sign: "Capricorn (The CEO)" },
+        { id: "enclave_06_zara", name: "Zara", title: "The Beastmaster", squad: "The_Wilds", role: "Prodigy", mbti: "ISFP", project: "The Sanctuary", ocean: [0.45, 0.38, 0.10, 0.65, 0.42], h: 0.85, stress: 0.22, z_max: 0.33, sign: "Gemini (The Gossip)" },
+        { id: "enclave_07_willow", name: "Willow", title: "The Alchemist", squad: "The_Wilds", role: "Anchor", mbti: "ISTP", project: "The Genesis Garden", ocean: [0.46, 0.44, 0.28, 0.18, 0.14], h: 0.80, stress: 0.24, z_max: 0.47, sign: "Libra (The Aesthete)" },
+        { id: "enclave_08_terra", name: "Terra", title: "The Gardener", squad: "The_Wilds", role: "Anchor", mbti: "ISFJ", project: "The Genesis Garden", ocean: [0.24, 0.90, 0.38, 0.90, 0.56], h: 0.92, stress: 0.26, z_max: 0.31, sign: "Sagittarius (The Archer)" },
+        { id: "enclave_09_orion", name: "Orion", title: "The Artist", squad: "The_Mind", role: "Prodigy", mbti: "INFP", project: "The Simulacrum", ocean: [0.95, 0.30, 0.35, 0.74, 0.78], h: 0.88, stress: 0.37, z_max: 0.58, sign: "Aries (The War God)" },
+        { id: "enclave_10_isla", name: "Isla", title: "The Architect", squad: "The_Mind", role: "Prodigy", mbti: "INTJ", project: "The Simulacrum", ocean: [0.82, 0.90, 0.12, 0.22, 0.30], h: 0.86, stress: 0.27, z_max: 0.44, sign: "Taurus (The Glutton)" },
+        { id: "enclave_11_kenna", name: "Kenna", title: "The Shrink", squad: "The_Mind", role: "Anchor", mbti: "ENFJ", project: "The Lyceum of the Mind", ocean: [0.72, 0.72, 0.82, 0.94, 0.38], h: 0.90, stress: 0.21, z_max: 0.25, sign: "Aquarius (The Robot)" },
+        { id: "enclave_12_elias", name: "Elias", title: "The Philosopher", squad: "The_Mind", role: "Anchor", mbti: "INFJ", project: "The Lyceum of the Mind", ocean: [0.90, 0.64, 0.22, 0.82, 0.48], h: 0.93, stress: 0.23, z_max: 0.36, sign: "Scorpio (The Edgelord)" },
+        { id: "enclave_13_ryn", name: "Ryn", title: "The Chef", squad: "The_Hub", role: "Prodigy", mbti: "ESTJ", project: "The Hearth & Metabolic Engine", ocean: [0.32, 0.94, 0.80, 0.32, 0.56], h: 0.87, stress: 0.19, z_max: 0.41, sign: "Pisces (The Flow)" },
+        { id: "enclave_14_vex", name: "Vex", title: "The Astronomer", squad: "The_Hub", role: "Prodigy", mbti: "ENTP", project: "The Living Atlas & Mycelial Concordance", ocean: [0.95, 0.22, 0.85, 0.40, 0.22], h: 0.78, stress: 0.21, z_max: 0.52, sign: "Ophiuchus (The Void)" },
+        { id: "enclave_15_dorian", name: "Dorian", title: "The Living Chronicler", squad: "The_Hub", role: "Anchor", mbti: "ESFP", project: "The Living Atlas & Mycelial Concordance", ocean: [0.44, 0.42, 0.72, 0.68, 0.52], h: 0.89, stress: 0.18, z_max: 0.28, sign: "Gemini (The Con-Man)" },
+        { id: "enclave_16_elara", name: "Elara", title: "The Medic", squad: "The_Hub", role: "Anchor", mbti: "ESFJ", project: "The Hearth & Metabolic Engine", ocean: [0.38, 0.82, 0.88, 0.96, 0.54], h: 0.95, stress: 0.20, z_max: 0.22, sign: "Scorpio (The Sadist)" }
+      ],
+      context_manifest: [
+        { idx: 1, id: "system_contract", policy: "REQUIRED / NEVER_TRIM", used: 148, cap: 300, trimmed: false, detail: "Strict PvE Law L11, Rashomon Single-POV Law L06, Baton Handoff to enclave_04_leo" },
+        { idx: 2, id: "pov_core_and_voice", policy: "REQUIRED / NEVER_TRIM", used: 312, cap: 450, trimmed: false, detail: "Active Card: enclave_03_silas (Silas, ISTJ 1w9) + 2 Pinned Voice Dialogues" },
+        { idx: 3, id: "momentary_state_and_caps", policy: "REQUIRED", used: 118, cap: 150, trimmed: false, detail: "Stress=0.34, Fatigue=0.22, Triggered: CAPS_SILAS_03_MUNDANE_MANUAL_LABOR" },
+        { idx: 4, id: "world_chronosphere_slice", policy: "REQUIRED", used: 142, cap: 200, trimmed: false, detail: "Sol 1 | DUSK_CRAFT | Kp_exo=5.4 | Valley 14.2°C / Ridge -6.8°C" },
+        { idx: 5, id: "dyadic_interlocutor_views", policy: "LAW L06 SWAP-MODE", used: 224, cap: 300, trimmed: false, detail: "Asymmetric views for [enclave_07_willow, enclave_13_ryn] (0 private core leaks)" },
+        { idx: 6, id: "triggered_lore_cards", policy: "DYNAMIC KEYWORD+STICKY", used: 340, cap: 450, trimmed: false, detail: "Included: [lore_first_forge, lore_iron_wheat] | Excluded: [lore_simulacrum: keyword_not_triggered]" },
+        { idx: 7, id: "retrieved_memories", policy: "SMALLVILLE TOP-8", used: 410, cap: 550, trimmed: false, detail: "Retrieved: [evt_s001_t0001_dawn (score=2.64), evt_s001_t0002_midday (score=2.31)]" },
+        { idx: 8, id: "rolling_coarse_summary", policy: "DYNAMIC", used: 195, cap: 300, trimmed: false, detail: "Coarse Sol 1 summary across Dawn and Midday shifts" },
+        { idx: 9, id: "verbatim_prev_handoff", policy: "RECENCY PROTECTED", used: 420, cap: 650, trimmed: false, detail: "Trailing verbatim segment from Jane handing insulated slate to Silas" },
+        { idx: 10, id: "authors_note_depth_zero", policy: "DEPTH-0 / NEVER_TRIM", used: 96, cap: 120, trimmed: false, detail: "[Author's Note: Pacing=SUSTAIN_PEAK | Handoff->enclave_04_leo | Veg=Stoichiometry]" }
+      ]
+    };
+
+    let activeState = JSON.parse(JSON.stringify(DEFAULT_SOL1_PAYLOAD));
+    let selectedSquad = "ALL";
+    let simulatedDriftActive = false;
+
+    function openSceneModal(eventId) {
+      const evMap = activeState.events_by_id || DEFAULT_SOL1_PAYLOAD.events_by_id;
+      const ev = evMap[eventId] || {
+        event_id: eventId,
+        day_phase: "SOL_LOG",
+        location: "Enclave_Crater_Valley",
+        actors: ["enclave_14_vex", "enclave_15_dorian"],
+        science_vegetable: "Magnetohydrodynamic Kelvin-Helmholtz shear",
+        summary: "Verified event record in append-only colony log.",
+        rashomon_scene_text: "Single-POV Rashomon segment verified in canonical event ledger."
+      };
+      document.getElementById("modal-title").textContent = `Rashomon Scene & Evidence Record: [${ev.event_id}]`;
+      document.getElementById("modal-body").innerHTML = `
+        <div style="display:flex; flex-wrap:wrap; gap:0.5rem; font-family:var(--font-mono); font-size:0.76rem;">
+          <span class="pattern-badge">PHASE: ${ev.day_phase || "DAWN_SHIFT"}</span>
+          <span class="pattern-badge">LOCATION: ${ev.location || "Enclave_Crater_Valley"}</span>
+          <span class="pattern-badge">ACTORS: ${(ev.actors || []).join(", ")}</span>
+        </div>
+        <div class="science-veg-box"><strong>Science Vegetable:</strong> ${ev.science_vegetable || "Exoplanet physics"}</div>
+        <div><strong>Event Summary:</strong> ${ev.summary || ""}</div>
+        <div class="anchor-script-box">
+          <strong>Full Rashomon Relay Scene Segment:</strong><br/>
+          ${ev.rashomon_scene_text || ev.summary || ""}
+        </div>
+      `;
+      document.getElementById("scene-modal").classList.add("open");
+    }
+
+    function renderAll() {
+      const sol = activeState.colony_sol || 1;
+      document.getElementById("sol-badge").textContent = `COLONY SOL ${sol} // CLOSE OF THE FEAST`;
+      document.getElementById("dispatch-headline").textContent = activeState.headline || `SOL ${sol} EVENING DISPATCH`;
+      document.getElementById("dispatch-anchor-intro").textContent = activeState.anchor_intro || "";
+
+      const q = activeState.quote_of_the_sol || DEFAULT_SOL1_PAYLOAD.quote_of_the_sol;
+      document.getElementById("quote-text").textContent = q.quote || "";
+      document.getElementById("quote-speaker").textContent = `— ${q.speaker || "Silas"}`;
+      const qCid = q.cited_event_id || (q.cited_event_ids && q.cited_event_ids[0]) || "evt_s001_t0003_craft";
+      document.getElementById("quote-citation").innerHTML = `<span class="event-badge" onclick="openSceneModal('${qCid}')">[${qCid}]</span>`;
+
+      // Lead Stories
+      const leads = activeState.lead_stories || [];
+      const leadsContainer = document.getElementById("lead-stories-container");
+      leadsContainer.innerHTML = leads.map((st, idx) => {
+        const cites = (st.cited_event_ids || []).map(cid =>
+          `<span class="event-badge" onclick="openSceneModal('${cid}')">[${cid}]</span>`
+        ).join("");
+        const primaryCid = (st.cited_event_ids && st.cited_event_ids[0]) || "evt_s001_t0001_dawn";
+        return `
+          <article class="story-card">
+            <div>
+              <div class="story-meta-top">
+                <span class="pattern-badge">${st.pattern_type || "LEAD_STORY"}</span>
+                <span class="salience-badge">Salience: ${Number(st.salience_score || 85).toFixed(1)}</span>
+              </div>
+              <h3 class="story-title" style="margin:0.55rem 0 0.4rem;">${idx + 1}. ${st.story_title || st.title || "Enclave Story"}</h3>
+              <p class="story-summary">${st.narrative_summary || st.summary || ""}</p>
+            </div>
+            <div>
+              <div class="science-veg-box" style="margin-bottom:0.55rem;">
+                <strong>Science Vegetable:</strong> ${st.science_vegetable || "Sympathetic resonance"}
+              </div>
+              <div style="font-family:var(--font-mono); font-size:0.71rem; color:var(--text-dim); margin-bottom:0.45rem;">
+                Location: <strong style="color:var(--text-ivory);">${st.location || "Enclave"}</strong> |
+                Actors: ${(st.actors || []).join(", ")}
+              </div>
+              <div class="story-footer">
+                <div>${cites}</div>
+                <button class="rashomon-link" type="button" onclick="openSceneModal('${primaryCid}')">[Read Full Rashomon Scene]</button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      // 4-Phase Equal-Coverage Timeline
+      const rawBlocks = activeState.block_digests || DEFAULT_SOL1_PAYLOAD.block_digests;
+      const blocksList = Array.isArray(rawBlocks) ? rawBlocks : Object.values(rawBlocks);
+      const timelineContainer = document.getElementById("phase-timeline-container");
+      timelineContainer.innerHTML = blocksList.map(b => {
+        const sharePct = Math.round((Number(b.coverage_share || 0.25)) * 100);
+        const cites = (b.cited_event_ids || []).map(cid =>
+          `<span class="event-badge" onclick="openSceneModal('${cid}')">[${cid}]</span>`
+        ).join("");
+        return `
+          <div class="phase-card">
+            <div class="phase-header">
+              <span class="phase-name">${b.day_phase}</span>
+              <span class="phase-share">${sharePct}% Equal Share</span>
+            </div>
+            <div class="share-bar-track">
+              <div class="share-bar-fill" style="width:${sharePct}%;"></div>
+            </div>
+            <p style="font-size:0.83rem; color:var(--text-muted); flex:1;">${b.digest_summary || b.summary || ""}</p>
+            <div>${cites}</div>
+          </div>
+        `;
+      }).join("");
+
+      // Weather & Magnetosphere
+      const w = activeState.magnetosphere_and_weather_report || activeState.weather || DEFAULT_SOL1_PAYLOAD.magnetosphere_and_weather_report;
+      document.getElementById("weather-regime-tag").textContent = w.micro_climate_regime || "BIFURCATED_THERMAL_SHEAR";
+      const kp = Number(w.kp_exo || 5.4).toFixed(2);
+      const vTemp = Number(w.valley_floor_temp_c ?? 14.2).toFixed(1);
+      const rTemp = Number(w.ridge_crest_temp_c ?? -6.8).toFixed(1);
+      const geode = Number(w.geode_charge_capacity_pct ?? 74.0).toFixed(1);
+      const spore = Number(w.spore_luminescence_density ?? 0.62).toFixed(2);
+      const press = Number(w.barometric_pressure_hpa ?? 1008.4).toFixed(1);
+
+      document.getElementById("weather-gauges-container").innerHTML = `
+        <div class="gauge-box">
+          <div class="gauge-label">Geomagnetic Shear (Kp_exo)</div>
+          <div class="gauge-value">${kp} <span style="font-size:0.8rem;">/ 9.0</span></div>
+          <div class="gauge-sub">Inversion Threshold: Kp &ge; 7.0</div>
+        </div>
+        <div class="gauge-box">
+          <div class="gauge-label">Valley / Ridge Shear</div>
+          <div class="gauge-value brass">${vTemp}°C / ${rTemp}°C</div>
+          <div class="gauge-sub">&Delta;T = ${(vTemp - rTemp).toFixed(1)}°C | ${press} hPa</div>
+        </div>
+        <div class="gauge-box">
+          <div class="gauge-label">Geode Charge &amp; Spores</div>
+          <div class="gauge-value">${geode}%</div>
+          <div class="gauge-sub">Spore Luminescence: ${spore}</div>
+        </div>
+      `;
+
+      document.getElementById("triple-moons-bar").innerHTML = `
+        <span><strong>Luna &alpha;:</strong> ${Number(w.luna_alpha_phase ?? 0.31).toFixed(2)}</span>
+        <span><strong>Luna &beta;:</strong> ${Number(w.luna_beta_phase ?? 0.67).toFixed(2)}</span>
+        <span><strong>Luna &gamma;:</strong> ${Number(w.luna_gamma_phase ?? 0.89).toFixed(2)}</span>
+        <span><strong>Ferrofluid Surge:</strong> ${Number(w.ferrofluid_sea_surge_index ?? 0.54).toFixed(2)}</span>
+        <span style="color:var(--brass-bright);"><strong>Hazard:</strong> ${w.active_environmental_hazard || "Resonant_Spore_Fog_Drift"}</span>
+      `;
+      document.getElementById("vex-weather-commentary").textContent = w.vex_commentary || "";
+
+      // Sibling Grid Blind Spot Column & Developing Stories
+      const sg = activeState.sibling_grid_blind_spot_column || DEFAULT_SOL1_PAYLOAD.sibling_grid_blind_spot_column;
+      const sgCites = (sg.cited_event_ids || []).map(cid =>
+        `<span class="event-badge" onclick="openSceneModal('${cid}')">[${cid}]</span>`
+      ).join("");
+      const devs = activeState.developing_stories || DEFAULT_SOL1_PAYLOAD.developing_stories;
+      const devHtml = devs.map(d => {
+        const dCites = (d.cited_event_ids || []).map(cid =>
+          `<span class="event-badge" onclick="openSceneModal('${cid}')">[${cid}]</span>`
+        ).join("");
+        return `
+          <div style="background:rgba(8,13,20,0.55); border:1px solid rgba(50,245,200,0.25); padding:0.75rem; border-radius:6px;">
+            <div style="font-family:var(--font-mono); font-size:0.72rem; color:var(--cyan-bio);">DEVELOPING SETUP // ${d.pattern_type || "OPEN_ARC"}</div>
+            <div style="font-weight:600; color:var(--text-ivory); margin:0.2rem 0;">${d.story_title || d.title}</div>
+            <div style="font-size:0.82rem; color:var(--text-muted); margin-bottom:0.4rem;">${d.narrative_summary || d.summary}</div>
+            <div>${dCites}</div>
+          </div>
+        `;
+      }).join("");
+
+      document.getElementById("sibling-grid-container").innerHTML = `
+        <div class="anchor-script-box" style="border-left-color:var(--brass-bright);">
+          <div style="font-family:var(--font-mono); font-size:0.72rem; color:var(--brass-bright); margin-bottom:0.25rem;">
+            OMNISCIENT MAIN CHARACTER BLIND SPOT COLUMN
+          </div>
+          <p style="font-size:0.86rem; margin-bottom:0.45rem;">${sg.omniscient_commentary || sg.summary || ""}</p>
+          <div>${sgCites}</div>
+        </div>
+        ${devHtml}
+      `;
+
+      // 16-Node Cast Matrix
+      renderCastMatrix();
+
+      // 10-Block Context Manifest
+      const manifest = activeState.context_manifest || DEFAULT_SOL1_PAYLOAD.context_manifest;
+      const totalUsed = manifest.reduce((acc, b) => acc + (b.used || 0), 0);
+      document.getElementById("context-budget-tag").textContent =
+        `${totalUsed} / 3,500 TOKENS COMPILED (LAW L06 SWAP-MODE SINGLE POV CARD)`;
+      document.getElementById("context-manifest-tbody").innerHTML = manifest.map(b => `
+        <tr>
+          <td>#${b.idx}</td>
+          <td style="color:var(--cyan-bio); font-weight:600;">${b.id}</td>
+          <td><span class="pattern-badge">${b.policy}</span></td>
+          <td>${b.used} / ${b.cap}</td>
+          <td style="color:${b.trimmed ? 'var(--amber-warn)' : 'var(--emerald-ok)'};">${b.trimmed ? "TRIMMED" : "INTACT"}</td>
+          <td style="color:var(--text-muted); font-family:var(--font-sans); font-size:0.82rem;">${b.detail}</td>
+        </tr>
+      `).join("");
+    }
+
+    function renderCastMatrix() {
+      const cast = activeState.cast_16 || DEFAULT_SOL1_PAYLOAD.cast_16;
+      const filtered = selectedSquad === "ALL" ? cast : cast.filter(c => c.squad === selectedSquad);
+      const banner = document.getElementById("drift-reanchor-banner");
+
+      if (simulatedDriftActive) {
+        banner.style.display = "block";
+        banner.innerHTML = `
+          <strong>LAW L16 INCHARACTER DRIFT ALERT TRIGGERED (re_anchor_ticks = 3):</strong><br/>
+          <code>[Author's Note (Law L16 InCharacter Drift Re-Anchor — Pin for Next 3 Scenes): Silas (enclave_03_silas, The Engineer). Drifted Axes: agreeableness drifted too high (observed=0.68, z=+10.22; re-anchor to target mu=0.22&plusmn;0.09). ANTI-SYCOPHANCY GUARD: Reject Smallville social-conformity politeness; restore Silas's candid, low-Agreeableness specialist friction and favorite word 'Inefficient.']</code>
+        `;
+      } else {
+        banner.style.display = "none";
+      }
+
+      const labels = ["O", "C", "E", "A", "N"];
+      document.getElementById("cast-matrix-container").innerHTML = filtered.map(c => {
+        const isSilasDrifted = simulatedDriftActive && c.id === "enclave_03_silas";
+        const oceanVals = isSilasDrifted ? [c.ocean[0], c.ocean[1], c.ocean[2], 0.68, c.ocean[4]] : c.ocean;
+        const zMax = isSilasDrifted ? 10.22 : c.z_max;
+        const traitBarsHtml = labels.map((lbl, i) => {
+          const pct = Math.round(oceanVals[i] * 100);
+          return `
+            <div class="trait-row">
+              <span>${lbl}</span>
+              <div class="trait-track"><div class="trait-fill" style="width:${pct}%;"></div></div>
+              <span>${oceanVals[i].toFixed(2)}</span>
+            </div>
+          `;
+        }).join("");
+        const stressPct = Math.round((c.stress || 0.25) * 100);
+
+        return `
+          <div class="node-card ${isSilasDrifted ? 'drift-alert' : ''}">
+            <div class="node-top">
+              <div>
+                <div class="node-name">${c.name} <span style="font-size:0.72rem; color:var(--text-dim);">(${c.role})</span></div>
+                <div class="node-epithet">${c.title} &bull; ${c.squad.replace("_", " ")}</div>
+              </div>
+              <span class="mbti-pill">${c.mbti}</span>
+            </div>
+            <div style="font-family:var(--font-mono); font-size:0.69rem; color:var(--brass-bright);">
+              Project: ${c.project}
+            </div>
+            <div class="trait-bars">
+              ${traitBarsHtml}
+              <div class="trait-row">
+                <span style="color:var(--amber-warn);">STR</span>
+                <div class="trait-track"><div class="trait-fill stress" style="width:${stressPct}%;"></div></div>
+                <span>${Number(c.stress || 0.25).toFixed(2)}</span>
+              </div>
+            </div>
+            <div class="drift-footer">
+              <span>Inversion: ${c.sign}</span>
+              <span class="${isSilasDrifted ? 'drift-warn' : 'drift-ok'}">
+                ${isSilasDrifted ? `DRIFT ALERT |z|=${zMax}` : `L16 PASS |z|=${zMax}`}
+              </span>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    // Squad Filter Handlers
+    document.getElementById("squad-filter-bar").addEventListener("click", (e) => {
+      const btn = e.target.closest(".filter-btn");
+      if (!btn) return;
+      document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      selectedSquad = btn.getAttribute("data-squad") || "ALL";
+      renderCastMatrix();
+    });
+
+    // Simulate Law L16 Drift Button
+    document.getElementById("btn-toggle-drift").addEventListener("click", () => {
+      simulatedDriftActive = !simulatedDriftActive;
+      renderCastMatrix();
+    });
+
+    // Reset Sol 1 Button
+    document.getElementById("btn-reset-sol1").addEventListener("click", () => {
+      activeState = JSON.parse(JSON.stringify(DEFAULT_SOL1_PAYLOAD));
+      simulatedDriftActive = false;
+      document.getElementById("loaded-source-label").textContent =
+        "Active Payload: Embedded Canonical Sol 1 Evening Dispatch & 16-Node Snapshot (`dispatch_sol_001`)";
+      renderAll();
+    });
+
+    // Modal Close
+    document.getElementById("modal-close-btn").addEventListener("click", () => {
+      document.getElementById("scene-modal").classList.remove("open");
+    });
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") document.getElementById("scene-modal").classList.remove("open");
+    });
+
+    // File Loader Helper (supports both Evening Dispatch JSON and World Snapshot JSON)
+    function ingestLoadedJson(data, filename) {
+      if (!data || typeof data !== "object") return;
+      const merged = JSON.parse(JSON.stringify(DEFAULT_SOL1_PAYLOAD));
+      if (data.headline) merged.headline = data.headline;
+      if (data.colony_sol) merged.colony_sol = data.colony_sol;
+      if (data.anchor_intro) merged.anchor_intro = data.anchor_intro;
+      if (Array.isArray(data.lead_stories) && data.lead_stories.length > 0) merged.lead_stories = data.lead_stories;
+      if (Array.isArray(data.developing_stories)) merged.developing_stories = data.developing_stories;
+      if (data.block_digests) merged.block_digests = data.block_digests;
+      if (data.magnetosphere_and_weather_report) {
+        merged.magnetosphere_and_weather_report = {
+          ...merged.magnetosphere_and_weather_report,
+          ...data.magnetosphere_and_weather_report
+        };
+      } else if (data.weather) {
+        merged.magnetosphere_and_weather_report = {
+          ...merged.magnetosphere_and_weather_report,
+          ...data.weather
+        };
+      }
+      if (data.sibling_grid_blind_spot_column) merged.sibling_grid_blind_spot_column = data.sibling_grid_blind_spot_column;
+      if (data.quote_of_the_sol) merged.quote_of_the_sol = data.quote_of_the_sol;
+      if (Array.isArray(data.events)) {
+        const byId = {};
+        data.events.forEach(ev => { if (ev && ev.event_id) byId[ev.event_id] = ev; });
+        merged.events_by_id = { ...merged.events_by_id, ...byId };
+      }
+      activeState = merged;
+      document.getElementById("loaded-source-label").textContent =
+        `Active Payload: Loaded from ${filename} (Colony Sol ${merged.colony_sol || 1})`;
+      renderAll();
+    }
+
+    document.getElementById("json-file-input").addEventListener("change", (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        try {
+          const parsed = JSON.parse(ev.target.result);
+          ingestLoadedJson(parsed, file.name);
+        } catch (err) {
+          alert("Could not parse JSON file: " + err.message);
+        }
+      };
+      reader.readAsText(file);
+    });
+
+    // Drag and Drop Support
+    const dropzone = document.getElementById("dropzone-bar");
+    window.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      dropzone.classList.add("drag-active");
+    });
+    window.addEventListener("dragleave", () => {
+      dropzone.classList.remove("drag-active");
+    });
+    window.addEventListener("drop", (e) => {
+      e.preventDefault();
+      dropzone.classList.remove("drag-active");
+      const file = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        try {
+          const parsed = JSON.parse(ev.target.result);
+          ingestLoadedJson(parsed, file.name);
+        } catch (err) {
+          alert("Could not parse dropped JSON file: " + err.message);
+        }
+      };
+      reader.readAsText(file);
+    });
+
+    // Initial Render
+    renderAll();
+  </script>
+</body>
+</html>
