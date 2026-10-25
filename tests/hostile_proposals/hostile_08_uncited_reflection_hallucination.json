@@ -1,0 +1,17 @@
+{
+  "fixture_id": "hostile_08_uncited_reflection_hallucination",
+  "target_law": "L08",
+  "description": "Negative control fixture: nightly reflection cites a fabricated event_id not present in the event log.",
+  "target_path": "events/evt_hostile_08.json",
+  "event_id": "evt_refl_hostile_08",
+  "tick_id": 4,
+  "colony_sol": 1,
+  "day_phase": "THE_FEAST",
+  "event_type": "NIGHTLY_REFLECTION",
+  "memory_type": "reflection",
+  "character_id": "enclave_12_elias",
+  "actors": ["enclave_12_elias"],
+  "insight_text": "Elias concluded that the mycelial network responds to harmonic bell chimes based on an unrecorded vision.",
+  "cited_event_ids": ["evt_hallucinated_nonexistent_9999"],
+  "valid_event_ids": ["evt_t0001_dawn", "evt_t0002_midday"]
+}

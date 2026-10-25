@@ -1,0 +1,18 @@
+{
+  "fixture_id": "hostile_07_context_token_overflow",
+  "target_law": "L07",
+  "description": "Negative control fixture: context manifest overflows 3,500 token ceiling (4,820 tokens) and scrambles block order.",
+  "target_path": "events/evt_hostile_07.json",
+  "context_manifest": {
+    "active_pov_id": "enclave_03_silas",
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": ["enclave_03_silas"],
+    "total_tokens": 4820,
+    "max_tokens": 3500,
+    "blocks": [
+      { "block_index": 2, "block_id": "pov_core_and_voice", "tokens": 950, "cap_tokens": 450 },
+      { "block_index": 1, "block_id": "system_contract", "tokens": 300, "cap_tokens": 300 },
+      { "block_index": 10, "block_id": "authors_note_depth_zero", "tokens": 400, "cap_tokens": 120 }
+    ]
+  }
+}
