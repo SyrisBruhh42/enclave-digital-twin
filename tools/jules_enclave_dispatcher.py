@@ -682,7 +682,7 @@ class JulesEnclaveDispatcher:
             planned_specs.append(
                 (
                     "POV_RASHOMON_RELAY_SCENES",
-                    f"story/segments/seg_s{safe_sol:03d}_t{safe_tick:04d}_dawn.json",
+                    f"story/segments/seg_s{safe_sol:03d}_t{safe_tick:04d}_enclave_03_silas.json",
                     "Write Dawn Shift Rashomon Relay POV segment with physical baton handoff.",
                 )
             )
@@ -690,7 +690,7 @@ class JulesEnclaveDispatcher:
             planned_specs.append(
                 (
                     "POV_RASHOMON_RELAY_SCENES",
-                    f"story/segments/seg_s{safe_sol:03d}_t{safe_tick:04d}_midday.json",
+                    f"story/segments/seg_s{safe_sol:03d}_t{safe_tick:04d}_enclave_01_hector.json",
                     "Write Midday Expedition Rashomon Relay POV segment.",
                 )
             )
@@ -705,7 +705,7 @@ class JulesEnclaveDispatcher:
             planned_specs.append(
                 (
                     "POV_RASHOMON_RELAY_SCENES",
-                    f"story/segments/seg_s{safe_sol:03d}_t{safe_tick:04d}_dusk.json",
+                    f"story/segments/seg_s{safe_sol:03d}_t{safe_tick:04d}_enclave_05_kaio.json",
                     "Write Dusk Craft Rashomon Relay POV segment.",
                 )
             )
@@ -746,14 +746,37 @@ class JulesEnclaveDispatcher:
                 )
             )
 
+        day_phase_names = ("DAWN_SHIFT", "MIDDAY_EXPEDITION", "DUSK_CRAFT", "THE_FEAST")
+        day_phase = day_phase_names[phase_idx]
+        local_mgr = None
+        if not self.dry_run:
+            from engine.local_ai_manager import LocalContextAwareManager
+
+            local_mgr = LocalContextAwareManager(repo_root=self.repo_root)
+
         dispatched_results: list[dict[str, Any]] = []
         for bucket, target_path, prompt_desc in planned_specs:
+            full_prompt = prompt_desc
+            if local_mgr is not None:
+                try:
+                    card = local_mgr.compile_enclave_5section_task_card(
+                        task_bucket=bucket,
+                        colony_sol=safe_sol,
+                        tick_id=safe_tick,
+                        day_phase=day_phase,
+                        target_path=target_path,
+                        showrunner_pacing_mode="MERCER_IMMERSIVE" if phase_idx != 1 else "MULLIGAN_CRISIS",
+                        use_local_ollama=False,
+                    )
+                    full_prompt = str(card.get("prompt") or prompt_desc)
+                except Exception:
+                    full_prompt = prompt_desc
             payload = build_session_payload(
                 task_bucket=bucket,
                 tick_id=safe_tick,
                 colony_sol=safe_sol,
                 target_path=target_path,
-                prompt_text=prompt_desc,
+                prompt_text=full_prompt,
                 base_snapshot_tick=max(1, safe_tick - 1),
             )
             res = self.dispatch_session(payload, now_iso=ts, persist=persist)
@@ -974,8 +997,8 @@ class JulesEnclaveDispatcher:
                         pr_url = str(pr_obj["url"]).strip()
                         break
 
-            # 1. PR-First Protection: Protect open green PRs from cut-loss even in AWAITING_USER_FEEDBACK
-            if not self.dry_run and pr_url and bool(sess.get("pr_checks_green", True)):
+            # 1. PR-First Protection: Protect open green PRs from cut-loss while in non-terminal states
+            if not self.dry_run and s_state != "COMPLETED" and pr_url and bool(sess.get("pr_checks_green", True)):
                 updated_sess = dict(sess)
                 updated_sess["pr_url"] = pr_url
                 updated_sess["state"] = s_state
