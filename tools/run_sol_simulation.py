@@ -361,8 +361,11 @@ def run_simulation(
     verify_dispatch: bool = True,
     repo_root: Path | str | None = None,
     epoch_seed: str = "enclave_epoch_2026",
+    sync_oasis_bridge: bool = False,
 ) -> dict[str, Any]:
     """Execute a complete deterministic simulation for `sols` colony sols."""
+    from tools.enclave_fleet_ctl import _resolve_runtime_budget_file
+
     root = Path(repo_root).resolve() if repo_root else REPO_ROOT
     num_sols = max(1, int(sols))
 
@@ -385,7 +388,11 @@ def run_simulation(
     rel_matrix = json.loads((root / "relationships" / "initial_matrix_120.json").read_text(encoding="utf-8"))
 
     integrator = SingleIntegrator(repo_root=root, epoch_seed=epoch_seed, max_staleness_ticks=4)
-    dispatcher = JulesEnclaveDispatcher(repo_root=root, dry_run=True)
+    dispatcher = JulesEnclaveDispatcher(
+        repo_root=root,
+        budget_file=_resolve_runtime_budget_file(root),
+        dry_run=True,
+    )
 
     chrono_state: dict[str, Any] = {}
     recent_events: list[dict[str, Any]] = []
@@ -837,9 +844,19 @@ def run_simulation(
         },
         "latest_tick": final_rebuild["latest_tick"],
     }
-    health_path = root / "ops" / "health.json"
+    health_path = (
+        (_resolve_runtime_budget_file(root).parent / "health.json")
+        if (root == REPO_ROOT and (root / "ops" / "health.json").is_file())
+        else (root / "ops" / "health.json")
+    )
     health_path.parent.mkdir(parents=True, exist_ok=True)
     health_path.write_text(json.dumps(health_report, indent=2) + "\n", encoding="utf-8")
+
+    oasis_bridge_sync: dict[str, Any] | None = None
+    if root == REPO_ROOT or sync_oasis_bridge:
+        from engine.oasis_twin_bridge import sync_enclave_oasis_save_and_bridge
+
+        oasis_bridge_sync = sync_enclave_oasis_save_and_bridge(root)
 
     return {
         "health": health_report,
@@ -850,6 +867,7 @@ def run_simulation(
         "dispatches_written": dispatches_written,
         "qa_files_written": qa_files_written,
         "constitutional_audit": repo_audit,
+        "oasis_bridge_sync": oasis_bridge_sync,
     }
 
 

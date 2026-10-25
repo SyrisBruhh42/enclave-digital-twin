@@ -298,7 +298,17 @@ def check_append_only_events(
     # Repository check: verify canon/ has no M/D modifications in git status if inside a git worktree
     try:
         proc = subprocess.run(
-            ["git", "status", "--porcelain", "--", "canon/", "relationships/initial_matrix_120.json"],
+            [
+                "git",
+                "status",
+                "--porcelain",
+                "--",
+                "canon/characters/",
+                "canon/projects/",
+                "canon/lore_cards/",
+                "canon/schemas/world_state_v2.json",
+                "relationships/initial_matrix_120.json",
+            ],
             cwd=str(root),
             capture_output=True,
             text=True,

@@ -441,6 +441,174 @@ class TestEnclaveCrucible(unittest.TestCase):
     def test_10_showrunner_dm_lpi_local_ai_manager_and_300_session_standby(self) -> None:
         test_showrunner_dm_lpi_local_ai_manager_and_300_session_standby()
 
+    def test_11_live_jules_api_request_schema_oasis_twin_bridge_and_4fleet_governor(self) -> None:
+        test_live_jules_api_schema_oasis_twin_bridge_and_4fleet_governor()
+
+
+def test_live_jules_api_schema_oasis_twin_bridge_and_4fleet_governor() -> None:
+    from engine.oasis_twin_bridge import sync_enclave_oasis_save_and_bridge
+    from tools.enclave_fleet_ctl import compute_cross_fleet_rolling_telemetry
+    from tools.jules_enclave_dispatcher import (
+        JulesRestClient,
+        build_live_jules_api_request,
+    )
+
+    # 1. Verify canonical live Google Jules /v1alpha/sessions request schema (CRUCIBLE-11)
+    payload = build_session_payload(
+        task_bucket="MORNING_INTENTS_16_NODES",
+        tick_id=1,
+        colony_sol=1,
+        target_path="events/evt_s001_t0001_morning_intent.json",
+        prompt_text="Synthesize Dawn Shift morning intents.",
+    )
+    live_req = build_live_jules_api_request(payload)
+    assert live_req["requirePlanApproval"] is False
+    assert live_req["automationMode"] == "AUTO_CREATE_PR"
+    assert live_req["sourceContext"] == {
+        "source": "sources/github/SyrisBruhh42/enclave-digital-twin",
+        "githubRepoContext": {"startingBranch": "main"},
+    }
+
+    # 2. Verify live JulesRestClient + 5-part antifragile reaper/integrator in sandbox
+    with tempfile.TemporaryDirectory() as td:
+        base = Path(td)
+        sandbox = _create_sandbox_repo(base)
+        shutil.copytree(REPO_ROOT / "ops", sandbox / "ops")
+        run_simulation(sols=1, verify_dispatch=True, repo_root=sandbox, epoch_seed="crucible_seed_42")
+
+        recorded_calls: list[tuple[str, str, Any]] = []
+        valid_salvage_event = {
+            "event_id": "evt_s001_t0004_salvaged_note",
+            "tick_id": 4,
+            "colony_sol": 1,
+            "day_phase": "THE_FEAST",
+            "world_timestamp_iso": "2026-10-25T18:00:00Z",
+            "base_snapshot_tick": 4,
+            "event_type": "MORNING_INTENT",
+            "location": "The_Hub_Hearth",
+            "actors": ["enclave_07_willow", "enclave_03_silas"],
+            "summary": "Willow calibrated the acoustic damper beside Silas's bench.",
+            "importance": 6.5,
+            "novelty_score": 0.65,
+            "lethality": 0,
+            "science_vegetable": "Magnetohydrodynamic damper tuning",
+            "state_deltas": {"stress_delta": -0.02},
+            "relationship_deltas": [],
+            "evidence_refs": ["feast_sol_001"],
+        }
+        diff_lines = [
+            "--- /dev/null",
+            "+++ b/events/evt_s001_t0004_salvaged_note.json",
+            "@@ -0,0 +1,20 @@",
+        ] + [f"+{line}" for line in json.dumps(valid_salvage_event, indent=2).splitlines()]
+        unidiff_str = "\n".join(diff_lines)
+
+        def mock_transport(method: str, url: str, body: dict[str, Any] | None) -> dict[str, Any]:
+            recorded_calls.append((method, url, body))
+            if method == "POST" and url.endswith("/v1alpha/sessions"):
+                return {"name": "sessions/9988776655", "state": "RUNNING"}
+            if method == "GET" and url.endswith("/sessions/sess_open_pr"):
+                return {
+                    "name": "sessions/sess_open_pr",
+                    "state": "AWAITING_USER_FEEDBACK",
+                    "outputs": [{"pullRequest": {"url": "https://github.com/SyrisBruhh42/enclave-digital-twin/pull/12"}}],
+                }
+            if method == "GET" and url.endswith("/sessions/sess_plan"):
+                return {"name": "sessions/sess_plan", "state": "AWAITING_PLAN_APPROVAL"}
+            if method == "GET" and url.endswith("/sessions/sess_completed_cs"):
+                return {"name": "sessions/sess_completed_cs", "state": "COMPLETED", "outputs": []}
+            if method == "GET" and "/activities" in url:
+                return {
+                    "activities": [
+                        {"artifacts": [{"changeSet": {"gitPatch": {"unidiffPatch": unidiff_str}}}]}
+                    ]
+                }
+            return {"ok": True}
+
+        client = JulesRestClient(base_url="http://127.0.0.1:9445", api_key="test_key", transport=mock_transport)
+        live_disp = JulesEnclaveDispatcher(
+            repo_root=sandbox,
+            budget_file=base / "live_budget.json",
+            dry_run=False,
+            rest_client=client,
+        )
+        d_res = live_disp.dispatch_session(payload, now_iso="2026-10-25T12:00:00Z", persist=True)
+        assert d_res["dispatched"] is True
+        assert d_res["remote_session_id"] == "9988776655"
+
+        # Verify 4-fleet live quota governor blocks when peer factories consume ceiling
+        capped_state = live_disp.load_budget(now_iso="2026-10-25T12:05:00Z")
+        capped_state["peer_live_dispatched_24h"] = 269
+        allowed_4fleet, reason_4fleet = live_disp.can_dispatch(capped_state, requested_count=1)
+        assert allowed_4fleet is False
+        assert "unified 4-fleet hard ceiling" in reason_4fleet
+
+        reap_live = live_disp.reap_stalled_sessions(
+            sessions=[
+                {
+                    "session_id": "sess_open_pr",
+                    "state": "AWAITING_USER_FEEDBACK",
+                    "started_at_iso": "2026-10-25T10:00:00Z",
+                    "pr_checks_green": True,
+                },
+                {
+                    "session_id": "sess_plan",
+                    "state": "AWAITING_PLAN_APPROVAL",
+                    "started_at_iso": "2026-10-25T11:50:00Z",
+                },
+                {
+                    "session_id": "sess_completed_cs",
+                    "state": "COMPLETED",
+                    "started_at_iso": "2026-10-25T11:45:00Z",
+                    "tick_id": 4,
+                    "target_path": "events/evt_s001_t0004_salvaged_note.json",
+                },
+            ],
+            now_iso="2026-10-25T12:05:00Z",
+            persist=True,
+        )
+        assert reap_live["auto_replied_count"] == 1
+        assert reap_live["integrated_count"] == 1
+        assert (sandbox / "events" / "evt_s001_t0004_salvaged_note.json").is_file()
+        assert any(":approvePlan" in u for _, u, _ in recorded_calls)
+
+        # 3. Verify Oasis Twin Bridge (CRUCIBLE-14): save.lineage.json + RUP meta-rewards + enclave_07_willow ODE
+        save_dir = base / "oasis_saves" / "enclave-digital-twin"
+        bridge_file = base / "lfs-aegis" / "aegis_asset_bridge.json"
+        sync_res = sync_enclave_oasis_save_and_bridge(
+            repo_root=sandbox,
+            save_root=save_dir,
+            bridge_path=bridge_file,
+        )
+        assert (save_dir / "save.lineage.json").is_file()
+        assert sync_res["lineage"]["schema"] == "aegisEnvelopeV1-save-lineage"
+        assert sync_res["lineage"]["project_id"] == "PA-15"
+        assert sync_res["meta_rewards"]["currency_code"] == "RUP"
+        assert sync_res["meta_rewards"]["total_earned_rupees"] >= 35
+        assert sync_res["meta_rewards"]["in_world_economy_monetary"] is False
+        bridge_json = json.loads(bridge_file.read_text(encoding="utf-8"))
+        assert "enclave_07_willow" in bridge_json["enclaveTwinLiveState"]["character_states"]
+        assert bridge_json["enclaveTwinLiveState"]["willow_resonance"]["character_id"] == "enclave_07_willow"
+
+    # 4. Verify 4-factory telemetry, PA-15 project_id, manifest entrypoint & zero hardcoded home paths (UMB-01)
+    telemetry = compute_cross_fleet_rolling_telemetry(repo_root=REPO_ROOT)
+    assert len(telemetry["cross_fleet_rolling_24h"]["factories_tracked"]) == 4
+    assert "willow-guild-factory" in telemetry["cross_fleet_rolling_24h"]["factories_tracked"]
+    cfg = json.loads((REPO_ROOT / "ops" / "config.json").read_text(encoding="utf-8"))
+    assert cfg["project_id"] == "PA-15"
+    manifest = json.loads((REPO_ROOT / "capsule.manifest.json").read_text(encoding="utf-8"))
+    assert manifest["entrypoint"] == "tools/run_sol_simulation.py"
+
+    forbidden_home = "/home/" + "joe"
+    for p in REPO_ROOT.rglob("*"):
+        if not p.is_file() or "__pycache__" in p.parts or ".git" in p.parts:
+            continue
+        try:
+            text = p.read_text(encoding="utf-8")
+        except Exception:
+            continue
+        assert forbidden_home not in text, f"UMB-01 violation: {forbidden_home} found in {p}"
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
