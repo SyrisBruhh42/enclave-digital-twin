@@ -11,7 +11,7 @@
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "location": "The_First_Forge",
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
-  "text": "[DAWN_SHIFT at The_First_Forge] Silas surveyed the brass and soot interior of the forge, observing the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea whipping outside the reinforced quartz viewport. The biting ozone scent tangled with the radiant, oppressive heat rolling off the cooling vents, though a faint hint of copper remained on his tongue. He adjusted his gloves against the roaring oscillations of the resonance chamber, securing the freshly charged brass calibration cylinder before pivoting sharply to slap the physical baton squarely into Hector's waiting grasp.",
+  "text": "[DAWN_SHIFT at The_First_Forge] Silas surveyed the brass and soot interior of the forge, observing the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea whipping outside the reinforced quartz viewport. The biting ozone scent tangled with the radiant, oppressive heat rolling off the cooling vents, though a faint hint of copper remained on his tongue. He moved fast to DEFEND the oscillating resonance chamber from micro-fractures, tapped the cooling slag vents to CONSUME excess thermal energy, and slammed shut the heavy blast doors to CONCEAL their vulnerable diagnostics from the rising pressure wave. Securing the freshly charged brass calibration cylinder, he pivoted sharply to slap the physical baton squarely into Hector's waiting grasp.",
   "campaign_metadata": {
     "session_number": 3,
     "colony_sol": 3,
@@ -92,9 +92,9 @@
     ]
   },
   "lpi_metrics": {
-    "relational_tension_density": 0.60,
+    "relational_tension_density": 0.6,
     "motivational_vector_saturation": 0.85,
-    "unresolved_conflict_ratio": 0.70,
+    "unresolved_conflict_ratio": 0.7,
     "temporal_horizon_immediacy": 0.85,
     "composite_lpi": 0.75,
     "classification": "Campaign-Ready"
@@ -123,7 +123,9 @@
   },
   "context_manifest": {
     "full_cards_loaded_count": 1,
-    "loaded_full_card_ids": ["enclave_03_silas"],
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
     "interlocutor_full_cards_loaded": 0
   },
   "disallow_overwrite": false
