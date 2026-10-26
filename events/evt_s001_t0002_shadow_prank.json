@@ -39,11 +39,12 @@
   "actors": [
     "enclave_01_hector",
     "enclave_03_silas",
-    "enclave_13_ryn"
+    "enclave_13_ryn",
+    "enclave_05_kaio"
   ],
   "importance": 6.0,
   "novelty_score": 0.68,
-  "science_vegetable": "Relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "state_deltas": {
     "stress_delta": -0.02
   },
@@ -51,5 +52,122 @@
   "evidence_refs": [
     "evt_s001_t0002_midday_expedition"
   ],
-  "target_path": "events/evt_s001_t0002_shadow_prank.json"
+  "target_path": "events/evt_s001_t0002_shadow_prank.json",
+  "disallow_overwrite": false,
+
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 1,
+      "tick_id": 2,
+      "pacing_mode": "MULLIGAN_CRISIS",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Survive the ferrofluid shear without compromising the primary inductor.",
+        "mid_term_milestone": "Stabilize the colony's magnetic shield array.",
+        "campaign_arc_climax": "Acknowledge the slow, unglamorous preparation required for true survival."
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "The First Forge hummed violently as the Magnetohydrodynamic Kelvin-Helmholtz shear battered the reinforced ferro-glass windows. Sparks cascaded from overloaded capacitors, painting the cramped interior in strobes of violent blue. The iron walls groaned, vibrating with the immense pressure of the ferrofluid sea outside.",
+      "sensory_palette": {
+        "sight_and_color": "Strobing violent blues and bruising violets against dark, oxidized iron.",
+        "sound": "Howling metallic winds and the high-pitched shriek of stressed copper coils.",
+        "smell": "Thick metallic ozone and scorched insulation.",
+        "tactile_temperature": "Oppressively hot and electrically charged, making hair stand on end."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Main Pressure Console",
+          "affordance_description": "A heavy brass control array regulating the coolant flow to the primary induction coils.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Overloaded Capacitor Bank",
+          "affordance_description": "Screaming towers of stored kinetic energy, bleeding arcs of raw plasma into the air.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 16
+        },
+        {
+          "feature_name": "Ferro-Glass Viewport",
+          "affordance_description": "Thick, reinforced window shuddering under the immense pressure of the magnetic sea outside.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 15
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_shear",
+        "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz shear",
+        "motivation_goal": "Destabilize and tear apart ungrounded metallic structures.",
+        "consistent_method": "Applying immense, unpredictable magnetic torsion to load-bearing supports.",
+        "immediate_complication": "The shear threatens to rupture the main coolant line if not properly grounded.",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "Complete structural collapse of the Forge's outer observation deck."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The physical environment is violently unstable and demands immediate tactile response.",
+        "level_2_local": "Hector's prank has mildly inconvenienced operations at the exact wrong time.",
+        "level_3_campaign_arc": "Testing Hector's reliance on instinct over careful preparation in crisis moments."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        },
+        {
+          "actor_id": "enclave_05_kaio",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [ 12, 4, 19, 8, 15 ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.6,
+      "motivational_vector_saturation": 0.7,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.9,
+      "composite_lpi": 0.7,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_inference",
+        "model": "judge_model_v1",
+        "temperature": 0.3,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "If grounding fails, the console arcs, dealing 0 raw damage but significantly burning through immediate resources.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Hector mistakenly grabs the live wire, thinking it's the ground.",
+          "below_dc_complicated_fail_forward": "The ground is established, but the console shorts out, requiring manual override.",
+          "meets_dc_clean_success": "Hector perfectly grounds the console just as the shear peaks.",
+          "dc_plus_5_or_20_extended_lore": "Hector not only grounds the console but discovers a harmonic resonance pattern in the shear."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_inference",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Hector grips the insulated wrench, ready to lock the final shunt. What does he do?"
+      }
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "interlocutor_full_cards_loaded": 0,
+    "leaked_interlocutor_private_cards": false,
+    "active_pov_id": "enclave_01_hector"
+  },
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio"
 }
