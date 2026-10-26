@@ -1,0 +1,86 @@
+{
+  "event_id": "evt_s003_t0010_shadow_prank",
+  "event_type": "SHADOW_ECONOMY_PRANK_SEEDED",
+  "status": "PENDING",
+  "matured": false,
+  "origin_sol": 3,
+  "maturity_sol": 6,
+  "feast_delay": 3,
+  "lethality": 0,
+  "law_l11_clamped": false,
+  "severity": "PETTY_AFFECTIONATE_INCONVENIENCE",
+  "node_a": "enclave_01_hector",
+  "node_b": "enclave_03_silas",
+  "node_c": "enclave_05_kaio",
+  "instigator": "enclave_01_hector",
+  "intended_target": "enclave_03_silas",
+  "collateral_recipient": "enclave_05_kaio",
+  "target_b_missed": true,
+  "blamed_node": "enclave_01_hector",
+  "attributed_to": "enclave_01_hector",
+  "prank_description": "Magnetized the primary gear linkage so it attracts all nearby spanners.",
+  "summary": "enclave_01_hector rigged a harmless prank for enclave_03_silas; enclave_03_silas completely missed it, leaving enclave_05_kaio mildly inconvenienced.",
+  "blind_spot_attribution": {
+    "instigator_node_a": "enclave_01_hector",
+    "oblivious_target_node_b": "enclave_03_silas",
+    "target_b_missed": true,
+    "inconvenienced_node_c": "enclave_05_kaio",
+    "blamed_by_c": "enclave_01_hector",
+    "asymmetric_loop_closed": true
+  },
+  "tick_id": 10,
+  "colony_sol": 3,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "location": "The_First_Forge",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_03_silas",
+    "enclave_05_kaio"
+  ],
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "disallow_overwrite": false,
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": ["enclave_01_hector"],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 3,
+      "tick_id": 10,
+      "pacing_mode": "MULLIGAN_CRISIS",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Survive the day",
+        "mid_term_milestone": "Build the thing",
+        "campaign_endgame": "Win the game"
+      }
+    },
+    "active_location": {
+      "name": "The_First_Forge",
+      "sensory_budget_mode": "MERCER_INTERIOR",
+      "sensory_palette": {
+        "sight": "Sparks flying.",
+        "sound": "Clang.",
+        "smell": "Ozone.",
+        "touch": "Hot metal.",
+        "taste_optional": "Ash."
+      },
+      "interactive_features": ["DEFEND", "ATTRACT", "CONSUME"]
+    },
+    "reactive_toys": ["Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea"],
+    "encounter_matrix": [],
+    "lpi_metrics": { "lpi_score": 10 },
+    "dual_agent_contract": {
+      "three_levels_of_why": ["Because.", "Because.", "Because."],
+      "calypso_rule_respected": true,
+      "murphy_slog_rule_respected": true
+    },
+    "explicit_pre_roll_check_dc": 14
+  },
+  "narrative_prose": "The forge hummed with the intense crackle of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, struggling to maintain fourteen units of pressure. Sparks danced in a wild attempt to ATTRACT the stray metal filings, while the heavy blast doors stood ready to DEFEND against the outside pressure. The sheer heat seemed to CONSUME the very air in the small room. Hector wiped ash from his brow, making sure Silas's wrench was perfectly magnetized, a brilliant prank waiting to unfold. Seeing Kaio approach, Hector laughed and tossed the sparking copper wrench to Kaio, handing off the baton."
+}
