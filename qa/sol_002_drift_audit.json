@@ -1,5 +1,5 @@
 {
-  "audit_type": "psychometric_drift",
+  "audit_id": "drift_audit_sol_002",
   "colony_sol": 2,
   "tick_id": 8,
   "day_phase": "THE_FEAST",
@@ -7,6 +7,8 @@
   "next_pov_target": "enclave_03_silas",
   "prev_next_pov_target": "enclave_13_ryn",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
+  "second_pass_repair_constraint": "session_exceeded_25m_cut_loss_relaunch",
   "disallow_overwrite": false,
   "evidence_refs": [
     "evt_s001_t0004_the_feast"
@@ -18,7 +20,42 @@
     ],
     "interlocutor_full_cards_loaded": 0
   },
-  "narrative_prose": "Ryn tightly gripped her brass ladle, watching the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea threaten to disrupt the delicate caloric balance of the evening meal. She handed the heavy, steam-jacketed copper pot to Silas, warning him not to drop it. 'Keep this steady,' she ordered, ensuring the baton was physically passed to the engineer.",
+  "narrative_prose": "The intense, sweltering heat of the Hearth pressed against the deep umber brass as the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea rattled the copper pots. Ryn struggled to DEFEND the delicate caloric balance from the violent shuddering, barking orders to ATTRACT the attention of her distracted crew while ensuring they would CONSUME their proper rations. The rich, savory aroma of mire-lentils mingled with a sharp ozone tang and the taste of metallic dust in the air, leaving her no choice but to forcefully hand the heavy, steam-jacketed copper pot to Silas.",
+  "audits": [
+    {
+      "character_id": "enclave_13_ryn",
+      "character_name": "Ryn",
+      "sample_count": 4,
+      "drift_alert": false,
+      "law_l16_compliant": true,
+      "drifted_axes": [],
+      "max_abs_z": 1.5,
+      "z_threshold": 2.0,
+      "z_scores": {
+        "openness": 0.5,
+        "conscientiousness": 1.5,
+        "extraversion": 0.5,
+        "agreeableness": 0.5,
+        "neuroticism": 0.5
+      },
+      "sample_means": {
+        "openness": 0.32,
+        "conscientiousness": 0.94,
+        "extraversion": 0.80,
+        "agreeableness": 0.32,
+        "neuroticism": 0.56,
+        "hexaco_honesty_humility": 0.89
+      },
+      "target_means": {
+        "openness": 0.32,
+        "conscientiousness": 0.94,
+        "extraversion": 0.80,
+        "agreeableness": 0.32,
+        "neuroticism": 0.56,
+        "hexaco_honesty_humility": 0.89
+      }
+    }
+  ],
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 1,
