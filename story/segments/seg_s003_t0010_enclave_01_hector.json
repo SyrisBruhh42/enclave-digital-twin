@@ -107,7 +107,7 @@
       "explicit_pre_roll_dc": 14,
       "failure_stakes_declared": "Hector acts too slowly, allowing the pressure wave to graze the delicate diagnostics before he can fully secure them.",
       "graduated_outcomes": {
-        "nat_1_False_intuition": "You misread the telemetry, causing a blowback from the slag vents that ruins the data and scorches your gear.",
+        "nat_1_false_intuition": "You misread the telemetry, causing a blowback from the slag vents that ruins the data and scorches your gear.",
         "below_dc_complicated_fail_forward": "You secure the forge, but the telemetry is scrambled; Kaio will have to fly partially blind.",
         "meets_dc_clean_success": "You execute the lockdown perfectly, processing clean data and tossing the glowing cylinder to Kaio.",
         "dc_plus_5_or_20_extended_lore": "You perfectly synchronize the lockdown with the shear wave, generating excess power to supercharge Kaio's scout rig."
