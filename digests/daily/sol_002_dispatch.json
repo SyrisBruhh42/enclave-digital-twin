@@ -21,18 +21,16 @@
     "story_id": "story_002_01",
     "pattern_type": "SCHRODINGER_HARVEST_STANDOFF",
     "story_title": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
-    "narrative_summary": "A three-way specialist resource standoff (All 16 members of The Enclave gathered around Ryn and Elara's hearth on Sol 1 to break warm iron-wheat bread, debate magnetohydrodynamic kelvin-helmholtz shear across the ferrofluid sea, and release the day's magnetospheric tension.) was resolved via Diplomacy of Competence and Hub adjudication ([DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands.).",
+    "narrative_summary": "Ryn wrestles with the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, desperately maintaining the delicate caloric balance of the Hub's stockpots. She fiercely guards the communal meal against structural friction, ultimately silently passing a physical bowl of sustenance directly into Silas's waiting hands to secure his watch.",
     "cited_event_ids": [
-      "evt_s001_t0001_dawn_shift",
-      "evt_s001_t0004_the_feast"
+      "evt_s002_t0008_reflection"
     ],
     "actors": [
-      "enclave_03_silas",
-      "enclave_01_hector"
+      "enclave_13_ryn"
     ],
-    "location": "The_First_Forge",
+    "location": "The_Hub_Hearth",
     "locations": [
-      "The_First_Forge"
+      "The_Hub_Hearth"
     ],
     "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
     "salience_score": 85.0
@@ -41,9 +39,9 @@
   "four_block_digests": {
     "DAWN_SHIFT": {
       "headline": "DAWN_SHIFT",
-      "summary": "[DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands.",
+      "summary": "[DAWN_SHIFT at The_First_Forge] Silas squints through the reinforced viewport of The First Forge, calibrating the heavy brass chronometer against the erratic resonance of the exterior storm. The magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea is pulling violent eddies into the atmospheric grid, demanding absolute precision. He steps back from the primary anvil, his knuckles white around the insulated baton, and firmly places it into Hector's awaiting hand for the shift transition.",
       "cited_event_ids": [
-        "evt_s001_t0001_dawn_shift"
+        "evt_s002_t0005_morning_intent"
       ],
       "actors": [
         "enclave_03_silas",
@@ -52,55 +50,14 @@
       "location": "The_First_Forge",
       "day_phase": "DAWN_SHIFT"
     },
-    "MIDDAY_EXPEDITION": {
-      "headline": "MIDDAY_EXPEDITION",
-      "summary": "[MIDDAY_EXPEDITION at Basalt_Spire_Ridge] Hector calibrated the hand-forged brass instrumentation against relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron, then passed the warm copper calibration baton directly into Kaio's hands.",
-      "cited_event_ids": [
-        "evt_s001_t0002_midday_expedition"
-      ],
-      "actors": [
-        "enclave_01_hector",
-        "enclave_05_kaio"
-      ],
-      "location": "Basalt_Spire_Ridge",
-      "day_phase": "MIDDAY_EXPEDITION"
-    },
-    "DUSK_CRAFT": {
-      "headline": "DUSK_CRAFT",
-      "summary": "[DUSK_CRAFT at The_Simulacrum] Kaio calibrated the hand-forged brass instrumentation against polyvagal neuro-somatic thermal regulation under bifurcated crater micro-climates, then passed the warm copper calibration baton directly into Orion's hands.",
-      "cited_event_ids": [
-        "evt_s001_t0003_dusk_craft"
-      ],
-      "actors": [
-        "enclave_05_kaio",
-        "enclave_09_orion"
-      ],
-      "location": "The_Simulacrum",
-      "day_phase": "DUSK_CRAFT"
-    },
     "THE_FEAST": {
       "headline": "THE_FEAST",
-      "summary": "All 16 members of The Enclave gathered around Ryn and Elara's hearth on Sol 1 to break warm iron-wheat bread, debate magnetohydrodynamic kelvin-helmholtz shear across the ferrofluid sea, and release the day's magnetospheric tension.",
+      "summary": "Ryn wrestles with the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, desperately maintaining the delicate caloric balance of the Hub's stockpots before silently passing a bowl of sustenance to Silas.",
       "cited_event_ids": [
-        "evt_s001_t0004_the_feast"
+        "evt_s002_t0008_reflection"
       ],
       "actors": [
-        "enclave_01_hector",
-        "enclave_02_jane",
-        "enclave_03_silas",
-        "enclave_04_leo",
-        "enclave_05_kaio",
-        "enclave_06_zara",
-        "enclave_07_willow",
-        "enclave_08_terra",
-        "enclave_09_orion",
-        "enclave_10_isla",
-        "enclave_11_kenna",
-        "enclave_12_elias",
-        "enclave_13_ryn",
-        "enclave_14_vex",
-        "enclave_15_dorian",
-        "enclave_16_elara"
+        "enclave_13_ryn"
       ],
       "location": "The_Hub_Hearth",
       "day_phase": "THE_FEAST"
@@ -109,8 +66,6 @@
   "gossip_items": [],
   "covered_day_phases": [
     "DAWN_SHIFT",
-    "MIDDAY_EXPEDITION",
-    "DUSK_CRAFT",
     "THE_FEAST"
   ],
   "title": "SOL 2 EVENING DISPATCH",
@@ -126,20 +81,20 @@
       "pacing_mode": "MERCER_IMMERSIVE",
       "consequential_fights_since_short_rest": 0,
       "horizon_goals": {
-        "immediate_session_goal": "Survive",
-        "mid_term_milestone": "Build",
-        "campaign_arc_climax": "Tame"
+        "immediate_session_goal": "Maintain the thermodynamic integrity of the nightly meal against ferrofluid shear anomalies.",
+        "mid_term_milestone": "Stabilize the Hub's caloric reserves under variable barometric pressure.",
+        "campaign_arc_climax": "Integrate the metabolic engine with the Enclave's core atmospheric controls."
       }
     },
     "active_location": {
       "location_id": "The_Hub_Hearth",
-      "macro_silhouette": "The Hub Hearth glows warmly, casting dancing shadows against the heavy iron bulkheads. The smell of rich stew bubbles from the oversized copper kettles, bringing a sense of home to the stark enclave.",
+      "macro_silhouette": "The Hub Hearth glows warmly, casting dancing shadows against the heavy iron bulkheads. The dense warmth of the hearth presses outward, fighting the chilling draft of the valley floor as copper kettles shudder under unseen environmental stress.",
       "sensory_palette": {
-        "sight_and_color": "Warm amber firelight flickering against dark polished copper.",
-        "sound": "The rhythmic bubbling of the stockpot and soft crackle of the hearth.",
-        "smell": "Rich aromas of caramelized root vegetables and ozone.",
-        "tactile_temperature": "Comfortingly warm and humid near the stoves.",
-        "taste_optional": "Savory, hearty broth with a sharp metallic tang."
+        "sight_and_color": "Deep umber, warped copper reflections, and an aggressive warm amber glow.",
+        "sound": "Harsh, rhythmic shuddering of heavy stockpots and the sharp scrape of brass ladles.",
+        "smell": "Rich iron-wheat crusts cut by a sharp, ozone-laden tang of the unsettled ferrofluid.",
+        "tactile_temperature": "Oppressive, localized radiant heat cutting fiercely through a harsh, creeping structural cold.",
+        "taste_optional": "Lingering roasted myco-protein, underpinned by a metallic, mineral bite."
       },
       "interactive_features": [
         {
@@ -164,20 +119,20 @@
     },
     "reactive_toys": [
       {
-        "entity_id": "toy_02",
-        "name_and_role": "Ferrofluid Sea Disturbance",
-        "motivation_goal": "Ripple across the colony foundations.",
-        "consistent_method": "Magnetohydrodynamic Kelvin-Helmholtz shear.",
-        "immediate_complication": "Vibrations threaten the delicate balance of the hearth's temperature.",
-        "pressure_index": 5,
-        "uninterrupted_escalation": "Will extinguish the fire if unchecked."
+        "entity_id": "toy_ferrofluid_resonance_shear",
+        "name_and_role": "Magnetohydrodynamic Shear Wave",
+        "motivation_goal": "To induce violent structural shearing along the colony's rigid metallic architectures.",
+        "consistent_method": "Pulsing erratic thermal and kinetic spikes up through the Hub's foundation plating.",
+        "immediate_complication": "Threatens to violently boil over the delicate communal stock, ruining the caloric ledger.",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "Eventual fracture of the hearth's thermal shielding and massive loss of food stores."
       }
     ],
     "encounter_matrix": {
       "three_levels_of_why": {
-        "level_1_immediate": "Keep the meal from ruining.",
-        "level_2_local": "Ensure the colony is fed.",
-        "level_3_campaign_arc": "Maintain morale amidst planetary shear."
+        "level_1_immediate": "Ryn must aggressively re-balance the heat distribution before the stockpot boils over and ruins dinner.",
+        "level_2_local": "The magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea is transmitting destructive interference directly into the galley's thermal manifolds.",
+        "level_3_campaign_arc": "Mastering thermodynamic equilibrium amidst exoplanetary phenomena is essential for the Enclave's survival."
       },
       "active_specialist_roles": [
         {
@@ -208,12 +163,12 @@
         "model": "llama",
         "temperature": 0.2,
         "explicit_pre_roll_dc": 14,
-        "failure_stakes_declared": "The broth is scorched, causing minor grumbling.",
+        "failure_stakes_declared": "If the thermal buffer fails, the week's myco-protein harvest is lost to carbonization.",
         "graduated_outcomes": {
-          "nat_1_false_intuition": "Total ruin of the feast.",
-          "below_dc_complicated_fail_forward": "Meal is salvaged but tastes burnt.",
-          "meets_dc_clean_success": "Perfectly cooked meal.",
-          "dc_plus_5_or_20_extended_lore": "The meal provides exceptional comfort and insight."
+          "nat_1_false_intuition": "Ryn misreads the pressure gauge, accelerating the boil into an explosive rupture.",
+          "below_dc_complicated_fail_forward": "The stock is saved, but the kettle's pressure valve warps.",
+          "meets_dc_clean_success": "Ryn perfectly syncs the rolling boil with the environmental shear waves.",
+          "dc_plus_5_or_20_extended_lore": "Ryn discovers a resonant culinary frequency, perfectly caramelizing the myco-proteins."
         }
       },
       "master_narrator": {
@@ -225,5 +180,5 @@
       }
     }
   },
-  "narrative_prose": "Ryn adjusted the heavy brass ladle, measuring the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea by the vibrations in the copper stockpot. The broth bubbled steadily, a small comfort against the harsh environment outside. She filled a bowl, the savory aroma cutting through the ozone tang of the forge next door. With a nod, she handed the warm portion directly to Silas, ensuring the next watch was well-fed."
+  "narrative_prose": "The Hub Hearth glows warmly, casting deep umber and warped copper reflections against the heavy iron bulkheads while the harsh rhythmic shuddering of heavy stockpots echoes through the creeping structural cold. Ryn adjusted her heavy brass ladle to DEFEND the delicate caloric balance against the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, using the rich aromas of caramelized root vegetables to ATTRACT the weary colonists. She filled a bowl intended for them to CONSUME, the savory roasted myco-protein lingering with a metallic bite on the tongue, and passed the warm physical bowl directly into Silas's waiting hands."
 }
