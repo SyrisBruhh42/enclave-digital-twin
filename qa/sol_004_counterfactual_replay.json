@@ -2,16 +2,16 @@
   "disallow_overwrite": false,
   "target_path": "qa/sol_004_counterfactual_replay.json",
   "operation": "ADD",
-  "active_pov_id": "enclave_03_silas",
-  "next_pov_target": "enclave_01_hector",
-  "prev_next_pov_target": "enclave_03_silas",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "context_manifest": {
     "full_cards_loaded_count": 1,
     "loaded_full_card_ids": [
-      "enclave_03_silas"
+      "enclave_05_kaio"
     ],
-    "active_pov_id": "enclave_03_silas",
+    "active_pov_id": "enclave_05_kaio",
     "interlocutor_full_cards_loaded": 0,
     "leaked_interlocutor_private_cards": false
   },
@@ -29,30 +29,31 @@
       }
     },
     "active_location": {
-      "location_id": "The_First_Forge_Exterior",
-      "macro_silhouette": "The exterior vista of The First Forge stood as a jagged silhouette of brass and basalt against the screaming Magnetohydrodynamic Kelvin-Helmholtz shear. Arcs of violent purple lightning crawled across the reinforced bulkheads, illuminating the ferrofluid sea below in rhythmic, terrifying bursts. The atmospheric pressure warped the very air, turning the horizon into a smeared painting of raw exoplanet fury.",
+      "location_id": "The_Ferrofluid_Sea_Exterior",
+      "macro_silhouette": "The Magnetohydrodynamic Kelvin-Helmholtz shear ripped across the volatile ferrofluid sea, throwing erratic arcs of raw energy into the bruised twilight. Jagged basalt pinnacles jutted like teeth against the roiling, magnetic tide, glowing faintly under the barrage. The barometric pressure fluctuated wildly, turning the horizon into a smeared, deafening painting of kinetic fury that tasted of ozone and oxidized copper.",
       "sensory_palette": {
         "sight_and_color": "Violet lightning and shifting obsidian ferrofluid",
         "sound": "Deafening, rhythmic roaring of magnetic shear",
         "smell": "Ozone and oxidized copper",
-        "tactile_temperature": "Uncomfortably warm, static-charged air"
+        "tactile_temperature": "Uncomfortably warm, static-charged air",
+        "taste_optional": "Copper tang of static discharge"
       },
       "interactive_features": [
         {
-          "feature_name": "Primary Magnetic Baffles",
-          "affordance_description": "Massive brass plates designed to deflect stray arcs",
+          "feature_name": "Resonant Basalt Spire",
+          "affordance_description": "A tall natural pillar vibrating with the shear",
           "system_verb": "DEFEND",
           "associated_check_dc": 14
         },
         {
-          "feature_name": "Sympathetic Ore Geode",
-          "affordance_description": "A raw, charged geode humming with potential",
+          "feature_name": "Bioluminescent Mycelial Node",
+          "affordance_description": "A glowing cluster of nitrogen-fixing moss",
           "system_verb": "ATTRACT",
           "associated_check_dc": 14
         },
         {
-          "feature_name": "Ferrofluid Sluice Gates",
-          "affordance_description": "Heavy valves to redirect the rising black tide",
+          "feature_name": "Ferrofluid Eddies",
+          "affordance_description": "Swirling currents in the magnetic sea",
           "system_verb": "CONCEAL",
           "associated_check_dc": 14
         }
@@ -63,26 +64,26 @@
         "entity_id": "Kelvin_Helmholtz_Shear",
         "name_and_role": "Magnetohydrodynamic Wave",
         "motivation_goal": "Equilibrate the planetary magnetic field by force",
-        "consistent_method": "Striking unprotected metallic structures",
-        "immediate_complication": "The outer struts of the Forge are beginning to resonate dangerously",
+        "consistent_method": "Striking unprotected metallic structures and biological entities",
+        "immediate_complication": "The shear is scattering the bioluminescent spore paths Kaio relies on",
         "pressure_index": 8,
-        "uninterrupted_escalation": "Will eventually tear the main busbar from its moorings"
+        "uninterrupted_escalation": "Will eventually blind all visual navigation in the sector"
       }
     ],
     "encounter_matrix": {
       "three_levels_of_why": {
-        "level_1_immediate": "The shear threatens immediate catastrophic damage to the Forge.",
+        "level_1_immediate": "The shear threatens immediate disruption to local ecology mapping.",
         "level_2_local": "The magnetic storm is disrupting all colony communication.",
         "level_3_campaign_arc": "Understanding this wave is key to predicting the exoplanet's climate."
       },
       "active_specialist_roles": [
         {
-          "actor_id": "enclave_03_silas",
-          "tactical_role": "DEFENDER"
+          "actor_id": "enclave_05_kaio",
+          "tactical_role": "STRIKER"
         },
         {
-          "actor_id": "enclave_01_hector",
-          "tactical_role": "STRIKER"
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "DEFENDER"
         }
       ],
       "strain_accumulated_upward": 1,
@@ -108,12 +109,12 @@
         "model": "local_steward",
         "temperature": 0.2,
         "explicit_pre_roll_dc": 14,
-        "failure_stakes_declared": "The strut collapses, forcing the Forge into emergency lockdown.",
+        "failure_stakes_declared": "The spore paths scatter, leaving the sector unmapped and dangerous.",
         "graduated_outcomes": {
-          "nat_1_false_intuition": "Silas misjudges the frequency, exacerbating the resonance.",
-          "below_dc_complicated_fail_forward": "The strut holds, but Silas takes a massive static shock.",
-          "meets_dc_clean_success": "The strut is reinforced perfectly, deflecting the wave.",
-          "dc_plus_5_or_20_extended_lore": "Silas deduces the wave's underlying pattern, granting advantage to Hector."
+          "nat_1_false_intuition": "Kaio misreads the eddy currents, stepping into a localized magnetic sinkhole.",
+          "below_dc_complicated_fail_forward": "Kaio gathers the data, but drops his brass sextant in the ferrofluid.",
+          "meets_dc_clean_success": "Kaio correctly charts the shear, mapping a safe route through the glowing moss.",
+          "dc_plus_5_or_20_extended_lore": "Kaio discovers a new resonant frequency in the basalt that can predict future shears."
         }
       },
       "master_narrator": {
@@ -121,9 +122,9 @@
         "temperature": 0.7,
         "calypso_zero_raw_stats": true,
         "prosodic_micro_pauses_enabled": true,
-        "agency_handoff_prompt": "Silas passes the initiative to Hector."
+        "agency_handoff_prompt": "Kaio passes the initiative to Ryn."
       }
     }
   },
-  "narrative_prose": "Silas wiped grease from his forehead, adjusting his heavy goggles as the Magnetohydrodynamic Kelvin-Helmholtz shear screamed across the ferrofluid sea. The shimmering expanse danced with volatile energy, throwing violet shadows against the basalt walls of The First Forge. 'Inefficient,' he grumbled, watching the waves crest. The structural supports were groaning under the pressure. He gripped the iron spanner tight, finding a familiar rhythm as he reinforced the primary struts. When he turned, the air crackled. He tossed the spanner, end over end, straight at Hector's chest. 'Your turn, Stormbreaker. Don't melt it.'"
+  "narrative_prose": "Kaio clung to the vibrating side of the Resonant Basalt Spire, his breath hitching as the Magnetohydrodynamic Kelvin-Helmholtz shear roared overhead. Violet lightning crawled down his arms, making the brass sextant in his grip feel almost alive against the copper tang of static on his tongue. He had to ATTRACT the Bioluminescent Mycelial Node's glow, coaxing it into a readable path, but the ferrofluid sea below was churning too wildly. The shear was deafening, smelling of ozone and oxidized copper, and the uncomfortably warm air pushed him to CONCEAL himself behind a jagged outcropping. He sketched frantically, trying to DEFEND his fragile parchment from the wind. He scrambled up the spire, whistling a three-note bird call to steady his nerves, and reached the safety of the upper ridge. He shoved a handful of glowing, nitrogen-fixing moss into Ryn's calloused hand. 'Look at the eddy patterns! You can use this for the braised mire-lentils!'"
 }
