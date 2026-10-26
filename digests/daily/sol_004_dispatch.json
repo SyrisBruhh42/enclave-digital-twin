@@ -17,7 +17,7 @@
       "story_id": "story_004_01",
       "pattern_type": "SCHRODINGER_HARVEST_STANDOFF",
       "story_title": "Magnetohydrodynamic Shear at The Forge",
-      "narrative_summary": "Silas hands off the warm copper calibration baton to Hector.",
+      "narrative_summary": "Ryn hands off the warm copper calibration baton to Silas.",
       "cited_event_ids": [
         "evt_s001_t0001_dawn_shift",
         "evt_s001_t0002_midday_expedition",
@@ -25,8 +25,8 @@
         "evt_s001_t0004_the_feast"
       ],
       "actors": [
-        "enclave_03_silas",
-        "enclave_01_hector"
+        "enclave_13_ryn",
+        "enclave_03_silas"
       ],
       "location": "The_First_Forge",
       "locations": [
@@ -53,7 +53,7 @@
     "story_id": "story_004_01",
     "pattern_type": "SCHRODINGER_HARVEST_STANDOFF",
     "story_title": "Magnetohydrodynamic Shear at The Forge",
-    "narrative_summary": "Silas hands off the warm copper calibration baton to Hector.",
+    "narrative_summary": "Ryn hands off the warm copper calibration baton to Silas.",
     "cited_event_ids": [
       "evt_s001_t0001_dawn_shift",
       "evt_s001_t0002_midday_expedition",
@@ -61,8 +61,8 @@
       "evt_s001_t0004_the_feast"
     ],
     "actors": [
-      "enclave_03_silas",
-      "enclave_01_hector"
+      "enclave_13_ryn",
+      "enclave_03_silas"
     ],
     "location": "The_First_Forge",
     "locations": [
@@ -89,38 +89,38 @@
     "evt_s001_t0003_dusk_craft",
     "evt_s001_t0004_the_feast"
   ],
-  "broadcast_script": "The heavy brass condenser hummed. Silas tightened the seal. Silas handed the warm copper calibration baton directly to Hector.",
+  "broadcast_script": "The heavy brass condenser hummed. Ryn tightened the seal. Ryn handed the physical warm copper calibration baton directly to Silas.",
   "base_snapshot_tick": 16,
   "known_events": {
     "evt_s004_t0016_the_feast": {
       "event_id": "evt_s004_t0016_the_feast",
       "actors": [
-        "enclave_03_silas",
-        "enclave_01_hector"
+        "enclave_13_ryn",
+        "enclave_03_silas"
       ],
       "location": "The_First_Forge"
     },
     "evt_s004_t0013_dawn_shift": {
       "event_id": "evt_s004_t0013_dawn_shift",
       "actors": [
-        "enclave_03_silas",
-        "enclave_01_hector"
+        "enclave_13_ryn",
+        "enclave_03_silas"
       ],
       "location": "The_First_Forge"
     },
     "evt_s004_t0014_midday_expedition": {
       "event_id": "evt_s004_t0014_midday_expedition",
       "actors": [
-        "enclave_03_silas",
-        "enclave_01_hector"
+        "enclave_13_ryn",
+        "enclave_03_silas"
       ],
       "location": "The_First_Forge"
     },
     "evt_s004_t0015_dusk_craft": {
       "event_id": "evt_s004_t0015_dusk_craft",
       "actors": [
-        "enclave_03_silas",
-        "enclave_01_hector"
+        "enclave_13_ryn",
+        "enclave_03_silas"
       ],
       "location": "The_First_Forge"
     }
@@ -129,32 +129,32 @@
     "evt_s004_t0016_the_feast": {
       "event_id": "evt_s004_t0016_the_feast",
       "actors": [
-        "enclave_03_silas",
-        "enclave_01_hector"
+        "enclave_13_ryn",
+        "enclave_03_silas"
       ],
       "location": "The_First_Forge"
     },
     "evt_s004_t0013_dawn_shift": {
       "event_id": "evt_s004_t0013_dawn_shift",
       "actors": [
-        "enclave_03_silas",
-        "enclave_01_hector"
+        "enclave_13_ryn",
+        "enclave_03_silas"
       ],
       "location": "The_First_Forge"
     },
     "evt_s004_t0014_midday_expedition": {
       "event_id": "evt_s004_t0014_midday_expedition",
       "actors": [
-        "enclave_03_silas",
-        "enclave_01_hector"
+        "enclave_13_ryn",
+        "enclave_03_silas"
       ],
       "location": "The_First_Forge"
     },
     "evt_s004_t0015_dusk_craft": {
       "event_id": "evt_s004_t0015_dusk_craft",
       "actors": [
-        "enclave_03_silas",
-        "enclave_01_hector"
+        "enclave_13_ryn",
+        "enclave_03_silas"
       ],
       "location": "The_First_Forge"
     }
@@ -170,12 +170,11 @@
         "immediate_session_goal": "Survive the shear",
         "mid_term_milestone": "Build the Forge",
         "campaign_arc_climax": "Tame the planet"
-      },
-      "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC"
+      }
     },
     "active_location": {
       "location_id": "The_First_Forge",
-      "macro_silhouette": "The forge is loud. It is very hot. Metal clangs.",
+      "macro_silhouette": "The forge is loud with the sound of roaring thunder and deafening clangs of heavy hammer on brass, vibrating the very air. Bright orange arcs of lightning geode illuminate the walls as oppressive heat radiates through the dry space. Ryn can smell the sharp tang of ozone and burnt metallic dust while tasting copper on her tongue as she realizes she must DEFEND the lightning geode condenser from overloading, ATTRACT the heat by pumping the brass bellows, and CONSUME the overheating metals in the coolant vat.",
       "sensory_palette": {
         "sight_and_color": "Bright orange arcs of lightning geode.",
         "sound": "Deafening clang of heavy hammer on brass.",
@@ -217,17 +216,17 @@
     ],
     "encounter_matrix": {
       "three_levels_of_why": {
-        "level_1_immediate": "The shear is tearing the forge.",
-        "level_2_local": "The ferrofluid sea is angry.",
-        "level_3_campaign_arc": "The planet is testing them."
+        "level_1_immediate": "The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea is destabilizing the forge.",
+        "level_2_local": "Ryn and Silas must carefully calibrate the resonance before the shear overwhelms their thermal shielding.",
+        "level_3_campaign_arc": "Mastering this shear is the key to taming the ferrofluid sea for the Enclave's survival."
       },
       "active_specialist_roles": [
         {
-          "actor_id": "enclave_03_silas",
+          "actor_id": "enclave_13_ryn",
           "tactical_role": "DEFENDER"
         },
         {
-          "actor_id": "enclave_01_hector",
+          "actor_id": "enclave_03_silas",
           "tactical_role": "STRIKER"
         }
       ],
@@ -270,5 +269,6 @@
         "agency_handoff_prompt": "Silas, what do you do?"
       }
     }
-  }
+  },
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC"
 }
