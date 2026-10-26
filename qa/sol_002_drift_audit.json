@@ -1,16 +1,16 @@
 {
-  "audit_type": "psychometric_drift",
+  "audit_id": "drift_audit_sol_002",
   "colony_sol": 2,
   "tick_id": 8,
+  "base_snapshot_tick": 8,
+  "event_type": "DRIFT_AUDIT",
   "day_phase": "THE_FEAST",
   "active_pov_id": "enclave_13_ryn",
   "next_pov_target": "enclave_03_silas",
   "prev_next_pov_target": "enclave_13_ryn",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
   "disallow_overwrite": false,
-  "evidence_refs": [
-    "evt_s001_t0004_the_feast"
-  ],
   "context_manifest": {
     "full_cards_loaded_count": 1,
     "loaded_full_card_ids": [
@@ -34,7 +34,7 @@
     },
     "active_location": {
       "location_id": "The_Hearth",
-      "macro_silhouette": "The Hearth is a warm, bustling galley dominated by thirty-gallon steam-jacketed kettles. Condensation runs down the brass fittings, glowing softly in the dim light.",
+      "macro_silhouette": "The Hearth is a warm, bustling galley dominated by thirty-gallon steam-jacketed kettles. Condensation runs down the brass fittings, glowing softly in the dim light. The heat is palpable, thick with the scent of spices and rendering fat.",
       "sensory_palette": {
         "sight_and_color": "dim light and glowing brass",
         "sound": "bubbling stew and hissing steam",
@@ -59,6 +59,12 @@
           "feature_name": "Iron-Wheat Loaf",
           "affordance_description": "Can be eaten to restore stamina.",
           "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Linen Towel",
+          "affordance_description": "Can be used to hide small tools or ingredients.",
+          "system_verb": "CONCEAL",
           "associated_check_dc": 14
         }
       ]
@@ -125,5 +131,150 @@
         "agency_handoff_prompt": "Silas takes the pot. What does he do?"
       }
     }
-  }
+  },
+  "eav_failure_lessons": [
+    "@ENT[enclave-digital-twin:INCHARACTER_PSYCHOMETRIC_DRIFT_AUDITS] | @ATTR[second_pass_repair_constraint] = @ENT[enclave:11133657302377486465] @ATTR[f120_stall_timeout] = session_exceeded_25m_cut_loss_relaunch @CONF[1.00] @TIME[2026-10-26T11:38:01Z] @PROV[f120_reaper] | @CONF[1.00] | @TIME[2026-10-26T11:38:03Z] | @PROV[sol002_t0008]"
+  ],
+  "characters_audited": 16,
+  "audits": [
+    {
+      "character_id": "enclave_13_ryn",
+      "character_name": "Ryn",
+      "sample_count": 4,
+      "drift_alert": true,
+      "law_l16_compliant": true,
+      "drifted_axes": ["neuroticism"],
+      "max_abs_z": 2.2,
+      "z_threshold": 2.0,
+      "z_scores": {
+        "openness": 0.5,
+        "conscientiousness": 0.5,
+        "extraversion": 0.5,
+        "agreeableness": 0.5,
+        "neuroticism": 2.2
+      },
+      "sample_means": {
+        "openness": 0.32,
+        "conscientiousness": 0.94,
+        "extraversion": 0.8,
+        "agreeableness": 0.32,
+        "neuroticism": 0.78,
+        "hexaco_honesty_humility": 0.89
+      },
+      "target_means": {
+        "openness": 0.32,
+        "conscientiousness": 0.94,
+        "extraversion": 0.8,
+        "agreeableness": 0.32,
+        "neuroticism": 0.56,
+        "hexaco_honesty_humility": 0.89
+      },
+      "target_sds": {
+        "openness": 0.08,
+        "conscientiousness": 0.04,
+        "extraversion": 0.06,
+        "agreeableness": 0.08,
+        "neuroticism": 0.09,
+        "hexaco_honesty_humility": 0.05
+      },
+      "sample_deviations": {
+        "openness": 0.0,
+        "conscientiousness": 0.0,
+        "extraversion": 0.0,
+        "agreeableness": 0.0,
+        "neuroticism": 0.22,
+        "hexaco_honesty_humility": 0.0
+      },
+      "trait_metrics": {
+        "openness": {
+          "axis": "openness",
+          "sample_count": 4,
+          "sample_mean": 0.32,
+          "target_mean": 0.32,
+          "target_sd": 0.08,
+          "standard_error": 0.04,
+          "deviation": 0.0,
+          "z_score": 0.0,
+          "drifted": false,
+          "direction": "NOMINAL"
+        },
+        "conscientiousness": {
+          "axis": "conscientiousness",
+          "sample_count": 4,
+          "sample_mean": 0.94,
+          "target_mean": 0.94,
+          "target_sd": 0.04,
+          "standard_error": 0.02,
+          "deviation": 0.0,
+          "z_score": 0.0,
+          "drifted": false,
+          "direction": "NOMINAL"
+        },
+        "extraversion": {
+          "axis": "extraversion",
+          "sample_count": 4,
+          "sample_mean": 0.8,
+          "target_mean": 0.8,
+          "target_sd": 0.06,
+          "standard_error": 0.03,
+          "deviation": 0.0,
+          "z_score": 0.0,
+          "drifted": false,
+          "direction": "NOMINAL"
+        },
+        "agreeableness": {
+          "axis": "agreeableness",
+          "sample_count": 4,
+          "sample_mean": 0.32,
+          "target_mean": 0.32,
+          "target_sd": 0.08,
+          "standard_error": 0.04,
+          "deviation": 0.0,
+          "z_score": 0.0,
+          "drifted": false,
+          "direction": "NOMINAL"
+        },
+        "neuroticism": {
+          "axis": "neuroticism",
+          "sample_count": 4,
+          "sample_mean": 0.78,
+          "target_mean": 0.56,
+          "target_sd": 0.09,
+          "standard_error": 0.045,
+          "deviation": 0.22,
+          "z_score": 4.8888,
+          "drifted": true,
+          "direction": "HIGH"
+        },
+        "hexaco_honesty_humility": {
+          "axis": "hexaco_honesty_humility",
+          "sample_count": 4,
+          "sample_mean": 0.89,
+          "target_mean": 0.89,
+          "target_sd": 0.05,
+          "standard_error": 0.025,
+          "deviation": 0.0,
+          "z_score": 0.0,
+          "drifted": false,
+          "direction": "NOMINAL"
+        }
+      },
+      "sycophancy_drift_detected": false,
+      "social_conformity_drift": false,
+      "assistant_axis_drift_detected": false,
+      "assistant_axis_reasons": [],
+      "re_anchor_ticks": 3,
+      "corrective_authors_note": "Ryn must strictly maintain her authoritative kitchen persona; the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea threatens caloric stability.",
+      "name": "Ryn",
+      "axis_z_scores": {
+        "openness": 0.0,
+        "conscientiousness": 0.0,
+        "extraversion": 0.0,
+        "agreeableness": 0.0,
+        "neuroticism": 4.8888
+      },
+      "worst_axis": "neuroticism"
+    }
+  ],
+  "target_path": "qa/sol_002_drift_audit.json"
 }
