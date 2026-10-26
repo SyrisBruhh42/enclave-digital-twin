@@ -30,6 +30,17 @@
   "lethality": 0,
   "target_path": "story/feasts/sol_004_feast.json",
   "disallow_overwrite": false,
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 4,
@@ -97,8 +108,8 @@
           "tactical_role": "DEFENDER"
         },
         {
-          "actor_id": "enclave_01_hector",
-          "tactical_role": "STRIKER"
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "LEADER"
         }
       ],
       "strain_accumulated_upward": 1,
@@ -126,10 +137,10 @@
         "explicit_pre_roll_dc": 14,
         "failure_stakes_declared": "If the dampener fails, the feast is ruined and tension skyrockets.",
         "graduated_outcomes": {
-          "nat_1_false_intuition": "Silas completely miscalibrates the dampener, causing a feedback loop.",
+          "nat_1_false_intuition": "Ryn completely miscalibrates the dampener, causing a feedback loop.",
           "below_dc_complicated_fail_forward": "The dampener holds, but shorts out half the lighting in the Hub.",
-          "meets_dc_clean_success": "Silas smoothly stabilizes the resonance, allowing the feast to proceed.",
-          "dc_plus_5_or_20_extended_lore": "Silas not only stabilizes the resonance but discovers a new harmonics pattern in the shear."
+          "meets_dc_clean_success": "Ryn smoothly stabilizes the resonance, allowing the feast to proceed.",
+          "dc_plus_5_or_20_extended_lore": "Ryn not only stabilizes the resonance but discovers a new harmonics pattern in the shear."
         }
       },
       "master_narrator": {
@@ -137,11 +148,9 @@
         "temperature": 0.7,
         "calypso_zero_raw_stats": true,
         "prosodic_micro_pauses_enabled": true,
-        "agency_handoff_prompt": "Silas adjusted his grip on the dampener controls, nodding tightly. He handed the diagnostic slate to Hector. 'Your turn, prodigy.'"
+        "agency_handoff_prompt": "Ryn rapped her heavy brass ladle on the butcher block, wiping the flour from her apron. She tossed the heavy diagnostic slate directly into Silas's waiting hands. 'Your problem now, Silas.'"
       }
     }
   },
-  "narrative_prose": "Silas stared grimly at the vibrating ferrofluid viewport, his jaw tight. The magnetohydrodynamic Kelvin-Helmholtz shear was peaking, rattling the very foundations of the Hub Hearth. He didn't need to check the exact resonance frequency; he could feel it in his bones. With a heavy sigh, he adjusted the dampener, ignoring the sharp chill that bit at his fingers. It was inefficient, this constant battle against the planet, but necessary. He grabbed a slice of the warm iron-wheat bread, its heat a small comfort against the ozone-scented air. He turned to Hector, passing the heavy diagnostic slate with a curt nod. 'Don't drop it,' he muttered.",
-  "active_pov_id": "enclave_03_silas",
-  "next_pov_target": "enclave_01_hector"
+  "narrative_prose": "Ryn stood over the bubbling stockpot, the aroma of ozone and warm iron-wheat bread thick in the chilling air. The magnetohydrodynamic Kelvin-Helmholtz shear raged outside, its low thrum rattling the deep violet shadows across the cold iron bulkheads. The erratic vibrations threatened to slide the entire bread basket off the table. She rapped her heavy brass ladle against the butcher block, glaring at the ferrofluid viewport. 'Eat your bread before it falls,' she barked at the assembly, her fierce pride hidden behind the culinary order. She snatched up the diagnostic slate that monitored the magnetic resonance dampener and tossed it across the room. Silas caught the heavy physical object cleanly. 'Your turn, Silas. Keep this place from falling apart while I finish the soup.'"
 }
