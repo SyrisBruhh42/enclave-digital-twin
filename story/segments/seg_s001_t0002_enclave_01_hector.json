@@ -1,4 +1,5 @@
 {
+  "disallow_overwrite": false,
   "segment_id": "seg_s001_t0002_enclave_01_hector",
   "segment_index": 2,
   "tick_id": 2,
@@ -7,10 +8,115 @@
   "base_snapshot_tick": 1,
   "active_pov_id": "enclave_01_hector",
   "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
   "location": "Basalt_Spire_Ridge",
-  "science_vegetable": "Relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron",
-  "text": "[MIDDAY_EXPEDITION at Basalt_Spire_Ridge] Hector calibrated the hand-forged brass instrumentation against relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron, then passed the warm copper calibration baton directly into Kaio's hands.",
-  "context_manifest_path": "context/manifests/manifest_s001_t0002_enclave_01_hector.json",
-  "total_prompt_tokens": 796,
-  "target_path": "story/segments/seg_s001_t0002_enclave_01_hector.json"
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0
+  },
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 1,
+      "tick_id": 2,
+      "pacing_mode": "MULLIGAN_CRISIS",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Stabilize the ferrofluid induction coils",
+        "mid_term_milestone": "Complete the first forge upgrade",
+        "campaign_arc_climax": "Harness the planet's core energy"
+      }
+    },
+    "active_location": {
+      "location_id": "Basalt_Spire_Ridge",
+      "macro_silhouette": "The jagged Basalt Spire Ridge loomed over the churning ferrofluid sea, its obsidian crags catching the harsh glare of the twin suns. Below, the metallic ocean roiled with magnetic shear, violently ripping and reforming in dark, viscous waves. Hector stood at the precipice, bracing against the gale while holding the hand-forged brass instrumentation. The storm's charge kissed his skin, the entire vista alive with the chaotic power of the world. He then handed the warm copper calibration baton directly into Kaio's waiting hands.",
+      "sensory_palette": {
+        "sight_and_color": "Blinding twin-sun glare on churning dark ferrofluid and jagged obsidian crags.",
+        "sound": "Deafening roar of magnetic shear tearing the metallic waves and the sharp crackle of static.",
+        "smell": "Ozone-rich air mixed with the sharp metallic tang of rusted iron.",
+        "tactile_temperature": "Biting cold wind and the prickle of high-voltage static against exposed skin.",
+        "taste_optional": "The bitter metallic tang of ionized dust on the tongue."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Obsidian Grounding Spire",
+          "affordance_description": "A jagged outcropping of conductive rock.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Ferrofluid Surge Pool",
+          "affordance_description": "A well of volatile, churning magnetic liquid.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Brass Calibration Nodes",
+          "affordance_description": "Scattered conductive points drawing static charge.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_shear_storm",
+        "name_and_role": "Ferrofluid Storm - Environmental Hazard",
+        "motivation_goal": "Disrupt magnetic stability",
+        "consistent_method": "Surging waves of charged liquid",
+        "immediate_complication": "Induction coils are overheating",
+        "pressure_index": 7,
+        "uninterrupted_escalation": "The shear will rip the spire apart."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The induction coils must be stabilized to prevent an arc flash.",
+        "level_2_local": "The Basalt Spire Ridge is the only point high enough to ground the charge.",
+        "level_3_campaign_arc": "Mastering the ferrofluid sea's power is essential for the colony's survival."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [1, 2, 3, 4, 5]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.5,
+      "motivational_vector_saturation": 0.5,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.8,
+      "composite_lpi": 0.6,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_ai_manager",
+        "model": "judge_v1",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The induction coil burns out, halting power generation.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Hector overcompensates, shattering the coil.",
+          "below_dc_complicated_fail_forward": "The coil holds, but Hector takes a nasty shock.",
+          "meets_dc_clean_success": "Hector perfectly grounds the charge.",
+          "dc_plus_5_or_20_extended_lore": "Hector discovers a new resonance frequency."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_ai_manager",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "What do you do next?"
+      }
+    }
+  },
+  "text": "The jagged Basalt Spire Ridge loomed over the churning ferrofluid sea, its obsidian crags catching the harsh glare of the twin suns. Below, the metallic ocean roiled with magnetic shear, violently ripping and reforming in dark, viscous waves. Hector stood at the precipice, bracing against the gale while holding the hand-forged brass instrumentation. He read the tensile strain of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea through the immediate tactile feedback of the humming device. The storm's charge kissed his skin, the entire vista alive with the chaotic power of the world. Grinning into the ozone gale, Hector slapped his squadmate on the shoulder and passed the warm copper calibration baton directly into Kaio's hands.",
+  "target_path": "story/segments/seg_s001_t0002_enclave_01_hector.json",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC"
 }
