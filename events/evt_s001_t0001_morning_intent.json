@@ -68,7 +68,7 @@
         "sound": "The rhythmic, heavy thud of pneumatic hammers and the hum of magnetic containment.",
         "smell": "Sharp metallic ozone mingling with the scent of molten brass.",
         "tactile_temperature": "Oppressively hot and dry, with a noticeable static charge prickling the skin.",
-        "taste": "The metallic tang of ozone."
+        "taste_optional": "The metallic tang of ozone."
       },
       "interactive_features": [
         {
@@ -118,7 +118,9 @@
       "prerolled_hazard_queue": [
         4,
         8,
-        15
+        15,
+        12,
+        20
       ]
     },
     "lpi_metrics": {
