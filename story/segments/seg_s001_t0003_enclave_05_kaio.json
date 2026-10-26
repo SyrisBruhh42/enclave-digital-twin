@@ -6,11 +6,127 @@
   "day_phase": "DUSK_CRAFT",
   "base_snapshot_tick": 2,
   "active_pov_id": "enclave_05_kaio",
-  "next_pov_target": "enclave_09_orion",
-  "location": "The_Simulacrum",
-  "science_vegetable": "Polyvagal neuro-somatic thermal regulation under bifurcated crater micro-climates",
-  "text": "[DUSK_CRAFT at The_Simulacrum] Kaio calibrated the hand-forged brass instrumentation against polyvagal neuro-somatic thermal regulation under bifurcated crater micro-climates, then passed the warm copper calibration baton directly into Orion's hands.",
+  "next_pov_target": "enclave_13_ryn",
+  "location": "The_Hearth_Commissary_Exterior",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "text": "[DUSK_CRAFT at The_Hearth_Commissary_Exterior] Kaio received the warm copper calibration baton from Hector and navigated the slick basalt pathways toward the commissary, leaning against the howling magnetohydrodynamic Kelvin-Helmholtz shear that whipped across the churning ferrofluid sea below. He tasted the faint sting of ionized copper on his tongue and smelled the comforting aroma of roasting root vegetables wafting through the violent electric chill of the air. Below him, strobing violet waves cast dizzying shadows along the sheer cliff face as thick, bioluminescent vines lashed violently in the gale, tracing chaotic emerald arcs against the sky. Finding a brief reprieve from the wind behind the heavy reinforced airlock doors, he quickly pushed his way inside. He slipped slightly on a patch of spilled flour, letting out an excited gasp, and passed the baton straight into Ryn's waiting hands.",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 1,
+      "tick_id": 3,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Deliver the stabilized baton data to the Hub before the shear wave scrambles it",
+        "mid_term_milestone": "Upgrade the colony's magnetospheric shielding",
+        "campaign_arc_climax": "Survive the convergence of the twin suns' polarity inversion"
+      }
+    },
+    "active_location": {
+      "location_id": "The_Hearth_Commissary_Exterior",
+      "macro_silhouette": "The basalt steps leading from the Forge to the Commissary hugged a sheer cliff, suspended precariously over the churning metallic waves of the ferrofluid sea. Thick, bioluminescent vines lashed wildly in the screaming magnetic winds, tracing chaotic arcs of emerald light against the stormy sky. Heavy, reinforced blast doors groaned under the shear pressure, offering the only shelter from the violent storm.",
+      "sensory_palette": {
+        "sight_and_color": "Strobing violet metallic waves and emerald bioluminescence",
+        "sound": "Howling magnetic gale and the heavy thud of insulated boots on stone",
+        "smell": "Ozone fading into bruised moss and roasting tubers",
+        "tactile_temperature": "Biting electric chill cutting through sweat-dampened clothes",
+        "taste_optional": "Faint trace of airborne copper dust"
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Lashing Bioluminescent Vines",
+          "affordance_description": "Thick vines whipped around by the gale that can provide temporary anchor points.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Slick Basalt Staircase",
+          "affordance_description": "A precarious, rain-slicked path requiring careful navigation to avoid slipping.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Reinforced Airlock Doors",
+          "affordance_description": "Heavy metal doors that must be quickly shut to block the magnetic shear.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "shear_storm_front",
+        "name_and_role": "Kelvin-Helmholtz Shear Front",
+        "motivation_goal": "Disrupt communication and scramble exposed data modules",
+        "consistent_method": "Blasting concussive waves of magnetic interference across open paths",
+        "immediate_complication": "The baton's charge is fading rapidly under the sheer magnetic interference",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "Will permanently erase the calibration data if not shielded in time"
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Kaio must transport the baton before the data decays.",
+        "level_2_local": "Ryn needs the calibration metrics to adjust the colony's energy grid for dinner.",
+        "level_3_campaign_arc": "Mastering the ferrofluid sea's dynamics is key to long-term colony survival."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_05_kaio",
+          "tactical_role": "STRIKER"
+        },
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 2,
+      "prerolled_hazard_queue": [
+        14,
+        7,
+        18,
+        3,
+        12
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.65,
+      "motivational_vector_saturation": 0.8,
+      "unresolved_conflict_ratio": 0.75,
+      "temporal_horizon_immediacy": 0.9,
+      "composite_lpi": 0.77,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_inference",
+        "model": "judge_v1",
+        "temperature": 0.1,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "Kaio will slip on the wet basalt, delaying the delivery and corrupting the baton's stored metrics.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "You misjudge a gust, tumbling into the vines and thoroughly scrambling the device.",
+          "below_dc_complicated_fail_forward": "You make it, but the delay causes partial data loss, requiring manual recalibration later.",
+          "meets_dc_clean_success": "You expertly navigate the cliffside, delivering the baton with data perfectly intact.",
+          "dc_plus_5_or_20_extended_lore": "Your swift run actually charges the baton kinetically, providing a bonus metric layer to Ryn."
+        }
+      },
+      "master_narrator": {
+        "executor": "jules",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Ryn looks up from the cutting board as Kaio hands over the baton. What does Ryn do?"
+      }
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0
+  },
   "context_manifest_path": "context/manifests/manifest_s001_t0003_enclave_05_kaio.json",
-  "total_prompt_tokens": 886,
-  "target_path": "story/segments/seg_s001_t0003_enclave_05_kaio.json"
+  "target_path": "story/segments/seg_s001_t0003_enclave_05_kaio.json",
+  "total_prompt_tokens": 850,
+  "disallow_overwrite": false
 }
