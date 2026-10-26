@@ -5,10 +5,19 @@
   "colony_sol": 4,
   "day_phase": "DAWN_SHIFT",
   "active_pov_id": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_03_silas",
   "next_pov_target": "enclave_01_hector",
   "location": "The_First_Forge",
+  "actors": ["enclave_03_silas", "enclave_01_hector"],
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
-  "text": "The First Forge hummed with the oppressive weight of the ferrofluid sea's surge, its ozone scent thick against the frigid stone. Silas wiped a hand across his grease-stained coveralls as the main geode array attempted to consume the magnetohydrodynamic shear, threatening a total structural overload. He rushed to conceal the fragile secondary relays behind a hastily welded copper bulwark, shouting over the din to defend the primary conduit from the creeping resonant fog. He shoved the sputtering calibration baton into Hector's chest, gripping the Prodigy's shoulder tight.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "disallow_overwrite": false,
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": ["enclave_03_silas"],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "text": "The First Forge hummed with the oppressive weight of the ferrofluid sea's surge, its ozone scent thick against the frigid stone. Silas wiped a hand across his grease-stained coveralls as the main geode array attempted to consume the magnetohydrodynamic shear, threatening a total structural overload. He rushed to conceal the fragile secondary relays behind a hastily welded copper bulwark, shouting over the din to defend the primary conduit from the creeping resonant fog, then decisively handed the sparking calibration baton directly to Hector.",
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 4,
@@ -26,10 +35,11 @@
       "location_id": "The_First_Forge",
       "macro_silhouette": "The First Forge hummed with the oppressive weight of the ferrofluid sea's surge, its ozone scent thick against the frigid stone. Silas wiped a hand across his grease-stained coveralls as the main geode array attempted to consume the magnetohydrodynamic shear, threatening a total structural overload.",
       "sensory_palette": {
-        "sight_and_color": "grease-stained, flickering blue arcs",
-        "sound": "deafening hum and shrieking metal",
+        "sight_and_color": "grease-stained coveralls, copper bulwark",
+        "sound": "deafening din of structural overload",
         "smell": "thick ozone",
-        "tactile_temperature": "frigid stone"
+        "tactile_temperature": "frigid stone",
+        "taste_optional": "metallic tang of resonant fog"
       },
       "interactive_features": [
         {
