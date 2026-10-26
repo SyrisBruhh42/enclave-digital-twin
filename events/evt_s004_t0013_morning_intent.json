@@ -13,6 +13,7 @@
   ],
   "active_pov_id": "enclave_03_silas",
   "next_pov_target": "enclave_01_hector",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "summary": "Silas examines the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea before handing the physical baton to Hector, finalizing the handoff.",
   "importance": 8.0,
   "novelty_score": 0.85,
@@ -30,7 +31,6 @@
     }
   ],
   "evidence_refs": [],
-  "target_path": "events/evt_s004_t0013_morning_intent.json",
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 4,
@@ -51,7 +51,8 @@
         "sight_and_color": "Crimson and amber glows cutting through dawn shadows.",
         "sound": "The rhythmic, heavy thud of pneumatic hammers.",
         "smell": "Sharp ozone and molten brass.",
-        "tactile_temperature": "Oppressively hot and dry."
+        "tactile_temperature": "Oppressively hot and dry.",
+        "taste_optional": "Ash and copper."
       },
       "interactive_features": [
         {
@@ -133,7 +134,7 @@
         "temperature": 0.4,
         "calypso_zero_raw_stats": true,
         "prosodic_micro_pauses_enabled": true,
-        "agency_handoff_prompt": "Hector, take the baton and mind the shear."
+        "agency_handoff_prompt": "Hector, take the physical baton and mind the shear."
       }
     }
   }
