@@ -8,9 +8,125 @@
   "active_pov_id": "enclave_03_silas",
   "next_pov_target": "enclave_01_hector",
   "location": "The_First_Forge",
-  "science_vegetable": "Capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers",
-  "text": "[DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "text": "The First Forge's interior thrummed with a bone-rattling resonance, the frigid stone floors slick with condensed ozone mist. Flickering blue arcs illuminated the heavy brass calipers in Silas's grease-stained hands as he measured the perilous magnetohydrodynamic Kelvin-Helmholtz shear rolling across the distant ferrofluid sea. He grunted, quickly adjusting a massive copper baffle to defend the primary induction coil from the creeping, resonant fog, even as the secondary relays groaned, struggling to consume the incoming current spikes. Swearing under his breath about inefficient tolerances, he slapped a heavy canvas tarp to conceal the fragile glass capacitors before thrusting the warm, sputtering calibration baton directly into Hector's chest.",
   "context_manifest_path": "context/manifests/manifest_s001_t0001_enclave_03_silas.json",
   "total_prompt_tokens": 709,
-  "target_path": "story/segments/seg_s001_t0001_enclave_03_silas.json"
+  "target_path": "story/segments/seg_s001_t0001_enclave_03_silas.json",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 1,
+      "tick_id": 1,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Handoff baton to Hector",
+        "mid_term_milestone": "Stabilize Forge",
+        "campaign_arc_climax": "Prevent Polarity Inversion"
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "The First Forge's interior thrummed with a bone-rattling resonance, the frigid stone floors slick with condensed ozone mist. Flickering blue arcs illuminated the heavy brass calipers in Silas's grease-stained hands.",
+      "sensory_palette": {
+        "sight_and_color": "flickering blue arcs, grease-stained brass",
+        "sound": "bone-rattling resonance",
+        "smell": "ozone mist",
+        "tactile_temperature": "frigid stone"
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Primary Induction Coil",
+          "affordance_description": "Vulnerable to creeping resonant fog",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Secondary Relays",
+          "affordance_description": "Absorbing incoming current spikes",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Glass Capacitors",
+          "affordance_description": "Fragile components needing shielding",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_sea",
+        "name_and_role": "Ferrofluid Sea Surge",
+        "motivation_goal": "Overwhelm structural integrity",
+        "consistent_method": "Magnetohydrodynamic Kelvin-Helmholtz shear",
+        "immediate_complication": "Threatens primary induction coil",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "Total Forge blackout"
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Keep the forge running",
+        "level_2_local": "Secure power for The Stormbreaker",
+        "level_3_campaign_arc": "Maintain colony survival"
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.8,
+      "motivational_vector_saturation": 0.7,
+      "unresolved_conflict_ratio": 0.6,
+      "temporal_horizon_immediacy": 0.9,
+      "composite_lpi": 0.75,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_ai",
+        "model": "ollama",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "Primary coil breach",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Mistakes shear for standard surge",
+          "below_dc_complicated_fail_forward": "Coil holds but secondary relays blow",
+          "meets_dc_clean_success": "Safely mitigates the shear",
+          "dc_plus_5_or_20_extended_lore": "Discovers new resonance harmonic"
+        }
+      },
+      "master_narrator": {
+        "executor": "jules",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Hand to Hector"
+      }
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
+    "interlocutor_full_cards_loaded": 0,
+    "leaked_interlocutor_private_cards": false
+  },
+  "disallow_overwrite": false
 }
