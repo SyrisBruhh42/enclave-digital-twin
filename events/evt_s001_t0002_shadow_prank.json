@@ -43,7 +43,7 @@
   ],
   "importance": 6.0,
   "novelty_score": 0.68,
-  "science_vegetable": "Relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "state_deltas": {
     "stress_delta": -0.02
   },
@@ -51,5 +51,128 @@
   "evidence_refs": [
     "evt_s001_t0002_midday_expedition"
   ],
-  "target_path": "events/evt_s001_t0002_shadow_prank.json"
+  "target_path": "events/evt_s001_t0002_shadow_prank.json",
+  "disallow_overwrite": false,
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "context_manifest": {
+    "manifest": {
+      "full_cards_loaded_count": 1,
+      "loaded_full_card_ids": [
+        "enclave_01_hector"
+      ],
+      "active_pov_id": "enclave_01_hector",
+      "interlocutor_full_cards_loaded": 0,
+      "leaked_interlocutor_private_cards": false
+    }
+  },
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 1,
+      "tick_id": 2,
+      "pacing_mode": "MULLIGAN_CRISIS",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Survive the ferrofluid storm.",
+        "mid_term_milestone": "Stabilize the main control console.",
+        "campaign_arc_climax": "Prevent the Enclave from sinking."
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "The reinforced deck overlooking the ferrofluid sea shuddered under the immense pressure of the storm. Pylons strained visibly against the violent, dark waves crashing around them. A single, heavy iron baton served as the critical junction point between the two engineers amidst the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea.",
+      "sensory_palette": {
+        "sight_and_color": "Bruising violet and orange skies contrasting with dark, oily waves.",
+        "sound": "Howling wind and a vibrating metallic hum.",
+        "smell": "Thick, metallic ozone.",
+        "tactile_temperature": "A sudden, sharp drop in temperature accompanied by stinging sea spray.",
+        "taste_optional": "The bitter tang of static on the tongue."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Main Control Console",
+          "affordance_description": "Can be monitored to stabilize the pressure.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Ferrofluid Wave",
+          "affordance_description": "Threatens to engulf the lower deck.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Magnetic Grapple",
+          "affordance_description": "Can pull loose equipment to safety.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_shear_storm",
+        "name_and_role": "Ferrofluid Shear Storm",
+        "motivation_goal": "Destabilize the Enclave's pylons.",
+        "consistent_method": "Battering the structure with highly magnetic waves.",
+        "immediate_complication": "Causes wild fluctuations in the pressure gauges.",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "Tears the main control console from its moorings."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The storm threatens to breach the deck.",
+        "level_2_local": "The pylons must hold to save the Forge.",
+        "level_3_campaign_arc": "The Enclave's survival depends on mastering the magnetosphere."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        7,
+        14,
+        18,
+        5,
+        12
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.8,
+      "motivational_vector_saturation": 0.7,
+      "unresolved_conflict_ratio": 0.6,
+      "temporal_horizon_immediacy": 0.9,
+      "composite_lpi": 0.75,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "Ollama",
+        "model": "qwen3.5:4b-q4_K_M",
+        "temperature": 0.05,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The baton drops into the ferrofluid sea.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Hector misjudges the wind and throws the baton wide.",
+          "below_dc_complicated_fail_forward": "Kaio catches it, but is dragged to the edge.",
+          "meets_dc_clean_success": "A perfect, firm handoff.",
+          "dc_plus_5_or_20_extended_lore": "Kaio catches it seamlessly and immediately recalibrates the console, identifying a new harmonic frequency in the ferrofluid sea."
+        }
+      },
+      "master_narrator": {
+        "executor": "Ollama",
+        "temperature": 0.35,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "'Kaio, take it!'"
+      }
+    }
+  }
 }
