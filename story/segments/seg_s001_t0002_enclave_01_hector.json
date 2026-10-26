@@ -4,13 +4,120 @@
   "tick_id": 2,
   "colony_sol": 1,
   "day_phase": "MIDDAY_EXPEDITION",
-  "base_snapshot_tick": 1,
   "active_pov_id": "enclave_01_hector",
   "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
   "location": "Basalt_Spire_Ridge",
-  "science_vegetable": "Relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron",
-  "text": "[MIDDAY_EXPEDITION at Basalt_Spire_Ridge] Hector calibrated the hand-forged brass instrumentation against relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron, then passed the warm copper calibration baton directly into Kaio's hands.",
-  "context_manifest_path": "context/manifests/manifest_s001_t0002_enclave_01_hector.json",
-  "total_prompt_tokens": 796,
-  "target_path": "story/segments/seg_s001_t0002_enclave_01_hector.json"
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "disallow_overwrite": false,
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": ["enclave_01_hector"],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "text": "The Basalt Spire Ridge roared under the unrelenting force of the ferrofluid sea, where the Magnetohydrodynamic Kelvin-Helmholtz shear sought to unspool the very atmosphere. Hector balanced precariously on the slick precipice, his boots seeking purchase as he recalibrated the heavy brass induction coil to repel the shrieking ionization fog. Above him, jagged metallic waves crashed in a mesmerizing frenzy, throwing out volatile arcs of static that left a sharp tang lingering against the bitter cold. He forcefully slammed the humming copper calibration baton directly into Kaio's waiting grip, shouting a frantic warning over the deafening gale.",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 1,
+      "tick_id": 2,
+      "pacing_mode": "MULLIGAN_CRISIS",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Handoff baton to Kaio amidst the magnetic shear",
+        "mid_term_milestone": "Secure the expedition route along the ridge",
+        "campaign_arc_climax": "Prevent Polarity Inversion and stabilize The Stormbreaker"
+      }
+    },
+    "active_location": {
+      "location_id": "Basalt_Spire_Ridge",
+      "macro_silhouette": "The Basalt Spire Ridge roared under the unrelenting force of the ferrofluid sea, where volatile peaks of magnetic shear sought to unspool the very atmosphere. Jagged metallic waves crashed in a mesmerizing frenzy against the slick, treacherous precipice.",
+      "sensory_palette": {
+        "sight_and_color": "mesmerizing frenzy of metallic waves, jagged arcs of static",
+        "sound": "roaring force, shrieking ionization fog, deafening gale",
+        "smell": "thick ozone static",
+        "tactile_temperature": "bitter cold and slick precipice",
+        "taste_optional": "sharp metallic tang of ionization"
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Brass Induction Coil",
+          "affordance_description": "Requires recalibration to repel the fog",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Ferrofluid Sea Surge",
+          "affordance_description": "Threatens to draw loose equipment into its wake",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Magnetic Shear Resonator",
+          "affordance_description": "Can be utilized to absorb some of the kinetic force",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "kelvin_helmholtz_shear",
+        "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+        "motivation_goal": "Unspool the atmosphere and disrupt the ridge's magnetic balance",
+        "consistent_method": "Violent ferromagnetic fluid crests and static surges",
+        "immediate_complication": "Threatens to rip the calibration baton from Hector's hands",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "Total disruption of the expedition path and severe structural damage to the spire"
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Keep the brass induction coil operational and hand off the baton",
+        "level_2_local": "Secure the expedition route across the dangerous ferrofluid sea surge",
+        "level_3_campaign_arc": "Maintain the Enclave's structural safety by neutralizing the magnetic shear"
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        1, 2, 3, 4, 5
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.8,
+      "motivational_vector_saturation": 0.9,
+      "unresolved_conflict_ratio": 0.7,
+      "temporal_horizon_immediacy": 0.95,
+      "composite_lpi": 0.83,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_ai",
+        "model": "ollama",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The magnetic shear rips the baton away, delaying the expedition",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Hector mistakenly calibrates the coil for a localized storm, exacerbating the shear effect.",
+          "below_dc_complicated_fail_forward": "The handoff is clumsy; Kaio secures it but the coil takes damage.",
+          "meets_dc_clean_success": "Hector perfectly reads the shear kinematics, tossing the baton safely through a static void.",
+          "dc_plus_5_or_20_extended_lore": "Hector discovers a temporary harmonic frequency that neutralizes the fluid crests."
+        }
+      },
+      "master_narrator": {
+        "executor": "jules",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Hand the warm copper calibration baton to Kaio."
+      }
+    }
+  }
 }
