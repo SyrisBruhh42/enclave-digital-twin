@@ -1,9 +1,49 @@
 {
-  "entity_id": "enclave_03_silas",
+  "audit_id": "drift_audit_sol_004",
   "audit_type": "psychometric_drift",
   "colony_sol": 4,
   "tick_id": 16,
-  "narrative_prose": "Silas squints into the swirling dark of the underground cavern. The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea rips the surface into jagged, impossible peaks, defying gravity in eerie silence. A heavy smell of ozone hangs in the stagnant air, biting the back of his throat. He adjusts his grip on his hammer. If they cannot stabilize the resonance before the next wave, the entire colony structure will succumb to the shearing forces.",
+  "day_phase": "THE_FEAST",
+  "base_snapshot_tick": 4,
+  "event_type": "DRIFT_AUDIT",
+  "characters_audited": 16,
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "disallow_overwrite": false,
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "narrative_prose": "Ryn braces herself against the roaring gusts on the exposed platform, the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea tearing the obsidian waves into jagged, unnatural peaks that defy gravity. The scent of sharp ozone and copper dust bites her nose, while the metallic tang of static electricity coats her tongue. A thunderous, crackling hum vibrates through the metal grate beneath her boots, rattling her teeth as the icy wind stings her cheeks. She tightens her grip on the heavily insulated thermomagnetic calibration rod and shoves the physical baton forcefully into Silas's waiting hands, demanding he anchor the array before the shear destabilizes the colony's fragile metabolic balance.",
+  "audits": [
+    {
+      "character_id": "enclave_13_ryn",
+      "character_name": "Ryn",
+      "sample_count": 4,
+      "drift_alert": true,
+      "law_l16_compliant": true,
+      "drifted_axes": [
+        "neuroticism"
+      ],
+      "max_abs_z": 2.5,
+      "z_threshold": 2.0,
+      "re_anchor_ticks": 3,
+      "corrective_authors_note": "Ryn's stress levels are spiking too high; must recenter on her Ruler archetype and thermodynamic control instead of panic.",
+      "axis_z_scores": {
+        "openness": 0.5,
+        "conscientiousness": 1.2,
+        "extraversion": -0.8,
+        "agreeableness": -1.1,
+        "neuroticism": 2.5
+      },
+      "worst_axis": "neuroticism"
+    }
+  ],
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 1,
@@ -12,36 +52,37 @@
       "pacing_mode": "MERCER_IMMERSIVE",
       "consequential_fights_since_short_rest": 0,
       "horizon_goals": {
-        "immediate_session_goal": "audit drift",
-        "mid_term_milestone": "survive",
-        "campaign_arc_climax": "win"
+        "immediate_session_goal": "audit drift in the ferrofluid sea",
+        "mid_term_milestone": "survive the magnetic shear",
+        "campaign_arc_climax": "win the colony's future"
       }
     },
     "active_location": {
-      "location_id": "ferrofluid_sea",
-      "macro_silhouette": "The vast expanse of the cavern is dominated by the churning black mirror of the ferrofluid sea. The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea creates towering spikes that collapse just as quickly.",
+      "location_id": "Ferrofluid_Sea_Platform",
+      "macro_silhouette": "An exposed observation platform jutting out over the vast, churning black expanse of the ferrofluid sea.",
       "sensory_palette": {
-        "sight_and_color": "obsidian black and silver highlights",
-        "sound": "whooshing, cracking hum of magnetic fields",
-        "smell": "acrid ozone and metallic dust",
-        "tactile_temperature": "starkly cold"
+        "sight_and_color": "obsidian black waves and blinding silver arcs of static",
+        "sound": "thunderous, crackling hum of magnetic shear",
+        "smell": "sharp ozone and copper dust",
+        "tactile_temperature": "icy wind and vibrating metal grates",
+        "taste_optional": "metallic tang of static electricity"
       },
       "interactive_features": [
         {
-          "feature_name": "Magnetic Resonator Console",
-          "affordance_description": "Can be used to tune the local field and calm the sea.",
+          "feature_name": "Magnetic Resonator Pillar",
+          "affordance_description": "Can be activated to repel the encroaching ferrofluid waves.",
           "system_verb": "DEFEND",
           "associated_check_dc": 14
         },
         {
-          "feature_name": "Ferrofluid Spire",
-          "affordance_description": "Can be manipulated to draw metallic debris.",
+          "feature_name": "Conductive Debris Field",
+          "affordance_description": "Can be polarized to pull floating metallic wreckage for cover.",
           "system_verb": "ATTRACT",
           "associated_check_dc": 14
         },
         {
-          "feature_name": "Crystallized Fungus Node",
-          "affordance_description": "Can be harvested for its unique energy properties.",
+          "feature_name": "Ambient Energy Node",
+          "affordance_description": "Can be tapped to drain raw magnetic power into a portable battery.",
           "system_verb": "CONSUME",
           "associated_check_dc": 14
         }
@@ -49,42 +90,40 @@
     },
     "reactive_toys": [
       {
-        "entity_id": "ferrofluid_anomaly",
-        "name_and_role": "Ferrofluid Anomaly",
-        "motivation_goal": "To assimilate all metallic objects in the vicinity.",
-        "consistent_method": "Extending pseudopods of magnetic fluid to grasp and pull.",
-        "immediate_complication": "It threatens to pull the structural supports of the walkway.",
-        "pressure_index": 7,
-        "uninterrupted_escalation": "The anomaly will coalesce into a massive wave that washes over the entire platform."
+        "entity_id": "ferrofluid_wave",
+        "name_and_role": "Ferrofluid Wave",
+        "motivation_goal": "To crash and assimilate anything metallic.",
+        "consistent_method": "Rising in gravity-defying spikes and slamming down.",
+        "immediate_complication": "It threatens to wash over the platform and sweep away the crew.",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "The shear will tear the platform from its moorings."
       }
     ],
     "encounter_matrix": {
       "three_levels_of_why": {
-        "level_1_immediate": "The magnetic shear is destabilizing the local environment.",
-        "level_2_local": "Silas needs to prove that intuitive leaps can solve problems beyond micrometer measurement.",
-        "level_3_campaign_arc": "The colony's survival depends on mastering the planet's magnetosphere."
+        "level_1_immediate": "The magnetic shear is peaking, threatening immediate structural collapse.",
+        "level_2_local": "Ryn must ensure the colony's metabolic systems don't fail due to power loss.",
+        "level_3_campaign_arc": "Mastering the ferrofluid sea is essential for the Enclave's long-term survival."
       },
       "active_specialist_roles": [
         {
-          "actor_id": "enclave_03_silas",
-          "tactical_role": "DEFENDER"
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "CONTROLLER"
         }
       ],
-      "strain_accumulated_upward": 0,
+      "strain_accumulated_upward": 1,
       "prerolled_hazard_queue": [
-        3,
-        7,
-        12,
-        18,
-        20
+        2,
+        9,
+        15
       ]
     },
     "lpi_metrics": {
-      "relational_tension_density": 0.6,
-      "motivational_vector_saturation": 0.7,
-      "unresolved_conflict_ratio": 0.8,
+      "relational_tension_density": 0.5,
+      "motivational_vector_saturation": 0.8,
+      "unresolved_conflict_ratio": 0.7,
       "temporal_horizon_immediacy": 0.9,
-      "composite_lpi": 0.75,
+      "composite_lpi": 0.725,
       "classification": "Campaign-Ready"
     },
     "dual_agent_contract": {
@@ -93,12 +132,12 @@
         "model": "ollama",
         "temperature": 0.7,
         "explicit_pre_roll_dc": 14,
-        "failure_stakes_declared": "Failure means the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea pulls the walkway supports, dropping them into the black depths.",
+        "failure_stakes_declared": "If they fail, the ferrofluid wave will sweep the platform, destroying the main generator.",
         "graduated_outcomes": {
-          "nat_1_false_intuition": "Silas strikes a critical node, accelerating the shear.",
-          "below_dc_complicated_fail_forward": "The console sparks and burns Silas, but the field stabilizes temporarily.",
-          "meets_dc_clean_success": "Silas masterfully tunes the resonator, calming the sea.",
-          "dc_plus_5_or_20_extended_lore": "Silas not only calms the sea but realizes a hidden pattern in the magnetic fluctuations."
+          "nat_1_false_intuition": "The array is completely misaligned, accelerating the shear.",
+          "below_dc_complicated_fail_forward": "The array holds, but the power surge causes minor structural damage.",
+          "meets_dc_clean_success": "The array perfectly counters the shear, calming the local waves.",
+          "dc_plus_5_or_20_extended_lore": "The array not only calms the waves but captures excess energy, boosting the generator."
         }
       },
       "master_narrator": {
@@ -106,20 +145,8 @@
         "temperature": 0.6,
         "calypso_zero_raw_stats": true,
         "prosodic_micro_pauses_enabled": true,
-        "agency_handoff_prompt": "Silas looks back toward the entrance, calling for Hector to bring the heavy lifter. What does Hector do?"
+        "agency_handoff_prompt": "Silas, now holding the heavy calibration rod, must act quickly. What does Silas do?"
       }
     }
-  },
-  "prev_next_pov_target": "enclave_03_silas",
-  "active_pov_id": "enclave_03_silas",
-  "next_pov_target": "enclave_01_hector",
-  "drift_audit": {
-    "max_abs_z": 2.2,
-    "axis_z_scores": {
-      "x": 2.2
-    },
-    "drift_alert": true,
-    "corrective_authors_note": "Silas is relying too heavily on raw intuition. He needs to ground his actions in measurable facts to re-align with his core traits.",
-    "re_anchor_ticks": 3
   }
 }
