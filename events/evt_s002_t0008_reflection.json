@@ -8,7 +8,8 @@
   "event_type": "NIGHTLY_REFLECTION",
   "location": "The_Hub_Hearth",
   "actors": [
-    "enclave_13_ryn"
+    "enclave_13_ryn",
+    "enclave_03_silas"
   ],
   "summary": "Ryn wrestles with the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, desperately maintaining the delicate caloric balance of the Hub's stockpots before silently passing a bowl of sustenance to Silas.",
   "importance": 8.0,
@@ -20,7 +21,7 @@
   },
   "relationship_deltas": [],
   "cited_event_ids": [
-    "evt_s001_t0004_reflection"
+    "evt_s001_t0004_the_feast"
   ],
   "disallow_overwrite": false,
   "active_pov_id": "enclave_13_ryn",
