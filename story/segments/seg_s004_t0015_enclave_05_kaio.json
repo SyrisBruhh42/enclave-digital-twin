@@ -9,7 +9,9 @@
   "next_pov_target": "enclave_13_ryn",
   "location": "The_Hearth_Commissary_Exterior",
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
-  "text": "[DUSK_CRAFT] Kaio caught the sparking calibration baton from Hector as he emerged from the First Forge, sprinting up the basalt steps toward the commissary as the Magnetohydrodynamic Kelvin-Helmholtz shear screamed across the ferrofluid sea. The sharp ozone smell of ionized copper gave way to the earthy scent of bruised moss and roasting root vegetables, his boots finding familiar footholds even as the gale threatened to snatch him into the glowing expanse. Below, the metallic sea churned in impossible violet waves, casting strobing, dizzying shadows across his path, while the air bit into his skin with electric chill. He burst through the heavy reinforced doors of the kitchen, sliding on a patch of spilled flour, and slapped the rapidly cooling baton onto Ryn's cutting board.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "disallow_overwrite": false,
+  "text": "[DUSK_CRAFT] Kaio scrambled up the slick basalt steps leading from the First Forge, the Magnetohydrodynamic Kelvin-Helmholtz shear screaming across the ferrofluid sea behind him and violently swaying the bioluminescent moss vines. The biting electric chill of the magnetic gale cut through his sweat-dampened clothes as strobing violet waves cast dizzying shadows across his path, momentarily blinding his sight. The sharp smell of bruised moss mingled with roasting root vegetables on the frigid air, leading him toward the heavy commissary blast doors which he fought to pry open against the pressure drop. He threw his full weight against the threshold and shoved the sparking calibration baton directly into Ryn's calloused hands, chest heaving over the deafening wind.",
   "campaign_metadata": {
     "session_number": 4,
     "colony_sol": 4,
@@ -24,10 +26,10 @@
   },
   "active_location": {
     "location_id": "The_Hearth_Commissary_Exterior",
-    "macro_silhouette": "The basalt steps leading from the Forge to the Commissary hugged a sheer cliff, suspended precariously over the churning metallic waves of the ferrofluid sea. Thick, bioluminescent vines lashed wildly in the screaming magnetic winds, tracing chaotic arcs of emerald light against the stormy sky. Heavy, reinforced blast doors groaned under the shear pressure, offering the only shelter from the violent storm.",
+    "macro_silhouette": "The steep, rain-slicked basalt stairs from the Forge to the Commissary were dangerously exposed to the churning ferrofluid sea. Thick, glowing vines lashed wildly in the screaming magnetic winds, tracing chaotic arcs of emerald light against the stormy sky. The heavy reinforced blast doors of the commissary groaned under the violent shear pressure.",
     "sensory_palette": {
       "sight_and_color": "Strobing violet metallic waves and emerald bioluminescence",
-      "sound": "Howling magnetic gale and the heavy thud of insulated boots on stone",
+      "sound": "Howling magnetic gale and heavy thud of insulated boots on stone",
       "smell": "Ozone fading into bruised moss and roasting tubers",
       "tactile_temperature": "Biting electric chill cutting through sweat-dampened clothes",
       "taste_optional": "Faint trace of airborne copper dust"
@@ -116,15 +118,17 @@
       "temperature": 0.7,
       "calypso_zero_raw_stats": true,
       "prosodic_micro_pauses_enabled": true,
-      "agency_handoff_prompt": "Ryn looks up from the cutting board as Kaio slams the baton down. What does Ryn do?"
+      "agency_handoff_prompt": "Ryn looks up from the cutting board as Kaio hands over the baton. What does Ryn do?"
     }
   },
   "context_manifest": {
     "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ],
     "interlocutor_full_cards_loaded": 0
   },
   "context_manifest_path": "context/manifests/manifest_s004_t0015_enclave_05_kaio.json",
   "total_prompt_tokens": 850,
-  "target_path": "story/segments/seg_s004_t0015_enclave_05_kaio.json",
-  "disallow_overwrite": false
+  "target_path": "story/segments/seg_s004_t0015_enclave_05_kaio.json"
 }
