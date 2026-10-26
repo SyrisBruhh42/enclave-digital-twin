@@ -1,12 +1,16 @@
 {
-  "audit_type": "psychometric_drift",
+  "audit_id": "drift_audit_sol_002",
   "colony_sol": 2,
   "tick_id": 8,
+  "base_snapshot_tick": 8,
+  "event_type": "DRIFT_AUDIT",
+  "characters_audited": 1,
   "day_phase": "THE_FEAST",
   "active_pov_id": "enclave_13_ryn",
   "next_pov_target": "enclave_03_silas",
   "prev_next_pov_target": "enclave_13_ryn",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "local_showrunner_steward_note": "deterministic-enclave-5section-v2",
   "disallow_overwrite": false,
   "evidence_refs": [
     "evt_s001_t0004_the_feast"
@@ -18,7 +22,7 @@
     ],
     "interlocutor_full_cards_loaded": 0
   },
-  "narrative_prose": "Ryn tightly gripped her brass ladle, watching the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea threaten to disrupt the delicate caloric balance of the evening meal. She handed the heavy, steam-jacketed copper pot to Silas, warning him not to drop it. 'Keep this steady,' she ordered, ensuring the baton was physically passed to the engineer.",
+  "narrative_prose": "The Hearth galley thrummed with the frantic energy of Ryn's Michelin-styled brigade, heat radiating from the thirty-gallon steam-jacketed kettles as bubbling mire-lentil stew filled the room with a rich aroma. Wiping a bead of sweat from her brow, she turned to find Silas watching the monitors and shoved a heavy, steam-jacketed copper pot of reserved stock directly into his hands. 'Hold this steady, Silas, unless you want to re-calculate the caloric deficit of an entire lost batch,' she commanded, effectively handing the baton over to the engineer.",
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 1,
@@ -27,37 +31,37 @@
       "pacing_mode": "MERCER_IMMERSIVE",
       "consequential_fights_since_short_rest": 1,
       "horizon_goals": {
-        "immediate_session_goal": "audit drift in the hearth",
-        "mid_term_milestone": "survive the shear",
-        "campaign_arc_climax": "win the colony's future"
+        "immediate_session_goal": "Secure the evening caloric quota despite the shear anomaly.",
+        "mid_term_milestone": "Stabilize The Hearth's thermal equilibrium.",
+        "campaign_arc_climax": "Prove the Enclave's metabolic engine can withstand the exoplanet's extreme weather."
       }
     },
     "active_location": {
       "location_id": "The_Hearth",
-      "macro_silhouette": "The Hearth is a warm, bustling galley dominated by thirty-gallon steam-jacketed kettles. Condensation runs down the brass fittings, glowing softly in the dim light.",
+      "macro_silhouette": "The Hearth is a sweltering, meticulously organized culinary command center dominated by massive copper and brass kettles. Portholes offer a sobering view of the volatile ferrofluid sea outside, while inside, the galley is a fortress of warmth and sustenance.",
       "sensory_palette": {
-        "sight_and_color": "dim light and glowing brass",
-        "sound": "bubbling stew and hissing steam",
-        "smell": "rich, savory mire-lentils",
-        "tactile_temperature": "sweltering warmth",
-        "taste_optional": "salty, robust broth"
+        "sight_and_color": "Flickering purple shadows from the sea outside against gleaming, polished brass and copper.",
+        "sound": "The rhythmic bubbling of thick stew, punctuated by the high-pitched hiss of steam release valves.",
+        "smell": "Intense, savory aromas of braised mire-lentils and roasted iron-wheat.",
+        "tactile_temperature": "Oppressively hot and humid, causing sweat to bead instantly on exposed skin.",
+        "taste_optional": "The hearty, salty richness of the perfectly reduced vegetable stock."
       },
       "interactive_features": [
         {
           "feature_name": "Steam-Jacketed Kettle",
-          "affordance_description": "Can be used to block incoming debris.",
+          "affordance_description": "Can be utilized to block a localized thermal blowout.",
           "system_verb": "DEFEND",
           "associated_check_dc": 14
         },
         {
-          "feature_name": "Copper Ladle",
-          "affordance_description": "Can be used to distract hungry crewmates.",
+          "feature_name": "Fresh Iron-Wheat Loaf",
+          "affordance_description": "Can be used to draw the attention of stressed, hungry crewmates.",
           "system_verb": "ATTRACT",
           "associated_check_dc": 14
         },
         {
-          "feature_name": "Iron-Wheat Loaf",
-          "affordance_description": "Can be eaten to restore stamina.",
+          "feature_name": "Emergency Nutrient Rations",
+          "affordance_description": "Can be eaten to rapidly offset fatigue.",
           "system_verb": "CONSUME",
           "associated_check_dc": 14
         }
@@ -67,18 +71,18 @@
       {
         "entity_id": "shear_anomaly",
         "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz Shear",
-        "motivation_goal": "destabilize thermal systems",
-        "consistent_method": "fluctuating magnetic fields",
-        "immediate_complication": "threatens the simmering stock",
+        "motivation_goal": "Destabilize the Enclave's thermal systems through erratic magnetic fluctuations.",
+        "consistent_method": "Inducing sudden pressure spikes in the galley's steam lines.",
+        "immediate_complication": "Threatens to boil over the main stockpot and ruin the meal.",
         "pressure_index": 7,
-        "uninterrupted_escalation": "will cause the kettles to boil over"
+        "uninterrupted_escalation": "Will eventually rupture a steam pipe and cause severe caloric loss."
       }
     ],
     "encounter_matrix": {
       "three_levels_of_why": {
-        "level_1_immediate": "to feed the crew",
-        "level_2_local": "to maintain colony morale",
-        "level_3_campaign_arc": "to survive the exoplanet"
+        "level_1_immediate": "To ensure the crew receives their exact caloric intake for the night.",
+        "level_2_local": "To maintain colony morale and metabolic stability in the face of unpredictable weather.",
+        "level_3_campaign_arc": "To prove that the Enclave's human-centric systems can outlast the exoplanet's hostility."
       },
       "active_specialist_roles": [
         {
@@ -88,19 +92,19 @@
       ],
       "strain_accumulated_upward": 1,
       "prerolled_hazard_queue": [
-        1,
-        2,
-        3,
-        4,
+        11,
+        14,
+        8,
+        19,
         5
       ]
     },
     "lpi_metrics": {
-      "relational_tension_density": 0.5,
-      "motivational_vector_saturation": 0.5,
-      "unresolved_conflict_ratio": 0.5,
-      "temporal_horizon_immediacy": 0.5,
-      "composite_lpi": 0.5,
+      "relational_tension_density": 0.65,
+      "motivational_vector_saturation": 0.8,
+      "unresolved_conflict_ratio": 0.4,
+      "temporal_horizon_immediacy": 0.75,
+      "composite_lpi": 0.65,
       "classification": "Campaign-Ready"
     },
     "dual_agent_contract": {
@@ -109,12 +113,12 @@
         "model": "ollama",
         "temperature": 0.7,
         "explicit_pre_roll_dc": 14,
-        "failure_stakes_declared": "The broth spills and caloric quotas are missed.",
+        "failure_stakes_declared": "The magnetic shear causes a pressure spike, scalding a crewmate and losing a portion of the night's meal.",
         "graduated_outcomes": {
-          "nat_1_false_intuition": "Ryn drops the pot.",
-          "below_dc_complicated_fail_forward": "The pot is saved but someone gets burned.",
-          "meets_dc_clean_success": "The pot is passed safely.",
-          "dc_plus_5_or_20_extended_lore": "The pot is passed and they discover a new recipe."
+          "nat_1_false_intuition": "Ryn misreads the pressure gauge; the kettle erupts, causing significant burns and completely ruining the stew.",
+          "below_dc_complicated_fail_forward": "The pot is stabilized, but not before a minor spill necessitates a messy cleanup, fraying tempers.",
+          "meets_dc_clean_success": "Ryn expertly vents the excess steam and passes the pot to Silas without spilling a drop.",
+          "dc_plus_5_or_20_extended_lore": "Ryn harnesses the magnetic fluctuation to perfectly caramelize the stew's base, passing the pot along while discovering a new cooking technique."
         }
       },
       "master_narrator": {
@@ -122,8 +126,54 @@
         "temperature": 0.6,
         "calypso_zero_raw_stats": true,
         "prosodic_micro_pauses_enabled": true,
-        "agency_handoff_prompt": "Silas takes the pot. What does he do?"
+        "agency_handoff_prompt": "Silas catches the heavy, sweltering copper pot just as a fresh wave of magnetic shear rattles the portholes. What does he do next?"
       }
     }
-  }
+  },
+  "audits": [
+    {
+      "character_id": "enclave_13_ryn",
+      "character_name": "Ryn",
+      "sample_count": 4,
+      "drift_alert": false,
+      "law_l16_compliant": true,
+      "drifted_axes": [],
+      "max_abs_z": 0.6667,
+      "z_threshold": 2.0,
+      "z_scores": {
+        "openness": 0.25,
+        "conscientiousness": -0.5,
+        "extraversion": 0.3333,
+        "agreeableness": 0.375,
+        "neuroticism": -0.6667,
+        "hexaco_honesty_humility": -0.4
+      },
+      "sample_means": {
+        "openness": 0.34,
+        "conscientiousness": 0.92,
+        "extraversion": 0.82,
+        "agreeableness": 0.35,
+        "neuroticism": 0.50,
+        "hexaco_honesty_humility": 0.87
+      },
+      "target_means": {
+        "openness": 0.32,
+        "conscientiousness": 0.94,
+        "extraversion": 0.80,
+        "agreeableness": 0.32,
+        "neuroticism": 0.56,
+        "hexaco_honesty_humility": 0.89
+      },
+      "target_sds": {
+        "openness": 0.08,
+        "conscientiousness": 0.04,
+        "extraversion": 0.06,
+        "agreeableness": 0.08,
+        "neuroticism": 0.09,
+        "hexaco_honesty_humility": 0.05
+      },
+      "corrective_authors_note": "",
+      "re_anchor_ticks": 0
+    }
+  ]
 }
