@@ -2,16 +2,16 @@
   "disallow_overwrite": false,
   "target_path": "qa/sol_004_counterfactual_replay.json",
   "operation": "ADD",
-  "active_pov_id": "enclave_03_silas",
-  "next_pov_target": "enclave_01_hector",
-  "prev_next_pov_target": "enclave_03_silas",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "context_manifest": {
     "full_cards_loaded_count": 1,
     "loaded_full_card_ids": [
-      "enclave_03_silas"
+      "enclave_05_kaio"
     ],
-    "active_pov_id": "enclave_03_silas",
+    "active_pov_id": "enclave_05_kaio",
     "interlocutor_full_cards_loaded": 0,
     "leaked_interlocutor_private_cards": false
   },
@@ -30,12 +30,13 @@
     },
     "active_location": {
       "location_id": "The_First_Forge_Exterior",
-      "macro_silhouette": "The exterior vista of The First Forge stood as a jagged silhouette of brass and basalt against the screaming Magnetohydrodynamic Kelvin-Helmholtz shear. Arcs of violent purple lightning crawled across the reinforced bulkheads, illuminating the ferrofluid sea below in rhythmic, terrifying bursts. The atmospheric pressure warped the very air, turning the horizon into a smeared painting of raw exoplanet fury.",
+      "macro_silhouette": "The exterior vista of The First Forge stood as a jagged silhouette of brass and basalt against the screaming Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. Arcs of violent purple lightning crawled across the reinforced bulkheads, illuminating the dark expanse below in rhythmic bursts. The atmospheric pressure warped the very air, turning the horizon into a smeared painting of raw exoplanet fury.",
       "sensory_palette": {
         "sight_and_color": "Violet lightning and shifting obsidian ferrofluid",
         "sound": "Deafening, rhythmic roaring of magnetic shear",
         "smell": "Ozone and oxidized copper",
-        "tactile_temperature": "Uncomfortably warm, static-charged air"
+        "tactile_temperature": "Uncomfortably warm, static-charged air",
+        "taste_optional": "Static tang on the tongue"
       },
       "interactive_features": [
         {
@@ -77,11 +78,11 @@
       },
       "active_specialist_roles": [
         {
-          "actor_id": "enclave_03_silas",
+          "actor_id": "enclave_05_kaio",
           "tactical_role": "DEFENDER"
         },
         {
-          "actor_id": "enclave_01_hector",
+          "actor_id": "enclave_13_ryn",
           "tactical_role": "STRIKER"
         }
       ],
@@ -108,12 +109,12 @@
         "model": "local_steward",
         "temperature": 0.2,
         "explicit_pre_roll_dc": 14,
-        "failure_stakes_declared": "The strut collapses, forcing the Forge into emergency lockdown.",
+        "failure_stakes_declared": "The structure fails, causing immediate physical damage and resource loss.",
         "graduated_outcomes": {
-          "nat_1_false_intuition": "Silas misjudges the frequency, exacerbating the resonance.",
-          "below_dc_complicated_fail_forward": "The strut holds, but Silas takes a massive static shock.",
-          "meets_dc_clean_success": "The strut is reinforced perfectly, deflecting the wave.",
-          "dc_plus_5_or_20_extended_lore": "Silas deduces the wave's underlying pattern, granting advantage to Hector."
+          "nat_1_false_intuition": "Kaio falsely intuits the rhythm, causing a dangerous backlash.",
+          "below_dc_complicated_fail_forward": "Kaio makes progress, but alerts unwanted attention.",
+          "meets_dc_clean_success": "Kaio successfully stabilizes the situation.",
+          "dc_plus_5_or_20_extended_lore": "Kaio gains profound insight into the shear dynamics."
         }
       },
       "master_narrator": {
@@ -121,9 +122,11 @@
         "temperature": 0.7,
         "calypso_zero_raw_stats": true,
         "prosodic_micro_pauses_enabled": true,
-        "agency_handoff_prompt": "Silas passes the initiative to Hector."
+        "agency_handoff_prompt": "Kaio passes the initiative to Ryn."
       }
     }
   },
-  "narrative_prose": "Silas wiped grease from his forehead, adjusting his heavy goggles as the Magnetohydrodynamic Kelvin-Helmholtz shear screamed across the ferrofluid sea. The shimmering expanse danced with volatile energy, throwing violet shadows against the basalt walls of The First Forge. 'Inefficient,' he grumbled, watching the waves crest. The structural supports were groaning under the pressure. He gripped the iron spanner tight, finding a familiar rhythm as he reinforced the primary struts. When he turned, the air crackled. He tossed the spanner, end over end, straight at Hector's chest. 'Your turn, Stormbreaker. Don't melt it.'"
+  "narrative_prose": "Kaio wiped grease from his forehead, tasting a static tang on his tongue as the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea screamed across the exterior vista. The shimmering expanse danced with volatile energy, throwing violet shadows against the basalt walls and leaving a sharp ozone smell in the uncomfortably warm, static-charged air. He tried to DEFEND the groaning structural supports, finding a familiar rhythm to ATTRACT the stray magnetic arcs safely into the grounding plates. As the energy began to CONSUME the outer struts, he gripped the iron spanner tight and tossed it end over end, straight into Ryn's waiting hand. 'Your turn to stabilize the flow,' he yelled over the deafening roar.",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea"
 }
