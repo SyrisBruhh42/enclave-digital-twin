@@ -23,7 +23,7 @@
       "enclave_03_silas"
     ]
   },
-  "summary": "Silas squints through the heavy reinforced viewport as the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea pulls erratic, violent eddies into the atmospheric grid. The fierce shear waves threaten to disrupt the delicate alignment of the forge's magnetic containment coils. He braces himself and maneuvers to DEFEND the central console from surging sparks, then manages to ATTRACT the stray plasma arcs into a grounding sink. With a steady hand, he finally manages to CONSUME the remaining excess static charge through a dampening array, turning to physically hand the heavy brass baton to Hector to transfer control of the shift.",
+  "summary": "Silas squints through the heavy reinforced viewport as the blinding flashes of actinic blue illuminate the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, pulling erratic, violent eddies into the atmospheric grid with a bone-rattling thudding that vibrates the dust of rusted iron and pungent metallic ozone into the stifling heat, leaving a sharp static tang lingering on the back of his tongue. He braces against the sudden surge of radiant heat and maneuvers to DEFEND the central console from surging sparks, then manages to ATTRACT the stray plasma arcs into a magnetic grounding sink. With a steady hand, he finally manages to CONSUME the remaining excess static charge through a dampening array, turning to physically hand the heavy brass baton to Hector to transfer control of the shift.",
   "importance": 8.0,
   "novelty_score": 0.85,
   "lethality": 0,
@@ -110,7 +110,9 @@
       "prerolled_hazard_queue": [
         4,
         8,
-        15
+        15,
+        16,
+        23
       ]
     },
     "lpi_metrics": {
@@ -140,8 +142,11 @@
         "temperature": 0.4,
         "calypso_zero_raw_stats": true,
         "prosodic_micro_pauses_enabled": true,
-        "agency_handoff_prompt": "Hector, take the baton and mind the shear."
+        "agency_handoff_prompt": "Hector, take the baton and mind the shear.",
+        "explicit_pre_roll_dc": 14
       }
     }
-  }
+  },
+  "narrative_prose": "Silas squints through the heavy reinforced viewport as the blinding flashes of actinic blue illuminate the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, pulling erratic, violent eddies into the atmospheric grid with a bone-rattling thudding that vibrates the dust of rusted iron and pungent metallic ozone into the stifling heat, leaving a sharp static tang lingering on the back of his tongue. He braces against the sudden surge of radiant heat and maneuvers to DEFEND the central console from surging sparks, then manages to ATTRACT the stray plasma arcs into a magnetic grounding sink. With a steady hand, he finally manages to CONSUME the remaining excess static charge through a dampening array, turning to physically hand the heavy brass baton to Hector to transfer control of the shift.",
+  "evidence_refs": []
 }
