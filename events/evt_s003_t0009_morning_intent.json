@@ -23,7 +23,7 @@
       "enclave_03_silas"
     ]
   },
-  "summary": "Silas squints through the heavy reinforced viewport as the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea pulls erratic, violent eddies into the atmospheric grid. The fierce shear waves threaten to disrupt the delicate alignment of the forge's magnetic containment coils. He braces himself and maneuvers to DEFEND the central console from surging sparks, then manages to ATTRACT the stray plasma arcs into a grounding sink. With a steady hand, he finally manages to CONSUME the remaining excess static charge through a dampening array, turning to physically hand the heavy brass baton to Hector to transfer control of the shift.",
+  "narrative_prose": "Silas adjusts his heavy brass spectacles as the forge bellows groan under the pressure of the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. He meticulously re-calibrates the primary containment manifold, grumbling that he must DEFEND the fragile induction coils from Hector's inevitable enthusiasm. The heat of the ambient plasma discharge is oppressive, smelling faintly of ozone and heated copper, while the crackle of stray energy sets his teeth on edge. He manages to ATTRACT the excess static into a grounding capacitor, finally able to CONSUME the remaining current safely before handing the heavy brass shift-baton to Hector.",
   "importance": 8.0,
   "novelty_score": 0.85,
   "lethality": 0,
@@ -39,6 +39,7 @@
       "trust_delta": 0.01
     }
   ],
+  "evidence_refs": [],
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 3,
@@ -110,7 +111,9 @@
       "prerolled_hazard_queue": [
         4,
         8,
-        15
+        15,
+        12,
+        20
       ]
     },
     "lpi_metrics": {
