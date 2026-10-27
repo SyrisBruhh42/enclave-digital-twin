@@ -1,25 +1,130 @@
 {
-  "study_id": "cf_enclave_03_silas_openness_+0.45_065956894c",
-  "colony_sol": 1,
-  "tick_id": 4,
-  "base_snapshot_tick": 4,
-  "event_type": "COUNTERFACTUAL_REPLAY",
-  "character_id": "enclave_03_silas",
-  "trait_axis": "openness",
-  "baseline_mean": 0.15,
-  "variant_mean": 0.6,
-  "actual_delta": 0.45,
-  "evaluation": {
-    "controls_valid": true,
-    "divergence_score": 0.704207,
-    "lexical_jaccard_distance": 0.958333,
-    "trigram_cosine_distance": 0.774745,
-    "state_l2_divergence": 0.457056,
-    "relationship_l2_divergence": 0.0,
-    "decision_changed": true,
-    "causal_sensitivity": 1.564904,
-    "trait_axis": "openness",
-    "delta": 0.45
+  "disallow_overwrite": false,
+  "target_path": "qa/sol_001_counterfactual_replay.json",
+  "operation": "ADD",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ],
+    "active_pov_id": "enclave_05_kaio",
+    "interlocutor_full_cards_loaded": 0,
+    "leaked_interlocutor_private_cards": false
   },
-  "target_path": "qa/sol_001_counterfactual_replay.json"
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 1,
+      "tick_id": 3,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Record the baseline resonance frequencies of the dusk magnetic shear.",
+        "mid_term_milestone": "Map the subterranean resonance pathways for The Sanctuary.",
+        "campaign_arc_climax": "Safely guide a full colony caravan across the magnetic sea."
+      }
+    },
+    "active_location": {
+      "location_id": "Ferrofluid_Sea_Vista",
+      "macro_silhouette": "The furious magnetohydrodynamic Kelvin-Helmholtz shear tears across the vast ferrofluid sea, throwing erratic plumes of liquid metal into the violet-charged atmosphere. Jagged arcs of static lightning dance between the crashing obsidian waves and the towering crystalline spires that line the fragile shoreline. Relentless bifurcated thermal winds scour the exposed ridges, carrying a chaotic chorus of piezoelectric shrieks. Below the jagged cliffs, bioluminescent myco-colonies desperately cling to the damp rock, casting a faint aquamarine glow against the churning darkness.",
+      "sensory_palette": {
+        "sight_and_color": "Liquid obsidian, violet lightning, and faint aquamarine bioluminescence",
+        "sound": "Deafening shrieks of the magnetic shear and roaring ferrofluid crashes",
+        "smell": "Overwhelming metallic ozone and damp, dusty myco-spores",
+        "tactile_temperature": "Bone-chilling wind interspersed with sudden waves of static-charged heat",
+        "taste_optional": "Sharp, metallic copper tang of atmospheric charge"
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Towering Crystalline Spire",
+          "affordance_description": "A sturdy geode formation vibrating with protective resonance",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Bioluminescent Myco-Colony",
+          "affordance_description": "Glowing spores that react to localized magnetic eddies",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Jagged Basalt Cleft",
+          "affordance_description": "A deep shadowed fissure cutting into the cliff face",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "Ferrofluid_Shear_Eddy",
+        "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz Shear",
+        "motivation_goal": "To aggressively pull unsecured magnetic objects and personnel into the violently churning sea",
+        "consistent_method": "Generating sudden, unpredictable spikes of localized gravity and electrostatic attraction along the cliff edges",
+        "immediate_complication": "Kaio's brass navigation instruments are suddenly humming violently and attempting to rip themselves from his grip",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "Will continuously increase magnetic drag until someone loses their footing or drops critical gear"
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The sheer magnetic drag threatens to violently rip Kaio's cartography gear from his hands into the turbulent sea.",
+        "level_2_local": "Accurate readings of this shear are absolutely necessary for mapping a safe passage for Zara's beasts.",
+        "level_3_campaign_arc": "Mastering the physics of the ferrofluid tides is paramount to constructing The Sanctuary and ensuring the Enclave's survival."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_05_kaio",
+          "tactical_role": "STRIKER"
+        },
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        12,
+        4,
+        19,
+        7,
+        15
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.6,
+      "motivational_vector_saturation": 0.8,
+      "unresolved_conflict_ratio": 0.7,
+      "temporal_horizon_immediacy": 0.9,
+      "composite_lpi": 0.75,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "deterministic-enclave-5section-v2",
+        "model": "local_steward",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The sheer magnetic force rips Kaio's brass sextant from his grasp, sending it tumbling irretrievably into the churning ferrofluid sea.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Kaio leans too far into a magnetic false-eddy, nearly falling in while completely losing his primary cartography tools.",
+          "below_dc_complicated_fail_forward": "Kaio manages to anchor himself but receives a nasty static shock that permanently scrambles his current reading.",
+          "meets_dc_clean_success": "Kaio flawlessly braces against the basalt cleft, securing his gear and obtaining the critical baseline resonance readings.",
+          "dc_plus_5_or_20_extended_lore": "Kaio spots an underlying harmonic pattern in the shear, successfully mapping an entirely new stable transit corridor."
+        }
+      },
+      "master_narrator": {
+        "executor": "deterministic-enclave-5section-v2",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Kaio physically passes the glowing ridge-crystal to Ryn."
+      }
+    }
+  },
+  "narrative_prose": "The furious magnetohydrodynamic Kelvin-Helmholtz shear tore across the vast ferrofluid sea, throwing erratic plumes of liquid metal into the violet-charged atmosphere. Jagged arcs of static lightning danced between the crashing obsidian waves and the towering crystalline spires that lined the fragile shoreline. Relentless bifurcated thermal winds scoured the exposed ridges, carrying a chaotic chorus of piezoelectric shrieks. Below the jagged cliffs, bioluminescent myco-colonies desperately clung to the damp rock, casting a faint aquamarine glow against the churning darkness. Kaio leaned precariously over the jagged basalt edge, using a towering geode formation to DEFEND against the biting thermal wind. The sheer magnetic drag began to ATTRACT his heavy brass sextant, pulling it fiercely toward the churning abyss. He quickly moved to CONCEAL the sensitive instrument beneath his heavy leather duster, shielding it from the violent static arcs. 'Incredible,' he breathed, his teeth humming with piezoelectric charge while a sharp, metallic copper tang flooded his tongue. He stepped back from the dangerous ledge, unclipped a glowing, statically charged hunk of ridge-crystal from his belt, and physically handed the heavy crystalline baton directly to the approaching quartermaster. 'Hold this! The shear is stabilizing, Chef Ryn!'"
 }
