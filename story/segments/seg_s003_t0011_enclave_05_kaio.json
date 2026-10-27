@@ -11,7 +11,11 @@
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "location": "The_Ferrofluid_Coast",
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
-  "text": "[DUSK_CRAFT at The_Ferrofluid_Coast] The Magnetohydrodynamic Kelvin-Helmholtz shear ripped across the black ferrofluid sea, pulling the magnetic ocean into towering, jagged spikes that caught the dying light of the twin suns. The booming crash of the heavy liquid echoed against the basalt cliffs, carrying the sharp scent of ozone and a faint taste of metallic salt on the freezing wind. Kaio stood on the precipice, bracing his scout rig to DEFEND against the violent magnetic undertow dragging at his boots. He adjusted his localized field emitters to CONSUME the raw static charge from the air, channeling the energy to CONCEAL his signature from the dangerous resonance squalls sweeping the coast. Skating back from the edge with the vital telemetry cylinder still glowing hot in his grip, he burst through the heavy airlock doors of the Hub and shoved the physical baton straight into Ryn's flour-dusted hands.",
+  "narrative_prose": "[DUSK_CRAFT at The_Ferrofluid_Coast] The Magnetohydrodynamic Kelvin-Helmholtz shear ripped across the black ferrofluid sea, pulling the magnetic ocean into towering, jagged spikes that caught the dying light of the twin suns. The booming crash of the heavy liquid echoed against the basalt cliffs, carrying the sharp scent of ozone and a faint taste of metallic salt on the freezing wind. Kaio stood on the precipice, bracing his scout rig to DEFEND against the violent magnetic undertow dragging at his boots. He adjusted his localized field emitters to CONSUME the raw static charge from the air, channeling the energy to CONCEAL his signature from the dangerous resonance squalls sweeping the coast. Skating back from the edge with the vital telemetry cylinder still glowing hot in his grip, he burst through the heavy airlock doors of the Hub and shoved the physical baton straight into Ryn's flour-dusted hands.",
+  "actors": [
+    "enclave_05_kaio",
+    "enclave_13_ryn"
+  ],
   "campaign_metadata": {
     "session_number": 3,
     "colony_sol": 3,
@@ -127,6 +131,5 @@
       "enclave_05_kaio"
     ],
     "interlocutor_full_cards_loaded": 0
-  },
-  "disallow_overwrite": false
+  }
 }
