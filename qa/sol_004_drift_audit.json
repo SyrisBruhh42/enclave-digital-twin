@@ -1,9 +1,7 @@
 {
-  "entity_id": "enclave_03_silas",
-  "audit_type": "psychometric_drift",
   "colony_sol": 4,
   "tick_id": 16,
-  "narrative_prose": "Silas squints into the swirling dark of the underground cavern. The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea rips the surface into jagged, impossible peaks, defying gravity in eerie silence. A heavy smell of ozone hangs in the stagnant air, biting the back of his throat. He adjusts his grip on his hammer. If they cannot stabilize the resonance before the next wave, the entire colony structure will succumb to the shearing forces.",
+  "narrative_prose": "Ryn commands the galley as the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea echoes outside, the sound an angry cracking hum against the hull. The starkly cold air smells of acrid ozone, while she wipes the slick condensation from the brass counter, the static tang of metal resting on her tongue, filling her sight with obsidian reflections. She must DEFEND the caloric ledger, CONCEAL the thinning emergency rations from the others, and finally hands the heavy iron ladle to Silas so he can CONSUME the hearty mire-lentil stew.",
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 1,
@@ -12,9 +10,9 @@
       "pacing_mode": "MERCER_IMMERSIVE",
       "consequential_fights_since_short_rest": 0,
       "horizon_goals": {
-        "immediate_session_goal": "audit drift",
-        "mid_term_milestone": "survive",
-        "campaign_arc_climax": "win"
+        "immediate_session_goal": "Balance the caloric ledger.",
+        "mid_term_milestone": "Survive the storm.",
+        "campaign_arc_climax": "Master the planet's magnetosphere."
       }
     },
     "active_location": {
@@ -110,16 +108,34 @@
       }
     }
   },
-  "prev_next_pov_target": "enclave_03_silas",
-  "active_pov_id": "enclave_03_silas",
-  "next_pov_target": "enclave_01_hector",
-  "drift_audit": {
-    "max_abs_z": 2.2,
-    "axis_z_scores": {
-      "x": 2.2
-    },
-    "drift_alert": true,
-    "corrective_authors_note": "Silas is relying too heavily on raw intuition. He needs to ground his actions in measurable facts to re-align with his core traits.",
-    "re_anchor_ticks": 3
-  }
+  "prev_next_pov_target": "enclave_13_ryn",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "disallow_overwrite": false,
+  "steward_note": "deterministic-enclave-5section-v2",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "event_type": "INCHARACTER_PSYCHOMETRIC_DRIFT_AUDITS",
+  "day_phase": "THE_FEAST",
+  "event_id": "sol_004_drift_audit",
+  "world_timestamp_iso": "2026-10-27T23:12:01Z",
+  "base_snapshot_tick": 15,
+  "location": "The_Hearth",
+  "actors": [
+    "enclave_13_ryn",
+    "enclave_03_silas"
+  ],
+  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified",
+  "audits": [
+    {
+      "character_id": "enclave_13_ryn",
+      "z_scores": {
+        "openness": 0.5,
+        "conscientiousness": 1.2,
+        "extraversion": -0.4,
+        "agreeableness": -0.8,
+        "neuroticism": 0.9
+      }
+    }
+  ]
 }
