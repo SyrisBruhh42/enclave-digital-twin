@@ -9,7 +9,6 @@
   "next_pov_target": "enclave_05_kaio",
   "location": "The_First_Forge",
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
-  "text": "[MIDDAY_EXPEDITION] Silas tightened his grip on the hand-forged brass caliper as a vicious Magnetohydrodynamic Kelvin-Helmholtz shear ripped across the ferrofluid sea, rattling the workshop's structural framing. The scent of heavy ozone and vaporized copper flux bit the back of his throat, while the deep, groaning vibration of the containment vessel resonated through the soles of his boots. Blinding arcs of raw static danced across the observation viewport, illuminating the sheer drop into the storm-churned metallic waves, tasting faintly of iron on his tongue. With the containment lattice nearing critical buckling threshold, he locked the master shunt lever and shoved the sparking, heavily insulated calibration baton into Hector's waiting hands to finish the ascent.",
   "campaign_metadata": {
     "session_number": 4,
     "colony_sol": 4,
@@ -26,29 +25,29 @@
     "location_id": "The_First_Forge",
     "macro_silhouette": "The First Forge's observation deck hung precariously over the ferrofluid sea, its hand-forged brass ribbing groaning under the onslaught of the magnetohydrodynamic storm. Inside, the heavy shadows were broken only by the violent, stuttering glare of the central induction core struggling to maintain a stable plasma torus. Tools rattled ominously against their racks as the entire superstructure vibrated in sympathetic resonance with the crashing metallic waves below.",
     "sensory_palette": {
-      "sight_and_color": "Blinding violet plasma arcs and heavy, oxidized bronze shadows",
-      "sound": "Deafening, low-frequency structural groans and the sharp crackle of static discharge",
-      "smell": "Pungent ozone, scorched flux, and hot oil",
-      "tactile_temperature": "Oppressively hot blasts radiating from the core, offset by the bone-shaking vibration in the floor",
-      "taste_optional": "Metallic tang of ionized iron dust"
+      "sight_and_color": "blinding arcs of raw static",
+      "sound": "deafening structural groans",
+      "smell": "pungent scent of scorched flux",
+      "tactile_temperature": "blistering heat radiating through the floorboards",
+      "taste_optional": "metallic tang of ionized iron dust"
     },
     "interactive_features": [
       {
+        "feature_name": "Overloaded Bellows Vent",
+        "affordance_description": "Venting superheated gas.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
         "feature_name": "Primary Flux Shunt",
-        "affordance_description": "A massive, heavy-duty lever designed to ground excess energy.",
+        "affordance_description": "Grounding excess energy.",
         "system_verb": "DEFEND",
         "associated_check_dc": 14
       },
       {
         "feature_name": "Resonant Copper Coil",
-        "affordance_description": "Exposed winding that pulses with unstable induction fields.",
+        "affordance_description": "Pulsing with unstable induction fields.",
         "system_verb": "ATTRACT",
-        "associated_check_dc": 14
-      },
-      {
-        "feature_name": "Overloaded Bellows Vent",
-        "affordance_description": "A screaming pressure release valve venting superheated gas.",
-        "system_verb": "CONSUME",
         "associated_check_dc": 14
       }
     ]
@@ -122,5 +121,21 @@
   "context_manifest_path": "context/manifests/manifest_s004_t0014_enclave_01_hector.json",
   "total_prompt_tokens": 850,
   "target_path": "story/segments/seg_s004_t0014_enclave_01_hector.json",
-  "disallow_overwrite": false
+  "disallow_overwrite": false,
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_05_kaio"
+  ],
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "narrative_prose": "Hector absorbed the stinging impact of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, shielding his face from the blinding arcs of raw static that violently struck the observation viewport. Over the deafening structural groans of the mast and the pungent scent of scorched flux, he watched the overloaded bellows vent struggle to CONSUME the escaping gas, while the resilient primary flux shunt worked desperately to DEFEND the central matrix from complete cascading failure. Recognizing the perilous induction buildup around the resonant copper coil designed to ATTRACT stray voltage, and feeling the blistering heat radiating through the floorboards mixed with the metallic tang of ionized iron dust on his tongue, he firmly shoved the sparking calibration baton directly into Kaio's hands to secure the perimeter.",
+  "state_deltas": [],
+  "relationship_deltas": [],
+  "evidence_refs": []
 }
