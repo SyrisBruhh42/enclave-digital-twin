@@ -18,7 +18,7 @@
     ],
     "interlocutor_full_cards_loaded": 0
   },
-  "narrative_prose": "Ryn tightly gripped her brass ladle, watching the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea threaten to disrupt the delicate caloric balance of the evening meal. She handed the heavy, steam-jacketed copper pot to Silas, warning him not to drop it. 'Keep this steady,' she ordered, ensuring the baton was physically passed to the engineer.",
+  "narrative_prose": "Ryn expertly tilted the heavy copper pan over the roaring hearth, noting how the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea seemed to momentarily disrupt the steady flame below. She quickly repositioned the simmering mire-lentils to DEFEND the delicate caloric balance, used the aroma to ATTRACT the hungry crew, and watched them CONSUME the meal eagerly. 'Take this iron-wheat loaf and don't drop it,' she ordered, physically handing the dense baton to Silas.",
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 1,
@@ -67,18 +67,18 @@
       {
         "entity_id": "shear_anomaly",
         "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz Shear",
-        "motivation_goal": "destabilize thermal systems",
-        "consistent_method": "fluctuating magnetic fields",
-        "immediate_complication": "threatens the simmering stock",
-        "pressure_index": 7,
-        "uninterrupted_escalation": "will cause the kettles to boil over"
+        "motivation_goal": "Destabilize thermal systems",
+        "consistent_method": "Fluctuating magnetic fields",
+        "immediate_complication": "Threatens to curdle the simmering stock",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "Will cause a catastrophic boil-over in the main kettles."
       }
     ],
     "encounter_matrix": {
       "three_levels_of_why": {
-        "level_1_immediate": "to feed the crew",
-        "level_2_local": "to maintain colony morale",
-        "level_3_campaign_arc": "to survive the exoplanet"
+        "level_1_immediate": "Preserve the fragile caloric quota for the evening Feast.",
+        "level_2_local": "Ensure the crew maintains peak morale and metabolic stability.",
+        "level_3_campaign_arc": "Prove that the Enclave's culinary engine can withstand the exoplanet's harshest anomalies."
       },
       "active_specialist_roles": [
         {
@@ -125,5 +125,49 @@
         "agency_handoff_prompt": "Silas takes the pot. What does he do?"
       }
     }
-  }
+  },
+  "second_pass_repair_constraint": "session_exceeded_25m_cut_loss_relaunch",
+  "audits": [
+    {
+      "character_id": "enclave_13_ryn",
+      "character_name": "Ryn",
+      "sample_count": 4,
+      "drift_alert": false,
+      "law_l16_compliant": true,
+      "drifted_axes": [],
+      "max_abs_z": 0.4261,
+      "z_threshold": 2.0,
+      "z_scores": {
+        "openness": -0.3563,
+        "conscientiousness": 0.1206,
+        "extraversion": 0.3271,
+        "agreeableness": 0.0475,
+        "neuroticism": 0.4261
+      },
+      "sample_means": {
+        "openness": 0.2915,
+        "conscientiousness": 0.9448,
+        "extraversion": 0.8196,
+        "agreeableness": 0.3238,
+        "neuroticism": 0.5984,
+        "hexaco_honesty_humility": 0.89
+      },
+      "target_means": {
+        "openness": 0.32,
+        "conscientiousness": 0.94,
+        "extraversion": 0.8,
+        "agreeableness": 0.32,
+        "neuroticism": 0.56,
+        "hexaco_honesty_humility": 0.89
+      },
+      "target_sds": {
+        "openness": 0.08,
+        "conscientiousness": 0.04,
+        "extraversion": 0.06,
+        "agreeableness": 0.08,
+        "neuroticism": 0.09,
+        "hexaco_honesty_humility": 0.05
+      }
+    }
+  ]
 }
