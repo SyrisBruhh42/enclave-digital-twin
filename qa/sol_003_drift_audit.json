@@ -1,15 +1,13 @@
 {
-  "audit_type": "psychometric_drift",
-  "colony_sol": 3,
-  "tick_id": 12,
-  "day_phase": "THE_FEAST",
+  "entity_id": "enclave_13_ryn",
   "active_pov_id": "enclave_13_ryn",
   "next_pov_target": "enclave_03_silas",
   "prev_next_pov_target": "enclave_13_ryn",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
-  "disallow_overwrite": false,
-  "evidence_refs": [
-    "evt_s001_t0004_the_feast"
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "actors": [
+    "enclave_13_ryn",
+    "enclave_03_silas"
   ],
   "context_manifest": {
     "full_cards_loaded_count": 1,
@@ -18,115 +16,6 @@
     ],
     "interlocutor_full_cards_loaded": 0
   },
-  "narrative_prose": "Ryn expertly tilted the heavy copper pan over the roaring hearth, noting how the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea seemed to momentarily disrupt the steady flame below. She quickly repositioned the simmering mire-lentils to DEFEND the delicate caloric balance, used the aroma to ATTRACT the hungry crew, and watched them CONSUME the meal eagerly. 'Take this iron-wheat loaf and don't drop it,' she ordered, physically handing the dense baton to Silas.",
-  "showrunner_ledger": {
-    "campaign_metadata": {
-      "session_number": 1,
-      "colony_sol": 3,
-      "tick_id": 12,
-      "pacing_mode": "MERCER_IMMERSIVE",
-      "consequential_fights_since_short_rest": 1,
-      "horizon_goals": {
-        "immediate_session_goal": "Assess psychometric drift under extreme shear stress.",
-        "mid_term_milestone": "survive the shear",
-        "campaign_arc_climax": "win the colony's future"
-      }
-    },
-    "active_location": {
-      "location_id": "The_Hearth",
-      "macro_silhouette": "The Hearth is a warm, bustling galley dominated by thirty-gallon steam-jacketed kettles. Condensation runs down the brass fittings, glowing softly in the dim light.",
-      "sensory_palette": {
-        "sight_and_color": "dim light and glowing brass",
-        "sound": "bubbling stew and hissing steam",
-        "smell": "rich, savory mire-lentils",
-        "tactile_temperature": "sweltering warmth",
-        "taste_optional": "salty, robust broth"
-      },
-      "interactive_features": [
-        {
-          "feature_name": "Steam-Jacketed Kettle",
-          "affordance_description": "Can be used to block incoming debris.",
-          "system_verb": "DEFEND",
-          "associated_check_dc": 14
-        },
-        {
-          "feature_name": "Copper Ladle",
-          "affordance_description": "Can be used to distract hungry crewmates.",
-          "system_verb": "ATTRACT",
-          "associated_check_dc": 14
-        },
-        {
-          "feature_name": "Iron-Wheat Loaf",
-          "affordance_description": "Can be eaten to restore stamina.",
-          "system_verb": "CONSUME",
-          "associated_check_dc": 14
-        }
-      ]
-    },
-    "reactive_toys": [
-      {
-        "entity_id": "shear_anomaly",
-        "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz Shear",
-        "motivation_goal": "Destabilize thermal systems",
-        "consistent_method": "Fluctuating magnetic fields",
-        "immediate_complication": "Threatens to curdle the simmering stock",
-        "pressure_index": 8,
-        "uninterrupted_escalation": "Will cause a catastrophic boil-over in the main kettles."
-      }
-    ],
-    "encounter_matrix": {
-      "three_levels_of_why": {
-        "level_1_immediate": "Preserve the fragile caloric quota for the evening Feast.",
-        "level_2_local": "Ensure the crew maintains peak morale and metabolic stability.",
-        "level_3_campaign_arc": "Prove that the Enclave's culinary engine can withstand the exoplanet's harshest anomalies."
-      },
-      "active_specialist_roles": [
-        {
-          "actor_id": "enclave_13_ryn",
-          "tactical_role": "DEFENDER"
-        }
-      ],
-      "strain_accumulated_upward": 1,
-      "prerolled_hazard_queue": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    },
-    "lpi_metrics": {
-      "relational_tension_density": 0.5,
-      "motivational_vector_saturation": 0.5,
-      "unresolved_conflict_ratio": 0.5,
-      "temporal_horizon_immediacy": 0.5,
-      "composite_lpi": 0.5,
-      "classification": "Campaign-Ready"
-    },
-    "dual_agent_contract": {
-      "judge_tactician": {
-        "provider": "local_ai",
-        "model": "ollama",
-        "temperature": 0.7,
-        "explicit_pre_roll_dc": 14,
-        "failure_stakes_declared": "The broth spills and caloric quotas are missed.",
-        "graduated_outcomes": {
-          "nat_1_false_intuition": "Ryn drops the pot.",
-          "below_dc_complicated_fail_forward": "The pot is saved but someone gets burned.",
-          "meets_dc_clean_success": "The pot is passed safely.",
-          "dc_plus_5_or_20_extended_lore": "The pot is passed and they discover a new recipe."
-        }
-      },
-      "master_narrator": {
-        "executor": "jules_standby",
-        "temperature": 0.6,
-        "calypso_zero_raw_stats": true,
-        "prosodic_micro_pauses_enabled": true,
-        "agency_handoff_prompt": "Silas takes the pot. What does he do?"
-      }
-    }
-  },
-  "second_pass_repair_constraint": "session_exceeded_25m_cut_loss_relaunch",
   "audits": [
     {
       "character_id": "enclave_13_ryn",
@@ -169,5 +58,122 @@
         "hexaco_honesty_humility": 0.05
       }
     }
+  ],
+  "narrative_prose": "Ryn expertly tilted the heavy copper pan over the roaring hearth, noting how the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea seemed to momentarily disrupt the steady flame below. She quickly repositioned the simmering mire-lentils to DEFEND the delicate caloric balance, used the aroma to ATTRACT the hungry crew, and watched them CONSUME the meal eagerly. 'Take this iron-wheat loaf and don't drop it,' she ordered, physically handing the dense baton to Silas.",
+  "agency_handoff_prompt": "Handoff to enclave_03_silas.",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 3,
+      "colony_sol": 3,
+      "tick_id": 12,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Maintain thermodynamic balance at the feast",
+        "mid_term_milestone": "Calibrate the metabolic engine",
+        "campaign_arc_climax": "Prevent systemic caloric collapse"
+      }
+    },
+    "active_location": {
+      "location_id": "The_Hearth",
+      "macro_silhouette": "The Hearth served as the glowing, thrumming core of the settlement. Massive copper steam-jacketed kettles lined the stone walls, venting savory steam into the high vaulted ceiling.",
+      "sensory_palette": {
+        "sight_and_color": "Polished copper, flickering orange hearth-fire, swirling white steam",
+        "sound": "Rhythmic bubbling of dense stews and the low hum of the metabolic engine",
+        "smell": "Rich, earthy mire-lentils roasting in rendered fat",
+        "tactile_temperature": "Oppressively warm, like standing inside an oven",
+        "taste_optional": "Heavy, salty, and sharply umami"
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Copper Steam Kettle",
+          "affordance_description": "Can be defended against temperature drops",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Faltering Flame",
+          "affordance_description": "Can be concealed to preserve morale",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Mire-Lentil Aroma",
+          "affordance_description": "Can attract the crew for The Feast",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_sea_shear",
+        "name_and_role": "Ferrofluid Sea Kelvin-Helmholtz Shear",
+        "motivation_goal": "Disrupt thermodynamic stability",
+        "consistent_method": "Magnetic fluctuation",
+        "immediate_complication": "Causes the hearth's induction coils to sputter",
+        "pressure_index": 7,
+        "uninterrupted_escalation": "Spoils the entire feast batch if unmitigated"
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Keep the mire-lentils from burning or freezing due to magnetic shear",
+        "level_2_local": "Ensure The Forge squad recovers from their caloric deficit",
+        "level_3_campaign_arc": "Prove the Enclave's self-sufficiency against the hostile exoplanet"
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 2,
+      "prerolled_hazard_queue": [
+        12,
+        5,
+        18,
+        9,
+        3
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.65,
+      "motivational_vector_saturation": 0.8,
+      "unresolved_conflict_ratio": 0.55,
+      "temporal_horizon_immediacy": 0.9,
+      "composite_lpi": 0.72,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local",
+        "model": "ollama",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The induction coils fail, ruining the stew and leaving the crew hungry and demoralized.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "You overcompensate the heat, burning the bottom layer into an inedible slag.",
+          "below_dc_complicated_fail_forward": "The temperature drops; the stew is safe but cold, forcing the crew to eat a miserable meal.",
+          "meets_dc_clean_success": "You expertly manage the coils, producing a perfectly cooked, morale-boosting feast.",
+          "dc_plus_5_or_20_extended_lore": "You discover a resonance frequency in the shear that actually improves the Maillard reaction, unlocking a new culinary technique."
+        }
+      },
+      "master_narrator": {
+        "executor": "local",
+        "temperature": 0.8,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": false,
+        "agency_handoff_prompt": "Handoff to enclave_03_silas."
+      }
+    }
+  },
+  "audit_type": "psychometric_drift",
+  "colony_sol": 3,
+  "tick_id": 12,
+  "day_phase": "THE_FEAST",
+  "disallow_overwrite": false,
+  "evidence_refs": [
+    "evt_s001_t0004_the_feast"
   ]
 }
