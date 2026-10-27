@@ -1,23 +1,23 @@
 {
   "event_id": "evt_s004_t0016_reflection",
   "memory_id": "evt_s004_t0016_reflection",
-  "character_id": "enclave_03_silas",
+  "character_id": "enclave_13_ryn",
   "tick_id": 16,
   "colony_sol": 4,
   "event_type": "NIGHTLY_REFLECTION",
   "memory_type": "reflection",
-  "active_pov_id": "enclave_03_silas",
-  "next_pov_target": "enclave_01_hector",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
   "location": "The_First_Forge",
   "actors": [
-    "enclave_03_silas",
-    "enclave_01_hector"
+    "enclave_13_ryn",
+    "enclave_03_silas"
   ],
   "lethality": 0,
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
-  "insight_text": "The First Forge hummed with a low-frequency drone that smelled sharply of ozone and roasting root vegetables, leaving a faint, metallic taste on the tongue. Silas visually traced the glowing blue plasma arcs and ran a calloused thumb over the oxidized copper busbar, feeling the sharp static bite of the containment field. He adjusted the primary induction coils to DEFEND against the micro-fractures caused by the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. Then, he angled the tertiary capacitors to ATTRACT stray geode lightning into a stabilized grid. Finally, he recalibrated the exhaust vents to CONSUME excess plasma buildup before it reached critical pressure. The immediate challenge was stabilizing the local power draw, but the broader necessity was ensuring the entire enclave had reliable shielding, ultimately pointing toward their long-term survival in this sanctuary. The stakes were high; a miscalculation would mean localized power grid disruptions and extra shifts, allowing the prodigies to learn from the fail-forward complications. Standing up with an affectionate grumble, Silas firmly pressed the warm brass calibration baton into Hector's waiting palm.",
-  "summary": "Silas adjusts The First Forge to manage the Magnetohydrodynamic Kelvin-Helmholtz shear, completing his task by handing the calibration baton to Hector.",
-  "text": "The First Forge hummed with a low-frequency drone that smelled sharply of ozone and roasting root vegetables, leaving a faint, metallic taste on the tongue. Silas visually traced the glowing blue plasma arcs and ran a calloused thumb over the oxidized copper busbar, feeling the sharp static bite of the containment field. He adjusted the primary induction coils to DEFEND against the micro-fractures caused by the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. Then, he angled the tertiary capacitors to ATTRACT stray geode lightning into a stabilized grid. Finally, he recalibrated the exhaust vents to CONSUME excess plasma buildup before it reached critical pressure. The immediate challenge was stabilizing the local power draw, but the broader necessity was ensuring the entire enclave had reliable shielding, ultimately pointing toward their long-term survival in this sanctuary. The stakes were high; a miscalculation would mean localized power grid disruptions and extra shifts, allowing the prodigies to learn from the fail-forward complications. Standing up with an affectionate grumble, Silas firmly pressed the warm brass calibration baton into Hector's waiting palm.",
+  "insight_text": "The First Forge hummed with a low-frequency drone that smelled sharply of ozone and roasting root vegetables, leaving a faint, metallic taste on the tongue. Ryn visually traced the glowing blue plasma arcs and ran a calloused thumb over the oxidized copper busbar, feeling the sharp static bite of the containment field. She adjusted the primary induction coils to DEFEND against the micro-fractures caused by the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. Then, she angled the tertiary capacitors to ATTRACT stray geode lightning into a stabilized grid. Finally, she recalibrated the exhaust vents to CONSUME excess plasma buildup before it reached critical pressure. The immediate challenge was stabilizing the local power draw, but the broader necessity was ensuring the entire enclave had reliable shielding, ultimately pointing toward their long-term survival in this sanctuary. The stakes were high; a miscalculation would mean localized power grid disruptions and extra shifts, allowing the prodigies to learn from the fail-forward complications. Standing up with an affectionate grumble, Ryn firmly pressed the warm brass calibration baton into Silas's waiting palm.",
+  "summary": "Ryn adjusts The First Forge to manage the Magnetohydrodynamic Kelvin-Helmholtz shear, completing her task by handing the calibration baton to Silas.",
+  "text": "The First Forge hummed with a low-frequency drone that smelled sharply of ozone and roasting root vegetables, leaving a faint, metallic taste on the tongue. Ryn visually traced the glowing blue plasma arcs and ran a calloused thumb over the oxidized copper busbar, feeling the sharp static bite of the containment field. She adjusted the primary induction coils to DEFEND against the micro-fractures caused by the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. Then, she angled the tertiary capacitors to ATTRACT stray geode lightning into a stabilized grid. Finally, she recalibrated the exhaust vents to CONSUME excess plasma buildup before it reached critical pressure. The immediate challenge was stabilizing the local power draw, but the broader necessity was ensuring the entire enclave had reliable shielding, ultimately pointing toward their long-term survival in this sanctuary. The stakes were high; a miscalculation would mean localized power grid disruptions and extra shifts, allowing the prodigies to learn from the fail-forward complications. Standing up with an affectionate grumble, Ryn firmly pressed the warm brass calibration baton into Silas's waiting palm.",
   "importance": 8.0,
   "novelty_score": 0.8,
   "state_deltas": {
@@ -28,5 +28,126 @@
   ],
   "evidence_refs": [
     "evt_s001_t0001_dawn_shift"
-  ]
+  ],
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "narrative_prose": "The First Forge hummed with a low-frequency drone that smelled sharply of ozone and roasting root vegetables, leaving a faint, metallic taste on the tongue. Ryn visually traced the glowing blue plasma arcs and ran a calloused thumb over the oxidized copper busbar, feeling the sharp static bite of the containment field. She adjusted the primary induction coils to DEFEND against the micro-fractures caused by the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. Then, she angled the tertiary capacitors to ATTRACT stray geode lightning into a stabilized grid. Finally, she recalibrated the exhaust vents to CONSUME excess plasma buildup before it reached critical pressure. The immediate challenge was stabilizing the local power draw, but the broader necessity was ensuring the entire enclave had reliable shielding, ultimately pointing toward their long-term survival in this sanctuary. The stakes were high; a miscalculation would mean localized power grid disruptions and extra shifts, allowing the prodigies to learn from the fail-forward complications. Standing up with an affectionate grumble, Ryn firmly pressed the warm brass calibration baton into Silas's waiting palm.",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 4,
+      "colony_sol": 4,
+      "tick_id": 16,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Reflect on the day's events.",
+        "mid_term_milestone": "Stabilize the magnetosphere.",
+        "campaign_arc_climax": "Complete the grand projects."
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "The First Forge hummed with a low-frequency drone. Ryn adjusted the primary induction coils.",
+      "sensory_palette": {
+        "sight_and_color": "Glowing blue plasma arcs and oxidized copper.",
+        "sound": "Low-frequency drone.",
+        "smell": "Sharply of ozone and roasting root vegetables.",
+        "tactile_temperature": "Sharp static bite of the containment field.",
+        "taste_optional": "Faint, metallic taste on the tongue."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Primary Induction Coils",
+          "affordance_description": "Can defend against micro-fractures.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Tertiary Capacitors",
+          "affordance_description": "Can attract stray geode lightning.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Exhaust Vents",
+          "affordance_description": "Can consume excess plasma buildup.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "Ferrofluid Wave",
+        "name_and_role": "Magnetohydrodynamic shear fluctuation",
+        "motivation_goal": "Disrupt alignment.",
+        "consistent_method": "Pulsing unpredictable magnetic fields.",
+        "immediate_complication": "Baton transfer becomes difficult.",
+        "pressure_index": 6,
+        "uninterrupted_escalation": "Equipment overload."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Need to hand off the shift smoothly.",
+        "level_2_local": "Ensure the forge remains stable.",
+        "level_3_campaign_arc": "Maintain infrastructure for The Enclave."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "LEADER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        4,
+        8,
+        15,
+        16,
+        23
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.6,
+      "motivational_vector_saturation": 0.6,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.7,
+      "composite_lpi": 0.6,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_ai",
+        "model": "qwen3.5:4b-q4_K_M",
+        "temperature": 0.1,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The baton handoff is fumbled due to shear forces.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Catastrophic misalignment and minor burns.",
+          "below_dc_complicated_fail_forward": "Handoff complete but equipment damaged.",
+          "meets_dc_clean_success": "Flawless handoff.",
+          "dc_plus_5_or_20_extended_lore": "Flawless handoff with new insight into ferrofluid behavior."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_ai",
+        "temperature": 0.4,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Silas, take the baton and mind the shear."
+      }
+    }
+  },
+  "context_manifest": {
+    "manifest": {
+      "full_cards_loaded_count": 1,
+      "loaded_full_card_ids": [
+        "enclave_13_ryn"
+      ],
+      "active_pov_id": "enclave_13_ryn",
+      "interlocutor_full_cards_loaded": 0,
+      "leaked_interlocutor_private_cards": false
+    }
+  },
+  "prev_next_pov_target": "enclave_13_ryn"
 }
