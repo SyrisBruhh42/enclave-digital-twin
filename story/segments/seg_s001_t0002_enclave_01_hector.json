@@ -7,10 +7,132 @@
   "base_snapshot_tick": 1,
   "active_pov_id": "enclave_01_hector",
   "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "location": "Basalt_Spire_Ridge",
-  "science_vegetable": "Relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron",
-  "text": "[MIDDAY_EXPEDITION at Basalt_Spire_Ridge] Hector calibrated the hand-forged brass instrumentation against relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron, then passed the warm copper calibration baton directly into Kaio's hands.",
-  "context_manifest_path": "context/manifests/manifest_s001_t0002_enclave_01_hector.json",
-  "total_prompt_tokens": 796,
-  "target_path": "story/segments/seg_s001_t0002_enclave_01_hector.json"
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "text": "[MIDDAY_EXPEDITION at Basalt_Spire_Ridge] Hector grinned, adjusting his copper calipers as the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea intensified, kicking up a resonant spore fog. The heavy scent of ozone mingled with the metallic tang of his sweat. The jagged basalt spires hummed around him, their internal geodes glowing blue against the freezing ridge crest air. He expertly tuned the induction rigging, leaning back into the gale, then tossed the heavy, crackling brass calibration baton straight into Kaio's waiting hands.",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 1,
+      "tick_id": 2,
+      "pacing_mode": "MULLIGAN_CRISIS",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Calibrate the induction rigging amidst the resonant spore fog and magnetic shear",
+        "mid_term_milestone": "Stabilize the Basalt Spire Ridge's atmospheric grounding array",
+        "campaign_arc_climax": "Prevent the twin suns' magnetic shear from collapsing the Enclave's power grid"
+      }
+    },
+    "active_location": {
+      "location_id": "Basalt_Spire_Ridge",
+      "macro_silhouette": "The jagged basalt spires hummed, their internal geodes glowing blue against the freezing ridge crest air. A turbulent ferrofluid sea stretched out below, whipped into chaotic waves by the dual-sun magnetic shear.",
+      "sensory_palette": {
+        "sight_and_color": "glowing blue geodes, jagged dark basalt, swirling resonant spore fog",
+        "sound": "howling ozone gale, humming basalt spires, crackling static",
+        "smell": "heavy ozone, metallic tang of sweat and copper",
+        "tactile_temperature": "freezing ridge crest air (-6.8C) mixed with hot static bursts",
+        "taste_optional": "coppery residue in the mouth"
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Resonant Spore Fog Drift",
+          "affordance_description": "Can be utilized to obscure thermal signatures or trap static charge.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Overcharged Induction Rigging",
+          "affordance_description": "Can be hastily recalibrated to pull hazardous ambient charge away from allies.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 16
+        },
+        {
+          "feature_name": "Basalt Geode Cluster",
+          "affordance_description": "Can be struck to release a burst of stored energy, neutralizing incoming kinetic threats.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 15
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_sea_surge",
+        "name_and_role": "Ferrofluid Sea Surge",
+        "motivation_goal": "Rise and consume the lower ridges under magnetic shear",
+        "consistent_method": "Pounding kinetic waves and highly corrosive magnetic spray",
+        "immediate_complication": "Coating the copper calipers in conductive, abrasive sludge",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "Will eventually short out the primary grounding array if not diverted"
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The induction rigging is failing due to the sudden spike in magnetic shear.",
+        "level_2_local": "The Basalt Spire Ridge is the only high-altitude grounding point capable of handling the current twin-sun azimuth alignment.",
+        "level_3_campaign_arc": "Mastering this shear is necessary to fully charge The Stormbreaker's flux-core."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        },
+        {
+          "actor_id": "enclave_05_kaio",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        8,
+        14,
+        6,
+        19,
+        12
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.85,
+      "motivational_vector_saturation": 0.9,
+      "unresolved_conflict_ratio": 0.75,
+      "temporal_horizon_immediacy": 0.95,
+      "composite_lpi": 0.88,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "deterministic_host",
+        "model": "deterministic-symbolic-judge",
+        "temperature": 0.05,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "If the calibration fails, the ferrofluid surge will short out Hector's primary calipers and send a feedback loop into Kaio.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Hector mistakenly grounds the rigging to the sea, amplifying the surge.",
+          "below_dc_complicated_fail_forward": "Rigging holds, but Hector's calipers are ruined and the baton is dangerously hot when passed.",
+          "meets_dc_clean_success": "Hector perfectly tunes the rigging and executes a clean handoff.",
+          "dc_plus_5_or_20_extended_lore": "Hector discovers a new resonance frequency that charges the baton natively."
+        }
+      },
+      "master_narrator": {
+        "executor": "jules_dm",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "With the baton now humming in Kaio's grip, how does the Scout navigate the treacherous descent?"
+      }
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "actors": [
+    "enclave_01_hector",
+    "enclave_05_kaio"
+  ],
+  "disallow_overwrite": false
 }
