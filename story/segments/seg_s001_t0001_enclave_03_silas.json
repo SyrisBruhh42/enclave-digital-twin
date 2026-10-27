@@ -8,9 +8,126 @@
   "active_pov_id": "enclave_03_silas",
   "next_pov_target": "enclave_01_hector",
   "location": "The_First_Forge",
-  "science_vegetable": "Capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers",
-  "text": "[DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands.",
-  "context_manifest_path": "context/manifests/manifest_s001_t0001_enclave_03_silas.json",
-  "total_prompt_tokens": 709,
-  "target_path": "story/segments/seg_s001_t0001_enclave_03_silas.json"
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "disallow_overwrite": false,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "narrative_prose": "The First Forge hummed with the electric resonance of the twin suns, casting amber and violet hues across the polished copper bulkheads. Silas meticulously wiped a smudge of crystallized ozone from the primary containment vessel, the sharp scent of ionized air mingling with the deep, grounding aroma of hot iron. He could hear the low, rhythmic thrum of the magnetosphere fighting the ferrofluid sea outside, sending a faint vibration through the floorplates that he felt all the way to his teeth. He adjusted the final brass valve to seal the chamber. 'Inefficient,' he muttered affectionately, comparing the current draw against the latest storm data. Turning from the main console, he picked up the heavy, warm copper calibration baton and held it out, explicitly handing it into Hector's waiting hands to continue the sequence.",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 1,
+      "tick_id": 1,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Calibrate the magnetosphere containment",
+        "mid_term_milestone": "Stabilize The First Forge",
+        "campaign_arc_climax": "Survive the convergence of the twin suns"
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "The First Forge is a cathedral of hand-forged brass and captured lightning, echoing with the constant thrum of power. Copper conduits snake across the walls like veins, pulsating with raw energy from the geode arrays.",
+      "sensory_palette": {
+        "sight_and_color": "Amber and violet hues across polished copper bulkheads.",
+        "sound": "Low, rhythmic thrum of the magnetosphere.",
+        "smell": "Sharp scent of ionized air and hot iron.",
+        "tactile_temperature": "Faint vibration through the floorplates, ambient warmth.",
+        "taste_optional": "Metallic tang of ozone."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Primary Containment Vessel",
+          "affordance_description": "A heavy brass chamber holding raw geode energy.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Ferrofluid Sightglass",
+          "affordance_description": "A reinforced window showing the turbulent ferrofluid sea.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Emergency Vent Stack",
+          "affordance_description": "A pressure release valve that can hide excess emissions.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_sea",
+        "name_and_role": "Ferrofluid Sea, Environmental Hazard",
+        "motivation_goal": "To breach the containment walls.",
+        "consistent_method": "Applying Kelvin-Helmholtz shear.",
+        "immediate_complication": "Spiking magnetic resonance.",
+        "pressure_index": 7,
+        "uninterrupted_escalation": "Will eventually short out the main busbar."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Contain the immediate magnetic spike.",
+        "level_2_local": "Ensure the Forge doesn't blow out its fuses.",
+        "level_3_campaign_arc": "Maintain the Enclave's primary power grid."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        7,
+        12,
+        19,
+        4,
+        15
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.4,
+      "motivational_vector_saturation": 0.6,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.8,
+      "composite_lpi": 0.7,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_ollama",
+        "model": "judge_model_v1",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "If the calibration fails, the containment vessel will rupture, causing localized ionization damage.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Silas incorrectly adjusts the valve, increasing pressure.",
+          "below_dc_complicated_fail_forward": "The valve is turned but gets stuck halfway.",
+          "meets_dc_clean_success": "Silas smoothly calibrates the tolerances.",
+          "dc_plus_5_or_20_extended_lore": "Silas discovers a more efficient configuration."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_ollama",
+        "temperature": 0.8,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Hand over the baton to Hector."
+      }
+    }
+  }
 }
