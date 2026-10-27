@@ -12,20 +12,20 @@
   "law_l11_clamped": false,
   "severity": "PETTY_AFFECTIONATE_INCONVENIENCE",
   "node_a": "enclave_01_hector",
-  "node_b": "enclave_03_silas",
+  "node_b": "enclave_05_kaio",
   "node_c": "enclave_13_ryn",
   "instigator": "enclave_01_hector",
-  "intended_target": "enclave_03_silas",
+  "intended_target": "enclave_05_kaio",
   "collateral_recipient": "enclave_13_ryn",
   "target_b_missed": true,
   "blamed_node": "enclave_01_hector",
   "attributed_to": "enclave_01_hector",
-  "prank_description": "Replaced the brass pressure-gauge bezel with an engraved 'Inefficient' dial plate",
-  "summary": "The 'Inefficient' dial plate prank finally pays off as Hector grabs the baton from Silas in the middle of a Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea.",
-  "narrative_prose": "Silas gripped the heavy iron baton as the Magnetohydrodynamic Kelvin-Helmholtz shear howled across the ferrofluid sea. The dark, oily waves crashed against the Enclave's reinforced pylons, sending a vibrating hum through the metal beneath them. The sky boiled in bruising shades of violet and bruised orange, carrying a thick metallic ozone scent. He squinted at the main control console, trying to read the brass pressure-gauge, but instead of numerical readouts, the bezel boldly declared 'Inefficient' in unmistakable, freshly engraved lettering. Silas let out a ragged breath and shouted, 'Hector, take it!', shoving the iron baton directly into Hector's waiting hand before the ferrofluid storm could consume their precarious foothold.",
+  "prank_description": "Hector swapped Kaio's scout compass with one slightly recalibrated by the Magnetohydrodynamic Kelvin-Helmholtz shear.",
+  "summary": "Hector intended to hand the pranked compass to Kaio during the fierce storm, but Kaio missed the catch and it hit Ryn instead.",
+  "narrative_prose": "Hector stabilized his stance, the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea screaming against the hull as he tasted the static tang of the atmosphere. The thick metallic tang of ozone stung his nose, and the deafening roar of the shear made communication nearly impossible, so he reached to CONCEAL his tools in his heavy jacket. 'Kaio, grab this compass!' he bellowed, thrusting the pranked scout compass into Kaio's waiting hand, but Kaio missed the perfectly timed physical handoff amidst the chaos, failing to DEFEND the Enclave's structural integrity before the sheer force could CONSUME their grip on the railing, and the compass hit Ryn instead.",
   "blind_spot_attribution": {
     "instigator_node_a": "enclave_01_hector",
-    "oblivious_target_node_b": "enclave_03_silas",
+    "oblivious_target_node_b": "enclave_05_kaio",
     "target_b_missed": true,
     "inconvenienced_node_c": "enclave_13_ryn",
     "blamed_by_c": "enclave_01_hector",
@@ -37,20 +37,20 @@
   "world_timestamp_iso": "2026-10-28T06:00:00Z",
   "location": "The_First_Forge",
   "actors": [
-    "enclave_03_silas",
     "enclave_01_hector",
-    "enclave_13_ryn"
+    "enclave_13_ryn",
+    "enclave_05_kaio"
   ],
-  "active_pov_id": "enclave_03_silas",
-  "next_pov_target": "enclave_01_hector",
-  "prev_next_pov_target": "enclave_03_silas",
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
   "context_manifest": {
     "manifest": {
       "full_cards_loaded_count": 1,
       "loaded_full_card_ids": [
-        "enclave_03_silas"
+        "enclave_01_hector"
       ],
-      "active_pov_id": "enclave_03_silas",
+      "active_pov_id": "enclave_01_hector",
       "interlocutor_full_cards_loaded": 0,
       "leaked_interlocutor_private_cards": false
     }
@@ -175,8 +175,9 @@
         "temperature": 0.35,
         "calypso_zero_raw_stats": true,
         "prosodic_micro_pauses_enabled": true,
-        "agency_handoff_prompt": "'Hector, take it!'"
+        "agency_handoff_prompt": "'Kaio, grab this compass!'"
       }
     }
-  }
+  },
+  "steward_note": "deterministic-enclave-5section-v2"
 }
