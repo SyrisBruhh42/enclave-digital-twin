@@ -28,5 +28,129 @@
   "summary": "All 16 members of The Enclave gathered around Ryn and Elara's hearth on Sol 1 to break warm iron-wheat bread, debate magnetohydrodynamic kelvin-helmholtz shear across the ferrofluid sea, and release the day's magnetospheric tension.",
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "lethality": 0,
-  "target_path": "story/feasts/sol_001_feast.json"
+  "target_path": "story/feasts/sol_001_feast.json",
+  "disallow_overwrite": false,
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 1,
+      "tick_id": 4,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Balance the metabolic load amidst the shear.",
+        "mid_term_milestone": "Calibrate the main hearth to ferrofluid fluctuations.",
+        "campaign_arc_climax": "Align the 16 characters for the Grand Genesis."
+      }
+    },
+    "active_location": {
+      "location_id": "The_Hub_Hearth",
+      "macro_silhouette": "The Hub Hearth glowed with the ambient hum of the ferrofluid sea, casting erratic shadows across the metallic walls. The air vibrated subtly with the magnetohydrodynamic Kelvin-Helmholtz shear, an ever-present reminder of their exoplanetary host.",
+      "sensory_palette": {
+        "sight_and_color": "Erratic orange and deep violet shadows dancing on cold iron bulkheads.",
+        "sound": "A low, continuous thrum of magnetospheric tension from the shear.",
+        "smell": "Ozone intermingled with the comforting scent of warm iron-wheat bread.",
+        "tactile_temperature": "A sharp, biting chill offset by bursts of radiant heat from the hearth.",
+        "taste_optional": "The metallic tang of static charge."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "The Iron-Wheat Bread Basket",
+          "affordance_description": "A basket of freshly milled bread, ready to be consumed.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 10
+        },
+        {
+          "feature_name": "The Ferrofluid Viewport",
+          "affordance_description": "A reinforced window looking out into the shifting magnetic sea.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "The Spice Canisters",
+          "affordance_description": "A sealed rack holding carefully measured myco-protein seasonings.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 12
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "toy_ferrofluid_surge",
+        "name_and_role": "Ferrofluid Surge",
+        "motivation_goal": "To destabilize the structural integrity of the hearth.",
+        "consistent_method": "Pulsing rhythmic shockwaves that rattle the plating.",
+        "immediate_complication": "The bread basket begins to slide off the table.",
+        "pressure_index": 7,
+        "uninterrupted_escalation": "The shockwaves will shatter the viewport if unmitigated."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The physical vibrations threaten the culinary precision.",
+        "level_2_local": "The Kelvin-Helmholtz shear is peaking due to lunar alignment.",
+        "level_3_campaign_arc": "The exoplanet itself is testing the colony's cohesion."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "CONTROLLER"
+        },
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        14,
+        8,
+        19,
+        3,
+        11
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.6,
+      "motivational_vector_saturation": 0.8,
+      "unresolved_conflict_ratio": 0.4,
+      "temporal_horizon_immediacy": 0.7,
+      "composite_lpi": 0.75,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "deterministic-symbolic-judge",
+        "model": "deterministic-symbolic-judge",
+        "temperature": 0.05,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "If the culinary timing fails during the shear, caloric balance is lost.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Ryn completely miscalibrates the cook time, burning the iron-wheat bread.",
+          "below_dc_complicated_fail_forward": "The bread is tough, requiring extra chewing time but providing basic calories.",
+          "meets_dc_clean_success": "Ryn smoothly adjusts the heat, saving the meal.",
+          "dc_plus_5_or_20_extended_lore": "Ryn not only perfects the bread but discovers a new trace-mineral infusion method."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_ai_manager",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Ryn rapped her heavy brass ladle on the butcher block. She shoved a fresh loaf into Silas's hands. 'Check the dampener before we all starve, Engineer.'"
+      }
+    }
+  },
+  "narrative_prose": "The Hub Hearth glowed with the ambient hum of the ferrofluid sea, casting erratic orange and deep violet shadows across the metallic walls. A sharp, biting chill filled the room, offset only by bursts of radiant heat from the hearth itself. Ryn stood over the simmering braised mire-lentils, her brow furrowed as the air vibrated subtly with the magnetohydrodynamic Kelvin-Helmholtz shear. The rhythmic shockwaves rattled her heavy brass ladle on the butcher block and pushed the ozone intermingled with the comforting scent of warm iron-wheat bread into her nose. She snatched a fresh loaf from the basket before it slid off the vibrating counter. Marching over to where Silas stood staring at the rattling viewport, she shoved the warm, crusty loaf directly into his calloused hands. 'Check the dampener before we all starve, Engineer,' she barked."
 }
