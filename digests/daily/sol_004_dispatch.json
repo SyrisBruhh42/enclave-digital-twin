@@ -62,7 +62,8 @@
     ],
     "actors": [
       "enclave_03_silas",
-      "enclave_01_hector"
+      "enclave_01_hector",
+      "enclave_13_ryn"
     ],
     "location": "The_First_Forge",
     "locations": [
@@ -170,8 +171,7 @@
         "immediate_session_goal": "Survive the shear",
         "mid_term_milestone": "Build the Forge",
         "campaign_arc_climax": "Tame the planet"
-      },
-      "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC"
+      }
     },
     "active_location": {
       "location_id": "The_First_Forge",
@@ -270,5 +270,23 @@
         "agency_handoff_prompt": "Silas, what do you do?"
       }
     }
-  }
+  },
+  "steward_note": "deterministic-enclave-5section-v2",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "narrative_prose": "The Hearth is bathed in the warm, flickering amber light of the cookfire and rings with the percussive chop of a blade, while the sharp aroma of braised mire-lentils hangs in the heavy, sweat-inducing heat, leaving a metallic tang on the tongue. As the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea rages outside, Ryn works to DEFEND her delicate simmering stockpot from the draft, which seems to ATTRACT the hungry workers ready to CONSUME every carefully plated morsel. She turned from her station and handed the warm copper calibration baton directly to Silas, securing the handoff for the next shift.",
+  "actors": [
+    "enclave_13_ryn",
+    "enclave_03_silas"
+  ]
 }
