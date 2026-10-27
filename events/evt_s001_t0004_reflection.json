@@ -8,9 +8,10 @@
   "event_type": "NIGHTLY_REFLECTION",
   "location": "The_Hub_Hearth",
   "actors": [
-    "enclave_13_ryn"
+    "enclave_13_ryn",
+    "enclave_03_silas"
   ],
-  "summary": "Ryn reflected on the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea while scouring the copper kettles, grounding her metabolic ledger against the day's structural friction.",
+  "summary": "Ryn reflected on the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea while scouring the copper kettles, grounding her metabolic ledger against the day's structural friction. Silas offered a quiet observation as she finally surrendered the galley.",
   "importance": 7.5,
   "novelty_score": 0.6,
   "lethality": 0,
@@ -35,6 +36,7 @@
     "interlocutor_full_cards_loaded": 0,
     "active_pov_id": "enclave_13_ryn"
   },
+  "narrative_prose": "The dense warmth of the hearth presses outward against the chilling draft of the valley floor, the copper kettles glowing a deep umber in the low light. Plumes of spiced steam catch the erratic flickers of the ferrofluid manifold's ambient glow. It is a tight, secure sanctuary of boiling stock and scrubbed metal, anchoring the chaotic sprawl of the settlement. Ryn raps her heavy brass ladle on the butcher block, calculating the exact basal metabolic burn rate of the colony under the stress of the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. She furiously scrubs the thirty-gallon steam-jacketed kettle, determined to conceal any weakness in the colony's caloric ledger. The ferrofluid manifold tap chatters against the shear, struggling to defend its structural integrity. Ryn turns her attention to the fragile iron-wheat starter crock, knowing they must consume its yield to survive the coming cold. She presses the heavy brass ladle firmly into Silas's waiting hands. \"Watch the temperature gauge,\" she commands, the physical baton handoff completing her shift. With the galley finally quiet, Ryn wipes her brow and considers Silas's quiet observation.",
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 1,
