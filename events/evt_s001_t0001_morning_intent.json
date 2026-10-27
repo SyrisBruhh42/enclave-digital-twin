@@ -23,7 +23,7 @@
       "enclave_03_silas"
     ]
   },
-  "summary": "Silas anchors the heavy brass calipers against the workbench as the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea causes the raw lightning to spit ozone into the air. He firmly presses the insulated baton into Hector's waiting grip, trusting the prodigy to handle the volatile alignment.",
+  "summary": "Silas squints through the reinforced viewport of The First Forge, calibrating the heavy brass chronometer against the erratic resonance of the exterior storm. The magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea is pulling violent eddies into the atmospheric grid, demanding absolute precision. He steps back from the primary anvil, his knuckles white around the insulated baton, and firmly places it into Hector's awaiting hand for the shift transition.",
   "importance": 8.0,
   "novelty_score": 0.85,
   "lethality": 0,
@@ -40,13 +40,7 @@
     }
   ],
   "evidence_refs": [],
-  "target_path": "events/evt_s001_t0001_morning_intent.json",
-  "file_operations": [
-    {
-      "action": "A",
-      "path": "events/evt_s001_t0001_morning_intent.json"
-    }
-  ],
+  "narrative_prose": "The First Forge's reinforced blast doors seal off the roaring heat of the crucible, yet the thrumming hum of magnetic containment vibrates through the iron deck. A fine layer of oxidized rust dust coats the copper workbenches, glowing faintly in the dim amber light. Silas anchors the heavy brass calipers against the workbench as the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea causes the raw lightning to spit ozone into the air. He firmly presses the insulated baton into Hector's waiting grip, handing off the responsibility. He maneuvers a thermal baffle to DEFEND the delicate wiring from stray sparks. Silas works quickly to ATTRACT rogue ferrofluid back into the containment field using a copper coil. Hector steps forward to CONSUME the excess kinetic heat venting from the primary reactor core.",
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 1,
@@ -68,7 +62,7 @@
         "sound": "The rhythmic, heavy thud of pneumatic hammers and the hum of magnetic containment.",
         "smell": "Sharp metallic ozone mingling with the scent of molten brass.",
         "tactile_temperature": "Oppressively hot and dry, with a noticeable static charge prickling the skin.",
-        "taste": "The metallic tang of ozone."
+        "taste_optional": "The metallic tang of ozone."
       },
       "interactive_features": [
         {
@@ -84,9 +78,9 @@
           "associated_check_dc": 14
         },
         {
-          "feature_name": "Scrap Pile",
-          "affordance_description": "Can be used to cover up a mistake or hide delicate materials from the shear.",
-          "system_verb": "CONCEAL",
+          "feature_name": "Kinetic Heat Sink",
+          "affordance_description": "Absorbs excess heat from the reactor core.",
+          "system_verb": "CONSUME",
           "associated_check_dc": 14
         }
       ]
@@ -123,11 +117,8 @@
     },
     "lpi_metrics": {
       "relational_tension_density": 0.6,
-      "motivational_vector_saturation": 0.6,
-      "unresolved_conflict_ratio": 0.5,
-      "temporal_horizon_immediacy": 0.7,
-      "composite_lpi": 0.6,
-      "classification": "Campaign-Ready"
+      "pacing_momentum_ratio": 0.8,
+      "sensory_overload_index": 0.7
     },
     "dual_agent_contract": {
       "judge_tactician": {
