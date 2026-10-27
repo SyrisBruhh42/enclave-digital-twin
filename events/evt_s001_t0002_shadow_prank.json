@@ -1,4 +1,6 @@
 {
+  "disallow_overwrite": false,
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "prank_id": "prank_sol01_d5a58898fd",
   "entry_id": "prank_sol01_d5a58898fd",
   "event_id": "evt_s001_t0002_shadow_prank",
@@ -39,11 +41,15 @@
   "actors": [
     "enclave_01_hector",
     "enclave_03_silas",
-    "enclave_13_ryn"
+    "enclave_13_ryn",
+    "enclave_05_kaio"
   ],
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
   "importance": 6.0,
   "novelty_score": 0.68,
-  "science_vegetable": "Relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "narrative_prose": "The interior of the first forge hummed with a chaotic vibrato as the magnetohydrodynamic Kelvin-Helmholtz shear rippled across the ferrofluid sea in the containment vat. Copper coils sparked with latent energy, casting warm, erratic shadows against the riveted brass bulkheads. Hector grinned, ignoring the ozone smell that always preceded a polarity shift, and tried to DEFEND the fragile induction array from the surging currents. He hoped to ATTRACT the excess voltage into the secondary grounding shunt, but the fluid's unpredictable viscosity threatened to CONSUME the delicate diagnostic tools entirely. He replaced the brass pressure-gauge bezel with an engraved 'Inefficient' dial plate. Before the main breaker tripped, he passed the warm copper calibration baton directly into Kaio's hands.",
   "state_deltas": {
     "stress_delta": -0.02
   },
@@ -51,5 +57,119 @@
   "evidence_refs": [
     "evt_s001_t0002_midday_expedition"
   ],
-  "target_path": "events/evt_s001_t0002_shadow_prank.json"
+  "target_path": "events/evt_s001_t0002_shadow_prank.json",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 1,
+      "tick_id": 2,
+      "pacing_mode": "MULLIGAN_CRISIS",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Contain the ferrofluid surge",
+        "mid_term_milestone": "Stabilize the Stormbreaker spire",
+        "campaign_arc_climax": "Master the magnetic storms"
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "The interior of the first forge hummed with a chaotic vibrato. Copper coils sparked with latent energy, casting warm, erratic shadows against the riveted brass bulkheads. The air crackled with raw potential.",
+      "sensory_palette": {
+        "sight_and_color": "Sparking copper and dark ferrofluid ripples.",
+        "sound": "Chaotic vibrato hum and snapping electricity.",
+        "smell": "Sharp ozone and heated brass.",
+        "tactile_temperature": "Warm, erratic static heat.",
+        "taste_optional": "Metallic tang of ozone."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Fragile Induction Array",
+          "affordance_description": "Can be shielded from surges.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Secondary Grounding Shunt",
+          "affordance_description": "Can draw excess voltage.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Diagnostic Tools",
+          "affordance_description": "Risk being destroyed by the fluid.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_sea",
+        "name_and_role": "Ferrofluid Sea, Volatile Coolant",
+        "motivation_goal": "Expand and surge due to shear forces.",
+        "consistent_method": "Rippling and overwhelming containment barriers.",
+        "immediate_complication": "Threatens to consume the diagnostic tools.",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "Will flood the spire's lower deck."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The ferrofluid is surging unpredictably.",
+        "level_2_local": "The Kelvin-Helmholtz shear is destabilizing the containment.",
+        "level_3_campaign_arc": "The spire's energy limits are being tested by the environment."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.5,
+      "motivational_vector_saturation": 0.5,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.8,
+      "composite_lpi": 0.6,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_ai",
+        "model": "ollama",
+        "temperature": 0.7,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "Diagnostic tools are consumed and containment is breached.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Hector mistakenly surges power, worsening the shear.",
+          "below_dc_complicated_fail_forward": "Tools are consumed but the breach is minor.",
+          "meets_dc_clean_success": "Surge contained cleanly.",
+          "dc_plus_5_or_20_extended_lore": "Perfect containment, revealing new ferrofluid properties."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_ai",
+        "temperature": 0.8,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Hector passed the warm copper calibration baton directly into Kaio's hands."
+      }
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  }
 }
