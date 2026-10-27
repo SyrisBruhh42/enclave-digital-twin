@@ -18,7 +18,7 @@
     ],
     "interlocutor_full_cards_loaded": 0
   },
-  "narrative_prose": "Ryn tightly gripped her brass ladle, watching the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea threaten to disrupt the delicate caloric balance of the evening meal. She handed the heavy, steam-jacketed copper pot to Silas, warning him not to drop it. 'Keep this steady,' she ordered, ensuring the baton was physically passed to the engineer.",
+  "narrative_prose": "Ryn braced against the steam-jacketed kettle to DEFEND the simmering mire-lentils from the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea destabilizing the galley. She waved a copper ladle to ATTRACT Silas's attention over the hissing steam before handing him the heavy pot so he could CONSUME the robust broth. 'Keep this steady,' she ordered, ensuring the baton was physically passed to the engineer.",
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 1,
@@ -125,5 +125,17 @@
         "agency_handoff_prompt": "Silas takes the pot. What does he do?"
       }
     }
-  }
+  },
+  "second_pass_repair_constraint": "@ENT[enclave:2868330762590659799]",
+  "audits": [
+    {
+      "character_id": "enclave_13_ryn",
+      "axis_z_scores": {
+        "conscientiousness_state": 1.2,
+        "agreeableness_state": -0.8
+      },
+      "max_abs_z": 1.2
+    }
+  ],
+  "f120_stall_timeout": "session_exceeded_25m_cut_loss_relaunch"
 }
