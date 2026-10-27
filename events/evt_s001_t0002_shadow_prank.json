@@ -1,4 +1,9 @@
 {
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "disallow_overwrite": false,
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
   "prank_id": "prank_sol01_d5a58898fd",
   "entry_id": "prank_sol01_d5a58898fd",
   "event_id": "evt_s001_t0002_shadow_prank",
@@ -20,8 +25,8 @@
   "target_b_missed": true,
   "blamed_node": "enclave_01_hector",
   "attributed_to": "enclave_01_hector",
-  "prank_description": "Replaced the brass pressure-gauge bezel with an engraved 'Inefficient' dial plate",
-  "summary": "enclave_01_hector rigged a harmless prank for enclave_03_silas (Replaced the brass pressure-gauge bezel with an engraved 'Inefficient' dial plate); enclave_03_silas completely missed it, leaving enclave_13_ryn mildly inconvenienced and grumbling at enclave_01_hector.",
+  "prank_description": "Rigged the pressure valves to sound a low flatulent tone under high flow, entirely relying on Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea.",
+  "summary": "Hector rewired the ferrofluid pipes for Silas, but Silas missed it, leaving Ryn to deal with the prank.",
   "blind_spot_attribution": {
     "instigator_node_a": "enclave_01_hector",
     "oblivious_target_node_b": "enclave_03_silas",
@@ -39,11 +44,12 @@
   "actors": [
     "enclave_01_hector",
     "enclave_03_silas",
-    "enclave_13_ryn"
+    "enclave_13_ryn",
+    "enclave_05_kaio"
   ],
   "importance": 6.0,
   "novelty_score": 0.68,
-  "science_vegetable": "Relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "state_deltas": {
     "stress_delta": -0.02
   },
@@ -51,5 +57,92 @@
   "evidence_refs": [
     "evt_s001_t0002_midday_expedition"
   ],
-  "target_path": "events/evt_s001_t0002_shadow_prank.json"
+  "target_path": "events/evt_s001_t0002_shadow_prank.json",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "reactive_toys": [
+    "Brass pressure gauge",
+    "Ferrofluid vat",
+    "Calibration baton"
+  ],
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 1,
+      "tick_id": 2,
+      "pacing_mode": "MULLIGAN_CRISIS",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Prank Silas",
+        "mid_term_milestone": "Automate Forge",
+        "long_term_horizon": "Restore The World"
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        }
+      ],
+      "strain_accumulated_upward": 0,
+      "prerolled_hazard_queue": [
+        12,
+        4,
+        18,
+        9,
+        2
+      ]
+    },
+    "active_location": "The_First_Forge",
+    "reactive_toys": [
+      "Ferrofluid"
+    ],
+    "encounter_matrix": {
+      "hostile_threats_present": 0,
+      "hazard_level": 1,
+      "social_complexity": 2
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.5,
+      "motivational_vector_saturation": 0.5,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.5,
+      "composite_lpi": 0.5,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_ai",
+        "model": "v1",
+        "temperature": 0.7,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The pipes burst, ruining the prank and covering Hector in soot.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Hector thinks it's perfectly safe, but it's a bomb.",
+          "below_dc_complicated_fail_forward": "The prank works, but Hector's fingers get pinched in the valve.",
+          "meets_dc_clean_success": "The prank is perfectly executed, awaiting discovery.",
+          "dc_plus_5_or_20_extended_lore": "The prank is so clever it actually improves the forge efficiency temporarily."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_ai",
+        "temperature": 0.8,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Hector turned toward the door, handing the heavy calibration baton directly to Kaio."
+      }
+    }
+  },
+  "narrative_prose": "The acrid scent of ozone and heated copper filled the cramped, stifling interior of the primary pump room. Hector wiped sweat from his brow, focusing intently as he CONSUMED the lingering heat radiating from the ferrofluid lines. He carefully shifted his grip to DEFEND his fragile calibration array from the immense pressure building within the pipes. The underlying Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea threatened to buck the entire manifold out of alignment. He needed to ATTRACT Silas's attention without being too obvious, relying on the subtle resonance of the rigged valves to do the trick. A low, mocking hum vibrated through the floor plates. Satisfied, Hector spun around and tossed the heavy brass calibration baton directly into Kaio's waiting hands, flashing a reckless grin.",
+  "sensory_palette": {
+    "sight": "glow of heated copper",
+    "sound": "low mocking hum",
+    "smell": "acrid scent of ozone",
+    "touch": "immense pressure",
+    "taste_optional": "metallic tang in the air"
+  }
 }
