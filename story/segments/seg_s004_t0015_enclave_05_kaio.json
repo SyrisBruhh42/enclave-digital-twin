@@ -9,7 +9,6 @@
   "next_pov_target": "enclave_13_ryn",
   "location": "The_Hearth_Commissary_Exterior",
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
-  "text": "[DUSK_CRAFT] Kaio caught the sparking calibration baton from Hector as he emerged from the First Forge, sprinting up the basalt steps toward the commissary as the Magnetohydrodynamic Kelvin-Helmholtz shear screamed across the ferrofluid sea. The sharp ozone smell of ionized copper gave way to the earthy scent of bruised moss and roasting root vegetables, his boots finding familiar footholds even as the gale threatened to snatch him into the glowing expanse. Below, the metallic sea churned in impossible violet waves, casting strobing, dizzying shadows across his path, while the air bit into his skin with electric chill. He burst through the heavy reinforced doors of the kitchen, sliding on a patch of spilled flour, and slapped the rapidly cooling baton onto Ryn's cutting board.",
   "campaign_metadata": {
     "session_number": 4,
     "colony_sol": 4,
@@ -121,10 +120,20 @@
   },
   "context_manifest": {
     "full_cards_loaded_count": 1,
-    "interlocutor_full_cards_loaded": 0
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ]
   },
   "context_manifest_path": "context/manifests/manifest_s004_t0015_enclave_05_kaio.json",
   "total_prompt_tokens": 850,
   "target_path": "story/segments/seg_s004_t0015_enclave_05_kaio.json",
-  "disallow_overwrite": false
+  "disallow_overwrite": false,
+  "narrative_prose": "[DUSK_CRAFT] Kaio caught the sparking calibration baton from Hector as he emerged from the First Forge, sprinting up the basalt steps toward the commissary as the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea screamed around him. The sharp ozone smell of ionized copper gave way to the earthy scent of bruised moss and roasting root vegetables, his boots finding familiar footholds to DEFEND against the gale that threatened to snatch him. Below, the metallic sea churned in impossible violet waves, casting strobing shadows that seemed to ATTRACT the chaotic bioluminescence, while the air bit into his skin with electric chill and left a static tang of airborne copper dust on his tongue. He burst through the heavy reinforced doors of the kitchen, seeking to CONCEAL himself from the howling storm, and physically handed the rapidly cooling baton directly to Ryn.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "actors": [
+    "enclave_05_kaio",
+    "enclave_13_ryn"
+  ]
 }
