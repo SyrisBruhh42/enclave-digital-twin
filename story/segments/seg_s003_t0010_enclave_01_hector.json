@@ -11,7 +11,11 @@
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "location": "The_First_Forge",
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
-  "text": "[MIDDAY_EXPEDITION at The_First_Forge] Hector caught the heavy brass data-cylinder, the residual heat of the forge searing pleasantly through his insulated grips. Outside the thick quartz viewport, the Magnetohydrodynamic Kelvin-Helmholtz shear whipped the ferrofluid sea into terrifying, jagged peaks, demanding immediate attention to keep the structure sound. He moved fast to DEFEND the oscillating resonance chamber from micro-fractures, tapped the cooling slag vents to CONSUME excess thermal energy, and slammed shut the heavy blast doors to CONCEAL their vulnerable diagnostics from the rising pressure wave. With the localized crisis momentarily stabilized, he turned and tossed the baton\u2014the physical cylinder now glowing with encoded telemetry\u2014directly to Kaio, who was already gearing up for a scout run.",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_05_kaio"
+  ],
+  "narrative_prose": "[MIDDAY_EXPEDITION at The_First_Forge] Hector caught the heavy brass data-cylinder, the residual heat of the forge searing pleasantly through his insulated grips. Outside the thick quartz viewport, the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea whipped the magnetic ocean into terrifying, jagged peaks, demanding immediate attention to keep the structure sound. He moved fast to DEFEND the oscillating resonance chamber from micro-fractures, tapped the cooling slag vents to CONSUME excess thermal energy, and slammed shut the heavy blast doors to CONCEAL their vulnerable diagnostics from the rising pressure wave. With the localized crisis momentarily stabilized, he turned and tossed the baton\u2014the physical cylinder now glowing with encoded telemetry\u2014directly to Kaio, who was already gearing up for a scout run.",
   "campaign_metadata": {
     "session_number": 3,
     "colony_sol": 3,
@@ -60,7 +64,7 @@
       "entity_id": "shear_induced_vibrations",
       "name_and_role": "Microscopic Structural Vibrations",
       "motivation_goal": "Weaken the primary brass struts supporting the forge's viewport",
-      "consistent_method": "Exploiting the Magnetohydrodynamic Kelvin-Helmholtz shear to create resonant frequencies",
+      "consistent_method": "Exploiting the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea to create resonant frequencies",
       "immediate_complication": "The resonance spike has evolved into a physical pressure wave crashing against the forge.",
       "pressure_index": 8,
       "uninterrupted_escalation": "Will buckle the heavy blast doors, compromising the internal pressure seal."
@@ -107,7 +111,7 @@
       "explicit_pre_roll_dc": 14,
       "failure_stakes_declared": "Hector acts too slowly, allowing the pressure wave to graze the delicate diagnostics before he can fully secure them.",
       "graduated_outcomes": {
-        "nat_1_False_intuition": "You misread the telemetry, causing a blowback from the slag vents that ruins the data and scorches your gear.",
+        "nat_1_false_intuition": "You misread the telemetry, causing a blowback from the slag vents that ruins the data and scorches your gear.",
         "below_dc_complicated_fail_forward": "You secure the forge, but the telemetry is scrambled; Kaio will have to fly partially blind.",
         "meets_dc_clean_success": "You execute the lockdown perfectly, processing clean data and tossing the glowing cylinder to Kaio.",
         "dc_plus_5_or_20_extended_lore": "You perfectly synchronize the lockdown with the shear wave, generating excess power to supercharge Kaio's scout rig."
@@ -128,5 +132,7 @@
     ],
     "interlocutor_full_cards_loaded": 0
   },
-  "disallow_overwrite": false
+  "state_deltas": [],
+  "relationship_deltas": [],
+  "evidence_refs": []
 }
