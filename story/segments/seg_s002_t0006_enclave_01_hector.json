@@ -1,0 +1,135 @@
+{
+  "segment_id": "seg_s002_t0006_enclave_01_hector",
+  "segment_index": 6,
+  "tick_id": 6,
+  "colony_sol": 2,
+  "day_phase": "DAWN_SHIFT",
+  "base_snapshot_tick": 4,
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "location": "The_First_Forge",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "text": "[DAWN_SHIFT at The_First_Forge] Hector caught the heavy calibration baton, immediately bounding up the copper gantry while the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea whipped against the outer hull. He laughed as an arc of stray voltage tickled his palm, breathing in the sweet ozone as if it were mountain air. Hooking his boots into a precarious structural brace to free both hands, he rapidly spliced the new metrics into the induction shunt, feeling the chaotic hum stabilize beneath him before tossing the baton down directly to Kaio.",
+  "campaign_metadata": {
+    "session_number": 2,
+    "colony_sol": 2,
+    "tick_id": 6,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Calibrate the upper induction shunts before the shear wave overloads the forge",
+      "mid_term_milestone": "Reinforce the First Forge against the rising ferrofluid sea",
+      "campaign_arc_climax": "Maintain structural stability during the impending suns' polarity inversion"
+    }
+  },
+  "active_location": {
+    "location_id": "The_First_Forge",
+    "macro_silhouette": "The First Forge stood as a fortress of brass and copper, its soot-stained walls humming with trapped kinetic energy and heat. High copper gantries crisscrossed the ceiling, vibrating with raw electrical potential.",
+    "sensory_palette": {
+      "sight_and_color": "Blue arcs of stray voltage and soot-stained brass walls",
+      "sound": "Chaotic hum of induction shunts stabilizing",
+      "smell": "Sweet ozone masking hot copper",
+      "tactile_temperature": "Electrifying tingle mixed with radiant forge heat",
+      "taste_optional": "Ozone tang on the teeth"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "High Copper Gantry",
+        "affordance_description": "A precarious elevated walkway requiring balance and speed.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Stray Voltage Arcs",
+        "affordance_description": "Ambient energy that can be harnessed to power tools if caught correctly.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Upper Induction Shunt",
+        "affordance_description": "The primary pressure relief valve for the forge's electrical load.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "shear_induced_vibrations",
+      "name_and_role": "Microscopic Structural Vibrations",
+      "motivation_goal": "Weaken the primary brass struts supporting the forge's viewport",
+      "consistent_method": "Exploiting the Magnetohydrodynamic Kelvin-Helmholtz shear to create resonant frequencies",
+      "immediate_complication": "The structural diagnostics are picking up a dangerous resonance spike",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Will cause a micro-fracture in the viewport, letting in toxic magnetic vapor"
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Hector must rapidly splice the metrics into the induction shunt.",
+      "level_2_local": "Kaio needs the stabilized grid to run the next set of diagnostics.",
+      "level_3_campaign_arc": "The First Forge must survive the chaotic magnetic forces to build future colony defenses."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      5,
+      12,
+      19,
+      8
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.85,
+    "unresolved_conflict_ratio": 0.7,
+    "temporal_horizon_immediacy": 0.85,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_inference",
+      "model": "judge_v1",
+      "temperature": 0.1,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Hector will slip on the gantry, delaying the splice and causing a minor arc flash.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "You slip and take a direct arc hit, singeing your tunic and scrambling the baton.",
+        "below_dc_complicated_fail_forward": "You complete the splice but take a minor shock, slowing your descent.",
+        "meets_dc_clean_success": "You execute a flawless rapid splice, stabilizing the grid instantly.",
+        "dc_plus_5_or_20_extended_lore": "You not only stabilize the grid but manage to overcharge a secondary capacitor with stray voltage."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio catches the baton as the grid hums perfectly. What does Kaio do?"
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "context_manifest_path": "context/manifests/manifest_s002_t0006_enclave_01_hector.json",
+  "total_prompt_tokens": 845,
+  "target_path": "story/segments/seg_s002_t0006_enclave_01_hector.json",
+  "disallow_overwrite": false
+}
