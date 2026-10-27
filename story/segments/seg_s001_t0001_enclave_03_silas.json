@@ -7,10 +7,129 @@
   "base_snapshot_tick": 1,
   "active_pov_id": "enclave_03_silas",
   "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
   "location": "The_First_Forge",
-  "science_vegetable": "Capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers",
-  "text": "[DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands.",
-  "context_manifest_path": "context/manifests/manifest_s001_t0001_enclave_03_silas.json",
-  "total_prompt_tokens": 709,
-  "target_path": "story/segments/seg_s001_t0001_enclave_03_silas.json"
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy": "GPU_BURST_SYMPATHETIC",
+  "text": "The ambient temperature in The First Forge dropped three degrees as magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea stabilized, leaving the air smelling faintly of ozone and burning brass. Silas adjusted his heavy protective goggles, the dull amber glass mitigating the blinding white arcs of the plasma forge as he carefully tightened the final containment manifold. \"Inefficient to route this much thermal energy without proper baffling, but it will have to do,\" he muttered, reaching out to DEFEND the delicate copper tracery from a sudden localized flux spike. With one last critical inspection, he handed the heavy, still-warm physical calibration baton directly into Hector's hands.",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 1,
+      "tick_id": 1,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Stabilize the primary induction coil before the dawn flare.",
+        "mid_term_milestone": "Map the ferrofluid sea's magnetohydrodynamic shear zones.",
+        "campaign_arc_climax": "Complete The First Forge."
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "A massive cavern of basalt and iron, illuminated by the harsh, flickering light of plasma arcs and molten metal. Heavy chains hang from the ceiling, supporting massive crucibles that hum with contained power.",
+      "sensory_palette": {
+        "sight_and_color": "Blinding white arcs, dull amber safety glass, glowing red ingots.",
+        "sound": "The deep, rhythmic thrum of the plasma forge and the sharp crack of electrical discharge.",
+        "smell": "Ozone and burning brass.",
+        "tactile_temperature": "Oppressively hot near the forge, with sudden, chilling drafts from the ferrofluid sea.",
+        "taste_optional": "Metallic tang of ionized air."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Plasma Forge Containment Manifold",
+          "affordance_description": "Can be adjusted to route thermal energy.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Ferrofluid Cooling VAT",
+          "affordance_description": "Used to rapidly quench forged components.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 12
+        },
+        {
+          "feature_name": "Heavy Blast Shields",
+          "affordance_description": "Can be lowered to protect against flux spikes.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 10
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_sea_anomaly",
+        "name_and_role": "Magnetohydrodynamic Shear Wave",
+        "motivation_goal": "Disrupt magnetic containment fields.",
+        "consistent_method": "Sudden, unpredictable spikes in local magnetic flux.",
+        "immediate_complication": "Threatens to overload the primary induction coil.",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "Will cause a catastrophic breach if not stabilized."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The induction coil is overheating due to the shear wave.",
+        "level_2_local": "The First Forge's location makes it vulnerable to ferrofluid sea anomalies.",
+        "level_3_campaign_arc": "Mastering the magnetohydrodynamic forces is essential for survival on this planet."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        14,
+        8,
+        19,
+        3,
+        11
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.2,
+      "motivational_vector_saturation": 0.8,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.9,
+      "composite_lpi": 0.6,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_inference",
+        "model": "ollama/llama-3",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "If Silas fails to stabilize the manifold, the flux spike will damage the copper tracery.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Silas completely misreads the flux wave, overcompensating and causing a minor explosion.",
+          "below_dc_complicated_fail_forward": "Silas stabilizes the manifold, but the resulting thermal shock cracks a secondary conduit.",
+          "meets_dc_clean_success": "Silas perfectly anticipates the shear wave, adjusting the manifold flawlessly.",
+          "dc_plus_5_or_20_extended_lore": "Silas not only stabilizes the manifold but identifies a new harmonic resonance in the ferrofluid sea."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_inference",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Hector receives the calibration baton. What is his immediate reaction to the residual heat and the continuing hum of the forge?"
+      }
+    }
+  },
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "target_path": "story/segments/seg_s001_t0001_enclave_03_silas.json",
+  "disallow_overwrite": false
 }
