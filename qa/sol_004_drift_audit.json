@@ -3,7 +3,7 @@
   "audit_type": "psychometric_drift",
   "colony_sol": 4,
   "tick_id": 16,
-  "narrative_prose": "Silas squints into the swirling dark of the underground cavern. The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea rips the surface into jagged, impossible peaks, defying gravity in eerie silence. A heavy smell of ozone hangs in the stagnant air, biting the back of his throat. He adjusts his grip on his hammer. If they cannot stabilize the resonance before the next wave, the entire colony structure will succumb to the shearing forces.",
+  "narrative_prose": "Ryn clutches her heavy brass ladle, squinting at the swirling dark of the underground cavern where the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea rips the obsidian surface into jagged peaks. The acrid smell of ozone and metallic dust fills the starkly cold air, accompanied by the whooshing, cracking hum of magnetic fields that bite her ears. A subtle static tang coats the back of her tongue. She stands ready to DEFEND the console. She maneuvers the field to ATTRACT metallic debris. She attempts to CONSUME the crystallized fungus node for energy. She hands the physical brass ladle to Silas.",
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 1,
@@ -24,7 +24,8 @@
         "sight_and_color": "obsidian black and silver highlights",
         "sound": "whooshing, cracking hum of magnetic fields",
         "smell": "acrid ozone and metallic dust",
-        "tactile_temperature": "starkly cold"
+        "tactile_temperature": "starkly cold",
+        "taste_optional": "static tang"
       },
       "interactive_features": [
         {
@@ -106,20 +107,42 @@
         "temperature": 0.6,
         "calypso_zero_raw_stats": true,
         "prosodic_micro_pauses_enabled": true,
-        "agency_handoff_prompt": "Silas looks back toward the entrance, calling for Hector to bring the heavy lifter. What does Hector do?"
+        "agency_handoff_prompt": "Ryn hands the ladle to Silas. What does Silas do?"
       }
     }
   },
-  "prev_next_pov_target": "enclave_03_silas",
-  "active_pov_id": "enclave_03_silas",
-  "next_pov_target": "enclave_01_hector",
-  "drift_audit": {
-    "max_abs_z": 2.2,
-    "axis_z_scores": {
-      "x": 2.2
-    },
-    "drift_alert": true,
-    "corrective_authors_note": "Silas is relying too heavily on raw intuition. He needs to ground his actions in measurable facts to re-align with his core traits.",
-    "re_anchor_ticks": 3
+  "prev_next_pov_target": "enclave_13_ryn",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "disallow_overwrite": false,
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "audits": [
+    {
+      "character_id": "enclave_13_ryn",
+      "z_scores": {
+        "openness": 0.5,
+        "conscientiousness": 2.2,
+        "extraversion": 0.1,
+        "agreeableness": 0.0,
+        "neuroticism": 0.0
+      },
+      "max_abs_z": 2.2,
+      "drift_alert": true,
+      "corrective_authors_note": "Ryn is relying too heavily on raw intuition. She needs to ground her actions in measurable facts to re-align with her core traits.",
+      "re_anchor_ticks": 3
+    }
+  ],
+  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified",
+  "actors": [
+    "enclave_13_ryn",
+    "enclave_03_silas"
+  ],
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
+    "interlocutor_full_cards_loaded": 0
   }
 }
