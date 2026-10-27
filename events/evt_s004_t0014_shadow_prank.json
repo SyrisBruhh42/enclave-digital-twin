@@ -22,7 +22,7 @@
   "attributed_to": "enclave_01_hector",
   "prank_description": "Replaced the brass pressure-gauge bezel with an engraved 'Inefficient' dial plate",
   "summary": "The 'Inefficient' dial plate prank finally pays off as Hector grabs the baton from Silas in the middle of a Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea.",
-  "narrative_prose": "Silas gripped the heavy iron baton as the Magnetohydrodynamic Kelvin-Helmholtz shear howled across the ferrofluid sea. The dark, oily waves crashed against the Enclave's reinforced pylons, sending a vibrating hum through the metal beneath them. The sky boiled in bruising shades of violet and bruised orange, carrying a thick metallic ozone scent. He squinted at the main control console, trying to read the brass pressure-gauge, but instead of numerical readouts, the bezel boldly declared 'Inefficient' in unmistakable, freshly engraved lettering. Silas let out a ragged breath and shouted, 'Hector, take it!', shoving the iron baton directly into Hector's waiting hand before the ferrofluid storm could consume their precarious foothold.",
+  "narrative_prose": "Hector braced himself as the Magnetohydrodynamic Kelvin-Helmholtz shear howled across the ferrofluid sea, the howling wind and a vibrating metallic hum deafening his ears. He tasted the bitter tang of static on the tongue and smelled thick, metallic ozone as a sudden, sharp drop in temperature accompanied by stinging sea spray battered his exposed skin, forcing him to DEFEND the delicate instrumentation. Bruising violet and orange skies contrasting with dark, oily waves loomed above as he activated the magnetic grapple to ATTRACT the heavy iron baton before the rising tide could CONSUME it entirely. Grabbing the baton, Hector turned and decisively shoved it into Kaio's waiting grip.",
   "blind_spot_attribution": {
     "instigator_node_a": "enclave_01_hector",
     "oblivious_target_node_b": "enclave_03_silas",
@@ -39,18 +39,19 @@
   "actors": [
     "enclave_03_silas",
     "enclave_01_hector",
-    "enclave_13_ryn"
+    "enclave_13_ryn",
+    "enclave_05_kaio"
   ],
-  "active_pov_id": "enclave_03_silas",
-  "next_pov_target": "enclave_01_hector",
-  "prev_next_pov_target": "enclave_03_silas",
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
   "context_manifest": {
     "manifest": {
       "full_cards_loaded_count": 1,
       "loaded_full_card_ids": [
-        "enclave_03_silas"
+        "enclave_01_hector"
       ],
-      "active_pov_id": "enclave_03_silas",
+      "active_pov_id": "enclave_01_hector",
       "interlocutor_full_cards_loaded": 0,
       "leaked_interlocutor_private_cards": false
     }
@@ -175,8 +176,10 @@
         "temperature": 0.35,
         "calypso_zero_raw_stats": true,
         "prosodic_micro_pauses_enabled": true,
-        "agency_handoff_prompt": "'Hector, take it!'"
+        "agency_handoff_prompt": "'Kaio, take it!'"
       }
     }
-  }
+  },
+  "second_pass_repair_constraint": "enclave:4901519874792587962",
+  "f120_stall_timeout": "session_exceeded_25m_cut_loss_relaunch"
 }
