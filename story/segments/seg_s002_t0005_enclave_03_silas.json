@@ -6,12 +6,12 @@
   "day_phase": "DAWN_SHIFT",
   "base_snapshot_tick": 4,
   "active_pov_id": "enclave_03_silas",
-  "next_pov_target": "enclave_05_kaio",
+  "next_pov_target": "enclave_01_hector",
   "prev_next_pov_target": "enclave_03_silas",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "location": "The_First_Forge",
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
-  "text": "[DAWN_SHIFT at The_First_Forge] Silas carefully monitored the resonance chamber, the oscillating hum echoing against the soot-stained brass walls of the forge. He observed the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea through the thick quartz window, taking note of how the turbulent waves induced microscopic vibrations in the structural struts. The scent of ozone and hot copper lingered heavily, mixing with the sharp tang of cooling slag. With the delicate structural diagnostics complete, he swiftly secured the resulting brass data-cylinder and passed it squarely to Kaio, who had bounded into the forge to collect the fresh diagnostics.",
+  "text": "[DAWN_SHIFT at The_First_Forge] Silas firmly secured the brass resonance dampeners, tracking the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea that glowed a bruised violet through the workshop's thick quartz port. The sharp tang of cooling slag filled the heavy air, masking the biting ozone static that made the hairs on his arms stand up. Grunting softly as he completed the rigorous calibration, he turned and placed the heavy, etched copper calibration baton straight into Hector's waiting hand.",
   "campaign_metadata": {
     "session_number": 2,
     "colony_sol": 2,
@@ -28,11 +28,11 @@
     "location_id": "The_First_Forge",
     "macro_silhouette": "The First Forge stood as a fortress of brass and copper, its soot-stained walls humming with trapped kinetic energy and heat. A thick quartz viewport allowed observation of the exterior ferrofluid sea, while heavily reinforced struts braced against the relentless magnetic shear.",
     "sensory_palette": {
-      "sight_and_color": "Soot-stained brass walls and glowing hot slag",
+      "sight_and_color": "Bruised violet ferrofluid and soot-stained brass walls",
       "sound": "Oscillating hum of resonance chambers and microscopic vibrations",
-      "smell": "Ozone mixing with hot copper",
-      "tactile_temperature": "Oppressive radiant heat from the cooling vents",
-      "taste_optional": "Sharp tang of cooling slag"
+      "smell": "Sharp tang of cooling slag and biting ozone static",
+      "tactile_temperature": "Heavy, sweltering heat inside the thick metal walls",
+      "taste_optional": "Ash and metallic trace on the tongue"
     },
     "interactive_features": [
       {
@@ -78,7 +78,7 @@
         "tactical_role": "DEFENDER"
       },
       {
-        "actor_id": "enclave_05_kaio",
+        "actor_id": "enclave_01_hector",
         "tactical_role": "STRIKER"
       }
     ],
@@ -92,9 +92,9 @@
     ]
   },
   "lpi_metrics": {
-    "relational_tension_density": 0.60,
+    "relational_tension_density": 0.6,
     "motivational_vector_saturation": 0.85,
-    "unresolved_conflict_ratio": 0.70,
+    "unresolved_conflict_ratio": 0.7,
     "temporal_horizon_immediacy": 0.85,
     "composite_lpi": 0.75,
     "classification": "Campaign-Ready"
@@ -108,8 +108,8 @@
       "failure_stakes_declared": "Silas will hesitate during the resonance spike, slightly warping the data-cylinder and scrambling some metrics.",
       "graduated_outcomes": {
         "nat_1_false_intuition": "You miscalculate the resonance, causing a minor blowout that chars the data-cylinder entirely.",
-        "below_dc_complicated_fail_forward": "You secure the data, but the heat slightly warps the cylinder, making it difficult for Kaio to read.",
-        "meets_dc_clean_success": "You swiftly secure the diagnostics, handing over a pristine brass cylinder to Kaio.",
+        "below_dc_complicated_fail_forward": "You secure the data, but the heat slightly warps the cylinder, making it difficult for Hector to read.",
+        "meets_dc_clean_success": "You swiftly secure the diagnostics, handing over a pristine brass cylinder to Hector.",
         "dc_plus_5_or_20_extended_lore": "You perfectly dampen the resonance, capturing incredibly stable data and reducing the forge's strain."
       }
     },
@@ -118,12 +118,14 @@
       "temperature": 0.7,
       "calypso_zero_raw_stats": true,
       "prosodic_micro_pauses_enabled": true,
-      "agency_handoff_prompt": "Kaio catches the brass data-cylinder, his eyes already analyzing the soot marks on it. What does Kaio do?"
+      "agency_handoff_prompt": "Hector grabs the heavy calibration baton, already plotting his ascent. What does Hector do?"
     }
   },
   "context_manifest": {
     "full_cards_loaded_count": 1,
-    "loaded_full_card_ids": ["enclave_03_silas"],
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
     "interlocutor_full_cards_loaded": 0
   },
   "context_manifest_path": "context/manifests/manifest_s002_t0005_enclave_03_silas.json",
