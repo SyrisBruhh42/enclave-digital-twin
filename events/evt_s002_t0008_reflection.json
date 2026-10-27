@@ -6,27 +6,133 @@
   "world_timestamp_iso": "2026-10-26T23:00:00Z",
   "base_snapshot_tick": 8,
   "event_type": "NIGHTLY_REFLECTION",
-  "location": "The_Hub_Hearth",
+  "location": "The_Hearth",
   "actors": [
-    "enclave_13_ryn"
+    "enclave_13_ryn",
+    "enclave_03_silas"
   ],
-  "summary": "Ryn wrestles with the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, desperately maintaining the delicate caloric balance of the Hub's stockpots before silently passing a bowl of sustenance to Silas.",
-  "importance": 8.0,
-  "novelty_score": 0.7,
+  "summary": "Ryn defends the caloric budget against extreme thermal shear, handing off a crucial thermal flask to Silas.",
+  "importance": 7.5,
+  "novelty_score": 0.6,
   "lethality": 0,
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
-  "state_deltas": {
-    "stress_delta": -0.15
-  },
-  "relationship_deltas": [],
-  "cited_event_ids": [
-    "evt_s001_t0004_reflection"
-  ],
-  "disallow_overwrite": false,
   "active_pov_id": "enclave_13_ryn",
-  "prev_next_pov_target": "enclave_13_ryn",
   "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "disallow_overwrite": false,
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "narrative_prose": "The Hearth hummed with the ambient frequency of thermodynamic bio-energetics, a low thrum that Ryn felt in her teeth. Before her, the induction stove glowed faintly blue against the heavy brass trim of the galley. A sharp smell of ozone mixed with the earthy tang of myco-proteins as the environmental baffles hissed, fighting the sudden draft from the east corridor. Ryn slammed her heavy brass ladle on the butcher block, calculating the metabolic burn rate of the colony under the shifting barometric pressure. The magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea was already wreaking havoc on their delicate supply lines. 'If you let that threshold drop one more degree, we'll lose three hundred calories per person to ambient shivering alone,' she muttered. She needed to DEFEND the caloric budget with ruthless precision, even as the wild currents outside seemed to ATTRACT the latent static in the air. Grabbing the cast-iron thermal flask from the counter, she moved to CONSUME the remaining heat from the induction coil. She thrust the flask, still vibrating from the ambient charge, directly into Silas's hands, physically handing off the burden. 'Keep it sealed, Silas, unless you want the cold to eat everything we have left.'",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 2,
+      "colony_sol": 2,
+      "tick_id": 8,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Maintain caloric and thermal equilibrium during the ferrofluid storm.",
+        "mid_term_milestone": "Stabilize The Hearth's metabolic engine.",
+        "campaign_arc_climax": "Ensure colony survival through thermodynamic mastery."
+      }
+    },
+    "active_location": {
+      "location_id": "The_Hearth",
+      "macro_silhouette": "The Hearth hummed with the ambient frequency of thermodynamic bio-energetics, a low thrum that Ryn felt in her teeth. Before her, the induction stove glowed faintly blue against the heavy brass trim of the galley.",
+      "sensory_palette": {
+        "sight_and_color": "glowing blue induction stoves and heavy brass trim",
+        "sound": "ambient frequency hum and hissing baffles",
+        "smell": "ozone mixed with earthy myco-proteins",
+        "tactile_temperature": "sharp chill cutting through residual heat",
+        "taste_optional": "metallic tang in the air"
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Caloric Ledger",
+          "affordance_description": "A heavy, brass-bound book detailing metabolic burn rates.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Thermal Flask",
+          "affordance_description": "A cast-iron container built to hold intense heat.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Induction Coil",
+          "affordance_description": "A high-efficiency heat source for emergency cooking.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_storm",
+        "name_and_role": "Ferrofluid Sea Storm",
+        "motivation_goal": "Disrupt colony homeostasis via thermal shear.",
+        "consistent_method": "Dropping ambient temperatures unpredictably.",
+        "immediate_complication": "Drafts from the east corridor.",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "Complete failure of the induction array."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The Hearth is losing heat rapidly.",
+        "level_2_local": "The ferrofluid storm is pulling thermal energy away from the living quarters.",
+        "level_3_campaign_arc": "The colony's struggle against the exoplanet's extreme weather."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "DEFENDER"
+        },
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "STRIKER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        12,
+        5,
+        18,
+        9,
+        3
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.6,
+      "motivational_vector_saturation": 0.8,
+      "unresolved_conflict_ratio": 0.4,
+      "temporal_horizon_immediacy": 0.9,
+      "composite_lpi": 0.675,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_ai",
+        "model": "steward-7b",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "If Ryn fails to transfer the flask, critical heat is lost.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Ryn miscalculates the thermal mass, freezing the flask.",
+          "below_dc_complicated_fail_forward": "The flask transfers, but Silas's hands are burned.",
+          "meets_dc_clean_success": "The heat is preserved safely.",
+          "dc_plus_5_or_20_extended_lore": "Ryn uncovers a new thermal efficiency paradigm."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_ai",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "What do you do with the flask, Silas?"
+      }
+    }
+  },
   "context_manifest": {
     "full_cards_loaded_count": 1,
     "loaded_full_card_ids": [
@@ -35,111 +141,12 @@
     "interlocutor_full_cards_loaded": 0,
     "active_pov_id": "enclave_13_ryn"
   },
-  "showrunner_ledger": {
-    "campaign_metadata": {
-      "session_number": 2,
-      "colony_sol": 2,
-      "tick_id": 8,
-      "pacing_mode": "MERCER_IMMERSIVE",
-      "consequential_fights_since_short_rest": 1,
-      "horizon_goals": {
-        "immediate_session_goal": "Maintain the thermodynamic integrity of the nightly meal against ferrofluid shear anomalies.",
-        "mid_term_milestone": "Stabilize the Hub's caloric reserves under variable barometric pressure.",
-        "campaign_arc_climax": "Integrate the metabolic engine with the Enclave's core atmospheric controls."
-      }
-    },
-    "active_location": {
-      "location_id": "The_Hub_Hearth",
-      "macro_silhouette": "The dense warmth of the hearth presses outward, fighting the chilling draft of the valley floor as copper kettles shudder under unseen environmental stress. Plumes of spiced steam twist violently, catching erratic flickers from the ferrofluid manifold's ambient glow. It is a tight sanctuary of boiling stock and scrubbed metal, anchoring the sprawl of the settlement against planetary forces.",
-      "sensory_palette": {
-        "sight_and_color": "Deep umber, warped copper reflections, and an aggressive warm amber glow.",
-        "sound": "Harsh, rhythmic shuddering of heavy stockpots and the sharp scrape of brass ladles.",
-        "smell": "Rich iron-wheat crusts cut by a sharp, ozone-laden tang of the unsettled ferrofluid.",
-        "tactile_temperature": "Oppressive, localized radiant heat cutting fiercely through a harsh, creeping structural cold.",
-        "taste_optional": "Lingering roasted myco-protein, underpinned by a metallic, mineral bite."
-      },
-      "interactive_features": [
-        {
-          "feature_name": "Thirty-Gallon Steam-Jacketed Kettle",
-          "affordance_description": "Massive copper vat retaining immense latent heat, bubbling violently under the shear resonance.",
-          "system_verb": "CONCEAL",
-          "associated_check_dc": 14
-        },
-        {
-          "feature_name": "Ferrofluid Manifold Tap",
-          "affordance_description": "A structural exhaust vent channeling excess thermal energy, rattling as shear waves crash through the base.",
-          "system_verb": "DEFEND",
-          "associated_check_dc": 16
-        },
-        {
-          "feature_name": "Iron-Wheat Starter Crock",
-          "affordance_description": "A fragile biological culture demanding constant thermal tending, currently threatening to over-ferment from ambient radiation.",
-          "system_verb": "CONSUME",
-          "associated_check_dc": 12
-        }
-      ]
-    },
-    "reactive_toys": [
-      {
-        "entity_id": "toy_ferrofluid_resonance_shear",
-        "name_and_role": "Magnetohydrodynamic Shear Wave",
-        "motivation_goal": "To induce violent structural shearing along the colony's rigid metallic architectures.",
-        "consistent_method": "Pulsing erratic thermal and kinetic spikes up through the Hub's foundation plating.",
-        "immediate_complication": "Threatens to violently boil over the delicate communal stock, ruining the caloric ledger.",
-        "pressure_index": 8,
-        "uninterrupted_escalation": "Eventual fracture of the hearth's thermal shielding and massive loss of food stores."
-      }
-    ],
-    "encounter_matrix": {
-      "three_levels_of_why": {
-        "level_1_immediate": "Ryn must aggressively re-balance the heat distribution before the stockpot boils over and ruins dinner.",
-        "level_2_local": "The magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea is transmitting destructive interference directly into the galley's thermal manifolds.",
-        "level_3_campaign_arc": "Mastering thermodynamic equilibrium amidst exoplanetary phenomena is essential for the Enclave's survival."
-      },
-      "active_specialist_roles": [
-        {
-          "actor_id": "enclave_13_ryn",
-          "tactical_role": "DEFENDER"
-        }
-      ],
-      "strain_accumulated_upward": 3,
-      "prerolled_hazard_queue": [
-        14,
-        9,
-        18,
-        5,
-        15
-      ]
-    },
-    "lpi_metrics": {
-      "relational_tension_density": 0.3,
-      "motivational_vector_saturation": 0.85,
-      "unresolved_conflict_ratio": 0.45,
-      "temporal_horizon_immediacy": 0.7,
-      "composite_lpi": 0.55,
-      "classification": "Campaign-Ready"
-    },
-    "dual_agent_contract": {
-      "judge_tactician": {
-        "provider": "Enclave_Core",
-        "model": "Tactical_Arbiter_v1",
-        "temperature": 0.2,
-        "explicit_pre_roll_dc": 14,
-        "failure_stakes_declared": "If the thermal buffer fails, the week's myco-protein harvest is lost to carbonization, starving the Forge squad.",
-        "graduated_outcomes": {
-          "nat_1_false_intuition": "Ryn misreads the pressure gauge entirely, locking down a vent and accelerating the boil into an explosive rupture.",
-          "below_dc_complicated_fail_forward": "The stock is saved, but the kettle's pressure valve warps, burning Ryn's hand and requiring Silas's mundane maintenance tomorrow.",
-          "meets_dc_clean_success": "Ryn perfectly syncs the rolling boil with the environmental shear waves, venting excess pressure safely into the exhaust.",
-          "dc_plus_5_or_20_extended_lore": "Ryn discovers a resonant culinary frequency, using the shear wave to perfectly caramelize the myco-proteins while dampening the kinetic feedback."
-        }
-      },
-      "master_narrator": {
-        "executor": "Enclave_Narrator",
-        "temperature": 0.7,
-        "calypso_zero_raw_stats": true,
-        "prosodic_micro_pauses_enabled": true,
-        "agency_handoff_prompt": "With the galley finally returning to a manageable simmer, Ryn wipes her brow, loads a heavy brass bowl with perfectly stabilized stew, and aggressively thrusts it into Silas's weathered hands."
-      }
-    }
-  }
+  "state_deltas": {},
+  "relationship_deltas": [],
+  "evidence_refs": [
+    "evt_s002_t0007_reflection"
+  ],
+  "cited_event_ids": [
+    "evt_s002_t0005_morning_intent"
+  ]
 }
