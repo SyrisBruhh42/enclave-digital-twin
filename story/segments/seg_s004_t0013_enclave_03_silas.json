@@ -8,7 +8,6 @@
   "next_pov_target": "enclave_01_hector",
   "location": "The_First_Forge",
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
-  "text": "The First Forge hummed with the oppressive weight of the ferrofluid sea's surge, its ozone scent thick against the frigid stone. Silas wiped a hand across his grease-stained coveralls as the main geode array attempted to consume the magnetohydrodynamic shear, threatening a total structural overload. He rushed to conceal the fragile secondary relays behind a hastily welded copper bulwark, shouting over the din to defend the primary conduit from the creeping resonant fog. He shoved the sputtering calibration baton into Hector's chest, gripping the Prodigy's shoulder tight.",
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 4,
@@ -29,7 +28,8 @@
         "sight_and_color": "grease-stained, flickering blue arcs",
         "sound": "deafening hum and shrieking metal",
         "smell": "thick ozone",
-        "tactile_temperature": "frigid stone"
+        "tactile_temperature": "frigid stone",
+        "taste_optional": "metallic tang of ionized iron dust"
       },
       "interactive_features": [
         {
@@ -65,7 +65,7 @@
     ],
     "encounter_matrix": {
       "three_levels_of_why": {
-        "level_1_immediate": "Keep the forge running",
+        "level_1_immediate": "Mitigate the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea to prevent total structural overload.",
         "level_2_local": "Secure power for The Stormbreaker",
         "level_3_campaign_arc": "Maintain colony survival"
       },
@@ -114,5 +114,20 @@
         "agency_handoff_prompt": "Hand to Hector"
       }
     }
+  },
+  "narrative_prose": "Silas wiped a hand across his grease-stained coveralls and tasted the metallic tang of ionized iron dust as the main geode array attempted to CONSUME the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. Amidst the deafening hum and thick ozone scent, he rushed across the frigid stone to CONCEAL the fragile secondary relays and DEFEND the primary conduit from the creeping resonant fog, his eyes narrowed against the blinding arcs of raw static. To stabilize the array before it overloaded, he shoved the sputtering calibration baton into Hector's hands, transferring the physical baton handoff to the Prodigy so he could finish the ascent.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "disallow_overwrite": false,
+  "prev_next_pov_target": "enclave_03_silas",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
+    "interlocutor_full_cards_loaded": 0
   }
 }
