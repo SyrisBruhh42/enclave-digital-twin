@@ -6,11 +6,128 @@
   "day_phase": "DUSK_CRAFT",
   "base_snapshot_tick": 2,
   "active_pov_id": "enclave_05_kaio",
-  "next_pov_target": "enclave_09_orion",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "location": "The_Simulacrum",
-  "science_vegetable": "Polyvagal neuro-somatic thermal regulation under bifurcated crater micro-climates",
-  "text": "[DUSK_CRAFT at The_Simulacrum] Kaio calibrated the hand-forged brass instrumentation against polyvagal neuro-somatic thermal regulation under bifurcated crater micro-climates, then passed the warm copper calibration baton directly into Orion's hands.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "text": "[DUSK_CRAFT at The_Simulacrum] Kaio bounded into the expansive, cavernous interior of The Simulacrum, grinning as he mapped the glowing wind-streams caused by the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. The strobing emerald projections bathed the soot-stained brass walls in dancing light, while the sharp smell of airborne copper mixed heavily with bruised moss. He let out a breathless, three-note whistle as the biting electric chill wrapped around him, his boots tapping enthusiastically on the smooth quartz floor. Desperately hoping to attract Ryn's attention before the resonance spike hit, he leapt to defend the delicate calibration module, using his brass sextant to conceal it from the strobing ambient light. Recognizing the data was ready, he slapped the charged copper calibration baton directly into Ryn's hands, launching into a breathless explanation of the eddy currents.",
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 1,
+    "tick_id": 3,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Deliver the stabilized baton data to Ryn before the shear wave scrambles it",
+      "mid_term_milestone": "Upgrade the colony's magnetospheric shielding",
+      "campaign_arc_climax": "Survive the convergence of the twin suns' polarity inversion"
+    }
+  },
+  "active_location": {
+    "location_id": "The_Simulacrum",
+    "macro_silhouette": "The Simulacrum's cavernous interior was a chaotic masterpiece of soot-stained brass and smooth quartz. Sweeping, strobing projections danced across the walls, suspended precariously above delicate calculation arrays.",
+    "sensory_palette": {
+      "sight_and_color": "Strobing emerald projections and soot-stained brass walls",
+      "sound": "Three-note whistles and boots tapping on smooth quartz",
+      "smell": "Airborne copper fading into bruised moss",
+      "tactile_temperature": "Biting electric chill slicing through sweat",
+      "taste_optional": "Faint trace of ionized air"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Lashing Bioluminescent Vines",
+        "affordance_description": "Thick vines whipped around by the gale that can provide temporary anchor points.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Delicate Calibration Module",
+        "affordance_description": "A precarious, exposed module requiring careful defense against ambient light.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Brass Sextant Casing",
+        "affordance_description": "Can be used to cover the module and block the magnetic shear.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "shear_storm_front",
+      "name_and_role": "Kelvin-Helmholtz Shear Front",
+      "motivation_goal": "Disrupt communication and scramble exposed data modules",
+      "consistent_method": "Blasting concussive waves of magnetic interference across open paths",
+      "immediate_complication": "The baton's charge is fading rapidly under the sheer magnetic interference",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "Will permanently erase the calibration data if not shielded in time"
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio must transport the baton before the data decays.",
+      "level_2_local": "Ryn needs the calibration metrics to adjust the colony's energy grid for dinner.",
+      "level_3_campaign_arc": "Mastering the ferrofluid sea's dynamics is key to long-term colony survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      7,
+      18,
+      3,
+      12
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.65,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.75,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.77,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_inference",
+      "model": "judge_v1",
+      "temperature": 0.1,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Kaio will slip on the smooth quartz, delaying the delivery and corrupting the baton's stored metrics.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "You misjudge a step, tumbling into the arrays and thoroughly scrambling the device.",
+        "below_dc_complicated_fail_forward": "You make it, but the delay causes partial data loss, requiring manual recalibration later.",
+        "meets_dc_clean_success": "You expertly navigate the cavernous interior, delivering the baton with data perfectly intact.",
+        "dc_plus_5_or_20_extended_lore": "Your swift run actually charges the baton kinetically, providing a bonus metric layer to Ryn."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Ryn looks up from the data terminal as Kaio slaps the baton down. What does Ryn do?"
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": ["enclave_05_kaio"],
+    "interlocutor_full_cards_loaded": 0
+  },
   "context_manifest_path": "context/manifests/manifest_s001_t0003_enclave_05_kaio.json",
   "total_prompt_tokens": 886,
-  "target_path": "story/segments/seg_s001_t0003_enclave_05_kaio.json"
+  "target_path": "story/segments/seg_s001_t0003_enclave_05_kaio.json",
+  "disallow_overwrite": false
 }
