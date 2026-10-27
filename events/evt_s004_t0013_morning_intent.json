@@ -51,7 +51,8 @@
         "sight_and_color": "Crimson and amber glows cutting through dawn shadows.",
         "sound": "The rhythmic, heavy thud of pneumatic hammers.",
         "smell": "Sharp ozone and molten brass.",
-        "tactile_temperature": "Oppressively hot and dry."
+        "tactile_temperature": "Oppressively hot and dry.",
+        "taste_optional": "Static tang"
       },
       "interactive_features": [
         {
@@ -136,5 +137,8 @@
         "agency_handoff_prompt": "Hector, take the baton and mind the shear."
       }
     }
-  }
+  },
+  "narrative_prose": "Silas tightened his grip on the cooling tongs, the crimson and amber glows of the crucible illuminating his deeply lined face. The rhythmic, heavy thud of pneumatic hammers echoed off the vaulted brass ceiling, almost drowning out the sharp ozone and molten brass tang that filled the oppressively hot and dry air. He could taste the static tang of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea on his teeth, a bitter metallic reminder of the unstable magnetosphere. He reached out to ATTRACT a stray ferrofluid droplet, his calloused hands moving with practiced precision, then adjusted the thermal baffle to DEFEND against a sudden surge of radiant heat. Finally, picking up a scrap of oxidized iron to CONCEAL a minor blemish on the casing, he turned to Hector and held out the heavy spanner, passing the physical baton. 'Inefficient to let the flux pool,' Silas muttered, his voice raspy. 'Take it, and watch your tolerances.'",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "disallow_overwrite": false
 }
