@@ -1,0 +1,136 @@
+{
+  "segment_id": "seg_s002_t0006_enclave_01_hector",
+  "segment_index": 6,
+  "tick_id": 6,
+  "colony_sol": 2,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "base_snapshot_tick": 5,
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "second_pass_repair_constraint": "session_exceeded_25m_cut_loss_relaunch",
+  "location": "The_Ferrofluid_Sea_Ridge",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "text": "[MIDDAY_EXPEDITION at The_Ferrofluid_Sea_Ridge] Hector carefully navigated the rain-slicked basalt pinnacle, bracing himself against the roaring shear front born of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. Vivid arcs of emerald bioluminescence cut through the dizzying shadows, casting sharp outlines across the churning violet expanse, while the heavy tang of airborne copper mingled with bruised moss. Drawing in a sharp breath through the biting electric chill, he quickly analyzed the oscillating eddy currents cascading over the precarious ridge. Securing the vital calibration readings, Hector forcefully pressed the charged copper baton into Kaio's hands at the threshold of the airlock, urging him to hurry.",
+  "campaign_metadata": {
+    "session_number": 2,
+    "colony_sol": 2,
+    "tick_id": 6,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Secure the baton data amid the shear wave",
+      "mid_term_milestone": "Upgrade the colony's magnetospheric shielding",
+      "campaign_arc_climax": "Survive the convergence of the twin suns' polarity inversion"
+    }
+  },
+  "active_location": {
+    "location_id": "The_Ferrofluid_Sea_Ridge",
+    "macro_silhouette": "The steep, wind-battered basalt pinnacle jutted out over the churning violet expanse of the ferrofluid sea, suspended precariously in the storm. Thick, bioluminescent vines whipped wildly in the screaming magnetic winds, tracing chaotic arcs of emerald light. Heavy, groaning reinforced blast doors at the base offered the only quick sanctuary from the rising shear front.",
+    "sensory_palette": {
+      "sight_and_color": "Strobing violet metallic waves and whipping emerald bioluminescence",
+      "sound": "Screaming magnetic winds and the sharp hum of piezo-electric rock",
+      "smell": "Airborne copper fading into bruised moss",
+      "tactile_temperature": "Biting electric chill slicing through sweat",
+      "taste_optional": "Faint trace of ionized air"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Lashing Bioluminescent Vines",
+        "affordance_description": "Thick vines whipped around by the gale that can provide temporary anchor points.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Slick Basalt Pinnacle",
+        "affordance_description": "A precarious, rain-slicked path requiring careful navigation to avoid slipping.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Reinforced Airlock Doors",
+        "affordance_description": "Heavy metal doors that must be quickly shut to block the magnetic shear.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "shear_storm_front",
+      "name_and_role": "Kelvin-Helmholtz Shear Front",
+      "motivation_goal": "Disrupt communication and scramble exposed data modules",
+      "consistent_method": "Blasting concussive waves of magnetic interference across open paths",
+      "immediate_complication": "The shear wave threatens to knock Hector off balance",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "Will permanently erase the calibration data if not shielded in time"
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Hector must secure the baton before the data decays.",
+      "level_2_local": "The calibration metrics are needed to adjust the colony's energy grid.",
+      "level_3_campaign_arc": "Mastering the ferrofluid sea's dynamics is key to long-term colony survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      7,
+      18,
+      3,
+      12
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.65,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.75,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.77,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_inference",
+      "model": "judge_v1",
+      "temperature": 0.1,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Hector will slip on the wet basalt, corrupting the baton's stored metrics.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "You misjudge a gust, tumbling into the vines and thoroughly scrambling the device.",
+        "below_dc_complicated_fail_forward": "You make it, but the delay causes partial data loss, requiring manual recalibration later.",
+        "meets_dc_clean_success": "You expertly navigate the cliffside, delivering the baton with data perfectly intact.",
+        "dc_plus_5_or_20_extended_lore": "Your swift run actually charges the baton kinetically, providing a bonus metric layer."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio grabs the baton from Hector. What does Kaio do?"
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "context_manifest_path": "context/manifests/manifest_s002_t0006_enclave_01_hector.json",
+  "total_prompt_tokens": 850,
+  "target_path": "story/segments/seg_s002_t0006_enclave_01_hector.json",
+  "disallow_overwrite": false
+}
