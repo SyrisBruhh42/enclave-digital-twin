@@ -28,6 +28,7 @@
   "novelty_score": 0.85,
   "lethality": 0,
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "narrative_prose": "The First Forge hums with a deep, bone-rattling resonance as magnetic containment fields grapple with the exterior chaos. Thick copper coils wrap the central crucible, catching erratic sparks that dance across the oxidized iron floor plates. Silas quickly moves to DEFEND the delicate chronometer array by sliding the heavy scrap metal bulwark into place, hoping to CONCEAL it from the worst of the magnetic surges. He turns, gesturing for Hector to ATTRACT the stray energy bursts with the resonance trap before physically handing him the insulated baton.",
   "state_deltas": {
     "stress_delta": 0.05
   },
@@ -40,13 +41,6 @@
     }
   ],
   "evidence_refs": [],
-  "target_path": "events/evt_s002_t0005_morning_intent.json",
-  "file_operations": [
-    {
-      "action": "A",
-      "path": "events/evt_s002_t0005_morning_intent.json"
-    }
-  ],
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 2,
