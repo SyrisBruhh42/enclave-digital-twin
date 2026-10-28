@@ -12,19 +12,19 @@
   "law_l11_clamped": false,
   "severity": "PETTY_AFFECTIONATE_INCONVENIENCE",
   "node_a": "enclave_01_hector",
-  "node_b": "enclave_03_silas",
+  "node_b": "enclave_05_kaio",
   "node_c": "enclave_13_ryn",
   "instigator": "enclave_01_hector",
-  "intended_target": "enclave_03_silas",
+  "intended_target": "enclave_05_kaio",
   "collateral_recipient": "enclave_13_ryn",
   "target_b_missed": true,
   "blamed_node": "enclave_01_hector",
   "attributed_to": "enclave_01_hector",
-  "prank_description": "Replaced the brass pressure-gauge bezel with an engraved 'Inefficient' dial plate",
-  "summary": "enclave_01_hector rigged a harmless prank for enclave_03_silas (Replaced the brass pressure-gauge bezel with an engraved 'Inefficient' dial plate); enclave_03_silas completely missed it, leaving enclave_13_ryn mildly inconvenienced and grumbling at enclave_01_hector.",
+  "prank_description": "Slightly misaligned the brass needle of Kaio's scout compass using the Magnetohydrodynamic Kelvin-Helmholtz shear.",
+  "summary": "enclave_01_hector rigged a harmless prank for enclave_05_kaio (Slightly misaligned the brass needle of Kaio's scout compass); enclave_05_kaio completely missed it, leaving enclave_13_ryn mildly inconvenienced by a wrong direction and grumbling at enclave_01_hector.",
   "blind_spot_attribution": {
     "instigator_node_a": "enclave_01_hector",
-    "oblivious_target_node_b": "enclave_03_silas",
+    "oblivious_target_node_b": "enclave_05_kaio",
     "target_b_missed": true,
     "inconvenienced_node_c": "enclave_13_ryn",
     "blamed_by_c": "enclave_01_hector",
@@ -38,12 +38,12 @@
   "location": "The_First_Forge",
   "actors": [
     "enclave_01_hector",
-    "enclave_03_silas",
+    "enclave_05_kaio",
     "enclave_13_ryn"
   ],
   "importance": 6.0,
   "novelty_score": 0.68,
-  "science_vegetable": "Relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "state_deltas": {
     "stress_delta": -0.02
   },
@@ -51,5 +51,129 @@
   "evidence_refs": [
     "evt_s001_t0002_midday_expedition"
   ],
-  "target_path": "events/evt_s001_t0002_shadow_prank.json"
+  "target_path": "events/evt_s001_t0002_shadow_prank.json",
+  "second_pass_repair_constraint": "@ENT[enclave-digital-twin:SHADOW_ECONOMY_AND_SETUP_PAYOFF_LEDGER] | @ATTR[constitutional_baseline] = laws_L01_through_L16_and_calypso_verified | @CONF[1.00] | @TIME[2026-10-28T05:12:01Z] | @PROV[init]",
+  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified",
+  "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "active_pov_id": "enclave_01_hector"
+  },
+  "disallow_overwrite": false,
+  "narrative_prose": "Hector stood at the edge of the jagged ironstone coastline, staring down the swirling, oily expanse of the ferrofluid sea. Above him, the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea whipped the freezing mist into a frenzy, violently roaring in his ears and bringing the sharp, metallic smell of ozone to his nose. It was freezing cold, the biting wind seeking to CONSUME the warmth from his heavy canvas coat. He grinned, seeing Kaio's scout compass resting on a nearby crate, barely trying to DEFEND it from the harsh environment. Taking advantage of the dense mist to CONCEAL his actions, he slightly misaligned the brass needle. Turning, he shoved the heavy physical baton into Kaio's waiting hand, signaling the handoff.",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 1,
+      "tick_id": 2,
+      "pacing_mode": "MULLIGAN_CRISIS",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Maintain alignment during the expedition.",
+        "mid_term_milestone": "Map the ferrofluid sea's expanding coastline.",
+        "campaign_arc_climax": "Integrate magnetic shielding with the core systems."
+      }
+    },
+    "active_location": {
+      "location_id": "The_Wilds",
+      "macro_silhouette": "A sweeping, chaotic landscape defined by churning dark waves against jagged iron-stone cliffs.",
+      "sensory_palette": {
+        "sight_and_color": "Dark, oily blacks punctuated by brilliant, sparking orange lightning across the shear.",
+        "sound": "A deafening roar of wind overlapping with the heavy, sloshing impact of the ferrofluid sea.",
+        "smell": "Intense metallic tang overlaid with a sharp ozone freshness.",
+        "tactile_temperature": "A freezing, biting chill that penetrates heavy canvas coats instantly.",
+        "taste_optional": "The metallic tang of ozone and static."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Ferrofluid Breakers",
+          "affordance_description": "Massive waves crashing with intense magnetic force, threatening to drag anything loose.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Magnetic Boulders",
+          "affordance_description": "Large iron-rich stones that offer temporary shelter from the sheer winds.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Dense Sea Mist",
+          "affordance_description": "Thick, localized fog banks that drastically reduce visibility.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "toy_ferrofluid_shear",
+        "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz Shear",
+        "motivation_goal": "Disrupt surface-level navigation and stability.",
+        "consistent_method": "Generating erratic magnetic fields and sudden wind spikes.",
+        "immediate_complication": "Causes the modified compass to spin wildly.",
+        "pressure_index": 7,
+        "uninterrupted_escalation": "Eventual complete loss of navigation and disorientation in the Wilds."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Hector wants to pull a harmless prank on Kaio by slightly misaligning the compass.",
+        "level_2_local": "The local Magnetohydrodynamic Kelvin-Helmholtz shear is strong enough to make the prank plausible.",
+        "level_3_campaign_arc": "Testing navigation instruments under extreme planetary stress."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        14,
+        8,
+        19,
+        3,
+        11
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.4,
+      "motivational_vector_saturation": 0.6,
+      "unresolved_conflict_ratio": 0.3,
+      "temporal_horizon_immediacy": 0.8,
+      "composite_lpi": 0.525,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "Enclave_Core",
+        "model": "Tactical_Arbiter_v1",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The compass modification fails and it just breaks, requiring a trip to the Forge.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Hector permanently breaks the delicate compass needle.",
+          "below_dc_complicated_fail_forward": "The compass holds, but Hector's adjustment leaves it stuck pointing strictly North.",
+          "meets_dc_clean_success": "The compass now spins with a slight, humorous bias toward the ferrofluid waves.",
+          "dc_plus_5_or_20_extended_lore": "Hector accidentally calibrates the compass to perfectly track the moving shear waves."
+        }
+      },
+      "master_narrator": {
+        "executor": "Enclave_Narrator",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Hector securely places the modified brass compass into Kaio's waiting hand, signaling the start of the sweep."
+      }
+    }
+  }
 }
