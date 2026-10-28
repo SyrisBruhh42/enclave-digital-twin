@@ -171,5 +171,7 @@
         "agency_handoff_prompt": "Hector securely places the modified brass compass into Kaio's waiting hand, signaling the start of the sweep."
       }
     }
-  }
+  },
+  "steward_note": "deterministic-enclave-5section-v2",
+  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified"
 }
