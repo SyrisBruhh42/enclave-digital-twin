@@ -1,0 +1,145 @@
+{
+  "segment_id": "seg_s007_t0026_enclave_01_hector",
+  "segment_index": 26,
+  "tick_id": 26,
+  "colony_sol": 7,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "base_snapshot_tick": 25,
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "location": "The_Stormbreaker_Spire",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
+  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified",
+  "second_pass_repair_constraint": "@ENT[enclave:7298660649132524014]",
+  "changeset_gate_rejection": "Law L02 violation: target_path 'lore/proposed/lore_s006_t0022_expedition_discovery.json' outside ('events/', 'story/segments/', 'story/feasts/",
+  "VAL": "Law L02 violation: target_path 'lore/proposed/lore_s006_t0022_expedition_discovery.json' outside ('events/', 'story/segments/', 'story/feasts/",
+  "CONF": 1.0,
+  "TIME": "2026-10-28T21:12:00Z",
+  "PROV": "sol007_t0026",
+  "narrative_prose": "Hector snatched the telemetry baton from Silas, grinning into the ozone gale as he sprinted toward the induction rigging. The air crackled with the sheer voltage of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, snapping around his boots like impatient hounds. He didn't hesitate to CONSUME the raw arc-flash data through the baton's interface, ignoring the stinging warmth of the copper grip as he read the live kinetics. Ahead, a heavy magnetic funnel threatened to rip his tools away, but he managed to DEFEND his utility belt with a swift pivot, laughing loudly over the storm's roar. With a daring leap over a sparking capacitor bank, he tossed a decoy wrench to ATTRACT a stray discharge, clearing his path to Kaio. The wind howled as he landed gracefully, shoving the glowing baton firmly into Kaio's hands without missing a beat.",
+  "campaign_metadata": {
+    "session_number": 7,
+    "colony_sol": 7,
+    "tick_id": 26,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 2,
+    "horizon_goals": {
+      "immediate_session_goal": "Deliver the telemetry baton to Kaio amidst the shear storm.",
+      "mid_term_milestone": "Reinforce dock structures against shear waves.",
+      "campaign_arc_climax": "Survive the convergence of the twin suns' polarity inversion"
+    }
+  },
+  "active_location": {
+    "location_id": "The_Stormbreaker_Spire",
+    "macro_silhouette": "The Stormbreaker Spire thrust violently into the raging squall, an immense cage of braided copper and steel vibrating under immense stress. Sheets of freezing rain lashed the platform laterally, instantly vaporizing into steam where they struck the searing induction vanes.",
+    "sensory_palette": {
+      "sight_and_color": "Blinding blue corona flashes and the dull orange glow of superheated metal",
+      "sound": "The concussive roar of thunder paired with the high-pitched shriek of wind tearing over the rig",
+      "smell": "Suffocating ozone, scorched copper, and freezing rain",
+      "tactile_temperature": "Bitter, freezing gale punctuated by blasts of blistering heat from the capacitors",
+      "taste_optional": "The metallic sting of ionized air on the tongue"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Telemetry Interface Socket",
+        "affordance_description": "A dangerously exposed socket meant to interface directly with the telemetry baton.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Grounding Latch",
+        "affordance_description": "A heavy copper clamp meant to secure the rigging against sudden voltage spikes.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Discharge Decoy",
+        "affordance_description": "A sacrificial rod designed to pull stray voltage arcs away from the central spire.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "shear_storm_front_pinnacle",
+      "name_and_role": "Kelvin-Helmholtz Shear Front",
+      "motivation_goal": "Sever the docking tethers",
+      "consistent_method": "Ripping concussive waves of magnetic interference across the platform",
+      "immediate_complication": "The structural integrity of the main gangway is failing rapidly",
+      "pressure_index": 9,
+      "uninterrupted_escalation": "Will collapse the dock, plunging everything into the ferrofluid sea"
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Hector must deliver the telemetry baton to Kaio amidst the shear storm.",
+      "level_2_local": "The data is critical to calibrating the Stormbreaker before the squall worsens.",
+      "level_3_campaign_arc": "Mastering the ferrofluid sea's dynamics is key to long-term colony survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      15,
+      9,
+      17,
+      4,
+      13
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.9,
+    "unresolved_conflict_ratio": 0.85,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.88,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_inference",
+      "model": "judge_v1",
+      "temperature": 0.1,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Hector's daring toss misses the mark, risking the baton falling into the churning sea.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "You completely misjudge the wind shear, losing the baton to the storm.",
+        "below_dc_complicated_fail_forward": "You make the handoff, but pull a muscle, significantly slowing your next action.",
+        "meets_dc_clean_success": "You securely pass the baton right into Kaio's hand.",
+        "dc_plus_5_or_20_extended_lore": "You execute the handoff with such precision that the baton remains perfectly shielded from all interference."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector shoved the glowing baton firmly into Kaio's hands. What does Kaio do?"
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "interlocutor_full_cards_loaded": 0,
+    "total_tokens": 3000
+  },
+  "context_manifest_path": "context/manifests/manifest_s007_t0026_enclave_01_hector.json",
+  "total_prompt_tokens": 900,
+  "target_path": "story/segments/seg_s007_t0026_enclave_01_hector.json",
+  "disallow_overwrite": false
+}
