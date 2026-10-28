@@ -28,5 +28,34 @@
   "summary": "All 16 members of The Enclave gathered around Ryn and Elara's hearth on Sol 1 to break warm iron-wheat bread, debate magnetohydrodynamic kelvin-helmholtz shear across the ferrofluid sea, and release the day's magnetospheric tension.",
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "lethality": 0,
-  "target_path": "story/feasts/sol_001_feast.json"
+  "target_path": "story/feasts/sol_001_feast.json",
+  "disallow_overwrite": false,
+  "active_pov_id": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "narrative_prose": "Ryn wiped the sweat from her brow as she DEFEND ed the final iron-wheat loaves from Kaio's wandering hands. She poured the stew, hoping to ATTRACT Silas's attention before his shift. \"The tang of the broth cuts through the static hum,\" she noted, the scent of rosemary masking the sulfurous air. \"Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea is causing interference again,\" Silas murmured, moving to CONSUME the offering. The warm bowl was a comfort against the cold steel table.",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_ollama",
+      "model": "llama3",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If the stew burns, morale drops and the squad fights during the next shift.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "The stew is completely ruined and toxic.",
+        "below_dc_complicated_fail_forward": "The stew is slightly burnt, edible but unpleasant.",
+        "meets_dc_clean_success": "The stew is perfect.",
+        "dc_plus_5_or_20_extended_lore": "The stew is so good it grants a temporary buff."
+      }
+    },
+    "master_narrator": {
+      "executor": "local_ollama",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "What do you do next?"
+    }
+  }
 }
