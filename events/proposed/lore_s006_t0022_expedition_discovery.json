@@ -1,0 +1,140 @@
+{
+  "event_type": "EXPEDITION_DISCOVERY",
+  "event_id": "evt_s006_t0022_expedition_discovery",
+  "tick_id": 22,
+  "colony_sol": 6,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-10-28T18:08:01Z",
+  "base_snapshot_tick": 21,
+  "location": "ferrofluid_sea",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_05_kaio"
+  ],
+  "importance": 5,
+  "novelty_score": 5,
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "CONF": "1.00",
+  "TIME": "2026-10-28T18:08:01Z",
+  "PROV": "sol006_t0022",
+  "ENT": "enclave-digital-twin:DYNAMIC_LORE_CARD_PROPOSALS",
+  "ATTR": "second_pass_repair_constraint",
+  "VAL": "@ENT[enclave:171172332741791876]",
+  "narrative_prose": "Hector adjusts his grip on the primary grounding mast, leaning into the ozone gale as the twin suns pull a furious four-tesla shear across the ferrofluid sea. 'Jane's differential equation says the upper capacitor bank arcs in ninety seconds, but I only need forty-five to clip the shunt cable!' he shouts over the howling wind, grinning at the chaotic Magnetohydrodynamic Kelvin-Helmholtz shear unfolding below. He successfully stabilizes the circuit and confidently tosses the insulated baton down to Kaio, who secures it firmly by the lower induction coil.",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 6,
+      "tick_id": 22,
+      "day_phase": "MIDDAY_EXPEDITION",
+      "pacing_mode": "MULLIGAN_CRISIS",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Stabilize the primary grounding mast against the Kp-8 magnetic shear.",
+        "mid_term_milestone": "Calibrate the magnetohydrodynamic grounding shunt for the Stormbreaker.",
+        "campaign_arc_climax": "Prove terrestrial metallurgy can hybridize with sympathetic exoplanet core-ores."
+      }
+    },
+    "active_location": {
+      "location_id": "ferrofluid_sea",
+      "macro_silhouette": "A churning expanse of liquid iron rolls violently beneath the Stormbreaker Spire, whipping metallic spray into the heavy, storm-laden sky. Jagged arcs of Saint Elmo's fire dance across the crests of the black waves. The raw magnetic force of the twin suns contorts the sea into massive, gravity-defying spires.",
+      "sensory_palette": {
+        "sight_and_color": "Flashes of blinding blue corona arcing over churning, obsidian-black ferrofluid waves.",
+        "sound": "The deafening crackle of live voltage telemetry snapping over a howling ozone gale.",
+        "smell": "The sharp, metallic tang of ionized ozone mixed with the scent of overheating copper.",
+        "tactile_temperature": "The freezing, sleet-filled squall slicing against skin flushed hot by radiant electrical heat.",
+        "taste_optional": "A bitter copper tang lingering on the tongue from the charged atmosphere."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Magnetohydrodynamic Wave Crest",
+          "affordance_description": "A surging wall of magnetized liquid iron threatening to overwhelm the lower catwalk.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Exoplanet Core-Ore Geode",
+          "affordance_description": "A raw, crackling geode of captured lightning embedded in the shoreline rock.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Ferrofluid Sinkhole",
+          "affordance_description": "A localized polarity inversion creating a vortex that swallows unsecured equipment.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "toy_ferrofluid_sea",
+        "name_and_role": "The Ferrofluid Sea",
+        "motivation_goal": "To relentlessly reorganize matter according to the chaotic fluctuations of the twin suns' magnetic fields.",
+        "consistent_method": "Generating massive, unpredictable Kelvin-Helmholtz shear waves that physically tear at unshielded structures.",
+        "immediate_complication": "A sudden four-tesla shear spike that threatens to snap the main induction crucible's tether.",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "The magnetic shear will achieve critical resonance, causing a chain-reaction structural failure across the entire First Forge."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Hector must physically clip the shunt cable before the upper capacitor bank arcs and overloads the system.",
+        "level_2_local": "The First Forge needs a stable, zero-fatigue alloy structure to withstand the planet's relentless magnetic storms.",
+        "level_3_campaign_arc": "The Enclave's survival depends on mastering the hybrid metallurgy of terrestrial science and exoplanet anomalies."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        }
+      ],
+      "strain_accumulated_upward": 0,
+      "prerolled_hazard_queue": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.5,
+      "motivational_vector_saturation": 0.5,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.5,
+      "composite_lpi": 0.6,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "openai",
+        "model": "gpt-4",
+        "temperature": 0.7,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The magnetic shear tears the shunt cable loose, fusing the induction crucible and sending a lethal arc-flash across the catwalk.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Hector misreads the tensile strain; his adjustment accelerates the capacitor arc, destroying the module and injuring Kaio.",
+          "below_dc_complicated_fail_forward": "The cable is secured, but the effort causes a micro-fissure in the bronze casting, requiring immediate, dangerous field repairs.",
+          "meets_dc_clean_success": "The shunt is perfectly calibrated. The circuit stabilizes, safely grounding the megajoule discharge.",
+          "dc_plus_5_or_20_extended_lore": "Not only is the circuit stabilized, but the specific frequency of the shear reveals a new resonant property of the local bismuth-bronze alloy."
+        }
+      },
+      "master_narrator": {
+        "executor": "jules",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": false,
+        "agency_handoff_prompt": "Hector successfully stabilizes the circuit and confidently tosses the insulated baton down to Kaio, who secures it firmly by the lower induction coil."
+      }
+    }
+  }
+}
