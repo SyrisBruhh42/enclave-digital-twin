@@ -1,0 +1,151 @@
+{
+  "feast_id": "feast_sol_005",
+  "event_id": "evt_s005_t0020_the_feast",
+  "tick_id": 20,
+  "colony_sol": 5,
+  "day_phase": "THE_FEAST",
+  "base_snapshot_tick": 19,
+  "event_type": "THE_FEAST_4_SQUAD_CONVERGENCE",
+  "location": "The_Hub_Hearth",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_02_jane",
+    "enclave_03_silas",
+    "enclave_04_leo",
+    "enclave_05_kaio",
+    "enclave_06_zara",
+    "enclave_07_willow",
+    "enclave_08_terra",
+    "enclave_09_orion",
+    "enclave_10_isla",
+    "enclave_11_kenna",
+    "enclave_12_elias",
+    "enclave_13_ryn",
+    "enclave_14_vex",
+    "enclave_15_dorian",
+    "enclave_16_elara"
+  ],
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "VAL": "laws_L01_through_L16_and_calypso_verified",
+  "CONF": "1.00",
+  "TIME": "2026-10-28T15:12:00Z",
+  "PROV": "init",
+  "target_path": "story/feasts/sol_005_feast.json",
+  "disallow_overwrite": false,
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 5,
+      "colony_sol": 5,
+      "tick_id": 20,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Maintain caloric balance during the shear anomaly.",
+        "mid_term_milestone": "Stabilize structural integrity of the hearth.",
+        "campaign_arc_climax": "Align the 16 characters for the Grand Genesis."
+      }
+    },
+    "active_location": {
+      "location_id": "The_Hub_Hearth",
+      "macro_silhouette": "The kitchen was bathed in erratic orange shadows dancing on cold iron bulkheads. The low, continuous thrum of magnetospheric tension permeated the very air, rattling the iron-wheat bread baskets and the heavy brass ladles.",
+      "sensory_palette": {
+        "sight_and_color": "Erratic orange and deep violet shadows dancing on cold iron bulkheads.",
+        "sound": "A low, continuous thrum of magnetospheric tension.",
+        "smell": "Ozone intermingled with the comforting scent of warm iron-wheat bread.",
+        "tactile_temperature": "A sharp, biting chill offset by bursts of radiant heat from the hearth.",
+        "taste_optional": "The metallic tang of static charge."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "The Iron-Wheat Bread Basket",
+          "affordance_description": "A basket of freshly milled bread.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 10
+        },
+        {
+          "feature_name": "The Ferrofluid Viewport",
+          "affordance_description": "A reinforced window.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 15
+        },
+        {
+          "feature_name": "The Magnetic Resonance Dampener",
+          "affordance_description": "A humming device.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 18
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "toy_ferrofluid_surge",
+        "name_and_role": "Ferrofluid Surge",
+        "motivation_goal": "To destabilize the structural integrity of the hearth.",
+        "consistent_method": "Pulsing rhythmic shockwaves that rattle the plating.",
+        "immediate_complication": "The bread basket begins to slide off the table.",
+        "pressure_index": 7,
+        "uninterrupted_escalation": "The shockwaves will shatter the viewport if unmitigated."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The physical vibrations threaten the feast.",
+        "level_2_local": "The Kelvin-Helmholtz shear is peaking due to lunar alignment.",
+        "level_3_campaign_arc": "The exoplanet itself is testing the colony's cohesion."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "LEADER"
+        },
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        14,
+        8,
+        19,
+        3,
+        11
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.6,
+      "motivational_vector_saturation": 0.8,
+      "unresolved_conflict_ratio": 0.4,
+      "temporal_horizon_immediacy": 0.7,
+      "composite_lpi": 0.75,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "deterministic-symbolic-judge",
+        "model": "deterministic-symbolic-judge",
+        "temperature": 0.05,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "If the dampener fails, the feast is ruined and tension skyrockets.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Silas completely miscalibrates the dampener.",
+          "below_dc_complicated_fail_forward": "The dampener holds, but shorts out half the lighting in the Hub.",
+          "meets_dc_clean_success": "Silas smoothly stabilizes the resonance, allowing the feast to proceed.",
+          "dc_plus_5_or_20_extended_lore": "Silas discovers a new harmonics pattern in the shear."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_ai_manager",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Ryn handed the heavy brass serving spoon to Silas. 'Your turn to dish out the lentils.'"
+      }
+    }
+  },
+  "narrative_prose": "The kitchen was bathed in erratic orange shadows dancing on cold iron bulkheads, the air sharp with ozone and the comforting scent of warm iron-wheat bread. A low, continuous thrum of magnetospheric tension vibrated through the floor, threatening to unseat the heavy brass ladles as the metallic tang of static charge coated Ryn's tongue. She had to DEFEND the delicate caloric balance of the meal, urging everyone to CONSUME their portions despite the mounting pressure, all while fighting to CONCEAL her own fatigue from the relentless Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. With a stern expression that brooked no argument, she thrust the heavy brass serving spoon into Silas's waiting hands, a firm, tactile transfer of responsibility for the next course.",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas"
+}
