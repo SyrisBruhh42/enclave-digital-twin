@@ -577,5 +577,128 @@
   "broadcast_script": "Good evening, Enclave! Dorian and Vex reporting from The Hub on Sol 1. Tonight's lead: [DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands. Weather almanac: Kp=5.35 under Ferrofluid_Tidal_Squall. All sixteen seats are warm around Ryn's hearth\u2014rest well!",
   "base_snapshot_tick": 4,
   "tick_id": 4,
-  "target_path": "digests/daily/sol_001_dispatch.json"
+  "target_path": "digests/daily/sol_001_dispatch.json",
+  "disallow_overwrite": false,
+  "steward_note": "Local Showrunner Steward Note (deterministic-enclave-5section-v2): Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_13_ryn -> Handoff=enclave_03_silas.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "narrative_prose": "The Hub's hearth crackled with a dry, static tang, warming the iron-wheat dough as the scent of burnt sugar and ozone filled the chamber. Ryn swiped her copper ladle to DEFEND the simmering broth from splattering, the crimson liquid practically seeming to ATTRACT the ambient sparks of the nearby generator, a culinary expression of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. Silas reached for a chunk of crusty bread to CONSUME the rich stew, while the shadows danced along the walls, attempting to CONCEAL the intense calibration readouts. Ryn wiped her brow and placed the warm, copper stirring baton directly into Silas's hands, signaling his turn at the primary observation manifold.",
+  "actors": [
+    "enclave_13_ryn",
+    "enclave_03_silas"
+  ],
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 1,
+      "tick_id": 4,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Resolve the standoff over the harvest batch.",
+        "mid_term_milestone": "Stabilize the magnetosphere.",
+        "campaign_arc_climax": "Survive the winter."
+      }
+    },
+    "active_location": {
+      "location_id": "The_Hub_Hearth",
+      "macro_silhouette": "The Hub's hearth is a massive, warm core of hand-forged copper and brass. It pulses gently with the residual heat of the colony's metabolic engine. Shadows stretch across the domed ceiling as the fires roar within.",
+      "sensory_palette": {
+        "sight_and_color": "Warm amber light and crimson sparks.",
+        "sound": "The dry, static tang of crackling embers.",
+        "smell": "Burnt sugar and ozone.",
+        "tactile_temperature": "A comforting, radiant heat.",
+        "taste_optional": "A savory hint of salt and copper in the air."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "The Hearth Fire",
+          "affordance_description": "Can be stoked to increase temperature.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "The Spice Rack",
+          "affordance_description": "Offers various aromatic additions.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "The Stew Pot",
+          "affordance_description": "Provides hearty nourishment.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "hearth_stew",
+        "name_and_role": "The Simmering Stew",
+        "motivation_goal": "To provide nourishment and comfort.",
+        "consistent_method": "Bubbling invitingly.",
+        "immediate_complication": "Requires constant attention to avoid burning.",
+        "pressure_index": 5,
+        "uninterrupted_escalation": "Will scorch if left alone."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The Enclave must stabilize the localized magnetic shear threatening the harvest batch.",
+        "level_2_local": "Ryn and Silas must reconcile their competing methodologies for observing and manipulating the ferrofluid sea.",
+        "level_3_campaign_arc": "The colony's survival depends on mastering the exoplanet's aggressive thermodynamic anomalies."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "LEADER"
+        },
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 2,
+      "prerolled_hazard_queue": [
+        1,
+        5,
+        8,
+        12,
+        19
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.4,
+      "motivational_vector_saturation": 0.6,
+      "unresolved_conflict_ratio": 0.3,
+      "temporal_horizon_immediacy": 0.8,
+      "composite_lpi": 0.52,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "ollama",
+        "model": "llama3",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The magnetic shear destabilizes, ruining the iron-wheat batch.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "You misinterpret the shear frequency, causing a resonant spike that immediately fries the observation manifold and scorches the harvest.",
+          "below_dc_complicated_fail_forward": "The shear is partially contained, but the resulting thermal venting damages 20% of the harvest batch and slightly singes Silas's gear.",
+          "meets_dc_clean_success": "The shear is successfully compensated for, securing the harvest batch without incident.",
+          "dc_plus_5_or_20_extended_lore": "The successful calibration not only secures the batch but reveals a new harmonic pattern in the ferrofluid sea, offering a potential long-term energy source."
+        }
+      },
+      "master_narrator": {
+        "executor": "ollama",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "What do you do next?"
+      }
+    }
+  }
 }
