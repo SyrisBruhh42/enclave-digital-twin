@@ -141,5 +141,7 @@
         "agency_handoff_prompt": "With the galley finally quiet, Ryn wipes her brow and considers Silas's quiet observation."
       }
     }
-  }
+  },
+  "narrative_prose": "In the sweltering heat of the galley, Ryn carefully DEFENDed the delicate broth against the erratic thermal spikes caused by the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. She wiped her brow, the oppressive warmth contrasting sharply with the deep umber glow and the rhythmic scrape of wire brushes echoing off the copper kettles. The rich iron-wheat scent mingled with a lingering mineral tang as she CONCEALed the fragile starter crock, hoping its earthy flavor would eventually ATTRACT a hungry crew back from the edge of exhaustion.",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_13_ryn -> Handoff=enclave_03_silas."
 }
