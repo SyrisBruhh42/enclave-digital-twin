@@ -6,12 +6,10 @@
   "day_phase": "DAWN_SHIFT",
   "base_snapshot_tick": 4,
   "active_pov_id": "enclave_03_silas",
-  "next_pov_target": "enclave_05_kaio",
   "prev_next_pov_target": "enclave_03_silas",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "location": "The_First_Forge",
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
-  "text": "[DAWN_SHIFT at The_First_Forge] Silas carefully monitored the resonance chamber, the oscillating hum echoing against the soot-stained brass walls of the forge. He observed the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea through the thick quartz window, taking note of how the turbulent waves induced microscopic vibrations in the structural struts. The scent of ozone and hot copper lingered heavily, mixing with the sharp tang of cooling slag. With the delicate structural diagnostics complete, he swiftly secured the resulting brass data-cylinder and passed it squarely to Kaio, who had bounded into the forge to collect the fresh diagnostics.",
   "campaign_metadata": {
     "session_number": 2,
     "colony_sol": 2,
@@ -78,7 +76,7 @@
         "tactical_role": "DEFENDER"
       },
       {
-        "actor_id": "enclave_05_kaio",
+        "actor_id": "enclave_01_hector",
         "tactical_role": "STRIKER"
       }
     ],
@@ -92,9 +90,9 @@
     ]
   },
   "lpi_metrics": {
-    "relational_tension_density": 0.60,
+    "relational_tension_density": 0.6,
     "motivational_vector_saturation": 0.85,
-    "unresolved_conflict_ratio": 0.70,
+    "unresolved_conflict_ratio": 0.7,
     "temporal_horizon_immediacy": 0.85,
     "composite_lpi": 0.75,
     "classification": "Campaign-Ready"
@@ -118,16 +116,25 @@
       "temperature": 0.7,
       "calypso_zero_raw_stats": true,
       "prosodic_micro_pauses_enabled": true,
-      "agency_handoff_prompt": "Kaio catches the brass data-cylinder, his eyes already analyzing the soot marks on it. What does Kaio do?"
+      "agency_handoff_prompt": "Hector catches the brass data-cylinder, his eyes already analyzing the soot marks on it. What does Hector do?"
     }
   },
   "context_manifest": {
     "full_cards_loaded_count": 1,
-    "loaded_full_card_ids": ["enclave_03_silas"],
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
     "interlocutor_full_cards_loaded": 0
   },
   "context_manifest_path": "context/manifests/manifest_s002_t0005_enclave_03_silas.json",
   "total_prompt_tokens": 845,
   "target_path": "story/segments/seg_s002_t0005_enclave_03_silas.json",
-  "disallow_overwrite": false
+  "disallow_overwrite": false,
+  "steward_note": "deterministic-enclave-5section-v2",
+  "narrative_prose": "[DAWN_SHIFT at The_First_Forge] Silas monitored the resonance chamber, observing the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea while the sharp scent of ozone and hot copper mixed with the oppressive radiant heat of cooling slag. He quickly secured the resulting brass data-cylinder to DEFEND the delicate measurements and CONCEAL the worst stress fractures from the younger crew. He passed the heavy cylinder squarely to Hector to CONSUME the remaining slag heat, who bounded into the forge to collect the fresh diagnostics.",
+  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified",
+  "next_pov_target": "enclave_01_hector",
+  "showrunner_pacing_mode": "MERCER_IMMERSIVE",
+  "pre_roll_dc": 14,
+  "pre_roll_check_dc": 14
 }
