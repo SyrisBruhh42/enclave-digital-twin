@@ -1,0 +1,120 @@
+{
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "actors": [
+    "enclave_05_kaio",
+    "enclave_13_ryn"
+  ],
+  "CONF": "1.00",
+  "TIME": "2026-10-28T18:12:06Z",
+  "PROV": "sol006_t0023",
+  "VAL": "session_exceeded_25m_cut_loss_relaunch",
+  "narrative_prose": "Kaio's boots met the vibrating deck plates of the reactor bay, the air tasting of copper and ozone. A sharp, localized Magnetohydrodynamic Kelvin-Helmholtz shear ripped across the ferrofluid sea below, its jagged waves fighting to CONSUME the fragile containment fields. She moved quickly to CONCEAL the diagnostic tablet beneath her jacket, shielding it from the violent magnetic flare-ups, and scrambled toward the primary control node to DEFEND the delicate calibration from cascading failure. Ryn waited near the bulkhead, their face illuminated by the flickering warning lumens. Without missing a beat, Kaio shoved the data-drive directly into Ryn's outstretched hand, anchoring the transfer in the chaotic rhythm of the storm.",
+  "disallow_overwrite": false,
+  "campaign_metadata": {
+    "session_number": 6,
+    "colony_sol": 6,
+    "tick_id": 23,
+    "day_phase": "DUSK_CRAFT",
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": [
+      "Stabilize the ferrofluid sea",
+      "Complete the baton handoff"
+    ]
+  },
+  "active_location": {
+    "location_id": "reactor_bay_ferrofluid_sea",
+    "macro_silhouette": "A massive, shuddering cavern of steel and electromagnetic coils.",
+    "sensory_palette": {
+      "sight": "Flickering lumens and jagged arcs of magnetic energy.",
+      "sound": "Deafening roar of the ferrofluid sea churning.",
+      "smell": "Ozone and burnt insulation.",
+      "touch": "Vibrating deck plates and localized heat spikes.",
+      "taste_optional": "Copper and ozone on the back of the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Fragile containment fields",
+        "system_verb": "CONSUME",
+        "mechanic": "Threatens to consume unshielded equipment."
+      },
+      {
+        "feature_name": "Diagnostic tablet",
+        "system_verb": "CONCEAL",
+        "mechanic": "Must be concealed from magnetic flares."
+      },
+      {
+        "feature_name": "Primary control node",
+        "system_verb": "DEFEND",
+        "mechanic": "Must be defended from cascading failure."
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_shear",
+      "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz Shear - Specialist Friction",
+      "motivation_goal": "Destabilize the local magnetic field.",
+      "consistent_method": "Pulsing erratic magnetic waves.",
+      "immediate_complication": "Threatens to wipe the diagnostic tablet.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "Full breach of containment."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio must stabilize the node before the shear destroys it.",
+      "level_2_local": "The reactor bay needs constant recalibration due to the ferrofluid sea's volatility.",
+      "level_3_campaign_arc": "The colony's survival depends on mastering the exoplanet's extreme physics."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "Primary Operator"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "Data Courier"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      "Magnetic flare",
+      "Containment breach"
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.65,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_llm",
+      "model": "v1-judge",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Diagnostic tablet is wiped.",
+      "graduated_outcomes": {
+        "critical_success": "Perfect stabilization and data transfer.",
+        "success": "Node stabilized, data transferred.",
+        "mixed_success": "Node stabilized, but tablet takes minor damage.",
+        "failure": "Tablet wiped, node destabilizes further.",
+        "critical_failure": "Containment breach, extreme danger."
+      }
+    },
+    "master_narrator": {
+      "executor": "local_llm",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "enclave_13_ryn takes the baton."
+    }
+  },
+  "next_pov_target": "enclave_13_ryn"
+}

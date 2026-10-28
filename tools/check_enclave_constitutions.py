@@ -56,6 +56,7 @@ ALLOWED_WORKER_PREFIXES: tuple[str, ...] = (
     "story/feasts/",
     "digests/",
     "qa/",
+    "lore/proposed/",
 )
 
 PROTECTED_SHARED_PREFIXES: tuple[str, ...] = (
