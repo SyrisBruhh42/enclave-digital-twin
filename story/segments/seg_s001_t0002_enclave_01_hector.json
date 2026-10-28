@@ -8,9 +8,128 @@
   "active_pov_id": "enclave_01_hector",
   "next_pov_target": "enclave_05_kaio",
   "location": "Basalt_Spire_Ridge",
-  "science_vegetable": "Relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron",
-  "text": "[MIDDAY_EXPEDITION at Basalt_Spire_Ridge] Hector calibrated the hand-forged brass instrumentation against relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron, then passed the warm copper calibration baton directly into Kaio's hands.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "context_manifest_path": "context/manifests/manifest_s001_t0002_enclave_01_hector.json",
   "total_prompt_tokens": 796,
-  "target_path": "story/segments/seg_s001_t0002_enclave_01_hector.json"
+  "target_path": "story/segments/seg_s001_t0002_enclave_01_hector.json",
+  "disallow_overwrite": false,
+  "steward_note": "deterministic-enclave-5section-v2",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
+  "second_pass_repair_constraint": "enclave:13062390282804825256",
+  "f120_stall_timeout": "session_exceeded_25m_cut_loss_relaunch",
+  "prev_next_pov_target": "enclave_01_hector",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "narrative_prose": "Hector stood atop the Basalt_Spire_Ridge, squinting through the searing wind at the blazing amber corona of the magnetosphere overhead. The oscillating shriek of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea drowned out all other noise, leaving only the tang of ionized ozone and metallic grit on his tongue. He had to firmly DEFEND the grounding array from the mounting static pressure, then quickly ATTRACT the roaming arc-flashes to the brass capacitor banks before they could overload the system. As the final induction coil began to CONSUME the raw kinetic energy, he grinned into the gale and thrust the warm copper calibration baton directly into Kaio's waiting hands.",
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 1,
+    "tick_id": 2,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Secure the primary grounding array before the magnetic shear intensifies",
+      "mid_term_milestone": "Stabilize the enclave's energy grid against the chaotic magnetosphere",
+      "campaign_arc_climax": "Master the raw kinetic forces of the exoplanet sanctuary"
+    }
+  },
+  "active_location": {
+    "location_id": "Basalt_Spire_Ridge",
+    "macro_silhouette": "The Basalt Spire Ridge loomed as a jagged precipice of darkened rock, fully exposed to the violent atmospheric forces above. Arcing currents of raw lightning danced across the peaks, illuminating the sprawling ferrofluid sea below. It was a perilous vantage point where raw kinetic potential constantly threatened to overwhelm any fragile instrumentation.",
+    "sensory_palette": {
+      "sight_and_color": "Blazing amber corona and arcing blue lightning",
+      "sound": "Oscillating shriek of the magnetic shear",
+      "smell": "Tang of ionized ozone",
+      "tactile_temperature": "Searing wind across exposed skin",
+      "taste_optional": "Metallic grit"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Primary Grounding Array",
+        "affordance_description": "A robust brass apparatus designed to channel and dissipate raw atmospheric electricity.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Brass Capacitor Banks",
+        "affordance_description": "Storage units that draw in excess arc-flashes before they can cause a systemic blowout.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Kinetic Induction Coils",
+        "affordance_description": "Heavy copper coils that absorb the ambient mechanical energy of the storm.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "roaming_arc_flashes",
+      "name_and_role": "Roaming Arc-Flashes (Environmental Hazard)",
+      "motivation_goal": "Discharge raw kinetic energy into any conductive surface",
+      "consistent_method": "Jumping sporadically between the jagged basalt peaks and exposed metal",
+      "immediate_complication": "Threatens to overload the delicate hand-forged brass instrumentation",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "Will eventually cause a cascading blowout of the entire localized power grid"
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The induction coils must be calibrated before the ferrofluid sea's magnetic shear peaks",
+      "level_2_local": "If the ridge array fails, The First Forge will lose its primary energy damper",
+      "level_3_campaign_arc": "Mastering these localized storms is key to proving the Enclave's long-term survival"
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      7,
+      12,
+      18,
+      4,
+      15
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.6,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_inference",
+      "model": "judge_v1",
+      "temperature": 0.1,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Hector will take a grazing arc-flash hit, singing his gear and delaying the calibration data transfer to Kaio.",
+      "graduated_outcomes": {
+        "nat_1_False_intuition": "You incorrectly ground the array, causing a painful backfeed shock and completely scrambling the current data set.",
+        "below_dc_complicated_fail_forward": "You secure the data, but a sudden shear wave knocks you off balance, severely singing your favorite insulated boots.",
+        "meets_dc_clean_success": "You expertly ride the kinetic wave, cleanly capturing the telemetry and executing a flawless baton handoff.",
+        "dc_plus_5_or_20_extended_lore": "You not only capture the telemetry but perfectly align the capacitor banks, capturing a massive energy surplus for the Enclave."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio catches the warm copper baton just as another massive arc-flash illuminates the ridge. What does Kaio do?"
+    }
+  }
 }
