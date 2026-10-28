@@ -1,0 +1,160 @@
+{
+  "event_id": "evt_s007_t0028_reflection",
+  "tick_id": 28,
+  "colony_sol": 7,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-10-28T23:00:00Z",
+  "base_snapshot_tick": 28,
+  "event_type": "NIGHTLY_REFLECTION",
+  "location": "The_Hub_Hearth",
+  "actors": [
+    "enclave_13_ryn"
+  ],
+  "summary": "Ryn fiercely defends her copper kettles while enduring the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, finding solace before handing off to Silas.",
+  "importance": 8.0,
+  "novelty_score": 0.7,
+  "lethality": 0,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_13_ryn -> Handoff=enclave_03_silas.",
+  "state_deltas": {
+    "stress_delta": -0.15
+  },
+  "relationship_deltas": [],
+  "evidence_refs": [],
+  "cited_event_ids": [
+    "evt_s007_t0025_morning_intent"
+  ],
+  "disallow_overwrite": false,
+  "active_pov_id": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
+  "second_pass_repair_constraint": "Showrunner contract violation (Mercer 3-Feature Rule): active_location requires exactly 3 interactive_features.",
+  "changeset_gate_rejection": "Showrunner contract violation (Mercer 3-Feature Rule): active_location requires exactly 3 interactive_features.",
+  "enclave-digital-twin:NIGHTLY_EVIDENCE_CITED_REFLECTIONS": "",
+  "enclave:3800217491768740553": "",
+  "enclave:10785334878835238916": "",
+  "VAL": "",
+  "CONF": "1.00",
+  "TIME": "2026-10-28T23:12:01Z",
+  "PROV": "sol007_t0028",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
+    "interlocutor_full_cards_loaded": 0,
+    "active_pov_id": "enclave_13_ryn",
+    "total_tokens": 1500,
+    "max_tokens": 3500
+  },
+  "narrative_prose": "The dense warmth of the hearth presses outward against the chilling draft of the valley floor, the copper kettles glowing a deep umber in the low light. Plumes of spiced steam catch the erratic flickers of the ferrofluid manifold's ambient glow. It is a tight, secure sanctuary of boiling stock and scrubbed metal, anchoring the chaotic sprawl of the settlement. Ryn raps her heavy brass ladle on the butcher block, CONCEALING the vital reagents within the massive copper vat. She steps forward to DEFEND the structural exhaust vent from the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. Carefully, she ensures the iron-wheat starter crock will CONSUME the necessary thermal energy without failing.",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 7,
+      "colony_sol": 7,
+      "tick_id": 28,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Maintain thermodynamic equilibrium during the feast.",
+        "mid_term_milestone": "Stabilize caloric output under environmental strain.",
+        "campaign_arc_climax": "Complete the Hearth and Metabolic Engine."
+      }
+    },
+    "active_location": {
+      "location_id": "The_Hub_Hearth",
+      "macro_silhouette": "The dense warmth of the hearth presses outward against the chilling draft of the valley floor, the copper kettles glowing a deep umber in the low light. Plumes of spiced steam catch the erratic flickers of the ferrofluid manifold's ambient glow. It is a tight, secure sanctuary of boiling stock and scrubbed metal, anchoring the chaotic sprawl of the settlement.",
+      "sensory_palette": {
+        "sight_and_color": "Deep umber, polished copper reflections, warm amber glow",
+        "sound": "Low simmer of heavy stockpots, rhythmic scrape of wire brushes",
+        "smell": "Rich iron-wheat crusts and sharp salt-vinegar polish",
+        "tactile_temperature": "Oppressive radiant heat cutting through harsh structural cold",
+        "taste_optional": "Lingering roasted myco-protein and mineral tang"
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Thirty-Gallon Steam-Jacketed Kettle",
+          "affordance_description": "Massive copper vat retaining immense latent heat, capable of sheltering vital reagents.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Ferrofluid Manifold Tap",
+          "affordance_description": "A structural exhaust vent channeling excess thermal energy from the sea.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 18
+        },
+        {
+          "feature_name": "Iron-Wheat Starter Crock",
+          "affordance_description": "A fragile biological culture demanding constant thermal tending.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 12
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "toy_kelvin_helmholtz_shear",
+        "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz Shear",
+        "motivation_goal": "To induce structural shearing along rigid architectures.",
+        "consistent_method": "Pulsing erratic thermal spikes through the Hub's base plating.",
+        "immediate_complication": "Threatens to boil over the delicate stock if temperatures fluctuate.",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "True"
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Ryn must protect the evening's caloric reserves from the shear.",
+        "level_2_local": "The shear forces from the ferrofluid sea are destabilizing the cooking apparatus.",
+        "level_3_campaign_arc": "Mastering thermodynamic equilibrium is essential for the Enclave's survival."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 5,
+      "prerolled_hazard_queue": [
+        14,
+        8,
+        19,
+        4,
+        12
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.4,
+      "motivational_vector_saturation": 0.7,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.8,
+      "composite_lpi": 0.6,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "Enclave_Core",
+        "model": "Tactical_Arbiter_v1",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "If the thermal buffer fails, the week's myco-protein harvest is lost to carbonization.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Ryn misreads the pressure gauge entirely, accelerating the boil.",
+          "below_dc_complicated_fail_forward": "The stock is saved, but the kettle's pressure valve warps, requiring mundane maintenance.",
+          "meets_dc_clean_success": "Ryn perfectly syncs the rolling boil with the environmental shear waves.",
+          "dc_plus_5_or_20_extended_lore": "Ryn discovers a resonant frequency in the copper that entirely dampens the shear."
+        }
+      },
+      "master_narrator": {
+        "executor": "Enclave_Narrator",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "With the galley finally quiet, Ryn wipes her brow and considers Silas's quiet observation."
+      }
+    }
+  }
+}
