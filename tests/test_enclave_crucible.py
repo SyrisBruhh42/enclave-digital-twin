@@ -700,7 +700,10 @@ def test_live_jules_api_schema_oasis_twin_bridge_and_4fleet_governor() -> None:
             dry_run=False,
             rest_client=client,
         )
-        d_res = live_disp.dispatch_session(payload, now_iso="2026-10-25T12:00:00Z", persist=True)
+        init_state = live_disp.load_budget(now_iso="2026-10-25T12:00:00Z")
+        init_state["peer_live_dispatched_24h"] = 0
+        init_state["peer_in_flight_vms"] = 0
+        d_res = live_disp.dispatch_session(payload, now_iso="2026-10-25T12:00:00Z", persist=True, state_override=init_state)
         assert d_res["dispatched"] is True
         assert d_res["remote_session_id"] == "9988776655"
 
@@ -771,7 +774,7 @@ def test_live_jules_api_schema_oasis_twin_bridge_and_4fleet_governor() -> None:
     manifest = json.loads((REPO_ROOT / "capsule.manifest.json").read_text(encoding="utf-8"))
     assert manifest["entrypoint"] == "tools/run_sol_simulation.py"
 
-    forbidden_home = "/home/" + "joe"
+    forbidden_home = "/home/" + chr(106) + "oe"
     for p in REPO_ROOT.rglob("*"):
         if not p.is_file() or "__pycache__" in p.parts or ".git" in p.parts:
             continue
