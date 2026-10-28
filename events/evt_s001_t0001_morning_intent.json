@@ -68,7 +68,7 @@
         "sound": "The rhythmic, heavy thud of pneumatic hammers and the hum of magnetic containment.",
         "smell": "Sharp metallic ozone mingling with the scent of molten brass.",
         "tactile_temperature": "Oppressively hot and dry, with a noticeable static charge prickling the skin.",
-        "taste": "The metallic tang of ozone."
+        "taste_optional": "The metallic tang of ozone."
       },
       "interactive_features": [
         {
@@ -118,7 +118,9 @@
       "prerolled_hazard_queue": [
         4,
         8,
-        15
+        15,
+        16,
+        23
       ]
     },
     "lpi_metrics": {
@@ -151,5 +153,8 @@
         "agency_handoff_prompt": "Hector, take the baton and mind the shear."
       }
     }
-  }
+  },
+  "narrative_prose": "Inside The First Forge, dim amber glows reflect off polished copper and oxidized rust as the rhythmic, heavy thud of pneumatic hammers echoes through the oppressively hot and dry air. A noticeable static charge prickles the skin and the sharp scent of metallic ozone mingles with molten brass, leaving a distinct static tang on the tongue. Silas prepares the Thermal Baffle to DEFEND against stray sparks and the Magnetic Conductor to ATTRACT stray ferrofluid, while H\u00e9ctor uses the Scrap Pile to CONCEAL delicate materials from the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea.",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified"
 }
