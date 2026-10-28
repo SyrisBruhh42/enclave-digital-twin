@@ -1,16 +1,136 @@
 {
+  "active_pov_id": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "narrative_prose": "The interior of the First Forge smelled of ozone and hot brass, a metallic tang that coated the tongue like an old battery, while the dry heat from the grate floors warmed the hand-forged brass instrumentation Silas calibrated against the low thrumming hum of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. Dust motes danced in the pale blue light filtering down onto the heavy blast shielding standing ready to DEFEND, the isotope cluster emitting harmonic frequencies to ATTRACT sympathetic ore, and the deep slag pit designed to CONSUME any volatile excess. Silas passed the warm copper calibration baton directly into Hector's hands, anchoring the unstable resonance field before it could breach containment.",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 1,
+      "tick_id": 1,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Secure the primary resonance capacitor.",
+        "mid_term_milestone": "Map the ferrofluid sea anomalous zones.",
+        "campaign_arc_climax": "Complete the Grand Synthesizer array."
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "The interior of the First Forge smelled of ozone and hot brass, a metallic tang that coated the tongue like an old battery, while the dry heat from the grate floors warmed the hand-forged brass instrumentation Silas calibrated against the low thrumming hum of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. Dust motes danced in the pale blue light filtering down onto the heavy blast shielding standing ready to DEFEND, the isotope cluster emitting harmonic frequencies to ATTRACT sympathetic ore, and the deep slag pit designed to CONSUME any volatile excess. Silas passed the warm copper calibration baton directly into Hector's hands, anchoring the unstable resonance field before it could breach containment.",
+      "sensory_palette": {
+        "sight_and_color": "Dust motes danced in the pale blue light filtering down from the clerestory, revealing the oxidized iron framework.",
+        "sound": "The low thrumming hum of the shear vibrating upward through the grate floors.",
+        "smell": "The interior smelled of ozone and hot brass.",
+        "tactile_temperature": "A dry, vibrating warmth radiating from the grate floors.",
+        "taste_optional": "A metallic tang that coated the tongue like an old battery."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Heavy Blast Shielding",
+          "affordance_description": "Can be manually deployed to seal the chamber.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Isotope Cluster",
+          "affordance_description": "Emits a harmonic frequency to pull in raw ore.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 12
+        },
+        {
+          "feature_name": "Slag Pit",
+          "affordance_description": "A deep trench designed to harmlessly burn off excess sympathetic charge.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 15
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_anomaly_01",
+        "name_and_role": "Ferrofluid Surge",
+        "motivation_goal": "Breach the lower containment floor.",
+        "consistent_method": "Rises via harmonic resonance.",
+        "immediate_complication": "The grates begin to vibrate violently.",
+        "pressure_index": 6,
+        "uninterrupted_escalation": "Will flood the lower deck if not stabilized."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Silas must recalibrate the shear containment field.",
+        "level_2_local": "The First Forge needs stable resonance to process ore.",
+        "level_3_campaign_arc": "Mastering the ferrofluid sea is essential for the Enclave's survival."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "LEADER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.5,
+      "motivational_vector_saturation": 0.6,
+      "unresolved_conflict_ratio": 0.4,
+      "temporal_horizon_immediacy": 0.7,
+      "composite_lpi": 0.55,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_llm",
+        "model": "judge_v1",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The containment grid shorts out, causing temporary blindness.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Total system failure.",
+          "below_dc_complicated_fail_forward": "Containment holds but sparks cause minor burns.",
+          "meets_dc_clean_success": "The field is stabilized smoothly.",
+          "dc_plus_5_or_20_extended_lore": "Stabilization reveals a new harmonic pattern in the fluid."
+        }
+      },
+      "master_narrator": {
+        "executor": "narrator_v1",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Silas turns toward the door as Hector enters."
+      }
+    }
+  },
+  "second_pass_repair_constraint": "true",
+  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified",
   "segment_id": "seg_s001_t0001_enclave_03_silas",
   "segment_index": 1,
   "tick_id": 1,
   "colony_sol": 1,
   "day_phase": "DAWN_SHIFT",
   "base_snapshot_tick": 1,
-  "active_pov_id": "enclave_03_silas",
-  "next_pov_target": "enclave_01_hector",
   "location": "The_First_Forge",
-  "science_vegetable": "Capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers",
-  "text": "[DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands.",
   "context_manifest_path": "context/manifests/manifest_s001_t0001_enclave_03_silas.json",
   "total_prompt_tokens": 709,
-  "target_path": "story/segments/seg_s001_t0001_enclave_03_silas.json"
+  "target_path": "story/segments/seg_s001_t0001_enclave_03_silas.json",
+  "disallow_overwrite": false
 }
