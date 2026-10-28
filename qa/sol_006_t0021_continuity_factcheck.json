@@ -1,0 +1,126 @@
+{
+    "disallow_overwrite": false,
+    "event_type": "POV_SCENE_SEGMENT",
+    "showrunner_ledger": {
+        "campaign_metadata": {
+            "session_number": 1,
+            "colony_sol": 6,
+            "tick_id": 21,
+            "pacing_mode": "MERCER_IMMERSIVE",
+            "consequential_fights_since_short_rest": 0,
+            "horizon_goals": {
+                "immediate_session_goal": "Resolve the tension between Silas and Hector at The First Forge.",
+                "mid_term_milestone": "Complete the flux-core shielding.",
+                "campaign_arc_climax": "The Stormbreaker sets sail."
+            }
+        },
+        "active_location": {
+            "location_id": "loc_001_first_forge",
+            "macro_silhouette": "The interior of The First Forge pulses with blinding white light as Silas wrestles the bellows hinge. Sparks hiss in the heavy, ozone-scented air.",
+            "sensory_palette": {
+                "sight_and_color": "blinding white sparks and red glowing iron",
+                "sound": "deafening clanging and hissing",
+                "smell": "acrid ozone and sweat",
+                "tactile_temperature": "sweltering radiant heat",
+                "taste_optional": "static tang of ionized air"
+            },
+            "interactive_features": [
+                {
+                    "feature_name": "Magnetohydrodynamic Shield",
+                    "affordance_description": "Silas can brace the prototype shield against the incoming shear.",
+                    "system_verb": "DEFEND",
+                    "associated_check_dc": 14
+                },
+                {
+                    "feature_name": "Ferrofluid Surge",
+                    "affordance_description": "Use the magnetic tether to pull Hector closer.",
+                    "system_verb": "ATTRACT",
+                    "associated_check_dc": 12
+                },
+                {
+                    "feature_name": "Ventilation Shaft",
+                    "affordance_description": "Hide the delicate micrometer from the heat.",
+                    "system_verb": "CONCEAL",
+                    "associated_check_dc": 10
+                }
+            ]
+        },
+        "reactive_toys": [
+            {
+                "entity_id": "ferrofluid_sea_surge",
+                "name_and_role": "Ferrofluid Sea",
+                "motivation_goal": "To breach the Forge walls.",
+                "consistent_method": "Pounding against the reinforced glass.",
+                "immediate_complication": "The glass is cracking.",
+                "pressure_index": 8,
+                "uninterrupted_escalation": "The glass will shatter in three rounds."
+            }
+        ],
+        "encounter_matrix": {
+            "three_levels_of_why": {
+                "level_1_immediate": "Silas needs Hector's intuitive help to fix the bellows.",
+                "level_2_local": "The First Forge needs to be operational to smelt the iron husks.",
+                "level_3_campaign_arc": "The colony's survival depends on trusting each other's expertise."
+            },
+            "active_specialist_roles": [],
+            "strain_accumulated_upward": 0,
+            "prerolled_hazard_queue": [
+                5,
+                12,
+                18,
+                2,
+                9
+            ]
+        },
+        "lpi_metrics": {
+            "relational_tension_density": 0.8,
+            "motivational_vector_saturation": 0.7,
+            "unresolved_conflict_ratio": 0.6,
+            "temporal_horizon_immediacy": 0.9,
+            "composite_lpi": 0.75,
+            "classification": "Campaign-Ready"
+        },
+        "dual_agent_contract": {
+            "judge_tactician": {
+                "provider": "local_dm",
+                "model": "gpt-4",
+                "temperature": 0.7,
+                "explicit_pre_roll_dc": 14,
+                "failure_stakes_declared": "If Silas fails, the flux-core shielding will be ruined.",
+                "graduated_outcomes": {
+                    "nat_1_false_intuition": "Silas completely misjudges the shear, ruining the shielding.",
+                    "below_dc_complicated_fail_forward": "The shielding is saved but Silas burns his hand severely.",
+                    "meets_dc_clean_success": "Silas successfully braces the shield.",
+                    "dc_plus_5_or_20_extended_lore": "Silas not only saves the shield but discovers a new magnetic alignment."
+                }
+            },
+            "master_narrator": {
+                "executor": "local_narrator",
+                "temperature": 0.8,
+                "calypso_zero_raw_stats": true,
+                "prosodic_micro_pauses_enabled": true,
+                "agency_handoff_prompt": "Hector, the baton is yours. What do you do?"
+            }
+        }
+    },
+    "narrative_prose": "Silas tightens his grip on the tongs, feeling the sweltering radiant heat pulse from the crucible. Outside, the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea roars, a deafening clanging that rattles his teeth. He must DEFEND the fragile micrometer from the sudden ATTRACT of the magnetic surge, or else he will have to CONCEAL his failure from Hector. Silas turns and firmly places the calibration baton into Hector's outstretched hand, tasting the static tang of ionized air.",
+    "context_manifest": {
+        "full_cards_loaded_count": 1,
+        "loaded_full_card_ids": [
+            "enclave_03_silas"
+        ],
+        "interlocutor_full_cards_loaded": 0,
+        "total_tokens": 1500,
+        "max_tokens": 3500
+    },
+    "active_pov_id": "enclave_03_silas",
+    "next_pov_target": "enclave_01_hector",
+    "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+    "steward_note": "deterministic-enclave-5section-v2",
+    "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+    "second_pass_repair_constraint": "enclave:4215071776476760920",
+    "changeset_gate_rejection": "Law L02 violation: target_path 'lore/proposed/lore_s005_t0018_expedition_discovery.json' outside ('events/', 'story/segments/', 'story/feasts/', 'digests/', 'qa/')",
+    "CONF": "1.00",
+    "TIME": "2026-10-28T16:12:08Z",
+    "PROV": "sol006_t0021"
+}
