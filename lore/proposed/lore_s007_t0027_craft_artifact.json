@@ -1,0 +1,130 @@
+{
+  "disallow_overwrite": false,
+  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
+  "VAL": "Showrunner contract violation: reactive_toys[0] missing 'uninterrupted_escalation'.",
+  "CONF": "1.00",
+  "TIME": "2026-10-28T22:12:06Z",
+  "PROV": "sol007_t0027",
+  "ENT": "enclave:3800217491768740553",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "campaign_metadata": {
+    "session_number": 7,
+    "colony_sol": 7,
+    "tick_id": 27,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Crafting the artifact",
+      "mid_term_milestone": "Survive the spore storm",
+      "campaign_arc_climax": "Complete the Sanctuary"
+    }
+  },
+  "day_phase": "DUSK_CRAFT",
+  "active_location": {
+    "location_id": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+    "macro_silhouette": "The ferrofluid sea ripples with kinetic energy under the twin suns, reflecting a polarized light show across the basalt cliffs. Magnetic shears create standing waves that hum with sub-audible intensity.",
+    "sensory_palette": {
+      "sight_and_color": "Iridescent streaks of cobalt and amber flashing across the dark fluid.",
+      "sound": "A deep, resonant thrumming punctuated by sharp, metallic cracks.",
+      "smell": "Ozone and oxidized copper.",
+      "tactile_temperature": "A prickling static charge against the skin, warm and persistent.",
+      "taste_optional": "A sharp, metallic tang on the back of the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Ferrofluid Eddies",
+        "affordance_description": "Swirling pockets of magnetized liquid that can pull in or repel metallic objects.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Basalt Cover",
+        "affordance_description": "Jagged rock formations providing shelter from the magnetic shear.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Spore Pockets",
+        "affordance_description": "Bioluminescent fungal growths that mask heat and magnetic signatures.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_shear",
+      "name_and_role": "The Kelvin-Helmholtz Shear",
+      "motivation_goal": "Disrupt stability and equalize magnetic pressure.",
+      "consistent_method": "Generating sudden, localized surges of ferrofluid.",
+      "immediate_complication": "Threatens to pull unsecured equipment into the sea.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "True"
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The magnetic shear is disrupting the crafting process.",
+      "level_2_local": "The ferrofluid sea is unusually active due to the twin suns' alignment.",
+      "level_3_campaign_arc": "The planet's core is waking up, increasing environmental hazards."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      12,
+      18,
+      5,
+      20,
+      8
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.7,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Losing the crucial crafting materials to the ferrofluid sea.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio completely misreads the magnetic currents, pulling Ryn directly into a ferrofluid surge.",
+        "below_dc_complicated_fail_forward": "They secure the materials, but Kaio's sextant is temporarily magnetized, rendering it useless.",
+        "meets_dc_clean_success": "Kaio navigates the shear perfectly, handing the stabilized materials to Ryn.",
+        "dc_plus_5_or_20_extended_lore": "Not only do they secure the materials, but Kaio discovers a new stable frequency in the shear, mapping a safe path across the sea."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "With a breathless laugh, Kaio tossed the humming, brass-bound core across the arc of the ferrofluid wave, shouting over the crackle of ozone for Ryn to catch it."
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ]
+  },
+  "prev_next_pov_target": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn"
+}
