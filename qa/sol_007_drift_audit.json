@@ -1,0 +1,150 @@
+{
+  "entity_id": "enclave_13_ryn",
+  "audit_type": "psychometric_drift",
+  "colony_sol": 7,
+  "tick_id": 28,
+  "event_type": "INCHARACTER_PSYCHOMETRIC_DRIFT_AUDITS",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "day_phase": "THE_FEAST",
+  "narrative_prose": "Ryn watches the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea cast flickering orange shadows across the galley, her skin prickling in the uncomfortably hot air as the bubbling stew fills the room with the smell of rich spices and the taste of static tang on her tongue while the heavy copper ladles rattle. She must DEFEND the delicate metabolic equilibrium, choosing to ATTRACT the stray magnetic surges away from the kettles so the filtration sink can CONSUME the excess energy without a total thermal collapse. Confident in the adjustments, she forcefully presses the glowing command baton into Silas's weathered hands, directing him to monitor the pressure valves.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "disallow_overwrite": false,
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
+    "interlocutor_full_cards_loaded": 0,
+    "total_tokens": 1500,
+    "max_tokens": 3500,
+    "active_pov_id": "enclave_13_ryn"
+  },
+  "ENT": "enclave:10785334878835238916",
+  "second_pass_repair_constraint": "@ENT[enclave:3800217491768740553]",
+  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
+  "changeset_gate_rejection": "Showrunner contract violation (Mercer 3-Feature Rule): active_location requires exactly 3 interactive_features.",
+  "VAL": "@ENT[enclave:10785334878835238916]",
+  "CONF": "1.00",
+  "TIME": "2026-10-28T23:12:03Z",
+  "PROV": "sol007_t0028",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 7,
+      "tick_id": 28,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "audit drift",
+        "mid_term_milestone": "survive",
+        "campaign_arc_climax": "win"
+      }
+    },
+    "active_location": {
+      "location_id": "the_hearth",
+      "macro_silhouette": "The Hearth is a warm, bustling galley filled with steam and the clatter of heavy pots. The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea casts flickering shadows on the copper walls.",
+      "sensory_palette": {
+        "sight_and_color": "warm copper and flickering orange firelight",
+        "sound": "bubbling stew and rattling ladles",
+        "smell": "rich spices and roasted root vegetables",
+        "tactile_temperature": "comfortably hot and steamy",
+        "taste_optional": "savory broth with a hint of static tang"
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Steam-Jacketed Kettle",
+          "affordance_description": "Can be used to maintain precise thermal equilibrium.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Magnetic Induction Vent",
+          "affordance_description": "Can draw excess energy from the anomalous weather.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Ferrofluid Filtration Sink",
+          "affordance_description": "Can consume contaminated water to purify it.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_draft",
+        "name_and_role": "Ferrofluid Draft",
+        "motivation_goal": "To cool the hearth's precise thermodynamic setup.",
+        "consistent_method": "Blowing sudden gusts of freezing magnetic wind through the vents.",
+        "immediate_complication": "It threatens to ruin the evening feast by dropping the temperature too rapidly.",
+        "pressure_index": 7,
+        "uninterrupted_escalation": true
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea is wreaking havoc on the galley's thermal stability.",
+        "level_2_local": "Ryn must maintain the metabolic balance of the colony during The Feast.",
+        "level_3_campaign_arc": "The colony's survival depends on mastering the planet's magnetosphere to secure sustainable resources."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "LEADER"
+        }
+      ],
+      "strain_accumulated_upward": 0,
+      "prerolled_hazard_queue": [
+        3,
+        7,
+        12,
+        18,
+        20
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.6,
+      "motivational_vector_saturation": 0.7,
+      "unresolved_conflict_ratio": 0.8,
+      "temporal_horizon_immediacy": 0.9,
+      "composite_lpi": 0.75,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_ai",
+        "model": "ollama",
+        "temperature": 0.7,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "Failure means the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea freezes the feast, demoralizing the colony.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Ryn miscalculates the thermal mass, ruining the entire meal.",
+          "below_dc_complicated_fail_forward": "The food is saved but barely edible, causing minor stress across the colony.",
+          "meets_dc_clean_success": "Ryn perfectly balances the temperature, serving a flawless feast.",
+          "dc_plus_5_or_20_extended_lore": "Ryn not only serves a perfect feast but discovers a new culinary use for the magnetic flora."
+        }
+      },
+      "master_narrator": {
+        "executor": "jules_standby",
+        "temperature": 0.6,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Silas takes the baton and looks at the hissing pressure valves. What does Silas do?"
+      }
+    }
+  },
+  "drift_audit": {
+    "max_abs_z": 1.5,
+    "axis_z_scores": {
+      "x": 1.5
+    },
+    "drift_alert": false,
+    "corrective_authors_note": "Ryn is maintaining her core traits effectively during The Feast.",
+    "re_anchor_ticks": 0
+  }
+}
