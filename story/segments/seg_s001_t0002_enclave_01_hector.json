@@ -8,9 +8,130 @@
   "active_pov_id": "enclave_01_hector",
   "next_pov_target": "enclave_05_kaio",
   "location": "Basalt_Spire_Ridge",
-  "science_vegetable": "Relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron",
-  "text": "[MIDDAY_EXPEDITION at Basalt_Spire_Ridge] Hector calibrated the hand-forged brass instrumentation against relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron, then passed the warm copper calibration baton directly into Kaio's hands.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "context_manifest_path": "context/manifests/manifest_s001_t0002_enclave_01_hector.json",
   "total_prompt_tokens": 796,
-  "target_path": "story/segments/seg_s001_t0002_enclave_01_hector.json"
+  "target_path": "story/segments/seg_s001_t0002_enclave_01_hector.json",
+  "prev_next_pov_target": "enclave_01_hector",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "disallow_overwrite": false,
+  "narrative_prose": "[MIDDAY_EXPEDITION at Basalt_Spire_Ridge] Hector stood at the precipice of the jagged basalt ridge, watching the dark, swirling expanse of the ferrofluid sea below as the sky above shifted hues in the harsh midday light. He could feel the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea pulling at the very iron in his blood, the intense magnetic friction making the air hum with a static tang on his tongue and his skin prickle with the oppressive heat. The deafening roar of the clashing magnetic waves masked the grinding of the brass and copper calibration baton in his hands, which he clenched tight against the violent wind. Spotting Kaio scaling the treacherous ridge to collect the readings, he DEFENDed his precarious footing on the slick rock, preparing to make the physical baton handoff.",
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 1,
+    "tick_id": 2,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Maintain footing on the basalt ridge during the magnetic storm",
+      "mid_term_milestone": "Secure the structural integrity of the calibration spire",
+      "campaign_arc_climax": "Complete the Stormbreaker grand project"
+    }
+  },
+  "active_location": {
+    "location_id": "Basalt_Spire_Ridge",
+    "macro_silhouette": "The jagged basalt spire pierced the violent, swirling sky above the churning ferrofluid sea. Its sharp, treacherous ridges provided almost no cover against the deafening and blinding magnetic storms. The sheer drop below was a chaotic expanse of dark, metallic waves clashing against the ancient rock.",
+    "sensory_palette": {
+      "sight_and_color": "harsh midday light shifting hues above a dark, swirling expanse of the ferrofluid sea",
+      "sound": "deafening roar of clashing magnetic waves and humming magnetic friction",
+      "smell": "acrid scent of burning ozone and heated copper",
+      "tactile_temperature": "oppressive heat and skin-prickling static friction",
+      "taste_optional": "static tang on his tongue"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Slick Basalt Footholds",
+        "affordance_description": "Treacherous footing that must be maintained against the violent wind.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Wave Surge",
+        "affordance_description": "A rising wave of magnetic liquid that can be drawn toward metallic bait.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Copper Grounding Spire",
+        "affordance_description": "A tall metal rod that can absorb incoming lightning strikes.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "magnetic_wind_shear",
+      "name_and_role": "Violent Magnetic Wind Shear",
+      "motivation_goal": "Dislodge Hector from the ridge and scatter the calibration data",
+      "consistent_method": "Applying sudden, intense bursts of magnetic force and heat",
+      "immediate_complication": "The wind is making it nearly impossible to maintain a grip on the baton",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "Will eventually tear the baton from Hector's hands entirely"
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Hector must keep his footing on the slick ridge during the baton handoff.",
+      "level_2_local": "Kaio needs the calibration data to navigate the treacherous wilds below.",
+      "level_3_campaign_arc": "The Enclave relies on accurate magnetic readings to survive the impending storms."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "DEFENDER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      9,
+      17,
+      6,
+      12
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.65,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.75,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.77,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_inference",
+      "model": "judge_v1",
+      "temperature": 0.1,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Hector will slip on the slick basalt, dropping the calibration baton and severely delaying the handoff.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "You misread the wind shear entirely, getting blasted off your feet and watching the baton plummet into the sea.",
+        "below_dc_complicated_fail_forward": "You maintain your grip on the baton, but twist your ankle on the slick rock, slowing the handoff process significantly.",
+        "meets_dc_clean_success": "You brace yourself perfectly against the magnetic gale, holding the baton steady as Kaio reaches you.",
+        "dc_plus_5_or_20_extended_lore": "You ride the magnetic shear intuitively, not only securing the baton but using the wind's momentum to propel Kaio forward on his path."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio reaches out a hand to grab the baton as the wind howls around you both. What does Kaio do?"
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified"
 }
