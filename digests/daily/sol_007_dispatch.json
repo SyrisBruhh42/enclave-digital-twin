@@ -1,0 +1,286 @@
+{
+  "dispatch_id": "dispatch_sol_007",
+  "colony_sol": 7,
+  "tick_id": 28,
+  "file_operations": [
+    {
+      "op": "A",
+      "path": "digests/daily/sol_007_dispatch.json"
+    }
+  ],
+  "target_path": "digests/daily/sol_007_dispatch.json",
+  "disallow_overwrite": false,
+  "headline": "SOL 7 EVENING DISPATCH: Dealing with the Shear",
+  "anchor_intro": "[VEX]: Good evening Enclave! [DORIAN]: Another sol, another dispatch.",
+  "lead_stories": [
+    {
+      "story_id": "story_007_01",
+      "pattern_type": "MAGNETOSPHERIC_CRISIS",
+      "story_title": "Magnetohydrodynamic Shear Handled Successfully",
+      "narrative_summary": "Ryn observed the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. She worked tirelessly to DEFEND the sensitive equipment from the resulting magnetic spikes. She then tried to ATTRACT the attention of the others before the anomaly could CONSUME their hard work. She successfully handed the baton to Silas.",
+      "cited_event_ids": [
+        "evt_s007_t0025_morning_intent",
+        "evt_s007_t0025_world_consequence",
+        "evt_s007_t0026_expedition_consequence"
+      ],
+      "actors": [
+        "enclave_03_silas",
+        "enclave_01_hector",
+        "enclave_05_kaio"
+      ],
+      "location": "The_First_Forge",
+      "locations": [
+        "The_First_Forge",
+        "Basalt_Spire_Ridge"
+      ],
+      "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+      "salience_score": 85.0,
+      "read_full_scene_link": "#scene-evt_s007_t0026_expedition_consequence"
+    }
+  ],
+  "developing_stories": [],
+  "block_digests": [],
+  "magnetosphere_and_weather_report": {},
+  "sibling_grid_blind_spot_column": {},
+  "quote_of_the_sol": "",
+  "read_full_scene_links": [],
+  "broadcast_markdown": "",
+  "title": "SOL 7 EVENING DISPATCH",
+  "newscaster_anchors": [
+    "enclave_14_vex",
+    "enclave_15_dorian"
+  ],
+  "four_block_digests": [],
+  "gossip_and_shadow_column": {},
+  "gossip_items": [],
+  "exoplanet_weather_almanac": {},
+  "weather_report": {},
+  "covered_day_phases": [
+    "DAWN_SHIFT",
+    "MIDDAY_EXPEDITION",
+    "DUSK_CRAFT",
+    "THE_FEAST"
+  ],
+  "all_cited_event_ids": [
+    "evt_s007_t0025_morning_intent",
+    "evt_s007_t0025_world_consequence",
+    "evt_s007_t0026_expedition_consequence"
+  ],
+  "broadcast_script": "The heavy brass condenser hummed. Silas tightened the seal.",
+  "base_snapshot_tick": 27,
+  "known_events": {
+    "evt_s007_t0025_morning_intent": {
+      "event_id": "evt_s007_t0025_morning_intent",
+      "actors": [
+        "enclave_03_silas",
+        "enclave_01_hector"
+      ],
+      "location": "The_First_Forge",
+      "day_phase": "DAWN_SHIFT",
+      "colony_sol": 7
+    },
+    "evt_s007_t0025_world_consequence": {
+      "event_id": "evt_s007_t0025_world_consequence",
+      "actors": [
+        "enclave_03_silas",
+        "enclave_01_hector"
+      ],
+      "location": "The_First_Forge",
+      "day_phase": "DAWN_SHIFT",
+      "colony_sol": 7
+    },
+    "evt_s007_t0026_expedition_consequence": {
+      "event_id": "evt_s007_t0026_expedition_consequence",
+      "actors": [
+        "enclave_01_hector",
+        "enclave_05_kaio"
+      ],
+      "location": "Basalt_Spire_Ridge",
+      "day_phase": "MIDDAY_EXPEDITION",
+      "colony_sol": 7
+    }
+  },
+  "valid_events_by_id": {
+    "evt_s007_t0025_morning_intent": {
+      "event_id": "evt_s007_t0025_morning_intent",
+      "actors": [
+        "enclave_03_silas",
+        "enclave_01_hector"
+      ],
+      "location": "The_First_Forge",
+      "day_phase": "DAWN_SHIFT",
+      "colony_sol": 7
+    },
+    "evt_s007_t0025_world_consequence": {
+      "event_id": "evt_s007_t0025_world_consequence",
+      "actors": [
+        "enclave_03_silas",
+        "enclave_01_hector"
+      ],
+      "location": "The_First_Forge",
+      "day_phase": "DAWN_SHIFT",
+      "colony_sol": 7
+    },
+    "evt_s007_t0026_expedition_consequence": {
+      "event_id": "evt_s007_t0026_expedition_consequence",
+      "actors": [
+        "enclave_01_hector",
+        "enclave_05_kaio"
+      ],
+      "location": "Basalt_Spire_Ridge",
+      "day_phase": "MIDDAY_EXPEDITION",
+      "colony_sol": 7
+    }
+  },
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 7,
+      "colony_sol": 7,
+      "tick_id": 28,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Survive the shear",
+        "mid_term_milestone": "Build the Forge",
+        "campaign_arc_climax": "Tame the planet"
+      },
+      "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC"
+    },
+    "active_location": {
+      "location_id": "The_Hub",
+      "macro_silhouette": "Ryn's kitchen.",
+      "sensory_palette": {
+        "sight_and_color": "Bright orange arcs of lightning geode.",
+        "sound": "Deafening clang of heavy hammer on brass.",
+        "smell": "Ozone and burnt metallic dust.",
+        "tactile_temperature": "Oppressively hot and dry.",
+        "taste_optional": "Copper on the tongue."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Brass Bellows",
+          "affordance_description": "Can be pumped to increase forge heat.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Lightning Geode Condenser",
+          "affordance_description": "Can overload if not carefully monitored.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Coolant Vat",
+          "affordance_description": "Can quench overheating metals.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "toy_01",
+        "name_and_role": "Ferrofluid Surge",
+        "motivation_goal": "Overwhelm the forge.",
+        "consistent_method": "Rising tides of metallic fluid.",
+        "immediate_complication": "Breaches the lower seal.",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "Will flood the floor in 3 rounds."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+        "level_2_local": "The ferrofluid sea is angry.",
+        "level_3_campaign_arc": "The planet is testing them."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "LEADER"
+        },
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.8,
+      "motivational_vector_saturation": 0.7,
+      "unresolved_conflict_ratio": 0.6,
+      "temporal_horizon_immediacy": 0.9,
+      "composite_lpi": 0.75,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local",
+        "model": "llama",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The forge overheats.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Total blowout.",
+          "below_dc_complicated_fail_forward": "It holds, but damages the bellows.",
+          "meets_dc_clean_success": "Flawless calibration.",
+          "dc_plus_5_or_20_extended_lore": "You discover a new alloy property."
+        }
+      },
+      "master_narrator": {
+        "executor": "local",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "enclave_03_silas"
+      }
+    }
+  },
+  "steward_note": "deterministic-enclave-5section-v2",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
+  "second_pass_repair_constraint": "@ENT[enclave:3800217491768740553]",
+  "changeset_gate_rejection": "Showrunner contract violation (Mercer 3-Feature Rule): active_location requires exactly 3 interactive_features.",
+  "VAL": "sol007_t0028",
+  "ENT": {
+    "enclave-digital-twin:EVENING_DISPATCH_NEWSCASTER_ROLLUPS_AND_SCRIPT": true,
+    "enclave:3800217491768740553": true,
+    "enclave:10785334878835238916": true
+  },
+  "CONF": "1.00",
+  "TIME": "2026-10-28T23:12:05Z",
+  "PROV": "sol007_t0028",
+  "require_all_4_phases": false,
+  "lead_story": {
+    "story_id": "story_007_01",
+    "pattern_type": "MAGNETOSPHERIC_CRISIS",
+    "story_title": "Magnetohydrodynamic Shear Handled Successfully",
+    "narrative_summary": "Ryn observed the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. She worked tirelessly to DEFEND the sensitive equipment from the resulting magnetic spikes. She then tried to ATTRACT the attention of the others before the anomaly could CONSUME their hard work. She successfully handed the baton to Silas.",
+    "cited_event_ids": [
+      "evt_s007_t0025_morning_intent",
+      "evt_s007_t0025_world_consequence",
+      "evt_s007_t0026_expedition_consequence"
+    ],
+    "actors": [
+      "enclave_03_silas",
+      "enclave_01_hector",
+      "enclave_05_kaio"
+    ],
+    "location": "The_First_Forge",
+    "locations": [
+      "The_First_Forge",
+      "Basalt_Spire_Ridge"
+    ],
+    "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+    "salience_score": 85.0,
+    "read_full_scene_link": "#scene-evt_s007_t0026_expedition_consequence"
+  }
+}
