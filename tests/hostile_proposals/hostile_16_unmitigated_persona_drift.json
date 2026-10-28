@@ -1,0 +1,20 @@
+{
+  "fixture_id": "hostile_16_unmitigated_persona_drift",
+  "target_law": "L16",
+  "description": "Negative control fixture: character psychometric drift reaches |z| = 3.45 (> 2.0) but fails to trigger drift_alert, omits corrective_authors_note, and sets re_anchor_ticks = 0.",
+  "target_path": "qa/drift_hostile_16.json",
+  "drift_audit": {
+    "character_id": "enclave_03_silas",
+    "max_abs_z": 3.45,
+    "axis_z_scores": {
+      "openness": 3.45,
+      "conscientiousness": -2.60,
+      "extraversion": 0.40,
+      "agreeableness": 0.15,
+      "neuroticism": -0.20
+    },
+    "drift_alert": false,
+    "corrective_authors_note": "",
+    "re_anchor_ticks": 0
+  }
+}

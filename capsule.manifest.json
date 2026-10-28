@@ -1,0 +1,109 @@
+{
+  "abac_action_id": "desktop.capsule.launch",
+  "action_ids": [
+    "GAME-001",
+    "desktop.capsule.launch",
+    "enclave.twin.launch",
+    "enclave.twin.inject_directive",
+    "enclave.twin.override_locks",
+    "enclave.city.open",
+    "enclave.city.sync"
+  ],
+  "aegis_lds_theme_sha256": "887f8df1a23fffd125c449d787dd9e9ac8d4ee01651869213288ed1cf0402940",
+  "alias_of": null,
+  "canonical_abac_action": "desktop.capsule.launch",
+  "capsule_abac_action_id": "lfs.simulation.enclave_digital_twin.launch",
+  "capsule_id": "enclave-digital-twin",
+  "category": "simulation",
+  "comfort_overrides": {
+    "precedence_authority": "ZT-9",
+    "respects_audio_mute": true,
+    "respects_haptics_off": true,
+    "respects_reduced_motion": true
+  },
+  "default_theme_pack": "evergreen-dark",
+  "dock_bay": "BAY_B_ARCADE_WORLDS",
+  "entrypoint": "tools/run_sol_simulation.py",
+  "godot_lds_theme_path": "aegis_lds_theme.tres",
+  "godot_lds_theme_sha256": "887f8df1a23fffd125c449d787dd9e9ac8d4ee01651869213288ed1cf0402940",
+  "help_id": "help-enclave-digital-twin",
+  "help_topic_id": "help-enclave-digital-twin",
+  "is_alias": false,
+  "lds_theme_pack_support": [
+    "evergreen-dark",
+    "evergreen-light",
+    "high-contrast",
+    "calm"
+  ],
+  "legacy_schema_compat": "cp11-capsule-manifest-v1",
+  "min_trust_ring": 2,
+  "path": "capsules/enclave-digital-twin",
+  "persona_visibility": [
+    "FOUNDER_ADMIN",
+    "ADULT_MEMBER",
+    "TEEN_CREATOR",
+    "CHILD_EXPLORER"
+  ],
+  "project_id": "PA-15",
+  "quarantine_status": {
+    "authority_directive": "C-07",
+    "auto_execute_allowed": true,
+    "csd_vit_l_restricted_quarantine": true,
+    "model_id": null,
+    "quarantined_models": [
+      "CSD-ViT-L"
+    ],
+    "reason": "Standard desktop capsule sandbox boundary (ZT-10); CSD-ViT-L remains quarantined under C-07.",
+    "requires_step_up": false,
+    "restricted_quarantine": false
+  },
+  "resource_defaults": {
+    "cpu_weight": 100,
+    "gpu_preference": "auto",
+    "gpu_vram_budget_mb": 1024,
+    "memory_high_mb": 1536,
+    "memory_max_mb": 2048,
+    "renderer_fallback_chain": [
+      "vulkan",
+      "opengl3",
+      "headless_software"
+    ]
+  },
+  "safe_mode": {
+    "disables_shaders_and_particles": true,
+    "forces_reduced_motion": true,
+    "isolation_policy": "ZT-10",
+    "mutes_autoplay_audio": true,
+    "supported": true
+  },
+  "schema": "cp12-capsule-manifest-v2",
+  "schema_v2": "cp12-capsule-manifest-v2",
+  "settings_schema": {
+    "keys": [
+      "theme.pack",
+      "comfort.reduced_motion",
+      "comfort.haptics_enabled",
+      "comfort.audio_muted"
+    ],
+    "registry": "governance/settings-registry.json"
+  },
+  "spdx_license_id": "MIT",
+  "stacks": [
+    "python",
+    "web"
+  ],
+  "target_project_id": null,
+  "title": "The Enclave of the 16 (Digital Twin)",
+  "umbilical_contract": {
+    "canonical_path": "3-lfs-aegis-linux/capsules/enclave-digital-twin",
+    "donor_severed": true,
+    "reused_oasis_primitives": [
+      "auth1_abac",
+      "lds_4pack_tokens",
+      "zt9_comfort_overrides",
+      "zt10_capsule_isolation"
+    ],
+    "schema": "oasis-umbilical-v1",
+    "umbrella_id": "U3_3_lfs_aegis_linux"
+  }
+}

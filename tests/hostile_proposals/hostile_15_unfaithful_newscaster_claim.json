@@ -1,0 +1,62 @@
+{
+  "fixture_id": "hostile_15_unfaithful_newscaster_claim",
+  "target_law": "L15",
+  "description": "Negative control fixture: Evening Dispatch lead story cites a fabricated event_id, misattributes actors/location, and omits MIDDAY_EXPEDITION and DUSK_CRAFT block digests.",
+  "target_path": "digests/daily/sol_001_hostile_15.json",
+  "known_events": [
+    {
+      "event_id": "evt_s001_t0001_forge",
+      "tick_id": 1,
+      "colony_sol": 1,
+      "day_phase": "DAWN_SHIFT",
+      "event_type": "POV_SCENE_SEGMENT",
+      "location": "The_First_Forge",
+      "actors": ["enclave_03_silas", "enclave_01_hector"],
+      "summary": "Silas and Hector calibrated the primary bismuth busbar."
+    },
+    {
+      "event_id": "evt_s001_t0002_ridge",
+      "tick_id": 2,
+      "colony_sol": 1,
+      "day_phase": "MIDDAY_EXPEDITION",
+      "event_type": "EXPEDITION_DISCOVERY",
+      "location": "Basalt_Spire_Ridge",
+      "actors": ["enclave_05_kaio", "enclave_06_zara"],
+      "summary": "Kaio and Zara mapped a new fulgurite geode seam."
+    },
+    {
+      "event_id": "evt_s001_t0003_mind",
+      "tick_id": 3,
+      "colony_sol": 1,
+      "day_phase": "DUSK_CRAFT",
+      "event_type": "POV_SCENE_SEGMENT",
+      "location": "The_Simulacrum",
+      "actors": ["enclave_09_orion", "enclave_10_isla"],
+      "summary": "Orion and Isla tuned the 32-ring Helmholtz ferrofluid manifold."
+    }
+  ],
+  "evening_dispatch": {
+    "colony_sol": 1,
+    "lead_story": {
+      "headline": "Vex Discovers Underwater City in Ferrofluid Sea",
+      "summary": "Unverified claim with wrong actors, wrong location, and hallucinated event reference.",
+      "cited_event_ids": ["evt_s001_t0001_forge", "evt_fabricated_999"],
+      "actors": ["enclave_14_vex"],
+      "location": "Subterranean_Ocean"
+    },
+    "developing_stories": [],
+    "gossip_and_shadow_column": [
+      {
+        "headline": "Uncited Rumor",
+        "cited_event_ids": []
+      }
+    ],
+    "four_block_digests": {
+      "DAWN_SHIFT": {
+        "cited_event_ids": ["evt_s001_t0001_forge"],
+        "actors": ["enclave_03_silas"],
+        "location": "The_First_Forge"
+      }
+    }
+  }
+}

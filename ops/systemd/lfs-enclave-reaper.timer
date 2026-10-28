@@ -1,0 +1,11 @@
+[Unit]
+Description=Enclave of the 16 5-Minute F-120 Reaper & Self-Healing Timer (Phase-Shifted :03/5)
+
+[Timer]
+OnCalendar=*-*-* *:03/5:00
+AccuracySec=1s
+Persistent=false
+Unit=lfs-enclave-reaper.service
+
+[Install]
+WantedBy=timers.target

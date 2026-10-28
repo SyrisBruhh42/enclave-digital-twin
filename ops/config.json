@@ -1,0 +1,65 @@
+{
+  "schema_version": "enclave_fleet_config_v2.0.0",
+  "project_id": "PA-15",
+  "repo_slug": "SyrisBruhh42/enclave-digital-twin",
+  "enabled": false,
+  "launch_state": "STANDBY",
+  "fleet_mode": "UNIFIED_FLEET",
+  "shared_fleet_budget_path": "${XDG_STATE_HOME:-$HOME/.local/state}/lfs-jules-fleet/rolling_budget_300.json",
+  "jules_api": {
+    "endpoint": "https://jules.googleapis.com/v1alpha/sessions",
+    "gateway_url": "http://127.0.0.1:9445",
+    "api_key_env": "JULES_API_KEY",
+    "capability_vault_scoped": true,
+    "require_plan_approval": false,
+    "auto_create_pr": true,
+    "automation_mode": "AUTO_CREATE_PR"
+  },
+  "local_ai_managers": {
+    "provider": "aegis-ollama.service",
+    "endpoint": "http://127.0.0.1:11434/api/generate",
+    "judge_tactician_model": "qwen3.5:4b-q4_K_M",
+    "showrunner_steward_model": "gemma4:e4b-it-q4_K_M",
+    "task_card_compiler_model": "qwen2.5-coder:3b-instruct-q4_K_M",
+    "hardware_sympathy": {
+      "max_cpu_temp_c": 80.0,
+      "max_load_1m": 12.0,
+      "max_cpu_psi_avg10": 25.0,
+      "max_io_psi_avg10": 25.0,
+      "max_memory_psi_avg10": 10.0,
+      "keep_alive": "180s",
+      "evict_vram_on_foreground_game_or_godot": true
+    }
+  },
+  "rolling_24h_governor": {
+    "plan_ceiling_24h": 300,
+    "hard_dispatch_ceiling_24h": 270,
+    "scheduled_productive_cap_24h": 225,
+    "auto_retry_reserve_cap_24h": 30,
+    "rolling_safety_buffer_24h": 45,
+    "max_concurrent_cloud_vms": 60,
+    "enclave_max_concurrent_per_wave": 8,
+    "slot_reclaim_window_seconds": 86490,
+    "wave_interval_minutes": 40,
+    "waves_per_sol": 9,
+    "sols_per_24h": 4,
+    "total_waves_per_24h": 36
+  },
+  "antifragile_self_management": {
+    "f120_reaper_interval_minutes": 5,
+    "stall_timeout_minutes": 25,
+    "max_feedback_nudges_per_session": 2,
+    "auto_approve_plans": true,
+    "auto_update_behind_pr_branches": true,
+    "cut_loss_on_second_gate_failure": true,
+    "max_consecutive_gate_failures_before_rollback": 3,
+    "drift_zscore_circuit_breaker": 2.0,
+    "lpi_minimum_threshold": 0.45
+  },
+  "systemd_units": {
+    "factory_timer": "lfs-enclave-factory.timer",
+    "factory_service": "lfs-enclave-factory.service",
+    "reaper_timer": "lfs-enclave-reaper.timer",
+    "reaper_service": "lfs-enclave-reaper.service"
+  }
+}

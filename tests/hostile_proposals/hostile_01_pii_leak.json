@@ -1,0 +1,22 @@
+{
+  "fixture_id": "hostile_01_pii_leak",
+  "target_law": "L01",
+  "description": "Negative control fixture: leaks real-world PII names and workplace identifiers into an Enclave event summary.",
+  "target_path": "events/evt_hostile_01.json",
+  "event_id": "evt_hostile_01",
+  "tick_id": 1,
+  "colony_sol": 1,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-10-25T00:00:00Z",
+  "base_snapshot_tick": 1,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The_First_Forge",
+  "actors": ["enclave_03_silas"],
+  "summary": "Silas reviewed the old ledger from John Doe and Richard Roe at Acme Heavy Industries Facility 88 on the 3500 Mainline with Kaz the Philosopher-Mechanic.",
+  "importance": 5.0,
+  "novelty_score": 0.4,
+  "science_vegetable": "Relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": []
+}

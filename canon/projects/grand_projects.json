@@ -1,0 +1,475 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schema_version": "grand_projects_v2.0.0",
+  "audit_status": "ADVERSARIAL_AUDIT_PASSED_ZERO_PII",
+  "privacy_invariant": "ZERO_REAL_PERSON_DATA: Strictly fictional Enclave of the 16 canon character schema. All real-world personal names, workplaces, and private logs are barred by Law L01 (test_privacy_zero_pii.py).",
+  "project_count": 8,
+  "projects": [
+    {
+      "project_id": "proj_01_first_forge",
+      "name": "The First Forge",
+      "anchor_id": "enclave_03_silas",
+      "prodigy_id": "enclave_01_hector",
+      "co_lead_ids": [
+        "enclave_03_silas",
+        "enclave_04_leo"
+      ],
+      "squad": "The Forge",
+      "central_scientific_question": "How can terrestrial metallurgy be hybridized with sympathetic exoplanet core-ores and geode lightning to smelt zero-fatigue, magnetically self-healing structural alloys?",
+      "primary_obstacles": [
+        "Sympathetic lattice shear during Kp >= 6.5 magnetic storms causes micro-fissures in unshielded bismuth-bronze castings.",
+        "Crystallized fungal spores infiltrate the intake bellows and foul the precision escapement valves.",
+        "Competition with The Wilds and The Hub over iron-rich agricultural husks needed for flux-core shielding."
+      ],
+      "cross_project_dependencies": [
+        {
+          "depends_on_project_id": "proj_02_stormbreaker",
+          "reason": "Requires regulated megajoule geode discharge from The Stormbreaker to drive the primary induction crucible."
+        },
+        {
+          "depends_on_project_id": "proj_04_genesis_garden",
+          "reason": "Uses Willow's chelated sulfur solvents and iron-wheat husk ash for high-purity slag fluxing."
+        }
+      ],
+      "current_progress_pct": 54.0,
+      "thematic_resonance": "Bridges Old Earth structural discipline (Silas & Leo) with audacious exoplanet improvisation, proving that memory and innovation are forged in the same fire."
+    },
+    {
+      "project_id": "proj_02_stormbreaker",
+      "name": "The Stormbreaker",
+      "anchor_id": "enclave_04_leo",
+      "prodigy_id": "enclave_02_jane",
+      "co_lead_ids": [
+        "enclave_01_hector",
+        "enclave_02_jane"
+      ],
+      "squad": "The Forge",
+      "central_scientific_question": "Can a network of hand-forged copper spires and mechanical Babbage-loom fluid computers predict and harvest bifurcated magnetohydrodynamic lightning shears into stable colony power?",
+      "primary_obstacles": [
+        "Bifurcated thermal shear between valley floor (14.2C) and ridge crest (-6.8C) warps mechanical punch-cards and snaps grounding cables.",
+        "Triple-moon perigee surges induce unpredictable back-EMF spikes across the primary capacitor geodes.",
+        "Hector's high-altitude manual rigging requires split-second meteorological windows computed by Jane."
+      ],
+      "cross_project_dependencies": [
+        {
+          "depends_on_project_id": "proj_01_first_forge",
+          "reason": "Depends on Silas and Leo's tempered bismuth-copper busbars and insulated climbing pitons."
+        },
+        {
+          "depends_on_project_id": "proj_05_simulacrum",
+          "reason": "Validates 3D magnetohydrodynamic vortex models against Isla and Orion's ferrofluid standing-wave simulations."
+        }
+      ],
+      "current_progress_pct": 47.5,
+      "thematic_resonance": "Transforms the exoplanet's most violent environmental hazard into the lifeblood of the sanctuary through the duet of kinetic courage (Hector) and algorithmic precision (Jane)."
+    },
+    {
+      "project_id": "proj_03_sanctuary",
+      "name": "The Sanctuary",
+      "anchor_id": "enclave_07_willow",
+      "prodigy_id": "enclave_05_kaio",
+      "co_lead_ids": [
+        "enclave_05_kaio",
+        "enclave_06_zara"
+      ],
+      "squad": "The Wilds",
+      "central_scientific_question": "How do native magnetotropic fauna navigate and shelter during geomagnetic pole-shear events, and how can the Enclave co-create a mutualistic ecological refuge without domesticating their wild nature?",
+      "primary_obstacles": [
+        "Acoustic shockwaves from The First Forge disrupt the magnetite homing organs of juvenile carapace-elk and prism-moths.",
+        "Uncharted basalt sinkholes and shifting resonant spore-fog corridors make perimeter tracking hazardous.",
+        "High Kp flares trigger defensive bio-electric discharges in native chitin-hounds."
+      ],
+      "cross_project_dependencies": [
+        {
+          "depends_on_project_id": "proj_04_genesis_garden",
+          "reason": "Relies on Terra's hybrid forage paddocks and Willow's antitoxin salves to treat storm-injured fauna."
+        },
+        {
+          "depends_on_project_id": "proj_07_living_atlas",
+          "reason": "Feeds Kaio's topographic field surveys and Zara's migration logs directly into Dorian and Vex's Living Atlas."
+        }
+      ],
+      "current_progress_pct": 42.0,
+      "thematic_resonance": "Embodies the Enclave's PvE covenant: humanity as an attentive guest and kinesthetic listener within an alien biosphere rather than its conqueror."
+    },
+    {
+      "project_id": "proj_04_genesis_garden",
+      "name": "The Genesis Garden",
+      "anchor_id": "enclave_08_terra",
+      "prodigy_id": "enclave_06_zara",
+      "co_lead_ids": [
+        "enclave_07_willow",
+        "enclave_08_terra"
+      ],
+      "squad": "The Wilds",
+      "central_scientific_question": "How can terrestrial heirloom crops be symbiotically grafted onto piezo-electric exoplanet mycorrhizae and chelated against heavy-metal soil toxicity to yield nutrient-dense harvests?",
+      "primary_obstacles": [
+        "Sudden ridge-crest thermal drops threaten unhardened seedlings with magnetic frost necrosis.",
+        "Raw ferro-silicate soil requires continuous organometallic sulfur chelation to prevent iron-toxicity lockup.",
+        "Competing claims on mature Crystalline Iron-Wheat batches between seed preservation, metallurgical smelting, and immediate milling."
+      ],
+      "cross_project_dependencies": [
+        {
+          "depends_on_project_id": "proj_08_hearth_metabolic_engine",
+          "reason": "Supplies raw Crystalline Iron-Wheat, cave-truffles, and chelated greens to Ryn and Elara's metabolic kitchen."
+        },
+        {
+          "depends_on_project_id": "proj_03_sanctuary",
+          "reason": "Depends on Zara's native pollinator beetles to fertilize magnetotropic blossoms."
+        }
+      ],
+      "current_progress_pct": 61.5,
+      "thematic_resonance": "Weds Willow's unsentimental alchemical precision with Terra's patient maternal stewardship, turning toxic alien dust into shared daily bread."
+    },
+    {
+      "project_id": "proj_05_simulacrum",
+      "name": "The Simulacrum",
+      "anchor_id": "enclave_12_elias",
+      "prodigy_id": "enclave_09_orion",
+      "co_lead_ids": [
+        "enclave_09_orion",
+        "enclave_10_isla"
+      ],
+      "squad": "The Mind",
+      "central_scientific_question": "Can a thirty-two-ring brass Helmholtz manifold suspended over colloidal ferrofluid serve as a real-time analog phase-space computer that visualizes both planetary magnetohydrodynamics and colony stress topology?",
+      "primary_obstacles": [
+        "Acoustic vibrations from workshop machinery introduce phase-noise into the micron-precision ferrofluid standing waves.",
+        "Creative friction between Orion's harmonic cymatic intuition and Isla's axiomatic tensor formalisms.",
+        "High-Kp flares saturate the outer bismuth Vernier rings unless manually damped."
+      ],
+      "cross_project_dependencies": [
+        {
+          "depends_on_project_id": "proj_01_first_forge",
+          "reason": "Requires ultra-pure colloidal magnetite and precision-machined brass Vernier rings from Silas and Leo."
+        },
+        {
+          "depends_on_project_id": "proj_06_lyceum_of_the_mind",
+          "reason": "Integrates Kenna and Elias's neuro-somatic stress telemetry into the colony phase-space projection."
+        }
+      ],
+      "current_progress_pct": 49.0,
+      "thematic_resonance": "Proves that art and mathematics are twin projections of the same truth: Orion's eye for beauty and Isla's rigor co-create a mirror of the living world."
+    },
+    {
+      "project_id": "proj_06_lyceum_of_the_mind",
+      "name": "The Lyceum of the Mind",
+      "anchor_id": "enclave_11_kenna",
+      "prodigy_id": "enclave_10_isla",
+      "co_lead_ids": [
+        "enclave_11_kenna",
+        "enclave_12_elias"
+      ],
+      "squad": "The Mind",
+      "central_scientific_question": "How do twin-sun circadian bifurcations and Kp >= 7.0 geomagnetic shear spikes induce temporary cortical Polarity Inversions ('Vex's Effect'), and how can acoustic-somatic grounding restore psychological equilibrium?",
+      "primary_obstacles": [
+        "Stochastic onset of Polarity Inversions under compounded weather stress, sleep debt, and specialist friction.",
+        "Reluctance of hyper-focused prodigies and stubborn elders to admit fatigue before crossing the 0.82 stress hazard threshold.",
+        "Need for non-invasive, in-character psychometric drift audits that feel like caring mentorship rather than clinical interrogation."
+      ],
+      "cross_project_dependencies": [
+        {
+          "depends_on_project_id": "proj_05_simulacrum",
+          "reason": "Uses Orion's cymatic light-and-sound frequencies to entrain post-inversion cortical recovery."
+        },
+        {
+          "depends_on_project_id": "proj_08_hearth_metabolic_engine",
+          "reason": "Coordinates with Elara and Ryn on sleep-debt recovery and neuro-protective magnesium nutrition at The Feast."
+        }
+      ],
+      "current_progress_pct": 58.0,
+      "thematic_resonance": "Grounds the Enclave's psychological safety: Kenna's empathetic somatic attunement and Elias's philosophical perspective transform inner turmoil into self-knowledge."
+    },
+    {
+      "project_id": "proj_07_living_atlas",
+      "name": "The Living Atlas & Mycelial Concordance",
+      "anchor_id": "enclave_15_dorian",
+      "prodigy_id": "enclave_14_vex",
+      "co_lead_ids": [
+        "enclave_14_vex",
+        "enclave_15_dorian"
+      ],
+      "squad": "The Hub",
+      "central_scientific_question": "How do binary-star orbital syzygies and triple-moon ferrofluid tides couple with the continent-spanning subterranean mycelial network to transmit bio-electric soliton signals across the crater valley?",
+      "primary_obstacles": [
+        "Separating genuine mycelial soliton telemetry from geomagnetic background noise and Vex's over-enthusiastic extrapolations.",
+        "Corrosive spore-fog humidity threatens archival paper, requiring hand-engraved copper plates and iron-gall vellum.",
+        "Strict evidentiary verification required so every Evening Dispatch cites verified event IDs without hallucination."
+      ],
+      "cross_project_dependencies": [
+        {
+          "depends_on_project_id": "proj_03_sanctuary",
+          "reason": "Incorporates Kaio and Zara's field triangulation nodes into the valley-wide mycelial map."
+        },
+        {
+          "depends_on_project_id": "proj_06_lyceum_of_the_mind",
+          "reason": "Shares Elias's bio-semiotic frameworks to decode fungal frequency modulations."
+        }
+      ],
+      "current_progress_pct": 44.5,
+      "thematic_resonance": "Unites Vex's cosmic curiosity with Dorian's bardic fidelity, ensuring the Enclave remembers where it came from while decoding the voice of its new homeworld."
+    },
+    {
+      "project_id": "proj_08_hearth_metabolic_engine",
+      "name": "The Hearth & Metabolic Engine",
+      "anchor_id": "enclave_16_elara",
+      "prodigy_id": "enclave_13_ryn",
+      "co_lead_ids": [
+        "enclave_13_ryn",
+        "enclave_16_elara"
+      ],
+      "squad": "The Hub",
+      "central_scientific_question": "How can a closed-loop thermodynamic galley and clinical nutrition protocol optimize caloric, electrolyte, and neuro-somatic resilience for sixteen colonists across extreme age brackets (18 and 79-84)?",
+      "primary_obstacles": [
+        "Variable barometric pressure (1008.4 hPa baseline with rapid shear drops) alters boiling points and fermentation kinetics.",
+        "Balancing high-calorie thermo-genesis rations for 18-year-old field prodigies with vascular and joint support for octogenarian anchors.",
+        "Adjudicating Schrödinger's Harvest resource deadlocks when other squads attempt to divert food stocks to industrial prototypes."
+      ],
+      "cross_project_dependencies": [
+        {
+          "depends_on_project_id": "proj_04_genesis_garden",
+          "reason": "Depends directly on Terra and Willow's detoxified harvests and chelated mineral salts."
+        },
+        {
+          "depends_on_project_id": "proj_01_first_forge",
+          "reason": "Uses waste heat and steam-jacketed copper manifolds fabricated by Silas and Leo."
+        }
+      ],
+      "current_progress_pct": 66.0,
+      "thematic_resonance": "The beating heart of the Main Bus: Ryn's fierce culinary command and Elara's clinical devotion turn nightly dinner into the colony's primary social and physiological reset."
+    }
+  ],
+  "projects_by_id": {
+    "proj_01_first_forge": {
+      "project_id": "proj_01_first_forge",
+      "name": "The First Forge",
+      "anchor_id": "enclave_03_silas",
+      "prodigy_id": "enclave_01_hector",
+      "co_lead_ids": [
+        "enclave_03_silas",
+        "enclave_04_leo"
+      ],
+      "squad": "The Forge",
+      "central_scientific_question": "How can terrestrial metallurgy be hybridized with sympathetic exoplanet core-ores and geode lightning to smelt zero-fatigue, magnetically self-healing structural alloys?",
+      "primary_obstacles": [
+        "Sympathetic lattice shear during Kp >= 6.5 magnetic storms causes micro-fissures in unshielded bismuth-bronze castings.",
+        "Crystallized fungal spores infiltrate the intake bellows and foul the precision escapement valves.",
+        "Competition with The Wilds and The Hub over iron-rich agricultural husks needed for flux-core shielding."
+      ],
+      "cross_project_dependencies": [
+        {
+          "depends_on_project_id": "proj_02_stormbreaker",
+          "reason": "Requires regulated megajoule geode discharge from The Stormbreaker to drive the primary induction crucible."
+        },
+        {
+          "depends_on_project_id": "proj_04_genesis_garden",
+          "reason": "Uses Willow's chelated sulfur solvents and iron-wheat husk ash for high-purity slag fluxing."
+        }
+      ],
+      "current_progress_pct": 54.0,
+      "thematic_resonance": "Bridges Old Earth structural discipline (Silas & Leo) with audacious exoplanet improvisation, proving that memory and innovation are forged in the same fire."
+    },
+    "proj_02_stormbreaker": {
+      "project_id": "proj_02_stormbreaker",
+      "name": "The Stormbreaker",
+      "anchor_id": "enclave_04_leo",
+      "prodigy_id": "enclave_02_jane",
+      "co_lead_ids": [
+        "enclave_01_hector",
+        "enclave_02_jane"
+      ],
+      "squad": "The Forge",
+      "central_scientific_question": "Can a network of hand-forged copper spires and mechanical Babbage-loom fluid computers predict and harvest bifurcated magnetohydrodynamic lightning shears into stable colony power?",
+      "primary_obstacles": [
+        "Bifurcated thermal shear between valley floor (14.2C) and ridge crest (-6.8C) warps mechanical punch-cards and snaps grounding cables.",
+        "Triple-moon perigee surges induce unpredictable back-EMF spikes across the primary capacitor geodes.",
+        "Hector's high-altitude manual rigging requires split-second meteorological windows computed by Jane."
+      ],
+      "cross_project_dependencies": [
+        {
+          "depends_on_project_id": "proj_01_first_forge",
+          "reason": "Depends on Silas and Leo's tempered bismuth-copper busbars and insulated climbing pitons."
+        },
+        {
+          "depends_on_project_id": "proj_05_simulacrum",
+          "reason": "Validates 3D magnetohydrodynamic vortex models against Isla and Orion's ferrofluid standing-wave simulations."
+        }
+      ],
+      "current_progress_pct": 47.5,
+      "thematic_resonance": "Transforms the exoplanet's most violent environmental hazard into the lifeblood of the sanctuary through the duet of kinetic courage (Hector) and algorithmic precision (Jane)."
+    },
+    "proj_03_sanctuary": {
+      "project_id": "proj_03_sanctuary",
+      "name": "The Sanctuary",
+      "anchor_id": "enclave_07_willow",
+      "prodigy_id": "enclave_05_kaio",
+      "co_lead_ids": [
+        "enclave_05_kaio",
+        "enclave_06_zara"
+      ],
+      "squad": "The Wilds",
+      "central_scientific_question": "How do native magnetotropic fauna navigate and shelter during geomagnetic pole-shear events, and how can the Enclave co-create a mutualistic ecological refuge without domesticating their wild nature?",
+      "primary_obstacles": [
+        "Acoustic shockwaves from The First Forge disrupt the magnetite homing organs of juvenile carapace-elk and prism-moths.",
+        "Uncharted basalt sinkholes and shifting resonant spore-fog corridors make perimeter tracking hazardous.",
+        "High Kp flares trigger defensive bio-electric discharges in native chitin-hounds."
+      ],
+      "cross_project_dependencies": [
+        {
+          "depends_on_project_id": "proj_04_genesis_garden",
+          "reason": "Relies on Terra's hybrid forage paddocks and Willow's antitoxin salves to treat storm-injured fauna."
+        },
+        {
+          "depends_on_project_id": "proj_07_living_atlas",
+          "reason": "Feeds Kaio's topographic field surveys and Zara's migration logs directly into Dorian and Vex's Living Atlas."
+        }
+      ],
+      "current_progress_pct": 42.0,
+      "thematic_resonance": "Embodies the Enclave's PvE covenant: humanity as an attentive guest and kinesthetic listener within an alien biosphere rather than its conqueror."
+    },
+    "proj_04_genesis_garden": {
+      "project_id": "proj_04_genesis_garden",
+      "name": "The Genesis Garden",
+      "anchor_id": "enclave_08_terra",
+      "prodigy_id": "enclave_06_zara",
+      "co_lead_ids": [
+        "enclave_07_willow",
+        "enclave_08_terra"
+      ],
+      "squad": "The Wilds",
+      "central_scientific_question": "How can terrestrial heirloom crops be symbiotically grafted onto piezo-electric exoplanet mycorrhizae and chelated against heavy-metal soil toxicity to yield nutrient-dense harvests?",
+      "primary_obstacles": [
+        "Sudden ridge-crest thermal drops threaten unhardened seedlings with magnetic frost necrosis.",
+        "Raw ferro-silicate soil requires continuous organometallic sulfur chelation to prevent iron-toxicity lockup.",
+        "Competing claims on mature Crystalline Iron-Wheat batches between seed preservation, metallurgical smelting, and immediate milling."
+      ],
+      "cross_project_dependencies": [
+        {
+          "depends_on_project_id": "proj_08_hearth_metabolic_engine",
+          "reason": "Supplies raw Crystalline Iron-Wheat, cave-truffles, and chelated greens to Ryn and Elara's metabolic kitchen."
+        },
+        {
+          "depends_on_project_id": "proj_03_sanctuary",
+          "reason": "Depends on Zara's native pollinator beetles to fertilize magnetotropic blossoms."
+        }
+      ],
+      "current_progress_pct": 61.5,
+      "thematic_resonance": "Weds Willow's unsentimental alchemical precision with Terra's patient maternal stewardship, turning toxic alien dust into shared daily bread."
+    },
+    "proj_05_simulacrum": {
+      "project_id": "proj_05_simulacrum",
+      "name": "The Simulacrum",
+      "anchor_id": "enclave_12_elias",
+      "prodigy_id": "enclave_09_orion",
+      "co_lead_ids": [
+        "enclave_09_orion",
+        "enclave_10_isla"
+      ],
+      "squad": "The Mind",
+      "central_scientific_question": "Can a thirty-two-ring brass Helmholtz manifold suspended over colloidal ferrofluid serve as a real-time analog phase-space computer that visualizes both planetary magnetohydrodynamics and colony stress topology?",
+      "primary_obstacles": [
+        "Acoustic vibrations from workshop machinery introduce phase-noise into the micron-precision ferrofluid standing waves.",
+        "Creative friction between Orion's harmonic cymatic intuition and Isla's axiomatic tensor formalisms.",
+        "High-Kp flares saturate the outer bismuth Vernier rings unless manually damped."
+      ],
+      "cross_project_dependencies": [
+        {
+          "depends_on_project_id": "proj_01_first_forge",
+          "reason": "Requires ultra-pure colloidal magnetite and precision-machined brass Vernier rings from Silas and Leo."
+        },
+        {
+          "depends_on_project_id": "proj_06_lyceum_of_the_mind",
+          "reason": "Integrates Kenna and Elias's neuro-somatic stress telemetry into the colony phase-space projection."
+        }
+      ],
+      "current_progress_pct": 49.0,
+      "thematic_resonance": "Proves that art and mathematics are twin projections of the same truth: Orion's eye for beauty and Isla's rigor co-create a mirror of the living world."
+    },
+    "proj_06_lyceum_of_the_mind": {
+      "project_id": "proj_06_lyceum_of_the_mind",
+      "name": "The Lyceum of the Mind",
+      "anchor_id": "enclave_11_kenna",
+      "prodigy_id": "enclave_10_isla",
+      "co_lead_ids": [
+        "enclave_11_kenna",
+        "enclave_12_elias"
+      ],
+      "squad": "The Mind",
+      "central_scientific_question": "How do twin-sun circadian bifurcations and Kp >= 7.0 geomagnetic shear spikes induce temporary cortical Polarity Inversions ('Vex's Effect'), and how can acoustic-somatic grounding restore psychological equilibrium?",
+      "primary_obstacles": [
+        "Stochastic onset of Polarity Inversions under compounded weather stress, sleep debt, and specialist friction.",
+        "Reluctance of hyper-focused prodigies and stubborn elders to admit fatigue before crossing the 0.82 stress hazard threshold.",
+        "Need for non-invasive, in-character psychometric drift audits that feel like caring mentorship rather than clinical interrogation."
+      ],
+      "cross_project_dependencies": [
+        {
+          "depends_on_project_id": "proj_05_simulacrum",
+          "reason": "Uses Orion's cymatic light-and-sound frequencies to entrain post-inversion cortical recovery."
+        },
+        {
+          "depends_on_project_id": "proj_08_hearth_metabolic_engine",
+          "reason": "Coordinates with Elara and Ryn on sleep-debt recovery and neuro-protective magnesium nutrition at The Feast."
+        }
+      ],
+      "current_progress_pct": 58.0,
+      "thematic_resonance": "Grounds the Enclave's psychological safety: Kenna's empathetic somatic attunement and Elias's philosophical perspective transform inner turmoil into self-knowledge."
+    },
+    "proj_07_living_atlas": {
+      "project_id": "proj_07_living_atlas",
+      "name": "The Living Atlas & Mycelial Concordance",
+      "anchor_id": "enclave_15_dorian",
+      "prodigy_id": "enclave_14_vex",
+      "co_lead_ids": [
+        "enclave_14_vex",
+        "enclave_15_dorian"
+      ],
+      "squad": "The Hub",
+      "central_scientific_question": "How do binary-star orbital syzygies and triple-moon ferrofluid tides couple with the continent-spanning subterranean mycelial network to transmit bio-electric soliton signals across the crater valley?",
+      "primary_obstacles": [
+        "Separating genuine mycelial soliton telemetry from geomagnetic background noise and Vex's over-enthusiastic extrapolations.",
+        "Corrosive spore-fog humidity threatens archival paper, requiring hand-engraved copper plates and iron-gall vellum.",
+        "Strict evidentiary verification required so every Evening Dispatch cites verified event IDs without hallucination."
+      ],
+      "cross_project_dependencies": [
+        {
+          "depends_on_project_id": "proj_03_sanctuary",
+          "reason": "Incorporates Kaio and Zara's field triangulation nodes into the valley-wide mycelial map."
+        },
+        {
+          "depends_on_project_id": "proj_06_lyceum_of_the_mind",
+          "reason": "Shares Elias's bio-semiotic frameworks to decode fungal frequency modulations."
+        }
+      ],
+      "current_progress_pct": 44.5,
+      "thematic_resonance": "Unites Vex's cosmic curiosity with Dorian's bardic fidelity, ensuring the Enclave remembers where it came from while decoding the voice of its new homeworld."
+    },
+    "proj_08_hearth_metabolic_engine": {
+      "project_id": "proj_08_hearth_metabolic_engine",
+      "name": "The Hearth & Metabolic Engine",
+      "anchor_id": "enclave_16_elara",
+      "prodigy_id": "enclave_13_ryn",
+      "co_lead_ids": [
+        "enclave_13_ryn",
+        "enclave_16_elara"
+      ],
+      "squad": "The Hub",
+      "central_scientific_question": "How can a closed-loop thermodynamic galley and clinical nutrition protocol optimize caloric, electrolyte, and neuro-somatic resilience for sixteen colonists across extreme age brackets (18 and 79-84)?",
+      "primary_obstacles": [
+        "Variable barometric pressure (1008.4 hPa baseline with rapid shear drops) alters boiling points and fermentation kinetics.",
+        "Balancing high-calorie thermo-genesis rations for 18-year-old field prodigies with vascular and joint support for octogenarian anchors.",
+        "Adjudicating Schrödinger's Harvest resource deadlocks when other squads attempt to divert food stocks to industrial prototypes."
+      ],
+      "cross_project_dependencies": [
+        {
+          "depends_on_project_id": "proj_04_genesis_garden",
+          "reason": "Depends directly on Terra and Willow's detoxified harvests and chelated mineral salts."
+        },
+        {
+          "depends_on_project_id": "proj_01_first_forge",
+          "reason": "Uses waste heat and steam-jacketed copper manifolds fabricated by Silas and Leo."
+        }
+      ],
+      "current_progress_pct": 66.0,
+      "thematic_resonance": "The beating heart of the Main Bus: Ryn's fierce culinary command and Elara's clinical devotion turn nightly dinner into the colony's primary social and physiological reset."
+    }
+  }
+}

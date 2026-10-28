@@ -1,0 +1,25 @@
+{
+  "study_id": "cf_enclave_03_silas_openness_+0.45_065956894c",
+  "colony_sol": 1,
+  "tick_id": 4,
+  "base_snapshot_tick": 4,
+  "event_type": "COUNTERFACTUAL_REPLAY",
+  "character_id": "enclave_03_silas",
+  "trait_axis": "openness",
+  "baseline_mean": 0.15,
+  "variant_mean": 0.6,
+  "actual_delta": 0.45,
+  "evaluation": {
+    "controls_valid": true,
+    "divergence_score": 0.704207,
+    "lexical_jaccard_distance": 0.958333,
+    "trigram_cosine_distance": 0.774745,
+    "state_l2_divergence": 0.457056,
+    "relationship_l2_divergence": 0.0,
+    "decision_changed": true,
+    "causal_sensitivity": 1.564904,
+    "trait_axis": "openness",
+    "delta": 0.45
+  },
+  "target_path": "qa/sol_001_counterfactual_replay.json"
+}

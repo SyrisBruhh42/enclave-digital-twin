@@ -1,0 +1,16 @@
+{
+  "segment_id": "seg_s001_t0001_enclave_03_silas",
+  "segment_index": 1,
+  "tick_id": 1,
+  "colony_sol": 1,
+  "day_phase": "DAWN_SHIFT",
+  "base_snapshot_tick": 1,
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "location": "The_First_Forge",
+  "science_vegetable": "Capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers",
+  "text": "[DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands.",
+  "context_manifest_path": "context/manifests/manifest_s001_t0001_enclave_03_silas.json",
+  "total_prompt_tokens": 709,
+  "target_path": "story/segments/seg_s001_t0001_enclave_03_silas.json"
+}

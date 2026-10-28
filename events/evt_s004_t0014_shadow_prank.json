@@ -1,0 +1,182 @@
+{
+  "prank_id": "prank_sol01_d5a58898fd",
+  "event_id": "evt_s004_t0014_shadow_prank",
+  "event_type": "SHADOW_ECONOMY_PRANK_MATURED",
+  "status": "MATURED",
+  "matured": true,
+  "matured_on_sol": 4,
+  "origin_sol": 1,
+  "maturity_sol": 4,
+  "feast_delay": 3,
+  "lethality": 0,
+  "law_l11_clamped": false,
+  "severity": "PETTY_AFFECTIONATE_INCONVENIENCE",
+  "node_a": "enclave_01_hector",
+  "node_b": "enclave_03_silas",
+  "node_c": "enclave_13_ryn",
+  "instigator": "enclave_01_hector",
+  "intended_target": "enclave_03_silas",
+  "collateral_recipient": "enclave_13_ryn",
+  "target_b_missed": true,
+  "blamed_node": "enclave_01_hector",
+  "attributed_to": "enclave_01_hector",
+  "prank_description": "Replaced the brass pressure-gauge bezel with an engraved 'Inefficient' dial plate",
+  "summary": "The 'Inefficient' dial plate prank finally pays off as Hector grabs the baton from Silas in the middle of a Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea.",
+  "narrative_prose": "Silas gripped the heavy iron baton as the Magnetohydrodynamic Kelvin-Helmholtz shear howled across the ferrofluid sea. The dark, oily waves crashed against the Enclave's reinforced pylons, sending a vibrating hum through the metal beneath them. The sky boiled in bruising shades of violet and bruised orange, carrying a thick metallic ozone scent. He squinted at the main control console, trying to read the brass pressure-gauge, but instead of numerical readouts, the bezel boldly declared 'Inefficient' in unmistakable, freshly engraved lettering. Silas let out a ragged breath and shouted, 'Hector, take it!', shoving the iron baton directly into Hector's waiting hand before the ferrofluid storm could consume their precarious foothold.",
+  "blind_spot_attribution": {
+    "instigator_node_a": "enclave_01_hector",
+    "oblivious_target_node_b": "enclave_03_silas",
+    "target_b_missed": true,
+    "inconvenienced_node_c": "enclave_13_ryn",
+    "blamed_by_c": "enclave_01_hector",
+    "asymmetric_loop_closed": true
+  },
+  "tick_id": 14,
+  "colony_sol": 4,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-10-28T06:00:00Z",
+  "location": "The_First_Forge",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector",
+    "enclave_13_ryn"
+  ],
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "context_manifest": {
+    "manifest": {
+      "full_cards_loaded_count": 1,
+      "loaded_full_card_ids": [
+        "enclave_03_silas"
+      ],
+      "active_pov_id": "enclave_03_silas",
+      "interlocutor_full_cards_loaded": 0,
+      "leaked_interlocutor_private_cards": false
+    }
+  },
+  "importance": 7.0,
+  "novelty_score": 0.7,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {
+    "stress_delta": 0.05
+  },
+  "relationship_deltas": [],
+  "evidence_refs": [
+    "evt_s001_t0002_shadow_prank"
+  ],
+  "target_path": "events/evt_s004_t0014_shadow_prank.json",
+  "disallow_overwrite": false,
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 4,
+      "colony_sol": 4,
+      "tick_id": 14,
+      "pacing_mode": "MULLIGAN_CRISIS",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Survive the ferrofluid storm.",
+        "mid_term_milestone": "Stabilize the main control console.",
+        "campaign_arc_climax": "Prevent the Enclave from sinking."
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "The reinforced deck overlooking the ferrofluid sea shuddered under the immense pressure of the storm. Pylons strained visibly against the violent, dark waves crashing around them. A single, heavy iron baton served as the critical junction point between the two engineers.",
+      "sensory_palette": {
+        "sight_and_color": "Bruising violet and orange skies contrasting with dark, oily waves.",
+        "sound": "Howling wind and a vibrating metallic hum.",
+        "smell": "Thick, metallic ozone.",
+        "tactile_temperature": "A sudden, sharp drop in temperature accompanied by stinging sea spray.",
+        "taste_optional": "The bitter tang of static on the tongue."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Main Control Console",
+          "affordance_description": "Can be monitored to stabilize the pressure.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Ferrofluid Wave",
+          "affordance_description": "Threatens to engulf the lower deck.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Magnetic Grapple",
+          "affordance_description": "Can pull loose equipment to safety.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_shear_storm",
+        "name_and_role": "Ferrofluid Shear Storm",
+        "motivation_goal": "Destabilize the Enclave's pylons.",
+        "consistent_method": "Battering the structure with highly magnetic waves.",
+        "immediate_complication": "Causes wild fluctuations in the pressure gauges.",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "Tears the main control console from its moorings."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The storm threatens to breach the deck.",
+        "level_2_local": "The pylons must hold to save the Forge.",
+        "level_3_campaign_arc": "The Enclave's survival depends on mastering the magnetosphere."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "DEFENDER"
+        },
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        7,
+        14,
+        18,
+        5,
+        12
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.8,
+      "motivational_vector_saturation": 0.7,
+      "unresolved_conflict_ratio": 0.6,
+      "temporal_horizon_immediacy": 0.9,
+      "composite_lpi": 0.75,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "Ollama",
+        "model": "qwen3.5:4b-q4_K_M",
+        "temperature": 0.05,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The baton drops into the ferrofluid sea.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Silas misjudges the wind and throws the baton wide.",
+          "below_dc_complicated_fail_forward": "Hector catches it, but is dragged to the edge.",
+          "meets_dc_clean_success": "A perfect, firm handoff.",
+          "dc_plus_5_or_20_extended_lore": "Hector catches it seamlessly and immediately recalibrates the console."
+        }
+      },
+      "master_narrator": {
+        "executor": "Ollama",
+        "temperature": 0.35,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "'Hector, take it!'"
+      }
+    }
+  }
+}
