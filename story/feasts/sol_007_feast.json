@@ -1,0 +1,166 @@
+{
+  "event_id": "evt_s007_t0028_the_feast",
+  "tick_id": 28,
+  "colony_sol": 7,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-10-31T18:00:00Z",
+  "base_snapshot_tick": 27,
+  "event_type": "THE_FEAST_CONVERGENCE",
+  "location": "The_Hub_Hearth",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_02_jane",
+    "enclave_03_silas",
+    "enclave_04_leo",
+    "enclave_05_kaio",
+    "enclave_06_zara",
+    "enclave_07_willow",
+    "enclave_08_terra",
+    "enclave_09_orion",
+    "enclave_10_isla",
+    "enclave_11_kenna",
+    "enclave_12_elias",
+    "enclave_13_ryn",
+    "enclave_14_vex",
+    "enclave_15_dorian",
+    "enclave_16_elara"
+  ],
+  "summary": "All 16 members of The Enclave gathered around Ryn and Elara's hearth on Sol 7 to break warm iron-wheat bread, debate magnetohydrodynamic kelvin-helmholtz shear across the ferrofluid sea, and release the day's magnetospheric tension.",
+  "importance": 9.2,
+  "novelty_score": 0.8,
+  "lethality": 0,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_13_ryn -> Handoff=enclave_03_silas.",
+  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
+  "changeset_gate_rejection": "Showrunner contract violation (Mercer 3-Feature Rule): active_location requires exactly 3 interactive_features.",
+  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": ["enclave_13_ryn"],
+    "interlocutor_full_cards_loaded": 0,
+    "total_tokens": 1500,
+    "max_tokens": 3500
+  },
+  "narrative_prose": "The sprawling galley rang with the clatter of heavy brass spoons against copper pots as Ryn marshaled the chaotic energy of sixteen hungry souls into a coherent meal. The air smelled of caramelized onion and the faint metallic ozone of the ferrofluid sea's magnetohydrodynamic Kelvin-Helmholtz shear, drifting in from the vents. Warm hearth light spilled across the rough-hewn timber tables, casting long, wavering shadows that seemed to dance with the flickering flames. Ryn barked orders with precision, adjusting a valve to DEFEND the simmering broth from boiling over, while the scent of roasting tubers began to ATTRACT a crowd near the serving line. Before the commotion grew too wild, she scooped a generous portion of stew into a thick ceramic bowl. With a stern nod, she stepped over to Silas, physically handing him the steaming vessel for him to CONSUME the rich, hearty meal.",
+  "state_deltas": {
+    "stress_delta": -0.25
+  },
+  "relationship_deltas": [
+    {
+      "from": "enclave_13_ryn",
+      "to": "enclave_03_silas",
+      "bond_delta": 0.03
+    }
+  ],
+  "evidence_refs": [
+    "feast_sol_007"
+  ],
+  "target_path": "story/feasts/sol_007_feast.json",
+  "disallow_overwrite": false,
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 7,
+      "colony_sol": 7,
+      "tick_id": 28,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Resolve the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+        "mid_term_milestone": "Stabilize the Enclave's power grid",
+        "campaign_arc_climax": "Survive the coming winter storm"
+      }
+    },
+    "active_location": {
+      "location_id": "The_Hub_Hearth",
+      "macro_silhouette": "The sprawling galley rang with the clatter of heavy brass spoons against copper pots as Ryn marshaled the chaotic energy of sixteen hungry souls into a coherent meal. Warm hearth light spilled across the rough-hewn timber tables, casting long, wavering shadows that seemed to dance with the flickering flames.",
+      "sensory_palette": {
+        "sight_and_color": "Warm hearth light spilling across rough-hewn timber tables, casting long wavering shadows.",
+        "sound": "Clatter of heavy brass spoons against copper pots.",
+        "smell": "Caramelized onion and faint metallic ozone of the ferrofluid sea.",
+        "tactile_temperature": "Warmth radiating from the massive galley stoves.",
+        "taste_optional": "Rich, hearty braised mire-lentils and roasted tubers."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Simmering Broth",
+          "affordance_description": "A massive copper pot of stew that requires careful heat management.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Roasting Tubers",
+          "affordance_description": "The irresistible scent of roasting vegetables drawing hungry enclave members.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Steaming Vessel",
+          "affordance_description": "A thick ceramic bowl of rich stew ready to be eaten.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_sea_shear",
+        "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz Shear",
+        "motivation_goal": "Disrupt colony power grid.",
+        "consistent_method": "Unpredictable magnetic fluctuations.",
+        "immediate_complication": "Causes flickering lights and irregular heating in the galley stoves.",
+        "pressure_index": 5,
+        "uninterrupted_escalation": true
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The Enclave needs to eat to recover from the day's stress.",
+        "level_2_local": "Ryn must manage the feast despite the disruptive magnetic fluctuations from the ferrofluid sea.",
+        "level_3_campaign_arc": "Maintaining morale and metabolic balance is crucial for surviving the looming winter."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "LEADER"
+        }
+      ],
+      "strain_accumulated_upward": 2,
+      "prerolled_hazard_queue": [ 7, 12, 4, 19, 11 ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.6,
+      "motivational_vector_saturation": 0.7,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.8,
+      "composite_lpi": 0.65,
+      "classification": "Campaign-Ready",
+      "lpi_score": 0.65
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local",
+        "model": "deterministic-enclave-5section-v2",
+        "temperature": 0.0,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "If Ryn fails to manage the stoves, the feast will be ruined, leaving the Enclave hungry and morale depleted.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Ryn miscalculates the heat, burning the entire batch of stew.",
+          "below_dc_complicated_fail_forward": "The meal is edible but unevenly cooked, slightly lowering morale.",
+          "meets_dc_clean_success": "Ryn perfectly balances the heat despite the magnetic shear, serving a flawless feast.",
+          "dc_plus_5_or_20_extended_lore": "Ryn not only cooks a perfect meal but discovers a new culinary technique using the ambient magnetic energy."
+        }
+      },
+      "master_narrator": {
+        "executor": "local",
+        "temperature": 0.0,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": false,
+        "agency_handoff_prompt": "With a stern nod, she stepped over to Silas, physically handing him the steaming vessel for him to CONSUME the rich, hearty meal."
+      }
+    }
+  }
+}
