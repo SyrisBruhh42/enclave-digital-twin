@@ -1,0 +1,136 @@
+{
+  "segment_id": "seg_s005_t0018_enclave_01_hector",
+  "segment_index": 18,
+  "tick_id": 18,
+  "colony_sol": 5,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "base_snapshot_tick": 17,
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "location": "The_Ferrofluid_Sea_Dock",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "narrative_prose": "The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea tore at Hector's reinforced trench coat as he sprinted along the precarious dock. The howling vortex of metallic winds drowned out the crunch of his insulated boots on the rusting grates, and the sharp scent of raw ozone mixed with the bitter tang of engine grease. Blinding arcs of violent static illuminated the churning, pitch-black sea below, reflecting off his protective goggles in dizzying flashes, leaving a distinct static tang dancing on his tongue. Fighting against the impossible pressure, he gripped the vital telemetry baton tightly in his right hand and shoved it directly into Kaio's waiting grasp, ensuring it was safely in Kaio's possession before the next surge of magnetic interference hit.",
+  "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified",
+  "campaign_metadata": {
+    "session_number": 5,
+    "colony_sol": 5,
+    "tick_id": 18,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Transfer telemetry baton to Kaio securely.",
+      "mid_term_milestone": "Reinforce dock structures against shear waves.",
+      "campaign_arc_climax": "Survive the convergence of the twin suns' polarity inversion"
+    }
+  },
+  "active_location": {
+    "location_id": "The_Ferrofluid_Sea_Dock",
+    "macro_silhouette": "The docking structure jutted out precariously into the metallic void, its rusted iron beams groaning under the sheer stress of the magnetic gales. Fierce, blinding arcs of static energy continuously slashed through the darkness, threatening to melt the very framework. Swirling eddies of magnetic anomaly whipped across the platform, creating hazardous slip zones of pure concentrated energy.",
+    "sensory_palette": {
+      "sight_and_color": "Blinding flashes of violent static and pitch-black churning metallic waves",
+      "sound": "Howling metallic winds and the crunch of insulated boots on rusting grates",
+      "smell": "Sharp raw ozone mixed with bitter engine grease",
+      "tactile_temperature": "Crushing kinetic pressure and freezing metallic mist",
+      "taste_optional": "Distinct static tang"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Rusted Iron Barricade",
+        "affordance_description": "A heavy, corroded shield providing temporary shelter from magnetic debris.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Exposed Power Conduit",
+        "affordance_description": "A sparking wire bundle that can redirect a portion of the incoming magnetic charge.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Thermal Vents",
+        "affordance_description": "Steam exhaust pipes capable of temporarily blinding incoming anomalies with intense heat.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "shear_storm_front",
+      "name_and_role": "Kelvin-Helmholtz Shear Front",
+      "motivation_goal": "Sever the docking tethers",
+      "consistent_method": "Ripping concussive waves of magnetic interference across the platform",
+      "immediate_complication": "The structural integrity of the main gangway is failing rapidly",
+      "pressure_index": 9,
+      "uninterrupted_escalation": "Will collapse the dock, plunging everything into the ferrofluid sea"
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Hector must hand off the baton to Kaio before the dock collapses.",
+      "level_2_local": "Kaio needs the telemetry to calibrate the primary shield generators.",
+      "level_3_campaign_arc": "Mastering the ferrofluid sea's dynamics is key to long-term colony survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      15,
+      9,
+      17,
+      4,
+      13
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.7,
+    "motivational_vector_saturation": 0.85,
+    "unresolved_conflict_ratio": 0.8,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.82,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_inference",
+      "model": "judge_v1",
+      "temperature": 0.1,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Hector stumbles, dropping the baton into a hazard zone and delaying the vital handoff.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "You completely misjudge the wind, dropping the baton into the churning sea below.",
+        "below_dc_complicated_fail_forward": "You make the handoff, but twist an ankle, significantly slowing your retreat.",
+        "meets_dc_clean_success": "You securely pass the baton right into Kaio's hand against the roaring gale.",
+        "dc_plus_5_or_20_extended_lore": "You ride the magnetic shear's momentum to execute the handoff in record time, pre-charging the baton."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector successfully shoves the telemetry baton into Kaio's hands. What does Kaio do?"
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "context_manifest_path": "context/manifests/manifest_s005_t0018_enclave_01_hector.json",
+  "total_prompt_tokens": 870,
+  "target_path": "story/segments/seg_s005_t0018_enclave_01_hector.json",
+  "disallow_overwrite": false
+}
