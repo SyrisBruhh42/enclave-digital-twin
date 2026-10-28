@@ -1,0 +1,135 @@
+{
+  "event_id": "lore_s005_t0018_expedition_discovery",
+  "tick_id": 18,
+  "colony_sol": 5,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-10-29T12:00:00Z",
+  "base_snapshot_tick": 17,
+  "event_type": "DYNAMIC_LORE_CARD_PROPOSALS",
+  "location": "Ferrofluid Sea Ridge",
+  "disallow_overwrite": false,
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified",
+  "next_pov_target": "enclave_05_kaio",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "narrative_prose": "The jagged crags overlooking the coastal expanse shuddered violently as the wind tore through the canyon. Below, a tempest of liquid metal rolled and crashed against the shore, glowing with the furious azure light of raw magnetic induction. Hector hauled himself onto the outcropping, breathless, his heavy leather coat crackling with a residual static tang that tasted distinctly like ozone and rusted pennies. He checked the main induction coil, grinning wildly at the sheer force of the storm, before turning to his squadmate who had just arrived. Without hesitation, he tossed the pulsing telemetry baton squarely into the awaiting hands of Kaio, signaling the scout to map the volatile currents.",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 5,
+      "colony_sol": 5,
+      "tick_id": 18,
+      "pacing_mode": "MULLIGAN_CRISIS",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Establish a stable grounding shunt near the ferrofluid coast.",
+        "mid_term_milestone": "Map the magnetic shear patterns for the Genesis Garden.",
+        "campaign_arc_climax": "Complete the Stormbreaker Spire to harness the planet's core energy."
+      }
+    },
+    "active_location": {
+      "location_id": "ferrofluid_sea_ridge",
+      "macro_silhouette": "The jagged crags overlooking the coastal expanse shuddered violently as the wind tore through the canyon. Below, a tempest of liquid metal rolled and crashed against the shore, glowing with the furious azure light of raw magnetic induction. The towering, copper-laced rock formations channeled the planet's fierce electromagnetic storms.",
+      "sensory_palette": {
+        "sight_and_color": "Furious azure light piercing the rolling black liquid metal.",
+        "sound": "Deafening crashes of metal surf and high-pitched inductive whining.",
+        "smell": "Ozone and burning metallic dust.",
+        "tactile_temperature": "Searing ambient heat mixed with bone-chilling static wind.",
+        "taste_optional": "Static tang tasting of ozone and rusted pennies."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Overcharged Inductive Pylons",
+          "affordance_description": "Massive copper pillars that can be aligned to redirect the ambient electrical arcs.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 15
+        },
+        {
+          "feature_name": "Ferromagnetic Geodes",
+          "affordance_description": "Scattered, pulsing stones that pull metallic debris towards them.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Thermal Vent Fissure",
+          "affordance_description": "A deep crack in the rock spewing superheated conductive gases.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 16
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "rogue_plasma_arc",
+        "name_and_role": "Rogue Plasma Arc / Environmental Hazard",
+        "motivation_goal": "To find the path of least resistance through conductive materials.",
+        "consistent_method": "Leaps randomly between ungrounded metallic objects.",
+        "immediate_complication": "Threatens to fry the sensory arrays Hector and Kaio carry.",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "Will eventually trigger a chain reaction explosion in the nearby geodes."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The telemetry data from the sea is critical to prevent the Stormbreaker's capacitors from overloading.",
+        "level_2_local": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea threatens to destabilize the Forge's local power grid.",
+        "level_3_campaign_arc": "Mastering the planet's volatile forces is the only way the Enclave will survive the upcoming eclipse season."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        },
+        {
+          "actor_id": "enclave_05_kaio",
+          "tactical_role": "LEADER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        4,
+        12,
+        7,
+        19,
+        2
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.6,
+      "motivational_vector_saturation": 0.8,
+      "unresolved_conflict_ratio": 0.4,
+      "temporal_horizon_immediacy": 0.9,
+      "composite_lpi": 0.675,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_inference",
+        "model": "jules-v2",
+        "temperature": 0.7,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "If the data isn't captured in time, a feedback loop will shatter the forward sensors.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Hector mistakenly grounds the array to a live geode, accelerating the overload.",
+          "below_dc_complicated_fail_forward": "The data is captured but the array is fried in the process.",
+          "meets_dc_clean_success": "The telemetry baton successfully records the magnetic shear patterns.",
+          "dc_plus_5_or_20_extended_lore": "Perfect data capture reveals an underlying harmonic resonance in the ferrofluid sea."
+        }
+      },
+      "master_narrator": {
+        "executor": "showrunner_engine",
+        "temperature": 0.8,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "What does Kaio do next now that he holds the pulsing telemetry baton?"
+      }
+    }
+  }
+}
