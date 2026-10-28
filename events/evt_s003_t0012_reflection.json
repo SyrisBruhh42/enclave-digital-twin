@@ -14,7 +14,6 @@
   "active_pov_id": "enclave_13_ryn",
   "next_pov_target": "enclave_03_silas",
   "prev_next_pov_target": "enclave_13_ryn",
-  "disallow_overwrite": false,
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "context_manifest": {
     "full_cards_loaded_count": 1,
@@ -58,30 +57,30 @@
     },
     "active_location": {
       "location_id": "The_Hub_Hearth",
-      "macro_silhouette": "The Hub Hearth exudes a comforting, stifling warmth, heavily insulated from the external ferrofluid chaos. Large copper kettles bubble softly along the curved induction ranges, catching the amber light.",
+      "macro_silhouette": "The dense warmth of the hearth presses outward against the chilling draft of the valley floor, the copper kettles glowing a deep umber in the low light. Plumes of spiced steam catch the erratic flickers of the ferrofluid manifold's ambient glow. It is a tight, secure sanctuary of boiling stock and scrubbed metal, anchoring the chaotic sprawl of the settlement.",
       "sensory_palette": {
-        "sight_and_color": "Deep amber light dancing off polished copper.",
-        "sound": "The rhythmic bubbling of a heavy stew.",
-        "smell": "Rich, savory broth intermixed with a faint ozone trace.",
-        "tactile_temperature": "A heavy, radiant heat that settles comfortably on the shoulders.",
-        "taste_optional": "The hearty, earthy savor of root vegetables and caramelized proteins."
+        "sight_and_color": "Deep umber, polished copper reflections, warm amber glow",
+        "sound": "Low simmer of heavy stockpots, rhythmic scrape of wire brushes",
+        "smell": "Rich iron-wheat crusts and sharp salt-vinegar polish",
+        "tactile_temperature": "Oppressive radiant heat cutting through harsh structural cold",
+        "taste_optional": "Lingering roasted myco-protein and mineral tang"
       },
       "interactive_features": [
         {
-          "feature_name": "Induction Range",
-          "affordance_description": "Can be adjusted to carefully simmer delicate ingredients.",
+          "feature_name": "Thirty-Gallon Steam-Jacketed Kettle",
+          "affordance_description": "Massive copper vat retaining immense latent heat, capable of sheltering vital reagents.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Ferrofluid Manifold Tap",
+          "affordance_description": "A structural exhaust vent channeling excess thermal energy from the sea.",
           "system_verb": "DEFEND",
           "associated_check_dc": 14
         },
         {
-          "feature_name": "Aromatic Herb Bundle",
-          "affordance_description": "Used to enhance the scent of the evening stew.",
-          "system_verb": "ATTRACT",
-          "associated_check_dc": 14
-        },
-        {
-          "feature_name": "Heavy Copper Ladle",
-          "affordance_description": "Provides the perfect scoop for distributing meals.",
+          "feature_name": "Iron-Wheat Starter Crock",
+          "affordance_description": "A fragile biological culture demanding constant thermal tending.",
           "system_verb": "CONSUME",
           "associated_check_dc": 14
         }
@@ -107,12 +106,12 @@
       "active_specialist_roles": [
         {
           "actor_id": "enclave_13_ryn",
-          "tactical_role": "LEADER"
+          "tactical_role": "DEFENDER"
         }
       ],
       "strain_accumulated_upward": 1,
       "prerolled_hazard_queue": [
-        4,
+        14,
         8,
         15,
         16,
@@ -129,20 +128,20 @@
     },
     "dual_agent_contract": {
       "judge_tactician": {
-        "provider": "local_ai",
-        "model": "qwen3.5:4b-q4_K_M",
-        "temperature": 0.1,
+        "provider": "Enclave_Core",
+        "model": "Tactical_Arbiter_v1",
+        "temperature": 0.2,
         "explicit_pre_roll_dc": 14,
-        "failure_stakes_declared": "The meal is ruined, lowering morale.",
+        "failure_stakes_declared": "The meal is ruined, lowering morale and leaving Silas exhausted.",
         "graduated_outcomes": {
           "nat_1_false_intuition": "Total failure, inedible slop.",
-          "below_dc_complicated_fail_forward": "Meal is salvaged but tastes off.",
+          "below_dc_complicated_fail_forward": "Meal is salvaged but tastes off, frustrating the squad.",
           "meets_dc_clean_success": "A perfectly balanced, restorative feast.",
           "dc_plus_5_or_20_extended_lore": "A feast that brings tears to the crew's eyes."
         }
       },
       "master_narrator": {
-        "executor": "local_ai",
+        "executor": "Enclave_Narrator",
         "temperature": 0.4,
         "calypso_zero_raw_stats": true,
         "prosodic_micro_pauses_enabled": true,
@@ -150,5 +149,5 @@
       }
     }
   },
-  "narrative_prose": "The Hub Hearth exudes a comforting, stifling warmth, heavily insulated from the external ferrofluid chaos. Large copper kettles bubble softly along the curved induction ranges, catching the amber light. Ryn carefully adjusts the magnetic coils to DEFEND the simmering broth from the erratic magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea outside, letting the rich scent ATTRACT the tired crew. With a sharp nod, she commands them to CONSUME their portions before the chill sets back in, wiping her hands on her apron before stepping away from the heat. She watches for a moment, then steps over to Silas, explicitly handing the heavy, steaming ceramic bowl—an actual physical object—over to him to pass the baton of the evening."
+  "narrative_prose": "The dense warmth of the hearth presses outward against the chilling draft of the valley floor, the copper kettles glowing a deep umber in the low light. Plumes of spiced steam catch the erratic flickers of the ferrofluid manifold's ambient glow. It is a tight, secure sanctuary of boiling stock and scrubbed metal, anchoring the chaotic sprawl of the settlement. Ryn braces herself, working to DEFEND the delicate broth from the unpredictable Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea outside, letting the deep roasted aromas CONCEAL the faint tang of ozone leaking through the seals. She ensures everyone gets a bowl to CONSUME before the biting cold returns. With the last portion ready, she explicitly hands the heavy, steaming ceramic bowl\u2014an actual physical object\u2014to Silas to complete the baton transfer for the evening."
 }
