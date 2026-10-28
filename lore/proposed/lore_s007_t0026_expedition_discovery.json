@@ -1,0 +1,117 @@
+{
+  "disallow_overwrite": false,
+  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
+  "ENT": "enclave-digital-twin:DYNAMIC_LORE_CARD_PROPOSALS",
+  "second_pass_repair_constraint": "@ENT[enclave:7298660649132524014]",
+  "changeset_gate_rejection": "Law L02 violation: target_path 'lore/proposed/lore_s006_t0022_expedition_discovery.json' outside ('events/', 'story/segments/', 'story/feasts/'",
+  "VAL": "Law L02 violation: target_path 'lore/proposed/lore_s006_t0022_expedition_discovery.json' outside ('events/', 'story/segments/', 'story/feasts/'",
+  "CONF": "1.00",
+  "TIME": "2026-10-28T21:12:05Z",
+  "PROV": "sol007_t0026",
+
+  "campaign_metadata": {
+    "session_number": 7,
+    "colony_sol": 7,
+    "tick_id": 26,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Resolve friction",
+      "mid_term_milestone": "Survive the phase",
+      "campaign_arc_climax": "Final stand"
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea",
+    "macro_silhouette": "The vast expanse stretches beyond sight, shivering under unseen magnetic fields. Thick liquid churns with unnatural sentience, throwing sharp spires into the air before they crash back down. The metallic scent hangs heavy in the thin atmosphere. A harsh chill bites at any exposed skin, piercing through protective suits.",
+    "sensory_palette": {
+      "sight_and_color": "Shimmering silver",
+      "sound": "Humming resonance",
+      "smell": "Ozone and rust",
+      "tactile_temperature": "Biting cold",
+      "taste_optional": "Metallic tang"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetic anomaly",
+        "affordance_description": "A pocket of intense magnetic flux.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferro-spire",
+        "affordance_description": "A jagged spire of hardened fluid.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Vortex pool",
+        "affordance_description": "A swirling drain in the fluid.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "shear_wave",
+      "name_and_role": "Kelvin-Helmholtz Shear Wave",
+      "motivation_goal": "Disrupt equilibrium",
+      "consistent_method": "Magnetic pulses",
+      "immediate_complication": "Destabilizes footing",
+      "pressure_index": 5,
+      "uninterrupted_escalation": true
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Ground specialist friction in Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+      "level_2_local": "Secure the perimeter",
+      "level_3_campaign_arc": "Understand the magnetic anomalies"
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [1, 2, 3, 4, 5]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.5,
+    "motivational_vector_saturation": 0.5,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.5,
+    "composite_lpi": 0.5,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Graduated fail-forward stakes",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Total failure",
+        "below_dc_complicated_fail_forward": "Partial failure",
+        "meets_dc_clean_success": "Success",
+        "dc_plus_5_or_20_extended_lore": "Critical success"
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector passes the baton to Kaio."
+    }
+  },
+
+  "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "active_pov_id": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC"
+}
