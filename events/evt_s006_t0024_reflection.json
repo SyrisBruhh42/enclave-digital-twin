@@ -1,0 +1,150 @@
+{
+  "event_id": "evt_s006_t0024_reflection",
+  "tick_id": 24,
+  "colony_sol": 6,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-10-30T19:00:00Z",
+  "base_snapshot_tick": 23,
+  "event_type": "NIGHTLY_REFLECTION",
+  "location": "The_Hub_Hearth",
+  "actors": [
+    "enclave_13_ryn",
+    "enclave_03_silas"
+  ],
+  "narrative_prose": "Inside the cozy, fire-warmed hearth, Ryn carefully stirred the bubbling amber broth to DEFEND the delicate emulsion against the chaotic Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea howling outside. The savory smell of roasted iron-wheat and the sharp umami taste of the stew helped to ATTRACT her focus, ensuring the meal wouldn't CONSUME their limited resources through failure. With the roaring winds muffled by the heavy iron walls, she wiped her brow and gently handed the warm calibration baton directly to Silas, completing the shift handoff.",
+  "importance": 7.5,
+  "novelty_score": 0.7,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {},
+  "relationship_deltas": [],
+  "evidence_refs": [
+    "evt_s006_t0021_morning_intent",
+    "evt_s006_t0022_shadow_prank"
+  ],
+  "cited_event_ids": [
+    "evt_s006_t0021_morning_intent",
+    "evt_s006_t0022_shadow_prank"
+  ],
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "disallow_overwrite": false,
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 6,
+      "colony_sol": 6,
+      "tick_id": 24,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "stabilize the stew",
+        "mid_term_milestone": "feed the hungry specialists",
+        "campaign_arc_climax": "long-term survival"
+      },
+      "day_phase": "THE_FEAST"
+    },
+    "active_location": {
+      "location_id": "The_Hub_Hearth",
+      "macro_silhouette": "The Hub Hearth glowed warmly. Copper pots hung from the ceiling.",
+      "sensory_palette": {
+        "sight_and_color": "amber stew",
+        "sound": "hissing steam",
+        "smell": "roasted iron-wheat",
+        "tactile_temperature": "searing brass",
+        "taste_optional": "sharp umami broth"
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Brass Ladle",
+          "affordance_description": "Can be used to defend the emulsion",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Raw Ingredients",
+          "affordance_description": "Can be gathered if the meal is burnt",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Time",
+          "affordance_description": "Is consumed if foraging is required",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_shear",
+        "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz shear",
+        "motivation_goal": "Disrupt delicate emulsions",
+        "consistent_method": "Pressure drops",
+        "immediate_complication": "Burnt meal",
+        "pressure_index": 5,
+        "uninterrupted_escalation": "Starvation"
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "stabilizing the stew",
+        "level_2_local": "feeding the hungry specialists",
+        "level_3_campaign_arc": "long-term survival"
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 0,
+      "prerolled_hazard_queue": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.5,
+      "motivational_vector_saturation": 0.5,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.5,
+      "composite_lpi": 0.75,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local",
+        "model": "gpt-4",
+        "temperature": 0.7,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "burnt meal",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Total ruin",
+          "below_dc_complicated_fail_forward": "Burnt meal, must forage",
+          "meets_dc_clean_success": "Perfect stew",
+          "dc_plus_5_or_20_extended_lore": "Legendary meal"
+        }
+      },
+      "master_narrator": {
+        "executor": "jules",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Hand off to Silas"
+      }
+    }
+  },
+  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified",
+  "VAL": "laws_L01_through_L16_and_calypso_verified",
+  "CONF": "1.00",
+  "TIME": "2026-10-28T19:12:01Z",
+  "PROV": "sol006_t0024",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "second_pass_repair_constraint": "@ENT[enclave:171172332741791876]",
+  "f120_stall_timeout": "session_exceeded_25m_cut_loss_relaunch",
+  "changeset_gate_rejection": "Law L02 violation: target_path &#x27;lore/propose"
+}
