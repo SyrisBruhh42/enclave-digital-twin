@@ -577,5 +577,96 @@
   "broadcast_script": "Good evening, Enclave! Dorian and Vex reporting from The Hub on Sol 1. Tonight's lead: [DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands. Weather almanac: Kp=5.35 under Ferrofluid_Tidal_Squall. All sixteen seats are warm around Ryn's hearth\u2014rest well!",
   "base_snapshot_tick": 4,
   "tick_id": 4,
-  "target_path": "digests/daily/sol_001_dispatch.json"
+  "target_path": "digests/daily/sol_001_dispatch.json",
+  "disallow_overwrite": false,
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_13_ryn -> Handoff=enclave_03_silas.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "second_pass_repair_constraint": "enclave:2275779328130642014",
+  "f120_stall_timeout": "session_exceeded_25m_cut_loss_relaunch",
+  "active_pov_id": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "narrative_prose": "The warm amber firelight flickers against the dark polished copper of the Hub Hearth, casting dancing shadows over the heavy iron bulkheads as Ryn carefully adjusts the thermal valves. A rich aroma of caramelized root vegetables mixes with the sharp metallic tang of ozone in the air, while the rhythmic bubbling of the stockpot echoes softly through the comforting warmth. Beneath their boots, a subtle but unmistakable vibration rumbles as Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea begins to rattle the brass fixtures. If the pressure continues to climb, the steam vents might blow, forcing the crew to DEFEND the delicate instrumentation; a minor failure would only vent harmless steam and ATTRACT curious gazes, but a major rupture would CONSUME their hard-won reserves for the evening feast.",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 1,
+      "tick_id": 4,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Survive",
+        "mid_term_milestone": "Build",
+        "campaign_arc_climax": "Tame"
+      }
+    },
+    "active_location": {
+      "location_id": "The_Hub_Hearth",
+      "macro_silhouette": "The Hub Hearth glows warmly, casting dancing shadows against the heavy iron bulkheads.",
+      "sensory_palette": {
+        "sight_and_color": "Warm amber firelight flickering against dark polished copper.",
+        "sound": "The rhythmic bubbling of the stockpot and soft crackle of the hearth.",
+        "smell": "Rich aromas of caramelized root vegetables and ozone.",
+        "tactile_temperature": "Comfortingly warm and humid near the stoves.",
+        "taste_optional": "Savory, hearty broth with a sharp metallic tang."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Heavy Brass Ladle",
+          "affordance_description": "Can be used to portion food or ward off grabby hands.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Copper Stockpot",
+          "affordance_description": "Boils the evening meal, drawing hungry colonists near.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Iron-Wheat Loaf",
+          "affordance_description": "Restores energy and calms nerves when eaten.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "toy_01",
+        "name_and_role": "Ferrofluid Sea Disturbance",
+        "motivation_goal": "Ripple across the colony foundations.",
+        "consistent_method": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea.",
+        "immediate_complication": "Vibrations threaten the delicate balance of the hearth's temperature.",
+        "graduated_stakes": {
+          "success_state": "Vibrations are dampened; the meal cooks perfectly.",
+          "mixed_state": "Minor steam venting occurs, rattling nerves but sparing the food.",
+          "failure_state": "A pressure blowout splatters the stew, requiring immediate cleanup and minor repairs."
+        }
+      }
+    ],
+    "encounter_matrix": {
+      "combat_expected": false,
+      "social_tension_level": "LOW",
+      "environmental_threat": "MEDIUM"
+    },
+    "lpi_metrics": {
+      "lethality_risk": 0.1,
+      "puzzle_complexity": 0.3,
+      "interpersonal_drama": 0.4
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "explicit_pre_roll_dc": 14,
+        "tactical_grid_active": false,
+        "threat_lethality_rating": 0.1
+      },
+      "master_narrator": {
+        "sensory_focus": "The warmth of the hearth and the rumble of the sea.",
+        "emotional_resonance": "A sense of communal sanctuary amidst a harsh world.",
+        "calypso_zero_raw_stats": true
+      }
+    }
+  },
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea"
 }
