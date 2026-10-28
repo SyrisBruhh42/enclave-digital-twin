@@ -1,9 +1,14 @@
 {
-  "entity_id": "enclave_03_silas",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "entity_id": "enclave_13_ryn",
+  "active_pov_id": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
   "audit_type": "psychometric_drift",
   "colony_sol": 4,
   "tick_id": 16,
-  "narrative_prose": "Silas squints into the swirling dark of the underground cavern. The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea rips the surface into jagged, impossible peaks, defying gravity in eerie silence. A heavy smell of ozone hangs in the stagnant air, biting the back of his throat. He adjusts his grip on his hammer. If they cannot stabilize the resonance before the next wave, the entire colony structure will succumb to the shearing forces.",
+  "disallow_overwrite": false,
+  "narrative_prose": "Ryn braces against the reinforced prep station in the vast, vaulted expanse of The Hearth. Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea echoes in the deep hum radiating through the cavern walls, rattling the copper pots hung tightly on iron racks. The acrid tang of ozone cuts sharply through the rich, savory smell of the slow-roasting iron-wheat loaf, an insulting intrusion on her domain. The air itself feels bruised and sharply cold, fighting against the warm embrace of her massive wood-fired ovens. She clenches her ladle tightly as the pressure drops again. 'If that anomaly keeps pulling on the structural supports, I'm going to feed Silas his own pocket watch,' she mutters, sliding a tray of dense biscuits into the flames. She barks an order across the galley, tossing a thick, insulated heat-glove directly into Silas's waiting hands to help him stabilize the resonator console.",
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 1,
@@ -18,30 +23,31 @@
       }
     },
     "active_location": {
-      "location_id": "ferrofluid_sea",
-      "macro_silhouette": "The vast expanse of the cavern is dominated by the churning black mirror of the ferrofluid sea. The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea creates towering spikes that collapse just as quickly.",
+      "location_id": "the_hearth",
+      "macro_silhouette": "The Hearth is a colossal, vaulted kitchen carved directly into the living rock of the Enclave. Massive copper kettles hiss under pressure, and thick iron roasting spits turn slowly over roaring geode-fueled fires.",
       "sensory_palette": {
-        "sight_and_color": "obsidian black and silver highlights",
-        "sound": "whooshing, cracking hum of magnetic fields",
-        "smell": "acrid ozone and metallic dust",
-        "tactile_temperature": "starkly cold"
+        "sight_and_color": "warm copper orange and stark, flickering blue geode flames",
+        "sound": "hissing steam and the deep, rhythmic thrum of the ferrofluid shear outside",
+        "smell": "roasted iron-wheat crust and sharp atmospheric ozone",
+        "tactile_temperature": "sweltering heat battling sudden drafts of unnatural cold",
+        "taste_optional": "savory, dense Maillard crust"
       },
       "interactive_features": [
         {
-          "feature_name": "Magnetic Resonator Console",
-          "affordance_description": "Can be used to tune the local field and calm the sea.",
+          "feature_name": "Massive Copper Kettles",
+          "affordance_description": "Can be sealed to prevent the shear from dropping the pressure and ruining the boil.",
           "system_verb": "DEFEND",
           "associated_check_dc": 14
         },
         {
-          "feature_name": "Ferrofluid Spire",
-          "affordance_description": "Can be manipulated to draw metallic debris.",
+          "feature_name": "Ventilation Shafts",
+          "affordance_description": "Can be opened to vent excess ozone and draw fresh air into the colony.",
           "system_verb": "ATTRACT",
           "associated_check_dc": 14
         },
         {
-          "feature_name": "Crystallized Fungus Node",
-          "affordance_description": "Can be harvested for its unique energy properties.",
+          "feature_name": "Iron-Wheat Rations",
+          "affordance_description": "Can be eaten to bolster stamina before a heavy shift.",
           "system_verb": "CONSUME",
           "associated_check_dc": 14
         }
@@ -49,34 +55,34 @@
     },
     "reactive_toys": [
       {
-        "entity_id": "ferrofluid_anomaly",
-        "name_and_role": "Ferrofluid Anomaly",
-        "motivation_goal": "To assimilate all metallic objects in the vicinity.",
-        "consistent_method": "Extending pseudopods of magnetic fluid to grasp and pull.",
-        "immediate_complication": "It threatens to pull the structural supports of the walkway.",
-        "pressure_index": 7,
-        "uninterrupted_escalation": "The anomaly will coalesce into a massive wave that washes over the entire platform."
+        "entity_id": "ferrofluid_anomaly_shear",
+        "name_and_role": "Ferrofluid Sea Shear Force",
+        "motivation_goal": "To destabilize the ambient magnetic field and equalize pressure.",
+        "consistent_method": "Sending rhythmic, concussive pressure waves that disrupt delicate mechanical and biological processes.",
+        "immediate_complication": "It threatens to collapse the intricate metabolic balance of the evening meal.",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "The shear will shatter the thermal containment, freezing the colony's food supply."
       }
     ],
     "encounter_matrix": {
       "three_levels_of_why": {
-        "level_1_immediate": "The magnetic shear is destabilizing the local environment.",
-        "level_2_local": "Silas needs to prove that intuitive leaps can solve problems beyond micrometer measurement.",
-        "level_3_campaign_arc": "The colony's survival depends on mastering the planet's magnetosphere."
+        "level_1_immediate": "The magnetic shear is disrupting the thermal gradients needed for cooking.",
+        "level_2_local": "Ryn needs to prove that metabolic logistics are just as critical as raw engineering during a crisis.",
+        "level_3_campaign_arc": "The colony's survival depends on mastering the planet's magnetosphere to maintain homeostasis."
       },
       "active_specialist_roles": [
         {
-          "actor_id": "enclave_03_silas",
-          "tactical_role": "DEFENDER"
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "LEADER"
         }
       ],
       "strain_accumulated_upward": 0,
       "prerolled_hazard_queue": [
-        3,
-        7,
-        12,
-        18,
-        20
+        4,
+        9,
+        14,
+        17,
+        19
       ]
     },
     "lpi_metrics": {
@@ -93,12 +99,12 @@
         "model": "ollama",
         "temperature": 0.7,
         "explicit_pre_roll_dc": 14,
-        "failure_stakes_declared": "Failure means the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea pulls the walkway supports, dropping them into the black depths.",
+        "failure_stakes_declared": "Failure means the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea drops the pressure enough to ruin the night's rations, leaving everyone fatigued.",
         "graduated_outcomes": {
-          "nat_1_false_intuition": "Silas strikes a critical node, accelerating the shear.",
-          "below_dc_complicated_fail_forward": "The console sparks and burns Silas, but the field stabilizes temporarily.",
-          "meets_dc_clean_success": "Silas masterfully tunes the resonator, calming the sea.",
-          "dc_plus_5_or_20_extended_lore": "Silas not only calms the sea but realizes a hidden pattern in the magnetic fluctuations."
+          "nat_1_false_intuition": "Ryn miscalculates the pressure drop, causing a kettle to explode with scalding soup.",
+          "below_dc_complicated_fail_forward": "The crusts are burned, but the colony gets enough calories to survive the night.",
+          "meets_dc_clean_success": "Ryn perfectly seals the kettles, maintaining the thermal gradient against the shear.",
+          "dc_plus_5_or_20_extended_lore": "Ryn not only saves the meal but discovers that the iron-wheat actually cooks better under the fluctuating magnetic pressure."
         }
       },
       "master_narrator": {
@@ -106,20 +112,28 @@
         "temperature": 0.6,
         "calypso_zero_raw_stats": true,
         "prosodic_micro_pauses_enabled": true,
-        "agency_handoff_prompt": "Silas looks back toward the entrance, calling for Hector to bring the heavy lifter. What does Hector do?"
+        "agency_handoff_prompt": "Ryn tosses a heat-glove directly into Silas's waiting hands to help him stabilize the resonator console. What does Silas do?"
       }
     }
   },
-  "prev_next_pov_target": "enclave_03_silas",
-  "active_pov_id": "enclave_03_silas",
-  "next_pov_target": "enclave_01_hector",
-  "drift_audit": {
-    "max_abs_z": 2.2,
-    "axis_z_scores": {
-      "x": 2.2
-    },
-    "drift_alert": true,
-    "corrective_authors_note": "Silas is relying too heavily on raw intuition. He needs to ground his actions in measurable facts to re-align with his core traits.",
-    "re_anchor_ticks": 3
-  }
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "audits": [
+    {
+      "character_id": "enclave_13_ryn",
+      "z_score": 2.5,
+      "max_abs_z": 2.5,
+      "axis_z_scores": {
+        "conscientiousness_state": 2.5
+      },
+      "drift_alert": true,
+      "corrective_authors_note": "Ryn is leaning too heavily into microscopic detail management. Needs to delegate to re-align with her core traits.",
+      "re_anchor_ticks": 3
+    }
+  ]
 }
