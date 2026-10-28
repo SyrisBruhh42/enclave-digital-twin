@@ -225,5 +225,7 @@
       }
     }
   },
-  "narrative_prose": "Ryn adjusted the heavy brass ladle, measuring the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea by the vibrations in the copper stockpot. The broth bubbled steadily, a small comfort against the harsh environment outside. She filled a bowl, the savory aroma cutting through the ozone tang of the forge next door. With a nod, she handed the warm portion directly to Silas, ensuring the next watch was well-fed."
+  "narrative_prose": "Ryn adjusted the heavy brass ladle, measuring the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea by the vibrations in the copper stockpot. The broth bubbled steadily, a small comfort against the harsh environment outside. She filled a bowl, the savory aroma cutting through the ozone tang of the forge next door. With a nod, she handed the warm portion directly to Silas, ensuring the next watch was well-fed.",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_13_ryn -> Handoff=enclave_03_silas.",
+  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified"
 }
