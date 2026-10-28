@@ -23,7 +23,8 @@
       "enclave_03_silas"
     ]
   },
-  "summary": "Silas anchors the heavy brass calipers against the workbench as the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea causes the raw lightning to spit ozone into the air. He firmly presses the insulated baton into Hector's waiting grip, trusting the prodigy to handle the volatile alignment.",
+  "summary": "Silas secures the structural dampers as the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea stresses the primary induction loops. He wipes oxidized rust from his gauntlet before passing the heavy brass baton to Hector, noting the erratic magnetic pull on the metal.",
+  "narrative_prose": "The magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea rattles the teeth within The First Forge, filling the dim amber sanctum with the sharp scent of ozone. Silas must DEFEND the fragile superconductor array by trying to ATTRACT the chaotic flux into a stable grounding sink, using a lead baffle to CONCEAL the exposed wiring from stray arcs. Wiping oxidized copper from his gauntlet, he forcefully presses the heavy runic brass baton directly into Hector's hand to complete the physical handoff.",
   "importance": 8.0,
   "novelty_score": 0.85,
   "lethality": 0,
@@ -35,7 +36,7 @@
     {
       "from": "enclave_03_silas",
       "to": "enclave_01_hector",
-      "bond_delta": 0.01,
+      "bond_delta": 0.02,
       "trust_delta": 0.01
     }
   ],
@@ -68,7 +69,7 @@
         "sound": "The rhythmic, heavy thud of pneumatic hammers and the hum of magnetic containment.",
         "smell": "Sharp metallic ozone mingling with the scent of molten brass.",
         "tactile_temperature": "Oppressively hot and dry, with a noticeable static charge prickling the skin.",
-        "taste": "The metallic tang of ozone."
+        "taste_optional": "The metallic tang of ozone."
       },
       "interactive_features": [
         {
@@ -118,7 +119,9 @@
       "prerolled_hazard_queue": [
         4,
         8,
-        15
+        15,
+        12,
+        6
       ]
     },
     "lpi_metrics": {
