@@ -8,9 +8,49 @@
   "active_pov_id": "enclave_03_silas",
   "next_pov_target": "enclave_01_hector",
   "location": "The_First_Forge",
-  "science_vegetable": "Capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers",
-  "text": "[DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "context_manifest_path": "context/manifests/manifest_s001_t0001_enclave_03_silas.json",
   "total_prompt_tokens": 709,
-  "target_path": "story/segments/seg_s001_t0001_enclave_03_silas.json"
+  "target_path": "story/segments/seg_s001_t0001_enclave_03_silas.json",
+  "narrative_prose": "The First Forge glowed with a dull, ambient amber light, the air heavy with the sharp, coppery scent of ozone and the rhythmic, hollow clanging of the bellows echoing off the basalt walls. Silas carefully adjusted his grip on the hand-forged brass instrumentation, trying to DEFEND against the unpredictable fluctuations in the magnetic field, his eyes locked on the shifting patterns; he knew he had to CONCEAL the minor tremors in his hands from the others. He felt the static tang of ozone on his tongue and tasted the metallic dust in the air as he calibrated the instrumentation against the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, a task that threatened to CONSUME his entire morning if he didn't stabilize the resonance cascade before it triggered a localized polarity inversion. The heavy, warm copper calibration baton felt solid in his grasp, and with a measured breath, he executed a physical baton handoff, placing the warm copper calibration baton directly into Hector's hands.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "reactive_toys": [
+    "hand-forged brass instrumentation",
+    "warm copper calibration baton",
+    "bellows"
+  ],
+  "state_deltas": [
+    {
+      "type": "stress_delta",
+      "value": 0.05
+    }
+  ],
+  "relationship_deltas": [],
+  "evidence_refs": [],
+  "disallow_overwrite": false,
+  "showrunner_ledger": {
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "explicit_pre_roll_dc": 14
+      },
+      "master_narrator": {
+        "calypso_zero_raw_stats": true
+      }
+    },
+    "campaign_metadata": {
+      "horizon_goals": {
+        "goal1": "Stabilize the resonance cascade",
+        "goal2": "Prevent polarity inversion",
+        "goal3": "Complete morning calibration"
+      }
+    }
+  }
 }
