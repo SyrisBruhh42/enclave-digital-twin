@@ -1,0 +1,144 @@
+{
+  "event_id": "qa_sol_007_t0025_factcheck",
+  "tick_id": 25,
+  "colony_sol": 7,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-10-28T20:12:07Z",
+  "base_snapshot_tick": 24,
+  "event_type": "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK",
+  "location": "The Forge Interior",
+  "disallow_overwrite": false,
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "second_pass_repair_constraint": "enclave:171172332741791876",
+  "f120_stall_timeout": "session_exceeded_25m_cut_loss_relaunch",
+  "changeset_gate_rejection": "Law L02 violation: target_path &#x27;lore/propose",
+  "VAL": "Law L02 violation: target_path &#x27;lore/propose",
+  "ENT": "enclave:7298660649132524014",
+  "CONF": "1.00",
+  "TIME": "2026-10-28T20:12:07Z",
+  "PROV": "sol007_t0025",
+  "narrative_prose": "Silas observed the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, a phenomenon DEFENDing its erratic borders with static tang in the cool air. The low hum of the generator vibrated through the steel floorboards, smelling faintly of ozone and charred copper while he caught a bitter, metallic taste on his tongue, realizing he must ATTRACT the currents and CONSUME the excess power. With the analysis complete, he carefully handed the physical baton over to Hector.",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 7,
+      "tick_id": 25,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Stabilize the ferrofluid sea shear.",
+        "mid_term_milestone": "Upgrade the Forge power systems.",
+        "campaign_arc_climax": "Complete The First Forge grand project."
+      }
+    },
+    "active_location": {
+      "location_id": "the_forge_interior",
+      "macro_silhouette": "The Forge was a cavernous space of interlocking gears and humming pylons, awash in amber light. Thick cables crisscrossed the ceiling, pulsing with contained energy.",
+      "sensory_palette": {
+        "sight_and_color": "amber light and pulsing cables",
+        "sound": "low hum of the generator",
+        "smell": "ozone and charred copper",
+        "tactile_temperature": "cool air and vibrating steel floorboards",
+        "taste_optional": "bitter metallic taste"
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Magnetic Shielding",
+          "affordance_description": "Can be activated to stabilize local fields.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Ferrofluid Flow Valves",
+          "affordance_description": "Redirects magnetic streams to draw materials.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 12
+        },
+        {
+          "feature_name": "Coolant Reservoirs",
+          "affordance_description": "Absorbs excess heat from the shear.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 10
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_anomaly",
+        "name_and_role": "Ferrofluid Anomaly (Environmental Hazard)",
+        "motivation_goal": "To destabilize local magnetic fields.",
+        "consistent_method": "Pulsing erratic waves of magnetic interference.",
+        "immediate_complication": "Causes localized shear in the ferrofluid sea.",
+        "pressure_index": 5,
+        "uninterrupted_escalation": true
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea is destabilizing.",
+        "level_2_local": "Failure to contain it will disrupt the Forge's primary generator.",
+        "level_3_campaign_arc": "The First Forge's energy needs require mastering this advanced magnetohydrodynamic process."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        12,
+        8,
+        15,
+        4,
+        19
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.2,
+      "motivational_vector_saturation": 0.5,
+      "unresolved_conflict_ratio": 0.3,
+      "temporal_horizon_immediacy": 0.8,
+      "composite_lpi": 0.5,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "LLM",
+        "model": "v2",
+        "temperature": 0.7,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "If the check fails, the shear will deal cascading damage to the cooling systems, forcing an emergency shutdown.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "The shear appears stable, but a hidden surge blows out the secondary relays.",
+          "below_dc_complicated_fail_forward": "The shear is temporarily stabilized, but the cooling systems are taxed, requiring maintenance.",
+          "meets_dc_clean_success": "The shear is perfectly stabilized, and the ferrofluid sea returns to a calm state.",
+          "dc_plus_5_or_20_extended_lore": "The shear is stabilized, and you discover a more efficient magnetic harmonics pattern for future use."
+        }
+      },
+      "master_narrator": {
+        "executor": "LLM",
+        "temperature": 0.8,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Hand off the baton to Hector."
+      }
+    }
+  }
+}
