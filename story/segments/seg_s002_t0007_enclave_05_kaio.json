@@ -11,7 +11,11 @@
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "location": "The_Ferrofluid_Sea_Ridge",
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
-  "text": "[DUSK_CRAFT at The_Ferrofluid_Sea_Ridge] Kaio scaled the precarious basalt pinnacle with his brass sextant, sketching the glowing wind-streams caused by the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. The strobing violet metallic waves below cast dizzying shadows, while the sharp smell of airborne copper bit through the earthy scent of bruised moss. He let out a breathless, three-note whistle as the biting electric chill wrapped around him, his boots barely holding onto the rain-slicked rock. Recognizing the data was ready, he bounded down the lashing bioluminescent vines, slapped the charged copper calibration baton directly into Ryn's hands at the commissary entrance, and started enthusiastically explaining the eddy currents.",
+  "actors": [
+    "enclave_05_kaio",
+    "enclave_13_ryn"
+  ],
+  "narrative_prose": "Kaio stood at the edge of the observation deck, watching the strobing violet waves clash below. The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea was intensifying, casting dizzying shadows over the slick basalt. Thick bioluminescent vines whipped wildly, forcing him to CONCEAL himself behind a reinforced blast door. The screaming magnetic winds drowned out the sharp hum of the piezo-electric rock, and the heavy scent of airborne copper mixed with bruised moss. The biting electric chill sliced through his sweat, leaving a faint trace of ionized air on his tongue. Knowing he had to DEFEND the delicate calibration metrics, he timed his sprint between the gusts to ATTRACT as little magnetic interference as possible. Spotting his target, he bounded toward the commissary entrance and slammed the charged copper calibration baton directly into Ryn's waiting hands, breathlessly explaining the eddy currents.",
   "campaign_metadata": {
     "session_number": 2,
     "colony_sol": 2,
@@ -123,7 +127,9 @@
   },
   "context_manifest": {
     "full_cards_loaded_count": 1,
-    "loaded_full_card_ids": ["enclave_05_kaio"],
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ],
     "interlocutor_full_cards_loaded": 0
   },
   "context_manifest_path": "context/manifests/manifest_s002_t0007_enclave_05_kaio.json",
