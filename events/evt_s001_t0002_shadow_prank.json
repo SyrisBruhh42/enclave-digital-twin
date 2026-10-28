@@ -37,13 +37,14 @@
   "base_snapshot_tick": 1,
   "location": "The_First_Forge",
   "actors": [
-    "enclave_01_hector",
+    "enclave_05_kaio",
+    "enclave_13_ryn",
     "enclave_03_silas",
-    "enclave_13_ryn"
+    "enclave_01_hector"
   ],
   "importance": 6.0,
   "novelty_score": 0.68,
-  "science_vegetable": "Relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "state_deltas": {
     "stress_delta": -0.02
   },
@@ -51,5 +52,123 @@
   "evidence_refs": [
     "evt_s001_t0002_midday_expedition"
   ],
-  "target_path": "events/evt_s001_t0002_shadow_prank.json"
+  "target_path": "events/evt_s001_t0002_shadow_prank.json",
+  "disallow_overwrite": false,
+  "steward_note": "deterministic-enclave-5section-v2",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "narrative_prose": "Hector squinted at the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, watching the deep crimson waves surge like bruised flesh. The deafening hum of the induction coils rattled his teeth, bringing with it the acrid stench of ozone and scorched brass that clung to the damp, heavy air. The static tang of raw electricity sat on his tongue like a copper coin as he prepared to physically hand over the diagnostics baton to Kaio, who had to DEFEND the delicate calibrations, ATTRACT the stray magnetic flux away from the primary conduit, and CONCEAL the overloaded capacitor bank before it triggered a catastrophic cascade.",
+  "active_pov_id": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 1,
+      "tick_id": 2,
+      "pacing_mode": "MULLIGAN_CRISIS",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Realign the fluctuating induction coils",
+        "mid_term_milestone": "Stabilize the primary forge grid",
+        "campaign_arc_climax": "Prevent the grand catastrophic meltdown"
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "A massive industrial cavern bathed in stark crimson light and sputtering blue arcs. Towering induction coils pulse with restless energy.",
+      "sensory_palette": {
+        "sight_and_color": "crimson waves and sputtering blue arcs",
+        "sound": "deafening hum",
+        "smell": "acrid stench of ozone and scorched brass",
+        "tactile_temperature": "damp, heavy air",
+        "taste_optional": "static tang"
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Delicate Calibrations",
+          "affordance_description": "A fragile array of diagnostic relays needing protection.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Stray Magnetic Flux",
+          "affordance_description": "Loose energy currents that can be redirected.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Overloaded Capacitor Bank",
+          "affordance_description": "A sparking power reserve that needs to be hidden from the main grid.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "Ferrofluid Wave",
+        "name_and_role": "Magnetohydrodynamic shear fluctuation",
+        "motivation_goal": "Disrupt alignment through chaotic shear.",
+        "consistent_method": "Pulsing unpredictable magnetic fields.",
+        "immediate_complication": "Induction coils are misaligned.",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "The shear will tear apart the forge."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The shear threatens the immediate calibrations.",
+        "level_2_local": "The forge grid relies on this stabilization.",
+        "level_3_campaign_arc": "The colony's survival depends on mastering the ferrofluid."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        },
+        {
+          "actor_id": "enclave_05_kaio",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.5,
+      "motivational_vector_saturation": 0.5,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.5,
+      "composite_lpi": 0.5,
+      "classification": "Explosive but Shallow"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "ollama",
+        "model": "llama3",
+        "temperature": 0.7,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "If the handoff fails, the shear will cause a localized blowout.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Hector drops the baton into the shear.",
+          "below_dc_complicated_fail_forward": "The handoff is clumsy, sparking an electrical surge that scorches Kaio.",
+          "meets_dc_clean_success": "The handoff is smooth, stabilizing the relays.",
+          "dc_plus_5_or_20_extended_lore": "The handoff not only stabilizes the relays but also aligns the flux perfectly."
+        }
+      },
+      "master_narrator": {
+        "executor": "ollama",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "What do you do?"
+      }
+    }
+  }
 }
