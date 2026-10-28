@@ -1,0 +1,163 @@
+{
+  "event_id": "evt_s007_t0025_world_consequence",
+  "tick_id": 25,
+  "colony_sol": 7,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-10-31T06:00:00Z",
+  "base_snapshot_tick": 24,
+  "event_type": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+  "location": "The_First_Forge",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "narrative_prose": "Silas stared out at the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, noting the harsh violet light reflecting off the brass bulkheads of The First Forge. The sharp tang of ionized copper filled his nose, and the dull roar of the sheer wave rattled his teeth. He had to DEFEND the delicate calipers from the sudden magnetic pull, quickly trying to ATTRACT Hector's attention. \"Inefficient,\" he muttered, holding out the heavy baton for Hector to grab, choosing not to CONCEAL his frustration.",
+  "importance": 8.0,
+  "novelty_score": 0.85,
+  "lethality": 0,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "disallow_overwrite": false,
+  "target_path": "events/evt_s007_t0025_world_consequence.json",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ]
+  },
+  "state_deltas": {
+    "stress_delta": 0.05
+  },
+  "relationship_deltas": [
+    {
+      "from": "enclave_03_silas",
+      "to": "enclave_01_hector",
+      "bond_delta": 0.03,
+      "trust_delta": 0.03
+    }
+  ],
+  "evidence_refs": [],
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 7,
+      "colony_sol": 7,
+      "tick_id": 25,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Secure the forge.",
+        "mid_term_milestone": "Reinforce the ridge outpost.",
+        "campaign_arc_climax": "Master the ferrofluid sea."
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "A rugged forge.",
+      "sensory_palette": {
+        "sight_and_color": "Harsh violet light.",
+        "sound": "Dull roar of the sheer wave.",
+        "smell": "Ionized copper.",
+        "tactile_temperature": "Piercing static chill.",
+        "taste_optional": "Static tang of ozone on the tongue."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Brass Bulkhead",
+          "affordance_description": "A reinforced wall.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Magnetic Grapple",
+          "affordance_description": "A winch.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Shadow Trench",
+          "affordance_description": "A deep rut.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "Ferrofluid Wave",
+        "name_and_role": "Magnetohydrodynamic shear fluctuation",
+        "motivation_goal": "Disrupt alignment.",
+        "consistent_method": "Pulsing unpredictable magnetic fields.",
+        "immediate_complication": "Baton transfer becomes difficult.",
+        "pressure_index": 6,
+        "uninterrupted_escalation": "Equipment overload."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Handoff the baton to Hector.",
+        "level_2_local": "Secure the expedition data.",
+        "level_3_campaign_arc": "Maintain infrastructure for The Enclave."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "STRIKER"
+        },
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "SCOUT"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        4,
+        8,
+        15,
+        16,
+        23
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.6,
+      "motivational_vector_saturation": 0.6,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.7,
+      "composite_lpi": 0.6,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_ai",
+        "model": "qwen3.5:4b-q4_K_M",
+        "temperature": 0.1,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The baton handoff is fumbled.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Catastrophic misalignment and minor burns.",
+          "below_dc_complicated_fail_forward": "Handoff complete but equipment damaged.",
+          "meets_dc_clean_success": "Flawless handoff.",
+          "dc_plus_5_or_20_extended_lore": "Flawless handoff with new insight into ferrofluid behavior."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_ai",
+        "temperature": 0.4,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Hector, take the baton."
+      }
+    }
+  },
+  "second_pass_repair_constraint": "enclave:171172332741791876",
+  "changeset_gate_rejection": "Law L02 violation: target_path 'lore/propose",
+  "f120_stall_timeout": "session_exceeded_25m_cut_loss_relaunch",
+  "CONF": "1.00",
+  "TIME": "2026-10-28T20:12:05Z",
+  "PROV": "sol007_t0025",
+  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR"
+}
