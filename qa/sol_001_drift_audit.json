@@ -2254,5 +2254,125 @@
       "worst_axis": "openness"
     }
   ],
-  "target_path": "qa/sol_001_drift_audit.json"
+  "target_path": "qa/sol_001_drift_audit.json",
+  "disallow_overwrite": false,
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "narrative_prose": "The laboratory smells of static tang and oxidized copper. A low hum vibrates through the metal floorboards, vibrating against Ryn's boots. The ferrofluid sea outside shifts with a dark, oily gleam. Ryn must DEFEND the delicate diagnostic equipment from the incoming surge. She tries to ATTRACT the magnetic anomalies toward the reinforced containment field. They will CONSUME the raw data if not contained. The fluid ripples with Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea.",
+  "actors": [
+    "enclave_13_ryn",
+    "enclave_03_silas"
+  ],
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 1,
+      "tick_id": 4,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Conduct the drift audit without a system failure.",
+        "mid_term_milestone": "Stabilize the primary enclave diagnostics.",
+        "campaign_arc_climax": "Prevent the complete systemic drift of all enclave minds."
+      }
+    },
+    "active_location": {
+      "location_id": "lab_alpha",
+      "macro_silhouette": "The laboratory smells of static tang and oxidized copper. A low hum vibrates through the metal floorboards, vibrating against Ryn's boots. The ferrofluid sea outside shifts with a dark, oily gleam.",
+      "sensory_palette": {
+        "sight_and_color": "dark, oily gleam",
+        "sound": "low hum",
+        "smell": "static tang and oxidized copper",
+        "tactile_temperature": "vibrates through the metal floorboards",
+        "taste_optional": "static tang"
+      },
+      "interactive_features": [
+        {
+          "feature_name": "diagnostic equipment",
+          "affordance_description": "Delicate sensors and arrays.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "containment field",
+          "affordance_description": "Magnetic shielding.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "raw data",
+          "affordance_description": "The target of the anomalies.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "magnetic_anomaly",
+        "name_and_role": "Magnetic Anomaly (Hazard)",
+        "motivation_goal": "Disrupt systems",
+        "consistent_method": "Surge and consume data",
+        "immediate_complication": "Approaching the lab",
+        "pressure_index": 5,
+        "uninterrupted_escalation": "Will cause a catastrophic failure."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The equipment needs to be protected.",
+        "level_2_local": "The lab's integrity is vital for the audit.",
+        "level_3_campaign_arc": "The enclave's survival depends on stable systems."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 0,
+      "prerolled_hazard_queue": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.5,
+      "motivational_vector_saturation": 0.5,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.5,
+      "composite_lpi": 0.5,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local",
+        "model": "v1",
+        "temperature": 0.7,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The diagnostic equipment will be damaged.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Total system failure.",
+          "below_dc_complicated_fail_forward": "Equipment damaged, but data saved.",
+          "meets_dc_clean_success": "Equipment secured.",
+          "dc_plus_5_or_20_extended_lore": "Equipment secured and new anomaly data gathered."
+        }
+      },
+      "master_narrator": {
+        "executor": "local",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "What do you do?"
+      }
+    }
+  },
+  "day_phase": "THE_FEAST",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn"
 }
