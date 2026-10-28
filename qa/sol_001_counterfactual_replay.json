@@ -1,25 +1,157 @@
 {
-  "study_id": "cf_enclave_03_silas_openness_+0.45_065956894c",
+  "study_id": "cf_enclave_05_kaio_dusk_craft_replay",
   "colony_sol": 1,
-  "tick_id": 4,
+  "tick_id": 3,
   "base_snapshot_tick": 4,
   "event_type": "COUNTERFACTUAL_REPLAY",
-  "character_id": "enclave_03_silas",
-  "trait_axis": "openness",
-  "baseline_mean": 0.15,
-  "variant_mean": 0.6,
-  "actual_delta": 0.45,
-  "evaluation": {
-    "controls_valid": true,
-    "divergence_score": 0.704207,
-    "lexical_jaccard_distance": 0.958333,
-    "trigram_cosine_distance": 0.774745,
-    "state_l2_divergence": 0.457056,
-    "relationship_l2_divergence": 0.0,
-    "decision_changed": true,
-    "causal_sensitivity": 1.564904,
-    "trait_axis": "openness",
-    "delta": 0.45
+  "character_id": "enclave_05_kaio",
+  "target_path": "qa/sol_001_counterfactual_replay.json",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "actors": [
+    "enclave_05_kaio",
+    "enclave_13_ryn"
+  ],
+  "active_pov_id": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "event_id": "qa_sol_001_cf_replay",
+  "day_phase": "DUSK_CRAFT",
+  "world_timestamp_iso": "2026-10-25T00:00:00Z",
+  "location": "Enclave_Crater_Valley",
+  "reactive_toys": [
+    {
+      "entity_id": "spore_fog",
+      "name_and_role": "Resonant Spore Fog Drift",
+      "motivation_goal": "To drift according to thermal shear",
+      "consistent_method": "Drifting and glowing",
+      "immediate_complication": "Reduces visibility",
+      "pressure_index": 5,
+      "uninterrupted_escalation": "Eventually covers the entire valley"
+    }
+  ],
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 1,
+      "tick_id": 3,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Understand personality dynamics",
+        "mid_term_milestone": "Survive the day",
+        "campaign_arc_climax": "Master the Enclave"
+      }
+    },
+    "active_location": {
+      "location_id": "Enclave_Crater_Valley",
+      "macro_silhouette": "The valley walls rose high and jagged into the dimming sky, casting deep shadows across the uneven floor. Glowing spores drifted lazily, caught in the invisible currents of the bifurcated thermal shear.",
+      "sensory_palette": {
+        "sight_and_color": "A muted palette of dim greens and bioluminescent blues against the dark rock.",
+        "sound": "The low, resonant hum of the spore fog rubbing against the piezo-electric basalt.",
+        "smell": "Ozone and the damp, earthy scent of ancient mycelium.",
+        "tactile_temperature": "A sharp, biting cold off the ridge crest cutting through the tepid valley air.",
+        "taste_optional": "A metallic, static tang on the tongue from the charged geode dust."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Piezo-electric Basalt Pinnacle",
+          "affordance_description": "Can be climbed to gain vantage above the spore fog.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Magnetic Spore Eddy",
+          "affordance_description": "A dense pocket of glowing spores swirling in a magnetic anomaly.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 12
+        },
+        {
+          "feature_name": "Luminescent Cave Moss Patch",
+          "affordance_description": "Nitrogen-fixing moss that can be harvested for compost.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 10
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "spore_fog",
+        "name_and_role": "Resonant Spore Fog Drift",
+        "motivation_goal": "To drift according to thermal shear",
+        "consistent_method": "Drifting and glowing",
+        "immediate_complication": "Reduces visibility and interferes with magnetic compasses",
+        "pressure_index": 5,
+        "uninterrupted_escalation": "Eventually covers the entire valley, blanketing all paths."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Kaio is studying the spore drift.",
+        "level_2_local": "The Wilds squad needs to map the changing thermal shears.",
+        "level_3_campaign_arc": "Understanding the Enclave's meteorology is essential for the Sanctuary project."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_05_kaio",
+          "tactical_role": "STRIKER"
+        },
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 10,
+      "prerolled_hazard_queue": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.5,
+      "motivational_vector_saturation": 0.6,
+      "unresolved_conflict_ratio": 0.3,
+      "temporal_horizon_immediacy": 0.8,
+      "composite_lpi": 0.7,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "Ollama",
+        "model": "llama3",
+        "temperature": 0.7,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "If Kaio fails, the spore fog will obscure the path back to the Hub, forcing a delayed return.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Kaio completely misreads the thermal shear and leads himself deeper into the magnetic anomaly.",
+          "below_dc_complicated_fail_forward": "Kaio finds a path, but the resonant spores temporarily scramble his brass sextant.",
+          "meets_dc_clean_success": "Kaio perfectly maps the spore drift and returns with precise data.",
+          "dc_plus_5_or_20_extended_lore": "Kaio discovers a hidden biome corridor shaped entirely by the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea."
+        }
+      },
+      "master_narrator": {
+        "executor": "Jules",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "You hand the data over."
+      }
+    }
   },
-  "target_path": "qa/sol_001_counterfactual_replay.json"
+  "narrative_prose": "Kaio adjusted the tarnished brass knobs of his sextant, peering through the swirling, bioluminescent green fog that clung to the jagged basalt valley walls. The low, resonant hum of the drifting spores vibrated against his teeth, accompanied by the sharp, biting cold of the ridge crest wind cutting through his heavy coat. He took a deep breath, the damp, earthy scent of ancient mycelium mixed with ozone filling his lungs, leaving a static tang on his tongue. He had to map the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea before the thermal shear completely scrambled the local magnetic fields.\n\nAhead, a dense, glowing eddy of spores seemed to ATTRACT the stray magnetic currents, swirling ominously. He knew he could use the towering, piezo-electric basalt pinnacle to DEFEND against the worst of the magnetic interference, but it required a tricky climb. He also spotted a patch of luminescent cave moss, ready to CONSUME any loose nitrogen in the air. If he misjudged the currents, the fog would only thicken, forcing a much longer, colder trek back to the Hub. But if he read the hum right, he could chart a new, efficient biome corridor. He gathered his notes, stuffing the glowing, moss-covered rocks into his many pockets. He turned to head back to the Hub, spotting Ryn waiting near the entrance with a stern look about missing ration receipts. Kaio bounded over, handing Ryn a beautifully sketched map of the thermal shears, physically passing the heavy parchment baton.",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "disallow_overwrite": false
 }
