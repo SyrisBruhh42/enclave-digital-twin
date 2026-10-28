@@ -17,6 +17,28 @@
   },
   "headline": "SOL 2 EVENING DISPATCH: The Feast and the Ferrofluid Sea",
   "anchor_intro": "[VEX]: Good evening, Enclave! Live from the crystal-slate transmitter above Ryn's hearth at the close of Sol 2's Feast. [DORIAN]: And a warm hearthside greeting from your Living Chronicler.",
+  "lead_stories": [
+    {
+      "story_id": "story_002_01",
+      "pattern_type": "SCHRODINGER_HARVEST_STANDOFF",
+      "story_title": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+      "narrative_summary": "A three-way specialist resource standoff (All 16 members of The Enclave gathered around Ryn and Elara's hearth on Sol 1 to break warm iron-wheat bread, debate magnetohydrodynamic kelvin-helmholtz shear across the ferrofluid sea, and release the day's magnetospheric tension.) was resolved via Diplomacy of Competence and Hub adjudication ([DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands.).",
+      "cited_event_ids": [
+        "evt_s001_t0001_dawn_shift",
+        "evt_s001_t0004_the_feast"
+      ],
+      "actors": [
+        "enclave_03_silas",
+        "enclave_01_hector"
+      ],
+      "location": "The_First_Forge",
+      "locations": [
+        "The_First_Forge"
+      ],
+      "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+      "salience_score": 85.0
+    }
+  ],
   "lead_story": {
     "story_id": "story_002_01",
     "pattern_type": "SCHRODINGER_HARVEST_STANDOFF",
@@ -38,8 +60,8 @@
     "salience_score": 85.0
   },
   "developing_stories": [],
-  "four_block_digests": {
-    "DAWN_SHIFT": {
+  "block_digests": [
+    {
       "headline": "DAWN_SHIFT",
       "summary": "[DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands.",
       "cited_event_ids": [
@@ -52,7 +74,7 @@
       "location": "The_First_Forge",
       "day_phase": "DAWN_SHIFT"
     },
-    "MIDDAY_EXPEDITION": {
+    {
       "headline": "MIDDAY_EXPEDITION",
       "summary": "[MIDDAY_EXPEDITION at Basalt_Spire_Ridge] Hector calibrated the hand-forged brass instrumentation against relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron, then passed the warm copper calibration baton directly into Kaio's hands.",
       "cited_event_ids": [
@@ -65,7 +87,7 @@
       "location": "Basalt_Spire_Ridge",
       "day_phase": "MIDDAY_EXPEDITION"
     },
-    "DUSK_CRAFT": {
+    {
       "headline": "DUSK_CRAFT",
       "summary": "[DUSK_CRAFT at The_Simulacrum] Kaio calibrated the hand-forged brass instrumentation against polyvagal neuro-somatic thermal regulation under bifurcated crater micro-climates, then passed the warm copper calibration baton directly into Orion's hands.",
       "cited_event_ids": [
@@ -78,7 +100,7 @@
       "location": "The_Simulacrum",
       "day_phase": "DUSK_CRAFT"
     },
-    "THE_FEAST": {
+    {
       "headline": "THE_FEAST",
       "summary": "All 16 members of The Enclave gathered around Ryn and Elara's hearth on Sol 1 to break warm iron-wheat bread, debate magnetohydrodynamic kelvin-helmholtz shear across the ferrofluid sea, and release the day's magnetospheric tension.",
       "cited_event_ids": [
@@ -105,8 +127,10 @@
       "location": "The_Hub_Hearth",
       "day_phase": "THE_FEAST"
     }
+  ],
+  "sibling_grid_blind_spot_column": {
+    "entries": []
   },
-  "gossip_items": [],
   "covered_day_phases": [
     "DAWN_SHIFT",
     "MIDDAY_EXPEDITION",
@@ -225,5 +249,7 @@
       }
     }
   },
-  "narrative_prose": "Ryn adjusted the heavy brass ladle, measuring the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea by the vibrations in the copper stockpot. The broth bubbled steadily, a small comfort against the harsh environment outside. She filled a bowl, the savory aroma cutting through the ozone tang of the forge next door. With a nod, she handed the warm portion directly to Silas, ensuring the next watch was well-fed."
+  "narrative_prose": "Ryn gripped the heavy brass ladle tighter to DEFEND the simmering broth from splattering as the vibrations of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea shook the hearth. The rich aromas of caramelized root vegetables and ozone filled the space, designed to ATTRACT everyone back from their shifts into the comforting warmth, punctuated by the rhythmic bubbling of the copper stockpot and the warm amber firelight flickering against dark polished copper. Ryn ordered Silas to CONSUME the savory, hearty broth with a sharp metallic tang steaming slightly under the strain of the oppressively comfortingly warm and humid air near the stoves before his night watch, directly passing the warm ceramic baton into Silas's hands.",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_13_ryn -> Handoff=enclave_03_silas.",
+  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified"
 }
