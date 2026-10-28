@@ -1,0 +1,166 @@
+{
+  "prank_id": "prank_sol01_d5a58898fd",
+  "event_id": "evt_s005_t0018_shadow_prank",
+  "event_type": "SHADOW_ECONOMY_PRANK_MATURED",
+  "status": "MATURED",
+  "matured": true,
+  "matured_on_sol": 5,
+  "origin_sol": 1,
+  "maturity_sol": 5,
+  "feast_delay": 4,
+  "lethality": 0,
+  "law_l11_clamped": false,
+  "severity": "PETTY_AFFECTIONATE_INCONVENIENCE",
+  "node_a": "enclave_01_hector",
+  "node_b": "enclave_03_silas",
+  "node_c": "enclave_13_ryn",
+  "instigator": "enclave_01_hector",
+  "intended_target": "enclave_03_silas",
+  "collateral_recipient": "enclave_13_ryn",
+  "target_b_missed": true,
+  "blamed_node": "enclave_01_hector",
+  "attributed_to": "enclave_01_hector",
+  "prank_description": "The shadow prank setup.",
+  "summary": "Shadow prank matures.",
+  "narrative_prose": "The exterior vista was battered by the churning ferrofluid sea, an aggressive expanse of iron-rich waves constantly attempting to CONSUME the rocky shore. High overhead, violent winds howled, their force amplified by the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea that threatened to peel the protective plating from the colony structures. The dark sky boiled in bruising shades of violet and bruised orange, filled with a deafening roar and the metallic ozone scent of the storm. Hector grabbed the cold static tang of the brace to DEFEND his footing against the shear, doing his best to CONCEAL the erratic trembling in his hands. Before the wind could worsen, he violently shoved the baton straight into Kaio\u2019s waiting palm.",
+  "blind_spot_attribution": {
+    "instigator_node_a": "enclave_01_hector",
+    "oblivious_target_node_b": "enclave_03_silas",
+    "target_b_missed": true,
+    "inconvenienced_node_c": "enclave_13_ryn",
+    "blamed_by_c": "enclave_01_hector",
+    "asymmetric_loop_closed": true
+  },
+  "tick_id": 18,
+  "colony_sol": 5,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-10-29T06:00:00Z",
+  "base_snapshot_tick": 1,
+  "location": "The_First_Forge",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_05_kaio"
+  ],
+  "importance": 6.0,
+  "novelty_score": 0.68,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
+  "second_pass_repair_constraint": "enclave:17905003312542600742",
+  "f120_stall_timeout": "session_exceeded_25m_cut_loss_relaunch",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "disallow_overwrite": false,
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 5,
+      "colony_sol": 5,
+      "tick_id": 18,
+      "pacing_mode": "MULLIGAN_CRISIS",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Resolve shadow prank payload",
+        "mid_term_milestone": "Stabilize The Forge",
+        "campaign_arc_climax": "Survive the ferrofluid storm"
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge_Exterior",
+      "macro_silhouette": "The exterior vista was battered by the churning ferrofluid sea, an aggressive expanse of iron-rich waves constantly attempting to CONSUME the rocky shore. High overhead, violent winds howled, their force amplified by the magnetohydrodynamic Kelvin-Helmholtz shear that threatened to peel the protective plating from the colony structures. The dark sky boiled in bruising shades of violet and bruised orange.",
+      "sensory_palette": {
+        "sight_and_color": "Bruised orange sky",
+        "sound": "Deafening roar",
+        "smell": "Metallic ozone",
+        "tactile_temperature": "Cold static tang",
+        "taste_optional": "static tang"
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Equipment brace",
+          "affordance_description": "Can block the wind",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Loose tools",
+          "affordance_description": "Can be drawn in",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Shadow crevice",
+          "affordance_description": "Can hide items",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_sea",
+        "name_and_role": "Ferrofluid Sea",
+        "motivation_goal": "Consume the outcroppings",
+        "consistent_method": "Violent magnetic tides",
+        "immediate_complication": "High winds",
+        "pressure_index": 7,
+        "uninterrupted_escalation": "Waves will breach the platform"
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Prank matures",
+        "level_2_local": "Shadow economy interaction",
+        "level_3_campaign_arc": "Specialist friction and bonding"
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        },
+        {
+          "actor_id": "enclave_05_kaio",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        4,
+        8,
+        15,
+        16,
+        23
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.8,
+      "motivational_vector_saturation": 0.7,
+      "unresolved_conflict_ratio": 0.6,
+      "temporal_horizon_immediacy": 0.9,
+      "composite_lpi": 0.75,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "Ollama",
+        "model": "qwen3.5:4b-q4_K_M",
+        "temperature": 0.05,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The baton drops into the ferrofluid sea.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Hector misjudges the wind and throws the baton wide.",
+          "below_dc_complicated_fail_forward": "Kaio catches it, but is dragged to the edge.",
+          "meets_dc_clean_success": "A perfect, firm handoff.",
+          "dc_plus_5_or_20_extended_lore": "Kaio catches it seamlessly and immediately recalibrates the console."
+        }
+      },
+      "master_narrator": {
+        "executor": "Ollama",
+        "temperature": 0.35,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "\"Take it!\""
+      }
+    }
+  }
+}
