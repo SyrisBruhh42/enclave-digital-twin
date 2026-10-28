@@ -126,5 +126,11 @@
       }
     }
   },
-  "narrative_prose": "Kaio leaned over the jagged basalt edge, his heavy boots grinding against the vibrating rock as the Magnetohydrodynamic Kelvin-Helmholtz shear screamed across the ferrofluid sea below. The volatile expanse of liquid obsidian shattered into fractal waves, throwing violent arcs of violet lightning into the static-choked air. 'Incredible,' he breathed, his teeth humming with piezoelectric charge while a sharp, metallic copper tang flooded his tongue. He fought to steady his brass sextant against the relentless magnetic ripcurrent, the heavy metal pulling fiercely toward the churning abyss. Securing his grip, he turned toward the heavily-laden figure trudging up the path. He tossed a glowing, statically charged hunk of ridge-crystal toward Ryn's heavy apron. 'Catch! The shear is stabilizing, Chef!'"
+  "narrative_prose": "Kaio leaned over the jagged basalt edge, feeling the biting cold wind mixed with static-charged warmth as the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea began to surge. The volatile expanse of liquid obsidian shattered into fractal waves, throwing violent arcs of violet lightning into the air, threatening to CONSUME anything near the edge. 'Incredible,' he breathed over the screaming magnetic shear, his teeth vibrating from the resonant crystalline humming while the smell of ozone and deep metallic tang filled his lungs. The sharp taste of copper flooded the back of his tongue. He had to DEFEND his brass sextant against the relentless magnetic ripcurrent, the heavy metal pulling fiercely toward the churning abyss. Securing his grip, he stepped back to CONCEAL his cartography notes behind a basalt overhang, turning toward the heavily-laden figure trudging up the path. He tossed a glowing, statically charged hunk of ridge-crystal toward Ryn's heavy apron. 'Catch! The shear is stabilizing, Chef!'",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "actors": [
+    "enclave_05_kaio",
+    "enclave_13_ryn"
+  ]
 }
