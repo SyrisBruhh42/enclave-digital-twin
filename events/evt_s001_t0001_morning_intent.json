@@ -68,7 +68,7 @@
         "sound": "The rhythmic, heavy thud of pneumatic hammers and the hum of magnetic containment.",
         "smell": "Sharp metallic ozone mingling with the scent of molten brass.",
         "tactile_temperature": "Oppressively hot and dry, with a noticeable static charge prickling the skin.",
-        "taste": "The metallic tang of ozone."
+        "taste_optional": "The metallic tang of ozone."
       },
       "interactive_features": [
         {
@@ -151,5 +151,10 @@
         "agency_handoff_prompt": "Hector, take the baton and mind the shear."
       }
     }
-  }
+  },
+  "second_pass_repair_constraint": "enclave:5678072367957086928",
+  "f120_stall_timeout": "session_exceeded_25m_cut_loss_relaunch",
+  "narrative_prose": "The First Forge hummed with violent intensity, a cavernous space bathed in the dim amber light reflecting off polished copper and oxidized rust. Silas anchored his heavy boots against the thrumming iron deck, feeling the rhythmic, heavy thud of pneumatic hammers vibrating up his spine as the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea threatened to rip the magnetic conductor from its mountings. The air smelled of sharp metallic ozone mingling with the scent of molten brass, oppressively hot and dry, carrying a noticeable static charge that prickled the skin and left a metallic tang of ozone in his mouth. He braced himself behind the thermal baffle to DEFEND against the radiant heat, narrowing his eyes as he used the scrap pile to CONCEAL the delicate chronometer parts from the stray sparks. He firmly gripped the baton, ready to ATTRACT Hector's attention over the din, trusting the prodigy to handle the volatile alignment without dropping the handover into the abyss.",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR"
 }
