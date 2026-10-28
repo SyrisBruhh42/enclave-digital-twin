@@ -1,0 +1,128 @@
+{
+  "event_id": "evt_s005_t0017_world_consequence",
+  "tick_id": 17,
+  "colony_sol": 5,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-10-29T00:00:00Z",
+  "base_snapshot_tick": 16,
+  "event_type": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+  "location": "The_First_Forge",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "narrative_prose": "The First Forge stood as a monolithic silhouette against the dawn, bathed in the bruising violet light of a new sol. Silas felt the immense heat radiating from the core, catching the scent of burnt ozone and roasted copper on the air, while the thrumming resonance of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea vibrated through the metal deck into his boots, leaving a faint static tang in his mouth. He moved swiftly to DEFEND the delicate induction coils against sudden magnetic spikes. Turning his attention to the recalibrated capacitors, he adjusted them to ATTRACT the chaotic ambient energy into a stable containment loop. Finally, he triggered the emergency vents, allowing the system to CONSUME the excess pressure before it could cause a cascade failure. The immediate risk was a blown conduit, but the deeper issue was maintaining structural integrity, all crucial for the Enclave's long-term survival in this hostile sanctuary; failure here meant only minor burns and a long day of repairs, a lesson in humility rather than a fatal disaster. Satisfied with the stabilization, Silas firmly pressed the heavy iron calibration baton directly into Hector's waiting hand.",
+  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 5,
+      "colony_sol": 5,
+      "tick_id": 17,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Manage the world consequence of the recent storm.",
+        "mid_term_milestone": "Reinforce the First Forge against ferrofluid shear.",
+        "campaign_arc_climax": "Master the magnetic environment for survival."
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "The First Forge stands monolithic against the dawn, its reinforced exterior battered by recent magnetic storms. Inside, the massive crucible glows with intense, contained energy.",
+      "sensory_palette": {
+        "sight_and_color": "Bruising violet dawn light contrasting with the harsh amber glow of the crucible.",
+        "sound": "The deep, thrumming resonance of the Magnetohydrodynamic Kelvin-Helmholtz shear.",
+        "smell": "Burnt ozone and roasted copper.",
+        "tactile_temperature": "Immense, dry heat radiating from the core, with a vibrating floor.",
+        "taste_optional": "A faint static tang from the highly charged air."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Induction Coils",
+          "affordance_description": "Delicate coils requiring protection from magnetic spikes.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Capacitors",
+          "affordance_description": "Can be tuned to draw in ambient energy.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Emergency Vents",
+          "affordance_description": "Safely processes excess pressure.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "alien_variable_shear",
+        "name_and_role": "Alien Variable: Unpredictable Shear",
+        "motivation_goal": "Test the structural limits of the Forge.",
+        "consistent_method": "Generating sudden, intense magnetic spikes.",
+        "immediate_complication": "Requires constant manual adjustment to prevent overload.",
+        "pressure_index": 7,
+        "uninterrupted_escalation": "Minor conduit blowouts and temporary power loss."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Prevent an immediate conduit blowout.",
+        "level_2_local": "Maintain the structural integrity of the Forge.",
+        "level_3_campaign_arc": "Ensure the Enclave's long-term survival in a hostile sanctuary."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        12,
+        8,
+        15,
+        4,
+        19
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.5,
+      "motivational_vector_saturation": 0.6,
+      "unresolved_conflict_ratio": 0.4,
+      "temporal_horizon_immediacy": 0.8,
+      "composite_lpi": 0.575,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "Enclave_Core",
+        "model": "Tactical_Arbiter_v1",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "Minor burns and a long day of repairs instead of a fatal disaster.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Silas causes a minor spark shower, requiring immediate recalibration.",
+          "below_dc_complicated_fail_forward": "The system holds, but requires constant monitoring for the rest of the shift.",
+          "meets_dc_clean_success": "Silas smoothly stabilizes the Forge's containment field.",
+          "dc_plus_5_or_20_extended_lore": "Silas discovers a more efficient tuning frequency for the capacitors."
+        }
+      },
+      "master_narrator": {
+        "executor": "Enclave_Narrator",
+        "temperature": 0.6,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Silas firmly presses the heavy iron calibration baton directly into Hector's waiting hand."
+      }
+    }
+  }
+}
