@@ -1,0 +1,140 @@
+{
+  "disallow_overwrite": false,
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "event_type": "COUNTERFACTUAL_REPLAY",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "narrative_prose": "Kaio skids into the observation bunker, boots sliding across the slick metal grating as he clutches the battered baton. The ferrofluid sea thrashes wildly beyond the reinforced porthole, dark peaks rising in the jagged rhythms of a Magnetohydrodynamic Kelvin-Helmholtz shear. The air hums with a deep, unsettling vibration, while the sharp, coppery tang of ozone stings the back of his throat. He tosses the baton cleanly to Ryn, who snatches it from the air with a practiced motion. The bunker's heavy blast doors remain sealed to DEFEND against the raging storm, while a faintly glowing beacon on the console attempts to ATTRACT the attention of passing skiffs. Beneath a tarp in the corner, spare oxygen canisters are positioned to CONCEAL emergency rations.",
+  "actors": [
+    "enclave_05_kaio",
+    "enclave_13_ryn"
+  ],
+  "next_pov_target": "enclave_13_ryn",
+  "ENT": "enclave-digital-twin:COUNTERFACTUAL_PERSONALITY_STUDY_REPLAYS",
+  "ATTR": "constitutional_baseline",
+  "CONF": "1.00",
+  "TIME": "2026-10-28T14:12:01Z",
+  "PROV": "init",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 5,
+      "colony_sol": 5,
+      "tick_id": 19,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Transfer the baton to Ryn securely.",
+        "mid_term_milestone": "Stabilize the ferrofluid sea.",
+        "campaign_arc_climax": "Complete the digital twin integration."
+      },
+      "day_phase": "DUSK_CRAFT"
+    },
+    "active_location": {
+      "location_id": "Observation_Bunker",
+      "macro_silhouette": "The cramped bunker hangs precariously above the churning ocean, its walls groaning under the immense pressure of the storm. Warning lights pulse ominously in the dim, cramped space.",
+      "sensory_palette": {
+        "sight_and_color": "Flashing crimson warnings against dark grey steel.",
+        "sound": "The deep hum of the ocean and the rattle of loose grating.",
+        "smell": "Ozone and stale sweat.",
+        "tactile_temperature": "Cold, damp air.",
+        "taste_optional": "The static tang of electrified mist."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Blast Doors",
+          "affordance_description": "Heavy metal doors sealing off the bunker.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Emergency Beacon",
+          "affordance_description": "A flashing light to signal for help.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Supply Tarp",
+          "affordance_description": "A heavy canvas covering supplies.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_sea",
+        "name_and_role": "The Raging Ocean",
+        "motivation_goal": "Destabilize the bunker's foundation.",
+        "consistent_method": "Relentless physical battering.",
+        "immediate_complication": "A sudden surge breaches a lower vent.",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "The entire structure will collapse if the shear isn't mitigated."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The sea is acting up due to the shear.",
+        "level_2_local": "The bunker's defenses are failing under the unprecedented strain.",
+        "level_3_campaign_arc": "The planetary magnetosphere is entering a chaotic phase."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_05_kaio",
+          "tactical_role": "STRIKER"
+        },
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.5,
+      "motivational_vector_saturation": 0.6,
+      "unresolved_conflict_ratio": 0.4,
+      "temporal_horizon_immediacy": 0.8,
+      "composite_lpi": 0.75,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "ollama",
+        "model": "llama3",
+        "temperature": 0.05,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The bunker takes severe structural damage.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "You misunderstand the waves and get crushed.",
+          "below_dc_complicated_fail_forward": "You barely brace in time, taking minor damage.",
+          "meets_dc_clean_success": "You secure the bunker perfectly.",
+          "dc_plus_5_or_20_extended_lore": "You secure it and discover a new frequency."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_llm",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "What do you do now?"
+      }
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ],
+    "interlocutor_full_cards_loaded": 0,
+    "total_tokens": 1000,
+    "max_tokens": 3500
+  },
+  "VAL": "laws_L01_through_L16_and_calypso_verified"
+}
