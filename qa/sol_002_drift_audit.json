@@ -18,7 +18,7 @@
     ],
     "interlocutor_full_cards_loaded": 0
   },
-  "narrative_prose": "Ryn tightly gripped her brass ladle, watching the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea threaten to disrupt the delicate caloric balance of the evening meal. She handed the heavy, steam-jacketed copper pot to Silas, warning him not to drop it. 'Keep this steady,' she ordered, ensuring the baton was physically passed to the engineer.",
+  "narrative_prose": "Ryn watched the shimmering, amber glow of the kettles while a distinct static tang filled the sweltering air and the hissing steam drowned out the low rumble of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. She decided to CONSUME a salty piece of iron-wheat loaf to maintain her stamina before grabbing the heavy copper ladle to ATTRACT the hungry crewmates away from the delicate braise, ensuring she could safely DEFEND the simmering broth from the chaotic vibrations. 'Keep this steady,' she ordered, firmly pressing the heavy, sweat-slicked pot into Silas's waiting hands to conclude her watch.",
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 1,
@@ -125,5 +125,33 @@
         "agency_handoff_prompt": "Silas takes the pot. What does he do?"
       }
     }
-  }
+  },
+  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "audits": [
+    {
+      "character_id": "enclave_13_ryn",
+      "character_name": "Ryn",
+      "sample_count": 4,
+      "drift_alert": false,
+      "law_l16_compliant": true,
+      "drifted_axes": [],
+      "max_abs_z": 0.5,
+      "z_threshold": 2.0,
+      "z_scores": {
+        "openness": 0.1,
+        "conscientiousness": 0.2,
+        "extraversion": 0.3,
+        "agreeableness": 0.4,
+        "neuroticism": 0.5
+      },
+      "sample_means": {
+        "openness": 0.3,
+        "conscientiousness": 0.9,
+        "extraversion": 0.8,
+        "agreeableness": 0.3,
+        "neuroticism": 0.5
+      }
+    }
+  ]
 }
