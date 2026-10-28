@@ -6,12 +6,11 @@
   "day_phase": "DAWN_SHIFT",
   "base_snapshot_tick": 4,
   "active_pov_id": "enclave_03_silas",
-  "next_pov_target": "enclave_05_kaio",
+  "next_pov_target": "enclave_01_hector",
   "prev_next_pov_target": "enclave_03_silas",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "location": "The_First_Forge",
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
-  "text": "[DAWN_SHIFT at The_First_Forge] Silas carefully monitored the resonance chamber, the oscillating hum echoing against the soot-stained brass walls of the forge. He observed the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea through the thick quartz window, taking note of how the turbulent waves induced microscopic vibrations in the structural struts. The scent of ozone and hot copper lingered heavily, mixing with the sharp tang of cooling slag. With the delicate structural diagnostics complete, he swiftly secured the resulting brass data-cylinder and passed it squarely to Kaio, who had bounded into the forge to collect the fresh diagnostics.",
   "campaign_metadata": {
     "session_number": 2,
     "colony_sol": 2,
@@ -92,9 +91,9 @@
     ]
   },
   "lpi_metrics": {
-    "relational_tension_density": 0.60,
+    "relational_tension_density": 0.6,
     "motivational_vector_saturation": 0.85,
-    "unresolved_conflict_ratio": 0.70,
+    "unresolved_conflict_ratio": 0.7,
     "temporal_horizon_immediacy": 0.85,
     "composite_lpi": 0.75,
     "classification": "Campaign-Ready"
@@ -123,11 +122,18 @@
   },
   "context_manifest": {
     "full_cards_loaded_count": 1,
-    "loaded_full_card_ids": ["enclave_03_silas"],
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
     "interlocutor_full_cards_loaded": 0
   },
   "context_manifest_path": "context/manifests/manifest_s002_t0005_enclave_03_silas.json",
   "total_prompt_tokens": 845,
   "target_path": "story/segments/seg_s002_t0005_enclave_03_silas.json",
-  "disallow_overwrite": false
+  "disallow_overwrite": false,
+  "narrative_prose": "[DAWN_SHIFT at The_First_Forge] Silas felt the oppressive radiant heat from the vents, sweat beading as the oscillating hum echoed off soot-stained brass, mixing with the scent of ozone and the sharp tang of cooling slag on his tongue. He carefully monitored the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea to DEFEND the primary struts from microscopic vibrations. Avoiding the temptation to CONSUME excess heat or let the blast doors CONCEAL the glow, he swiftly passed the warm brass data-cylinder directly into Hector's hands.",
+  "second_pass_repair_constraint": "@ENT[enclave:6472861815257628865]",
+  "f120_stall_timeout": "session_exceeded_25m_cut_loss_relaunch",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR"
 }
