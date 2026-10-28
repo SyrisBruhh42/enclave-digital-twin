@@ -10,7 +10,6 @@
   "actors": [
     "enclave_13_ryn"
   ],
-  "summary": "Ryn wrestles with the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, desperately maintaining the delicate caloric balance of the Hub's stockpots before silently passing a bowl of sustenance to Silas.",
   "importance": 8.0,
   "novelty_score": 0.7,
   "lethality": 0,
@@ -141,5 +140,7 @@
         "agency_handoff_prompt": "With the galley finally returning to a manageable simmer, Ryn wipes her brow, loads a heavy brass bowl with perfectly stabilized stew, and aggressively thrusts it into Silas's weathered hands."
       }
     }
-  }
+  },
+  "steward_note": "deterministic-enclave-5section-v2",
+  "narrative_prose": "Ryn fought to DEFEND the delicate caloric balance of the Hub's stockpots against the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. Watching the deep umber glow and hearing the harsh shuddering of copper, she caught a sharp tang of ozone and a metallic bite on her tongue, braving the oppressive, localized heat to CONSUME the danger. With the situation stabilized, she managed to CONCEAL her fierce pride and thrust the bowl of sustenance into Silas's hands, passing the baton securely into the engineer's possession."
 }
