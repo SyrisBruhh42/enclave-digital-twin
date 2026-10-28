@@ -10,7 +10,6 @@
   "actors": [
     "enclave_13_ryn"
   ],
-  "summary": "Ryn wrestles with the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, desperately maintaining the delicate caloric balance of the Hub's stockpots before silently passing a bowl of sustenance to Silas.",
   "importance": 8.0,
   "novelty_score": 0.7,
   "lethality": 0,
@@ -141,5 +140,9 @@
         "agency_handoff_prompt": "With the galley finally returning to a manageable simmer, Ryn wipes her brow, loads a heavy brass bowl with perfectly stabilized stew, and aggressively thrusts it into Silas's weathered hands."
       }
     }
-  }
+  },
+  "steward_note": "deterministic-enclave-5section-v2",
+  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified",
+  "narrative_prose": "The dense warmth of the hearth presses outward, fighting the chilling draft of the valley floor as copper kettles shudder under unseen environmental stress. Plumes of spiced steam twist violently, catching erratic flickers from the ferrofluid manifold's ambient glow. It is a tight sanctuary of boiling stock and scrubbed metal, anchoring the sprawl of the settlement against planetary forces. Ryn wrestles with the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, desperately DEFENDing the delicate caloric balance of the Hub's stockpots. She must CONSUME the raw data points of thermal fluctuation to CONCEAL the vulnerability of their dwindling reserves. Lingering roasted myco-protein, underpinned by a metallic, mineral bite, cuts fiercely through a harsh, creeping structural cold. The rhythmic shuddering of heavy stockpots and the sharp scrape of brass ladles set the cadence as she passes the bowl to Silas.",
+  "taste_optional": "Lingering roasted myco-protein, underpinned by a metallic, mineral bite."
 }
