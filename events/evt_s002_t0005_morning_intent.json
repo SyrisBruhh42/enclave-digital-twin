@@ -16,6 +16,7 @@
   "prev_next_pov_target": "enclave_03_silas",
   "disallow_overwrite": false,
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2",
   "context_manifest": {
     "full_cards_loaded_count": 1,
     "interlocutor_full_cards_loaded": 0,
@@ -23,7 +24,7 @@
       "enclave_03_silas"
     ]
   },
-  "summary": "Silas squints through the reinforced viewport of The First Forge, calibrating the heavy brass chronometer against the erratic resonance of the exterior storm. The magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea is pulling violent eddies into the atmospheric grid, demanding absolute precision. He steps back from the primary anvil, his knuckles white around the insulated baton, and firmly places it into Hector's awaiting hand for the shift transition.",
+  "narrative_prose": "Silas squints through the reinforced viewport of The First Forge, calibrating the heavy brass chronometer against the erratic resonance of the exterior storm. The magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea is pulling violent eddies into the atmospheric grid, demanding absolute precision. He steps back from the primary anvil, his knuckles white around the insulated baton, and firmly places it into Hector's awaiting hand for the shift transition. He must DEFEND the delicate chronometer settings from the fluctuating vibrations. To do so, he uses heavy lead dampeners to ATTRACT the stray magnetic fields away. When they spark too intensely, he will CONCEAL the most fragile mechanisms beneath an oxidized iron cowl. The interior forge space smells strongly of pungent metallic ozone. He hears the heavy, rhythmic thudding underscored by the high-pitched whine of overstressed capacitors. The flashes of harsh actinic blue against the dim amber glow of the crucible sting his eyes. Stiflingly hot waves of air radiate from the central blast doors against his skin, and a sharp, static tang of electricity lingers on the back of his tongue.",
   "importance": 8.0,
   "novelty_score": 0.85,
   "lethality": 0,
@@ -47,6 +48,8 @@
       "path": "events/evt_s002_t0005_morning_intent.json"
     }
   ],
+  "second_pass_repair_constraint": "true",
+  "f120_stall_timeout": "true",
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 2,
@@ -118,7 +121,9 @@
       "prerolled_hazard_queue": [
         4,
         8,
-        15
+        15,
+        10,
+        12
       ]
     },
     "lpi_metrics": {
