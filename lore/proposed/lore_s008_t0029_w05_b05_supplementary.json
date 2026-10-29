@@ -119,5 +119,6 @@
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "prev_next_pov_target": "enclave_03_silas",
-  "next_pov_target": "enclave_01_hector"
+  "next_pov_target": "enclave_01_hector",
+  "target_path": "lore/proposed/lore_s008_t0029_w05_b05_supplementary.json"
 }

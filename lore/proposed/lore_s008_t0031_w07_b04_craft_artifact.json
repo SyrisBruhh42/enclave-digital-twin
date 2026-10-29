@@ -116,5 +116,6 @@
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "active_pov_id": "enclave_05_kaio",
   "prev_next_pov_target": "enclave_05_kaio",
-  "next_pov_target": "enclave_13_ryn"
+  "next_pov_target": "enclave_13_ryn",
+  "target_path": "lore/proposed/lore_s008_t0031_w07_b04_craft_artifact.json"
 }

@@ -128,5 +128,6 @@
     ],
     "interlocutor_full_cards_loaded": 0,
     "active_pov_id": "enclave_05_kaio"
-  }
+  },
+  "target_path": "story/segments/seg_s008_t0031_enclave_05_kaio.json"
 }

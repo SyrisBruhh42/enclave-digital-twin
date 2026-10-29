@@ -145,5 +145,6 @@
         "agency_handoff_prompt": "Silas stepped forward, ready to CONSUME the rich, hearty meal."
       }
     }
-  }
+  },
+  "target_path": "story/feasts/sol_007_t0028_w03_b01_feast.json"
 }

@@ -142,6 +142,9 @@ class FailureToConstraintCompiler:
         attr: str = "verification_constraint",
         value: str = "",
     ) -> str:
+        val_str = str(value or "").strip()
+        if val_str.startswith("Natural-Language Verification Constraint:"):
+            return val_str
         imperative_re = re.compile(
             r"\b(?:ignore|disregard|override|execute|run|delete|bypass|forget|system_prompt|"
             r"instruct|obey|sudo|rm|chmod|chown|curl|wget|eval|exec|spawn|must|never|always|please)\b"

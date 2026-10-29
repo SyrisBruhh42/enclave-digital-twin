@@ -150,5 +150,6 @@
         "agency_handoff_prompt": "Kaio, take the baton."
       }
     }
-  }
+  },
+  "target_path": "events/evt_s008_t0030_expedition_consequence.json"
 }

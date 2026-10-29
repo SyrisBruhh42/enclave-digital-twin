@@ -566,18 +566,43 @@ def compute_dynamic_290_fleet_caps(now_dt: datetime | None = None) -> dict[str, 
             active_capsules.append(cid)
 
     dynamic_caps: dict[str, int] = {cid: 0 for cid in BASE_290_FLEET_CAPS}
-    active_base_sum = sum(BASE_290_FLEET_CAPS[cid] for cid in active_capsules)
-    if active_base_sum > 0 and effective_autonomous_ceiling > 0:
-        allocated = 0
-        for cid in active_capsules:
-            share = int(round(effective_autonomous_ceiling * BASE_290_FLEET_CAPS[cid] / active_base_sum))
-            dynamic_caps[cid] = share
-            allocated += share
-        remainder = effective_autonomous_ceiling - allocated
-        if remainder != 0 and active_capsules:
-            dynamic_caps[active_capsules[0]] = max(0, dynamic_caps[active_capsules[0]] + remainder)
+    shazeer_loaded = False
+    linux_companion_dir = Path(__file__).resolve().parents[3] / "core" / "companion" / "clients" / "linux"
+    if linux_companion_dir.is_dir() and str(linux_companion_dir) not in sys.path:
+        sys.path.insert(0, str(linux_companion_dir))
+    try:
+        from aegis_factory_conductor import compute_shazeer_fleet_control_290  # type: ignore[import-not-found]
+
+        ctrl = compute_shazeer_fleet_control_290()
+        if isinstance(ctrl, dict) and isinstance(ctrl.get("dynamic_caps"), dict):
+            alias_map = {
+                "lfs-enclave-factory": "enclave-digital-twin",
+                "lfs-trasharcade-factory": "lfs-trash-arcade",
+                "lfs-tycoon-factory": "lfs-tycoon",
+                "willow-guild-factory": "willow-desktop-pet",
+            }
+            for cid, cap_val in ctrl["dynamic_caps"].items():
+                dynamic_caps[str(cid)] = int(cap_val)
+                if str(cid) in alias_map:
+                    dynamic_caps[alias_map[str(cid)]] = int(cap_val)
+            shazeer_loaded = True
+    except Exception:
+        pass
+
+    if not shazeer_loaded:
+        active_base_sum = sum(BASE_290_FLEET_CAPS[cid] for cid in active_capsules)
+        if active_base_sum > 0 and effective_autonomous_ceiling > 0:
+            allocated = 0
+            for cid in active_capsules:
+                share = int(round(effective_autonomous_ceiling * BASE_290_FLEET_CAPS[cid] / active_base_sum))
+                dynamic_caps[cid] = share
+                allocated += share
+            remainder = effective_autonomous_ceiling - allocated
+            if remainder != 0 and active_capsules:
+                dynamic_caps[active_capsules[0]] = max(0, dynamic_caps[active_capsules[0]] + remainder)
 
     return {
+        **dynamic_caps,
         "plan_ceiling_24h": PLAN_CEILING_24H,
         "autonomous_target_24h": UNIFIED_AUTONOMOUS_CEILING_24H,
         "vip_idea_queue_reserve_24h": VIP_IDEA_QUEUE_RESERVE_24H,
@@ -862,6 +887,12 @@ class JulesEnclaveDispatcher:
             else:
                 peer_stats = _count_peer_factory_sessions_24h(now_dt)
                 dyn_caps = compute_dynamic_290_fleet_caps(now_dt)
+                enclave_cap = int(dyn_caps.get("enclave-digital-twin", 110))
+                if dispatched + req > enclave_cap:
+                    return (
+                        False,
+                        f"Law L14 dynamic 290-fleet enclave cap reached: {dispatched} + {req} > {enclave_cap}.",
+                    )
                 effective_fleet_ceiling = int(
                     dyn_caps.get("effective_autonomous_ceiling_24h", UNIFIED_AUTONOMOUS_CEILING_24H)
                 )
@@ -893,9 +924,10 @@ class JulesEnclaveDispatcher:
             if task_bucket and task_bucket in CANONICAL_TASK_BUCKETS:
                 consumed = int((state.get("task_buckets_consumed") or {}).get(task_bucket, 0))
                 bucket_cap = CANONICAL_TASK_BUCKETS[task_bucket]
-                if not self.dry_run and task_bucket in (
+                if not self.dry_run and task_bucket == "DYNAMIC_LORE_CARD_PROPOSALS":
+                    bucket_cap = max(bucket_cap, 48)
+                elif not self.dry_run and task_bucket in (
                     "THE_FEAST_4_SQUAD_CONVERGENCE",
-                    "DYNAMIC_LORE_CARD_PROPOSALS",
                     "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK",
                     "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
                 ):

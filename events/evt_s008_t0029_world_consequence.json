@@ -150,5 +150,6 @@
         "agency_handoff_prompt": "Hector, take the baton."
       }
     }
-  }
+  },
+  "target_path": "events/evt_s008_t0029_world_consequence.json"
 }

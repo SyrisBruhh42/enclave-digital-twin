@@ -346,7 +346,7 @@ def install_systemd_units(repo_root: Path = REPO_ROOT, enable_timers: bool = Tru
 
 
 def _compute_disk_verified_barrier(repo_root: Path = REPO_ROOT) -> tuple[int, int]:
-    """Find highest tick tau >= 1 where both an event and a segment exist on disk.
+    """Find highest tick tau >= 1 where phase-appropriate artifacts exist on disk.
 
     Returns (next_sol_id, next_tick_id = disk_verified_tick + 1).
     """
@@ -354,7 +354,8 @@ def _compute_disk_verified_barrier(repo_root: Path = REPO_ROOT) -> tuple[int, in
 
     root = Path(repo_root).resolve()
     tick_re = re.compile(r"_t(\d{4,})_")
-    sol_re = re.compile(r"sol_(\d{3,})_feast\.json$")
+    feast_t_re = re.compile(r"sol_(\d{3,})_t(\d{4,})(?:_w\d+_b\d+)?_feast\.json$")
+    feast_sol_re = re.compile(r"sol_(\d{3,})_feast\.json$")
 
     event_ticks: set[int] = set()
     for fp in root.glob("events/evt_s*_t*.json"):
@@ -367,12 +368,39 @@ def _compute_disk_verified_barrier(repo_root: Path = REPO_ROOT) -> tuple[int, in
         m = tick_re.search(fp.name)
         if m:
             segment_ticks.add(int(m.group(1)))
-    for fp in root.glob("story/feasts/sol_*_feast.json"):
-        ms = sol_re.search(fp.name)
-        if ms:
-            segment_ticks.add(int(ms.group(1)) * 4)
 
-    verified_ticks = {tau for tau in (event_ticks & segment_ticks) if tau >= 1}
+    feast_ticks: set[int] = set()
+    for fp in root.glob("story/feasts/sol_*_feast.json"):
+        mt = feast_t_re.search(fp.name)
+        if mt:
+            feast_ticks.add(int(mt.group(2)))
+        else:
+            ms = feast_sol_re.search(fp.name)
+            if ms:
+                feast_ticks.add(int(ms.group(1)) * 4)
+
+    qa_ticks: set[int] = set()
+    for fp in root.glob("qa/*.json"):
+        m = tick_re.search(fp.name)
+        if m:
+            qa_ticks.add(int(m.group(1)))
+
+    candidate_ticks = event_ticks | segment_ticks | feast_ticks
+    verified_ticks: set[int] = set()
+    for tau in candidate_ticks:
+        if tau < 1:
+            continue
+        phase_mod = tau % 4
+        if phase_mod in (1, 2):
+            if tau in (event_ticks & segment_ticks) or (tau in segment_ticks and tau in qa_ticks):
+                verified_ticks.add(tau)
+        elif phase_mod == 3:
+            if tau in segment_ticks:
+                verified_ticks.add(tau)
+        else:
+            if tau in feast_ticks or tau in (event_ticks & segment_ticks):
+                verified_ticks.add(tau)
+
     disk_verified_tick = max(verified_ticks) if verified_ticks else 0
     next_tick_id = disk_verified_tick + 1
     next_sol_id = (next_tick_id - 1) // 4 + 1

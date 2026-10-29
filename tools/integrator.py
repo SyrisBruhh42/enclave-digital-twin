@@ -18,6 +18,7 @@ import json
 import math
 import os
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 from typing import Any
@@ -306,7 +307,17 @@ def rebuild_state_from_events(
     events = _load_all_events(root, up_to_tick=up_to_tick)
 
     max_event_tick = max((int(e.get("tick_id", 1) or 1) for e in events), default=1)
-    target_tick = int(up_to_tick) if up_to_tick is not None else max_event_tick
+    max_seg_tick = 1
+    seg_dir = root / "story" / "segments"
+    if seg_dir.is_dir():
+        for sp in seg_dir.glob("seg_*.json"):
+            try:
+                sdata = _load_json(sp)
+                if isinstance(sdata, dict):
+                    max_seg_tick = max(max_seg_tick, int(sdata.get("tick_id", 1) or 1))
+            except Exception:
+                continue
+    target_tick = int(up_to_tick) if up_to_tick is not None else max(max_event_tick, max_seg_tick)
     target_tick = max(1, target_tick)
 
     events_by_tick: dict[int, list[dict[str, Any]]] = {}
@@ -675,18 +686,108 @@ class SingleIntegrator:
 class GitWorkspaceSynchronizer:
     """Strictly synchronizes local capsule working tree with remote origin/main via CAS."""
 
+    SYNC_DIRS: tuple[str, ...] = (
+        "snapshots",
+        "relationships",
+        "events",
+        "story",
+        "lore",
+        "qa",
+        "digests",
+        "tools",
+        "engine",
+        "ui",
+        "godot",
+        "tests",
+        "canon",
+        "ops",
+        ".well-known",
+    )
+    SYNC_ROOT_FILES: tuple[str, ...] = (
+        "LICENSE",
+        "LEGAL.md",
+        "CREDITS.md",
+        "SECURITY.md",
+        ".aiexclude",
+        ".noai",
+        "robots.txt",
+        "README.md",
+        "AGENTS.md",
+        "capsule.manifest.json",
+        "aegis_lds_theme.tres",
+        "index.html",
+        ".gitignore",
+    )
+
     def __init__(self, repo_root: Path) -> None:
-        self.repo_root = repo_root
+        self.repo_root = Path(repo_root).resolve()
+        self.mirror_dir = Path.home() / ".local" / "share" / "lfs-enclave-factory" / "repo"
+
+    def _resolve_git_worktree(self) -> Path | None:
+        if (self.repo_root / ".git").exists():
+            return self.repo_root
+        if self.repo_root != REPO_ROOT.resolve() and not (self.repo_root.parent.parent / ".git").exists():
+            return None
+        env = _git_author_lockdown_env()
+        if not (self.mirror_dir / ".git").exists():
+            self.mirror_dir.parent.mkdir(parents=True, exist_ok=True)
+            clone_res = subprocess.run(
+                [
+                    "git",
+                    "clone",
+                    "https://github.com/SyrisBruhh42/enclave-digital-twin.git",
+                    str(self.mirror_dir),
+                ],
+                capture_output=True,
+                text=True,
+                check=False,
+                env=env,
+                timeout=60,
+            )
+            if clone_res.returncode != 0:
+                return None
+        subprocess.run(
+            ["git", "-C", str(self.mirror_dir), "config", "user.name", GIT_LOCKDOWN_NAME],
+            capture_output=True,
+            text=True,
+            check=False,
+            env=env,
+        )
+        subprocess.run(
+            ["git", "-C", str(self.mirror_dir), "config", "user.email", GIT_LOCKDOWN_EMAIL],
+            capture_output=True,
+            text=True,
+            check=False,
+            env=env,
+        )
+        return self.mirror_dir
+
+    def _sync_repo_to_mirror(self, target_dir: Path) -> None:
+        if target_dir.resolve() == self.repo_root.resolve():
+            return
+        for dname in self.SYNC_DIRS:
+            src_d = self.repo_root / dname
+            dst_d = target_dir / dname
+            if src_d.is_dir():
+                shutil.copytree(
+                    src_d,
+                    dst_d,
+                    dirs_exist_ok=True,
+                    ignore=shutil.ignore_patterns("__pycache__", "*.pyc", ".pytest_cache"),
+                )
+        for fname in self.SYNC_ROOT_FILES:
+            src_f = self.repo_root / fname
+            if src_f.is_file():
+                shutil.copy2(src_f, target_dir / fname)
 
     def hard_sync_to_remote_main(self) -> bool:
-        """Fetch origin/main and hard-reset local working tree before tick evaluation."""
-        env = _git_author_lockdown_env()
-        # Safety check: if running inside an umbrella monorepo subdirectory without its own .git,
-        # never reset the parent umbrella working tree.
-        if not (self.repo_root / ".git").exists() and (self.repo_root.parent.parent / ".git").exists():
+        """Fetch origin/main and hard-reset git mirror working tree before tick evaluation."""
+        target_dir = self._resolve_git_worktree()
+        if target_dir is None:
             return False
+        env = _git_author_lockdown_env()
         fetch = subprocess.run(
-            ["git", "-C", str(self.repo_root), "fetch", "origin", "main"],
+            ["git", "-C", str(target_dir), "fetch", "origin", "main"],
             capture_output=True,
             text=True,
             check=False,
@@ -696,14 +797,26 @@ class GitWorkspaceSynchronizer:
         if fetch.returncode != 0:
             return False
         reset = subprocess.run(
-            ["git", "-C", str(self.repo_root), "reset", "--hard", "origin/main"],
+            ["git", "-C", str(target_dir), "reset", "--hard", "origin/main"],
             capture_output=True,
             text=True,
             check=False,
             env=env,
             timeout=15,
         )
-        return reset.returncode == 0
+        if reset.returncode != 0:
+            return False
+        if target_dir.resolve() != self.repo_root.resolve():
+            for rel_dir in ("events", "story/segments", "story/feasts", "digests/daily", "qa", "lore/proposed"):
+                m_sub = target_dir / rel_dir
+                l_sub = self.repo_root / rel_dir
+                if m_sub.is_dir():
+                    l_sub.mkdir(parents=True, exist_ok=True)
+                    for fp in m_sub.glob("*.json"):
+                        dest = l_sub / fp.name
+                        if not dest.exists():
+                            shutil.copy2(fp, dest)
+        return True
 
     def atomic_commit_and_push_snapshots_cas(
         self,
@@ -716,42 +829,30 @@ class GitWorkspaceSynchronizer:
         Crucible Invariant: Retains `staged_artifacts` in memory across rebase retries so a
         concurrent worker push cannot orphan newly reaped artifacts before rebuild.
         """
-        if not (self.repo_root / ".git").exists() and (self.repo_root.parent.parent / ".git").exists():
+        target_dir = self._resolve_git_worktree()
+        if target_dir is None:
             return False
         env = _git_author_lockdown_env()
         for attempt in range(max_retries):
-            if attempt > 0:
-                if not self.hard_sync_to_remote_main():
-                    return False
-                if staged_artifacts:
-                    for rel_path, payload in staged_artifacts.items():
-                        record_to_write = copy.deepcopy(payload)
-                        record_to_write.pop("disallow_overwrite", None)
-                        _write_json(self.repo_root / rel_path, record_to_write)
-                rebuild_state_from_events(repo_root=self.repo_root, write_files=True)
+            if not self.hard_sync_to_remote_main():
+                return False
+            if staged_artifacts:
+                for rel_path, payload in staged_artifacts.items():
+                    record_to_write = copy.deepcopy(payload)
+                    record_to_write.pop("disallow_overwrite", None)
+                    _write_json(self.repo_root / rel_path, record_to_write)
+            rebuild_state_from_events(repo_root=self.repo_root, write_files=True)
+            self._sync_repo_to_mirror(target_dir)
 
             subprocess.run(
-                [
-                    "git",
-                    "-C",
-                    str(self.repo_root),
-                    "add",
-                    "--",
-                    "events/",
-                    "story/",
-                    "snapshots/",
-                    "digests/",
-                    "qa/",
-                    "lore/proposed/",
-                    "state/relationship_graph.json",
-                ],
+                ["git", "-C", str(target_dir), "add", "-A"],
                 capture_output=True,
                 text=True,
                 check=False,
                 env=env,
             )
             diff_check = subprocess.run(
-                ["git", "-C", str(self.repo_root), "diff", "--cached", "--quiet"],
+                ["git", "-C", str(target_dir), "diff", "--cached", "--quiet"],
                 capture_output=True,
                 text=True,
                 check=False,
@@ -762,7 +863,7 @@ class GitWorkspaceSynchronizer:
                     [
                         "git",
                         "-C",
-                        str(self.repo_root),
+                        str(target_dir),
                         "-c",
                         f"user.name={GIT_LOCKDOWN_NAME}",
                         "-c",
@@ -778,7 +879,7 @@ class GitWorkspaceSynchronizer:
                     env=env,
                 )
             push = subprocess.run(
-                ["git", "-C", str(self.repo_root), "push", "origin", "HEAD:main"],
+                ["git", "-C", str(target_dir), "push", "origin", "HEAD:main"],
                 capture_output=True,
                 text=True,
                 check=False,

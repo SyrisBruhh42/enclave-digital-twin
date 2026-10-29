@@ -138,6 +138,5 @@
     "corrective_authors_note": "Ryn is maintaining her core traits effectively during The Feast.",
     "re_anchor_ticks": 0
   },
-  "target_path": "qa/sol_007_t0028_w03_b03_drift_audit.json",
-  "disallow_overwrite": false
+  "target_path": "qa/sol_007_t0028_w03_b03_drift_audit.json"
 }

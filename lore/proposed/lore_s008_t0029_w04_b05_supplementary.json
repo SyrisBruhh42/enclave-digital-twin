@@ -113,5 +113,6 @@
       "agency_handoff_prompt": "Silas finishes his calibrations, his breath visible in the chilled static air, and turns to hand the heavy diagnostic baton to Hector. 'Try not to break it this time,' he grumbles. Hector, what do you do?"
     }
   },
-  "day_phase": "DAWN_SHIFT"
+  "day_phase": "DAWN_SHIFT",
+  "target_path": "lore/proposed/lore_s008_t0029_w04_b05_supplementary.json"
 }
