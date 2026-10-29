@@ -6,7 +6,7 @@
   "title": "Evening Dispatch Sol 10",
   "headline": "Evening Dispatch",
   "anchor_intro": "Good evening, Enclave. From our perch in the interior communications array, the ferrofluid sea outside thrashes violently, with peaks of magnetohydrodynamic Kelvin-Helmholtz shear crashing against the glass. The sharp scent of ionized air filters through the vents, and a low hum vibrates beneath our boots, while the metallic tang of ozone rests on the tongue. We must DEFEND the lower bulkheads against the corrosive spray, CONCEAL our sensitive arrays from the magnetic interference, and ATTRACT the rogue lightning strikes into our grounding pylons.",
-  "broadcast_script": "Ryn taps the microphone, brushing a smudge of grease from the console. 'The shear waves are peaking. If we miscalculate the magnetic dampeners, we risk blowing the primary relays, leaving us blind. We have to fail forward—if the primary relays fry, we channel the surge into the secondary thermal cores to keep the habitat warm.' She then physically hands the heavy, brass-rimmed microphone to Silas, their fingers brushing against the cold metal. 'Your turn, Silas. Do not let the static bite.'",
+  "broadcast_script": "Ryn taps the microphone, brushing a smudge of grease from the console. 'The shear waves are peaking. If we miscalculate the magnetic dampeners, we risk blowing the primary relays, leaving us blind. We have to fail forward\u2014if the primary relays fry, we channel the surge into the secondary thermal cores to keep the habitat warm.' She then physically hands the heavy, brass-rimmed microphone to Silas, their fingers brushing against the cold metal. 'Your turn, Silas. Do not let the static bite.'",
   "broadcast_markdown": "# Evening Dispatch\n\nRyn hands the mic to Silas.",
   "weather_report": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "quote_of_the_sol": "The sea rises.",
@@ -31,7 +31,7 @@
   "block_digests": [],
   "four_block_digests": [],
   "lead_story": {
-    "headline": "Sol 10 Lead — Evening Dispatch",
+    "headline": "Sol 10 Lead \u2014 Evening Dispatch",
     "summary": "Hector battles the magnetohydrodynamic shear wave to hand off the baton to Kaio at the ferrofluid sea outpost.",
     "cited_event_ids": [
       "evt_s009_t0034_expedition_consequence"
@@ -43,5 +43,8 @@
     "location": "Ferrofluid_Sea_Outpost",
     "day_phase": "MIDDAY_EXPEDITION",
     "salience_score": 0.95
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
   }
 }
