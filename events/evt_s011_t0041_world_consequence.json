@@ -1,0 +1,154 @@
+{
+  "event_id": "evt_s011_t0041_world_consequence",
+  "tick_id": 41,
+  "colony_sol": 11,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-11-04T00:00:00Z",
+  "base_snapshot_tick": 40,
+  "event_type": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+  "location": "Ferrofluid_Sea_Outpost",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "narrative_prose": "Silas methodically tightened the brass calipers against the mounting bracket, observing the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea dragging the metallic surface into impossible, jagged geometric formations. The sharp tang of scorched ozone insulation hung thick in the air, complementing the violent, crackling hiss of the shear wave that drowned out the steady thrum of the ridge generators. He ignored the intense static prickling across his forearms and the metallic bite of ambient charge on his tongue, carefully choosing to CONCEAL the primary sensor array within the protective trench to DEFEND it from the escalating magnetic anomaly. Stepping back as a particularly aggressive magnetic surge washed over the bulkhead, he signaled to ATTRACT Hector's attention, preparing to pass the reinforced baton to the incoming stormbreaker.",
+  "summary": "Silas secures the outpost equipment against the magnetohydrodynamic shear before handing off the baton to Hector.",
+  "importance": 8.0,
+  "novelty_score": 0.85,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ]
+  },
+  "state_deltas": {
+    "stress_delta": 0.05
+  },
+  "relationship_deltas": [
+    {
+      "from": "enclave_03_silas",
+      "to": "enclave_01_hector",
+      "bond_delta": 0.03,
+      "trust_delta": 0.03
+    }
+  ],
+  "evidence_refs": [],
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 11,
+      "colony_sol": 11,
+      "tick_id": 41,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Analyze the shear wave and execute the handoff to Hector.",
+        "mid_term_milestone": "Reinforce the ridge outpost against the ferrofluid tides.",
+        "campaign_arc_climax": "Master the magnetohydrodynamic flows of the ferrofluid sea."
+      }
+    },
+    "active_location": {
+      "location_id": "Ferrofluid_Sea_Outpost",
+      "macro_silhouette": "A precarious scaffolding platform clinging to the edge of the abyss, battered by the elements. The surging metallic sea below throws violent magnetic storms into the air, creating a chaotic display of arcs and jagged spikes. It is a hostile, exposed environment that demands absolute precision to survive.",
+      "sensory_palette": {
+        "sight_and_color": "Blinding violet arcs and shimmering metallic waves.",
+        "sound": "Violent crackling hiss of the shear wave.",
+        "smell": "Ozone and scorched copper insulation.",
+        "tactile_temperature": "Static prickling and biting chill.",
+        "taste_optional": "Metallic bite of ambient charge."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Sensor Array Bulkhead",
+          "affordance_description": "A reinforced wall.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Magnetic Grapple",
+          "affordance_description": "A winch.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Shadow Trench",
+          "affordance_description": "A deep rut.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "Ferrofluid Wave",
+        "name_and_role": "Magnetohydrodynamic shear fluctuation",
+        "motivation_goal": "Disrupt alignment.",
+        "consistent_method": "Pulsing unpredictable magnetic fields.",
+        "immediate_complication": "Equipment preservation becomes difficult.",
+        "pressure_index": 6,
+        "uninterrupted_escalation": "true"
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Handoff the baton to Hector amidst the tempest.",
+        "level_2_local": "Secure the expedition sensor data from the shear wave.",
+        "level_3_campaign_arc": "Maintain infrastructure for The Enclave."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "DEFENDER"
+        },
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        4,
+        8,
+        15,
+        16,
+        23
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.6,
+      "motivational_vector_saturation": 0.6,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.7,
+      "composite_lpi": 0.6,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_ai",
+        "model": "qwen3.5:4b-q4_K_M",
+        "temperature": 0.1,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The equipment is damaged by the shear wave.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Catastrophic misalignment and minor burns.",
+          "below_dc_complicated_fail_forward": "Handoff complete but equipment damaged.",
+          "meets_dc_clean_success": "Flawless handoff.",
+          "dc_plus_5_or_20_extended_lore": "Flawless handoff with new insight into ferrofluid behavior."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_ai",
+        "temperature": 0.4,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Hector, take the baton."
+      }
+    }
+  }
+}
