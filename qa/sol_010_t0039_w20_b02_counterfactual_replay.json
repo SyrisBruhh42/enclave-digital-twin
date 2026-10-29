@@ -108,7 +108,7 @@
       "temperature": 0.7,
       "calypso_zero_raw_stats": true,
       "prosodic_micro_pauses_enabled": false,
-      "agency_handoff_prompt": "Kaio anchors himself against the howling magnetic storm, his breathless wonder momentarily giving way to the sheer physical strain. He turns, breathless, shouting over the crackle of raw voltage, 'Ryn, the shear is stabilizing—now's your chance!'"
+      "agency_handoff_prompt": "Kaio anchors himself against the howling magnetic storm, his breathless wonder momentarily giving way to the sheer physical strain. He turns, breathless, shouting over the crackle of raw voltage, 'Ryn, the shear is stabilizing\u2014now's your chance!'"
     }
   }
 }
