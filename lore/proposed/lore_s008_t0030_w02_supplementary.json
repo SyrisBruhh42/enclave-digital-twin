@@ -1,0 +1,144 @@
+{
+  "session_number": 8,
+  "colony_sol": 8,
+  "tick_id": 30,
+  "pacing_mode": "MULLIGAN_CRISIS",
+  "consequential_fights_since_short_rest": 0,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "event_type": "DYNAMIC_LORE_CARD_PROPOSALS",
+  "disallow_overwrite": false,
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "changeset_gate_rejection": "Showrunner contract violation: feature[0] has invalid system_verb ''; Showrunner contract violation: feature[1] has invalid system_verb ''; Showrunner contract violation: fea",
+  "CONF": "1.00",
+  "TIME": "2026-10-29T01:12:07Z",
+  "PROV": "sol008_t0030",
+  "VAL": "Showrunner contract violation: feature[0] has invalid system_verb ''; Showrunner contract violation: feature[1] has invalid system_verb ''; Showrunner contract violation: fea",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 8,
+      "colony_sol": 8,
+      "tick_id": 30,
+      "pacing_mode": "MULLIGAN_CRISIS",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Survive the Magnetohydrodynamic Kelvin-Helmholtz shear.",
+        "mid_term_milestone": "Map the ferrofluid sea anomalies.",
+        "campaign_arc_climax": "Master the exoplanet's wild magnetosphere."
+      }
+    },
+    "active_location": {
+      "location_id": "ferrofluid_sea_coast",
+      "macro_silhouette": "The dark, metallic waves of the ferrofluid sea rise like iron fangs against the shoreline, defying gravity as the Kelvin-Helmholtz shear violently contorts their surface. Overhead, the sky bleeds an angry violet, illuminating the jagged basalt spires that stand as silent sentinels. Each gust of wind carries the terrifying hum of sheer magnetic force tearing through the atmosphere.",
+      "sensory_palette": {
+        "sight_and_color": "A violent swirl of chrome and deep violet.",
+        "sound": "The deep, oscillating drone of tearing magnetic fields and the metallic slap of heavy fluid.",
+        "smell": "Ozone and oxidized iron.",
+        "tactile_temperature": "A static charge that makes the hairs on your arm stand up, accompanied by an eerie, sudden chill."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Magnetized Basalt Spire",
+          "affordance_description": "A sturdy anchor point that can withstand the fluid shear if tethered correctly.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Ferrofluid Surge",
+          "affordance_description": "A rogue wave of magnetic fluid that threatens to pull loose gear into the sea.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 16
+        },
+        {
+          "feature_name": "Resonant Grounding Node",
+          "affordance_description": "An exposed node of copper-laced ore that could diffuse the localized shear.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 15
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "kelvin_helmholtz_shear",
+        "name_and_role": "Magnetohydrodynamic Shear (Environmental Hazard)",
+        "motivation_goal": "To rip apart any stable magnetic structures or ungrounded objects.",
+        "consistent_method": "Applying sudden, violent multidirectional forces to metallic and charged surfaces.",
+        "immediate_complication": "The shear is intensifying and threatening to rip Hector's copper induction rigging right off the cliff edge.",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "True"
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Hector's copper induction rigging is caught in the lethal Magnetohydrodynamic Kelvin-Helmholtz shear.",
+        "level_2_local": "The ferrofluid sea is experiencing unprecedented volatility, making the coast extremely dangerous.",
+        "level_3_campaign_arc": "The exoplanet's magnetosphere is resisting the Enclave's attempts to establish stable footholds."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        },
+        {
+          "actor_id": "enclave_05_kaio",
+          "tactical_role": "STRIKER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        14,
+        11,
+        19,
+        8,
+        15
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.6,
+      "motivational_vector_saturation": 0.7,
+      "unresolved_conflict_ratio": 0.8,
+      "temporal_horizon_immediacy": 0.9,
+      "composite_lpi": 0.75,
+      "classification": "Campaign-Ready",
+      "lpi_score": 0.8
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "anthropic",
+        "model": "claude-3-5-sonnet",
+        "temperature": 0.7,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The induction rigging will be ripped away, sending Hector tumbling into the ferrofluid.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Hector mistakenly believes the shear is stabilizing and lets go of his anchor.",
+          "below_dc_complicated_fail_forward": "The rigging holds, but Hector's toolbelt is ripped away into the sea.",
+          "meets_dc_clean_success": "Hector perfectly balances the tension, securing the rig against the shear.",
+          "dc_plus_5_or_20_extended_lore": "Hector secures the rig and discovers a harmonic frequency that calms the local fluid."
+        }
+      },
+      "master_narrator": {
+        "executor": "claude-3-5-sonnet",
+        "temperature": 0.8,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Hector clings to the vibrating basalt, heart pounding as he watches Kaio scramble up the ridge with glowing moss, just in time for Hector to toss him the heavy induction coil."
+      }
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "total_tokens": 1200,
+    "max_tokens": 3500
+  },
+  "narrative_prose": "Hector gritted his teeth, the taste of ozone and oxidized iron thick on his tongue as the storm raged around him. The dark, metallic waves of the ferrofluid sea rose like iron fangs against the shoreline, defying gravity as the Kelvin-Helmholtz shear violently contorted their surface. Overhead, the sky bled an angry violet, illuminating the jagged basalt spires that stood as silent sentinels. Each gust of wind carried the terrifying hum of sheer magnetic force tearing through the atmosphere. He could feel the static charge making the hairs on his arm stand up, accompanied by an eerie, sudden chill. He needed to secure the rig before the shear intensified. Spotting Kaio scrambling up the ridge below, pockets bulging with glowing moss, Hector calculated the angle. With a defiant grin, he braced against a basalt outcropping and hurled the heavy induction coil down toward the scout, knowing Kaio would catch it.",
+  "drift_alert": false,
+  "corrective_autho": ""
+}
