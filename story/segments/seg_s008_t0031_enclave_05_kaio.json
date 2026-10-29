@@ -1,0 +1,132 @@
+{
+  "event_id": "seg_s008_t0031_enclave_05_kaio",
+  "tick_id": 31,
+  "colony_sol": 8,
+  "day_phase": "DUSK_CRAFT",
+  "event_type": "POV_SCENE_SEGMENT",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "active_pov_id": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "narrative_prose": "Kaio caught the glowing baton, her breath catching as another massive wave of magnetic shear slammed into the First Forge. Outside, the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea was producing impossible, beautiful geometries of force, but inside it meant the air was stiflingly hot and thick with the tang of melted ozone. She immediately moved to DEFEND the delicate primary calibration nexus, her swift fingers adjusting the dials to counter the incoming harmonic frequency. The hum of the machinery was deafening, a physical pressure against her skin, punctuated by the sharp hiss of sparks. Hoping to relieve the strain, she decided to ATTRACT some of the rogue charge by opening the secondary grounding vent. Finally, with the pressure stabilized for a brief moment, she chose to CONSUME the raw telemetry data streaming from the baton, analyzing the complex wave forms. 'Ryn, take it!' she called out, tossing the baton towards him.",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 8,
+      "colony_sol": 8,
+      "tick_id": 31,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Transfer the telemetry baton safely.",
+        "mid_term_milestone": "Reinforce the First Forge against the magnetic storm.",
+        "campaign_arc_climax": "Prevent the ferrofluid sea from breaching the lower levels."
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "The First Forge hums with barely contained energy as the magnetic storm rages outside. Sparks dance across the heavily insulated conduits, illuminating the room in erratic bursts of blue and gold. The air is thick with the smell of ozone and hot metal, a tangible reminder of the power harnessed within these walls.",
+      "sensory_palette": {
+        "sight_and_color": "Erratic blue sparks, glowing hot metal, heavily shadowed corners.",
+        "sound": "Deep, resonant humming, sharp crackles of arcing electricity.",
+        "smell": "Ozone, melting flux, hot brass.",
+        "tactile_temperature": "Oppressively warm, vibrating floors."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Primary Calibration Nexus",
+          "affordance_description": "Can be adjusted to counter incoming harmonic frequencies.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Secondary Grounding Vent",
+          "affordance_description": "Can pull rogue charges away from the main systems.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Telemetry Analyzer",
+          "affordance_description": "Can process raw telemetry data from the baton.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_sea_shear",
+        "name_and_role": "Ferrofluid Sea Kelvin-Helmholtz Shear",
+        "motivation_goal": "Rupture the Forge's shielding",
+        "consistent_method": "Applying immense, unpredictable magnetic pressure pulses",
+        "immediate_complication": "The structural shielding is approaching failure points",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "Will flood the forge"
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Kaio must hand off the baton while securing the Forge.",
+        "level_2_local": "The First Forge's integrity is compromised by the storm.",
+        "level_3_campaign_arc": "The survival of the enclave depends on understanding the planet's magnetic weather."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_05_kaio",
+          "tactical_role": "DEFENDER"
+        },
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "STRIKER"
+        }
+      ],
+      "strain_accumulated_upward": 16,
+      "prerolled_hazard_queue": [
+        14,
+        8,
+        12,
+        18,
+        5
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.5,
+      "motivational_vector_saturation": 0.7,
+      "unresolved_conflict_ratio": 0.6,
+      "temporal_horizon_immediacy": 0.9,
+      "composite_lpi": 0.675,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_inference",
+        "model": "judge_v1",
+        "temperature": 0.1,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "If Kaio fumbles the handoff, the telemetry baton could be damaged.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Kaio drops the baton, severely damaging its sensors.",
+          "below_dc_complicated_fail_forward": "Kaio makes the handoff, but suffers a shock in the process.",
+          "meets_dc_clean_success": "Kaio perfectly hands the baton to Ryn.",
+          "dc_plus_5_or_20_extended_lore": "Kaio hands off the baton and identifies a new harmonic in the shielding."
+        }
+      },
+      "master_narrator": {
+        "executor": "jules",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Kaio tosses the baton to Ryn. What does Ryn do?"
+      }
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ],
+    "interlocutor_full_cards_loaded": 0,
+    "active_pov_id": "enclave_05_kaio"
+  }
+}
