@@ -1,0 +1,47 @@
+{
+  "dispatch_id": "dispatch_sol_010",
+  "tick_id": 40,
+  "colony_sol": 10,
+  "base_snapshot_tick": 40,
+  "title": "Evening Dispatch Sol 10",
+  "headline": "Evening Dispatch",
+  "anchor_intro": "Good evening, Enclave. From our perch in the interior communications array, the ferrofluid sea outside thrashes violently, with peaks of magnetohydrodynamic Kelvin-Helmholtz shear crashing against the glass. The sharp scent of ionized air filters through the vents, and a low hum vibrates beneath our boots, while the metallic tang of ozone rests on the tongue. We must DEFEND the lower bulkheads against the corrosive spray, CONCEAL our sensitive arrays from the magnetic interference, and ATTRACT the rogue lightning strikes into our grounding pylons.",
+  "broadcast_script": "Ryn taps the microphone, brushing a smudge of grease from the console. 'The shear waves are peaking. If we miscalculate the magnetic dampeners, we risk blowing the primary relays, leaving us blind. We have to fail forward—if the primary relays fry, we channel the surge into the secondary thermal cores to keep the habitat warm.' She then physically hands the heavy, brass-rimmed microphone to Silas, their fingers brushing against the cold metal. 'Your turn, Silas. Do not let the static bite.'",
+  "broadcast_markdown": "# Evening Dispatch\n\nRyn hands the mic to Silas.",
+  "weather_report": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "quote_of_the_sol": "The sea rises.",
+  "newscaster_anchors": [
+    "enclave_13_ryn",
+    "enclave_03_silas"
+  ],
+  "gossip_items": [],
+  "gossip_and_shadow_column": [],
+  "developing_stories": [],
+  "read_full_scene_links": [],
+  "all_cited_event_ids": [
+    "evt_s009_t0034_expedition_consequence"
+  ],
+  "covered_day_phases": [
+    "DAWN_SHIFT",
+    "MIDDAY_EXPEDITION",
+    "DUSK_CRAFT",
+    "THE_FEAST"
+  ],
+  "lead_stories": [],
+  "block_digests": [],
+  "four_block_digests": [],
+  "lead_story": {
+    "headline": "Sol 10 Lead — Evening Dispatch",
+    "summary": "Hector battles the magnetohydrodynamic shear wave to hand off the baton to Kaio at the ferrofluid sea outpost.",
+    "cited_event_ids": [
+      "evt_s009_t0034_expedition_consequence"
+    ],
+    "actors": [
+      "enclave_01_hector",
+      "enclave_05_kaio"
+    ],
+    "location": "Ferrofluid_Sea_Outpost",
+    "day_phase": "MIDDAY_EXPEDITION",
+    "salience_score": 0.95
+  }
+}
