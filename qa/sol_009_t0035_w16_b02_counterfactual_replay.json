@@ -1,0 +1,114 @@
+{
+  "bucket": "COUNTERFACTUAL_PERSONALITY_STUDY_REPLAYS",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "campaign_metadata": {
+    "session_number": 9,
+    "colony_sol": 9,
+    "tick_id": 35,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Transfer the synthesized thermal-map data directly to Ryn before the weather pattern worsens.",
+      "mid_term_milestone": "Calibrate the colony's energy reserve thresholds against expected tidal anomalies.",
+      "campaign_arc_climax": "Achieve full synchronization of the enclave's metabolic engine with planetary magnetosphere surges."
+    }
+  },
+  "active_location": {
+    "location_id": "LOC_009_FERROFLUID_OBSERVATORY",
+    "macro_silhouette": "The obsidian-glass walls of the cliffside observatory rattle against the howling winds whipping off the lower ridges. Below, the dark metallic expanse ripples under the strange glow of passing spore clouds, shifting constantly in response to localized magnetic anomalies. Every structural beam hums with the piezoelectric stress, echoing the vast, unforgiving geometry of the planetary landscape.",
+    "sensory_palette": {
+      "sight_and_color": "Swirling deep purples and violent metallic silvers from the shifting fluid below.",
+      "sound": "A low, continuous resonant hum that occasionally stutters into a sharp crack.",
+      "smell": "Ozone tang mixed with the dry, sterile scent of filtered air.",
+      "tactile_temperature": "A sharp, biting cold radiating off the glass, contrasted by sudden flashes of inductive heat from the railing.",
+      "taste_optional": "A faint metallic twang on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetized Calibration Array",
+        "affordance_description": "Can be shielded from external interference using raw bodily impedance.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Resonant Chime Inductors",
+        "affordance_description": "Can be manipulated to pull scattered sensor drones closer.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Thermal Vent Overflow",
+        "affordance_description": "Excess heat vents that can burn off invasive fungal spores.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "TOY_KELVIN_HELMHOLTZ_SHEAR",
+      "name_and_role": "Ferrofluid Sea Shear Anomaly",
+      "motivation_goal": "Disrupt established magnetic equilibrium and twist sensor signals.",
+      "consistent_method": "Generates oscillating wave structures that create localized electromagnetic disturbances.",
+      "immediate_complication": "The shear wave creates a temporary dead zone, risking data corruption before Kaio can hand off his findings.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "If ignored, the wave will fully invert the local magnetic field, permanently shorting the relay."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The localized Magnetohydrodynamic Kelvin-Helmholtz shear is tearing at the ferrofluid surface, threatening Kaio's data relay.",
+      "level_2_local": "This shear is disrupting the energy flow between The Sanctuary and The Hearth, causing friction between Kaio's cartography needs and Ryn's power budget.",
+      "level_3_campaign_arc": "Understanding and stabilizing these magnetospheric interactions is critical for the long-term survival of the Exoplanet PvE Sanctuary."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      12, 5, 18, 9, 14
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.65,
+    "motivational_vector_saturation": 0.70,
+    "unresolved_conflict_ratio": 0.50,
+    "temporal_horizon_immediacy": 0.85,
+    "composite_lpi": 0.675,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Aegis",
+      "model": "gpt-4-turbo",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Kaio's associative ecological cartography could become corrupted, forcing the team to navigate the magnetic storm blind.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Total misreading of the magnetic currents, leading the squad directly into a dense, dangerous anomaly.",
+        "below_dc_complicated_fail_forward": "The data is recovered but fragmented; it will take Ryn extra effort to parse, causing minor delays and stress.",
+        "meets_dc_clean_success": "Kaio successfully maps the shear and relays the clear data to Ryn without incident.",
+        "dc_plus_5_or_20_extended_lore": "Kaio not only captures the data but uncovers a hidden rhythm in the shear that points toward an undiscovered thermal vent."
+      }
+    },
+    "master_narrator": {
+      "executor": "Aegis",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": false,
+      "agency_handoff_prompt": "With the map data secured in his glowing pack, Kaio turns to find Ryn, preparing to transfer the insights before the storm breaks."
+    }
+  }
+}
