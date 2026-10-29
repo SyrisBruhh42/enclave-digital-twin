@@ -77,7 +77,13 @@
       }
     ],
     "strain_accumulated_upward": 1,
-    "prerolled_hazard_queue": [4, 9, 12, 17, 2]
+    "prerolled_hazard_queue": [
+      4,
+      9,
+      12,
+      17,
+      2
+    ]
   },
   "lpi_metrics": {
     "relational_tension_density": 0.6,
