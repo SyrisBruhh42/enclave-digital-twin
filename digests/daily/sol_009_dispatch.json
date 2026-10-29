@@ -35,7 +35,7 @@
   "block_digests": [],
   "four_block_digests": [],
   "lead_story": {
-    "headline": "Sol 9 Lead — Evening Dispatch",
+    "headline": "Sol 9 Lead \u2014 Evening Dispatch",
     "summary": "Hector battles the magnetohydrodynamic shear wave to hand off the baton to Kaio at the ferrofluid sea outpost.",
     "cited_event_ids": [
       "evt_s009_t0034_expedition_consequence"
@@ -50,5 +50,8 @@
     "location": "Ferrofluid_Sea_Outpost",
     "day_phase": "MIDDAY_EXPEDITION",
     "salience_score": 0.95
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
   }
 }
