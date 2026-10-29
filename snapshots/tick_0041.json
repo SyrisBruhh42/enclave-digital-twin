@@ -63,7 +63,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.2018,
+      "stress": 0.2359,
       "fatigue": 0.14,
       "sleep_debt_norm": 0.14,
       "kp_exo": 6.69,
@@ -149,7 +149,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.1847,
+      "stress": 0.2168,
       "fatigue": 0.08,
       "sleep_debt_norm": 0.08,
       "kp_exo": 6.69,
@@ -761,7 +761,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.2018,
+      "stress": 0.2359,
       "fatigue": 0.14,
       "sleep_debt_norm": 0.14,
       "kp_exo": 6.69,
@@ -847,7 +847,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.1847,
+      "stress": 0.2168,
       "fatigue": 0.08,
       "sleep_debt_norm": 0.08,
       "kp_exo": 6.69,
@@ -1437,24 +1437,11 @@
     }
   },
   "applied_event_ids": [
+    "evt_s011_t0041_morning_intent",
     "evt_s011_t0041_world_consequence"
   ],
-  "total_events_through_tick": 46,
+  "total_events_through_tick": 47,
   "recent_segments": [
-    {
-      "segment_id": "seg_s007_t0025_enclave_03_silas",
-      "sol_id": 7,
-      "colony_sol": 7,
-      "tick_id": 25,
-      "active_pov_id": "enclave_03_silas",
-      "next_pov_target": "enclave_01_hector",
-      "location_id": "The_First_Forge",
-      "time_of_day": "DAWN_SHIFT",
-      "day_phase": "DAWN_SHIFT",
-      "title": "Sol 007 \u2022 DAWN_SHIFT (enclave_03_silas)",
-      "opening_excerpt": "Silas tightened his grip on the heavily insulated telemetry baton, his meticulously crafted brass calipers stowed away in his utility belt. The First Forge felt small this morning; the acrid tang of the Magnetohydrodynam",
-      "excerpt": "Silas tightened his grip on the heavily insulated telemetry baton, his meticulously crafted brass calipers stowed away in his utility belt. The First Forge felt small this morning; the acrid tang of the Magnetohydrodynam"
-    },
     {
       "segment_id": "seg_s007_t0026_enclave_01_hector",
       "sol_id": 7,
@@ -1608,6 +1595,20 @@
       "title": "Sol 010 \u2022 DUSK_CRAFT (enclave_05_kaio)",
       "opening_excerpt": "Kaio scrambles up the slick, jagged basalt ridge as the magnetohydrodynamic Kelvin-Helmholtz shear whips the ferrofluid sea into a frenzy. She grabs the baton from Hector, securing the data packet before tossing it down ",
       "excerpt": "Kaio scrambles up the slick, jagged basalt ridge as the magnetohydrodynamic Kelvin-Helmholtz shear whips the ferrofluid sea into a frenzy. She grabs the baton from Hector, securing the data packet before tossing it down "
+    },
+    {
+      "segment_id": "seg_s011_t0041_enclave_03_silas",
+      "sol_id": 11,
+      "colony_sol": 11,
+      "tick_id": 41,
+      "active_pov_id": "enclave_03_silas",
+      "next_pov_target": "enclave_01_hector",
+      "location_id": "The_First_Forge",
+      "time_of_day": "DAWN_SHIFT",
+      "day_phase": "DAWN_SHIFT",
+      "title": "Sol 011 \u2022 DAWN_SHIFT (enclave_03_silas)",
+      "opening_excerpt": "Silas carefully calibrates the magnetohydrodynamic shielding to withstand the Kelvin-Helmholtz shear across the ferrofluid sea before signaling Hector for the shift change.",
+      "excerpt": "Silas carefully calibrates the magnetohydrodynamic shielding to withstand the Kelvin-Helmholtz shear across the ferrofluid sea before signaling Hector for the shift change."
     }
   ],
   "available_sols": [
