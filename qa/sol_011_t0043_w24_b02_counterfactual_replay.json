@@ -68,8 +68,14 @@
     }
   },
   "encounter_matrix": {
-    "active_specialist_roles": ["The Scout", "The Chef"],
-    "prerolled_hazard_queue": [14, 16],
+    "active_specialist_roles": [
+      "The Scout",
+      "The Chef"
+    ],
+    "prerolled_hazard_queue": [
+      14,
+      16
+    ],
     "strain_accumulated_upward": 1,
     "three_levels_of_why": "Why are they here? To gather rare moss for rations. Why is it dangerous? Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. Why does it matter? The colony will starve without fresh caloric inputs."
   },
