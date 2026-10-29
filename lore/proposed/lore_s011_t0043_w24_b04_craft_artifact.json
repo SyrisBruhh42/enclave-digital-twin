@@ -19,7 +19,13 @@
     "consequential_fights_since_short_rest": 0
   },
   "encounter_matrix": {
-    "prerolled_hazard_queue": [14, 15, 12, 18, 9],
+    "prerolled_hazard_queue": [
+      14,
+      15,
+      12,
+      18,
+      9
+    ],
     "strain_accumulated_upward": 1,
     "three_levels_of_why": {
       "level_1_immediate": "The ferrofluid sea is exhibiting dangerous Magnetohydrodynamic Kelvin-Helmholtz shear.",
