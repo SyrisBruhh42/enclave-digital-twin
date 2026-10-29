@@ -1,0 +1,150 @@
+{
+  "event_id": "evt_s010_t0040_reflection",
+  "tick_id": 40,
+  "colony_sol": 10,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-11-03T23:00:00Z",
+  "base_snapshot_tick": 40,
+  "event_type": "NIGHTLY_REFLECTION",
+  "location": "The_Hearth",
+  "actors": [
+    "enclave_13_ryn",
+    "enclave_03_silas"
+  ],
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "narrative_prose": "Ryn slammed the heavy brass ladle against the steaming kettle of braised mire-lentils. The sharp tang of ozone and burning copper insulation still clung to the air from the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea outside, but in here, the air tasted of rich marrow and toasted iron-wheat. She watched Silas step into the galley, his shoulders heavy, and she shoved a perfectly portioned biscuit into his hand before he could speak.",
+  "summary": "Ryn reflects on the shear storm while serving a nourishing biscuit to Silas in the galley.",
+  "importance": 7.0,
+  "novelty_score": 0.75,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_13_ryn -> Handoff=enclave_03_silas.",
+  "state_deltas": {
+    "stress_delta": -0.1
+  },
+  "relationship_deltas": [
+    {
+      "from": "enclave_13_ryn",
+      "to": "enclave_03_silas",
+      "bond_delta": 0.05,
+      "trust_delta": 0.05
+    }
+  ],
+  "evidence_refs": [
+    "evt_s010_t0038_expedition_consequence"
+  ],
+  "cited_event_ids": [
+    "evt_s010_t0038_expedition_consequence"
+  ],
+  "campaign_metadata": {
+    "session_number": 10,
+    "colony_sol": 10,
+    "tick_id": 40,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Recover from the ferrofluid storm.",
+      "mid_term_milestone": "Reinforce the ridge outpost against the ferrofluid tides.",
+      "campaign_arc_climax": "Master the magnetohydrodynamic flows of the ferrofluid sea."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Hearth",
+    "macro_silhouette": "The galley is a warm, copper-lined sanctuary amidst the metallic cold of the Enclave. Steam rises from massive jacketed kettles, fogging the small, reinforced portholes.",
+    "sensory_palette": {
+      "sight_and_color": "Gleaming copper pots and soft, warm yellow light from the hearth.",
+      "sound": "The rhythmic bubbling of thick stew and the clatter of heavy spoons.",
+      "smell": "Rich marrow, toasted iron-wheat, and a faint metallic undertone.",
+      "tactile_temperature": "A comforting, radiant heat that chases away the chill.",
+      "taste_optional": "The hearty, savory flavor of mire-lentils."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Brass Ladle",
+        "affordance_description": "A heavy cooking utensil.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Steam Kettle",
+        "affordance_description": "A boiling vat of stew.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Pantry Door",
+        "affordance_description": "A heavy iron door.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "culinary_timer",
+      "name_and_role": "Precision Timer",
+      "motivation_goal": "Maintain perfect culinary timing.",
+      "consistent_method": "Ringing sharply at exact intervals.",
+      "immediate_complication": "Interrupts quiet moments with loud chimes.",
+      "pressure_index": 3,
+      "uninterrupted_escalation": "true"
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Nourish the squad after the storm.",
+      "level_2_local": "Maintain colony morale and health.",
+      "level_3_campaign_arc": "Ensure the Enclave's survival through optimal energetics."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      4,
+      8,
+      15,
+      16,
+      23
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.6,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.7,
+    "composite_lpi": 0.68,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_ai",
+      "model": "qwen3.5:4b-q4_K_M",
+      "temperature": 0.1,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The biscuit is burned, offering no morale boost.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "The stew is completely ruined.",
+        "below_dc_complicated_fail_forward": "The biscuit is dry but edible.",
+        "meets_dc_clean_success": "The meal perfectly restores energy.",
+        "dc_plus_5_or_20_extended_lore": "The meal provides new insights into metabolic efficiency."
+      }
+    },
+    "master_narrator": {
+      "executor": "local_ai",
+      "temperature": 0.4,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Silas, take the biscuit."
+    }
+  }
+}
