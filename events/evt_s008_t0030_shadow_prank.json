@@ -1,0 +1,130 @@
+{
+    "event_id": "evt_s008_t0030_shadow_prank",
+    "event_type": "SHADOW_ECONOMY_AND_SETUP_PAYOFF_LEDGER",
+    "disallow_overwrite": false,
+    "steward_note": "deterministic-enclave-5section-v2",
+    "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+    "day_phase": "MIDDAY_EXPEDITION",
+    "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+    "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
+    "VAL": "Showrunner contract violation: feature[0] has invalid system_verb &amp;#x27;&amp;#x27;.; Showrunner contract violation: feature[1] has invalid system_verb &amp;#x27;&amp;#x27;.; Showrunner contract violation: fea",
+    "changeset_gate_rejection": "Showrunner contract violation: feature[0] has invalid system_verb &amp;#x27;&amp;#x27;.; Showrunner contract violation: feature[1] has invalid system_verb &amp;#x27;&amp;#x27;.; Showrunner contract violation: fea",
+    "second_pass_repair_constraint": "",
+    "ENT": "enclave:9970498710379841158",
+    "CONF": "1.00",
+    "TIME": "2026-10-29T01:12:01Z",
+    "PROV": "sol008_t0030",
+    "context_manifest": {
+        "full_cards_loaded_count": 1,
+        "interlocutor_full_cards_loaded": 0,
+        "loaded_full_card_ids": ["enclave_01_hector"]
+    },
+    "node_a": "enclave_01_hector",
+    "node_b": "enclave_05_kaio",
+    "node_c": "enclave_03_chang",
+    "active_pov_id": "enclave_01_hector",
+    "next_pov_target": "enclave_05_kaio",
+    "prev_next_pov_target": "enclave_01_hector",
+    "showrunner_ledger": {
+        "campaign_metadata": {
+            "session_number": 8,
+            "colony_sol": 8,
+            "tick_id": 30,
+            "pacing_mode": "MULLIGAN_CRISIS",
+            "consequential_fights_since_short_rest": 1,
+            "horizon_goals": {
+                "immediate_session_goal": "Establish shadow economy baseline",
+                "mid_term_milestone": "Develop robust trade networks",
+                "campaign_arc_climax": "Complete economic integration of the Enclave"
+            }
+        },
+        "active_location": {
+            "location_id": "ferrofluid_sea_coast",
+            "macro_silhouette": "The metallic waves crash silently against the obsidian shore, sending shimmering droplets into the frigid air. Jagged crags of magnetic rock form natural barriers along the coast. The dark expanse of the ferrofluid sea stretches out endlessly to the horizon.",
+            "sensory_palette": {
+                "sight_and_color": "Iridescent streaks of silver and dark metallic grey",
+                "sound": "A low hum of shifting magnetic fields",
+                "smell": "Ozone and metallic tang",
+                "tactile_temperature": "Biting cold with an unsettling electrostatic charge",
+                "taste_optional": "A sharp, coppery flavor on the tongue"
+            },
+            "interactive_features": [
+                {
+                    "feature_name": "Magnetic Crag Barrier",
+                    "affordance_description": "Can be used for cover or to anchor equipment",
+                    "system_verb": "DEFEND",
+                    "associated_check_dc": 14
+                },
+                {
+                    "feature_name": "Ferrofluid Surge",
+                    "affordance_description": "Can be harnessed to pull loose items or creatures",
+                    "system_verb": "ATTRACT",
+                    "associated_check_dc": 14
+                },
+                {
+                    "feature_name": "Obsidian Outcrop Shadow",
+                    "affordance_description": "Provides deep shadows for hiding",
+                    "system_verb": "CONCEAL",
+                    "associated_check_dc": 14
+                }
+            ]
+        },
+        "reactive_toys": [
+            {
+                "entity_id": "toy_ferro_current",
+                "name_and_role": "Ferrofluid Current - Environmental Hazard",
+                "motivation_goal": "To sweep away unsecured objects",
+                "consistent_method": "Applying immense physical pressure through magnetic shear",
+                "immediate_complication": "The current threatens to destabilize Hector's footing",
+                "pressure_index": 8,
+                "uninterrupted_escalation": true
+            }
+        ],
+        "encounter_matrix": {
+            "three_levels_of_why": {
+                "level_1_immediate": "Hector needs to stabilize his position against the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea to secure the handoff point.",
+                "level_2_local": "Securing this point allows for the safe transfer of resources in the shadow economy.",
+                "level_3_campaign_arc": "Establishing secure handoff points is critical to building a shadow economy outside official Enclave channels."
+            },
+            "active_specialist_roles": [
+                {
+                    "actor_id": "enclave_01_hector",
+                    "tactical_role": "STRIKER"
+                }
+            ],
+            "strain_accumulated_upward": 1,
+            "prerolled_hazard_queue": [12, 5, 18, 2, 19]
+        },
+        "lpi_metrics": {
+            "relational_tension_density": 0.6,
+            "motivational_vector_saturation": 0.7,
+            "unresolved_conflict_ratio": 0.5,
+            "temporal_horizon_immediacy": 0.8,
+            "composite_lpi": 0.65,
+            "classification": "STABLE"
+        },
+        "dual_agent_contract": {
+            "judge_tactician": {
+                "provider": "anthropic",
+                "model": "claude-3-opus",
+                "temperature": 0.2,
+                "explicit_pre_roll_dc": 14,
+                "failure_stakes_declared": "Hector loses his grip and is swept into the ferrofluid sea, failing the handoff.",
+                "graduated_outcomes": {
+                    "nat_1_false_intuition": "Hector completely misjudges the shear forces and falls.",
+                    "below_dc_complicated_fail_forward": "Hector stumbles but manages to toss the baton, taking strain.",
+                    "meets_dc_clean_success": "Hector perfectly navigates the shear and makes a clean handoff.",
+                    "dc_plus_5_or_20_extended_lore": "Hector makes the handoff with such grace he discovers a new magnetic eddy pattern."
+                }
+            },
+            "master_narrator": {
+                "executor": "anthropic",
+                "temperature": 0.7,
+                "calypso_zero_raw_stats": true,
+                "prosodic_micro_pauses_enabled": true,
+                "agency_handoff_prompt": "Hector braces against the shifting metallic currents, hand extended, waiting for Kaio to take the baton."
+            }
+        }
+    },
+    "narrative_prose": "The metallic waves crash silently against the obsidian shore, sending shimmering droplets into the frigid air. Jagged crags of magnetic rock form natural barriers along the coast. The dark expanse of the ferrofluid sea stretches out endlessly to the horizon. Hector braced himself against the biting cold and unsettling electrostatic charge. The sharp, coppery flavor of ozone lingered on his tongue as he listened to the low hum of shifting magnetic fields. He knew the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea was intensifying, threatening to throw him off balance. He needed to secure the package. Looking around, he spotted a jagged crag and decided to DEFEND his position there. A sudden surge in the metallic liquid offered a chance to ATTRACT the floating container toward him. Alternatively, he could use the deep shadows of the obsidian outcrop to CONCEAL his movements from any prying eyes. The pressure was mounting as he waited for Kaio's arrival to make the handoff."
+}
