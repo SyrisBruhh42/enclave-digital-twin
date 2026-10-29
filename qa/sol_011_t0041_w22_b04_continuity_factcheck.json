@@ -1,0 +1,118 @@
+{
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 11,
+    "tick_id": 41,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Investigate and contain the Magnetohydrodynamic Kelvin-Helmholtz shear.",
+      "mid_term_milestone": "Stabilize the regional geode network.",
+      "campaign_arc_climax": "Establish the Sanctuary."
+    }
+  },
+  "active_location": {
+    "location_id": "the_first_forge_interior",
+    "macro_silhouette": "The First Forge's interior is a heavy, vaulted space where reinforced brass bulkheads struggle against the immense ambient magnetism. Calibrated geode arrays hum with terrifying contained energy, casting a stuttering violet glow across the hand-soldered workbenches. Silas's meticulously ordered tools are currently vibrating slightly against the racks, betraying the shear forces at play outside.",
+    "sensory_palette": {
+      "sight_and_color": "Stuttering violet arcs and gleaming brass instruments.",
+      "sound": "Deep, resonating hum of magnetic fields shaking the bulkheads.",
+      "smell": "Ozone, hot copper, and a metallic tang.",
+      "tactile_temperature": "Oppressive static electricity prickling the skin and warming the air.",
+      "taste_optional": "Coppery residue on the tongue from the ionized atmosphere."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Reinforced Blast Doors",
+        "affordance_description": "Can be manually sealed to protect the inner sanctum from external shear waves.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetic Containment Grid",
+        "affordance_description": "Can be recalibrated to pull ambient ferrofluid into a stabilized pool.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Discharge Vent",
+        "affordance_description": "A rapid-venting system that can swallow dangerous static build-up.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 16
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "kelvin_helmholtz_shear",
+      "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea - Environmental Hazard",
+      "motivation_goal": "Destabilize the local magnetic equilibrium.",
+      "consistent_method": "Creating unpredictable, high-velocity ripples and spikes.",
+      "immediate_complication": "Threatens to overload the Forge's primary containment matrix.",
+      "pressure_index": 5,
+      "uninterrupted_escalation": "The shear wave amplitude doubles, threatening structural collapse."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Silas is recalibrating the containment when the shear suddenly hits.",
+      "level_2_local": "The shear is a symptom of failing geode stabilization in this sector.",
+      "level_3_campaign_arc": "Mastering or surviving these anomalies is required to claim the Sanctuary."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      14,
+      8,
+      19,
+      3,
+      11
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.65,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Jules",
+      "model": "gpt-4",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The Forge's primary matrix fractures, causing significant structural damage.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Silas miscalculates the wave pattern, directly overloading the grid.",
+        "below_dc_complicated_fail_forward": "Silas avoids the worst of the shear but loses some calibration equipment.",
+        "meets_dc_clean_success": "Silas stabilizes the grid perfectly, containing the shear.",
+        "dc_plus_5_or_20_extended_lore": "Silas perfectly stabilizes the grid and uncovers a fundamental pattern in the shear."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "What do you do next?"
+    }
+  },
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "event_type": "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK"
+}
