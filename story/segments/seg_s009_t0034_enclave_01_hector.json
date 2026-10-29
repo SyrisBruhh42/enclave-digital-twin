@@ -1,0 +1,135 @@
+{
+  "event_id": "seg_s009_t0034_enclave_01_hector",
+  "tick_id": 34,
+  "colony_sol": 9,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-11-02T12:00:00Z",
+  "base_snapshot_tick": 33,
+  "event_type": "POV_SCENE_SEGMENT",
+  "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable=Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "location": "The_First_Forge",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_05_kaio"
+  ],
+  "summary": "Hector desperately tries to manage the rising Magnetohydrodynamic Kelvin-Helmholtz shear threatening the forge, eventually tossing the calibration spanner to Kaio as the pressure becomes critical.",
+  "importance": 0.9,
+  "novelty_score": 0.8,
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "campaign_metadata": {
+    "session_number": 9,
+    "colony_sol": 9,
+    "tick_id": 34,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Prevent the First Forge from being torn apart by the ferrofluid shear.",
+      "mid_term_milestone": "Stabilize the primary power grid to allow deep exploration.",
+      "campaign_arc_climax": "Master the exoplanet's aggressive magneto-weather phenomena."
+    }
+  },
+  "active_location": {
+    "location_id": "The_First_Forge",
+    "macro_silhouette": "The interior of the First Forge is a chaotic cathedral of humming copper and sparking brass. The deck plates shudder violently as the ferrofluid sea slams into the exterior pylons, the sheer kinetic force translated into a deafening rattle of loose tools and stressed rivets. Searing arcs of blue static leap between the overtaxed capacitor banks, illuminating the thick, ozone-heavy air with a blinding, strobe-like intensity.",
+    "sensory_palette": {
+      "sight_and_color": "Blinding blue static arcs, distressed copper turning white-hot, and the panicked swinging of overhead work lights.",
+      "sound": "The ear-splitting shriek of stressed metal, the machine-gun staccato of failing rivets, and the deep, concussive boom of the ferrofluid sea.",
+      "smell": "Scorched ozone, vaporized copper, and the sharp, acrid scent of burning insulation.",
+      "tactile_temperature": "A suffocating, localized wall of dry heat radiating from the main busbars, punctuated by freezing drafts from compromised hull seals.",
+      "taste_optional": "The bitter, metallic tang of vaporized copper on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Main Busbar Shunt",
+        "affordance_description": "Can be engaged to aggressively redirect power and save the primary capacitors from blowing.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Emergency Ventral Hatch",
+        "affordance_description": "Can be blown open to violently vent the overpressure into the sea.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Resonance Dampening Coils",
+        "affordance_description": "Can be pushed beyond safety limits to attract the ambient static field and ground it.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 16
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_ferrofluid_shear",
+      "name_and_role": "The Ferrofluid Sea's Kelvin-Helmholtz Shear",
+      "motivation_goal": "To exploit any resonance weakness in the forge's structure and rip it apart.",
+      "consistent_method": "Rhythmic, escalating impacts that match the natural frequency of the brass pylons.",
+      "immediate_complication": "The primary strut is vibrating so violently that the locking pins are beginning to sheer.",
+      "pressure_index": 9,
+      "uninterrupted_escalation": "The sheer will completely snap the primary strut, causing a catastrophic decompression and loss of the main busbar."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The physical shear forces are actively tearing the forge apart from the bottom up.",
+      "level_2_local": "If the forge falls, the Stormbreaker project shielding collapses.",
+      "level_3_campaign_arc": "The colony cannot survive if it cannot master the planet's aggressive magneto-weather phenomena."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      14,
+      7,
+      19,
+      3,
+      11
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.9,
+    "unresolved_conflict_ratio": 0.8,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.81,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_engine",
+      "model": "gpt-4",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The primary strut fails catastrophically, blowing out the main busbar and plunging the forge into dangerous, volatile darkness.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Hector attempts to muscle the calibration spanner in the wrong direction, stripping the thread and ensuring the strut's immediate collapse.",
+        "below_dc_complicated_fail_forward": "Hector manages to engage the shunt, but takes a vicious arc flash to the arm, burning his gear and dropping his tools.",
+        "meets_dc_clean_success": "Hector perfectly times the shunt engagement with the sea's impact, stabilizing the strut just in time.",
+        "dc_plus_5_or_20_extended_lore": "Hector not only stabilizes the strut but locks the dampeners into a new configuration that perfectly harmonizes with the shear, turning the kinetic energy into a massive power surge for the grid."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector dodges a searing arc of blue plasma, his face illuminated in stark, flashing contrast. He hurls the heavy brass calibration spanner across the shuddering deck plates. 'Kaio! The primary is locked, but the secondary is about to blow! You're up!'"
+    }
+  }
+}
