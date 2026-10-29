@@ -1,0 +1,112 @@
+{
+  "event_type": "EXPEDITION_DISCOVERY",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 11,
+    "tick_id": 42,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Resolve the expedition discovery",
+      "mid_term_milestone": "Stabilize the environment",
+      "campaign_arc_climax": "Complete the Grand Project"
+    }
+  },
+  "active_location": {
+    "location_id": "Ferrofluid_Sea_Outpost",
+    "macro_silhouette": "The turbulent surface of the ferrofluid sea stretches endlessly beneath the storm-choked sky, shaped by aggressive Magnetohydrodynamic Kelvin-Helmholtz shear. Massive crests of magnetic fluid curl and crash against the rocky outpost, their oily black peaks reflecting the chaotic lightning. The air itself feels heavy, charged with enough static to stand hair on end, while the outpost's reinforced bulkheads shudder under the sheer kinetic force of the environment.",
+    "sensory_palette": {
+      "sight_and_color": "Swirling metallic black waves against a bruised purple sky, punctuated by erratic blue arc flashes.",
+      "sound": "A deep, oscillating hum of magnetic resistance beneath the deafening crack of thunder and crashing fluid.",
+      "smell": "Ozone, burnt copper, and the sharp tang of ionized atmosphere.",
+      "tactile_temperature": "Cold, stinging wind carrying static charges that prickle against the skin.",
+      "taste_optional": "A faint metallic residue on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Ferrofluid Wave Surge",
+        "affordance_description": "A massive, surging wave of magnetic fluid threatening to consume the observation deck.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Overloaded Induction Coil",
+        "affordance_description": "A spark-spewing coil that must be guarded to prevent a catastrophic blowout.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetized Debris Field",
+        "affordance_description": "Floating chunks of metallic wreckage that provide a precarious path forward.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "magnetic_shear_storm",
+      "name_and_role": "Kelvin-Helmholtz Shear Storm",
+      "motivation_goal": "Disrupt technological systems and reshape the coastline.",
+      "consistent_method": "Generating erratic, high-powered magnetic pulses.",
+      "immediate_complication": "The storm is directly interfering with Hector's equipment.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "The storm intensifies, causing secondary overloads."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The expedition equipment is failing under the extreme magnetic shear.",
+      "level_2_local": "The ferrofluid sea is exhibiting unprecedented volatility.",
+      "level_3_campaign_arc": "The exoplanet's core is entering a new phase of instability."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [1, 2, 3, 4, 5]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.65,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Local_Judge",
+      "model": "Tactical_Engine",
+      "temperature": 0.3,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Equipment loss and critical injury from electrical arcing.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Hector completely misreads the shear pattern, resulting in a direct hit.",
+        "below_dc_complicated_fail_forward": "Hector manages to stabilize the equipment but takes severe damage.",
+        "meets_dc_clean_success": "Hector deftly navigates the storm, securing the objective.",
+        "dc_plus_5_or_20_extended_lore": "Hector not only secures the objective but uncovers a hidden resonance pattern in the ferrofluid."
+      }
+    },
+    "master_narrator": {
+      "executor": "Narrative_Engine",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector grips the shuddering equipment, turning to Kaio. 'It's your play, Scout!'"
+    }
+  }
+}
