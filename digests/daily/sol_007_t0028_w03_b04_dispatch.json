@@ -1,0 +1,165 @@
+{
+  "dispatch_id": "dispatch_sol_007_t0028_w03_b04",
+  "colony_sol": 7,
+  "tick_id": 28,
+  "day_phase": "THE_FEAST",
+  "file_operations": [
+    {
+      "op": "A",
+      "path": "digests/daily/sol_007_t0028_w03_b04_dispatch.json"
+    }
+  ],
+  "target_path": "digests/daily/sol_007_t0028_w03_b04_dispatch.json",
+  "headline": "SOL 7 EVENING DISPATCH: The Magnetohydrodynamic Shear",
+  "anchor_intro": "[VEX]: Good evening Enclave! [DORIAN]: Another sol, another dispatch.",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "require_all_4_phases": false,
+  "covered_day_phases": [
+    "DAWN_SHIFT",
+    "MIDDAY_EXPEDITION",
+    "DUSK_CRAFT",
+    "THE_FEAST"
+  ],
+  "disallow_overwrite": false,
+  "lead_story": {
+    "story_id": "story_007_01",
+    "pattern_type": "MAGNETOSPHERIC_CRISIS",
+    "story_title": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+    "narrative_summary": "Ryn braced against the roaring heat of The Hearth as the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea triggered massive pressure spikes in the galley. She moved quickly to DEFEND the sensitive copper piping from exploding under the strain. Hoping to draw off the excess energy, she worked to ATTRACT the magnetic discharge into the main grounding coils. As the storm peaked, she threw the pressure valves wide open to CONSUME the dangerous buildup, safely stabilizing the system. Without missing a beat, Ryn confidently passed the telemetry baton to Silas.",
+    "cited_event_ids": [
+      "evt_s007_t0025_morning_intent",
+      "evt_s007_t0026_expedition_consequence",
+      "evt_s007_t0027_dusk_craft"
+    ],
+    "actors": [
+      "enclave_03_silas",
+      "enclave_01_hector",
+      "enclave_05_kaio",
+      "enclave_13_ryn"
+    ],
+    "location": "The_Hearth",
+    "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+    "salience_score": 85.0,
+    "read_full_scene_link": "#scene-evt_s007_t0027_dusk_craft"
+  },
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 7,
+      "colony_sol": 7,
+      "tick_id": 28,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Survive the shear",
+        "mid_term_milestone": "Build the Forge",
+        "campaign_arc_climax": "Tame the planet"
+      },
+      "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC"
+    },
+    "active_location": {
+      "location_id": "The_Hearth",
+      "macro_silhouette": "The Hearth is a sprawling, steam-filled galley where industrial pipes double as spice racks and heat radiators. Copper kettles bubble over specialized induction burners that hum with immense contained energy.",
+      "sensory_palette": {
+        "sight_and_color": "Polished copper surfaces reflecting the warm, golden light of the induction coils.",
+        "sound": "The rhythmic bubbling of heavy stew and the sharp hiss of escaping steam.",
+        "smell": "A hearty mix of braised mire-lentils and roasted tubers.",
+        "tactile_temperature": "A comforting, humid warmth that quickly cuts through the chill of the storm."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Sensitive Copper Piping",
+          "affordance_description": "Vulnerable to magnetic pressure spikes.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Main Grounding Coils",
+          "affordance_description": "Can draw away excess magnetic discharge.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Pressure Valves",
+          "affordance_description": "Can consume dangerous pressure buildup when opened.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "toy_01",
+        "name_and_role": "Ferrofluid Surge",
+        "motivation_goal": "Overwhelm the forge.",
+        "consistent_method": "Rising tides of metallic fluid.",
+        "immediate_complication": "Breaches the lower seal.",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "True"
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+        "level_2_local": "The ferrofluid sea is angry.",
+        "level_3_campaign_arc": "The planet is testing them."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "LEADER"
+        },
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.8,
+      "motivational_vector_saturation": 0.7,
+      "unresolved_conflict_ratio": 0.6,
+      "temporal_horizon_immediacy": 0.9,
+      "composite_lpi": 0.75,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local",
+        "model": "llama",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The piping bursts.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Total blowout.",
+          "below_dc_complicated_fail_forward": "It holds, but damages the valves.",
+          "meets_dc_clean_success": "Flawless calibration.",
+          "dc_plus_5_or_20_extended_lore": "You discover a new thermodynamic property."
+        }
+      },
+      "master_narrator": {
+        "executor": "local",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "enclave_03_silas"
+      }
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
+    "interlocutor_full_cards_loaded": 0,
+    "active_pov_id": "enclave_13_ryn"
+  }
+}
