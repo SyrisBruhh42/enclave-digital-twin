@@ -67,7 +67,13 @@
         "tactical_role": "STRIKER"
       }
     ],
-    "prerolled_hazard_queue": [ 14, 8, 19, 3, 11 ],
+    "prerolled_hazard_queue": [
+      14,
+      8,
+      19,
+      3,
+      11
+    ],
     "strain_accumulated_upward": 12,
     "three_levels_of_why": {
       "level_1_immediate": "The ferrofluid sea is becoming increasingly unstable, necessitating immediate on-site data collection to recalibrate the colony's magnetic shielding before the next solar flare.",
