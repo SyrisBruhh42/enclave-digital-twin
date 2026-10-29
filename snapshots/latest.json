@@ -1442,20 +1442,6 @@
   "total_events_through_tick": 43,
   "recent_segments": [
     {
-      "segment_id": "seg_s006_t0022_enclave_01_hector",
-      "sol_id": 6,
-      "colony_sol": 6,
-      "tick_id": 22,
-      "active_pov_id": "enclave_01_hector",
-      "next_pov_target": "enclave_05_kaio",
-      "location_id": "The_Ferrofluid_Sea_Dock",
-      "time_of_day": "MIDDAY_EXPEDITION",
-      "day_phase": "MIDDAY_EXPEDITION",
-      "title": "Sol 006 \u2022 MIDDAY_EXPEDITION (enclave_01_hector)",
-      "opening_excerpt": "The howling tempest of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea battered Hector's trench coat as he sprinted along the freezing, metallic exterior catwalk. Blinding arcs of violent static ",
-      "excerpt": "The howling tempest of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea battered Hector's trench coat as he sprinted along the freezing, metallic exterior catwalk. Blinding arcs of violent static "
-    },
-    {
       "segment_id": "seg_s006_t0023_enclave_05_kaio",
       "sol_id": 6,
       "colony_sol": 6,
@@ -1608,6 +1594,20 @@
       "title": "Sol 010 \u2022 DAWN_SHIFT (enclave_03_silas)",
       "opening_excerpt": "Silas examines the intense magnetohydrodynamic Kelvin-Helmholtz shear threatening the forge supports before passing the observation baton to Hector.",
       "excerpt": "Silas examines the intense magnetohydrodynamic Kelvin-Helmholtz shear threatening the forge supports before passing the observation baton to Hector."
+    },
+    {
+      "segment_id": "seg_s010_t0038_enclave_01_hector",
+      "sol_id": 10,
+      "colony_sol": 10,
+      "tick_id": 38,
+      "active_pov_id": "enclave_01_hector",
+      "next_pov_target": "enclave_05_kaio",
+      "location_id": "The_Ferrofluid_Coast",
+      "time_of_day": "MIDDAY_EXPEDITION",
+      "day_phase": "MIDDAY_EXPEDITION",
+      "title": "Sol 010 \u2022 MIDDAY_EXPEDITION (enclave_01_hector)",
+      "opening_excerpt": "Hector bounds across the churning, spiky ferrofluid coastline to recalibrate a volatile ground shunt, grinning through the magnetic squall before spotting Kaio on the ridge and throwing the relay baton.",
+      "excerpt": "Hector bounds across the churning, spiky ferrofluid coastline to recalibrate a volatile ground shunt, grinning through the magnetic squall before spotting Kaio on the ridge and throwing the relay baton."
     }
   ],
   "available_sols": [
