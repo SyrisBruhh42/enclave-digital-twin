@@ -1,0 +1,139 @@
+{
+  "event_id": "sol_008_t0029_w04_b04_continuity_factcheck",
+  "tick_id": 29,
+  "colony_sol": 8,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-10-30T00:00:00Z",
+  "base_snapshot_tick": 28,
+  "event_type": "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK",
+  "location": "The_First_Forge",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "active_pov_id": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "narrative_prose": "Inside the ozone-scented interior of The First Forge, Silas tightened the calipers over the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. The rhythmic pinging of the compressor fought against the cold bite of the brass wrench and the metallic tang in the air, creating a sensory battleground. He needed to DEFEND the delicate copper bulkheads from the volatile flux, ATTRACT the raw ambient static, and carefully CONSUME the latent energy before the erratic spikes caused a system overload. Recognizing that Hector's intuitive pulse was the only way to stabilize the matrix and avoid catastrophic failure, he thrust the heavy wrench into Hector's grip.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 8,
+      "colony_sol": 8,
+      "tick_id": 29,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Calibrate the ferrofluid sea shear",
+        "mid_term_milestone": "Stabilize The First Forge",
+        "campaign_arc_climax": "Prevent the planetary magnetic collapse"
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "A cramped, ozone-scented interior full of copper bulkheads.",
+      "sensory_palette": {
+        "sight_and_color": "Cramped copper bulkheads and volatile flux",
+        "sound": "Compressor's rhythmic pinging",
+        "smell": "Ozone-scented",
+        "tactile_temperature": "Cold bite of the wrench",
+        "taste_optional": "Metallic tang"
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Plasma Current",
+          "affordance_description": "Can be defended against",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Latent Energy",
+          "affordance_description": "Can be attracted to the array",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Volatile Flux",
+          "affordance_description": "Must not consume the circuit",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_sea_shear",
+        "name_and_role": "Magnetohydrodynamic Shear",
+        "motivation_goal": "Destabilize the local magnetic field",
+        "consistent_method": "Pulsing erratic energy spikes",
+        "immediate_complication": "Threatens to overload The First Forge",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "Will eventually consume the entire circuit if unchecked"
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Ground specialist friction in Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea.",
+        "level_2_local": "Silas and Hector must reconcile their differing approaches.",
+        "level_3_campaign_arc": "The First Forge must survive the planetary storm."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "DEFENDER"
+        },
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.8,
+      "motivational_vector_saturation": 0.7,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.9,
+      "composite_lpi": 0.75,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "LLM",
+        "model": "GPT-4",
+        "temperature": 0.7,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "Graduated fail-forward stakes: minor damage on near miss, system overload on critical failure.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Total miscalibration, leading to a minor explosion.",
+          "below_dc_complicated_fail_forward": "Partial calibration but requires Hector to risk injury.",
+          "meets_dc_clean_success": "Flawless calibration and baton handoff.",
+          "dc_plus_5_or_20_extended_lore": "Perfect execution, revealing new properties of the ferrofluid sea."
+        }
+      },
+      "master_narrator": {
+        "executor": "LLM",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Pass baton to Hector."
+      }
+    }
+  }
+}
