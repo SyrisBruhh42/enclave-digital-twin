@@ -1426,20 +1426,6 @@
   "total_events_through_tick": 48,
   "recent_segments": [
     {
-      "segment_id": "seg_s007_t0026_enclave_01_hector",
-      "sol_id": 7,
-      "colony_sol": 7,
-      "tick_id": 26,
-      "active_pov_id": "enclave_01_hector",
-      "next_pov_target": "enclave_05_kaio",
-      "location_id": "The_Stormbreaker_Spire",
-      "time_of_day": "MIDDAY_EXPEDITION",
-      "day_phase": "MIDDAY_EXPEDITION",
-      "title": "Sol 007 \u2022 MIDDAY_EXPEDITION (enclave_01_hector)",
-      "opening_excerpt": "Hector snatched the telemetry baton from Silas, grinning into the ozone gale as he sprinted toward the induction rigging. The air crackled with the sheer voltage of the Magnetohydrodynamic Kelvin-Helmholtz shear across t",
-      "excerpt": "Hector snatched the telemetry baton from Silas, grinning into the ozone gale as he sprinted toward the induction rigging. The air crackled with the sheer voltage of the Magnetohydrodynamic Kelvin-Helmholtz shear across t"
-    },
-    {
       "segment_id": "seg_s007_t0027_enclave_05_kaio",
       "sol_id": 7,
       "colony_sol": 7,
@@ -1592,6 +1578,20 @@
       "title": "Sol 011 \u2022 DAWN_SHIFT (enclave_03_silas)",
       "opening_excerpt": "Silas carefully calibrates the magnetohydrodynamic shielding to withstand the Kelvin-Helmholtz shear across the ferrofluid sea before signaling Hector for the shift change.",
       "excerpt": "Silas carefully calibrates the magnetohydrodynamic shielding to withstand the Kelvin-Helmholtz shear across the ferrofluid sea before signaling Hector for the shift change."
+    },
+    {
+      "segment_id": "seg_s011_t0042_enclave_01_hector",
+      "sol_id": 11,
+      "colony_sol": 11,
+      "tick_id": 42,
+      "active_pov_id": "enclave_01_hector",
+      "next_pov_target": "enclave_05_kaio",
+      "location_id": "The_Stormbreaker_Spire",
+      "time_of_day": "MIDDAY_EXPEDITION",
+      "day_phase": "MIDDAY_EXPEDITION",
+      "title": "Sol 011 \u2022 MIDDAY_EXPEDITION (enclave_01_hector)",
+      "opening_excerpt": "Hector recklessly climbs the Stormbreaker Spire to manually bridge a failing shunt caused by the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, before shouting down to Kaio for a heavy-lift structu",
+      "excerpt": "Hector recklessly climbs the Stormbreaker Spire to manually bridge a failing shunt caused by the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, before shouting down to Kaio for a heavy-lift structu"
     }
   ],
   "available_sols": [
