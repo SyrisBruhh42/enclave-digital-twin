@@ -1,0 +1,97 @@
+{
+  "disallow_overwrite": false,
+  "event_type": "DYNAMIC_LORE_CARD_PROPOSALS",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "session_number": 8,
+      "colony_sol": 8,
+      "tick_id": 29,
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Survive the shift",
+        "mid_term_milestone": "Fix the forge",
+        "long_term_campaign_arc": "Master the ferrofluid sea"
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "interactive_features": [
+        {
+          "system_verb": "DEFEND"
+        },
+        {
+          "system_verb": "ATTRACT"
+        },
+        {
+          "system_verb": "CONSUME"
+        }
+      ]
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "explicit_pre_roll_dc": 14,
+        "provider": "Ollama",
+        "model": "Llama3",
+        "temperature": 0.7,
+        "failure_stakes_declared": "Fail forward",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "You misunderstand the resonance.",
+          "below_dc_complicated_fail_forward": "You fix it, but take damage.",
+          "meets_dc_clean_success": "You stabilize the forge perfectly.",
+          "dc_plus_5_or_20_extended_lore": "You stabilize it and learn about the shear."
+        }
+      },
+      "master_narrator": {
+        "agency_handoff_prompt": "Silas hands Hector the insulated baton, gesturing to the volatile shear.",
+        "calypso_zero_raw_stats": true,
+        "executor": "LLM",
+        "temperature": 0.8,
+        "prosodic_micro_pauses_enabled": true
+      }
+    },
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea threatens to destabilize the containment forge.",
+        "level_2_mid_term": "A cascading failure of the baffles could damage the colony's central busbar.",
+        "level_3_existential": "Loss of the central busbar would leave the entire Enclave vulnerable to the hostile exoplanet."
+      }
+    },
+    "reactive_toys": [
+      {
+        "pressure_index": 7,
+        "uninterrupted_escalation": true
+      }
+    ],
+    "lpi_metrics": {
+      "lpi_score": 0.85,
+      "classification": "Campaign-Ready"
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
+    "total_tokens": 1500,
+    "max_tokens": 3500
+  },
+  "narrative_prose": "Silas gripped the heavy iron rail of the forge deck, his aching joints protesting against the bitter ozone tang of the ferrofluid sea. Below him, the Magnetohydrodynamic Kelvin-Helmholtz shear ripped chaotic, jagged peaks through the dark, magnetic waves, threatening to CONSUME the delicate cooling pylons they had just stabilized. He would have to DEFEND the structural integrity of the outer baffles, or else the sheer electromagnetic force might ATTRACT a catastrophic discharge straight into the colony's main busbar. Trusting Hector with the reinforced baton was the only way to manage the escalating resonance loop.",
+  "day_phase": "DAWN_SHIFT",
+  "tick_id": 29,
+  "enclave-digital-twin:DYNAMIC_LORE_CARD_PROPOSALS": "",
+  "second_pass_repair_constraint": "enclave:3800217491768740553",
+  "changeset_gate_rejection": "Showrunner contract violation (Mercer 3-Feature Rule): active_location requires exactly 3 interactive_features.",
+  "CONF": "1.00",
+  "TIME": "2026-10-29T00:12:10Z",
+  "PROV": "sol008_t0029",
+  "ENT": "enclave:10785334878835238916",
+  "VAL": "1.00",
+  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR"
+}
