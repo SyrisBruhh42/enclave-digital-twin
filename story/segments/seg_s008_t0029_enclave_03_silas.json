@@ -1,0 +1,121 @@
+{
+  "segment_id": "seg_s008_t0029_enclave_03_silas",
+  "segment_index": 29,
+  "tick_id": 29,
+  "colony_sol": 8,
+  "day_phase": "DAWN_SHIFT",
+  "base_snapshot_tick": 28,
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "location": "The_First_Forge",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "narrative_prose": "Silas carefully lifted the charged telemetry baton, his gloved hands navigating the heavy brass and copper shielding with practiced ease. The First Forge felt small this morning; the acrid tang of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea practically hummed against the copper plating of the interior walls. It took only two precise twists to DEFEND the delicate inner circuitry from the ambient magnetic interference before he pivoted to ATTRACT the locking mechanism into its final groove. A sharp, freezing draft swept through the cracked airlock, carrying the metallic bite of engine grease, but Silas ignored it, focusing solely on the exchange. Satisfied, he turned and thrust the baton directly into Hector's waiting grasp, the heavy thud of the exchange cutting through the hum of the forge.",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "disallow_overwrite": false,
+  "VAL": "Showrunner contract violation (Mercer 3-Feature Rule): active_location requires exactly 3 interactive_features.",
+  "second_pass_repair_constraint": "@ENT[enclave:3800217491768740553]",
+  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
+  "changeset_gate_rejection": "Showrunner contract violation (Mercer 3-Feature Rule): active_location requires exactly 3 interactive_features.",
+  "CONF": 1.0,
+  "TIME": "2026-10-29T00:12:01Z",
+  "PROV": "sol008_t0029",
+  "ENT": [
+    "enclave-digital-twin:POV_RASHOMON_RELAY_SCENES",
+    "enclave:10785334878835238916"
+  ],
+  "campaign_metadata": {
+    "session_number": 8,
+    "colony_sol": 8,
+    "tick_id": 29,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Transfer telemetry baton to Hector securely.",
+      "mid_term_milestone": "Reinforce dock structures against shear waves.",
+      "campaign_arc_climax": "Survive the convergence of the twin suns' polarity inversion"
+    }
+  },
+  "active_location": {
+    "location_id": "The_First_Forge",
+    "macro_silhouette": "The interior of The First Forge was a masterclass in organized chaos, packed tight with workbenches and heavily shielded crucibles. Coils of thick copper wire ran along the ceiling, pulsing faintly in time with the planet's erratic magnetic field, while the air itself seemed to vibrate with stored kinetic energy.",
+    "sensory_palette": {
+      "sight_and_color": "Gleaming brass, polished copper, and the harsh blue glare of an arc welder",
+      "sound": "The low, rhythmic thrum of the metabolic engine and the sharp ping of a dropped wrench",
+      "smell": "Ozone, hot grease, and the faint metallic tang of the ferrofluid sea",
+      "taste": "Copper on the tongue",
+      "touch": "The freezing draft from the airlock contrasting with the blistering heat of the crucibles"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Heavy Brass Calipers",
+        "mechanic": "Can be used to DEFEND the delicate inner circuitry from magnetic interference."
+      },
+      {
+        "feature_name": "Magnetic Locking Mechanism",
+        "mechanic": "Can be twisted to ATTRACT the locking mechanism into its final groove."
+      },
+      {
+        "feature_name": "Telemetry Baton",
+        "mechanic": "Can be thrust directly into a waiting grasp."
+      }
+    ]
+  },
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Ground specialist friction in Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+      "level_2_tactical": "Secure the telemetry baton against magnetic interference.",
+      "level_3_strategic": "Ensure the baton's data is transferred to Hector safely."
+    }
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.7,
+    "motivational_vector_saturation": 0.85,
+    "unresolved_conflict_ratio": 0.8,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.82,
+    "classification": "Campaign-Ready",
+    "lpi_score": 0.82
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_inference",
+      "model": "judge_v1",
+      "temperature": 0.1,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Silas's grip falters, risking the baton falling into a hazard zone and delaying the vital handoff.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "You completely misjudge the interference, dropping the baton into a live crucible.",
+        "below_dc_complicated_fail_forward": "You make the handoff, but pull a muscle, significantly slowing your next action.",
+        "meets_dc_clean_success": "You securely pass the baton right into Hector's hand.",
+        "dc_plus_5_or_20_extended_lore": "You execute the handoff with such precision that the baton remains perfectly shielded from all interference."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Silas thrust the baton into Hector's waiting grasp. What does Hector do?"
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
+    "interlocutor_full_cards_loaded": 0,
+    "total_tokens": 3000
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_sea",
+      "name_and_role": "Ferrofluid Sea - Environmental Hazard",
+      "motivation_goal": "Disrupt electronic equipment with magnetic interference.",
+      "consistent_method": "Generating Kelvin-Helmholtz shear waves.",
+      "uninterrupted_escalation": true,
+      "pressure_index": 5
+    }
+  ]
+}
