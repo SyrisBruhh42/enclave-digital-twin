@@ -1,0 +1,106 @@
+{
+  "event_type": "POV_SCENE_SEGMENT",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "campaign_metadata": {
+    "colony_sol": 11,
+    "tick_id": 43,
+    "session_number": 1,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "horizon_goals": {
+      "immediate_session_goal": "Resolve the Kelvin-Helmholtz shear anomalies.",
+      "mid_term_milestone": "Stabilize the ferrofluid sea environment.",
+      "campaign_arc_climax": "Complete the Sanctuary project."
+    },
+    "consequential_fights_since_short_rest": 0
+  },
+  "encounter_matrix": {
+    "prerolled_hazard_queue": [14, 15, 12, 18, 9],
+    "strain_accumulated_upward": 1,
+    "three_levels_of_why": {
+      "level_1_immediate": "The ferrofluid sea is exhibiting dangerous Magnetohydrodynamic Kelvin-Helmholtz shear.",
+      "level_2_local": "The shear threatens to destabilize local power relays near The Sanctuary.",
+      "level_3_campaign_arc": "Mastering the ferrofluid environment is critical for the Sanctuary's long-term viability."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "Scout and Sensor Array Operator"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "Magnetics Specialist"
+      }
+    ]
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea_observation_deck",
+    "macro_silhouette": "A brass and copper clad observation deck overlooking a dark, undulating ferrofluid sea.",
+    "sensory_palette": "The smell of ozone and copper hangs heavy in the humid air. The rhythmic, low-frequency hum of magnetic stabilizers vibrates through the floorboards. Viscous black waves crash silently against the magnetic containment field below.",
+    "interactive_features": [
+      {
+        "feature_name": "Magnetic Containment Field Emitter",
+        "system_verb": "DEFEND",
+        "affordance_description": "Can be surged to repel rogue waves.",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Intake Siphon",
+        "system_verb": "CONSUME",
+        "affordance_description": "Can draw in samples of the shear-stressed fluid.",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Brass Bulkhead Shielding",
+        "system_verb": "CONCEAL",
+        "affordance_description": "Provides cover from localized magnetic discharges.",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_shear_anomaly",
+      "name_and_role": "Kelvin-Helmholtz Anomaly - Environmental Hazard",
+      "motivation_goal": "To equalize magnetic potential aggressively.",
+      "consistent_method": "Pulsing erratic magnetic fields that disrupt delicate equipment.",
+      "immediate_complication": "The anomaly is causing feedback in Kaio's sensor array.",
+      "pressure_index": 5,
+      "uninterrupted_escalation": "If left unchecked, the shear will cause a localized magnetic blowout, damaging the deck."
+    }
+  ],
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Anthropic",
+      "model": "claude-3-opus-20240229",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If Kaio fails to read the shear, the sensor array takes damage and data is lost.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio misinterprets the shear, leading him to adjust the stabilizers incorrectly, worsening the anomaly.",
+        "below_dc_complicated_fail_forward": "Kaio gets the data, but the feedback fries a secondary relay, requiring repairs later.",
+        "meets_dc_clean_success": "Kaio perfectly reads the shear patterns and relays the data to Ryn without issue.",
+        "dc_plus_5_or_20_extended_lore": "Kaio not only gets the data, but discovers a deeper harmonic resonance in the ferrofluid sea."
+      }
+    },
+    "master_narrator": {
+      "executor": "claude-3-opus-20240229",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "What do you do next, Ryn?"
+    }
+  },
+  "lpi_metrics": {
+    "classification": "EXPLORATORY_TENSION",
+    "composite_lpi": 0.85,
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.7,
+    "temporal_horizon_immediacy": 0.9,
+    "unresolved_conflict_ratio": 0.5
+  }
+}
