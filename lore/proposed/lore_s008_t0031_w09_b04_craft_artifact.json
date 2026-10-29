@@ -1,0 +1,121 @@
+{
+  "event_type": "POV_SCENE_SEGMENT",
+  "colony_sol": 8,
+  "tick_id": 31,
+  "day_phase": "DUSK_CRAFT",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "campaign_metadata": {
+    "session_number": 8,
+    "colony_sol": 8,
+    "tick_id": 31,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Gather samples of the ferrofluid sea.",
+      "mid_term_milestone": "Map the magnetic currents.",
+      "campaign_arc_climax": "Complete the Sanctuary."
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea_shore",
+    "macro_silhouette": "The ferrofluid sea churns with unnatural precision beneath the fading light of the twin suns, its black waves cresting into sharp, metallic spikes. The air here vibrates with a low, bone-rattling hum, smelling sharply of ozone and salt. Above, the sky bruised purple is streaked with auroras born from the Magnetohydrodynamic Kelvin-Helmholtz shear.",
+    "sensory_palette": {
+      "sight_and_color": "Deep, iridescent black waves cresting into sharp metallic spikes.",
+      "sound": "A low, bone-rattling hum.",
+      "smell": "Ozone and salt.",
+      "tactile_temperature": "A chilling dampness that prickles the skin with static electricity.",
+      "taste_optional": "The metallic tang of ozone."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Ferrofluid Spikes",
+        "affordance_description": "Sharp metallic spikes that can be used to repel predators.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetic Currents",
+        "affordance_description": "Currents that can be used to hide small objects.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ozone Vents",
+        "affordance_description": "Vents that can be used to power small devices.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_wave",
+      "name_and_role": "Ferrofluid Wave (Environmental Hazard)",
+      "motivation_goal": "To crash and reshape the shoreline.",
+      "consistent_method": "Surging with magnetic force.",
+      "immediate_complication": "A sudden surge threatens to sweep away equipment.",
+      "pressure_index": 5,
+      "uninterrupted_escalation": "The waves grow larger and more frequent."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio is studying the Magnetohydrodynamic Kelvin-Helmholtz shear.",
+      "level_2_local": "To understand the magnetic currents of the ferrofluid sea.",
+      "level_3_campaign_arc": "To complete the Sanctuary's environmental mapping."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 0,
+    "prerolled_hazard_queue": [
+      14,
+      15,
+      12,
+      18,
+      9
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.5,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.2,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.6,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "anthropic",
+      "model": "claude-3-opus",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Kaio's equipment is swept away, and he must rely on Ryn for help.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio misreads the shear, leading to a dangerous miscalculation.",
+        "below_dc_complicated_fail_forward": "Kaio gets the data, but his sextant is damaged.",
+        "meets_dc_clean_success": "Kaio successfully maps the shear and retrieves his equipment.",
+        "dc_plus_5_or_20_extended_lore": "Kaio discovers a new property of the ferrofluid sea."
+      }
+    },
+    "master_narrator": {
+      "executor": "anthropic",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio carefully navigates the slick shoreline, his eyes tracking the impossible geometry of the Magnetohydrodynamic Kelvin-Helmholtz shear as it dances across the ferrofluid sea. The air hums with a bone-rattling frequency, smelling sharply of ozone and salt. He almost slips on a cresting wave of black liquid, but catches himself, clutching his brass sextant tight. Just then, he spots Ryn approaching from the ridge, a scowl on their face and a ledger in hand. Kaio bounds over, pocketing a glowing pebble. 'You won't believe the current patterns down here!' he grins, tossing the pebble toward Ryn."
+    }
+  }
+}
