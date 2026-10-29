@@ -29,7 +29,6 @@
   "next_pov_target": "enclave_03_silas",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "steward_note": "deterministic-enclave-5section-v2",
-  "disallow_overwrite": false,
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 6,
@@ -138,13 +137,6 @@
       }
     }
   },
-  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified",
-  "VAL": "laws_L01_through_L16_and_calypso_verified",
-  "CONF": "1.00",
-  "TIME": "2026-10-28T19:12:01Z",
-  "PROV": "sol006_t0024",
   "prev_next_pov_target": "enclave_13_ryn",
-  "second_pass_repair_constraint": "@ENT[enclave:171172332741791876]",
-  "f120_stall_timeout": "session_exceeded_25m_cut_loss_relaunch",
-  "changeset_gate_rejection": "Law L02 violation: target_path &#x27;lore/propose"
+  "target_path": "events/evt_s006_t0024_reflection.json"
 }

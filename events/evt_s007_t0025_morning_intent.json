@@ -14,9 +14,7 @@
   "active_pov_id": "enclave_03_silas",
   "next_pov_target": "enclave_01_hector",
   "prev_next_pov_target": "enclave_03_silas",
-  "disallow_overwrite": false,
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
-  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
   "steward_note": "deterministic-enclave-5section-v2",
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "narrative_prose": "Silas firmly braces the reinforced thermal baffles to DEFEND against the radiant heat, observing the harsh amber light reflecting off oxidized rust as the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea causes raw lightning to spit sharp metallic ozone into the dry, statically charged air. He can hear the rhythmic thud of pneumatic hammers and taste the metallic tang of ozone on his tongue, prompting him to CONCEAL the delicate copper components from the chaotic magnetic fields that ATTRACT stray ferrofluid droplets. He firmly presses the insulated baton into Hector's waiting grip, trusting the prodigy to handle the volatile alignment.",
@@ -42,14 +40,6 @@
       "path": "events/evt_s007_t0025_morning_intent.json"
     }
   ],
-  "second_pass_repair_constraint": "@ENT[enclave:171172332741791876]",
-  "f120_stall_timeout": "session_exceeded_25m_cut_loss_relaunch",
-  "changeset_gate_rejection": "Law L02 violation: target_path &#x27;lore/propose",
-  "VAL": "Law L02 violation: target_path &#x27;lore/propose",
-  "ENT": "enclave:7298660649132524014",
-  "CONF": "1.00",
-  "TIME": "2026-10-28T20:12:00Z",
-  "PROV": "sol007_t0025",
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 7,

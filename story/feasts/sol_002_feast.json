@@ -35,7 +35,9 @@
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "context_manifest": {
     "full_cards_loaded_count": 1,
-    "loaded_full_card_ids": ["enclave_13_ryn"],
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
     "interlocutor_full_cards_loaded": 0
   },
   "narrative_prose": "The sprawling galley rang with the clatter of heavy brass spoons against copper pots as Ryn marshaled the chaotic energy of sixteen hungry souls into a coherent meal. The air smelled of caramelized onion and the faint metallic ozone of the ferrofluid sea's magnetohydrodynamic Kelvin-Helmholtz shear, drifting in from the vents. Warm hearth light spilled across the rough-hewn timber tables, casting long, wavering shadows that seemed to dance with the flickering flames. Ryn barked orders with precision, adjusting a valve to DEFEND the simmering broth from boiling over, while the scent of roasting tubers began to ATTRACT a crowd near the serving line. Before the commotion grew too wild, she scooped a generous portion of stew into a thick ceramic bowl. With a stern nod, she stepped over to Silas, physically handing him the steaming vessel for him to CONSUME the rich, hearty meal.",
@@ -53,7 +55,6 @@
     "feast_sol_002"
   ],
   "target_path": "story/feasts/sol_002_feast.json",
-  "disallow_overwrite": false,
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 2,
@@ -122,7 +123,13 @@
         }
       ],
       "strain_accumulated_upward": 2,
-      "prerolled_hazard_queue": [ 7, 12, 4, 19, 11 ]
+      "prerolled_hazard_queue": [
+        7,
+        12,
+        4,
+        19,
+        11
+      ]
     },
     "lpi_metrics": {
       "relational_tension_density": 0.6,

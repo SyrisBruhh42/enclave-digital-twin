@@ -1,5 +1,4 @@
 {
-  "disallow_overwrite": false,
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
   "event_type": "COUNTERFACTUAL_REPLAY",
@@ -12,12 +11,6 @@
     "enclave_05_kaio",
     "enclave_13_ryn"
   ],
-  "ENT": "enclave-digital-twin:COUNTERFACTUAL_PERSONALITY_STUDY_REPLAYS",
-  "ATTR": "second_pass_repair_constraint",
-  "VAL": "@ENT[enclave:16017190491470851455] @ATTR[f120_stall_timeout] = session_exceeded_25m_cut_loss_relaunch @CONF[1.00] @TIME[2026-10-28T16:38:02Z] @PROV[f120_reaper] @ENT[enclave:3980801014648367745] @ATTR[f120_stall_timeout] = session_exceeded_25m_cut_loss_relaunch @CONF[1.00] @TIME[",
-  "CONF": "1.00",
-  "TIME": "2026-10-28T18:12:02Z",
-  "PROV": "sol006_t0023",
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 6,
@@ -138,5 +131,6 @@
     "interlocutor_full_cards_loaded": 0,
     "total_tokens": 1200,
     "max_tokens": 3500
-  }
+  },
+  "target_path": "qa/sol_006_counterfactual_replay.json"
 }

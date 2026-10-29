@@ -128,5 +128,5 @@
     ],
     "interlocutor_full_cards_loaded": 0
   },
-  "disallow_overwrite": false
+  "target_path": "story/segments/seg_s003_t0010_enclave_01_hector.json"
 }

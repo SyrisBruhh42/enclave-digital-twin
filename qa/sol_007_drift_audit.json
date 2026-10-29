@@ -12,7 +12,6 @@
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "steward_note": "deterministic-enclave-5section-v2",
-  "disallow_overwrite": false,
   "context_manifest": {
     "full_cards_loaded_count": 1,
     "loaded_full_card_ids": [
@@ -23,14 +22,6 @@
     "max_tokens": 3500,
     "active_pov_id": "enclave_13_ryn"
   },
-  "ENT": "enclave:10785334878835238916",
-  "second_pass_repair_constraint": "@ENT[enclave:3800217491768740553]",
-  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
-  "changeset_gate_rejection": "Showrunner contract violation (Mercer 3-Feature Rule): active_location requires exactly 3 interactive_features.",
-  "VAL": "@ENT[enclave:10785334878835238916]",
-  "CONF": "1.00",
-  "TIME": "2026-10-28T23:12:03Z",
-  "PROV": "sol007_t0028",
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 1,
@@ -146,5 +137,6 @@
     "drift_alert": false,
     "corrective_authors_note": "Ryn is maintaining her core traits effectively during The Feast.",
     "re_anchor_ticks": 0
-  }
+  },
+  "target_path": "qa/sol_007_drift_audit.json"
 }

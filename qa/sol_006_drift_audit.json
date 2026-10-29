@@ -11,7 +11,6 @@
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "steward_note": "deterministic-enclave-5section-v2",
-  "disallow_overwrite": false,
   "context_manifest": {
     "full_cards_loaded_count": 1,
     "loaded_full_card_ids": [
@@ -21,12 +20,6 @@
     "total_tokens": 1500,
     "max_tokens": 3500
   },
-  "ENT": "enclave-digital-twin:INCHARACTER_PSYCHOMETRIC_DRIFT_AUDITS",
-  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified",
-  "VAL": "@ENT[enclave:171172332741791876]",
-  "CONF": "1.00",
-  "TIME": "2026-10-28T19:12:03Z",
-  "PROV": "sol006_t0024",
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 1,
@@ -144,7 +137,5 @@
     "corrective_authors_note": "Ryn is maintaining her core traits effectively during The Feast.",
     "re_anchor_ticks": 0
   },
-  "second_pass_repair_constraint": "@ENT[enclave:171172332741791876]",
-  "f120_stall_timeout": "session_exceeded_25m_cut_loss_relaunch",
-  "changeset_gate_rejection": "Law L02 violation: target_path &amp;#x27;lore/propose"
+  "target_path": "qa/sol_006_drift_audit.json"
 }

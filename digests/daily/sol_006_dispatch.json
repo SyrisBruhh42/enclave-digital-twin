@@ -9,7 +9,6 @@
     }
   ],
   "target_path": "digests/daily/sol_006_dispatch.json",
-  "disallow_overwrite": false,
   "headline": "SOL 6 EVENING DISPATCH: The Feast Under Shear",
   "anchor_intro": "[VEX]: Good evening Enclave! [DORIAN]: Another sol, another dispatch.",
   "lead_stories": [
@@ -253,13 +252,5 @@
     }
   },
   "steward_note": "deterministic-enclave-5section-v2",
-  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
-  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
-  "second_pass_repair_constraint": "@ENT[enclave:171172332741791876]",
-  "f120_stall_timeout": "session_exceeded_25m_cut_loss_relaunch",
-  "changeset_gate_rejection": "Law L02 violation: target_path &#x27;lore/propose",
-  "VAL": "session_exceeded_25m_cut_loss_relaunch",
-  "CONF": "1.00",
-  "TIME": "2026-10-28T18:08:01Z",
-  "PROV": "f120_reaper"
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC"
 }

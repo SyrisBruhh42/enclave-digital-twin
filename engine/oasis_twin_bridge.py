@@ -18,10 +18,12 @@ from __future__ import annotations
 from datetime import datetime, timezone
 import fcntl
 import hashlib
+import importlib.util
 import json
 import os
 from pathlib import Path
 import shutil
+import sys
 import tempfile
 from typing import Any
 
@@ -30,6 +32,39 @@ from engine.enclave_city_sim import (
     summarize_enclave_city_state,
 )
 from tools.check_enclave_constitutions import CANONICAL_16_CHARACTER_IDS
+
+
+def _load_asset_bridge_lock_module(repo_root: Path | None = None) -> Any | None:
+    """Resolve and load `aegis_asset_bridge_lock` for fcntl.flock + CRDT union updates, with safe fallback."""
+    if "aegis_asset_bridge_lock" in sys.modules:
+        return sys.modules["aegis_asset_bridge_lock"]
+    try:
+        import aegis_asset_bridge_lock as mod  # type: ignore
+        return mod
+    except ImportError:
+        pass
+
+    candidates: list[Path] = [
+        Path(__file__).resolve().parents[3] / "core" / "companion" / "clients" / "linux" / "aegis_asset_bridge_lock.py",
+    ]
+    if repo_root is not None:
+        resolved_root = Path(repo_root).resolve()
+        if len(resolved_root.parents) >= 2:
+            candidates.append(
+                resolved_root.parents[1] / "core" / "companion" / "clients" / "linux" / "aegis_asset_bridge_lock.py"
+            )
+    for cand in candidates:
+        if cand.is_file():
+            try:
+                spec = importlib.util.spec_from_file_location("aegis_asset_bridge_lock", str(cand))
+                if spec and spec.loader:
+                    mod = importlib.util.module_from_spec(spec)
+                    sys.modules["aegis_asset_bridge_lock"] = mod
+                    spec.loader.exec_module(mod)
+                    return mod
+            except Exception:
+                continue
+    return None
 
 OASIS_CMY_RUPEE_GEM_TIERS: tuple[int, ...] = (1, 5, 10, 25, 50, 100, 250, 500, 1000)
 DISPATCH_REWARD_RUP = 10
@@ -312,62 +347,110 @@ def sync_enclave_oasis_save_and_bridge(
     }
     _atomic_write_json(lineage_path, lineage_payload)
 
-    # Atomically update aegis_asset_bridge.json under fcntl.flock(LOCK_EX)
+    # Delegate to aegis_asset_bridge_lock.update_asset_bridge() (fcntl.flock + CRDT union) with safe fallback
     resolved_bridge_path.parent.mkdir(parents=True, exist_ok=True)
     lock_path = resolved_bridge_path.with_name(f"{resolved_bridge_path.name}.lock")
     partition_key = f"{account_binding_id}:{int(privacy_generation)}"
+    bridge_lock_mod = _load_asset_bridge_lock_module(root)
 
-    with lock_path.open("a+", encoding="utf-8") as lock_fh:
-        fcntl.flock(lock_fh.fileno(), fcntl.LOCK_EX)
-        try:
-            bridge_data: dict[str, Any] = {}
-            if resolved_bridge_path.is_file():
-                try:
-                    loaded = json.loads(resolved_bridge_path.read_text(encoding="utf-8"))
-                    if isinstance(loaded, dict):
-                        bridge_data = loaded
-                except Exception:
-                    bridge_data = {}
-
-            bridge_data.setdefault("schema", "lfs-local-abac-v1")
-            bridge_data["updated_at_iso"] = now_iso
-            bridge_data["currency_code"] = "RUP"
-            bridge_data["currencyCode"] = "RUP"
-            bridge_data["enclaveTwinLiveState"] = live_state
-            bridge_data["enclaveCitySummary"] = city_summary
-            bridge_data["enclaveMetaRewards"] = meta_rewards
-
-            prev_enclave_rup = int(bridge_data.get("enclaveRupeeContribution", 0) or 0)
+    if bridge_lock_mod is not None and hasattr(bridge_lock_mod, "update_asset_bridge"):
+        def _enclave_crdt_patch(part: dict[str, Any]) -> dict[str, Any]:
+            prev_enclave_rup = int(part.get("enclaveRupeeContribution", 0) or 0)
             new_enclave_rup = int(meta_rewards["total_earned_rupees"])
             delta_rup = max(0, new_enclave_rup - prev_enclave_rup)
-            prev_balance = int(bridge_data.get("rupeeBalance", bridge_data.get("rupees", 0)) or 0)
-            updated_balance = prev_balance + delta_rup if prev_enclave_rup > 0 else max(prev_balance, new_enclave_rup)
-            bridge_data["enclaveRupeeContribution"] = max(prev_enclave_rup, new_enclave_rup)
-            bridge_data["rupeeBalance"] = updated_balance
-            bridge_data["cmyGemTiers"] = list(OASIS_CMY_RUPEE_GEM_TIERS)
-
-            partitions = bridge_data.setdefault("partitions", {})
-            part = partitions.setdefault(
-                partition_key,
-                {
-                    "accountBindingId": account_binding_id,
-                    "privacyGeneration": int(privacy_generation),
-                    "ownedItemIds": [],
-                    "unlockedItemIds": [],
-                    "rupeeBalance": 0,
-                },
+            prev_balance = int(part.get("rupeeBalance", part.get("rupees", 0)) or 0)
+            updated_balance = (
+                prev_balance + delta_rup
+                if prev_enclave_rup > 0
+                else max(prev_balance, new_enclave_rup)
             )
             part["currency_code"] = "RUP"
             part["currencyCode"] = "RUP"
             part["enclaveTwinLiveState"] = live_state
             part["enclaveCitySummary"] = city_summary
             part["enclaveMetaRewards"] = meta_rewards
-            part["rupeeBalance"] = max(int(part.get("rupeeBalance", 0) or 0), updated_balance)
+            part["enclaveRupeeContribution"] = max(prev_enclave_rup, new_enclave_rup)
+            part["rupeeBalance"] = max(prev_balance, updated_balance)
+            part["cmyGemTiers"] = list(OASIS_CMY_RUPEE_GEM_TIERS)
             part["updated_at_iso"] = now_iso
+            return part
 
-            _atomic_write_json(resolved_bridge_path, bridge_data)
-        finally:
-            fcntl.flock(lock_fh.fileno(), fcntl.LOCK_UN)
+        bridge_doc = bridge_lock_mod.update_asset_bridge(
+            _enclave_crdt_patch,
+            account_binding_id=account_binding_id,
+            privacy_generation=int(privacy_generation),
+            bridge_path=resolved_bridge_path,
+        )
+        # Ensure top-level Enclave summary & dual currency fields are persisted alongside CRDT union sets
+        with lock_path.open("a+", encoding="utf-8") as lock_fh:
+            fcntl.flock(lock_fh.fileno(), fcntl.LOCK_EX)
+            try:
+                part_state = (bridge_doc.get("partitions") or {}).get(partition_key, {})
+                bridge_doc["updated_at_iso"] = now_iso
+                bridge_doc["currency_code"] = "RUP"
+                bridge_doc["currencyCode"] = "RUP"
+                bridge_doc["enclaveTwinLiveState"] = live_state
+                bridge_doc["enclaveCitySummary"] = city_summary
+                bridge_doc["enclaveMetaRewards"] = meta_rewards
+                bridge_doc["enclaveRupeeContribution"] = int(
+                    part_state.get("enclaveRupeeContribution", meta_rewards["total_earned_rupees"])
+                )
+                bridge_doc["cmyGemTiers"] = list(OASIS_CMY_RUPEE_GEM_TIERS)
+                _atomic_write_json(resolved_bridge_path, bridge_doc)
+            finally:
+                fcntl.flock(lock_fh.fileno(), fcntl.LOCK_UN)
+    else:
+        with lock_path.open("a+", encoding="utf-8") as lock_fh:
+            fcntl.flock(lock_fh.fileno(), fcntl.LOCK_EX)
+            try:
+                bridge_data: dict[str, Any] = {}
+                if resolved_bridge_path.is_file():
+                    try:
+                        loaded = json.loads(resolved_bridge_path.read_text(encoding="utf-8"))
+                        if isinstance(loaded, dict):
+                            bridge_data = loaded
+                    except Exception:
+                        bridge_data = {}
+
+                bridge_data.setdefault("schema", "lfs-local-abac-v1")
+                bridge_data["updated_at_iso"] = now_iso
+                bridge_data["currency_code"] = "RUP"
+                bridge_data["currencyCode"] = "RUP"
+                bridge_data["enclaveTwinLiveState"] = live_state
+                bridge_data["enclaveCitySummary"] = city_summary
+                bridge_data["enclaveMetaRewards"] = meta_rewards
+
+                prev_enclave_rup = int(bridge_data.get("enclaveRupeeContribution", 0) or 0)
+                new_enclave_rup = int(meta_rewards["total_earned_rupees"])
+                delta_rup = max(0, new_enclave_rup - prev_enclave_rup)
+                prev_balance = int(bridge_data.get("rupeeBalance", bridge_data.get("rupees", 0)) or 0)
+                updated_balance = prev_balance + delta_rup if prev_enclave_rup > 0 else max(prev_balance, new_enclave_rup)
+                bridge_data["enclaveRupeeContribution"] = max(prev_enclave_rup, new_enclave_rup)
+                bridge_data["rupeeBalance"] = updated_balance
+                bridge_data["cmyGemTiers"] = list(OASIS_CMY_RUPEE_GEM_TIERS)
+
+                partitions = bridge_data.setdefault("partitions", {})
+                part = partitions.setdefault(
+                    partition_key,
+                    {
+                        "accountBindingId": account_binding_id,
+                        "privacyGeneration": int(privacy_generation),
+                        "ownedItemIds": [],
+                        "unlockedItemIds": [],
+                        "rupeeBalance": 0,
+                    },
+                )
+                part["currency_code"] = "RUP"
+                part["currencyCode"] = "RUP"
+                part["enclaveTwinLiveState"] = live_state
+                part["enclaveCitySummary"] = city_summary
+                part["enclaveMetaRewards"] = meta_rewards
+                part["rupeeBalance"] = max(int(part.get("rupeeBalance", 0) or 0), updated_balance)
+                part["updated_at_iso"] = now_iso
+
+                _atomic_write_json(resolved_bridge_path, bridge_data)
+            finally:
+                fcntl.flock(lock_fh.fileno(), fcntl.LOCK_UN)
 
     return {
         "saved_files": copied_files,

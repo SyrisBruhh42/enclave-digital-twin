@@ -1,5 +1,4 @@
 {
-  "disallow_overwrite": false,
   "target_path": "qa/sol_004_counterfactual_replay.json",
   "operation": "ADD",
   "active_pov_id": "enclave_03_silas",

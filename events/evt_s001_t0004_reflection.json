@@ -22,7 +22,6 @@
   "cited_event_ids": [
     "evt_s001_t0004_the_feast"
   ],
-  "disallow_overwrite": false,
   "active_pov_id": "enclave_13_ryn",
   "prev_next_pov_target": "enclave_13_ryn",
   "next_pov_target": "enclave_03_silas",
@@ -141,5 +140,6 @@
         "agency_handoff_prompt": "With the galley finally quiet, Ryn wipes her brow and considers Silas's quiet observation."
       }
     }
-  }
+  },
+  "target_path": "events/evt_s001_t0004_reflection.json"
 }

@@ -13,13 +13,6 @@
   "narrative_prose": "The biting, freezing kinetic wind roared across the metallic expanse of the outer platform, carrying the sharp, bitter stench of raw ozone and metallic grease. Kaio tasted the distinct static tang of the Magnetohydrodynamic Kelvin-Helmholtz shear on his teeth, watching blinding arcs of violent static illuminate the pitch-black, churning ferrofluid sea below. He had to CONCEAL the fragile telemetry baton within his insulated jacket to DEFEND its delicate circuitry from the overwhelming magnetic anomalies that threatened to CONSUME everything in their path. Sprinting through the crushing tempest, Kaio burst through the heavy airlock doors into the safety of the galley and immediately shoved the sparking baton into Ryn's waiting hands.",
   "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
-  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified",
-  "second_pass_repair_constraint": "@ENT[enclave:16017190491470851455]",
-  "f120_stall_timeout": "session_exceeded_25m_cut_loss_relaunch",
-  "VAL": "@ENT[enclave:16017190491470851455]",
-  "CONF": 1.0,
-  "TIME": "2026-10-28T18:12:00Z",
-  "PROV": "sol006_t0023",
   "campaign_metadata": {
     "session_number": 6,
     "colony_sol": 6,
@@ -139,6 +132,5 @@
   },
   "context_manifest_path": "context/manifests/manifest_s006_t0023_enclave_05_kaio.json",
   "total_prompt_tokens": 870,
-  "target_path": "story/segments/seg_s006_t0023_enclave_05_kaio.json",
-  "disallow_overwrite": false
+  "target_path": "story/segments/seg_s006_t0023_enclave_05_kaio.json"
 }

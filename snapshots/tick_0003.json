@@ -81,7 +81,8 @@
       "neuroticism": 0.0752,
       "neuroticism_state": 0.0752,
       "hexaco_honesty_humility": 0.731,
-      "hexaco_honesty_humility_state": 0.731
+      "hexaco_honesty_humility_state": 0.731,
+      "morale": 0.5
     },
     "enclave_02_jane": {
       "character_id": "enclave_02_jane",
@@ -123,7 +124,8 @@
       "neuroticism": 0.502,
       "neuroticism_state": 0.502,
       "hexaco_honesty_humility": 1.0,
-      "hexaco_honesty_humility_state": 1.0
+      "hexaco_honesty_humility_state": 1.0,
+      "morale": 0.5
     },
     "enclave_03_silas": {
       "character_id": "enclave_03_silas",
@@ -165,7 +167,8 @@
       "neuroticism": 0.3952,
       "neuroticism_state": 0.3952,
       "hexaco_honesty_humility": 0.9398,
-      "hexaco_honesty_humility_state": 0.9398
+      "hexaco_honesty_humility_state": 0.9398,
+      "morale": 0.5
     },
     "enclave_04_leo": {
       "character_id": "enclave_04_leo",
@@ -207,7 +210,8 @@
       "neuroticism": 0.2782,
       "neuroticism_state": 0.2782,
       "hexaco_honesty_humility": 0.9376,
-      "hexaco_honesty_humility_state": 0.9376
+      "hexaco_honesty_humility_state": 0.9376,
+      "morale": 0.5
     },
     "enclave_05_kaio": {
       "character_id": "enclave_05_kaio",
@@ -231,7 +235,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.4102,
+      "stress": 0.4082,
       "fatigue": 0.48,
       "sleep_debt_norm": 0.48,
       "kp_exo": 7.24,
@@ -249,7 +253,8 @@
       "neuroticism": 0.4936,
       "neuroticism_state": 0.4936,
       "hexaco_honesty_humility": 0.779,
-      "hexaco_honesty_humility_state": 0.779
+      "hexaco_honesty_humility_state": 0.779,
+      "morale": 0.5
     },
     "enclave_06_zara": {
       "character_id": "enclave_06_zara",
@@ -291,7 +296,8 @@
       "neuroticism": 0.445,
       "neuroticism_state": 0.445,
       "hexaco_honesty_humility": 0.9327,
-      "hexaco_honesty_humility_state": 0.9327
+      "hexaco_honesty_humility_state": 0.9327,
+      "morale": 0.5
     },
     "enclave_07_willow": {
       "character_id": "enclave_07_willow",
@@ -337,7 +343,8 @@
       "neuroticism": 0.2085,
       "neuroticism_state": 0.2085,
       "hexaco_honesty_humility": 0.836,
-      "hexaco_honesty_humility_state": 0.836
+      "hexaco_honesty_humility_state": 0.836,
+      "morale": 0.5
     },
     "enclave_08_terra": {
       "character_id": "enclave_08_terra",
@@ -379,7 +386,8 @@
       "neuroticism": 0.538,
       "neuroticism_state": 0.538,
       "hexaco_honesty_humility": 0.9084,
-      "hexaco_honesty_humility_state": 0.9084
+      "hexaco_honesty_humility_state": 0.9084,
+      "morale": 0.5
     },
     "enclave_09_orion": {
       "character_id": "enclave_09_orion",
@@ -403,7 +411,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.4045,
+      "stress": 0.4023,
       "fatigue": 0.45,
       "sleep_debt_norm": 0.45,
       "kp_exo": 7.24,
@@ -421,7 +429,8 @@
       "neuroticism": 0.8308,
       "neuroticism_state": 0.8308,
       "hexaco_honesty_humility": 0.915,
-      "hexaco_honesty_humility_state": 0.915
+      "hexaco_honesty_humility_state": 0.915,
+      "morale": 0.5
     },
     "enclave_10_isla": {
       "character_id": "enclave_10_isla",
@@ -463,7 +472,8 @@
       "neuroticism": 0.1651,
       "neuroticism_state": 0.1651,
       "hexaco_honesty_humility": 0.8519,
-      "hexaco_honesty_humility_state": 0.8519
+      "hexaco_honesty_humility_state": 0.8519,
+      "morale": 0.5
     },
     "enclave_11_kenna": {
       "character_id": "enclave_11_kenna",
@@ -505,7 +515,8 @@
       "neuroticism": 0.222,
       "neuroticism_state": 0.222,
       "hexaco_honesty_humility": 0.9968,
-      "hexaco_honesty_humility_state": 0.9968
+      "hexaco_honesty_humility_state": 0.9968,
+      "morale": 0.5
     },
     "enclave_12_elias": {
       "character_id": "enclave_12_elias",
@@ -547,7 +558,8 @@
       "neuroticism": 0.5958,
       "neuroticism_state": 0.5958,
       "hexaco_honesty_humility": 0.9257,
-      "hexaco_honesty_humility_state": 0.9257
+      "hexaco_honesty_humility_state": 0.9257,
+      "morale": 0.5
     },
     "enclave_13_ryn": {
       "character_id": "enclave_13_ryn",
@@ -589,7 +601,8 @@
       "neuroticism": 0.4947,
       "neuroticism_state": 0.4947,
       "hexaco_honesty_humility": 0.9495,
-      "hexaco_honesty_humility_state": 0.9495
+      "hexaco_honesty_humility_state": 0.9495,
+      "morale": 0.5
     },
     "enclave_14_vex": {
       "character_id": "enclave_14_vex",
@@ -635,7 +648,8 @@
       "neuroticism": 0.153,
       "neuroticism_state": 0.153,
       "hexaco_honesty_humility": 0.7005,
-      "hexaco_honesty_humility_state": 0.7005
+      "hexaco_honesty_humility_state": 0.7005,
+      "morale": 0.5
     },
     "enclave_15_dorian": {
       "character_id": "enclave_15_dorian",
@@ -677,7 +691,8 @@
       "neuroticism": 0.4229,
       "neuroticism_state": 0.4229,
       "hexaco_honesty_humility": 0.9051,
-      "hexaco_honesty_humility_state": 0.9051
+      "hexaco_honesty_humility_state": 0.9051,
+      "morale": 0.5
     },
     "enclave_16_elara": {
       "character_id": "enclave_16_elara",
@@ -723,11 +738,766 @@
       "neuroticism": 0.7024,
       "neuroticism_state": 0.7024,
       "hexaco_honesty_humility": 0.9392,
-      "hexaco_honesty_humility_state": 0.9392
+      "hexaco_honesty_humility_state": 0.9392,
+      "morale": 0.5
+    }
+  },
+  "characters": {
+    "enclave_01_hector": {
+      "character_id": "enclave_01_hector",
+      "tick_id": 3,
+      "day_phase": "DUSK_CRAFT",
+      "trait_states": {
+        "openness": 0.4768,
+        "conscientiousness": 0.1554,
+        "extraversion": 0.832,
+        "agreeableness": 0.401,
+        "neuroticism": 0.0752,
+        "hexaco_honesty_humility": 0.731
+      },
+      "z_scores": {
+        "openness": -0.2451,
+        "conscientiousness": -0.1927,
+        "extraversion": -0.9373,
+        "agreeableness": 0.2198,
+        "neuroticism": -1.2053,
+        "hexaco_honesty_humility": 0.4228
+      },
+      "triggered_caps_rules": [],
+      "behavioral_directives": [],
+      "stress": 0.3664,
+      "fatigue": 0.46,
+      "sleep_debt_norm": 0.46,
+      "kp_exo": 7.24,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.4768,
+      "openness_state": 0.4768,
+      "conscientiousness": 0.1554,
+      "conscientiousness_state": 0.1554,
+      "extraversion": 0.832,
+      "extraversion_state": 0.832,
+      "agreeableness": 0.401,
+      "agreeableness_state": 0.401,
+      "neuroticism": 0.0752,
+      "neuroticism_state": 0.0752,
+      "hexaco_honesty_humility": 0.731,
+      "hexaco_honesty_humility_state": 0.731,
+      "morale": 0.5
+    },
+    "enclave_02_jane": {
+      "character_id": "enclave_02_jane",
+      "tick_id": 3,
+      "day_phase": "DUSK_CRAFT",
+      "trait_states": {
+        "openness": 0.8759,
+        "conscientiousness": 0.3573,
+        "extraversion": 0.0296,
+        "agreeableness": 0.2714,
+        "neuroticism": 0.502,
+        "hexaco_honesty_humility": 1.0
+      },
+      "z_scores": {
+        "openness": -0.7215,
+        "conscientiousness": -0.4253,
+        "extraversion": -1.0667,
+        "agreeableness": -0.6714,
+        "neuroticism": 1.158,
+        "hexaco_honesty_humility": 2.2065
+      },
+      "triggered_caps_rules": [],
+      "behavioral_directives": [],
+      "stress": 0.3626,
+      "fatigue": 0.44,
+      "sleep_debt_norm": 0.44,
+      "kp_exo": 7.24,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.8759,
+      "openness_state": 0.8759,
+      "conscientiousness": 0.3573,
+      "conscientiousness_state": 0.3573,
+      "extraversion": 0.0296,
+      "extraversion_state": 0.0296,
+      "agreeableness": 0.2714,
+      "agreeableness_state": 0.2714,
+      "neuroticism": 0.502,
+      "neuroticism_state": 0.502,
+      "hexaco_honesty_humility": 1.0,
+      "hexaco_honesty_humility_state": 1.0,
+      "morale": 0.5
+    },
+    "enclave_03_silas": {
+      "character_id": "enclave_03_silas",
+      "tick_id": 3,
+      "day_phase": "DUSK_CRAFT",
+      "trait_states": {
+        "openness": 0.1015,
+        "conscientiousness": 0.9097,
+        "extraversion": 0.0,
+        "agreeableness": 0.2061,
+        "neuroticism": 0.3952,
+        "hexaco_honesty_humility": 0.9398
+      },
+      "z_scores": {
+        "openness": -0.9509,
+        "conscientiousness": -0.9878,
+        "extraversion": -1.9831,
+        "agreeableness": -0.1232,
+        "neuroticism": -1.9813,
+        "hexaco_honesty_humility": 0.7913
+      },
+      "triggered_caps_rules": [],
+      "behavioral_directives": [],
+      "stress": 0.3549,
+      "fatigue": 0.4,
+      "sleep_debt_norm": 0.4,
+      "kp_exo": 7.24,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.1015,
+      "openness_state": 0.1015,
+      "conscientiousness": 0.9097,
+      "conscientiousness_state": 0.9097,
+      "extraversion": 0.0,
+      "extraversion_state": 0.0,
+      "agreeableness": 0.2061,
+      "agreeableness_state": 0.2061,
+      "neuroticism": 0.3952,
+      "neuroticism_state": 0.3952,
+      "hexaco_honesty_humility": 0.9398,
+      "hexaco_honesty_humility_state": 0.9398,
+      "morale": 0.5
+    },
+    "enclave_04_leo": {
+      "character_id": "enclave_04_leo",
+      "tick_id": 3,
+      "day_phase": "DUSK_CRAFT",
+      "trait_states": {
+        "openness": 0.7421,
+        "conscientiousness": 0.898,
+        "extraversion": 0.8225,
+        "agreeableness": 0.3037,
+        "neuroticism": 0.2782,
+        "hexaco_honesty_humility": 0.9376
+      },
+      "z_scores": {
+        "openness": -0.259,
+        "conscientiousness": 0.6704,
+        "extraversion": -2.0977,
+        "agreeableness": -0.9432,
+        "neuroticism": 1.0004,
+        "hexaco_honesty_humility": 0.3174
+      },
+      "triggered_caps_rules": [],
+      "behavioral_directives": [],
+      "stress": 0.3588,
+      "fatigue": 0.42,
+      "sleep_debt_norm": 0.42,
+      "kp_exo": 7.24,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.7421,
+      "openness_state": 0.7421,
+      "conscientiousness": 0.898,
+      "conscientiousness_state": 0.898,
+      "extraversion": 0.8225,
+      "extraversion_state": 0.8225,
+      "agreeableness": 0.3037,
+      "agreeableness_state": 0.3037,
+      "neuroticism": 0.2782,
+      "neuroticism_state": 0.2782,
+      "hexaco_honesty_humility": 0.9376,
+      "hexaco_honesty_humility_state": 0.9376,
+      "morale": 0.5
+    },
+    "enclave_05_kaio": {
+      "character_id": "enclave_05_kaio",
+      "tick_id": 3,
+      "day_phase": "DUSK_CRAFT",
+      "trait_states": {
+        "openness": 0.9569,
+        "conscientiousness": 0.0153,
+        "extraversion": 0.9636,
+        "agreeableness": 0.5733,
+        "neuroticism": 0.4936,
+        "hexaco_honesty_humility": 0.779
+      },
+      "z_scores": {
+        "openness": -0.2152,
+        "conscientiousness": -1.667,
+        "extraversion": 0.4842,
+        "agreeableness": -2.4989,
+        "neuroticism": -0.3199,
+        "hexaco_honesty_humility": -0.9769
+      },
+      "triggered_caps_rules": [],
+      "behavioral_directives": [],
+      "stress": 0.4082,
+      "fatigue": 0.48,
+      "sleep_debt_norm": 0.48,
+      "kp_exo": 7.24,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.9569,
+      "openness_state": 0.9569,
+      "conscientiousness": 0.0153,
+      "conscientiousness_state": 0.0153,
+      "extraversion": 0.9636,
+      "extraversion_state": 0.9636,
+      "agreeableness": 0.5733,
+      "agreeableness_state": 0.5733,
+      "neuroticism": 0.4936,
+      "neuroticism_state": 0.4936,
+      "hexaco_honesty_humility": 0.779,
+      "hexaco_honesty_humility_state": 0.779,
+      "morale": 0.5
+    },
+    "enclave_06_zara": {
+      "character_id": "enclave_06_zara",
+      "tick_id": 3,
+      "day_phase": "DUSK_CRAFT",
+      "trait_states": {
+        "openness": 0.5298,
+        "conscientiousness": 0.4116,
+        "extraversion": 0.0301,
+        "agreeableness": 0.6275,
+        "neuroticism": 0.445,
+        "hexaco_honesty_humility": 0.9327
+      },
+      "z_scores": {
+        "openness": 0.9208,
+        "conscientiousness": 1.1515,
+        "extraversion": -1.0787,
+        "agreeableness": -0.4102,
+        "neuroticism": 0.3891,
+        "hexaco_honesty_humility": 1.0423
+      },
+      "triggered_caps_rules": [],
+      "behavioral_directives": [],
+      "stress": 0.353,
+      "fatigue": 0.39,
+      "sleep_debt_norm": 0.39,
+      "kp_exo": 7.24,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.5298,
+      "openness_state": 0.5298,
+      "conscientiousness": 0.4116,
+      "conscientiousness_state": 0.4116,
+      "extraversion": 0.0301,
+      "extraversion_state": 0.0301,
+      "agreeableness": 0.6275,
+      "agreeableness_state": 0.6275,
+      "neuroticism": 0.445,
+      "neuroticism_state": 0.445,
+      "hexaco_honesty_humility": 0.9327,
+      "hexaco_honesty_humility_state": 0.9327,
+      "morale": 0.5
+    },
+    "enclave_07_willow": {
+      "character_id": "enclave_07_willow",
+      "tick_id": 3,
+      "day_phase": "DUSK_CRAFT",
+      "trait_states": {
+        "openness": 0.5666,
+        "conscientiousness": 0.6782,
+        "extraversion": 0.2741,
+        "agreeableness": 0.2072,
+        "neuroticism": 0.2085,
+        "hexaco_honesty_humility": 0.836
+      },
+      "z_scores": {
+        "openness": 0.5375,
+        "conscientiousness": 1.5651,
+        "extraversion": 0.0208,
+        "agreeableness": -0.2403,
+        "neuroticism": 0.7743,
+        "hexaco_honesty_humility": -0.2332
+      },
+      "triggered_caps_rules": [
+        "CAPS_WILLOW_01_TOXIC_SPORE_PRECIPITATION"
+      ],
+      "behavioral_directives": [
+        "Calmly lights her fractional copper alembic, samples the airborne alkaloids on a glass slide, and brews chelation tonics before anyone coughs."
+      ],
+      "stress": 0.311,
+      "fatigue": 0.38,
+      "sleep_debt_norm": 0.38,
+      "kp_exo": 7.24,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.5666,
+      "openness_state": 0.5666,
+      "conscientiousness": 0.6782,
+      "conscientiousness_state": 0.6782,
+      "extraversion": 0.2741,
+      "extraversion_state": 0.2741,
+      "agreeableness": 0.2072,
+      "agreeableness_state": 0.2072,
+      "neuroticism": 0.2085,
+      "neuroticism_state": 0.2085,
+      "hexaco_honesty_humility": 0.836,
+      "hexaco_honesty_humility_state": 0.836,
+      "morale": 0.5
+    },
+    "enclave_08_terra": {
+      "character_id": "enclave_08_terra",
+      "tick_id": 3,
+      "day_phase": "DUSK_CRAFT",
+      "trait_states": {
+        "openness": 0.111,
+        "conscientiousness": 0.8413,
+        "extraversion": 0.4695,
+        "agreeableness": 0.9098,
+        "neuroticism": 0.538,
+        "hexaco_honesty_humility": 0.9084
+      },
+      "z_scores": {
+        "openness": -1.6585,
+        "conscientiousness": -1.1398,
+        "extraversion": 1.0069,
+        "agreeableness": 0.2321,
+        "neuroticism": -0.049,
+        "hexaco_honesty_humility": -0.7049
+      },
+      "triggered_caps_rules": [],
+      "behavioral_directives": [],
+      "stress": 0.3607,
+      "fatigue": 0.43,
+      "sleep_debt_norm": 0.43,
+      "kp_exo": 7.24,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.111,
+      "openness_state": 0.111,
+      "conscientiousness": 0.8413,
+      "conscientiousness_state": 0.8413,
+      "extraversion": 0.4695,
+      "extraversion_state": 0.4695,
+      "agreeableness": 0.9098,
+      "agreeableness_state": 0.9098,
+      "neuroticism": 0.538,
+      "neuroticism_state": 0.538,
+      "hexaco_honesty_humility": 0.9084,
+      "hexaco_honesty_humility_state": 0.9084,
+      "morale": 0.5
+    },
+    "enclave_09_orion": {
+      "character_id": "enclave_09_orion",
+      "tick_id": 3,
+      "day_phase": "DUSK_CRAFT",
+      "trait_states": {
+        "openness": 0.9487,
+        "conscientiousness": 0.2784,
+        "extraversion": 0.2986,
+        "agreeableness": 0.6875,
+        "neuroticism": 0.8308,
+        "hexaco_honesty_humility": 0.915
+      },
+      "z_scores": {
+        "openness": -0.657,
+        "conscientiousness": 0.1425,
+        "extraversion": -0.8257,
+        "agreeableness": -1.4649,
+        "neuroticism": 0.675,
+        "hexaco_honesty_humility": 0.4988
+      },
+      "triggered_caps_rules": [],
+      "behavioral_directives": [],
+      "stress": 0.4023,
+      "fatigue": 0.45,
+      "sleep_debt_norm": 0.45,
+      "kp_exo": 7.24,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.9487,
+      "openness_state": 0.9487,
+      "conscientiousness": 0.2784,
+      "conscientiousness_state": 0.2784,
+      "extraversion": 0.2986,
+      "extraversion_state": 0.2986,
+      "agreeableness": 0.6875,
+      "agreeableness_state": 0.6875,
+      "neuroticism": 0.8308,
+      "neuroticism_state": 0.8308,
+      "hexaco_honesty_humility": 0.915,
+      "hexaco_honesty_humility_state": 0.915,
+      "morale": 0.5
+    },
+    "enclave_10_isla": {
+      "character_id": "enclave_10_isla",
+      "tick_id": 3,
+      "day_phase": "DUSK_CRAFT",
+      "trait_states": {
+        "openness": 0.8649,
+        "conscientiousness": 0.8731,
+        "extraversion": 0.1746,
+        "agreeableness": 0.2992,
+        "neuroticism": 0.1651,
+        "hexaco_honesty_humility": 0.8519
+      },
+      "z_scores": {
+        "openness": 0.8957,
+        "conscientiousness": -1.4676,
+        "extraversion": 0.6166,
+        "agreeableness": 0.6858,
+        "neuroticism": -0.9831,
+        "hexaco_honesty_humility": -0.8175
+      },
+      "triggered_caps_rules": [],
+      "behavioral_directives": [],
+      "stress": 0.3568,
+      "fatigue": 0.41,
+      "sleep_debt_norm": 0.41,
+      "kp_exo": 7.24,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.8649,
+      "openness_state": 0.8649,
+      "conscientiousness": 0.8731,
+      "conscientiousness_state": 0.8731,
+      "extraversion": 0.1746,
+      "extraversion_state": 0.1746,
+      "agreeableness": 0.2992,
+      "agreeableness_state": 0.2992,
+      "neuroticism": 0.1651,
+      "neuroticism_state": 0.1651,
+      "hexaco_honesty_humility": 0.8519,
+      "hexaco_honesty_humility_state": 0.8519,
+      "morale": 0.5
+    },
+    "enclave_11_kenna": {
+      "character_id": "enclave_11_kenna",
+      "tick_id": 3,
+      "day_phase": "DUSK_CRAFT",
+      "trait_states": {
+        "openness": 0.7582,
+        "conscientiousness": 0.5725,
+        "extraversion": 0.8185,
+        "agreeableness": 0.9239,
+        "neuroticism": 0.222,
+        "hexaco_honesty_humility": 0.9968
+      },
+      "z_scores": {
+        "openness": 0.5041,
+        "conscientiousness": -2.0009,
+        "extraversion": 0.5047,
+        "agreeableness": -0.6498,
+        "neuroticism": -0.7267,
+        "hexaco_honesty_humility": 0.7942
+      },
+      "triggered_caps_rules": [],
+      "behavioral_directives": [],
+      "stress": 0.3588,
+      "fatigue": 0.42,
+      "sleep_debt_norm": 0.42,
+      "kp_exo": 7.24,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.7582,
+      "openness_state": 0.7582,
+      "conscientiousness": 0.5725,
+      "conscientiousness_state": 0.5725,
+      "extraversion": 0.8185,
+      "extraversion_state": 0.8185,
+      "agreeableness": 0.9239,
+      "agreeableness_state": 0.9239,
+      "neuroticism": 0.222,
+      "neuroticism_state": 0.222,
+      "hexaco_honesty_humility": 0.9968,
+      "hexaco_honesty_humility_state": 0.9968,
+      "morale": 0.5
+    },
+    "enclave_12_elias": {
+      "character_id": "enclave_12_elias",
+      "tick_id": 3,
+      "day_phase": "DUSK_CRAFT",
+      "trait_states": {
+        "openness": 0.8864,
+        "conscientiousness": 0.5876,
+        "extraversion": 0.1763,
+        "agreeableness": 0.8012,
+        "neuroticism": 0.5958,
+        "hexaco_honesty_humility": 0.9257
+      },
+      "z_scores": {
+        "openness": 0.2107,
+        "conscientiousness": -0.5356,
+        "extraversion": -0.5938,
+        "agreeableness": -0.2022,
+        "neuroticism": 1.82,
+        "hexaco_honesty_humility": -0.0433
+      },
+      "triggered_caps_rules": [],
+      "behavioral_directives": [],
+      "stress": 0.3626,
+      "fatigue": 0.44,
+      "sleep_debt_norm": 0.44,
+      "kp_exo": 7.24,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.8864,
+      "openness_state": 0.8864,
+      "conscientiousness": 0.5876,
+      "conscientiousness_state": 0.5876,
+      "extraversion": 0.1763,
+      "extraversion_state": 0.1763,
+      "agreeableness": 0.8012,
+      "agreeableness_state": 0.8012,
+      "neuroticism": 0.5958,
+      "neuroticism_state": 0.5958,
+      "hexaco_honesty_humility": 0.9257,
+      "hexaco_honesty_humility_state": 0.9257,
+      "morale": 0.5
+    },
+    "enclave_13_ryn": {
+      "character_id": "enclave_13_ryn",
+      "tick_id": 3,
+      "day_phase": "DUSK_CRAFT",
+      "trait_states": {
+        "openness": 0.1971,
+        "conscientiousness": 0.9707,
+        "extraversion": 0.8722,
+        "agreeableness": 0.1914,
+        "neuroticism": 0.4947,
+        "hexaco_honesty_humility": 0.9495
+      },
+      "z_scores": {
+        "openness": -1.8154,
+        "conscientiousness": 0.0166,
+        "extraversion": 0.9418,
+        "agreeableness": -1.5771,
+        "neuroticism": -0.1253,
+        "hexaco_honesty_humility": 0.8175
+      },
+      "triggered_caps_rules": [],
+      "behavioral_directives": [],
+      "stress": 0.3664,
+      "fatigue": 0.46,
+      "sleep_debt_norm": 0.46,
+      "kp_exo": 7.24,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.1971,
+      "openness_state": 0.1971,
+      "conscientiousness": 0.9707,
+      "conscientiousness_state": 0.9707,
+      "extraversion": 0.8722,
+      "extraversion_state": 0.8722,
+      "agreeableness": 0.1914,
+      "agreeableness_state": 0.1914,
+      "neuroticism": 0.4947,
+      "neuroticism_state": 0.4947,
+      "hexaco_honesty_humility": 0.9495,
+      "hexaco_honesty_humility_state": 0.9495,
+      "morale": 0.5
+    },
+    "enclave_14_vex": {
+      "character_id": "enclave_14_vex",
+      "tick_id": 3,
+      "day_phase": "DUSK_CRAFT",
+      "trait_states": {
+        "openness": 1.0,
+        "conscientiousness": 0.3973,
+        "extraversion": 0.9807,
+        "agreeableness": 0.2028,
+        "neuroticism": 0.153,
+        "hexaco_honesty_humility": 0.7005
+      },
+      "z_scores": {
+        "openness": 1.8091,
+        "conscientiousness": 1.7313,
+        "extraversion": -0.7383,
+        "agreeableness": -2.039,
+        "neuroticism": -0.3747,
+        "hexaco_honesty_humility": -1.3074
+      },
+      "triggered_caps_rules": [
+        "CAPS_VEX_01_SYZYGY_SHEAR_CONJUNCTION"
+      ],
+      "behavioral_directives": [
+        "Swings the brass astrolabe dome open, tracks binary-star magnetic reconnection arcs, and cheerfully predicts whose cortical polarity is about to invert next."
+      ],
+      "stress": 0.2988,
+      "fatigue": 0.42,
+      "sleep_debt_norm": 0.42,
+      "kp_exo": 7.24,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 1.0,
+      "openness_state": 1.0,
+      "conscientiousness": 0.3973,
+      "conscientiousness_state": 0.3973,
+      "extraversion": 0.9807,
+      "extraversion_state": 0.9807,
+      "agreeableness": 0.2028,
+      "agreeableness_state": 0.2028,
+      "neuroticism": 0.153,
+      "neuroticism_state": 0.153,
+      "hexaco_honesty_humility": 0.7005,
+      "hexaco_honesty_humility_state": 0.7005,
+      "morale": 0.5
+    },
+    "enclave_15_dorian": {
+      "character_id": "enclave_15_dorian",
+      "tick_id": 3,
+      "day_phase": "DUSK_CRAFT",
+      "trait_states": {
+        "openness": 0.4745,
+        "conscientiousness": 0.3673,
+        "extraversion": 0.8695,
+        "agreeableness": 0.7653,
+        "neuroticism": 0.4229,
+        "hexaco_honesty_humility": 0.9051
+      },
+      "z_scores": {
+        "openness": 0.6225,
+        "conscientiousness": 0.4926,
+        "extraversion": 1.6164,
+        "agreeableness": 0.1405,
+        "neuroticism": -1.1982,
+        "hexaco_honesty_humility": 0.6901
+      },
+      "triggered_caps_rules": [],
+      "behavioral_directives": [],
+      "stress": 0.3607,
+      "fatigue": 0.43,
+      "sleep_debt_norm": 0.43,
+      "kp_exo": 7.24,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.4745,
+      "openness_state": 0.4745,
+      "conscientiousness": 0.3673,
+      "conscientiousness_state": 0.3673,
+      "extraversion": 0.8695,
+      "extraversion_state": 0.8695,
+      "agreeableness": 0.7653,
+      "agreeableness_state": 0.7653,
+      "neuroticism": 0.4229,
+      "neuroticism_state": 0.4229,
+      "hexaco_honesty_humility": 0.9051,
+      "hexaco_honesty_humility_state": 0.9051,
+      "morale": 0.5
+    },
+    "enclave_16_elara": {
+      "character_id": "enclave_16_elara",
+      "tick_id": 3,
+      "day_phase": "DUSK_CRAFT",
+      "trait_states": {
+        "openness": 0.2611,
+        "conscientiousness": 0.9748,
+        "extraversion": 0.9489,
+        "agreeableness": 0.9727,
+        "neuroticism": 0.7024,
+        "hexaco_honesty_humility": 0.9392
+      },
+      "z_scores": {
+        "openness": -1.1839,
+        "conscientiousness": 0.4055,
+        "extraversion": 0.0034,
+        "agreeableness": 1.0888,
+        "neuroticism": 0.9594,
+        "hexaco_honesty_humility": -0.1602
+      },
+      "triggered_caps_rules": [
+        "CAPS_ELARA_01_EXPEDITION_TRIAGE_CHECK"
+      ],
+      "behavioral_directives": [
+        "Intercepts returning field teams at the airlock with a brass stethoscope and warm electrolyte broth, refusing to let anyone file reports before she checks their pupils."
+      ],
+      "stress": 0.4588,
+      "fatigue": 0.42,
+      "sleep_debt_norm": 0.42,
+      "kp_exo": 7.24,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.2611,
+      "openness_state": 0.2611,
+      "conscientiousness": 0.9748,
+      "conscientiousness_state": 0.9748,
+      "extraversion": 0.9489,
+      "extraversion_state": 0.9489,
+      "agreeableness": 0.9727,
+      "agreeableness_state": 0.9727,
+      "neuroticism": 0.7024,
+      "neuroticism_state": 0.7024,
+      "hexaco_honesty_humility": 0.9392,
+      "hexaco_honesty_humility_state": 0.9392,
+      "morale": 0.5
     }
   },
   "applied_event_ids": [
     "evt_s001_t0003_dusk_craft"
   ],
-  "total_events_through_tick": 4
+  "total_events_through_tick": 5,
+  "recent_segments": [
+    {
+      "segment_id": "seg_s001_t0001_enclave_03_silas",
+      "sol_id": 1,
+      "colony_sol": 1,
+      "tick_id": 1,
+      "active_pov_id": "enclave_03_silas",
+      "next_pov_target": "enclave_01_hector",
+      "location_id": "The_First_Forge",
+      "time_of_day": "DAWN_SHIFT",
+      "day_phase": "DAWN_SHIFT",
+      "title": "Sol 001 \u2022 DAWN_SHIFT (enclave_03_silas)",
+      "opening_excerpt": "[DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration ",
+      "excerpt": "[DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration "
+    },
+    {
+      "segment_id": "seg_s001_t0002_enclave_01_hector",
+      "sol_id": 1,
+      "colony_sol": 1,
+      "tick_id": 2,
+      "active_pov_id": "enclave_01_hector",
+      "next_pov_target": "enclave_05_kaio",
+      "location_id": "Basalt_Spire_Ridge",
+      "time_of_day": "MIDDAY_EXPEDITION",
+      "day_phase": "MIDDAY_EXPEDITION",
+      "title": "Sol 001 \u2022 MIDDAY_EXPEDITION (enclave_01_hector)",
+      "opening_excerpt": "[MIDDAY_EXPEDITION at Basalt_Spire_Ridge] Hector calibrated the hand-forged brass instrumentation against relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron, then passed the warm copper calibration",
+      "excerpt": "[MIDDAY_EXPEDITION at Basalt_Spire_Ridge] Hector calibrated the hand-forged brass instrumentation against relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron, then passed the warm copper calibration"
+    },
+    {
+      "segment_id": "seg_s001_t0003_enclave_05_kaio",
+      "sol_id": 1,
+      "colony_sol": 1,
+      "tick_id": 3,
+      "active_pov_id": "enclave_05_kaio",
+      "next_pov_target": "enclave_09_orion",
+      "location_id": "The_Simulacrum",
+      "time_of_day": "DUSK_CRAFT",
+      "day_phase": "DUSK_CRAFT",
+      "title": "Sol 001 \u2022 DUSK_CRAFT (enclave_05_kaio)",
+      "opening_excerpt": "[DUSK_CRAFT at The_Simulacrum] Kaio calibrated the hand-forged brass instrumentation against polyvagal neuro-somatic thermal regulation under bifurcated crater micro-climates, then passed the warm copper calibration bato",
+      "excerpt": "[DUSK_CRAFT at The_Simulacrum] Kaio calibrated the hand-forged brass instrumentation against polyvagal neuro-somatic thermal regulation under bifurcated crater micro-climates, then passed the warm copper calibration bato"
+    }
+  ],
+  "available_sols": [
+    1
+  ],
+  "available_ticks": [
+    1,
+    2,
+    3
+  ]
 }

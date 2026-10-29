@@ -28,12 +28,7 @@
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_13_ryn -> Handoff=enclave_03_silas.",
-  "VAL": "enclave:171172332741791876",
-  "CONF": "1.00",
-  "TIME": "2026-10-28T19:12:00Z",
-  "PROV": "sol006_t0024",
   "target_path": "story/feasts/sol_006_feast.json",
-  "disallow_overwrite": false,
   "showrunner_ledger": {
     "campaign_metadata": {
       "session_number": 6,
@@ -148,9 +143,5 @@
   "narrative_prose": "The dim kitchen glowed with erratic orange shadows dancing on cold iron bulkheads, the air sharp with ozone and the comforting scent of warm iron-wheat bread. A low, continuous thrum of magnetospheric tension vibrated through the floor plates as the metallic tang of static charge coated Ryn's tongue, forcing her to DEFEND the delicate caloric balance of the meal and urging everyone to CONSUME their portions despite the relentless pressure. Fighting to CONCEAL her fatigue from the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, she stepped forward with a stern expression and thrust the heavy brass serving spoon into Silas's waiting hands, a firm, tactile transfer of responsibility for the next course.",
   "active_pov_id": "enclave_13_ryn",
   "next_pov_target": "enclave_03_silas",
-  "prev_next_pov_target": "enclave_13_ryn",
-  "ENT": "enclave-digital-twin:THE_FEAST_4_SQUAD_CONVERGENCE",
-  "second_pass_repair_constraint": "enclave:171172332741791876",
-  "f120_stall_timeout": "session_exceeded_25m_cut_loss_relaunch",
-  "changeset_gate_rejection": "Law L02 violation: target_path 'lore/propose"
+  "prev_next_pov_target": "enclave_13_ryn"
 }

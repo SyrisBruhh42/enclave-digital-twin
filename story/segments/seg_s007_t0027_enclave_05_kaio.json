@@ -12,14 +12,6 @@
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
-  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
-  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified",
-  "second_pass_repair_constraint": "@ENT[enclave:9092708038520642666]",
-  "changeset_gate_rejection": "Showrunner contract violation: reactive_toys[0] missing 'uninterrupted_escalation'.",
-  "VAL": "Showrunner contract violation: reactive_toys[0] missing 'uninterrupted_escalation'.",
-  "CONF": 1.0,
-  "TIME": "2026-10-28T22:12:00Z",
-  "PROV": "sol007_t0027",
   "narrative_prose": "Kaio burst into The Hearth, his boots leaving trails of glowing mud across the otherwise spotless deck plates as he clutching the heavily-insulated telemetry baton like a lifeline. The air was thick with the scent of simmering root-vegetable stew and the sharp metallic tang of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea that had nearly battered him off the catwalks. He quickly moved to CONCEAL his muddy gear behind a heavy copper kettle, careful not to track more dirt, but his eyes lit up when he spotted a bubbling vat of broth that he just had to CONSUME a sample of to check its salinity. A sharp hiss of steam from the pressure cooker forced him to DEFEND his face with a raised forearm, laughing breathlessly as he finally spotted Ryn. Without preamble, he marched up and shoved the glowing baton firmly into Ryn's hands, a wide grin splitting his wind-chapped face.",
   "campaign_metadata": {
     "session_number": 7,
@@ -140,6 +132,5 @@
   },
   "context_manifest_path": "context/manifests/manifest_s007_t0027_enclave_05_kaio.json",
   "total_prompt_tokens": 920,
-  "target_path": "story/segments/seg_s007_t0027_enclave_05_kaio.json",
-  "disallow_overwrite": false
+  "target_path": "story/segments/seg_s007_t0027_enclave_05_kaio.json"
 }

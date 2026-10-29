@@ -1,0 +1,140 @@
+{
+  "segment_id": "seg_s002_t0006_enclave_01_hector",
+  "segment_index": 6,
+  "tick_id": 6,
+  "colony_sol": 2,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "base_snapshot_tick": 5,
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "baton_handoff": {
+    "from_actor_id": "enclave_03_silas",
+    "to_actor_id": "enclave_05_kaio",
+    "physical_token": "charged copper calibration baton and brass data-cylinder"
+  },
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "location": "The_First_Forge",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "text": "[MIDDAY_EXPEDITION at The_First_Forge] Hector received the warm brass data-cylinder from Silas as the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea pulsed violently outside the thick quartz viewport. The air tasted faintly of cooling slag while the scent of hot copper and ozone rolled off the vibrating forge struts. Moving with deliberate precision, he braced the primary clamps to DEFEND the oscillating resonance chamber, vented the superheated channels to CONSUME the excess thermal surge, and sealed the inner blast shutters to CONCEAL the sensitive telemetry array. With the structural diagnostics stabilized into a charged copper calibration baton, Hector stepped to the ridge airlock and slapped the physical baton directly into Kaio's waiting hands for the dusk ascent.",
+  "campaign_metadata": {
+    "session_number": 2,
+    "colony_sol": 2,
+    "tick_id": 6,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Stabilize the forge resonance struts using the Dawn Shift diagnostics and hand off the charged calibration baton to Kaio",
+      "mid_term_milestone": "Reinforce the First Forge against the rising ferrofluid sea",
+      "campaign_arc_climax": "Maintain structural stability during the impending suns' polarity inversion"
+    }
+  },
+  "active_location": {
+    "location_id": "The_First_Forge",
+    "macro_silhouette": "The First Forge stood as a fortress of brass and copper, its soot-stained walls humming with trapped kinetic energy and heat. A thick quartz viewport allowed observation of the exterior ferrofluid sea, while heavily reinforced struts braced against the relentless magnetic shear.",
+    "sensory_palette": {
+      "sight_and_color": "Soot-stained brass walls and violet-amber reflections off the quartz viewport",
+      "sound": "Deep harmonic thrum of the resonance chamber under magnetic shear",
+      "smell": "Ozone mixing with hot copper and quenched iron",
+      "tactile_temperature": "Radiant dry heat pulsing against insulated leather gloves",
+      "taste_optional": "Sharp metallic tang of cooling slag"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Oscillating Resonance Chamber",
+        "affordance_description": "A delicate mechanism that must be kept stable to prevent structural micro-fractures.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Cooling Slag Vents",
+        "affordance_description": "Vents expelling excess heat that can be tapped to rapidly absorb thermal spikes.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Heavy Blast Doors",
+        "affordance_description": "Thick doors that can be sealed to shield diagnostics against sudden external pressure waves.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "shear_induced_vibrations",
+      "name_and_role": "Kelvin-Helmholtz Structural Shear Pulse",
+      "motivation_goal": "Destabilize the primary brass struts supporting the forge's viewport",
+      "consistent_method": "Driving resonant magnetohydrodynamic oscillations through the foundation",
+      "immediate_complication": "The calibration cylinder threatens to demagnetize before reaching the ridge",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Will fracture the quartz viewport seal and scramble the Sol 2 telemetry chain"
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Hector must lock the strut dampers and encode the calibration baton before the shear spike peaks.",
+      "level_2_local": "Kaio needs the stabilized copper calibration baton to chart the Dusk Craft eddy currents on the ridge.",
+      "level_3_campaign_arc": "The First Forge must survive the chaotic magnetic forces to anchor colony defenses."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "DEFENDER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      15,
+      9,
+      14,
+      18,
+      11
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.65,
+    "motivational_vector_saturation": 0.85,
+    "unresolved_conflict_ratio": 0.7,
+    "temporal_horizon_immediacy": 0.85,
+    "composite_lpi": 0.76,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_inference",
+      "model": "judge_v1",
+      "temperature": 0.1,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Hector's clamp adjustment slips under the shear wave, leaving residual harmonic noise on the calibration baton.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "A sudden magnetic back-surge blows the damper fuse and scorches the calibration casing.",
+        "below_dc_complicated_fail_forward": "The struts hold, though Kaio will have to compensate for minor phase drift on the ridge.",
+        "meets_dc_clean_success": "Hector locks the struts cleanly and hands Kaio a crisp, fully charged copper calibration baton.",
+        "dc_plus_5_or_20_extended_lore": "Hector captures a harmonic counter-phase signature that boosts magnetospheric shielding across the Hub."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio grips the charged copper calibration baton at the ridge airlock as the violet wind howls. What does Kaio do?"
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "context_manifest_path": "context/manifests/manifest_s002_t0006_enclave_01_hector.json",
+  "total_prompt_tokens": 848,
+  "disallow_overwrite": false,
+  "target_path": "story/segments/seg_s002_t0006_enclave_01_hector.json"
+}

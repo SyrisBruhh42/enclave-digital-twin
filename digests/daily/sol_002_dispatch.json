@@ -3,7 +3,6 @@
   "colony_sol": 2,
   "tick_id": 8,
   "target_path": "digests/daily/sol_002_dispatch.json",
-  "disallow_overwrite": false,
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "active_pov_id": "enclave_13_ryn",
   "next_pov_target": "enclave_03_silas",

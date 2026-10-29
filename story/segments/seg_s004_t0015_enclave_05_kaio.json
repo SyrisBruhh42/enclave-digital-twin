@@ -125,6 +125,5 @@
   },
   "context_manifest_path": "context/manifests/manifest_s004_t0015_enclave_05_kaio.json",
   "total_prompt_tokens": 850,
-  "target_path": "story/segments/seg_s004_t0015_enclave_05_kaio.json",
-  "disallow_overwrite": false
+  "target_path": "story/segments/seg_s004_t0015_enclave_05_kaio.json"
 }

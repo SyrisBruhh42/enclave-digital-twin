@@ -13,14 +13,7 @@
   "narrative_prose": "The howling tempest of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea battered Hector's trench coat as he sprinted along the freezing, metallic exterior catwalk. Blinding arcs of violent static lashed out from the pitch-black waves below, threatening to CONSUME the precarious docking structure while the deafening roar of magnetic gales drowned out the sharp, bitter scent of raw ozone and engine grease. He tasted a distinct static tang on his tongue as he braced himself against a rusted barricade to DEFEND against the crushing kinetic pressure, then used a sparking conduit to ATTRACT the stray magnetic charges away from his path. Fighting through the overwhelming vortex, he finally shoved the heavy telemetry baton directly into Kaio's waiting grasp, completing the transfer before the gangway could completely buckle under the strain.",
   "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
-  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified",
-  "second_pass_repair_constraint": "@ENT[enclave:18172209916239946375]",
-  "changeset_gate_rejection": "Stale proposal rejected: base_snapshot_tick=1 lags current_tick=18 by &amp;gt; 4 ticks.",
   "changeset_gate_re": "",
-  "VAL": "@ENT[enclave:18172209916239946375]",
-  "CONF": 1.0,
-  "TIME": "2026-10-28T17:12:00Z",
-  "PROV": "sol006_t0022",
   "campaign_metadata": {
     "session_number": 6,
     "colony_sol": 6,
@@ -139,6 +132,5 @@
   },
   "context_manifest_path": "context/manifests/manifest_s006_t0022_enclave_01_hector.json",
   "total_prompt_tokens": 870,
-  "target_path": "story/segments/seg_s006_t0022_enclave_01_hector.json",
-  "disallow_overwrite": false
+  "target_path": "story/segments/seg_s006_t0022_enclave_01_hector.json"
 }

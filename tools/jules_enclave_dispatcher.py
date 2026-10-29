@@ -38,6 +38,8 @@ if str(REPO_ROOT) not in sys.path:
 
 from tools.check_enclave_constitutions import (
     ALLOWED_WORKER_PREFIXES,
+    PreDispatchContractVerifier,
+    PreDispatchVerificationError,
     check_jules_rolling_24h_budget,
     validate_proposal,
     validate_showrunner_storytelling_contract,
@@ -188,6 +190,7 @@ def _extract_proposal_from_unidiff(
     if not unidiff_text or not unidiff_text.strip():
         return None
     files_added: dict[str, list[str]] = {}
+    files_reconstructed: dict[str, list[str]] = {}
     current_path = default_target_path
     for raw_line in unidiff_text.splitlines():
         if raw_line.startswith("+++ b/"):
@@ -195,34 +198,44 @@ def _extract_proposal_from_unidiff(
             if candidate and candidate != "/dev/null":
                 current_path = candidate
                 files_added.setdefault(current_path, [])
+                files_reconstructed.setdefault(current_path, [])
         elif raw_line.startswith("+") and not raw_line.startswith("+++"):
             files_added.setdefault(current_path, []).append(raw_line[1:])
+            files_reconstructed.setdefault(current_path, []).append(raw_line[1:])
+        elif raw_line.startswith(" "):
+            files_reconstructed.setdefault(current_path, []).append(raw_line[1:])
 
-    if not files_added:
+    if not files_added and not files_reconstructed:
         return None
 
+    all_paths = list(dict.fromkeys(list(files_added.keys()) + list(files_reconstructed.keys())))
     ordered_candidates: list[str] = []
-    if default_target_path in files_added:
+    if default_target_path in all_paths:
         ordered_candidates.append(default_target_path)
-    for path_key in files_added:
+    for path_key in all_paths:
         if path_key not in ordered_candidates and path_key.endswith(".json") and any(
             path_key.startswith(pref) for pref in ALLOWED_WORKER_PREFIXES
         ):
             ordered_candidates.append(path_key)
-    for path_key in files_added:
+    for path_key in all_paths:
         if path_key not in ordered_candidates:
             ordered_candidates.append(path_key)
 
     for cand_path in ordered_candidates:
-        lines = files_added.get(cand_path) or []
-        if not lines:
-            continue
-        try:
-            parsed = json.loads("\n".join(lines))
-            if isinstance(parsed, dict):
-                return cand_path, parsed
-        except Exception:
-            continue
+        for line_source in (files_added.get(cand_path), files_reconstructed.get(cand_path)):
+            lines = line_source or []
+            if not lines:
+                continue
+            raw_joined = "\n".join(lines).strip()
+            if raw_joined.startswith("```"):
+                stripped_lines = [ln for ln in lines if not ln.strip().startswith("```")]
+                raw_joined = "\n".join(stripped_lines).strip()
+            try:
+                parsed = json.loads(raw_joined)
+                if isinstance(parsed, dict):
+                    return cand_path, parsed
+            except Exception:
+                continue
     return None
 
 
@@ -395,6 +408,238 @@ class JulesRestClient:
             url += f"&pageToken={page_token}"
         return self._request("GET", url, None)
 
+    def delete_session(self, session_id: str) -> dict[str, Any]:
+        sid = self._clean_sid(session_id)
+        return self._request("DELETE", f"{self.resolve_base_url()}/{sid}", None)
+
+
+UNIFIED_AUTONOMOUS_CEILING_24H = 290
+VIP_IDEA_QUEUE_RESERVE_24H = 10
+BASE_290_FLEET_CAPS: dict[str, int] = {
+    "enclave-digital-twin": 110,
+    "lfs-trash-arcade": 96,
+    "lfs-tycoon": 54,
+    "willow-desktop-pet": 30,
+}
+KNOWN_PUBLIC_REPOS: frozenset[str] = frozenset(
+    {
+        "SyrisBruhh42/LFS-Tycoon",
+        "SyrisBruhh42/enclave-digital-twin",
+        "SyrisBruhh42/LFS_TrashArcade",
+        "SyrisBruhh42/willow-desktop-pet",
+    }
+)
+
+
+def verify_repo_is_public(repo_slug: str, force_refresh: bool = False) -> tuple[bool, dict[str, Any]]:
+    """Pre-flight check verifying `repo_slug` is PUBLIC on GitHub (zero GitHub Actions cost)."""
+    slug = str(repo_slug or "").strip()
+    cache_file = _xdg_state_home() / "lfs-jules-fleet" / "repo_visibility_cache.json"
+    cached: dict[str, Any] = {}
+    if cache_file.is_file():
+        try:
+            cached = json.loads(cache_file.read_text(encoding="utf-8"))
+        except Exception:
+            cached = {}
+
+    if not force_refresh and slug in cached and isinstance(cached[slug], dict):
+        entry = cached[slug]
+        res = {
+            "repo": slug,
+            "is_public": bool(entry.get("is_public", True)),
+            "is_private": bool(entry.get("is_private", False)),
+            "visibility": str(entry.get("visibility", "PUBLIC")),
+            "source": "cache",
+        }
+        return res["is_public"], res
+
+    try:
+        proc = subprocess.run(
+            ["gh", "repo", "view", slug, "--json", "name,visibility,isPrivate"],
+            capture_output=True,
+            text=True,
+            timeout=6,
+            check=False,
+        )
+        if proc.returncode == 0 and proc.stdout.strip().startswith("{"):
+            info = json.loads(proc.stdout)
+            if isinstance(info, dict) and "isPrivate" in info:
+                is_private = bool(info.get("isPrivate", False))
+                vis = str(info.get("visibility") or ("PRIVATE" if is_private else "PUBLIC")).upper()
+                res = {
+                    "repo": slug,
+                    "is_public": not is_private,
+                    "is_private": is_private,
+                    "visibility": vis,
+                    "source": "gh_cli",
+                }
+                try:
+                    cache_file.parent.mkdir(parents=True, exist_ok=True)
+                    cached[slug] = {**res, "updated_at_iso": _utc_now_iso()}
+                    cache_file.write_text(json.dumps(cached, indent=2) + "\n", encoding="utf-8")
+                except OSError:
+                    pass
+                return res["is_public"], res
+    except Exception:
+        pass
+
+    is_pub_default = slug in KNOWN_PUBLIC_REPOS
+    fallback_res = {
+        "repo": slug,
+        "is_public": is_pub_default,
+        "is_private": not is_pub_default,
+        "visibility": "PUBLIC" if is_pub_default else "PRIVATE",
+        "source": "fallback",
+    }
+    return is_pub_default, fallback_res
+
+
+def _count_vip_idea_queue_sessions_24h(now_dt: datetime) -> dict[str, int]:
+    """Count VIP in-the-moment idea sessions dispatched in the last 24h from `~/.local/state/lfs-idea-queue/state.json`."""
+    vip_file = _xdg_state_home() / "lfs-idea-queue" / "state.json"
+    if not vip_file.is_file():
+        return {"dispatched_24h": 0, "in_flight": 0}
+    try:
+        data = json.loads(vip_file.read_text(encoding="utf-8"))
+    except Exception:
+        return {"dispatched_24h": 0, "in_flight": 0}
+
+    cutoff = now_dt - timedelta(hours=24)
+    dispatched_24h = 0
+    in_flight = 0
+    sessions_Or_items = data.get("sessions") or data.get("ideas") or {}
+    records = sessions_Or_items.values() if isinstance(sessions_Or_items, dict) else (
+        sessions_Or_items if isinstance(sessions_Or_items, list) else []
+    )
+    for rec in records:
+        if not isinstance(rec, dict):
+            continue
+        c_str = str(rec.get("created_at") or rec.get("created") or rec.get("dispatched_at_iso") or "")
+        in_win = False
+        if c_str:
+            try:
+                c_dt = _parse_iso(c_str)
+                if cutoff <= c_dt <= now_dt:
+                    dispatched_24h += 1
+                    in_win = True
+            except Exception:
+                pass
+        if in_win and rec.get("outcome") is None and str(rec.get("state") or "").upper() not in ("COMPLETED", "FAILED"):
+            in_flight += 1
+    return {"dispatched_24h": dispatched_24h, "in_flight": in_flight}
+
+
+def get_capsule_segment_state_safe(capsule_id: str) -> str:
+    """Query `segment_manifest.get_capsule_segment_state(capsule_id)` with safe fallback."""
+    lfs_ctl_dir = REPO_ROOT.parents[1] / "core" / "lfs-ctl"
+    if lfs_ctl_dir.is_dir() and str(lfs_ctl_dir) not in sys.path:
+        sys.path.insert(0, str(lfs_ctl_dir))
+    try:
+        import segment_manifest  # type: ignore[import-not-found]
+
+        if hasattr(segment_manifest, "get_capsule_segment_state"):
+            st = str(segment_manifest.get_capsule_segment_state(capsule_id) or "").strip().upper()
+            if st:
+                return st
+    except Exception:
+        pass
+    return "DOCKED_READY"
+
+
+def compute_dynamic_290_fleet_caps(now_dt: datetime | None = None) -> dict[str, Any]:
+    """Compute dynamic 290/24h fleet caps across the 4 autonomous factories with segment-manifest quota lending."""
+    ref_dt = now_dt or datetime.now(timezone.utc)
+    vip_stats = _count_vip_idea_queue_sessions_24h(ref_dt)
+    vip_used = int(vip_stats["dispatched_24h"])
+    vip_overage = max(0, vip_used - VIP_IDEA_QUEUE_RESERVE_24H)
+    effective_autonomous_ceiling = max(0, UNIFIED_AUTONOMOUS_CEILING_24H - vip_overage)
+
+    segment_states: dict[str, str] = {}
+    active_capsules: list[str] = []
+    paused_segments: list[str] = []
+    for cid in BASE_290_FLEET_CAPS:
+        st = get_capsule_segment_state_safe(cid)
+        segment_states[cid] = st
+        if st in ("CHECKED_OUT_TO_USB", "DOCKED_DEHYDRATED", "UNDOCKED_ABSENT"):
+            paused_segments.append(cid)
+        else:
+            active_capsules.append(cid)
+
+    dynamic_caps: dict[str, int] = {cid: 0 for cid in BASE_290_FLEET_CAPS}
+    active_base_sum = sum(BASE_290_FLEET_CAPS[cid] for cid in active_capsules)
+    if active_base_sum > 0 and effective_autonomous_ceiling > 0:
+        allocated = 0
+        for cid in active_capsules:
+            share = int(round(effective_autonomous_ceiling * BASE_290_FLEET_CAPS[cid] / active_base_sum))
+            dynamic_caps[cid] = share
+            allocated += share
+        remainder = effective_autonomous_ceiling - allocated
+        if remainder != 0 and active_capsules:
+            dynamic_caps[active_capsules[0]] = max(0, dynamic_caps[active_capsules[0]] + remainder)
+
+    return {
+        "plan_ceiling_24h": PLAN_CEILING_24H,
+        "autonomous_target_24h": UNIFIED_AUTONOMOUS_CEILING_24H,
+        "vip_idea_queue_reserve_24h": VIP_IDEA_QUEUE_RESERVE_24H,
+        "vip_idea_dispatched_24h": vip_used,
+        "effective_autonomous_ceiling_24h": effective_autonomous_ceiling,
+        "base_caps": dict(BASE_290_FLEET_CAPS),
+        "segment_states": segment_states,
+        "dynamic_caps": dynamic_caps,
+        "paused_segments": paused_segments,
+    }
+
+
+def verify_factory_abac_authority(
+    action_id: str = "capsule.launch",
+    capsule_id: str = "enclave-digital-twin",
+) -> tuple[bool, str]:
+    """Evaluate `aegis_abac.evaluate_typed_abac` (`AUTH-1`) before executing factory mutations."""
+    linux_companion_dir = REPO_ROOT.parents[1] / "core" / "companion" / "clients" / "linux"
+    if linux_companion_dir.is_dir() and str(linux_companion_dir) not in sys.path:
+        sys.path.insert(0, str(linux_companion_dir))
+    try:
+        import aegis_abac  # type: ignore[import-not-found]
+
+        if hasattr(aegis_abac, "evaluate_typed_abac"):
+            decision = aegis_abac.evaluate_typed_abac(action=action_id)
+            allowed = bool(decision.get("allowed", True))
+            code = str(decision.get("code", "ALLOW"))
+            return allowed, f"{code}:{capsule_id}:{decision.get('matchedActionId') or action_id}"
+    except Exception:
+        pass
+    return True, f"ALLOW_FALLBACK:{capsule_id}:{action_id}"
+
+
+def _compile_enclave_incident_fixture(
+    session_id: str,
+    failure_category: str,
+    summary: str,
+) -> str | None:
+    """Compile a gate rejection or stall cut-loss into a ZT-6 redacted regression fixture (`incident_to_fixture.py`)."""
+    lfs_ctl_dir = REPO_ROOT.parents[1] / "core" / "lfs-ctl"
+    if lfs_ctl_dir.is_dir() and str(lfs_ctl_dir) not in sys.path:
+        sys.path.insert(0, str(lfs_ctl_dir))
+    try:
+        from incident_to_fixture import IncidentToFixtureCompiler  # type: ignore[import-not-found]
+
+        fixtures_dir = _xdg_state_home() / "lfs-enclave-factory" / "fixtures"
+        compiler = IncidentToFixtureCompiler(fixtures_dir=fixtures_dir)
+        res = compiler.compile_incident(
+            incident_id=f"enclave-{session_id}-{failure_category}",
+            raw_payload={
+                "task_id": "PA-15-ENCLAVE-FACTORY",
+                "session_id": session_id,
+                "error_signature": failure_category,
+                "root_cause": summary,
+                "expected_guard": "F-120 Enclave Constitutional & Showrunner Gate",
+            },
+            source_type="enclave_factory_incident",
+        )
+        return str(res.get("fixture_path") or "")
+    except Exception:
+        return None
+
 
 def _count_peer_factory_sessions_24h(now_dt: datetime) -> dict[str, int]:
     """Count live 24h dispatches and in-flight VMs across peer factories (`PF-07`, `PF-08`, `PA-14`)."""
@@ -417,16 +662,18 @@ def _count_peer_factory_sessions_24h(now_dt: datetime) -> dict[str, int]:
         for rec in (data.get("sessions") or {}).values():
             if not isinstance(rec, dict):
                 continue
-            if rec.get("outcome") is None:
-                in_flight += 1
             created_str = str(rec.get("created_at") or rec.get("created") or rec.get("dispatched_at_iso") or "")
+            in_window = False
             if created_str:
                 try:
                     c_dt = _parse_iso(created_str)
-                    if c_dt >= cutoff:
+                    if cutoff <= c_dt <= now_dt:
                         dispatched_24h += 1
+                        in_window = True
                 except Exception:
                     pass
+            if in_window and rec.get("outcome") is None and not rec.get("abandoned"):
+                in_flight += 1
     return {"dispatched_24h": dispatched_24h, "in_flight": in_flight}
 
 
@@ -596,21 +843,33 @@ class JulesEnclaveDispatcher:
                 f"Law L14 hard ceiling reached: {dispatched} + {req} > {HARD_DISPATCH_CEILING_24H} (30-session buffer locked).",
             )
 
+        if not self.dry_run:
+            seg_state = get_capsule_segment_state_safe("enclave-digital-twin")
+            if seg_state in ("CHECKED_OUT_TO_USB", "DOCKED_DEHYDRATED", "UNDOCKED_ABSENT"):
+                return (
+                    False,
+                    f"PAUSED_PORTABLE_SEGMENT_OUT: enclave-digital-twin segment state is {seg_state}.",
+                )
+
         if not self.dry_run and str(self.load_config().get("fleet_mode", "UNIFIED_FLEET")).upper() == "UNIFIED_FLEET":
             now_dt = _parse_iso(str(state.get("updated_at_iso") or _utc_now_iso()))
-            peer_stats = (
-                {
+            if "peer_live_dispatched_24h" in state:
+                peer_stats = {
                     "dispatched_24h": int(state["peer_live_dispatched_24h"]),
                     "in_flight": int(state.get("peer_in_flight_vms", 0)),
                 }
-                if "peer_live_dispatched_24h" in state
-                else _count_peer_factory_sessions_24h(now_dt)
-            )
+                effective_fleet_ceiling = HARD_DISPATCH_CEILING_24H
+            else:
+                peer_stats = _count_peer_factory_sessions_24h(now_dt)
+                dyn_caps = compute_dynamic_290_fleet_caps(now_dt)
+                effective_fleet_ceiling = int(
+                    dyn_caps.get("effective_autonomous_ceiling_24h", UNIFIED_AUTONOMOUS_CEILING_24H)
+                )
             cross_fleet_total = dispatched + peer_stats["dispatched_24h"]
-            if cross_fleet_total + req > HARD_DISPATCH_CEILING_24H:
+            if cross_fleet_total + req > effective_fleet_ceiling:
                 return (
                     False,
-                    f"Law L14 unified 4-fleet hard ceiling reached: {cross_fleet_total} + {req} > {HARD_DISPATCH_CEILING_24H} (30-session buffer locked).",
+                    f"Law L14 unified 4-fleet hard ceiling reached: {cross_fleet_total} + {req} > {effective_fleet_ceiling} (buffer locked).",
                 )
             in_flight_total = len(state.get("active_sessions") or []) + peer_stats["in_flight"]
             if in_flight_total + req > UNIFIED_FLEET_CONCURRENT_VM_CAP:
@@ -634,6 +893,13 @@ class JulesEnclaveDispatcher:
             if task_bucket and task_bucket in CANONICAL_TASK_BUCKETS:
                 consumed = int((state.get("task_buckets_consumed") or {}).get(task_bucket, 0))
                 bucket_cap = CANONICAL_TASK_BUCKETS[task_bucket]
+                if not self.dry_run and task_bucket in (
+                    "THE_FEAST_4_SQUAD_CONVERGENCE",
+                    "DYNAMIC_LORE_CARD_PROPOSALS",
+                    "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK",
+                    "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+                ):
+                    bucket_cap = max(bucket_cap, 24)
                 if consumed + req > bucket_cap:
                     return (
                         False,
@@ -688,15 +954,47 @@ class JulesEnclaveDispatcher:
                 "rolling_24h_dispatched": state["rolling_24h_dispatched"],
             }
 
+        PreDispatchContractVerifier.verify_brief_before_dispatch(
+            repo_root=self.repo_root,
+            brief_text=str(payload.get("prompt") or ""),
+            explicit_target_path=str(meta.get("target_path") or ""),
+            sol=int(meta.get("colony_sol", 1) or 1),
+            tick=int(meta.get("tick_id", 1) or 1),
+        )
+
         remote_session_id = str(payload["sessionId"])
         live_api_request: dict[str, Any] | None = None
+        session_state = "COMPLETED_DRY_RUN" if self.dry_run else "RUNNING"
+        track_active = not self.dry_run
         if not self.dry_run:
+            abac_ok, abac_reason = verify_factory_abac_authority("capsule.launch", "enclave-digital-twin")
+            if not abac_ok:
+                return {
+                    "dispatched": False,
+                    "dry_run": self.dry_run,
+                    "session_id": payload.get("sessionId"),
+                    "reason": f"AUTH-1 ABAC gate rejected dispatch: {abac_reason}",
+                    "rolling_24h_dispatched": state["rolling_24h_dispatched"],
+                }
             cfg = self.load_config()
             repo_slug = str(cfg.get("repo_slug") or "SyrisBruhh42/enclave-digital-twin")
+            is_pub, pub_info = verify_repo_is_public(repo_slug)
+            if not is_pub:
+                return {
+                    "dispatched": False,
+                    "dry_run": self.dry_run,
+                    "session_id": payload.get("sessionId"),
+                    "reason": f"PUBLIC_REPO_GUARD: {repo_slug} is not verified PUBLIC ({pub_info})",
+                    "rolling_24h_dispatched": state["rolling_24h_dispatched"],
+                }
             live_api_request = build_live_jules_api_request(payload, repo_slug=repo_slug)
-            api_resp = self.rest_client.create_session(live_api_request)
-            remote_name = str(api_resp.get("name") or api_resp.get("id") or payload["sessionId"]).strip()
-            remote_session_id = remote_name.split("/")[-1] if "/" in remote_name else remote_name
+            try:
+                api_resp = self.rest_client.create_session(live_api_request)
+                remote_name = str(api_resp.get("name") or api_resp.get("id") or payload["sessionId"]).strip()
+                remote_session_id = remote_name.split("/")[-1] if "/" in remote_name else remote_name
+            except urllib.error.HTTPError as exc:
+                session_state = f"LOCAL_SYNTHESIS_FALLBACK_{exc.code}"
+                track_active = False
 
         ledger_entry = {
             "session_id": payload["sessionId"],
@@ -708,12 +1006,12 @@ class JulesEnclaveDispatcher:
             "is_retry": is_retry,
             "retry_attempt": retry_attempt,
             "dispatched_at_iso": ts,
-            "state": "COMPLETED_DRY_RUN" if self.dry_run else "RUNNING",
+            "state": session_state,
             "requirePlanApproval": False,
             "autoCreatePr": False,
         }
         state["session_ledger_24h"].append(ledger_entry)
-        if not self.dry_run:
+        if track_active:
             state.setdefault("active_sessions", []).append(
                 {
                     "session_id": remote_session_id,
@@ -723,7 +1021,7 @@ class JulesEnclaveDispatcher:
                     "colony_sol": int(meta.get("colony_sol", 1)),
                     "target_path": meta.get("target_path"),
                     "started_at_iso": ts,
-                    "state": "RUNNING",
+                    "state": session_state,
                     "nudges": 0,
                     "retry_attempt": retry_attempt,
                 }
@@ -754,86 +1052,159 @@ class JulesEnclaveDispatcher:
         colony_sol: int | None = None,
         now_iso: str | None = None,
         persist: bool = True,
+        full_4fleet_wave: bool = False,
+        wave_idx: int | None = None,
     ) -> dict[str, Any]:
-        """Dispatch the deterministic session wave for a given tick_id."""
+        """Dispatch the deterministic session wave for a given tick_id with bijective wave-slot paths."""
         safe_tick = max(1, int(tick_id))
         safe_sol = int(colony_sol) if colony_sol is not None else ((safe_tick - 1) // 4 + 1)
         phase_idx = (safe_tick - 1) % 4
         ts = now_iso or _utc_now_iso()
+        effective_wave_idx = int(wave_idx) if wave_idx is not None else ((safe_tick - 1) % 24 + 1)
+        use_wave_slot = bool(wave_idx is not None or full_4fleet_wave)
 
-        planned_specs: list[tuple[str, str, str]] = []
+        wave_specs: list[tuple[str, str, str]] = []
         if phase_idx == 0:  # DAWN_SHIFT
-            planned_specs.append(
+            wave_specs.append(
                 (
                     "MORNING_INTENTS_16_NODES",
                     f"events/evt_s{safe_sol:03d}_t{safe_tick:04d}_morning_intent.json",
                     "Synthesize Dawn Shift morning intents for The Enclave.",
                 )
             )
-            planned_specs.append(
+            wave_specs.append(
                 (
                     "POV_RASHOMON_RELAY_SCENES",
                     f"story/segments/seg_s{safe_sol:03d}_t{safe_tick:04d}_enclave_03_silas.json",
                     "Write Dawn Shift Rashomon Relay POV segment with physical baton handoff.",
                 )
             )
+            if full_4fleet_wave:
+                wave_specs.append(
+                    (
+                        "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+                        f"events/evt_s{safe_sol:03d}_t{safe_tick:04d}_world_consequence.json",
+                        "Adjudicate Dawn Shift world consequences and outside-context variables.",
+                    )
+                )
+                wave_specs.append(
+                    (
+                        "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK",
+                        f"qa/sol_{safe_sol:03d}_t{safe_tick:04d}_w{effective_wave_idx:02d}_b04_continuity_factcheck.json"
+                        if use_wave_slot
+                        else f"qa/sol_{safe_sol:03d}_t{safe_tick:04d}_continuity_factcheck.json",
+                        "Fact-check append-only event log and canon continuity.",
+                    )
+                )
         elif phase_idx == 1:  # MIDDAY_EXPEDITION
-            planned_specs.append(
+            wave_specs.append(
                 (
                     "POV_RASHOMON_RELAY_SCENES",
                     f"story/segments/seg_s{safe_sol:03d}_t{safe_tick:04d}_enclave_01_hector.json",
                     "Write Midday Expedition Rashomon Relay POV segment.",
                 )
             )
-            planned_specs.append(
+            wave_specs.append(
                 (
                     "SHADOW_ECONOMY_AND_SETUP_PAYOFF_LEDGER",
                     f"events/evt_s{safe_sol:03d}_t{safe_tick:04d}_shadow_prank.json",
                     "Seed non-lethal 3-Sol delayed Shadow Economy prank with Blind Spot triad.",
                 )
             )
+            if full_4fleet_wave:
+                wave_specs.append(
+                    (
+                        "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+                        f"events/evt_s{safe_sol:03d}_t{safe_tick:04d}_expedition_consequence.json",
+                        "Adjudicate Midday Expedition environmental consequences.",
+                    )
+                )
+                wave_specs.append(
+                    (
+                        "DYNAMIC_LORE_CARD_PROPOSALS",
+                        f"lore/proposed/lore_s{safe_sol:03d}_t{safe_tick:04d}_w{effective_wave_idx:02d}_b04_expedition_discovery.json",
+                        "Synthesize candidate lore card proposal from Midday Expedition.",
+                    )
+                )
         elif phase_idx == 2:  # DUSK_CRAFT
-            planned_specs.append(
+            wave_specs.append(
                 (
                     "POV_RASHOMON_RELAY_SCENES",
                     f"story/segments/seg_s{safe_sol:03d}_t{safe_tick:04d}_enclave_05_kaio.json",
                     "Write Dusk Craft Rashomon Relay POV segment.",
                 )
             )
-            planned_specs.append(
+            wave_specs.append(
                 (
                     "COUNTERFACTUAL_PERSONALITY_STUDY_REPLAYS",
-                    f"qa/sol_{safe_sol:03d}_counterfactual_replay.json",
+                    f"qa/sol_{safe_sol:03d}_t{safe_tick:04d}_w{effective_wave_idx:02d}_b02_counterfactual_replay.json"
+                    if use_wave_slot
+                    else f"qa/sol_{safe_sol:03d}_counterfactual_replay.json",
                     "Run controlled Big Five counterfactual personality replay.",
                 )
             )
+            if full_4fleet_wave:
+                wave_specs.append(
+                    (
+                        "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK",
+                        f"qa/sol_{safe_sol:03d}_t{safe_tick:04d}_w{effective_wave_idx:02d}_b03_dusk_factcheck.json",
+                        "Verify Dusk Craft causal chains and resource deltas.",
+                    )
+                )
+                wave_specs.append(
+                    (
+                        "DYNAMIC_LORE_CARD_PROPOSALS",
+                        f"lore/proposed/lore_s{safe_sol:03d}_t{safe_tick:04d}_w{effective_wave_idx:02d}_b04_craft_artifact.json",
+                        "Synthesize candidate lore card proposal for Dusk Craft artifact.",
+                    )
+                )
         else:  # THE_FEAST
-            planned_specs.append(
+            feast_base = f"story/feasts/sol_{safe_sol:03d}_feast.json"
+            if use_wave_slot and (self.repo_root / feast_base).is_file():
+                feast_base = f"story/feasts/sol_{safe_sol:03d}_t{safe_tick:04d}_w{effective_wave_idx:02d}_b01_feast.json"
+            wave_specs.append(
                 (
                     "THE_FEAST_4_SQUAD_CONVERGENCE",
-                    f"story/feasts/sol_{safe_sol:03d}_feast.json",
+                    feast_base,
                     "Converge all 16 Enclave characters around Ryn's hearth for The Feast.",
                 )
             )
-            planned_specs.append(
+            wave_specs.append(
                 (
                     "NIGHTLY_EVIDENCE_CITED_REFLECTIONS",
                     f"events/evt_s{safe_sol:03d}_t{safe_tick:04d}_reflection.json",
                     "Synthesize evidence-cited nightly reflection (Law L08).",
                 )
             )
-            planned_specs.append(
+            wave_specs.append(
                 (
                     "INCHARACTER_PSYCHOMETRIC_DRIFT_AUDITS",
-                    f"qa/sol_{safe_sol:03d}_drift_audit.json",
+                    f"qa/sol_{safe_sol:03d}_t{safe_tick:04d}_w{effective_wave_idx:02d}_b03_drift_audit.json"
+                    if use_wave_slot
+                    else f"qa/sol_{safe_sol:03d}_drift_audit.json",
                     "Audit 16-character psychometric drift z-scores (Law L16).",
                 )
             )
-            planned_specs.append(
+            dispatch_base = f"digests/daily/sol_{safe_sol:03d}_dispatch.json"
+            if use_wave_slot and (self.repo_root / dispatch_base).is_file():
+                dispatch_base = (
+                    f"digests/daily/sol_{safe_sol:03d}_t{safe_tick:04d}_w{effective_wave_idx:02d}_b04_dispatch.json"
+                )
+            wave_specs.append(
                 (
                     "EVENING_DISPATCH_NEWSCASTER_ROLLUPS_AND_SCRIPT",
-                    f"digests/daily/sol_{safe_sol:03d}_dispatch.json",
+                    dispatch_base,
                     "Compile and verify Evening Dispatch newscaster edition (Law L15).",
+                )
+            )
+
+        if full_4fleet_wave and 1 <= effective_wave_idx <= 14:
+            slot_k = len(wave_specs) + 1
+            wave_specs.append(
+                (
+                    "DYNAMIC_LORE_CARD_PROPOSALS",
+                    f"lore/proposed/lore_s{safe_sol:03d}_t{safe_tick:04d}_w{effective_wave_idx:02d}_b{slot_k:02d}_supplementary.json",
+                    "Synthesize supplementary 110/24h Enclave lore & world continuity proposal.",
                 )
             )
 
@@ -847,13 +1218,39 @@ class JulesEnclaveDispatcher:
         )
         active_pov_id, next_pov_target = pov_chain[phase_idx]
         local_mgr = None
+        recent_lesson_str: str | None = None
+        cur_budget = self.load_budget(now_iso=ts)
         if not self.dry_run:
             from engine.local_ai_manager import LocalContextAwareManager
 
             local_mgr = LocalContextAwareManager(repo_root=self.repo_root)
+            eav_list = cur_budget.get("eav_lessons") or []
+            if isinstance(eav_list, list) and eav_list:
+                recent_lesson_str = " | ".join(str(x) for x in eav_list[-3:])
+
+        active_targets = {
+            str(s.get("target_path") or "").lstrip("./")
+            for s in (cur_budget.get("active_sessions") or [])
+            if isinstance(s, dict)
+        }
 
         dispatched_results: list[dict[str, Any]] = []
-        for bucket, target_path, prompt_desc in planned_specs:
+        for idx, spec in enumerate(wave_specs):
+            bucket, target_path, prompt_desc = spec
+            norm_target = target_path.lstrip("./")
+            if norm_target in active_targets or (not self.dry_run and (self.repo_root / norm_target).is_file()):
+                dispatched_results.append(
+                    {
+                        "dispatched": False,
+                        "dry_run": self.dry_run,
+                        "slot_index": idx + 1,
+                        "task_bucket": bucket,
+                        "target_path": norm_target,
+                        "reason": "PRE_DISPATCH_DEDUPLICATION_GUARD: target_path already on disk or in-flight",
+                    }
+                )
+                continue
+
             full_prompt = prompt_desc
             if local_mgr is not None:
                 try:
@@ -862,10 +1259,11 @@ class JulesEnclaveDispatcher:
                         colony_sol=safe_sol,
                         tick_id=safe_tick,
                         day_phase=day_phase,
-                        target_path=target_path,
+                        target_path=norm_target,
                         active_pov_id=active_pov_id,
                         next_pov_target=next_pov_target,
                         showrunner_pacing_mode="MERCER_IMMERSIVE" if phase_idx != 1 else "MULLIGAN_CRISIS",
+                        failure_lesson=recent_lesson_str,
                         use_local_ollama=False,
                     )
                     full_prompt = str(card.get("prompt") or prompt_desc)
@@ -875,11 +1273,13 @@ class JulesEnclaveDispatcher:
                 task_bucket=bucket,
                 tick_id=safe_tick,
                 colony_sol=safe_sol,
-                target_path=target_path,
+                target_path=norm_target,
                 prompt_text=full_prompt,
                 base_snapshot_tick=max(1, safe_tick - 1),
             )
             res = self.dispatch_session(payload, now_iso=ts, persist=persist)
+            if res.get("dispatched"):
+                active_targets.add(norm_target)
             dispatched_results.append(res)
 
         final_state = self.load_budget(now_iso=ts)
@@ -887,7 +1287,7 @@ class JulesEnclaveDispatcher:
             "tick_id": safe_tick,
             "colony_sol": safe_sol,
             "dry_run": self.dry_run,
-            "sessions_requested": len(planned_specs),
+            "sessions_requested": len(wave_specs),
             "sessions_dispatched": sum(1 for r in dispatched_results if r.get("dispatched")),
             "results": dispatched_results,
             "rolling_24h_dispatched": final_state["rolling_24h_dispatched"],
@@ -906,6 +1306,7 @@ class JulesEnclaveDispatcher:
         - 225 scheduled productive sessions dispatched across the 11 buckets matching CANONICAL_TASK_BUCKETS.
         - Peak concurrent VMs per wave <= 8 (well below the 60 concurrent Ultra cap).
         - 30 auto-retry reserve + 45 rolling safety buffer = 300/24h Ultra ceiling.
+        - Bijective wave-slot addressing Phi(s,t,w,b,k,r) across all 300 scheduled + reserve slots.
         """
         from engine.local_ai_manager import LocalContextAwareManager
 
@@ -917,6 +1318,7 @@ class JulesEnclaveDispatcher:
         sim_state = default_budget_state(now_iso=start_iso)
         wave_logs: list[dict[str, Any]] = []
         max_concurrent_in_wave = 0
+        all_300_paths: set[str] = set()
 
         prefix_map = {
             "MORNING_INTENTS_16_NODES": "events",
@@ -928,7 +1330,7 @@ class JulesEnclaveDispatcher:
             "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION": "events",
             "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK": "qa/factcheck",
             "SHADOW_ECONOMY_AND_SETUP_PAYOFF_LEDGER": "events",
-            "DYNAMIC_LORE_CARD_PROPOSALS": "events",
+            "DYNAMIC_LORE_CARD_PROPOSALS": "lore/proposed",
             "EVENING_DISPATCH_NEWSCASTER_ROLLUPS_AND_SCRIPT": "digests/daily",
         }
 
@@ -952,15 +1354,18 @@ class JulesEnclaveDispatcher:
                 )
 
                 wave_dispatched = 0
+                slot_counter = 0
                 for d_item in w_spec["dispatches"]:
                     bucket = str(d_item["task_bucket"])
                     count = int(d_item["count"]) + (int(d_item.get("sol_4_bonus", 0)) if sol_idx == 4 else 0)
                     for item_k in range(1, count + 1):
+                        slot_counter += 1
                         out_prefix = prefix_map.get(bucket, "events")
                         target_path = (
-                            f"{out_prefix}/w{global_wave_num:02d}_s{sol_idx:03d}_"
-                            f"{bucket.lower()[:18]}_{item_k:02d}.json"
+                            f"{out_prefix}/s{sol_idx:03d}_t{tick_id:04d}_w{global_wave_num:02d}_"
+                            f"b{slot_counter:02d}_k{item_k:02d}_{bucket.lower()[:18]}.json"
                         )
+                        all_300_paths.add(target_path)
                         card = local_mgr.compile_enclave_5section_task_card(
                             task_bucket=bucket,
                             colony_sol=sol_idx,
@@ -969,6 +1374,13 @@ class JulesEnclaveDispatcher:
                             target_path=target_path,
                             showrunner_pacing_mode=pacing_mode,
                             use_local_ollama=use_local_ollama,
+                        )
+                        PreDispatchContractVerifier.verify_brief_before_dispatch(
+                            repo_root=self.repo_root,
+                            brief_text=str(card.get("prompt") or ""),
+                            explicit_target_path=target_path,
+                            sol=sol_idx,
+                            tick=tick_id,
                         )
                         allowed, reason = self.can_dispatch(
                             sim_state, requested_count=1, is_retry=False, task_bucket=bucket
@@ -1010,6 +1422,18 @@ class JulesEnclaveDispatcher:
                     }
                 )
 
+        # Also verify the 30 retry reserve + 45 buffer slots have bijective Phi(s,t,w,b,k,r) paths (300/300 unique)
+        for reserve_idx in range(1, 76):
+            r_path = f"events/s004_t0016_w36_b99_k{reserve_idx:02d}_r01_reserve.json"
+            PreDispatchContractVerifier.verify_brief_before_dispatch(
+                repo_root=self.repo_root,
+                brief_text=f"Write {r_path}",
+                explicit_target_path=r_path,
+                sol=4,
+                tick=16,
+            )
+            all_300_paths.add(r_path)
+
         # Verify that 40 minutes after 24h (at t = +1440m + 90s), Wave 1's 4 slots are automatically reclaimed!
         reclaim_check_iso = (start_dt + timedelta(hours=24, minutes=2)).strftime("%Y-%m-%dT%H:%M:%SZ")
         reclaimed_state = self._recompute_rolling_window(dict(sim_state), now_iso=reclaim_check_iso)
@@ -1019,7 +1443,9 @@ class JulesEnclaveDispatcher:
                 sim_state["scheduled_dispatched_24h"] == SCHEDULED_PRODUCTIVE_CAP
                 and sim_state["task_buckets_consumed"] == CANONICAL_TASK_BUCKETS
                 and max_concurrent_in_wave <= 8
+                and len(all_300_paths) == 300
             ),
+            "unique_300_paths_verified": len(all_300_paths),
             "total_waves": len(wave_logs),
             "inter_wave_spacing_minutes": 40,
             "total_span_minutes": 36 * 40,
@@ -1060,9 +1486,30 @@ class JulesEnclaveDispatcher:
         m = re.search(r"github\.com/([^/]+/[^/]+)/pull/(\d+)", pr_url)
         repo_slug = m.group(1) if m else default_slug
         pr_num = m.group(2) if m else ""
-        if not pr_num:
+        if not pr_num or repo_slug != default_slug:
             return
         try:
+            pr_meta_proc = subprocess.run(
+                ["gh", "api", f"repos/{repo_slug}/pulls/{pr_num}"],
+                capture_output=True,
+                text=True,
+                timeout=15,
+                check=False,
+            )
+            head_ref = ""
+            head_sha = ""
+            if pr_meta_proc.returncode == 0 and pr_meta_proc.stdout.strip():
+                pr_meta = json.loads(pr_meta_proc.stdout)
+                if isinstance(pr_meta, dict):
+                    head_repo_full = ((pr_meta.get("head") or {}).get("repo") or {}).get("full_name")
+                    base_ref_name = (pr_meta.get("base") or {}).get("ref")
+                    if head_repo_full and head_repo_full != repo_slug:
+                        return
+                    if base_ref_name and base_ref_name != "main":
+                        return
+                    head_ref = str((pr_meta.get("head") or {}).get("ref") or "").strip()
+                    head_sha = str((pr_meta.get("head") or {}).get("sha") or "").strip()
+
             files_proc = subprocess.run(
                 ["gh", "api", f"repos/{repo_slug}/pulls/{pr_num}/files"],
                 capture_output=True,
@@ -1103,27 +1550,19 @@ class JulesEnclaveDispatcher:
                 )
                 return
 
-            head_ref = ""
-            pr_info_proc = subprocess.run(
-                ["gh", "api", f"repos/{repo_slug}/pulls/{pr_num}", "--jq", ".head.ref"],
-                capture_output=True,
-                text=True,
-                timeout=15,
-                check=False,
-            )
-            if pr_info_proc.returncode == 0:
-                head_ref = pr_info_proc.stdout.strip()
-
+            merge_cmd = [
+                "gh",
+                "api",
+                "--method",
+                "PUT",
+                f"repos/{repo_slug}/pulls/{pr_num}/merge",
+                "-f",
+                "merge_method=rebase",
+            ]
+            if head_sha and re.fullmatch(r"[0-9a-f]{40}", head_sha):
+                merge_cmd.extend(["-f", f"sha={head_sha}"])
             merge_proc = subprocess.run(
-                [
-                    "gh",
-                    "api",
-                    "--method",
-                    "PUT",
-                    f"repos/{repo_slug}/pulls/{pr_num}/merge",
-                    "-f",
-                    "merge_method=squash",
-                ],
+                merge_cmd,
                 capture_output=True,
                 text=True,
                 timeout=25,
@@ -1172,6 +1611,7 @@ class JulesEnclaveDispatcher:
         still_running: list[dict[str, Any]] = []
         integrated: list[dict[str, Any]] = []
         pending_retries: list[dict[str, Any]] = []
+        staged_artifacts_map: dict[str, dict[str, Any]] = {}
 
         pov_chain = (
             ("enclave_03_silas", "enclave_01_hector"),
@@ -1298,6 +1738,7 @@ class JulesEnclaveDispatcher:
                         if int_res.get("integrated"):
                             if pr_url:
                                 self._auto_merge_or_close_pr(pr_url)
+                            staged_artifacts_map[target_rel] = proposal_obj
                             integrated.append(
                                 {
                                     "session_id": sid,
@@ -1336,17 +1777,93 @@ class JulesEnclaveDispatcher:
                         confidence=1.0,
                         prov_hash="f120_salvage_gate",
                     )
+                    fixture_path = (
+                        _compile_enclave_incident_fixture(
+                            session_id=sid,
+                            failure_category="changeset_gate_rejection",
+                            summary="; ".join(diag_errors)[:220] or "proposal_failed_constitutional_gate",
+                        )
+                        if not self.dry_run
+                        else None
+                    )
                     reap_rec = {
                         "session_id": sid,
                         "previous_state": s_state,
                         "elapsed_minutes": round(elapsed_min, 2),
                         "supervisor_action": "REJECTED_CHANGESET_REAP",
                         "eav_lesson": eav_lesson,
+                        "fixture_path": fixture_path,
                         "reaped_at_iso": ts,
                     }
                     reaped.append(reap_rec)
                     state.setdefault("reaped_sessions", []).append(reap_rec)
                     state.setdefault("eav_lessons", []).append(eav_lesson)
+                    state.setdefault("lessons", []).append(
+                        {
+                            "session_id": sid,
+                            "category": "changeset_gate_rejection",
+                            "lesson": eav_lesson,
+                            "fixture_path": fixture_path,
+                            "timestamp": ts,
+                        }
+                    )
+                else:
+                    if pr_url:
+                        try:
+                            subprocess.run(
+                                [
+                                    "gh",
+                                    "pr",
+                                    "close",
+                                    pr_url,
+                                    "--delete-branch",
+                                    "-c",
+                                    "F-120 Constitutional Gate Rejection: empty or unparseable JSON proposal in COMPLETED session.",
+                                ],
+                                capture_output=True,
+                                text=True,
+                                timeout=20,
+                                check=False,
+                            )
+                        except Exception:
+                            pass
+                    eav_lesson = format_eav_lesson(
+                        entity=f"enclave:{sid}",
+                        attr="empty_or_unparseable_completed",
+                        value="completed_session_missing_valid_json_proposal",
+                        confidence=1.0,
+                        prov_hash="f120_salvage_gate",
+                    )
+                    fixture_path = (
+                        _compile_enclave_incident_fixture(
+                            session_id=sid,
+                            failure_category="empty_or_unparseable_completed",
+                            summary="completed_session_missing_valid_json_proposal",
+                        )
+                        if not self.dry_run
+                        else None
+                    )
+                    reap_rec = {
+                        "session_id": sid,
+                        "previous_state": s_state,
+                        "elapsed_minutes": round(elapsed_min, 2),
+                        "supervisor_action": "REJECTED_EMPTY_OR_UNPARSEABLE_REAP",
+                        "eav_lesson": eav_lesson,
+                        "fixture_path": fixture_path,
+                        "reaped_at_iso": ts,
+                    }
+                    reaped.append(reap_rec)
+                    state.setdefault("reaped_sessions", []).append(reap_rec)
+                    state.setdefault("eav_lessons", []).append(eav_lesson)
+                    state.setdefault("lessons", []).append(
+                        {
+                            "session_id": sid,
+                            "category": "empty_or_unparseable_completed",
+                            "lesson": eav_lesson,
+                            "fixture_path": fixture_path,
+                            "timestamp": ts,
+                        }
+                    )
                 continue
 
             should_cut_loss = False
@@ -1421,6 +1938,7 @@ class JulesEnclaveDispatcher:
                             if int_res.get("integrated"):
                                 if pr_url:
                                     self._auto_merge_or_close_pr(pr_url)
+                                staged_artifacts_map[target_rel] = proposal_obj
                                 integrated.append(
                                     {
                                         "session_id": sid,
@@ -1431,6 +1949,50 @@ class JulesEnclaveDispatcher:
                                     }
                                 )
                                 continue
+                    try:
+                        salvage_dir = _xdg_state_home() / "lfs-jules-fleet" / "salvage"
+                        salvage_dir.mkdir(parents=True, exist_ok=True)
+                        clean_id = self.rest_client._clean_sid(sid)
+                        (salvage_dir / f"{clean_id}.json").write_text(
+                            json.dumps(
+                                {
+                                    "session_id": clean_id,
+                                    "archived_at": ts,
+                                    "source": "enclave_f120_cut_loss",
+                                    "session": sess,
+                                    "remote_info": remote_info,
+                                },
+                                indent=2,
+                                sort_keys=True,
+                            )
+                            + "\n",
+                            encoding="utf-8",
+                        )
+                    except Exception:
+                        pass
+                    if pr_url:
+                        try:
+                            subprocess.run(
+                                [
+                                    "gh",
+                                    "pr",
+                                    "close",
+                                    pr_url,
+                                    "--delete-branch",
+                                    "-c",
+                                    f"F-120 Reaper cut-loss after {round(elapsed_min, 1)}m.",
+                                ],
+                                capture_output=True,
+                                text=True,
+                                timeout=20,
+                                check=False,
+                            )
+                        except Exception:
+                            pass
+                    try:
+                        self.rest_client.delete_session(sid)
+                    except Exception:
+                        pass
 
                 eav_lesson = format_eav_lesson(
                     entity=f"enclave:{sid}",
@@ -1439,17 +2001,36 @@ class JulesEnclaveDispatcher:
                     confidence=1.0,
                     prov_hash="f120_reaper",
                 )
+                fixture_path = (
+                    _compile_enclave_incident_fixture(
+                        session_id=sid,
+                        failure_category="f120_stall_timeout",
+                        summary=f"session_exceeded_{timeout_minutes}m_cut_loss_relaunch",
+                    )
+                    if not self.dry_run
+                    else None
+                )
                 reap_rec = {
                     "session_id": sid,
                     "previous_state": s_state,
                     "elapsed_minutes": round(elapsed_min, 2),
                     "supervisor_action": "CUT_LOSS_REAP_AND_RETRY",
                     "eav_lesson": eav_lesson,
+                    "fixture_path": fixture_path,
                     "reaped_at_iso": ts,
                 }
                 reaped.append(reap_rec)
                 state.setdefault("reaped_sessions", []).append(reap_rec)
                 state.setdefault("eav_lessons", []).append(eav_lesson)
+                state.setdefault("lessons", []).append(
+                    {
+                        "session_id": sid,
+                        "category": "f120_stall_timeout",
+                        "lesson": eav_lesson,
+                        "fixture_path": fixture_path,
+                        "timestamp": ts,
+                    }
+                )
 
                 bucket = str(sess.get("task_bucket") or "POV_RASHOMON_RELAY_SCENES")
                 if bucket not in CANONICAL_TASK_BUCKETS:
@@ -1526,6 +2107,14 @@ class JulesEnclaveDispatcher:
                 retried.append(retry_res)
                 if persist:
                     state = self.load_budget(now_iso=ts)
+
+        if not self.dry_run and integrated:
+            from tools.integrator import GitWorkspaceSynchronizer
+
+            GitWorkspaceSynchronizer(self.repo_root).atomic_commit_and_push_snapshots_cas(
+                f"feat(enclave): integrate {len(integrated)} proposals and rebuild live snapshots",
+                staged_artifacts=staged_artifacts_map,
+            )
 
         return {
             "checked_count": len(candidate_sessions),

@@ -1,0 +1,172 @@
+{
+  "feast_id": "feast_sol_003",
+  "event_id": "evt_s003_t0012_the_feast",
+  "tick_id": 12,
+  "colony_sol": 3,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-10-27T18:00:00Z",
+  "base_snapshot_tick": 11,
+  "event_type": "THE_FEAST_CONVERGENCE",
+  "location": "The_Hub_Hearth",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_02_jane",
+    "enclave_03_silas",
+    "enclave_04_leo",
+    "enclave_05_kaio",
+    "enclave_06_zara",
+    "enclave_07_willow",
+    "enclave_08_terra",
+    "enclave_09_orion",
+    "enclave_10_isla",
+    "enclave_11_kenna",
+    "enclave_12_elias",
+    "enclave_13_ryn",
+    "enclave_14_vex",
+    "enclave_15_dorian",
+    "enclave_16_elara"
+  ],
+  "summary": "All 16 members of The Enclave gathered around Ryn and Elara's hearth on Sol 3 to break warm iron-wheat bread, debate magnetohydrodynamic kelvin-helmholtz shear across the ferrofluid sea, and release the day's magnetospheric tension.",
+  "importance": 9.3,
+  "novelty_score": 0.82,
+  "lethality": 0,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "narrative_prose": "The Hub Hearth glowed with amber resilience as all sixteen members of The Enclave converged around the long timber tables at the close of Sol 3. Outside the insulated bulkheads, the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea sent low harmonic tremors through the deck plating, while inside the aroma of braised root vegetables and warm iron-wheat bread steadied frayed nerves. Ryn adjusted the induction dampers to DEFEND the simmering copper stockpot from erratic magnetic eddies, letting the savory steam ATTRACT the returning ridge scouts toward the bench. With a practiced nod, she ladled a generous portion into a heavy ceramic bowl and passed the steaming vessel directly into Silas's hands so the crew could CONSUME the evening meal together.",
+  "state_deltas": {
+    "stress_delta": -0.25
+  },
+  "relationship_deltas": [
+    {
+      "from": "enclave_13_ryn",
+      "to": "enclave_03_silas",
+      "bond_delta": 0.03
+    }
+  ],
+  "evidence_refs": [
+    "evt_s003_t0009_morning_intent",
+    "evt_s003_t0012_reflection"
+  ],
+  "disallow_overwrite": false,
+  "target_path": "story/feasts/sol_003_feast.json",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 3,
+      "colony_sol": 3,
+      "tick_id": 12,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Unite all 16 colonists around the Hub Hearth and release Sol 3 magnetospheric strain",
+        "mid_term_milestone": "Stabilize the Enclave's magnetospheric power grid",
+        "campaign_arc_climax": "Survive the twin suns' polarity inversion"
+      }
+    },
+    "active_location": {
+      "location_id": "The_Hub_Hearth",
+      "macro_silhouette": "The sprawling galley rang with the clatter of heavy brass spoons against copper pots as Ryn marshaled sixteen hungry colonists into a shared feast. Warm hearth light spilled across rough-hewn timber tables against the hum of the ferrofluid sea.",
+      "sensory_palette": {
+        "sight_and_color": "Warm amber hearth light reflecting off polished copper kettles and dark iron bulkheads.",
+        "sound": "Rhythmic simmering of broth and lively conversation over a low magnetospheric thrum.",
+        "smell": "Caramelized root vegetables, toasted iron-wheat bread, and a faint trace of ozone.",
+        "tactile_temperature": "Comforting radiant warmth from the induction stoves.",
+        "taste_optional": "Hearty braised mire-lentils and savory root stew."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Simmering Copper Stockpot",
+          "affordance_description": "A massive copper kettle requiring steady induction coil balance.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Fresh Iron-Wheat Loaves",
+          "affordance_description": "Warm aromatic loaves drawing all sixteen colonists to the hearth table.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Steaming Ceramic Bowl",
+          "affordance_description": "A hearty portion of stew handed across the table to restore morale.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_sea_shear_sol3",
+        "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz Shear Harmonics",
+        "motivation_goal": "Induce eddy currents across the Hub induction coils.",
+        "consistent_method": "Rhythmic magnetic shear oscillations through the foundation struts.",
+        "immediate_complication": "Threatens to unevenly heat the copper stockpots during service.",
+        "pressure_index": 5,
+        "uninterrupted_escalation": "Would trip the galley breaker and cut short the evening recovery."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The Enclave must share the Sol 3 feast to recover from expedition fatigue.",
+        "level_2_local": "Ryn must keep the induction hearth balanced against the Kelvin-Helmholtz shear.",
+        "level_3_campaign_arc": "Daily 16-member convergence preserves colony cohesion across the season."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "LEADER"
+        },
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        8,
+        14,
+        6,
+        17,
+        11
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.6,
+      "motivational_vector_saturation": 0.75,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.8,
+      "composite_lpi": 0.68,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local",
+        "model": "deterministic-enclave-5section-v2",
+        "temperature": 0.0,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "Unchecked magnetic eddies scorch the broth and dampen the evening recovery.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "The induction damper trips, forcing a cold ration service.",
+          "below_dc_complicated_fail_forward": "The stew is served slightly uneven, but the table stays united.",
+          "meets_dc_clean_success": "Ryn balances the coils smoothly and serves a restorative feast for all sixteen colonists.",
+          "dc_plus_5_or_20_extended_lore": "Ryn harnesses the harmonic hum to slow-braise the stew to perfection, lifting colony morale."
+        }
+      },
+      "master_narrator": {
+        "executor": "local",
+        "temperature": 0.0,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "With a warm nod, Ryn hands the steaming ceramic bowl to Silas at the head of the hearth table."
+      }
+    }
+  }
+}

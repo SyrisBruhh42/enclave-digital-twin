@@ -12,14 +12,6 @@
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
-  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
-  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified",
-  "second_pass_repair_constraint": "@ENT[enclave:7298660649132524014]",
-  "changeset_gate_rejection": "Law L02 violation: target_path 'lore/proposed/lore_s006_t0022_expedition_discovery.json' outside ('events/', 'story/segments/', 'story/feasts/",
-  "VAL": "Law L02 violation: target_path 'lore/proposed/lore_s006_t0022_expedition_discovery.json' outside ('events/', 'story/segments/', 'story/feasts/",
-  "CONF": 1.0,
-  "TIME": "2026-10-28T21:12:00Z",
-  "PROV": "sol007_t0026",
   "narrative_prose": "Hector snatched the telemetry baton from Silas, grinning into the ozone gale as he sprinted toward the induction rigging. The air crackled with the sheer voltage of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, snapping around his boots like impatient hounds. He didn't hesitate to CONSUME the raw arc-flash data through the baton's interface, ignoring the stinging warmth of the copper grip as he read the live kinetics. Ahead, a heavy magnetic funnel threatened to rip his tools away, but he managed to DEFEND his utility belt with a swift pivot, laughing loudly over the storm's roar. With a daring leap over a sparking capacitor bank, he tossed a decoy wrench to ATTRACT a stray discharge, clearing his path to Kaio. The wind howled as he landed gracefully, shoving the glowing baton firmly into Kaio's hands without missing a beat.",
   "campaign_metadata": {
     "session_number": 7,
@@ -140,6 +132,5 @@
   },
   "context_manifest_path": "context/manifests/manifest_s007_t0026_enclave_01_hector.json",
   "total_prompt_tokens": 900,
-  "target_path": "story/segments/seg_s007_t0026_enclave_01_hector.json",
-  "disallow_overwrite": false
+  "target_path": "story/segments/seg_s007_t0026_enclave_01_hector.json"
 }

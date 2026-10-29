@@ -92,9 +92,9 @@
     ]
   },
   "lpi_metrics": {
-    "relational_tension_density": 0.60,
+    "relational_tension_density": 0.6,
     "motivational_vector_saturation": 0.85,
-    "unresolved_conflict_ratio": 0.70,
+    "unresolved_conflict_ratio": 0.7,
     "temporal_horizon_immediacy": 0.85,
     "composite_lpi": 0.75,
     "classification": "Campaign-Ready"
@@ -123,8 +123,10 @@
   },
   "context_manifest": {
     "full_cards_loaded_count": 1,
-    "loaded_full_card_ids": ["enclave_03_silas"],
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
     "interlocutor_full_cards_loaded": 0
   },
-  "disallow_overwrite": false
+  "target_path": "story/segments/seg_s003_t0009_enclave_03_silas.json"
 }

@@ -744,6 +744,15 @@
         <a class="btn-brass" href="enclave_city.html" style="text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;">
           🏰 Open 2.5D Voxel Enclave City &amp; Willow AC Sim
         </a>
+        <select id="solSelector" class="btn btn-brass" aria-label="Select Colony Sol Dispatch">
+          <option value="7">Sol 007 (Latest)</option>
+          <option value="6">Sol 006</option>
+          <option value="5">Sol 005</option>
+          <option value="4">Sol 004</option>
+          <option value="3">Sol 003</option>
+          <option value="2">Sol 002</option>
+          <option value="1">Sol 001</option>
+        </select>
         <span class="status-pill" id="law-l15-pill">LAW L15: 100% CITATION FAITHFUL</span>
         <span class="status-pill brass" id="law-l01-pill">LAW L01: ZERO PII VERIFIED</span>
         <label class="file-label" for="json-file-input">
@@ -1367,30 +1376,119 @@
       if (data.colony_sol) merged.colony_sol = data.colony_sol;
       if (data.anchor_intro) merged.anchor_intro = data.anchor_intro;
       if (Array.isArray(data.lead_stories) && data.lead_stories.length > 0) merged.lead_stories = data.lead_stories;
-      if (Array.isArray(data.developing_stories)) merged.developing_stories = data.developing_stories;
-      if (data.block_digests) merged.block_digests = data.block_digests;
-      if (data.magnetosphere_and_weather_report) {
+      if (Array.isArray(data.developing_stories) && data.developing_stories.length > 0) {
+        merged.developing_stories = data.developing_stories;
+      }
+      if (data.block_digests && (Array.isArray(data.block_digests) ? data.block_digests.length > 0 : Object.keys(data.block_digests).length > 0)) {
+        merged.block_digests = data.block_digests;
+      }
+      if (data.magnetosphere_and_weather_report && Object.keys(data.magnetosphere_and_weather_report).length > 0) {
         merged.magnetosphere_and_weather_report = {
           ...merged.magnetosphere_and_weather_report,
           ...data.magnetosphere_and_weather_report
         };
-      } else if (data.weather) {
+      } else if (data.weather && Object.keys(data.weather).length > 0) {
         merged.magnetosphere_and_weather_report = {
           ...merged.magnetosphere_and_weather_report,
           ...data.weather
         };
       }
-      if (data.sibling_grid_blind_spot_column) merged.sibling_grid_blind_spot_column = data.sibling_grid_blind_spot_column;
-      if (data.quote_of_the_sol) merged.quote_of_the_sol = data.quote_of_the_sol;
+      if (data.sibling_grid_blind_spot_column && Object.keys(data.sibling_grid_blind_spot_column).length > 0) {
+        merged.sibling_grid_blind_spot_column = data.sibling_grid_blind_spot_column;
+      }
+      if (data.quote_of_the_sol && (typeof data.quote_of_the_sol === "object" ? Object.keys(data.quote_of_the_sol).length > 0 : false)) {
+        merged.quote_of_the_sol = data.quote_of_the_sol;
+      }
       if (Array.isArray(data.events)) {
         const byId = {};
         data.events.forEach(ev => { if (ev && ev.event_id) byId[ev.event_id] = ev; });
         merged.events_by_id = { ...merged.events_by_id, ...byId };
       }
+      const charsSource = data.characters || (window._latestSnapshot && window._latestSnapshot.characters);
+      if (charsSource && typeof charsSource === "object" && Array.isArray(merged.cast_16)) {
+        merged.cast_16.forEach(c => {
+          const live = charsSource[c.id];
+          if (live && typeof live === "object" && typeof live.stress === "number") {
+            c.stress = live.stress;
+          }
+        });
+      }
+      const segsSource = data.recent_segments || (window._latestSnapshot && window._latestSnapshot.recent_segments);
+      if (Array.isArray(segsSource) && segsSource.length > 0) {
+        const solSegs = segsSource.filter(s => !merged.colony_sol || Number(s.colony_sol) === Number(merged.colony_sol));
+        const chosenSegs = solSegs.length > 0 ? solSegs : segsSource.slice(0, 4);
+        if (!Array.isArray(data.developing_stories) || data.developing_stories.length === 0) {
+          merged.developing_stories = chosenSegs.map(s => ({
+            pattern_type: `LIVE_RELAY_${s.day_phase || "SCENE"}`,
+            story_title: `${s.segment_id || "Segment"} (${s.active_pov_id || ""} → ${s.next_pov_target || ""})`,
+            narrative_summary: s.excerpt || "",
+            cited_event_ids: []
+          }));
+        }
+      }
       activeState = merged;
       document.getElementById("loaded-source-label").textContent =
         `Active Payload: Loaded from ${filename} (Colony Sol ${merged.colony_sol || 1})`;
       renderAll();
+    }
+
+    async function loadSolDispatch(solNum) {
+      const padded = String(solNum).padStart(3, "0");
+      const candidateUrls = [
+        `../digests/daily/sol_${padded}_dispatch.json`,
+        `./digests/daily/sol_${padded}_dispatch.json`
+      ];
+      for (const url of candidateUrls) {
+        try {
+          const resp = await fetch(url, { cache: "no-store" });
+          if (!resp.ok) continue;
+          const dispatchObj = await resp.json();
+          ingestLoadedJson(dispatchObj, `digests/daily/sol_${padded}_dispatch.json`);
+          return true;
+        } catch (_) {}
+      }
+      if (Number(solNum) === 1) {
+        ingestLoadedJson(DEFAULT_SOL1_PAYLOAD, "Embedded Sol 1 Fallback");
+        return true;
+      }
+      return false;
+    }
+
+    async function autoDiscoverLiveEnclaveState() {
+      const sel = document.getElementById("solSelector");
+      const candidateSnapUrls = ["../snapshots/latest.json", "./snapshots/latest.json"];
+      for (const url of candidateSnapUrls) {
+        try {
+          const resp = await fetch(url, { cache: "no-store" });
+          if (!resp.ok) continue;
+          const snap = await resp.json();
+          if (!snap || typeof snap !== "object") continue;
+          window._latestSnapshot = snap;
+          const maxSol = Number(snap.colony_sol || 7);
+          const sols = Array.isArray(snap.available_sols) && snap.available_sols.length > 0
+            ? [...snap.available_sols].sort((a, b) => b - a)
+            : Array.from({ length: maxSol }, (_, idx) => maxSol - idx);
+          if (sel) {
+            sel.innerHTML = sols.map((s, idx) =>
+              `<option value="${s}">Sol ${String(s).padStart(3, "0")}${idx === 0 ? " (Latest)" : ""}</option>`
+            ).join("");
+            sel.value = String(sols[0]);
+          }
+          const loaded = await loadSolDispatch(sols[0]);
+          if (!loaded) {
+            ingestLoadedJson(snap, `snapshots/latest.json (Tick ${snap.tick_id || 27})`);
+          }
+          return true;
+        } catch (_) {}
+      }
+      return false;
+    }
+
+    const solSelectorEl = document.getElementById("solSelector");
+    if (solSelectorEl) {
+      solSelectorEl.addEventListener("change", (e) => {
+        loadSolDispatch(Number(e.target.value || 1));
+      });
     }
 
     document.getElementById("json-file-input").addEventListener("change", (e) => {
@@ -1434,8 +1532,9 @@
       reader.readAsText(file);
     });
 
-    // Initial Render
+    // Initial Render & Live Repository Auto-Discovery
     renderAll();
+    autoDiscoverLiveEnclaveState();
   </script>
 </body>
 </html>

@@ -36,8 +36,8 @@
       "squad_a": "The Forge",
       "squad_b": "The Forge",
       "relationship_type": "Mentor_Mentee",
-      "bond_strength": 0.94,
-      "trust": 0.95,
+      "bond_strength": 1.0,
+      "trust": 1.0,
       "affection": 0.91,
       "intellectual_friction": 0.4,
       "how_a_sees_b": "Reveres Silas as the gruff grandfather who taught him how metal breathes under strain, and deliberately leaves small tool-puzzles on the bench to make the old man feel needed.",
@@ -45,7 +45,16 @@
       "shared_history_hook": "Silas forged Hector's first insulated spanner when Hector was ten and still inspects its bismuth grip before every high-Kp storm ascent.",
       "evidence_refs": [
         "evt_s001_t0001_dawn_shift",
-        "evt_s001_t0004_the_feast"
+        "evt_s001_t0001_morning_intent",
+        "evt_s001_t0004_the_feast",
+        "evt_s002_t0005_morning_intent",
+        "evt_s003_t0009_morning_intent",
+        "evt_s004_t0013_morning_intent",
+        "evt_s005_t0017_morning_intent",
+        "evt_s005_t0017_world_consequence",
+        "evt_s006_t0021_morning_intent",
+        "evt_s007_t0025_morning_intent",
+        "evt_s007_t0025_world_consequence"
       ]
     },
     {
@@ -78,15 +87,19 @@
       "squad_a": "The Forge",
       "squad_b": "The Wilds",
       "relationship_type": "Found_Family_Sibling",
-      "bond_strength": 0.92,
-      "trust": 0.96,
+      "bond_strength": 1.0,
+      "trust": 1.0,
       "affection": 0.92,
       "intellectual_friction": 0.4,
       "how_a_sees_b": "Counts Kaio as his partner-in-altitude\u2014the only other prodigy crazy enough to test wind-glider harnesses in a Kp-6 gale.",
       "how_b_sees_a": "Looks up to Hector as the fearless older-brother figure who can weld a snapped crampon on a cliff face without dropping his grin.",
       "shared_history_hook": "Co-founders of the Sibling Grid's high-ridge courier line, trading newly discovered fulgurite geodes for hot forge-baked chestnuts.",
       "evidence_refs": [
-        "evt_s001_t0002_midday_expedition"
+        "evt_s001_t0002_midday_expedition",
+        "evt_s005_t0018_expedition_consequence",
+        "evt_s006_t0021_world_consequence",
+        "evt_s006_t0022_expedition_consequence",
+        "evt_s007_t0026_expedition_consequence"
       ]
     },
     {
@@ -746,13 +759,16 @@
       "squad_a": "The Forge",
       "squad_b": "The Hub",
       "relationship_type": "Intellectual_Rivals_Phase_4",
-      "bond_strength": 0.86,
-      "trust": 0.9,
+      "bond_strength": 0.91,
+      "trust": 0.95,
       "affection": 0.88,
       "intellectual_friction": 0.42,
       "how_a_sees_b": "Grumbles that Ryn guards the iron-wheat silos like a dragon, while secretly respecting her uncompromising ledger discipline more than anyone else's.",
       "how_b_sees_a": "Battles Silas weekly over Schr\u00f6dinger's Harvest grain allocations, then bakes his favorite low-sodium crust rolls to soothe his arthritic knuckles.",
-      "shared_history_hook": "Veteran adversaries of every Harvest Partition debate, united by a mutual hatred of wasted grams and sloppy arithmetic."
+      "shared_history_hook": "Veteran adversaries of every Harvest Partition debate, united by a mutual hatred of wasted grams and sloppy arithmetic.",
+      "evidence_refs": [
+        "evt_s003_t0012_reflection"
+      ]
     },
     {
       "pair_id": "enclave_03_silas__enclave_14_vex",
@@ -1186,13 +1202,17 @@
       "squad_a": "The Wilds",
       "squad_b": "The Hub",
       "relationship_type": "Found_Family_Sibling",
-      "bond_strength": 0.84,
-      "trust": 0.88,
+      "bond_strength": 0.91,
+      "trust": 0.95,
       "affection": 0.86,
       "intellectual_friction": 0.43,
       "how_a_sees_b": "Treats Ryn as a lifelong sibling in the Sibling Grid, happily trading spare fittings from The Sanctuary to help Ryn out of tight jams.",
       "how_b_sees_a": "Counts on Kaio's quick wit during storm watches and covers for Kaio whenever The Wilds experiments run late before The Feast.",
-      "shared_history_hook": "Grew up side by side in the Enclave nursery and co-engineered a pneumatic message-tube relay linking The Wilds to The Hub."
+      "shared_history_hook": "Grew up side by side in the Enclave nursery and co-engineered a pneumatic message-tube relay linking The Wilds to The Hub.",
+      "evidence_refs": [
+        "evt_s007_t0027_dusk_craft",
+        "evt_s007_t0027_world_consequence"
+      ]
     },
     {
       "pair_id": "enclave_05_kaio__enclave_14_vex",
@@ -6533,6 +6553,6 @@
       }
     }
   },
-  "updated_at_tick": 4,
-  "applied_event_count": 6
+  "updated_at_tick": 27,
+  "applied_event_count": 31
 }

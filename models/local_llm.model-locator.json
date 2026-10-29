@@ -1,0 +1,12 @@
+{
+  "schema": "lfs-oasis-model-locator-v1",
+  "capsule_id": "enclave-digital-twin",
+  "project_id": "PA-15",
+  "model_id": "local_llm.gguf",
+  "zone_d_path": "~/.local/share/lfs-oasis/models/local_llm.gguf",
+  "windows_zone_d_path": "%LOCALAPPDATA%\\LFS-Oasis\\share\\models\\local_llm.gguf",
+  "usb_fallback_relative_path": "LFS-Runtime/models/local_llm.gguf",
+  "in_tree_symlink_removed": true,
+  "ollama_fallback_model": "qwen2.5:3b",
+  "notes": "Relocated out of Git working tree to Zone D (~/.local/share/lfs-oasis/models/local_llm.gguf) so USB exFAT/NTFS checkouts contain zero broken symlinks."
+}

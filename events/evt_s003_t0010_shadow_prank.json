@@ -51,11 +51,10 @@
   "evidence_refs": [
     "evt_s002_t0005_morning_intent"
   ],
-  "target_path": "events/evt_s002_t0006_shadow_prank.json",
+  "target_path": "events/evt_s003_t0010_shadow_prank.json",
   "active_pov_id": "enclave_01_hector",
   "next_pov_target": "enclave_05_kaio",
   "prev_next_pov_target": "enclave_01_hector",
-  "disallow_overwrite": false,
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "context_manifest": {
     "full_cards_loaded_count": 1,

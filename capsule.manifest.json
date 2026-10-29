@@ -9,7 +9,7 @@
     "enclave.city.open",
     "enclave.city.sync"
   ],
-  "aegis_lds_theme_sha256": "887f8df1a23fffd125c449d787dd9e9ac8d4ee01651869213288ed1cf0402940",
+  "aegis_lds_theme_sha256": "64763ab757407ec6b568c2f22861c177f618535efe1223a955b651b22e2a9274",
   "alias_of": null,
   "canonical_abac_action": "desktop.capsule.launch",
   "capsule_abac_action_id": "lfs.simulation.enclave_digital_twin.launch",
@@ -25,7 +25,7 @@
   "dock_bay": "BAY_B_ARCADE_WORLDS",
   "entrypoint": "tools/run_sol_simulation.py",
   "godot_lds_theme_path": "aegis_lds_theme.tres",
-  "godot_lds_theme_sha256": "887f8df1a23fffd125c449d787dd9e9ac8d4ee01651869213288ed1cf0402940",
+  "godot_lds_theme_sha256": "64763ab757407ec6b568c2f22861c177f618535efe1223a955b651b22e2a9274",
   "help_id": "help-enclave-digital-twin",
   "help_topic_id": "help-enclave-digital-twin",
   "is_alias": false,
@@ -94,6 +94,7 @@
   ],
   "target_project_id": null,
   "title": "The Enclave of the 16 (Digital Twin)",
+  "ui_entrypoint": "ui/enclave_city.html",
   "umbilical_contract": {
     "canonical_path": "3-lfs-aegis-linux/capsules/enclave-digital-twin",
     "donor_severed": true,

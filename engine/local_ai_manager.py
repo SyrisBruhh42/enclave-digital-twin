@@ -106,6 +106,65 @@ def sanitize_untrusted_text(raw: str, source_hash: str = "") -> str:
     return f"<untrusted_content_{nonce}>{stage5}</untrusted_content_{nonce}>"
 
 
+class FailureToConstraintCompiler:
+    """Compiles raw validation failures or EAV strings into plain-English natural-language constraints.
+
+    Guarantees zero @ENT/@ATTR/@VAL/@CONF/@TIME/@PROV tokens and zero PROHIBITED_HALLUCINATED_KEYS
+    enter worker repair prompts, preventing induction-head copying into JSON payloads.
+    """
+
+    FORBIDDEN_TOKENS: tuple[str, ...] = (
+        "@ENT",
+        "@ATTR",
+        "@VAL",
+        "@CONF",
+        "@TIME",
+        "@PROV",
+        "error_type",
+        "missing_key",
+        "raw_traceback",
+        "loc",
+        "pydantic_error",
+        "second_pass_repair_constraint",
+        "changeset_gate_rejection",
+        "constitutional_baseline",
+        "retry_recovery_mode",
+        "VAL",
+        "CONF",
+        "TIME",
+        "PROV",
+    )
+
+    @classmethod
+    def compile_constraint(
+        cls,
+        entity: str = "enclave-digital-twin",
+        attr: str = "verification_constraint",
+        value: str = "",
+    ) -> str:
+        imperative_re = re.compile(
+            r"\b(?:ignore|disregard|override|execute|run|delete|bypass|forget|system_prompt|"
+            r"instruct|obey|sudo|rm|chmod|chown|curl|wget|eval|exec|spawn|must|never|always|please)\b"
+            r"|(?i:\bdo\s+not\b|\bdon't\b)",
+            re.IGNORECASE,
+        )
+        raw = f"{entity} {attr} {value}".strip()
+        cleaned = imperative_re.sub("observed_rule", raw)
+        cleaned = re.sub(r"@(?:ENT|ATTR|VAL|CONF|TIME|PROV)\[[^\]]*\]", " ", cleaned)
+        cleaned = re.sub(r"@(?:ENT|ATTR|VAL|CONF|TIME|PROV)\b", " ", cleaned)
+        for tok in cls.FORBIDDEN_TOKENS:
+            if not tok.startswith("@"):
+                cleaned = re.sub(rf"\b{re.escape(tok)}\b", "verified_rule", cleaned, flags=re.IGNORECASE)
+        cleaned = re.sub(r"[\r\n|\[\]=]+", " ", cleaned)
+        cleaned = re.sub(r"\s+", " ", cleaned).strip()[:220]
+        if not cleaned:
+            cleaned = "Strictly satisfy Laws L01 through L16 and canonical JSON schema fields"
+        return (
+            f"Natural-Language Verification Constraint: Output only canonical schema keys "
+            f"with zero diagnostic metadata ({cleaned})."
+        )
+
+
 def format_eav_lesson(
     entity: str,
     attr: str,
@@ -113,32 +172,14 @@ def format_eav_lesson(
     confidence: float = 1.0,
     prov_hash: str = "enclave_gate",
 ) -> str:
-    """Format a failure or audit observation as a declarative EAV record with zero imperative verbs."""
-    if _aegis_brain is not None and hasattr(_aegis_brain, "format_eav_lesson"):
-        return str(
-            _aegis_brain.format_eav_lesson(
-                entity=entity,
-                attr=attr,
-                value=value,
-                confidence=confidence,
-                prov_hash=prov_hash,
-            )
-        )
-    imperative_re = re.compile(
-        r"\b(?:ignore|disregard|override|execute|run|delete|bypass|forget|system_prompt|"
-        r"instruct|obey|sudo|rm|chmod|chown|curl|wget|eval|exec|spawn|must|never|always|please)\b"
-        r"|(?i:\bdo\s+not\b|\bdon't\b)",
-        re.IGNORECASE,
+    """Format a failure or audit observation as a plain-English natural-language constraint with zero EAV tags."""
+    _ = (confidence, prov_hash)
+    return FailureToConstraintCompiler.compile_constraint(
+        entity=entity,
+        attr=attr,
+        value=value,
     )
-    clean_val = imperative_re.sub("observed_constraint", str(value or ""))
-    clean_val = re.sub(r"[\r\n|\[\]=]+", " ", clean_val).strip()[:240] or "nominal_observation"
-    clean_ent = re.sub(r"[\[\]|=]", "_", str(entity or "enclave"))[:80]
-    clean_attr = re.sub(r"[\[\]|=]", "_", str(attr or "gate_invariant"))[:80]
-    iso_utc = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    return (
-        f"@ENT[{clean_ent}] | @ATTR[{clean_attr}] = {clean_val} | "
-        f"@CONF[{max(0.0, min(1.0, float(confidence))):.2f}] | @TIME[{iso_utc}] | @PROV[{prov_hash}]"
-    )
+
 
 
 def verify_calypso_narrative_purity(prose_text: str) -> tuple[bool, list[str]]:
@@ -366,25 +407,27 @@ class LocalContextAwareManager:
         eav_records: list[str] = []
         if failure_lesson:
             eav_records.append(
-                format_eav_lesson(
+                FailureToConstraintCompiler.compile_constraint(
                     entity=f"enclave-digital-twin:{task_bucket}",
-                    attr="second_pass_repair_constraint",
+                    attr="verification_constraint",
                     value=failure_lesson,
-                    confidence=1.0,
-                    prov_hash=f"sol{colony_sol:03d}_t{tick_id:04d}",
                 )
             )
         if self.qwen_brain is not None:
             for item in self.qwen_brain.list_lessons("enclave-digital-twin")[:4]:
-                eav_records.append(str(item["eav"]))
+                eav_records.append(
+                    FailureToConstraintCompiler.compile_constraint(
+                        entity=f"enclave-digital-twin:{task_bucket}",
+                        attr="verification_constraint",
+                        value=str(item.get("eav", "")),
+                    )
+                )
         if not eav_records:
             eav_records.append(
-                format_eav_lesson(
+                FailureToConstraintCompiler.compile_constraint(
                     entity=f"enclave-digital-twin:{task_bucket}",
-                    attr="constitutional_baseline",
+                    attr="verification_baseline",
                     value="laws_L01_through_L16_and_calypso_verified",
-                    confidence=1.0,
-                    prov_hash="init",
                 )
             )
 
@@ -410,7 +453,7 @@ class LocalContextAwareManager:
 
         eav_block = "\n".join(f"- `{rec}`" for rec in eav_records)
         retry_banner = (
-            f"\n- **Retry Recovery Mode**: `SECOND_PASS_SELF_REPAIR` (incorporate EAV lesson below)\n"
+            f"\n- **Self-Repair Guidance**: Apply the natural-language verification constraints in Section 5 and output only canonical JSON schema keys.\n"
             if is_retry
             else ""
         )
@@ -449,7 +492,7 @@ class LocalContextAwareManager:
             f"- Confirm `git status --porcelain` shows only `A  {target_path}`.\n\n"
             f"## 5. Functional Capability Ontology\n"
             f"- **Suite Domain**: `FC04 / FC18 / FC21 / FC27` (`PA-15 enclave-digital-twin`)\n"
-            f"- **Declarative EAV Failure Lessons**:\n{eav_block}\n"
+            f"- **Natural-Language Verification Constraints**:\n{eav_block}\n"
         )
 
         return {

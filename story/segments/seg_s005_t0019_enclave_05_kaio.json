@@ -12,10 +12,6 @@
   "narrative_prose": "Kaio's brass sextant hummed violently as the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea intensified, the kinetic force nearly ripping him from his precarious foothold. Blinding arcs of violent static lashed out from the pitch-black waves, while the howling metallic winds deafened him, making the sharp scent of raw ozone and bitter engine grease almost comforting in the chaos. The freezing metallic mist soaked through his gear, and a distinct static tang danced across his tongue as he clutched the heavy telemetry baton against his chest. He staggered down the gangway toward The Hub's reinforced bunker and shoved the humming cylinder directly into Ryn's waiting grasp, completing the vital handoff before the dock collapsed behind him.",
   "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
-  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified",
-  "CONF": 1.0,
-  "TIME": "2026-10-28T14:12:00Z",
-  "PROV": "init",
   "campaign_metadata": {
     "session_number": 5,
     "colony_sol": 5,
@@ -134,6 +130,5 @@
   },
   "context_manifest_path": "context/manifests/manifest_s005_t0019_enclave_05_kaio.json",
   "total_prompt_tokens": 870,
-  "target_path": "story/segments/seg_s005_t0019_enclave_05_kaio.json",
-  "disallow_overwrite": false
+  "target_path": "story/segments/seg_s005_t0019_enclave_05_kaio.json"
 }

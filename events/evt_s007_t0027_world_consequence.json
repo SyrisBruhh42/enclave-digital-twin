@@ -1,44 +1,59 @@
 {
-  "event_id": "evt_s008_t0029_world_consequence",
-  "tick_id": 29,
-  "colony_sol": 8,
-  "day_phase": "DAWN_SHIFT",
-  "world_timestamp_iso": "2026-10-31T10:00:00Z",
-  "base_snapshot_tick": 28,
-  "event_type": "POV_SCENE_SEGMENT",
-  "location": "The_First_Forge",
+  "event_id": "evt_s007_t0027_world_consequence",
+  "tick_id": 27,
+  "colony_sol": 7,
+  "day_phase": "DUSK_CRAFT",
+  "world_timestamp_iso": "2026-10-31T18:15:00Z",
+  "base_snapshot_tick": 26,
+  "event_type": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+  "location": "The_Hearth",
   "actors": [
-    "enclave_03_silas",
-    "enclave_01_hector"
+    "enclave_05_kaio",
+    "enclave_13_ryn"
   ],
-  "active_pov_id": "enclave_03_silas",
-  "next_pov_target": "enclave_01_hector",
-  "prev_next_pov_target": "enclave_03_silas",
-  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
-  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "narrative_prose": "Inside The Hearth, Kaio watched the amber induction coils flicker as the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea coupled with the hull grounding bus. He shifted the heavy copper kettle to CONCEAL the spare telemetry leads, then leaned over the counter to CONSUME a cup of warm roasted-tuber broth while the vents continued to hiss. When a secondary magnetic harmonic rattled the spice racks, Kaio stepped in to DEFEND the calibration slate and completed the physical baton handoff into Ryn\u2019s steady grip.",
+  "importance": 8.0,
+  "novelty_score": 0.85,
+  "lethality": 0,
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
-  "narrative_prose": "Silas stared out at the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, noting the harsh violet light reflecting off the brass bulkheads of The First Forge. The sharp tang of ionized copper filled his nose, and the dull roar of the sheer wave rattled his teeth. He had to DEFEND the delicate calipers from the sudden magnetic pull, quickly trying to ATTRACT Hector's attention. \"Inefficient,\" he muttered, holding out the heavy baton for Hector to grab, choosing not to CONCEAL his frustration.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "target_path": "events/evt_s007_t0027_world_consequence.json",
   "context_manifest": {
     "full_cards_loaded_count": 1,
     "interlocutor_full_cards_loaded": 0,
     "loaded_full_card_ids": [
-      "enclave_03_silas"
+      "enclave_05_kaio"
     ]
   },
-  "disallow_overwrite": false,
-  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
-  "second_pass_repair_constraint": "@ENT[enclave:3800217491768740553]",
-  "changeset_gate_rejection": "Showrunner contract violation (Mercer 3-Feature Rule): active_location requires exactly 3 interactive_features.",
-  "CONF": "1.00",
-  "TIME": "2026-10-29T00:12:04Z",
-  "PROV": "sol008_t0029",
-  "ENT": "enclave:10785334878835238916",
-  "VAL": "Showrunner contract violation (Mercer 3-Feature Rule): active_location requires exactly 3 interactive_features.",
+  "state_deltas": {
+    "enclave_05_kaio": {
+      "stress_delta": 0.09,
+      "morale_delta": -0.03,
+      "fatigue_delta": 0.05
+    },
+    "enclave_13_ryn": {
+      "stress_delta": 0.07,
+      "morale_delta": 0.04
+    }
+  },
+  "relationship_deltas": [
+    {
+      "from": "enclave_13_ryn",
+      "to": "enclave_05_kaio",
+      "bond_delta": 0.03,
+      "trust_delta": 0.04
+    }
+  ],
+  "evidence_refs": [],
   "showrunner_ledger": {
     "campaign_metadata": {
-      "session_number": 8,
-      "colony_sol": 8,
-      "tick_id": 29,
+      "session_number": 7,
+      "colony_sol": 7,
+      "tick_id": 27,
       "pacing_mode": "MERCER_IMMERSIVE",
       "consequential_fights_since_short_rest": 0,
       "horizon_goals": {
@@ -48,7 +63,7 @@
       }
     },
     "active_location": {
-      "location_id": "The_First_Forge",
+      "location_id": "The_Hearth",
       "macro_silhouette": "A rugged forge.",
       "sensory_palette": {
         "sight_and_color": "Harsh violet light.",
@@ -86,7 +101,7 @@
         "consistent_method": "Pulsing unpredictable magnetic fields.",
         "immediate_complication": "Baton transfer becomes difficult.",
         "pressure_index": 6,
-        "uninterrupted_escalation": true
+        "uninterrupted_escalation": "Equipment overload."
       }
     ],
     "encounter_matrix": {
@@ -97,12 +112,12 @@
       },
       "active_specialist_roles": [
         {
-          "actor_id": "enclave_03_silas",
+          "actor_id": "enclave_05_kaio",
           "tactical_role": "STRIKER"
         },
         {
-          "actor_id": "enclave_01_hector",
-          "tactical_role": "STRIKER"
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "DEFENDER"
         }
       ],
       "strain_accumulated_upward": 1,
@@ -143,6 +158,11 @@
         "prosodic_micro_pauses_enabled": true,
         "agency_handoff_prompt": "Hector, take the baton."
       }
+    }
+  },
+  "project_deltas": {
+    "proj_01_kiln": {
+      "progress_delta": 4.5
     }
   }
 }

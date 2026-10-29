@@ -14,7 +14,6 @@
   "active_pov_id": "enclave_03_silas",
   "next_pov_target": "enclave_01_hector",
   "prev_next_pov_target": "enclave_03_silas",
-  "disallow_overwrite": false,
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "context_manifest": {
     "full_cards_loaded_count": 1,
@@ -143,5 +142,6 @@
         "agency_handoff_prompt": "Hector, take the baton and mind the shear."
       }
     }
-  }
+  },
+  "target_path": "events/evt_s003_t0009_morning_intent.json"
 }

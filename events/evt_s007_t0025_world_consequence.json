@@ -21,7 +21,6 @@
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
-  "disallow_overwrite": false,
   "target_path": "events/evt_s007_t0025_world_consequence.json",
   "context_manifest": {
     "full_cards_loaded_count": 1,
@@ -152,12 +151,5 @@
         "agency_handoff_prompt": "Hector, take the baton."
       }
     }
-  },
-  "second_pass_repair_constraint": "enclave:171172332741791876",
-  "changeset_gate_rejection": "Law L02 violation: target_path 'lore/propose",
-  "f120_stall_timeout": "session_exceeded_25m_cut_loss_relaunch",
-  "CONF": "1.00",
-  "TIME": "2026-10-28T20:12:05Z",
-  "PROV": "sol007_t0025",
-  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR"
+  }
 }

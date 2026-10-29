@@ -9,7 +9,6 @@
   "next_pov_target": "enclave_13_ryn",
   "prev_next_pov_target": "enclave_05_kaio",
   "entity_id": "enclave_05_kaio",
-  "disallow_overwrite": false,
   "actors": [
     "enclave_05_kaio",
     "enclave_13_ryn"
@@ -133,11 +132,5 @@
     }
   },
   "narrative_prose": "Kaio leaned over the jagged basalt edge, his heavy boots grinding against the vibrating rock as the Magnetohydrodynamic Kelvin-Helmholtz shear screamed across the ferrofluid sea below. The volatile expanse of liquid obsidian shattered into fractal waves, throwing violent arcs of violet lightning into the static-choked air. He fought to DEFEND his brass sextant against the relentless magnetic ripcurrent, the heavy metal pulling fiercely toward the churning abyss. He tried to CONCEAL the worst of the trembling in his hands, hoping the glowing spores would ATTRACT some of the stray current. Securing his grip, he turned toward the heavily-laden figure trudging up the path. He tossed a glowing, statically charged hunk of ridge-crystal toward Ryn's heavy apron, forcing the baton handoff. 'Catch! The shear is stabilizing, Chef!'",
-  "second_pass_repair_constraint": "Showrunner contract violation: reactive_toys[0] missing 'uninterrupted_escalation'.",
-  "changeset_gate_rejection": "Showrunner contract violation: reactive_toys[0] missing 'uninterrupted_escalation'.",
-  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
-  "VAL": "sol007_t0027",
-  "CONF": "1.00",
-  "TIME": "2026-10-28T22:12:02Z",
-  "PROV": "sol007_t0027"
+  "target_path": "qa/sol_007_counterfactual_replay.json"
 }

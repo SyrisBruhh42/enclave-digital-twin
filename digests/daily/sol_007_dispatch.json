@@ -9,7 +9,6 @@
     }
   ],
   "target_path": "digests/daily/sol_007_dispatch.json",
-  "disallow_overwrite": false,
   "headline": "SOL 7 EVENING DISPATCH: Dealing with the Shear",
   "anchor_intro": "[VEX]: Good evening Enclave! [DORIAN]: Another sol, another dispatch.",
   "lead_stories": [
@@ -246,18 +245,6 @@
   },
   "steward_note": "deterministic-enclave-5section-v2",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
-  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
-  "second_pass_repair_constraint": "@ENT[enclave:3800217491768740553]",
-  "changeset_gate_rejection": "Showrunner contract violation (Mercer 3-Feature Rule): active_location requires exactly 3 interactive_features.",
-  "VAL": "sol007_t0028",
-  "ENT": {
-    "enclave-digital-twin:EVENING_DISPATCH_NEWSCASTER_ROLLUPS_AND_SCRIPT": true,
-    "enclave:3800217491768740553": true,
-    "enclave:10785334878835238916": true
-  },
-  "CONF": "1.00",
-  "TIME": "2026-10-28T23:12:05Z",
-  "PROV": "sol007_t0028",
   "require_all_4_phases": false,
   "lead_story": {
     "story_id": "story_007_01",

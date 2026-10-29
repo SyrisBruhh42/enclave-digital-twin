@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-lds-theme="evergreen-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enclave of the 16 — Live Autonomous Colony &amp; Dispatch Hub</title>
+  <style>
+    :root {
+      --bg-abyss: #071110;
+      --bg-panel: #0d1d1b;
+      --border-brass: rgba(230, 172, 85, 0.42);
+      --brass-bright: #e6ac55;
+      --emerald-accent: #32f5c8;
+      --text-ivory: #f4f1ea;
+      --text-muted: #a6b8b3;
+      --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+      --font-mono: "JetBrains Mono", monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: var(--bg-abyss);
+      color: var(--text-ivory);
+      font-family: var(--font-sans);
+      display: flex;
+      flex-direction: column;
+    }
+    .hub-navbar {
+      height: 52px;
+      min-height: 52px;
+      background: linear-gradient(90deg, #091715 0%, #102421 100%);
+      border-bottom: 1px solid var(--border-brass);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+      gap: 0.75rem;
+      z-index: 20;
+    }
+    .hub-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+    }
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(50, 245, 200, 0.12);
+      border: 1px solid rgba(50, 245, 200, 0.45);
+      color: var(--emerald-accent);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--emerald-accent);
+      box-shadow: 0 0 8px var(--emerald-accent);
+    }
+    .hub-tabs {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .hub-tab {
+      min-height: 36px;
+      padding: 0.4rem 0.9rem;
+      border-radius: 6px;
+      border: 1px solid var(--border-brass);
+      background: rgba(13, 29, 27, 0.85);
+      color: var(--text-ivory);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .hub-tab:hover, .hub-tab.active {
+      background: rgba(230, 172, 85, 0.2);
+      border-color: var(--brass-bright);
+      color: #fff;
+    }
+    .hub-frame {
+      flex: 1;
+      width: 100%;
+      border: 0;
+      background: var(--bg-abyss);
+    }
+  </style>
+</head>
+<body>
+  <header class="hub-navbar">
+    <div class="hub-brand">
+      <span>🏛️ ENCLAVE OF THE 16</span>
+      <span class="live-badge" id="live-status-badge">
+        <span class="pulse-dot"></span>
+        <span id="live-status-text">SOL 7 • TICK 27 • DUSK_CRAFT</span>
+      </span>
+    </div>
+    <nav class="hub-tabs" aria-label="Enclave View Switcher">
+      <button type="button" class="hub-tab active" id="tab-city" onclick="switchView('city')">
+        🏰 2.5D Enclave City &amp; Willow Sim
+      </button>
+      <button type="button" class="hub-tab" id="tab-dispatch" onclick="switchView('dispatch')">
+        📰 Evening Dispatch Slate
+      </button>
+      <a class="hub-tab" id="open-direct-link" href="./ui/enclave_city.html" target="_blank" rel="noopener">
+        ↗ Fullscreen
+      </a>
+    </nav>
+  </header>
+  <iframe
+    id="enclave-viewport"
+    class="hub-frame"
+    src="./ui/enclave_city.html"
+    title="Enclave of the 16 Interactive Viewport"
+  ></iframe>
+  <script>
+    function switchView(mode) {
+      const frame = document.getElementById("enclave-viewport");
+      const tabCity = document.getElementById("tab-city");
+      const tabDispatch = document.getElementById("tab-dispatch");
+      const directLink = document.getElementById("open-direct-link");
+      if (mode === "dispatch") {
+        frame.src = "./ui/dispatch_viewer.html";
+        directLink.href = "./ui/dispatch_viewer.html";
+        tabDispatch.classList.add("active");
+        tabCity.classList.remove("active");
+      } else {
+        frame.src = "./ui/enclave_city.html";
+        directLink.href = "./ui/enclave_city.html";
+        tabCity.classList.add("active");
+        tabDispatch.classList.remove("active");
+      }
+    }
+
+    async function refreshHubStatus() {
+      try {
+        const resp = await fetch("./snapshots/latest.json", { cache: "no-store" });
+        if (!resp.ok) return;
+        const snap = await resp.json();
+        if (!snap || typeof snap !== "object") return;
+        const sol = snap.colony_sol ?? 7;
+        const tick = snap.tick_id ?? 27;
+        const phase = snap.day_phase || "DUSK_CRAFT";
+        document.getElementById("live-status-text").textContent =
+          `SOL ${sol} • TICK ${tick} • ${phase}`;
+      } catch (_) {}
+    }
+
+    refreshHubStatus();
+    setInterval(refreshHubStatus, 15000);
+  </script>
+</body>
+</html>

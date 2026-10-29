@@ -7,7 +7,6 @@
   "next_pov_target": "enclave_03_silas",
   "prev_next_pov_target": "enclave_13_ryn",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
-  "disallow_overwrite": false,
   "evidence_refs": [
     "evt_s001_t0004_the_feast"
   ],
@@ -126,7 +125,6 @@
       }
     }
   },
-  "second_pass_repair_constraint": "session_exceeded_25m_cut_loss_relaunch",
   "audits": [
     {
       "character_id": "enclave_13_ryn",
@@ -169,5 +167,6 @@
         "hexaco_honesty_humility": 0.05
       }
     }
-  ]
+  ],
+  "target_path": "qa/sol_003_drift_audit.json"
 }

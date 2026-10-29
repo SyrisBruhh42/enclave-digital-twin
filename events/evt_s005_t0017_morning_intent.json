@@ -3,20 +3,23 @@
   "tick_id": 17,
   "colony_sol": 5,
   "day_phase": "DAWN_SHIFT",
-  "world_timestamp_iso": "2026-10-29T00:00:00Z",
+  "world_timestamp_iso": "2026-10-28T13:14:08Z",
   "base_snapshot_tick": 16,
   "event_type": "MORNING_INTENT",
   "location": "The_First_Forge",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "actors": [
     "enclave_03_silas",
     "enclave_01_hector"
   ],
   "active_pov_id": "enclave_03_silas",
   "next_pov_target": "enclave_01_hector",
+  "narrative_prose": "Silas examines the crimson and amber glows cutting through dawn shadows as the rhythmic, heavy thud of pneumatic hammers fills the air, leaving a sharp ozone and molten brass tang in his mouth. The oppressively hot and dry air makes him sweat as he adjusts the thermal baffle to DEFEND against the radiant heat. He attempts to ATTRACT stray droplets back into alignment before deciding to CONCEAL his mistake in the scrap pile. Silas grips the physical baton tightly, feeling the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea challenge his balance, before finally placing it into Hector's waiting hand.",
   "importance": 8.0,
   "novelty_score": 0.85,
   "lethality": 0,
-  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "state_deltas": {
     "stress_delta": 0.05
   },
@@ -50,7 +53,8 @@
         "sight_and_color": "Crimson and amber glows cutting through dawn shadows.",
         "sound": "The rhythmic, heavy thud of pneumatic hammers.",
         "smell": "Sharp ozone and molten brass.",
-        "tactile_temperature": "Oppressively hot and dry."
+        "tactile_temperature": "Oppressively hot and dry.",
+        "taste_optional": "A sharp ozone and molten brass tang."
       },
       "interactive_features": [
         {
@@ -135,18 +139,5 @@
         "agency_handoff_prompt": "Hector, take the baton and mind the shear."
       }
     }
-  },
-  "steward_note": "deterministic-enclave-5section-v2",
-  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
-  "prev_next_pov_target": "enclave_03_silas",
-  "context_manifest": {
-    "full_cards_loaded_count": 1,
-    "interlocutor_full_cards_loaded": 0,
-    "loaded_full_card_ids": [
-      "enclave_03_silas"
-    ]
-  },
-  "disallow_overwrite": false,
-  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified",
-  "narrative_prose": "Silas braced against the oppressive, dry heat and the stinging static touch of the forge as he monitored the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, its blinding amber glow reflecting off oxidized copper while the deafening thud of hammers mingled with the metallic tang of ozone on his tongue. To DEFEND the delicate alignment, he deployed the thermal baffle to CONCEAL the vulnerable conduits from stray sparks, but the chaotic magnetic waves still threatened to ATTRACT loose scrap before he firmly pressed the insulated baton into Hector's waiting grip."
+  }
 }

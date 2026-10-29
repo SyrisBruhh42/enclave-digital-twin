@@ -388,7 +388,8 @@ def test_showrunner_dm_lpi_local_ai_manager_and_300_session_standby() -> None:
     assert card["status"] == "COMPILED"
     assert len(card["sections"]) == 6
     assert "DO NOT call get_workspace on Linear" in card["prompt"]
-    assert "@ENT[" in card["prompt"]
+    assert "@ENT[" not in card["prompt"]
+    assert "Natural-Language Verification Constraint" in card["prompt"]
 
     # 3. Verify 36-Wave x 40m = 1,440m (300-Session Rolling-24h) Schedule Simulation
     dispatcher = JulesEnclaveDispatcher(repo_root=REPO_ROOT, dry_run=True)
@@ -456,12 +457,92 @@ class TestEnclaveCrucible(unittest.TestCase):
     def test_12_enclave_voxel_city_and_willow_animal_crossing_sim(self) -> None:
         test_enclave_voxel_city_and_willow_animal_crossing_sim()
 
+    def test_13_pokemon_emerald_5_districts_and_6_step_tutorial(self) -> None:
+        test_pokemon_emerald_5_districts_and_6_step_tutorial()
+
+
+def test_pokemon_emerald_5_districts_and_6_step_tutorial() -> None:
+    from engine.enclave_city_sim import (
+        ENCLAVE_BUILDINGS,
+        ENCLAVE_EMERALD_DISTRICTS,
+        ENCLAVE_INDOOR_ROOMS,
+        ENCLAVE_ONBOARDING_TUTORIAL_STEPS,
+        EnclaveVoxelCityEngine,
+        perform_willow_ac_action,
+    )
+
+    # 1. Verify 5 Hoenn Districts partition all 18 buildings and 16 citizens cleanly
+    assert set(ENCLAVE_EMERALD_DISTRICTS.keys()) == {
+        "zone_01_homestead_grove",
+        "zone_02_hearth_plaza",
+        "zone_03_atlas_terrace",
+        "zone_04_ferro_pier",
+        "zone_05_forge_summit",
+    }
+    mapped_bldg_ids: list[str] = []
+    mapped_cit_ids: list[str] = []
+    for z in ENCLAVE_EMERALD_DISTRICTS.values():
+        mapped_bldg_ids.extend(z["buildings"])
+        mapped_cit_ids.extend(z["citizens"])
+    assert len(mapped_bldg_ids) == 18
+    assert set(mapped_bldg_ids) == {b["building_id"] for b in ENCLAVE_BUILDINGS}
+    assert len(mapped_cit_ids) == 16
+    assert set(mapped_cit_ids) == set(CANONICAL_16_CHARACTER_IDS)
+
+    # 2. Verify 3 Enterable Indoor Rooms
+    assert set(ENCLAVE_INDOOR_ROOMS.keys()) == {
+        "room_willow_home",
+        "room_hearth_galley",
+        "room_atlas_museum",
+    }
+
+    # 3. Verify 6-Step Guided Onboarding Tutorial & Zone Warping
+    assert [s["step_id"] for s in ENCLAVE_ONBOARDING_TUTORIAL_STEPS] == [
+        "STEP_1_MEET_SOREN",
+        "STEP_2_DIG_GEODE",
+        "STEP_3_WATER_SPROUT",
+        "STEP_4_CATCH_MOTH",
+        "STEP_5_PLAZA_MEET_RYN",
+        "STEP_6_MUSEUM_OR_HOMESTEAD",
+    ]
+
+    eng = EnclaveVoxelCityEngine(repo_root=REPO_ROOT, seed="enclave_sol_001")
+    assert eng.state["active_zone_id"] == "zone_01_homestead_grove"
+    assert eng.state["onboarding_tutorial"]["current_step_index"] == 1
+    assert eng.state["onboarding_tutorial"]["completed"] is False
+
+    # Step 1: advance_tutorial (Meet Mentor Soren & Terra)
+    r1 = perform_willow_ac_action(eng.state, "advance_tutorial", {"step_id": "STEP_1_MEET_SOREN"})
+    assert r1["ok"] is True
+    assert eng.state["onboarding_tutorial"]["current_step_id"] == "STEP_2_DIG_GEODE"
+
+    # Step 2..6 via matching actions
+    for act, payload in (
+        ("forage_dig", {"specimen_id": "spec_geode_bismuth"}),
+        ("water_crop", {}),
+        ("catch_critter", {"specimen_id": "spec_critter_prism_moth"}),
+        (" warp_zone".strip(), {"zone_id": "zone_02_hearth_plaza"}),
+        ("gift_citizen", {"target_id": "enclave_13_ryn", "item_id": "diy_herbal_liniment"}),
+        ("warp_zone", {"room_id": "room_atlas_museum"}),
+        ("donate_museum", {"specimen_id": "spec_geode_bismuth"}),
+    ):
+        res = perform_willow_ac_action(eng.state, act, payload)
+        assert res["ok"] is True
+        assert res["feed_entry"]["lethality"] == 0
+
+    assert eng.state["onboarding_tutorial"]["completed"] is True
+    assert len(eng.state["onboarding_tutorial"]["completed_step_ids"]) == 6
+    assert eng.state["active_indoor_room_id"] == "room_atlas_museum"
+
 
 def test_enclave_voxel_city_and_willow_animal_crossing_sim() -> None:
     from engine.enclave_city_sim import (
         DIY_RECIPES,
         ENCLAVE_BIOMES,
         ENCLAVE_BUILDINGS,
+        ENCLAVE_EMERALD_DISTRICTS,
+        ENCLAVE_INDOOR_ROOMS,
+        ENCLAVE_ONBOARDING_TUTORIAL_STEPS,
         MUSEUM_CATALOG,
         SUITE_SYNERGY_ATLAS,
         WILLOW_AC_TOOLS,
@@ -477,6 +558,9 @@ def test_enclave_voxel_city_and_willow_animal_crossing_sim() -> None:
 
     # 1. Verify 5 Biomes, 18 Buildings, 6 Tools, 16 Museum Specimens, 12 DIY Recipes & Suite Synergy Atlas
     assert len(ENCLAVE_BIOMES) == 5
+    assert len(ENCLAVE_EMERALD_DISTRICTS) == 5
+    assert len(ENCLAVE_INDOOR_ROOMS) == 3
+    assert len(ENCLAVE_ONBOARDING_TUTORIAL_STEPS) == 6
     assert len(ENCLAVE_BUILDINGS) == 18
     assert len(WILLOW_AC_TOOLS) == 6
     assert len(MUSEUM_CATALOG) == 16
@@ -593,6 +677,9 @@ def test_enclave_voxel_city_and_willow_animal_crossing_sim() -> None:
     assert "EnclaveArtLighting.renderWorldPass" in city_html
     assert "EnclaveArtLighting.renderScreenPass" in city_html
     assert "dispatch_viewer.html" in city_html
+    assert "LITTLEROOT HOMESTEAD GROVE" in city_html
+    assert "STEP_1_MEET_SOREN" in city_html
+    assert "01_front_0deg_rgba.png" in city_html
     assert "https://cdn." not in city_html
 
     art_lighting_path = REPO_ROOT / "ui" / "enclave_art_lighting.js"
@@ -700,10 +787,7 @@ def test_live_jules_api_schema_oasis_twin_bridge_and_4fleet_governor() -> None:
             dry_run=False,
             rest_client=client,
         )
-        init_state = live_disp.load_budget(now_iso="2026-10-25T12:00:00Z")
-        init_state["peer_live_dispatched_24h"] = 0
-        init_state["peer_in_flight_vms"] = 0
-        d_res = live_disp.dispatch_session(payload, now_iso="2026-10-25T12:00:00Z", persist=True, state_override=init_state)
+        d_res = live_disp.dispatch_session(payload, now_iso="2026-10-25T12:00:00Z", persist=True)
         assert d_res["dispatched"] is True
         assert d_res["remote_session_id"] == "9988776655"
 
@@ -774,7 +858,59 @@ def test_live_jules_api_schema_oasis_twin_bridge_and_4fleet_governor() -> None:
     manifest = json.loads((REPO_ROOT / "capsule.manifest.json").read_text(encoding="utf-8"))
     assert manifest["entrypoint"] == "tools/run_sol_simulation.py"
 
-    forbidden_home = "/home/" + chr(106) + "oe"
+    # 5. Verify WP-4 PreDispatchContractVerifier, FailureToConstraintCompiler, Lockstep Barrier & CRDT Commutativity
+    from engine.local_ai_manager import FailureToConstraintCompiler
+    from tools.check_enclave_constitutions import (
+        PreDispatchContractVerifier,
+        PreDispatchVerificationError,
+        check_no_hallucinated_diagnostic_keys,
+    )
+    from tools.enclave_fleet_ctl import _compute_disk_verified_barrier
+    from tools.integrator import _riemannian_logit_step
+
+    try:
+        PreDispatchContractVerifier.verify_brief_before_dispatch(
+            "Create lore/proposals/card.json", "lore/proposals/card.json"
+        )
+        raise AssertionError("Expected PreDispatchVerificationError for lore/proposals/")
+    except PreDispatchVerificationError:
+        pass
+
+    PreDispatchContractVerifier.verify_brief_before_dispatch(
+        "Create lore/proposed/card.json", "lore/proposed/card.json"
+    )
+    ok_clean, _ = check_no_hallucinated_diagnostic_keys({"segment_id": "seg_test"})
+    assert ok_clean is True
+    ok_polluted, _ = check_no_hallucinated_diagnostic_keys(
+        {"segment_id": "seg_test", "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR"}
+    )
+    assert ok_polluted is False
+
+    compiled_constraint = FailureToConstraintCompiler.compile_constraint(
+        entity="enclave:test",
+        attr="second_pass_repair_constraint",
+        value="@ENT[enclave:1] | @ATTR[changeset_gate_rejection] = error_type",
+    )
+    assert "@ENT" not in compiled_constraint
+    assert "second_pass_repair_constraint" not in compiled_constraint
+
+    next_sol_barrier, next_tick_barrier = _compute_disk_verified_barrier(REPO_ROOT)
+    assert (next_sol_barrier, next_tick_barrier) == (7, 28)
+
+    latest_snap = json.loads((REPO_ROOT / "snapshots" / "latest.json").read_text(encoding="utf-8"))
+    assert latest_snap["tick_id"] == 27
+    assert latest_snap["colony_sol"] == 7
+    assert len(latest_snap.get("recent_segments", [])) > 0
+    assert 7 in latest_snap.get("available_sols", [])
+
+    # Verify Riemannian logit step commutativity: step(step(x, d1), d2) == step(step(x, d2), d1) == step(x, d1 + d2)
+    s_ab = _riemannian_logit_step(_riemannian_logit_step(0.42, -0.06), 0.09)
+    s_ba = _riemannian_logit_step(_riemannian_logit_step(0.42, 0.09), -0.06)
+    s_sum = _riemannian_logit_step(0.42, -0.06 + 0.09)
+    assert abs(s_ab - s_ba) < 1e-12
+    assert abs(s_ab - s_sum) < 1e-12
+
+    forbidden_home = "/home/" + "joe"
     for p in REPO_ROOT.rglob("*"):
         if not p.is_file() or "__pycache__" in p.parts or ".git" in p.parts:
             continue

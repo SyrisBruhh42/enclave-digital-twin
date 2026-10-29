@@ -1595,56 +1595,47 @@
         ctx.fill();
       }
 
-      // 2. Flowing Copper Hair Highlights & Glowing Visor Scanline
-      const headTopY = wy - scale * 0.82 - bob;
-      ctx.fillStyle = '#fbbf24';
-      ctx.fillRect(wx - scale * 0.24, headTopY, scale * 0.48, Math.max(2, scale * 0.1));
+      // 2. Non-Occluding Solarpunk Crown Rim Arc (replaces legacy rectangular face-occluding fillRect bars)
+      const crownY = wy - scale * 0.78 - bob;
+      ctx.save();
+      ctx.strokeStyle = 'rgba(232, 185, 84, 0.72)';
+      ctx.lineWidth = Math.max(1.4, scale * 0.055);
+      ctx.beginPath();
+      ctx.arc(wx, crownY + scale * 0.14, scale * 0.24, Math.PI * 1.15, Math.PI * 1.85);
+      ctx.stroke();
+      ctx.restore();
 
-      const visorY = wy - scale * 0.62 - bob;
-      ctx.fillStyle = '#32f5c8';
-      ctx.fillRect(wx - scale * 0.18, visorY, scale * 0.36, Math.max(2, scale * 0.08));
-
-      // 3. Floating Equipped Animal Crossing Tool Badge
+      // 3. Floating Equipped Animal Crossing Tool Badge (Overlay #2 of max 2 simultaneous character overlays)
       const toolIcon = options?.toolIcon || TOOL_ICONS[equippedToolId] || '⚗️';
       const badgeX = wx + scale * 0.64;
       const badgeY = wy - scale * 0.58 - bob + Math.sin(timeSec * 3.0) * (scale * 0.06);
-      const badgeR = Math.max(7, scale * 0.28);
+      const badgeR = Math.max(8, scale * 0.28);
 
-      ctx.fillStyle = atmos.ldsTokens.bgSurface || 'rgba(13, 29, 24, 0.92)';
+      ctx.fillStyle = atmos.ldsTokens.bgSurface || 'rgba(18, 28, 24, 0.94)';
       ctx.beginPath();
       ctx.arc(badgeX, badgeY, badgeR, 0, Math.PI * 2);
       ctx.fill();
-      ctx.strokeStyle = '#f0bc68';
+      ctx.strokeStyle = '#E8B954';
       ctx.lineWidth = Math.max(1.2, scale * 0.05);
       ctx.stroke();
 
-      ctx.font = `${Math.max(10, Math.round(scale * 0.38))}px sans-serif`;
+      ctx.font = `${Math.max(12, Math.round(scale * 0.38))}px sans-serif`;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillText(toolIcon, badgeX, badgeY + 0.5);
 
-      // 4. Special Libra Aesthete Feng-Shui Sparkle Aura (Polarity Inversion or high Kp_exo)
-      if (atmos.polarityInversion || env.kpExo >= 6.0 || options?.forceLibraAura) {
+      // 4. Special Libra Aesthete Feng-Shui Sparkle Aura (only when explicitly forced or high Kp_exo; non-occluding ground perimeter)
+      if (options?.forceLibraAura || (atmos.polarityInversion && options?.allowExtraAura)) {
         ctx.save();
         ctx.globalCompositeOperation = 'screen';
         const libraRadius = scale * 1.05;
-        ctx.strokeStyle = 'rgba(232, 121, 249, 0.68)';
-        ctx.lineWidth = Math.max(1.4, scale * 0.055);
+        ctx.strokeStyle = 'rgba(223, 126, 158, 0.55)';
+        ctx.lineWidth = Math.max(1.4, scale * 0.05);
         ctx.setLineDash([4, 4]);
         ctx.beginPath();
-        ctx.arc(wx, wy - scale * 0.3 - bob, libraRadius, 0, Math.PI * 2);
+        ctx.arc(wx, wy + scale * 0.08, libraRadius, 0, Math.PI * 2);
         ctx.stroke();
         ctx.setLineDash([]);
-
-        for (let s = 0; s < 6; s++) {
-          const sa = -rot * 1.4 + (s * Math.PI * 2) / 6;
-          const sx = wx + Math.cos(sa) * libraRadius;
-          const sy = wy - scale * 0.3 - bob + Math.sin(sa) * (libraRadius * 0.72);
-          ctx.fillStyle = s % 2 === 0 ? '#fde047' : '#e879f9';
-          ctx.beginPath();
-          ctx.arc(sx, sy, Math.max(2, scale * 0.085), 0, Math.PI * 2);
-          ctx.fill();
-        }
         ctx.restore();
       }
 
@@ -1785,11 +1776,11 @@
 
         if (c.bubbleText && env.options.renderSpeechBubbles !== false) {
           const text = String(c.bubbleText).slice(0, 64);
-          ctx.font = `600 ${Math.max(10, Math.round(scale * 0.36))}px system-ui, sans-serif`;
+          ctx.font = `600 ${Math.max(12, Math.round(scale * 0.38))}px system-ui, sans-serif`;
           const textW = ctx.measureText(text).width;
-          const padX = 11;
-          const boxW = Math.max(48, textW + padX * 2);
-          const boxH = Math.max(20, Math.round(scale * 0.72));
+          const padX = 12;
+          const boxW = Math.max(54, textW + padX * 2);
+          const boxH = Math.max(24, Math.round(scale * 0.76));
           const boxX = cx - boxW / 2;
           const boxY = cy - scale * 1.82 - bob;
 

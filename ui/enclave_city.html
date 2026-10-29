@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Enclave of the 16 — 2.5D Voxel Colony &amp; Willow Animal Crossing Companion Sim</title>
+  <title>The Enclave of the 16 — Pokémon Emerald Overworld &amp; Willow Alchemist Companion</title>
   <style>
     /* ============================================================================
        LEWIS DESIGN SYSTEM (LDS) 4-THEME TOKENS & ZT-9 COMFORT OVERRIDES
@@ -15,8 +15,8 @@
       --bg-panel: #0d1d18;
       --bg-panel-alt: #132922;
       --bg-elevated: #19362d;
-      --border-brass: rgba(212, 163, 89, 0.42);
-      --border-bio: rgba(50, 245, 200, 0.32);
+      --border-brass: rgba(212, 163, 89, 0.55);
+      --border-bio: rgba(50, 245, 200, 0.42);
       --brass-bright: #f0bc68;
       --brass-warm: #c88732;
       --bio-emerald: #32f5c8;
@@ -26,6 +26,9 @@
       --text-primary: #f4ead5;
       --text-secondary: #a8c4b8;
       --text-muted: #6e8f82;
+      --gba-frame-outer: #2c4a3e;
+      --gba-frame-inner: #f0bc68;
+      --gba-box-bg: rgba(10, 24, 20, 0.96);
       --shadow-elev: 0 10px 32px rgba(0, 0, 0, 0.72);
     }
 
@@ -34,8 +37,8 @@
       --bg-panel: #f5faf6;
       --bg-panel-alt: #e1ede5;
       --bg-elevated: #d2e4d8;
-      --border-brass: rgba(140, 82, 32, 0.38);
-      --border-bio: rgba(18, 128, 96, 0.35);
+      --border-brass: rgba(140, 82, 32, 0.45);
+      --border-bio: rgba(18, 128, 96, 0.42);
       --brass-bright: #7c4815;
       --brass-warm: #9c5c1e;
       --bio-emerald: #0e7c5b;
@@ -45,7 +48,10 @@
       --text-primary: #14261f;
       --text-secondary: #2e4d40;
       --text-muted: #527364;
-      --shadow-elev: 0 8px 24px rgba(16, 40, 30, 0.16);
+      --gba-frame-outer: #2e6b4e;
+      --gba-frame-inner: #9c5c1e;
+      --gba-box-bg: rgba(245, 250, 246, 0.96);
+      --shadow-elev: 0 8px 24px rgba(16, 40, 30, 0.22);
     }
 
     [data-theme="high-contrast"] {
@@ -64,6 +70,9 @@
       --text-primary: #ffffff;
       --text-secondary: #e6e6e6;
       --text-muted: #bdbdbd;
+      --gba-frame-outer: #ffffff;
+      --gba-frame-inner: #ffd700;
+      --gba-box-bg: rgba(0, 0, 0, 0.98);
       --shadow-elev: 0 0 0 2px #ffd700;
     }
 
@@ -72,8 +81,8 @@
       --bg-panel: #1b2631;
       --bg-panel-alt: #22303f;
       --bg-elevated: #2a3b4d;
-      --border-brass: rgba(186, 164, 132, 0.35);
-      --border-bio: rgba(126, 196, 184, 0.32);
+      --border-brass: rgba(186, 164, 132, 0.42);
+      --border-bio: rgba(126, 196, 184, 0.38);
       --brass-bright: #d8c3a5;
       --brass-warm: #b59b78;
       --bio-emerald: #7ec4b8;
@@ -83,6 +92,9 @@
       --text-primary: #e8ecef;
       --text-secondary: #b4c2cc;
       --text-muted: #8295a3;
+      --gba-frame-outer: #34495e;
+      --gba-frame-inner: #d8c3a5;
+      --gba-box-bg: rgba(20, 28, 36, 0.96);
       --shadow-elev: 0 8px 24px rgba(0, 0, 0, 0.45);
     }
 
@@ -93,8 +105,8 @@
     }
 
     html, body {
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       overflow: hidden;
       background: var(--bg-deep);
       color: var(--text-primary);
@@ -103,328 +115,413 @@
       user-select: none;
     }
 
-    /* Top Status Header */
-    .top-header {
-      height: 58px;
-      background: var(--bg-panel);
-      border-bottom: 2px solid var(--border-brass);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 14px;
-      gap: 10px;
-      z-index: 40;
+    /* ============================================================================
+       FULL-SCREEN 100VW x 100VH POKÉMON EMERALD OVERWORLD VIEWPORT
+       ============================================================================ */
+    .overworld-stage {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background: #06100d;
     }
 
-    .brand-cluster {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      min-width: 0;
+    #town-canvas {
+      width: 100vw;
+      height: 100vh;
+      display: block;
+      image-rendering: pixelated;
+      cursor: crosshair;
     }
 
-    .brand-crest {
-      width: 38px;
-      height: 38px;
-      border-radius: 9px;
-      background: linear-gradient(135deg, var(--bg-elevated), var(--bg-panel-alt));
-      border: 1px solid var(--brass-bright);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      box-shadow: 0 0 12px rgba(50, 245, 200, 0.25);
-      flex-shrink: 0;
+    /* ============================================================================
+       1. TOP-LEFT HOENN ROUTE SIGN (SLIDES DOWN FOR 2.5S ON ZONE ENTRY)
+       ============================================================================ */
+    .hoenn-route-sign {
+      position: absolute;
+      top: 12px;
+      left: 14px;
+      z-index: 30;
+      background: linear-gradient(180deg, #1b3b2f 0%, #0e221b 100%);
+      border: 3px solid #f0bc68;
+      outline: 2px solid #091410;
+      border-radius: 8px;
+      padding: 8px 16px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.75);
+      transform: translateY(-130%);
+      opacity: 0;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s ease;
+      pointer-events: none;
     }
 
-    .brand-titles {
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
+    .hoenn-route-sign.visible {
+      transform: translateY(0);
+      opacity: 1;
     }
 
-    .brand-eyebrow {
-      font-size: 10px;
+    .hoenn-route-title {
       font-family: "JetBrains Mono", monospace;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--bio-emerald);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      color: #ffd866;
+      text-shadow: 1px 1px 0 #000;
+    }
+
+    .hoenn-route-sub {
+      font-size: 11px;
+      color: #32f5c8;
+      margin-top: 2px;
+    }
+
+    /* ============================================================================
+       2. TOP-CENTER 1-LINE GUIDED TUTORIAL BAR (STEPS 1..6)
+       ============================================================================ */
+    .emerald-tutorial-bar {
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 28;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gba-box-bg);
+      border: 2px solid var(--gba-frame-inner);
+      outline: 2px solid var(--gba-frame-outer);
+      border-radius: 999px;
+      padding: 5px 14px;
+      box-shadow: var(--shadow-elev);
+      max-width: min(860px, 76vw);
       white-space: nowrap;
     }
 
-    .brand-main {
-      font-size: 15px;
+    .emerald-tutorial-bar.hidden {
+      display: none;
+    }
+
+    .tutorial-step-text {
+      font-size: 12px;
       font-weight: 700;
-      color: var(--brass-bright);
-      white-space: nowrap;
+      color: var(--text-primary);
       overflow: hidden;
       text-overflow: ellipsis;
     }
 
-    .header-badges {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      flex-wrap: wrap;
-    }
-
-    .pill-badge {
-      padding: 4px 9px;
-      border-radius: 6px;
-      background: var(--bg-panel-alt);
-      border: 1px solid var(--border-brass);
-      font-family: "JetBrains Mono", monospace;
-      font-size: 11px;
-      color: var(--text-primary);
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      white-space: nowrap;
-    }
-
-    .pill-badge.bio {
-      border-color: var(--border-bio);
-      color: var(--bio-emerald);
-    }
-
-    .pill-badge.rupee {
-      border-color: var(--brass-bright);
-      color: var(--brass-bright);
-      font-weight: 700;
-    }
-
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      flex-wrap: nowrap;
-    }
-
-    .lds-btn, .lds-select {
+    .hud-mini-btn {
       min-height: 36px;
-      padding: 5px 10px;
-      border-radius: 7px;
+      padding: 4px 10px;
+      border-radius: 999px;
       border: 1px solid var(--border-brass);
-      background: var(--bg-panel-alt);
-      color: var(--text-primary);
-      font-size: 12px;
-      font-weight: 600;
+      background: var(--bg-elevated);
+      color: var(--brass-bright);
+      font-size: 11px;
+      font-weight: 700;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+
+    .hud-mini-btn:hover {
+      border-color: var(--bio-emerald);
+      color: var(--bio-emerald);
+    }
+
+    /* ============================================================================
+       3. TOP-RIGHT START MENU BUTTON & QUICK CLOCK BADGE
+       ============================================================================ */
+    .top-right-cluster {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      z-index: 32;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .gba-clock-pill {
+      padding: 6px 11px;
+      border-radius: 8px;
+      background: var(--gba-box-bg);
+      border: 2px solid var(--border-brass);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--bio-emerald);
+      box-shadow: var(--shadow-elev);
+    }
+
+    .gba-start-btn {
+      min-height: 36px;
+      padding: 6px 14px;
+      border-radius: 8px;
+      background: linear-gradient(180deg, #28664b 0%, #163d2c 100%);
+      border: 2px solid #ffd866;
+      color: #fff8ea;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      box-shadow: var(--shadow-elev);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .gba-start-btn:hover,
+    .gba-start-btn.active {
+      background: linear-gradient(180deg, #328562 0%, #1f543d 100%);
+      border-color: #32f5c8;
+    }
+
+    /* ============================================================================
+       4. BOTTOM-LEFT COMPACT TOOL & RUPEE PILL
+       ============================================================================ */
+    .bottom-left-pill {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      z-index: 26;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gba-box-bg);
+      border: 2px solid var(--gba-frame-inner);
+      outline: 2px solid var(--gba-frame-outer);
+      border-radius: 10px;
+      padding: 6px 12px;
+      box-shadow: var(--shadow-elev);
+    }
+
+    .tool-cycle-btn {
+      min-height: 36px;
+      padding: 4px 10px;
+      border-radius: 7px;
+      border: 1px solid var(--border-bio);
+      background: rgba(50, 245, 200, 0.14);
+      color: var(--bio-emerald);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .rupee-counter-inline {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--brass-bright);
+      padding: 0 6px;
+    }
+
+    /* ============================================================================
+       5. RIGHT-SIDE POKÉMON EMERALD START MENU OVERLAY
+       ============================================================================ */
+    .gba-start-menu {
+      position: absolute;
+      top: 58px;
+      right: 14px;
+      width: 248px;
+      z-index: 35;
+      background: var(--gba-box-bg);
+      border: 3px solid var(--gba-frame-inner);
+      outline: 3px solid var(--gba-frame-outer);
+      border-radius: 10px;
+      padding: 8px;
+      box-shadow: var(--shadow-elev);
+      display: none;
+      flex-direction: column;
       gap: 5px;
-      text-decoration: none;
-      transition: background 0.15s, border-color 0.15s;
     }
 
-    .lds-btn:hover, .lds-select:hover {
-      background: var(--bg-elevated);
-      border-color: var(--brass-bright);
+    .gba-start-menu.open {
+      display: flex;
     }
 
-    .lds-btn.active {
+    .gba-menu-item {
+      min-height: 38px;
+      padding: 7px 12px;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--text-primary);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 12.5px;
+      font-weight: 700;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .gba-menu-item:hover,
+    .gba-menu-item.active {
       background: rgba(50, 245, 200, 0.18);
       border-color: var(--bio-emerald);
       color: var(--bio-emerald);
     }
 
-    .lds-btn.primary {
-      background: linear-gradient(180deg, #b87b28 0%, #8c5220 100%);
-      color: #fff8ea;
-      border-color: #f0bc68;
-    }
-
-    /* Main Workspace Layout */
-    .workspace-grid {
-      display: grid;
-      grid-template-columns: 1fr 410px;
-      height: calc(100vh - 58px);
-      width: 100vw;
-    }
-
-    /* Left 2.5D Voxel Viewport */
-    .viewport-wrap {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      background: #060e0c;
-      overflow: hidden;
-    }
-
-    #town-canvas {
-      width: 100%;
-      height: 100%;
-      display: block;
-      cursor: grab;
-    }
-
-    #town-canvas:active {
-      cursor: grabbing;
-    }
-
-    /* Floating Top-Left HUD: Camera + Willow 6-Tool AC Hotbar */
-    .floating-hud-top {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      pointer-events: none;
-      z-index: 20;
-    }
-
-    .hud-bar {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      flex-wrap: wrap;
-      background: rgba(13, 29, 24, 0.90);
-      border: 1px solid var(--border-brass);
-      border-radius: 10px;
-      padding: 6px 8px;
-      box-shadow: var(--shadow-elev);
-      pointer-events: auto;
-      backdrop-filter: blur(8px);
-    }
-
-    .tool-slot {
-      min-height: 36px;
-      padding: 4px 9px;
-      border-radius: 7px;
-      border: 1px solid var(--border-brass);
-      background: var(--bg-panel-alt);
-      color: var(--text-primary);
-      font-size: 11.5px;
-      font-weight: 600;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .tool-slot.equipped {
-      background: rgba(50, 245, 200, 0.22);
-      border-color: var(--bio-emerald);
-      color: var(--bio-emerald);
-      box-shadow: 0 0 12px rgba(50, 245, 200, 0.32);
-    }
-
-    .tool-key {
-      font-family: "JetBrains Mono", monospace;
-      font-size: 10px;
-      padding: 1px 4px;
-      border-radius: 4px;
-      background: rgba(0, 0, 0, 0.35);
-      color: var(--brass-bright);
-    }
-
-    /* Floating Willow Action Banner */
-    .willow-prompt-pill {
-      position: absolute;
-      top: 12px;
-      right: 14px;
-      background: rgba(13, 29, 24, 0.92);
-      border: 1px solid var(--bio-emerald);
-      border-radius: 10px;
-      padding: 8px 12px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: var(--shadow-elev);
-      z-index: 20;
-    }
-
-    /* Floating Bottom Center Catalyst Bar */
-    .floating-catalysts {
+    /* ============================================================================
+       6. CLASSIC GBA BOTTOM DIALOGUE BOX (WITH PORTRAIT & CHOICE MENU)
+       ============================================================================ */
+    .gba-dialogue-box {
       position: absolute;
       bottom: 14px;
       left: 50%;
       transform: translateX(-50%);
+      width: min(860px, 94vw);
+      min-height: 118px;
+      z-index: 34;
+      background: var(--gba-box-bg);
+      border: 3px solid var(--gba-frame-inner);
+      outline: 3px solid var(--gba-frame-outer);
+      border-radius: 12px;
+      padding: 12px 16px;
+      box-shadow: var(--shadow-elev);
+      display: none;
+      grid-template-columns: 76px 1fr auto;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .gba-dialogue-box.open {
+      display: grid;
+    }
+
+    .gba-portrait-frame {
+      width: 72px;
+      height: 72px;
+      border-radius: 10px;
+      background: radial-gradient(circle at 50% 35%, #1e4d3b, #091712);
+      border: 2px solid var(--brass-bright);
       display: flex;
       align-items: center;
-      gap: 7px;
-      background: rgba(13, 29, 24, 0.92);
-      border: 1px solid var(--border-brass);
-      border-radius: 11px;
-      padding: 7px 10px;
-      box-shadow: var(--shadow-elev);
-      z-index: 20;
-      flex-wrap: wrap;
       justify-content: center;
-      max-width: 96%;
+      overflow: hidden;
+      position: relative;
+      flex-shrink: 0;
     }
 
-    /* Toast Notification Banner */
-    .toast-banner {
-      position: absolute;
-      bottom: 74px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(19, 41, 34, 0.96);
-      border: 1.5px solid var(--bio-emerald);
-      color: var(--text-primary);
-      padding: 8px 16px;
-      border-radius: 8px;
-      font-weight: 600;
-      box-shadow: var(--shadow-elev);
-      z-index: 30;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.2s ease;
+    .gba-portrait-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      image-rendering: auto;
     }
 
-    .toast-banner.visible {
-      opacity: 1;
+    .gba-portrait-fallback {
+      font-size: 32px;
+      display: none;
     }
 
-    /* Right 4-Tab Sidebar */
-    .right-sidebar {
-      background: var(--bg-panel);
-      border-left: 2px solid var(--border-brass);
+    .gba-dialogue-body {
       display: flex;
       flex-direction: column;
-      height: 100%;
+      gap: 6px;
+      min-width: 0;
+    }
+
+    .gba-speaker-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 12.5px;
+      font-weight: 800;
+      color: var(--brass-bright);
+    }
+
+    .gba-dialogue-text {
+      font-size: 13.5px;
+      line-height: 1.48;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .gba-choice-box {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      border-left: 2px solid var(--border-brass);
+      padding-left: 12px;
+    }
+
+    .gba-choice-btn {
+      min-height: 36px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--border-brass);
+      background: var(--bg-panel-alt);
+      color: var(--text-primary);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 11.5px;
+      font-weight: 700;
+      text-align: left;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .gba-choice-btn:hover {
+      background: rgba(50, 245, 200, 0.2);
+      border-color: var(--bio-emerald);
+      color: var(--bio-emerald);
+    }
+
+    /* ============================================================================
+       7. ON-DEMAND START MENU DRAWER MODAL (HIDDEN DURING EXPLORATION)
+       ============================================================================ */
+    .gba-drawer-modal {
+      position: absolute;
+      top: 58px;
+      right: 272px;
+      width: min(520px, 90vw);
+      max-height: calc(100vh - 84px);
+      z-index: 36;
+      background: var(--bg-panel);
+      border: 3px solid var(--gba-frame-inner);
+      outline: 3px solid var(--gba-frame-outer);
+      border-radius: 12px;
+      box-shadow: var(--shadow-elev);
+      display: none;
+      flex-direction: column;
       overflow: hidden;
     }
 
-    .tab-bar {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+    .gba-drawer-modal.open {
+      display: flex;
+    }
+
+    .drawer-header {
+      padding: 10px 14px;
       background: var(--bg-panel-alt);
-      border-bottom: 1px solid var(--border-brass);
+      border-bottom: 2px solid var(--border-brass);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    .tab-btn {
-      min-height: 40px;
-      border: none;
-      border-bottom: 3px solid transparent;
-      background: transparent;
-      color: var(--text-secondary);
-      font-size: 11.5px;
-      font-weight: 700;
-      cursor: pointer;
-      padding: 6px 4px;
-      text-align: center;
+    .drawer-title {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--brass-bright);
     }
 
-    .tab-btn.active {
-      color: var(--bio-emerald);
-      border-bottom-color: var(--bio-emerald);
-      background: var(--bg-panel);
-    }
-
-    .tab-pane {
-      display: none;
-      flex: 1;
+    .drawer-body {
+      padding: 12px 14px;
       overflow-y: auto;
-      padding: 12px;
+      display: flex;
       flex-direction: column;
       gap: 12px;
-    }
-
-    .tab-pane.active {
-      display: flex;
+      max-height: calc(100vh - 140px);
     }
 
     .panel-card {
@@ -464,7 +561,7 @@
 
     .favor-item.done {
       border-color: var(--bio-emerald);
-      opacity: 0.82;
+      opacity: 0.85;
     }
 
     .item-header {
@@ -480,6 +577,57 @@
       font-size: 11.5px;
       color: var(--text-secondary);
       line-height: 1.42;
+    }
+
+    .pill-badge {
+      padding: 3px 8px;
+      border-radius: 6px;
+      background: var(--bg-panel-alt);
+      border: 1px solid var(--border-brass);
+      font-family: "JetBrains Mono", monospace;
+      font-size: 10.5px;
+      color: var(--text-primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .pill-badge.bio {
+      border-color: var(--border-bio);
+      color: var(--bio-emerald);
+    }
+
+    .lds-btn, .lds-select {
+      min-height: 36px;
+      padding: 5px 10px;
+      border-radius: 7px;
+      border: 1px solid var(--border-brass);
+      background: var(--bg-panel-alt);
+      color: var(--text-primary);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      text-decoration: none;
+    }
+
+    .lds-btn:hover, .lds-select:hover {
+      background: var(--bg-elevated);
+      border-color: var(--brass-bright);
+    }
+
+    .lds-btn.active {
+      background: rgba(50, 245, 200, 0.18);
+      border-color: var(--bio-emerald);
+      color: var(--bio-emerald);
+    }
+
+    .lds-btn.primary {
+      background: linear-gradient(180deg, #b87b28 0%, #8c5220 100%);
+      color: #fff8ea;
+      border-color: #f0bc68;
     }
 
     .stat-bar-row {
@@ -529,172 +677,181 @@
       font-weight: 700;
       color: var(--bio-emerald);
     }
+
+    /* Toast Notification Banner */
+    .toast-banner {
+      position: absolute;
+      bottom: 66px;
+      left: 14px;
+      background: rgba(13, 29, 24, 0.96);
+      border: 2px solid var(--bio-emerald);
+      color: var(--text-primary);
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 12px;
+      box-shadow: var(--shadow-elev);
+      z-index: 30;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .toast-banner.visible {
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
 
   <!-- ==========================================================================
-       TOP COMMAND & ANIMAL CROSSING COMPANION HEADER
+       FULL-SCREEN 100VW x 100VH POKÉMON EMERALD OVERWORLD STAGE
        ========================================================================== -->
-  <header class="top-header">
-    <div class="brand-cluster">
-      <div class="brand-crest" title="The Enclave of the 16 Voxel Sanctuary">🏰</div>
-      <div class="brand-titles">
-        <span class="brand-eyebrow">PA-15 // ENCLAVE OF THE 16 &bull; WILLOW AC COMPANION</span>
-        <span class="brand-main" id="biome-title-display">Enclave Crater Valley</span>
-      </div>
+  <main class="overworld-stage">
+    <canvas id="town-canvas"></canvas>
+
+    <!-- 1. Top-Left Hoenn Route Sign (Auto-slides down for 2.5s on Zone/Room Entry) -->
+    <div class="hoenn-route-sign visible" id="hoenn-route-sign">
+      <div class="hoenn-route-title" id="hoenn-route-title">🌿 LITTLEROOT HOMESTEAD GROVE</div>
+      <div class="hoenn-route-sub" id="hoenn-route-sub">District 1/5 &bull; Porch Hearth &bull; Enclave Crater Valley</div>
     </div>
 
-    <div class="header-badges">
-      <span class="pill-badge bio" id="clock-phase-badge">🌅 SOL 1 &bull; DAWN_SHIFT</span>
-      <span class="pill-badge" id="kp-weather-badge">⚡ Kp_exo: 3.8 (Nominal)</span>
-      <span class="pill-badge" id="comfort-score-badge">🏡 Comfort: 100</span>
-      <span class="pill-badge" id="museum-progress-badge">🏛️ Museum: 2/16</span>
-      <span class="pill-badge rupee" id="rupee-satchel-badge">💎 60 RUP</span>
-    </div>
-
-    <div class="header-actions">
-      <div class="header-badges" role="group" aria-label="Simulation Speed">
-        <button class="lds-btn" id="speed-0" type="button" onclick="setSimSpeed(0)">⏸</button>
-        <button class="lds-btn active" id="speed-1" type="button" onclick="setSimSpeed(1)">1x</button>
-        <button class="lds-btn" id="speed-2" type="button" onclick="setSimSpeed(2)">2x</button>
-        <button class="lds-btn" id="speed-4" type="button" onclick="setSimSpeed(4)">4x</button>
-      </div>
-
-      <select class="lds-select" id="biome-select" aria-label="Select Crater Valley Biome" onchange="switchBiome(this.value)">
-        <option value="crater_valley">🌿 Enclave Crater Valley</option>
-        <option value="storm_ridge">❄️ Stormbreaker Frost-Shear Crest</option>
-        <option value="genesis_terraces">🌾 Genesis Agricultural Terraces</option>
-        <option value="spore_glade">🍄 Fern-Gorge Spore Sanctuary</option>
-        <option value="forge_caldera">🔥 Eastern Forge Basalt Caldera</option>
-      </select>
-
-      <select class="lds-select" id="theme-select" aria-label="Select LDS Theme" onchange="setLdsTheme(this.value)">
-        <option value="evergreen-dark">🌲 Evergreen Dark</option>
-        <option value="evergreen-light">☀️ Evergreen Light</option>
-        <option value="high-contrast">⚡ High Contrast</option>
-        <option value="calm">🌊 Weightless Calm</option>
-      </select>
-
-      <button class="lds-btn active" id="btn-willow-mode" type="button" onclick="toggleWillowControlMode()">
-        🎮 Control Willow (WASD/Click)
+    <!-- 2. Top-Center 1-Line Guided Onboarding Tutorial Bar (Steps 1..6) -->
+    <div class="emerald-tutorial-bar" id="emerald-tutorial-bar">
+      <span class="tutorial-step-text" id="tutorial-step-text">
+        🎯 Step 1/6: Walk with [WASD / Arrows] to Mentor Soren &amp; Terra by your porch and press [Z / E / Space]
+      </span>
+      <button class="hud-mini-btn" type="button" onclick="advanceOnboardingTutorial()" title="Execute or advance current tutorial step">
+        Next Step ▶
       </button>
-
-      <button class="lds-btn" id="btn-audio-toggle" type="button" onclick="toggleAudioMuted()" title="ZT-9 Comfort Audio Override">
-        🔇 Audio Off
+      <button class="hud-mini-btn" type="button" onclick="skipOnboardingTutorial()" title="Hide tutorial bar">
+        Skip
       </button>
-
-      <a class="lds-btn primary" href="dispatch_viewer.html" title="Return to Evening Dispatch Newscaster Slate">
-        📰 Evening Dispatch Slate
-      </a>
     </div>
-  </header>
 
-  <!-- ==========================================================================
-       MAIN WORKSPACE: 2.5D VOXEL CANVAS + 4-TAB RIGHT SIDEBAR
-       ========================================================================== -->
-  <div class="workspace-grid">
-    <!-- Interactive 2.5D Voxel Viewport -->
-    <main class="viewport-wrap">
-      <canvas id="town-canvas"></canvas>
+    <!-- 3. Top-Right Clock Badge & Pokémon Emerald [START] Menu Button -->
+    <div class="top-right-cluster">
+      <span class="gba-clock-pill" id="clock-phase-badge">🌅 SOL 1 &bull; DAWN_SHIFT</span>
+      <button class="gba-start-btn" id="btn-gba-start" type="button" onclick="toggleStartMenu()">
+        START ☰
+      </button>
+    </div>
 
-      <!-- Floating Top-Left Camera & Willow 6-Tool Hotbar -->
-      <div class="floating-hud-top">
-        <div class="hud-bar" role="toolbar" aria-label="Camera Controls">
-          <button class="lds-btn" type="button" onclick="centerCamera()">🎯 Center</button>
-          <button class="lds-btn active" type="button" onclick="focusWillow()">🌿 Focus Willow</button>
-          <button class="lds-btn" type="button" onclick="adjustZoom(1.15)">➕</button>
-          <button class="lds-btn" type="button" onclick="adjustZoom(0.87)">➖</button>
-          <button class="lds-btn active" id="btn-toggle-labels" type="button" onclick="toggleLabels()">🏷️ Labels</button>
-          <button class="lds-btn" id="btn-reduced-motion" type="button" onclick="toggleReducedMotion()">🧘 Reduced Motion: Off</button>
+    <!-- 4. Bottom-Left Compact Tool & Rupee Pill -->
+    <div class="bottom-left-pill" id="emerald-bottom-left-pill">
+      <button class="tool-cycle-btn" id="btn-cycle-tool" type="button" onclick="cycleWillowTool()" title="Press Q or 1-6 to switch tools">
+        <span id="equipped-tool-Readout">[Q / 1-6] ⚗️ Copper Trowel</span>
+      </button>
+      <span class="rupee-counter-inline" id="rupee-satchel-badge">💎 60 RUP</span>
+      <button class="hud-mini-btn" id="btn-use-tool" type="button" onclick="interactOrUseTool()">
+        [Z / E] Act
+      </button>
+    </div>
+
+    <!-- 5. Classic GBA Bottom Dialogue Box (Hidden until talking to NPC, sign, or tutorial mentor) -->
+    <section class="gba-dialogue-box" id="gba-dialogue-box" aria-live="polite">
+      <div class="gba-portrait-frame">
+        <img id="gba-dialogue-portrait"
+             src="../../willow-desktop-pet/assets/source_art/turnaround/01_front_0deg_rgba.png"
+             alt="Speaker Portrait"
+             onerror="this.style.display='none';document.getElementById('gba-portrait-fallback').style.display='block';" />
+        <span class="gba-portrait-fallback" id="gba-portrait-fallback">⚗️</span>
+      </div>
+      <div class="gba-dialogue-body">
+        <div class="gba-speaker-line">
+          <span id="gba-speaker-name">Mentor Soren &amp; Terra</span>
+          <span class="pill-badge bio" id="gba-speaker-badge">ISTJ / ISFJ</span>
         </div>
-
-        <div class="hud-bar" id="willow-tool-hotbar" role="toolbar" aria-label="Willow Animal Crossing Tools">
-          <!-- Populated dynamically by JS -->
+        <div class="gba-dialogue-text" id="gba-dialogue-text">
+          Welcome to Littleroot Homestead Grove, Willow! Your 6 Alchemist Tools are calibrated.
         </div>
       </div>
+      <div class="gba-choice-box">
+        <button class="gba-choice-btn" type="button" onclick="handleDialogueChoice('chat')">▶ Chat / Lore</button>
+        <button class="gba-choice-btn" type="button" onclick="handleDialogueChoice('gift')">🎁 Favor / Gift</button>
+        <button class="gba-choice-btn" type="button" onclick="handleDialogueChoice('craft')">🏛️ Donate / Craft</button>
+        <button class="gba-choice-btn" type="button" onclick="closeDialogueBox()">✕ Bye [Esc]</button>
+      </div>
+    </section>
 
-      <!-- Floating Top-Right Willow Context Action Button -->
-      <div class="willow-prompt-pill">
-        <span id="willow-nearby-hint">🌿 Willow ready — Walk with WASD / Click tile</span>
-        <button class="lds-btn primary" id="btn-use-tool" type="button" onclick="useEquippedWillowTool()">
-          [E] Use Equipped Tool
-        </button>
+    <!-- 6. Right-Side Pokémon Emerald START Menu (`[Enter / Esc]` or Top-Right START Button) -->
+    <nav class="gba-start-menu" id="gba-start-menu" aria-label="Pokémon Emerald START Menu">
+      <button class="gba-menu-item" id="menu-btn-dex" type="button" onclick="openDrawerSection('dex')">
+        <span>📖 ENCLAVE DEX</span><span>16/18</span>
+      </button>
+      <button class="gba-menu-item" id="menu-btn-bag" type="button" onclick="openDrawerSection('bag')">
+        <span>🎒 BAG &amp; 6 TOOLS</span><span>6</span>
+      </button>
+      <button class="gba-menu-item" id="menu-btn-diy" type="button" onclick="openDrawerSection('diy')">
+        <span>🔨 DIY &amp; MUSEUM</span><span id="menu-museum-count">2/16</span>
+      </button>
+      <button class="gba-menu-item" id="menu-btn-map" type="button" onclick="openDrawerSection('map')">
+        <span>🗺️ TOWN MAP</span><span>5 Zones</span>
+      </button>
+      <button class="gba-menu-item" id="menu-btn-card" type="button" onclick="openDrawerSection('card')">
+        <span>🪪 WILLOW CARD</span><span id="menu-rup-count">60 RUP</span>
+      </button>
+      <button class="gba-menu-item" id="menu-btn-options" type="button" onclick="openDrawerSection('options')">
+        <span>⚙️ OPTIONS</span><span>LDS</span>
+      </button>
+      <button class="gba-menu-item" type="button" onclick="closeStartMenu()">
+        <span>✕ CLOSE</span><span>[Esc]</span>
+      </button>
+    </nav>
+
+    <!-- 7. On-Demand START Menu Drawer Modal -->
+    <aside class="gba-drawer-modal" id="gba-drawer-modal">
+      <div class="drawer-header">
+        <span class="drawer-title" id="drawer-modal-title">📖 ENCLAVE DEX</span>
+        <button class="hud-mini-btn" type="button" onclick="closeDrawerModal()">✕ Close</button>
       </div>
 
-      <!-- Floating Bottom-Center 5 Constitutional Lore Catalysts -->
-      <div class="floating-catalysts" role="toolbar" aria-label="Constitutional Lore Catalysts">
-        <button class="lds-btn primary" type="button" onclick="triggerCatalyst('feast')">
-          🍲 Hold Nightly Feast (All 16)
-        </button>
-        <button class="lds-btn" type="button" onclick="triggerCatalyst('prank')">
-          📮 Sibling Grid Prank (3-Sol)
-        </button>
-        <button class="lds-btn" type="button" onclick="triggerCatalyst('expedition')">
-          🧭 Midday Expedition
-        </button>
-        <button class="lds-btn" type="button" onclick="triggerCatalyst('solar_flare')">
-          ☄️ Solar-Pair Flare (Kp 7.5)
-        </button>
-        <button class="lds-btn" type="button" onclick="triggerCatalyst('harvest_moot')">
-          🔔 Harvest Moot
-        </button>
-      </div>
-
-      <div class="toast-banner" id="toast-banner">Action Complete</div>
-    </main>
-
-    <!-- 4-Tab Right Sidebar -->
-    <aside class="right-sidebar">
-      <nav class="tab-bar" role="tablist">
-        <button class="tab-btn active" id="tab-btn-lore" type="button" onclick="switchSidebarTab('lore')">📜 Lore &amp; Favors</button>
-        <button class="tab-btn" id="tab-btn-inspector" type="button" onclick="switchSidebarTab('inspector')">🔍 Inspector</button>
-        <button class="tab-btn" id="tab-btn-bag" type="button" onclick="switchSidebarTab('bag')">🎒 Bag &amp; Museum</button>
-        <button class="tab-btn" id="tab-btn-codex" type="button" onclick="switchSidebarTab('codex')">🏰 Town Codex</button>
-      </nav>
-
-      <!-- TAB 1: Live Lore & Daily Villager Favors -->
-      <section class="tab-pane active" id="tab-pane-lore">
-        <div class="panel-card highlight">
-          <div class="section-title">
-            <span>📮 Daily Villager Favor Notice Board</span>
-            <span id="favors-counter-label">0/3 Done</span>
-          </div>
-          <div id="daily-favors-list" style="display:flex;flex-direction:column;gap:7px;"></div>
-        </div>
-
+      <!-- SECTION: ENCLAVE DEX (16 Citizens, 18 Buildings & Whole-Trait OCEAN Inspector) -->
+      <div class="drawer-body" id="drawer-sec-dex" style="display:none;">
+        <div id="inspector-content" style="display:flex;flex-direction:column;gap:10px;"></div>
         <div class="panel-card">
           <div class="section-title">
-            <span>📜 Emergent Enclave Story Feed (PvE Law L11)</span>
-            <span id="feed-count-label">Live</span>
+            <span>👥 16 Canonical Citizens (1-to-1 MBTI Bijection)</span>
+            <span>Click to Inspect &amp; Warp</span>
           </div>
-          <div id="story-feed-list" style="display:flex;flex-direction:column;gap:7px;"></div>
+          <div id="codex-citizens-list" style="display:flex;flex-direction:column;gap:6px;"></div>
         </div>
-      </section>
+        <div class="panel-card">
+          <div class="section-title">
+            <span>🏛️ 18 Colony Landmarks across 5 Hoenn Districts</span>
+            <span>8 Grand Projects + 10 Civic</span>
+          </div>
+          <div id="codex-buildings-list" style="display:flex;flex-direction:column;gap:6px;"></div>
+        </div>
+      </div>
 
-      <!-- TAB 2: Citizen & Building Inspector -->
-      <section class="tab-pane" id="tab-pane-inspector">
-        <div id="inspector-content" style="display:flex;flex-direction:column;gap:10px;"></div>
-      </section>
-
-      <!-- TAB 3: Willow AC Bag, DIY Workbench & Living Atlas Museum -->
-      <section class="tab-pane" id="tab-pane-bag">
+      <!-- SECTION: BAG & 6 TOOLS -->
+      <div class="drawer-body" id="drawer-sec-bag" style="display:none;">
         <div class="panel-card highlight">
+          <div class="section-title">
+            <span>🧰 Willow's 6 Animal Crossing Tools</span>
+            <span>Hotkeys [1-6] or [Q]</span>
+          </div>
+          <div id="willow-tool-hotbar" style="display:flex;flex-wrap:wrap;gap:6px;"></div>
+        </div>
+        <div class="panel-card">
           <div class="section-title">
             <span>🎒 Willow's Alchemist Satchel</span>
             <span id="satchel-rup-inline">💎 60 RUP</span>
           </div>
           <div class="inventory-grid" id="willow-inventory-grid"></div>
         </div>
+      </div>
 
-        <div class="panel-card">
+      <!-- SECTION: DIY & MUSEUM -->
+      <div class="drawer-body" id="drawer-sec-diy" style="display:none;">
+        <div class="panel-card highlight">
           <div class="section-title">
             <span>🪑 DIY Alchemy &amp; Yard Furniture Workbench</span>
-            <span>12 Recipes</span>
+            <span>12 Recipes (SR-02)</span>
           </div>
           <div id="diy-recipes-list" style="display:flex;flex-direction:column;gap:7px;"></div>
         </div>
-
         <div class="panel-card">
           <div class="section-title">
             <span>🏛️ Living Atlas Colony Museum (Dorian &amp; Vex)</span>
@@ -702,47 +859,138 @@
           </div>
           <div id="museum-catalog-list" style="display:flex;flex-direction:column;gap:7px;"></div>
         </div>
-      </section>
+      </div>
 
-      <!-- TAB 4: Town Codex (16 Citizens & 18 Voxel Structures) -->
-      <section class="tab-pane" id="tab-pane-codex">
+      <!-- SECTION: TOWN MAP (5 Districts, 3 Indoor Rooms, Catalysts & Favors) -->
+      <div class="drawer-body" id="drawer-sec-map" style="display:none;">
+        <div class="panel-card highlight">
+          <div class="section-title">
+            <span>🗺️ Hoenn 5-District Overworld Fast Travel</span>
+            <span id="biome-title-display">Littleroot Homestead Grove</span>
+          </div>
+          <div id="emerald-districts-list" style="display:flex;flex-direction:column;gap:6px;"></div>
+        </div>
         <div class="panel-card">
           <div class="section-title">
-            <span>⚖️ Constitutional Sanctuary Covenant</span>
-            <span>Laws L01..L16</span>
+            <span>🚪 3 Enterable Indoor Rooms</span>
+            <span>Step on Door Mat or Click</span>
           </div>
-          <p class="item-sub">
-            The Enclave of the 16 is a strictly PvESteampunk-Cyberpunk sanctuary (Law L11: zero human malice,
-            bond_strength &ge; 0.35). In-world exchanges are non-monetary gifts, favors, and 3-Sol pranks (Law L12),
-            while verified stewardship awards CMY Rupees (<code>RUP</code>) to Willow's Oasis Satchel.
-          </p>
+          <div id="indoor-rooms-list" style="display:flex;flex-direction:column;gap:6px;"></div>
         </div>
-
         <div class="panel-card">
           <div class="section-title">
-            <span>👥 16 Canonical Citizens (1-to-1 MBTI Bijection)</span>
-            <span>Click to Locate</span>
+            <span>⚡ 5 Constitutional Colony Catalysts</span>
+            <span>Law L11..L13</span>
           </div>
-          <div id="codex-citizens-list" style="display:flex;flex-direction:column;gap:6px;"></div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <button class="lds-btn primary" type="button" onclick="triggerCatalyst('feast')">🍲 Nightly Feast (All 16)</button>
+            <button class="lds-btn" type="button" onclick="triggerCatalyst('prank')">📮 3-Sol Prank</button>
+            <button class="lds-btn" type="button" onclick="triggerCatalyst('expedition')">🧭 Midday Expedition</button>
+            <button class="lds-btn" type="button" onclick="triggerCatalyst('solar_flare')">☄️ Solar Flare (Kp 7.5)</button>
+            <button class="lds-btn" type="button" onclick="triggerCatalyst('harvest_moot')">🔔 Harvest Moot</button>
+          </div>
         </div>
-
         <div class="panel-card">
           <div class="section-title">
-            <span>🏛️ 18 Voxel Colony Structures</span>
-            <span>8 Grand Projects + 10 Civic/Homes</span>
+            <span>📮 Daily Villager Favor Notice Board</span>
+            <span id="favors-counter-label">0/3 Done</span>
           </div>
-          <div id="codex-buildings-list" style="display:flex;flex-direction:column;gap:6px;"></div>
+          <div id="daily-favors-list" style="display:flex;flex-direction:column;gap:7px;"></div>
         </div>
-      </section>
+        <div class="panel-card">
+          <div class="section-title">
+            <span>📜 Emergent Enclave Story Feed (PvE Law L11)</span>
+            <span>Live</span>
+          </div>
+          <div id="story-feed-list" style="display:flex;flex-direction:column;gap:7px;"></div>
+        </div>
+      </div>
+
+      <!-- SECTION: WILLOW TRAINER CARD -->
+      <div class="drawer-body" id="drawer-sec-card" style="display:none;">
+        <div class="panel-card highlight">
+          <div class="section-title">
+            <span>🪪 ENCLAVE ALCHEMIST TRAINER CARD</span>
+            <span>ID: enclave_07_willow</span>
+          </div>
+          <div style="display:flex;gap:14px;align-items:center;">
+            <div class="gba-portrait-frame" style="width:84px;height:84px;">
+              <img src="../../willow-desktop-pet/assets/source_art/turnaround/01_front_0deg_rgba.png"
+                   alt="Willow Front Portrait"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+              <span class="gba-portrait-fallback">⚗️</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:4px;">
+              <div style="font-size:15px;font-weight:800;color:var(--brass-bright);">Willow — The Alchemist</div>
+              <div class="item-sub">MBTI: <strong>ISTP (5w6)</strong> &bull; Squad: <strong>The Wilds (Anchor)</strong></div>
+              <div class="item-sub" id="comfort-score-badge">🏡 Homestead Comfort: 100</div>
+              <div class="item-sub" id="museum-progress-badge">🏛️ Museum Archive: 2/16</div>
+              <div class="item-sub" id="kp-weather-badge">⚡ Kp_exo: 3.8 (Nominal)</div>
+            </div>
+          </div>
+          <div class="item-sub" style="margin-top:6px;">
+            <strong>Suite Synergies Active:</strong> <code>SR-02</code> (<code>theme_enclave_first_forge</code>, <code>theme_enclave_living_atlas</code>),
+            <code>SR-04</code> (<code>Porch Hearth</code>, <code>Rain Garden</code>, <code>Flow Hourglass</code>, <code>Alchemist Crucible</code>),
+            <code>SR-05</code> (<code>TIER_1_VERIFIED_EVENT</code>), <code>SR-08</code> (<code>window.ArcadeAssetBridge</code>).
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION: OPTIONS (LDS Themes, Biome, Speed, Comfort & Evening Dispatch Link) -->
+      <div class="drawer-body" id="drawer-sec-options" style="display:none;">
+        <div class="panel-card highlight">
+          <div class="section-title"><span>🎨 Lewis Design System (LDS) Theme</span><span>4 Canonical Packs</span></div>
+          <select class="lds-select" id="theme-select" aria-label="Select LDS Theme" onchange="setLdsTheme(this.value)">
+            <option value="evergreen-dark">🌲 Evergreen Dark</option>
+            <option value="evergreen-light">☀️ Evergreen Light</option>
+            <option value="high-contrast">⚡ High Contrast</option>
+            <option value="calm">🌊 Weightless Calm</option>
+          </select>
+        </div>
+        <div class="panel-card">
+          <div class="section-title"><span>🌦️ Crater Valley Weather &amp; Biome Regime</span><span>engine.magneto_weather</span></div>
+          <select class="lds-select" id="biome-select" aria-label="Select Crater Valley Biome" onchange="switchBiome(this.value)">
+            <option value="crater_valley">🌿 Enclave Crater Valley</option>
+            <option value="storm_ridge">❄️ Stormbreaker Frost-Shear Crest</option>
+            <option value="genesis_terraces">🌾 Genesis Agricultural Terraces</option>
+            <option value="spore_glade">🍄 Fern-Gorge Spore Sanctuary</option>
+            <option value="forge_caldera">🔥 Eastern Forge Basalt Caldera</option>
+          </select>
+        </div>
+        <div class="panel-card">
+          <div class="section-title"><span>⏱️ Simulation Speed &amp; Camera</span><span>GBA Close-Up Viewport</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <button class="lds-btn" id="speed-0" type="button" onclick="setSimSpeed(0)">⏸ Pause</button>
+            <button class="lds-btn active" id="speed-1" type="button" onclick="setSimSpeed(1)">1x</button>
+            <button class="lds-btn" id="speed-2" type="button" onclick="setSimSpeed(2)">2x</button>
+            <button class="lds-btn" id="speed-4" type="button" onclick="setSimSpeed(4)">4x</button>
+            <button class="lds-btn" type="button" onclick="adjustZoom(1.15)">➕ Zoom In</button>
+            <button class="lds-btn" type="button" onclick="adjustZoom(0.87)">➖ Zoom Out</button>
+            <button class="lds-btn active" id="btn-toggle-labels" type="button" onclick="toggleLabels()">🏷️ Labels</button>
+          </div>
+        </div>
+        <div class="panel-card">
+          <div class="section-title"><span>🧘 ZT-9 Comfort Overrides &amp; Navigation</span><span>Offline Safe</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <button class="lds-btn" id="btn-reduced-motion" type="button" onclick="toggleReducedMotion()">🧘 Reduced Motion: Off</button>
+            <button class="lds-btn" id="btn-audio-toggle" type="button" onclick="toggleAudioMuted()">🔇 Audio Off</button>
+            <button class="lds-btn active" id="btn-willow-mode" type="button" onclick="toggleWillowControlMode()">🎮 Control Willow</button>
+            <a class="lds-btn primary" href="dispatch_viewer.html">📰 Evening Dispatch Slate</a>
+          </div>
+        </div>
+      </div>
     </aside>
-  </div>
+
+    <div class="toast-banner" id="toast-banner">Action Complete</div>
+  </main>
 
   <!-- ==========================================================================
-       DETERMINISTIC 2.5D VOXEL ENGINE & WILLOW ANIMAL CROSSING LOGIC
+       POKÉMON EMERALD (GEN-3 HOENN) 5-DISTRICT ENGINE & WILLOW COMPANION LOGIC
        ========================================================================== -->
   <script src="./enclave_art_lighting.js"></script>
   <script>
     const GRID_SIZE = 48;
+    const TILE_SIZE = 48; // Close-up GBA ~15x10 tile viewport centered on Willow
     const DAY_PHASES = ["DAWN_SHIFT", "MIDDAY_EXPEDITION", "DUSK_CRAFT", "THE_FEAST"];
     const PHASE_ICONS = {
       DAWN_SHIFT: "🌅",
@@ -762,107 +1010,296 @@
       crater_valley: {
         name: "Enclave Crater Valley",
         hearthBiome: "Porch Hearth",
-        grass: ["#27543a", "#2d5f42", "#224932"],
-        water: "#143548",
-        waterSparkle: "#32f5c8",
-        road: "#7c603f",
-        plaza: "#a87e43",
-        foliage: ["#22784b", "#2e965e", "#44b878"],
+        grass: ["#2e7d47", "#368c52", "#276b3d"],
+        tuft: "#4ce07a",
+        water: "#18688c",
+        waterSparkle: "#70f8ff",
+        road: "#d4b475",
+        roadEdge: "#a6854b",
+        plaza: "#c89b58",
+        foliage: ["#1e6b3e", "#2b8c52", "#47bf73"],
         kpBase: 3.8
       },
       storm_ridge: {
         name: "Stormbreaker Frost-Shear Crest",
         hearthBiome: "Flow Hourglass",
         grass: ["#435969", "#4f687a", "#384b59"],
+        tuft: "#8be0ff",
         water: "#172d42",
         waterSparkle: "#70e4ff",
-        road: "#6c7a87",
-        plaza: "#8ba0b2",
+        road: "#8fa0b0",
+        roadEdge: "#647482",
+        plaza: "#9eb2c4",
         foliage: ["#5c8ca8", "#74a8c4", "#9be0ff"],
         kpBase: 5.6
       },
       genesis_terraces: {
         name: "Genesis Agricultural Terraces",
         hearthBiome: "Rain Garden",
-        grass: ["#46632d", "#527336", "#3b5425"],
-        water: "#1a464e",
+        grass: ["#467830", "#548a3a", "#3b6627"],
+        tuft: "#9ee858",
+        water: "#1a5c66",
         waterSparkle: "#52ffd8",
-        road: "#8f6838",
-        plaza: "#c28e42",
+        road: "#d8aa64",
+        roadEdge: "#a37838",
+        plaza: "#cfa052",
         foliage: ["#588c28", "#72ab38", "#9cd14f"],
         kpBase: 3.2
       },
       spore_glade: {
         name: "Fern-Gorge Spore Sanctuary",
         hearthBiome: "Rain Garden",
-        grass: ["#253e47", "#2d4b56", "#1e333b"],
-        water: "#1d2742",
+        grass: ["#24525c", "#2d626e", "#1d424a"],
+        tuft: "#68f7d4",
+        water: "#1c3866",
         waterSparkle: "#b066ff",
-        road: "#635046",
-        plaza: "#856b5c",
+        road: "#9e8676",
+        roadEdge: "#6e5a4c",
+        plaza: "#8f7565",
         foliage: ["#228b78", "#34b89a", "#78f5d4"],
         kpBase: 4.4
       },
       forge_caldera: {
         name: "Eastern Forge Basalt Caldera",
         hearthBiome: "Alchemist Crucible",
-        grass: ["#353236", "#3f3b40", "#2b282b"],
-        water: "#3d2018",
-        waterSparkle: "#ff9838",
-        road: "#824c1d",
-        plaza: "#ba7d2c",
+        grass: ["#453f47", "#524b54", "#38333a"],
+        tuft: "#ff9838",
+        water: "#52261b",
+        waterSparkle: "#ffae42",
+        road: "#a86832",
+        roadEdge: "#75441c",
+        plaza: "#c88732",
         foliage: ["#6e5838", "#8f6e40", "#c89648"],
         kpBase: 5.1
       }
     };
 
+    // 5 Pokémon Emerald Overworld Districts (Mapping all 18 Buildings & 16 Citizens cleanly)
+    const EMERALD_DISTRICTS = {
+      zone_01_homestead_grove: {
+        id: "zone_01_homestead_grove",
+        banner: "🌿 LITTLEROOT HOMESTEAD GROVE",
+        name: "Littleroot Homestead & Genesis Grove",
+        biomeId: "crater_valley",
+        hearthBiome: "Porch Hearth",
+        bounds: { x1: 4, y1: 20, x2: 20, y2: 34 },
+        spawn: { x: 16, y: 32 },
+        connections: { east: "zone_02_hearth_plaza", south: "zone_04_ferro_pier", north: "zone_03_atlas_terrace" }
+      },
+      zone_02_hearth_plaza: {
+        id: "zone_02_hearth_plaza",
+        banner: "🍲 MAUVILLE HEARTH PLAZA",
+        name: "Mauville Hearth & Metabolic Plaza",
+        biomeId: "crater_valley",
+        hearthBiome: "Porch Hearth",
+        bounds: { x1: 16, y1: 13, x2: 30, y2: 24 },
+        spawn: { x: 22, y: 20 },
+        connections: { west: "zone_01_homestead_grove", north: "zone_03_atlas_terrace", east: "zone_05_forge_summit", south: "zone_04_ferro_pier" }
+      },
+      zone_03_atlas_terrace: {
+        id: "zone_03_atlas_terrace",
+        banner: "🏛️ LILYCOVE ATLAS TERRACE",
+        name: "Lilycove Living Atlas & Mind Terrace",
+        biomeId: "genesis_terraces",
+        hearthBiome: "Flow Hourglass",
+        bounds: { x1: 6, y1: 6, x2: 36, y2: 28 },
+        spawn: { x: 32, y: 28 },
+        connections: { south: "zone_02_hearth_plaza", west: "zone_01_homestead_grove", east: "zone_05_forge_summit" }
+      },
+      zone_04_ferro_pier: {
+        id: "zone_04_ferro_pier",
+        banner: "🌊 SLATEPORT FERROFLUID PIER",
+        name: "Slateport Ferrofluid Basin Pier & Sanctuary",
+        biomeId: "spore_glade",
+        hearthBiome: "Rain Garden",
+        bounds: { x1: 5, y1: 30, x2: 30, y2: 40 },
+        spawn: { x: 23, y: 31 },
+        connections: { north: "zone_01_homestead_grove", east: "zone_02_hearth_plaza" }
+      },
+      zone_05_forge_summit: {
+        id: "zone_05_forge_summit",
+        banner: "🌋 LAVARIDGE FORGE SUMMIT",
+        name: "Lavaridge First Forge & Stormbreaker Summit",
+        biomeId: "forge_caldera",
+        hearthBiome: "Alchemist Crucible",
+        bounds: { x1: 28, y1: 5, x2: 43, y2: 20 },
+        spawn: { x: 31, y: 14 },
+        connections: { west: "zone_02_hearth_plaza", north: "zone_03_atlas_terrace" }
+      }
+    };
+
+    // 3 Enterable Indoor Rooms
+    const INDOOR_ROOMS = {
+      room_willow_home: {
+        id: "room_willow_home",
+        banner: "🏡 WILLOW'S ALCHEMIST LAB",
+        name: "Willow's Alchemist Homestead Interior",
+        parentZoneId: "zone_01_homestead_grove",
+        buildingId: "bldg_willow_homestead",
+        floorColor: "#3d2e22",
+        rugColor: "#1d7a5f",
+        exitX: 18,
+        exitY: 32,
+        props: [
+          { icon: "⚗️", label: "Copper Alembic Workbench", dx: -2, dy: -2 },
+          { icon: "🪞", label: "Steampunk Wardrobe Mirror", dx: 2, dy: -2 },
+          { icon: "🍷", label: "Blackberry Cordial Gourd", dx: -2, dy: 0 },
+          { icon: "🔥", label: "Porch Hearth Fireplace", dx: 2, dy: 0 }
+        ]
+      },
+      room_hearth_galley: {
+        id: "room_hearth_galley",
+        banner: "🍲 RYN & ELARA'S HEARTH GALLEY",
+        name: "The Hearth & Metabolic Galley Interior",
+        parentZoneId: "zone_02_hearth_plaza",
+        buildingId: "proj_08_hearth_metabolic_engine",
+        floorColor: "#422b1d",
+        rugColor: "#b84a27",
+        exitX: 23,
+        exitY: 20,
+        props: [
+          { icon: "🍞", label: "Iron-Wheat Steam Oven", dx: -2, dy: -2 },
+          { icon: "🍲", label: "Long Feast Convergence Table", dx: 0, dy: -1 },
+          { icon: "🩺", label: "Elara's Herbal Apothecary", dx: 2, dy: -2 },
+          { icon: "🫖", label: "Whistling Kettle Gauge", dx: 2, dy: 0 }
+        ]
+      },
+      room_atlas_museum: {
+        id: "room_atlas_museum",
+        banner: "🏛️ LIVING ATLAS MUSEUM HALL",
+        name: "Living Atlas Observatory & Colony Museum Hall",
+        parentZoneId: "zone_03_atlas_terrace",
+        buildingId: "proj_07_living_atlas",
+        floorColor: "#243447",
+        rugColor: "#2563eb",
+        exitX: 33,
+        exitY: 29,
+        props: [
+          { icon: "💎", label: "Captured Geodes Wing", dx: -2, dy: -2 },
+          { icon: "🦋", label: "Magneto-Critter Vivarium", dx: 2, dy: -2 },
+          { icon: "🐚", label: "Ferro-Basin Aquarium", dx: -2, dy: 0 },
+          { icon: "🧭", label: "Concordance Astrolabe", dx: 2, dy: 0 }
+        ]
+      }
+    };
+
+    // 6-Step Guided Onboarding Tutorial
+    const TUTORIAL_STEPS = [
+      {
+        step: 1,
+        id: "STEP_1_MEET_SOREN",
+        zoneId: "zone_01_homestead_grove",
+        targetX: 15,
+        targetY: 29,
+        prompt: "🎯 Step 1/6: Walk with [WASD / Arrows] to Mentor Soren & Terra by your porch and press [Z / E / Space]",
+        speaker: "Mentor Soren (Silas) & Terra",
+        badge: "ISTJ / ISFJ",
+        dialogue: "Welcome to Littleroot Homestead Grove, Willow! We calibrated your 6 Alchemist Tools. Equip [1] Copper Trowel and unearth that glowing ✦ Bismuth Geode Fissure!"
+      },
+      {
+        step: 2,
+        id: "STEP_2_DIG_GEODE",
+        zoneId: "zone_01_homestead_grove",
+        targetX: 18,
+        targetY: 33,
+        prompt: "🎯 Step 2/6: Equip [1] Copper Trowel, walk to the glowing ✦ Geode Fissure, and press [Z / E / Space]",
+        speaker: "Willow (The Alchemist)",
+        badge: "ISTP",
+        dialogue: "Unearthed a Hopper-Crystal Bismuth Geode and an aromatic Cave-Truffle! Next, press [4] for the Distilled Rainwater Can and irrigate the 🌱 Iron-Wheat sprouts."
+      },
+      {
+        step: 3,
+        id: "STEP_3_WATER_SPROUT",
+        zoneId: "zone_01_homestead_grove",
+        targetX: 12,
+        targetY: 29,
+        prompt: "🎯 Step 3/6: Press [4] for Distilled Rainwater Can and water the 🌱 Iron-Wheat Plot with [Z / E / Space]",
+        speaker: "Terra (The Gardener)",
+        badge: "ISFJ",
+        dialogue: "The Crystalline Iron-Wheat is singing in 432 Hz harmony! Look—an Aurora Prism-Moth just fluttered into the spore-grass nearby!"
+      },
+      {
+        step: 4,
+        id: "STEP_4_CATCH_MOTH",
+        zoneId: "zone_01_homestead_grove",
+        targetX: 15,
+        targetY: 27,
+        prompt: "🎯 Step 4/6: Press [2] for Magnetotropic Bug Net and catch the fluttering 🦋 Prism-Moth with [Z / E / Space]",
+        speaker: "Zara (The Beastmaster)",
+        badge: "ISFP",
+        dialogue: "Gentle sweep! You cataloged an Aurora Prism-Moth without disturbing its magnetite antennae. Now follow the path to Mauville Hearth Plaza to greet Chef Ryn!"
+      },
+      {
+        step: 5,
+        id: "STEP_5_PLAZA_MEET_RYN",
+        zoneId: "zone_02_hearth_plaza",
+        targetX: 22,
+        targetY: 20,
+        prompt: "🎯 Step 5/6: Walk to Chef Ryn at Mauville Hearth Plaza, equip [6] Gift Satchel, and press [Z / E / Space]",
+        speaker: "Ryn (The Chef)",
+        badge: "ESTJ",
+        dialogue: "Hot Iron-Wheat sourdough coming right up! Thanks for the herbal tonic, Willow! Head to the Living Atlas Museum to donate your specimen!"
+      },
+      {
+        step: 6,
+        id: "STEP_6_MUSEUM_OR_HOMESTEAD",
+        zoneId: "zone_03_atlas_terrace",
+        targetX: 33,
+        targetY: 29,
+        prompt: "🎯 Step 6/6: Donate your specimen at the Living Atlas Museum or open [START] -> DIY & Museum!",
+        speaker: "Dorian & Vex (Living Atlas)",
+        badge: "ESFP / ENTP",
+        dialogue: "Magnificent! Your specimen is archived in the Living Atlas Concordance. You now have full free-roam across all 5 Hoenn Districts and 3 Indoor Rooms!"
+      }
+    ];
+
     const WILLOW_TOOLS = [
-      { id: "trowel", slot: 1, icon: "⚗️", label: "Trowel", name: "Copper Trowel & Chelation Flask", action: "forage_dig" },
+      { id: "trowel", slot: 1, icon: "⚗️", label: "Copper Trowel", name: "Copper Trowel & Chelation Flask", action: "forage_dig" },
       { id: "bug_net", slot: 2, icon: "🦋", label: "Bug Net", name: "Magnetotropic Bug Net", action: "catch_critter" },
       { id: "dip_rod", slot: 3, icon: "🎣", label: "Dip-Rod", name: "Ferrofluid Dip-Rod", action: "catch_fish" },
       { id: "watering_can", slot: 4, icon: "💧", label: "Water Can", name: "Distilled Rainwater Can", action: "water_crop" },
       { id: "tinker_wrench", slot: 5, icon: "🪑", label: "Decorate", name: "Tinker Wrench & Yard Decorator", action: "place_decor" },
-      { id: "gift_satchel", slot: 6, icon: "🎁", label: "Gift/Favor", name: "Favor & Gift Satchel", action: "gift_citizen" }
+      { id: "gift_satchel", slot: 6, icon: "🎁", label: "Gift Satchel", name: "Favor & Gift Satchel", action: "gift_citizen" }
     ];
 
     const BUILDINGS = [
-      { id: "proj_01_first_forge", name: "The First Forge", category: "grand_project", squad: "The Forge", hearthBiome: "Alchemist Crucible", x: 30, y: 9, w: 5, d: 4, h: 4, wall: "#6e473b", roof: "#c86428", trim: "#e6ac55", icon: "⚒️", progress: 54.0, residents: ["enclave_03_silas", "enclave_04_leo"], desc: "Induction smelter & bismuth-bronze busbar foundry anchored by Silas and Leo." },
-      { id: "proj_02_stormbreaker", name: "The Stormbreaker Spire", category: "grand_project", squad: "The Forge", hearthBiome: "Flow Hourglass", x: 38, y: 6, w: 4, d: 4, h: 6, wall: "#4f6272", roof: "#32a8d4", trim: "#32f5c8", icon: "⚡", progress: 47.5, residents: ["enclave_01_hector", "enclave_02_jane"], desc: "High-ridge copper lightning harvester & Babbage fluid-loom weather tower." },
-      { id: "proj_03_sanctuary", name: "The Sanctuary Paddock", category: "grand_project", squad: "The Wilds", hearthBiome: "Rain Garden", x: 6, y: 33, w: 5, d: 4, h: 3, wall: "#4b6b48", roof: "#2e8b57", trim: "#8be898", icon: "🦌", progress: 42.0, residents: ["enclave_05_kaio", "enclave_06_zara"], desc: "Mutualistic magnetotropic fauna refuge & acoustic-shielded grove." },
-      { id: "proj_04_genesis_garden", name: "The Genesis Garden Conservatory", category: "grand_project", squad: "The Wilds", hearthBiome: "Rain Garden", x: 11, y: 24, w: 5, d: 4, h: 4, wall: "#587844", roof: "#3cb371", trim: "#e6ac55", icon: "🌿", progress: 61.5, residents: ["enclave_07_willow", "enclave_08_terra"], desc: "Chelated piezo-mycorrhizal greenhouse & Crystalline Iron-Wheat terrace." },
-      { id: "proj_05_simulacrum", name: "The Simulacrum Rotunda", category: "grand_project", squad: "The Mind", hearthBiome: "Flow Hourglass", x: 8, y: 8, w: 5, d: 4, h: 5, wall: "#484c6c", roof: "#6a5acd", trim: "#32f5c8", icon: "🔮", progress: 49.0, residents: ["enclave_09_orion", "enclave_10_isla"], desc: "Thirty-two-ring brass Helmholtz ferrofluid phase-space observatory." },
-      { id: "proj_06_lyceum_of_the_mind", name: "The Lyceum of the Mind", category: "grand_project", squad: "The Mind", hearthBiome: "Porch Hearth", x: 16, y: 8, w: 4, d: 4, h: 4, wall: "#5d5370", roof: "#8a6bbd", trim: "#f4ead5", icon: "🧠", progress: 58.0, residents: ["enclave_11_kenna", "enclave_12_elias"], desc: "Acoustic-somatic grounding sanctuary & circadian neuro-harmonics hall." },
-      { id: "proj_07_living_atlas", name: "The Living Atlas Observatory & Colony Museum", category: "grand_project", squad: "The Hub", hearthBiome: "Flow Hourglass", x: 31, y: 24, w: 5, d: 4, h: 5, wall: "#6c563e", roof: "#b8860b", trim: "#32f5c8", icon: "🏛️", progress: 44.5, residents: ["enclave_14_vex", "enclave_15_dorian"], desc: "Colony Museum of Geodes, Critters, Ferro-Fish & Mycelial Concordance Archives." },
-      { id: "proj_08_hearth_metabolic_engine", name: "The Hearth & Metabolic Galley", category: "grand_project", squad: "The Hub", hearthBiome: "Porch Hearth", x: 21, y: 15, w: 6, d: 4, h: 4, wall: "#8c5220", roof: "#d2691e", trim: "#ffcf66", icon: "🍲", progress: 66.0, residents: ["enclave_13_ryn", "enclave_16_elara"], desc: "Central Main Bus dining hall where all 16 citizens gather nightly for The Feast." },
-      { id: "bldg_willow_homestead", name: "Willow's Alchemist Homestead & Custom Yard", category: "ac_player_home", squad: "The Wilds", hearthBiome: "Alchemist Crucible", x: 16, y: 28, w: 4, d: 4, h: 4, wall: "#3c6e58", roof: "#26a678", trim: "#ffd866", icon: "🏡", progress: 100.0, residents: ["enclave_07_willow"], desc: "Willow's cozy copper-glass cottage, fractional alembic workbench, wardrobe mirror & custom yard." },
-      { id: "bldg_sibling_post", name: "Sibling Grid Pneumatic Post & Notice Board", category: "ac_civic", squad: "The Hub", hearthBiome: "Porch Hearth", x: 27, y: 19, w: 3, d: 3, h: 3, wall: "#705842", roof: "#cd853f", trim: "#32f5c8", icon: "📮", progress: 100.0, residents: ["enclave_05_kaio", "enclave_15_dorian"], desc: "Daily Villager Favor Bulletin Board, pneumatic letters & 3-Sol prank dispatch." },
-      { id: "bldg_curio_pavilion", name: "Aegis Outfitters & Curio Pavilion", category: "ac_civic", squad: "The Hub", hearthBiome: "Porch Hearth", x: 17, y: 19, w: 3, d: 3, h: 3, wall: "#64486e", roof: "#ba55d3", trim: "#ffd866", icon: "🎀", progress: 100.0, residents: ["enclave_09_orion", "enclave_15_dorian"], desc: "Steampunk-botanical wardrobe showcase, DIY furniture exchange & CMY Rupee Satchel counter." },
-      { id: "bldg_ferro_pier", name: "Ferrofluid Basin Pier & Tide Dock", category: "ac_civic", squad: "The Wilds", hearthBiome: "Rain Garden", x: 22, y: 32, w: 4, d: 3, h: 2, wall: "#546875", roof: "#2f9fb8", trim: "#32f5c8", icon: "🎣", progress: 100.0, residents: ["enclave_06_zara", "enclave_07_willow"], desc: "Brass-railed angling pier jutting over the colloidal magnetite river channel." },
-      { id: "bldg_forge_lodge", name: "Forge Anchor Lodge", category: "residential", squad: "The Forge", hearthBiome: "Alchemist Crucible", x: 37, y: 14, w: 4, d: 3, h: 3, wall: "#7a5244", roof: "#b8572c", trim: "#e6ac55", icon: "🏠", progress: 100.0, residents: ["enclave_03_silas", "enclave_04_leo"], desc: "Warm hearth-heated basalt cottage with micrometer tool racks for Silas and Leo." },
-      { id: "bldg_wilds_nook", name: "Wilds Botanical Nook", category: "residential", squad: "The Wilds", hearthBiome: "Rain Garden", x: 6, y: 26, w: 4, d: 3, h: 3, wall: "#4f6d4a", roof: "#439960", trim: "#f4ead5", icon: "🛖", progress: 100.0, residents: ["enclave_06_zara", "enclave_08_terra"], desc: "Moss-roofed timber cottage hung with drying heirloom seed braids." },
-      { id: "bldg_mind_loft", name: "Mind Contemplative Loft", category: "residential", squad: "The Mind", hearthBiome: "Flow Hourglass", x: 7, y: 15, w: 4, d: 3, h: 3, wall: "#545875", roof: "#5f6caf", trim: "#32f5c8", icon: "🏘️", progress: 100.0, residents: ["enclave_11_kenna", "enclave_12_elias"], desc: "Quiet cedar-and-brass study overlooking the upper river bend for Kenna and Elias." },
-      { id: "bldg_hub_gables", name: "Hub Chronicler Gables", category: "residential", squad: "The Hub", hearthBiome: "Porch Hearth", x: 38, y: 25, w: 4, d: 3, h: 3, wall: "#755a44", roof: "#c87d32", trim: "#f4ead5", icon: "🏘️", progress: 100.0, residents: ["enclave_15_dorian", "enclave_16_elara"], desc: "Gabled apothecary and bardic archive cottage shared by Elara and Dorian." },
-      { id: "bldg_prodigy_east", name: "Prodigy Quarters East", category: "residential", squad: "The Forge", hearthBiome: "Alchemist Crucible", x: 31, y: 15, w: 4, d: 3, h: 3, wall: "#645852", roof: "#d47a38", trim: "#32f5c8", icon: "⛺", progress: 100.0, residents: ["enclave_01_hector", "enclave_02_jane", "enclave_05_kaio", "enclave_13_ryn"], desc: "Bunkhouse loft humming with wind-glider harnesses and Babbage punch-cards." },
-      { id: "bldg_prodigy_west", name: "Prodigy Quarters West", category: "residential", squad: "The Mind", hearthBiome: "Flow Hourglass", x: 13, y: 15, w: 3, d: 3, h: 3, wall: "#58526e", roof: "#8862b8", trim: "#ffd866", icon: "⛺", progress: 100.0, residents: ["enclave_09_orion", "enclave_10_isla", "enclave_14_vex"], desc: "Skylit studio dormitory stacked with star-charts and cymatic tuning forks." }
+      { id: "proj_01_first_forge", zoneId: "zone_05_forge_summit", name: "The First Forge", category: "grand_project", squad: "The Forge", hearthBiome: "Alchemist Crucible", x: 30, y: 9, w: 5, d: 4, h: 4, wall: "#4a3531", roof: "#b84a1e", trim: "#ffd866", icon: "⚒️", progress: 54.0, residents: ["enclave_03_silas", "enclave_04_leo"], desc: "Obsidian-and-gold induction smelter & bismuth-bronze busbar foundry anchored by Silas and Leo." },
+      { id: "proj_02_stormbreaker", zoneId: "zone_05_forge_summit", name: "The Stormbreaker Spire", category: "grand_project", squad: "The Forge", hearthBiome: "Flow Hourglass", x: 38, y: 6, w: 4, d: 4, h: 6, wall: "#4f6272", roof: "#2980b9", trim: "#32f5c8", icon: "⚡", progress: 47.5, residents: ["enclave_01_hector", "enclave_02_jane"], desc: "High-ridge copper lightning harvester & Babbage fluid-loom weather tower." },
+      { id: "proj_03_sanctuary", zoneId: "zone_04_ferro_pier", name: "The Sanctuary Paddock", category: "grand_project", squad: "The Wilds", hearthBiome: "Rain Garden", x: 6, y: 33, w: 5, d: 4, h: 3, wall: "#4b6b48", roof: "#2e8b57", trim: "#8be898", icon: "🦌", progress: 42.0, residents: ["enclave_05_kaio", "enclave_06_zara"], desc: "Mutualistic magnetotropic fauna refuge & acoustic-shielded grove." },
+      { id: "proj_04_genesis_garden", zoneId: "zone_01_homestead_grove", name: "The Genesis Garden Conservatory", category: "grand_project", squad: "The Wilds", hearthBiome: "Rain Garden", x: 10, y: 23, w: 5, d: 4, h: 4, wall: "#587844", roof: "#27ae60", trim: "#e6ac55", icon: "🌿", progress: 61.5, residents: ["enclave_07_willow", "enclave_08_terra"], desc: "Chelated piezo-mycorrhizal greenhouse & Crystalline Iron-Wheat terrace." },
+      { id: "proj_05_simulacrum", zoneId: "zone_03_atlas_terrace", name: "The Simulacrum Rotunda", category: "grand_project", squad: "The Mind", hearthBiome: "Flow Hourglass", x: 8, y: 8, w: 5, d: 4, h: 5, wall: "#484c6c", roof: "#5b48b8", trim: "#32f5c8", icon: "🔮", progress: 49.0, residents: ["enclave_09_orion", "enclave_10_isla"], desc: "Thirty-two-ring brass Helmholtz ferrofluid phase-space observatory." },
+      { id: "proj_06_lyceum_of_the_mind", zoneId: "zone_03_atlas_terrace", name: "The Lyceum of the Mind", category: "grand_project", squad: "The Mind", hearthBiome: "Porch Hearth", x: 16, y: 8, w: 4, d: 4, h: 4, wall: "#5d5370", roof: "#7d5ab8", trim: "#f4ead5", icon: "🧠", progress: 58.0, residents: ["enclave_11_kenna", "enclave_12_elias"], desc: "Acoustic-somatic grounding sanctuary & circadian neuro-harmonics hall." },
+      { id: "proj_07_living_atlas", zoneId: "zone_03_atlas_terrace", roomId: "room_atlas_museum", name: "The Living Atlas Observatory & Colony Museum", category: "grand_project", squad: "The Hub", hearthBiome: "Flow Hourglass", x: 31, y: 24, w: 5, d: 4, h: 5, wall: "#d8dce3", roof: "#1e5aa8", trim: "#ffd866", icon: "🏛️", progress: 44.5, residents: ["enclave_14_vex", "enclave_15_dorian"], desc: "Sapphire-roofed Hoenn Colony Museum of Geodes, Critters, Ferro-Fish & Mycelial Concordance Archives." },
+      { id: "proj_08_hearth_metabolic_engine", zoneId: "zone_02_hearth_plaza", roomId: "room_hearth_galley", name: "The Hearth & Metabolic Galley", category: "grand_project", squad: "The Hub", hearthBiome: "Porch Hearth", x: 21, y: 15, w: 6, d: 4, h: 4, wall: "#f2ece1", roof: "#c93b2b", trim: "#ffcf66", icon: "🍲", progress: 66.0, residents: ["enclave_13_ryn", "enclave_16_elara"], desc: "Crimson Poké-Center style dining hall where all 16 citizens gather nightly for The Feast." },
+      { id: "bldg_willow_homestead", zoneId: "zone_01_homestead_grove", roomId: "room_willow_home", name: "Willow's Alchemist Homestead & Custom Yard", category: "ac_player_home", squad: "The Wilds", hearthBiome: "Alchemist Crucible", x: 16, y: 27, w: 4, d: 4, h: 4, wall: "#e8e2d5", roof: "#1b9e68", trim: "#ffd866", icon: "🏡", progress: 100.0, residents: ["enclave_07_willow"], desc: "Willow's emerald-roofed Hoenn cottage, fractional alembic workbench, wardrobe mirror & custom yard." },
+      { id: "bldg_sibling_post", zoneId: "zone_02_hearth_plaza", name: "Sibling Grid Pneumatic Post & Notice Board", category: "ac_civic", squad: "The Hub", hearthBiome: "Porch Hearth", x: 27, y: 19, w: 3, d: 3, h: 3, wall: "#705842", roof: "#cd853f", trim: "#32f5c8", icon: "📮", progress: 100.0, residents: ["enclave_05_kaio", "enclave_15_dorian"], desc: "Daily Villager Favor Bulletin Board, pneumatic letters & 3-Sol prank dispatch." },
+      { id: "bldg_curio_pavilion", zoneId: "zone_02_hearth_plaza", name: "Aegis Outfitters & Curio Pavilion", category: "ac_civic", squad: "The Hub", hearthBiome: "Porch Hearth", x: 17, y: 19, w: 3, d: 3, h: 3, wall: "#64486e", roof: "#ba55d3", trim: "#ffd866", icon: "🎀", progress: 100.0, residents: ["enclave_09_orion", "enclave_15_dorian"], desc: "Steampunk-botanical wardrobe showcase, DIY furniture exchange & CMY Rupee Satchel counter." },
+      { id: "bldg_ferro_pier", zoneId: "zone_04_ferro_pier", name: "Ferrofluid Basin Pier & Tide Dock", category: "ac_civic", squad: "The Wilds", hearthBiome: "Rain Garden", x: 22, y: 32, w: 4, d: 3, h: 2, wall: "#546875", roof: "#2f9fb8", trim: "#32f5c8", icon: "🎣", progress: 100.0, residents: ["enclave_06_zara", "enclave_07_willow"], desc: "Brass-railed angling pier jutting over the colloidal magnetite river channel." },
+      { id: "bldg_forge_lodge", zoneId: "zone_05_forge_summit", name: "Forge Anchor Lodge", category: "residential", squad: "The Forge", hearthBiome: "Alchemist Crucible", x: 37, y: 14, w: 4, d: 3, h: 3, wall: "#7a5244", roof: "#b8572c", trim: "#e6ac55", icon: "🏠", progress: 100.0, residents: ["enclave_03_silas", "enclave_04_leo"], desc: "Warm hearth-heated basalt cottage with micrometer tool racks for Silas and Leo." },
+      { id: "bldg_wilds_nook", zoneId: "zone_01_homestead_grove", name: "Wilds Botanical Nook", category: "residential", squad: "The Wilds", hearthBiome: "Rain Garden", x: 5, y: 26, w: 4, d: 3, h: 3, wall: "#4f6d4a", roof: "#439960", trim: "#f4ead5", icon: "🛖", progress: 100.0, residents: ["enclave_06_zara", "enclave_08_terra"], desc: "Moss-roofed timber cottage hung with drying heirloom seed braids." },
+      { id: "bldg_mind_loft", zoneId: "zone_03_atlas_terrace", name: "Mind Contemplative Loft", category: "residential", squad: "The Mind", hearthBiome: "Flow Hourglass", x: 7, y: 15, w: 4, d: 3, h: 3, wall: "#545875", roof: "#5f6caf", trim: "#32f5c8", icon: "🏘️", progress: 100.0, residents: ["enclave_11_kenna", "enclave_12_elias"], desc: "Quiet cedar-and-brass study overlooking the upper river bend for Kenna and Elias." },
+      { id: "bldg_hub_gables", zoneId: "zone_02_hearth_plaza", name: "Hub Chronicler Gables", category: "residential", squad: "The Hub", hearthBiome: "Porch Hearth", x: 38, y: 25, w: 4, d: 3, h: 3, wall: "#755a44", roof: "#c87d32", trim: "#f4ead5", icon: "🏘️", progress: 100.0, residents: ["enclave_15_dorian", "enclave_16_elara"], desc: "Gabled apothecary and bardic archive cottage shared by Elara and Dorian." },
+      { id: "bldg_prodigy_east", zoneId: "zone_05_forge_summit", name: "Prodigy Quarters East", category: "residential", squad: "The Forge", hearthBiome: "Alchemist Crucible", x: 31, y: 15, w: 4, d: 3, h: 3, wall: "#645852", roof: "#d47a38", trim: "#32f5c8", icon: "⛺", progress: 100.0, residents: ["enclave_01_hector", "enclave_02_jane", "enclave_05_kaio", "enclave_13_ryn"], desc: "Bunkhouse loft humming with wind-glider harnesses and Babbage punch-cards." },
+      { id: "bldg_prodigy_west", zoneId: "zone_03_atlas_terrace", name: "Prodigy Quarters West", category: "residential", squad: "The Mind", hearthBiome: "Flow Hourglass", x: 13, y: 15, w: 3, d: 3, h: 3, wall: "#58526e", roof: "#8862b8", trim: "#ffd866", icon: "⛺", progress: 100.0, residents: ["enclave_09_orion", "enclave_10_isla", "enclave_14_vex"], desc: "Skylit studio dormitory stacked with star-charts and cymatic tuning forks." }
     ];
 
     const CITIZENS_INIT = [
-      { id: "enclave_01_hector", name: "Hector", epithet: "The Stormbreaker", squad: "The Forge", role: "Prodigy", age: 18, mbti: "ESTP", enneagram: "7w8", project: "The Stormbreaker", icon: "⚡", shirt: "#d35400", home: "proj_02_stormbreaker", ocean: [0.42, 0.25, 0.90, 0.40, 0.15], stress: 0.24, bond: 0.84, polarity: "Virgo (The Perfectionist)", quote: "The wind-shear on the upper mast is singing in B-flat—hand me that copper piton!" },
-      { id: "enclave_02_jane", name: "Jane", epithet: "The Coder & Meteorologist", squad: "The Forge", role: "Prodigy", age: 18, mbti: "INTP", enneagram: "5w4", project: "The Stormbreaker", icon: "🧮", shirt: "#2980b9", home: "proj_02_stormbreaker", ocean: [0.90, 0.45, 0.12, 0.32, 0.40], stress: 0.28, bond: 0.82, polarity: "Leo (The Diva)", quote: "My Babbage fluid-loom says you have ninety seconds before the bifurcated downdraft hits." },
-      { id: "enclave_03_silas", name: "Silas", epithet: "The Engineer", squad: "The Forge", role: "Anchor", age: 82, mbti: "ISTJ", enneagram: "1w9", project: "The First Forge", icon: "🔧", shirt: "#8c5220", home: "proj_01_first_forge", ocean: [0.15, 0.96, 0.15, 0.22, 0.58], stress: 0.31, bond: 0.88, polarity: "Pisces (The Dreamer)", quote: "Measure the bismuth busbar twice with the micrometer, or we'll be chasing eddy currents all Sol." },
-      { id: "enclave_04_leo", name: "Leo", epithet: "The Leader & Artificer", squad: "The Forge", role: "Anchor", age: 79, mbti: "ENTJ", enneagram: "8w7", project: "The First Forge", icon: "⚒️", shirt: "#c0392b", home: "proj_01_first_forge", ocean: [0.72, 0.82, 0.92, 0.46, 0.20], stress: 0.22, bond: 0.85, polarity: "Cancer (The Mother)", quote: "Every crucible pour builds a bridge between Old Earth discipline and this valley's future." },
-      { id: "enclave_05_kaio", name: "Kaio", epithet: "The Scout", squad: "The Wilds", role: "Prodigy", age: 18, mbti: "ENFP", enneagram: "7w6", project: "The Sanctuary", icon: "🧭", shirt: "#27ae60", home: "proj_03_sanctuary", ocean: [0.96, 0.15, 0.90, 0.80, 0.48], stress: 0.21, bond: 0.89, polarity: "Capricorn (The CEO)", quote: "I found a whole cluster of singing piezo-geodes behind the fern waterfall!" },
-      { id: "enclave_06_zara", name: "Zara", epithet: "The Beastmaster", squad: "The Wilds", role: "Prodigy", age: 18, mbti: "ISFP", enneagram: "9w8", project: "The Sanctuary", icon: "🦌", shirt: "#16a085", home: "proj_03_sanctuary", ocean: [0.45, 0.38, 0.10, 0.65, 0.42], stress: 0.23, bond: 0.91, polarity: "Gemini (The Gossip)", quote: "The prism-moths always shelter under the cedar eaves right before a lunar surge." },
-      { id: "enclave_07_willow", name: "Willow", epithet: "The Alchemist (Playable Companion)", squad: "The Wilds", role: "Anchor", age: 80, mbti: "ISTP", enneagram: "5w6", project: "The Genesis Garden", icon: "⚗️", shirt: "#1abc9c", home: "bldg_willow_homestead", ocean: [0.46, 0.44, 0.28, 0.18, 0.14], stress: 0.18, bond: 1.00, polarity: "Libra (The Aesthete)", quote: "Don't touch the amber beaker—that's chelated solvent. The green flask is the blackberry cordial." },
-      { id: "enclave_08_terra", name: "Terra", epithet: "The Gardener", squad: "The Wilds", role: "Anchor", age: 81, mbti: "ISFJ", enneagram: "2w1", project: "The Genesis Garden", icon: "🌱", shirt: "#2e8b57", home: "proj_04_genesis_garden", ocean: [0.24, 0.90, 0.38, 0.90, 0.56], stress: 0.25, bond: 0.95, polarity: "Sagittarius (The Archer)", quote: "Once Willow chelates the ferro-silicate loam, the Crystalline Iron-Wheat sings as it sprouts." },
-      { id: "enclave_09_orion", name: "Orion", epithet: "The Artist", squad: "The Mind", role: "Prodigy", age: 18, mbti: "INFP", enneagram: "4w5", project: "The Simulacrum", icon: "🎨", shirt: "#8e44ad", home: "proj_05_simulacrum", ocean: [0.95, 0.30, 0.35, 0.74, 0.78], stress: 0.30, bond: 0.83, polarity: "Aries (The War God)", quote: "Look at the Rosensweig crown in the ferrofluid basin—it's a twelve-fold harmonic mandala." },
-      { id: "enclave_10_isla", name: "Isla", epithet: "The Architect", squad: "The Mind", role: "Prodigy", age: 18, mbti: "INTJ", enneagram: "5w6", project: "The Simulacrum", icon: "📐", shirt: "#5b2c6f", home: "proj_05_simulacrum", ocean: [0.82, 0.90, 0.12, 0.22, 0.30], stress: 0.26, bond: 0.81, polarity: "Taurus (The Glutton)", quote: "When we align the Helmholtz Vernier rings, the colony's entire stress topology stabilizes." },
-      { id: "enclave_11_kenna", name: "Kenna", epithet: "The Shrink", squad: "The Mind", role: "Anchor", age: 80, mbti: "ENFJ", enneagram: "2w3", project: "The Lyceum of the Mind", icon: "🕊️", shirt: "#9b59b6", home: "proj_06_lyceum_of_the_mind", ocean: [0.72, 0.72, 0.82, 0.94, 0.38], stress: 0.20, bond: 0.87, polarity: "Aquarius (The Robot)", quote: "Breathe with the brass tuning forks—let the twin-sun static roll right off your shoulders." },
-      { id: "enclave_12_elias", name: "Elias", epithet: "The Philosopher", squad: "The Mind", role: "Anchor", age: 84, mbti: "INFJ", enneagram: "9w1", project: "The Lyceum of the Mind", icon: "📜", shirt: "#6c3483", home: "proj_06_lyceum_of_the_mind", ocean: [0.90, 0.64, 0.22, 0.82, 0.48], stress: 0.21, bond: 0.86, polarity: "Scorpio (The Edgelord)", quote: "The mycelial network remembers every footstep we take in peace." },
-      { id: "enclave_13_ryn", name: "Ryn", epithet: "The Chef", squad: "The Hub", role: "Prodigy", age: 18, mbti: "ESTJ", enneagram: "8w9", project: "The Hearth & Metabolic Engine", icon: "🍳", shirt: "#e67e22", home: "proj_08_hearth_metabolic_engine", ocean: [0.32, 0.94, 0.80, 0.32, 0.56], stress: 0.27, bond: 0.88, polarity: "Pisces (The Flow)", quote: "Nobody skips The Feast on my watch! Hot iron-wheat sourdough is coming out of the steam oven!" },
-      { id: "enclave_14_vex", name: "Vex", epithet: "The Astronomer", squad: "The Hub", role: "Prodigy", age: 18, mbti: "ENTP", enneagram: "7w8", project: "The Living Atlas & Mycelial Concordance", icon: "🔭", shirt: "#d4ac0d", home: "proj_07_living_atlas", ocean: [0.95, 0.22, 0.85, 0.40, 0.22], stress: 0.22, bond: 0.84, polarity: "Ophiuchus (The Void)", quote: "Luna Gamma is hitting perigee tonight—the mycelial solitons are lighting up the whole chart!" },
-      { id: "enclave_15_dorian", name: "Dorian", epithet: "The Living Chronicler & Historian", squad: "The Hub", role: "Anchor", age: 83, mbti: "ESFP", enneagram: "6w7", project: "The Living Atlas & Mycelial Concordance", icon: "🎻", shirt: "#b7950b", home: "proj_07_living_atlas", ocean: [0.44, 0.42, 0.72, 0.68, 0.52], stress: 0.24, bond: 0.89, polarity: "Gemini (The Con-Man)", quote: "Every specimen you bring to the Living Atlas Museum becomes a verse in our colony's ballad." },
-      { id: "enclave_16_elara", name: "Elara", epithet: "The Medic", squad: "The Hub", role: "Anchor", age: 81, mbti: "ESFJ", enneagram: "2w1", project: "The Hearth & Metabolic Engine", icon: "🩺", shirt: "#f39c12", home: "proj_08_hearth_metabolic_engine", ocean: [0.38, 0.82, 0.88, 0.96, 0.54], stress: 0.23, bond: 0.92, polarity: "Scorpio (The Sadist)", quote: "Willow's herbal joint-liniment and a warm bowl of Ryn's broth cure ninety percent of ridge-chill." }
+      { id: "enclave_01_hector", name: "Hector", epithet: "The Stormbreaker", squad: "The Forge", role: "Prodigy", age: 18, mbti: "ESTP", enneagram: "7w8", project: "The Stormbreaker", icon: "⚡", shirt: "#d35400", hair: "#5d4037", home: "proj_02_stormbreaker", ocean: [0.42, 0.25, 0.90, 0.40, 0.15], stress: 0.24, bond: 0.84, polarity: "Virgo (The Perfectionist)", quote: "The wind-shear on the upper mast is singing in B-flat—hand me that copper piton!" },
+      { id: "enclave_02_jane", name: "Jane", epithet: "The Coder & Meteorologist", squad: "The Forge", role: "Prodigy", age: 18, mbti: "INTP", enneagram: "5w4", project: "The Stormbreaker", icon: "🧮", shirt: "#2980b9", hair: "#2c3e50", home: "proj_02_stormbreaker", ocean: [0.90, 0.45, 0.12, 0.32, 0.40], stress: 0.28, bond: 0.82, polarity: "Leo (The Diva)", quote: "My Babbage fluid-loom says you have ninety seconds before the bifurcated downdraft hits." },
+      { id: "enclave_03_silas", name: "Silas", epithet: "The Engineer (Mentor Soren)", squad: "The Forge", role: "Anchor", age: 82, mbti: "ISTJ", enneagram: "1w9", project: "The First Forge", icon: "🔧", shirt: "#8c5220", hair: "#bdc3c7", home: "proj_01_first_forge", ocean: [0.15, 0.96, 0.15, 0.22, 0.58], stress: 0.31, bond: 0.88, polarity: "Pisces (The Dreamer)", quote: "Measure the bismuth busbar twice with the micrometer, or we'll be chasing eddy currents all Sol." },
+      { id: "enclave_04_leo", name: "Leo", epithet: "The Leader & Artificer", squad: "The Forge", role: "Anchor", age: 79, mbti: "ENTJ", enneagram: "8w7", project: "The First Forge", icon: "⚒️", shirt: "#c0392b", hair: "#d5d8dc", home: "proj_01_first_forge", ocean: [0.72, 0.82, 0.92, 0.46, 0.20], stress: 0.22, bond: 0.85, polarity: "Cancer (The Mother)", quote: "Every crucible pour builds a bridge between Old Earth discipline and this valley's future." },
+      { id: "enclave_05_kaio", name: "Kaio", epithet: "The Scout", squad: "The Wilds", role: "Prodigy", age: 18, mbti: "ENFP", enneagram: "7w6", project: "The Sanctuary", icon: "🧭", shirt: "#27ae60", hair: "#3e2723", home: "proj_03_sanctuary", ocean: [0.96, 0.15, 0.90, 0.80, 0.48], stress: 0.21, bond: 0.89, polarity: "Capricorn (The CEO)", quote: "I found a whole cluster of singing piezo-geodes behind the fern waterfall!" },
+      { id: "enclave_06_zara", name: "Zara", epithet: "The Beastmaster", squad: "The Wilds", role: "Prodigy", age: 18, mbti: "ISFP", enneagram: "9w8", project: "The Sanctuary", icon: "🦌", shirt: "#16a085", hair: "#4a235a", home: "proj_03_sanctuary", ocean: [0.45, 0.38, 0.10, 0.65, 0.42], stress: 0.23, bond: 0.91, polarity: "Gemini (The Gossip)", quote: "The prism-moths always shelter under the cedar eaves right before a lunar surge." },
+      { id: "enclave_07_willow", name: "Willow", epithet: "The Alchemist (Playable Companion)", squad: "The Wilds", role: "Anchor", age: 80, mbti: "ISTP", enneagram: "5w6", project: "The Genesis Garden", icon: "⚗️", shirt: "#1abc9c", hair: "#c86432", home: "bldg_willow_homestead", ocean: [0.46, 0.44, 0.28, 0.18, 0.14], stress: 0.18, bond: 1.00, polarity: "Libra (The Aesthete)", quote: "Don't touch the amber beaker—that's chelated solvent. The green flask is the blackberry cordial." },
+      { id: "enclave_08_terra", name: "Terra", epithet: "The Gardener", squad: "The Wilds", role: "Anchor", age: 81, mbti: "ISFJ", enneagram: "2w1", project: "The Genesis Garden", icon: "🌱", shirt: "#2e8b57", hair: "#d7ccc8", home: "proj_04_genesis_garden", ocean: [0.24, 0.90, 0.38, 0.90, 0.56], stress: 0.25, bond: 0.95, polarity: "Sagittarius (The Archer)", quote: "Once Willow chelates the ferro-silicate loam, the Crystalline Iron-Wheat sings as it sprouts." },
+      { id: "enclave_09_orion", name: "Orion", epithet: "The Artist", squad: "The Mind", role: "Prodigy", age: 18, mbti: "INFP", enneagram: "4w5", project: "The Simulacrum", icon: "🎨", shirt: "#8e44ad", hair: "#34495e", home: "proj_05_simulacrum", ocean: [0.95, 0.30, 0.35, 0.74, 0.78], stress: 0.30, bond: 0.83, polarity: "Aries (The War God)", quote: "Look at the Rosensweig crown in the ferrofluid basin—it's a twelve-fold harmonic mandala." },
+      { id: "enclave_10_isla", name: "Isla", epithet: "The Architect", squad: "The Mind", role: "Prodigy", age: 18, mbti: "INTJ", enneagram: "5w6", project: "The Simulacrum", icon: "📐", shirt: "#5b2c6f", hair: "#1c2833", home: "proj_05_simulacrum", ocean: [0.82, 0.90, 0.12, 0.22, 0.30], stress: 0.26, bond: 0.81, polarity: "Taurus (The Glutton)", quote: "When we align the Helmholtz Vernier rings, the colony's entire stress topology stabilizes." },
+      { id: "enclave_11_kenna", name: "Kenna", epithet: "The Shrink", squad: "The Mind", role: "Anchor", age: 80, mbti: "ENFJ", enneagram: "2w3", project: "The Lyceum of the Mind", icon: "🕊️", shirt: "#9b59b6", hair: "#cfd8dc", home: "proj_06_lyceum_of_the_mind", ocean: [0.72, 0.72, 0.82, 0.94, 0.38], stress: 0.20, bond: 0.87, polarity: "Aquarius (The Robot)", quote: "Breathe with the brass tuning forks—let the twin-sun static roll right off your shoulders." },
+      { id: "enclave_12_elias", name: "Elias", epithet: "The Philosopher", squad: "The Mind", role: "Anchor", age: 84, mbti: "INFJ", enneagram: "9w1", project: "The Lyceum of the Mind", icon: "📜", shirt: "#6c3483", hair: "#eaeded", home: "proj_06_lyceum_of_the_mind", ocean: [0.90, 0.64, 0.22, 0.82, 0.48], stress: 0.21, bond: 0.86, polarity: "Scorpio (The Edgelord)", quote: "The mycelial network remembers every footstep we take in peace." },
+      { id: "enclave_13_ryn", name: "Ryn", epithet: "The Chef", squad: "The Hub", role: "Prodigy", age: 18, mbti: "ESTJ", enneagram: "8w9", project: "The Hearth & Metabolic Engine", icon: "🍳", shirt: "#e67e22", hair: "#4e342e", home: "proj_08_hearth_metabolic_engine", ocean: [0.32, 0.94, 0.80, 0.32, 0.56], stress: 0.27, bond: 0.88, polarity: "Pisces (The Flow)", quote: "Nobody skips The Feast on my watch! Hot iron-wheat sourdough is coming out of the steam oven!" },
+      { id: "enclave_14_vex", name: "Vex", epithet: "The Astronomer", squad: "The Hub", role: "Prodigy", age: 18, mbti: "ENTP", enneagram: "7w8", project: "The Living Atlas & Mycelial Concordance", icon: "🔭", shirt: "#d4ac0d", hair: "#212f3d", home: "proj_07_living_atlas", ocean: [0.95, 0.22, 0.85, 0.40, 0.22], stress: 0.22, bond: 0.84, polarity: "Ophiuchus (The Void)", quote: "Luna Gamma is hitting perigee tonight—the mycelial solitons are lighting up the whole chart!" },
+      { id: "enclave_15_dorian", name: "Dorian", epithet: "The Living Chronicler & Historian", squad: "The Hub", role: "Anchor", age: 83, mbti: "ESFP", enneagram: "6w7", project: "The Living Atlas & Mycelial Concordance", icon: "🎻", shirt: "#b7950b", hair: "#d0d3d4", home: "proj_07_living_atlas", ocean: [0.44, 0.42, 0.72, 0.68, 0.52], stress: 0.24, bond: 0.89, polarity: "Gemini (The Con-Man)", quote: "Every specimen you bring to the Living Atlas Museum becomes a verse in our colony's ballad." },
+      { id: "enclave_16_elara", name: "Elara", epithet: "The Medic", squad: "The Hub", role: "Anchor", age: 81, mbti: "ESFJ", enneagram: "2w1", project: "The Hearth & Metabolic Engine", icon: "🩺", shirt: "#f39c12", hair: "#f2f4f4", home: "proj_08_hearth_metabolic_engine", ocean: [0.38, 0.82, 0.88, 0.96, 0.54], stress: 0.23, bond: 0.92, polarity: "Scorpio (The Sadist)", quote: "Willow's herbal joint-liniment and a warm bowl of Ryn's broth cure ninety percent of ridge-chill." }
     ];
 
     const MUSEUM_SPECIMENS = [
@@ -899,13 +1336,16 @@
       { id: "theme_enclave_living_atlas", name: "Living Atlas Celestial Astrolabe Theme", icon: "🧭", placeable: true, comfort: 9, color: "#ffd866", synergyRef: "SR-02", cost: { spec_geode_piezo: 1, spec_flora_iron_wheat: 1 }, desc: "Cross-capsule Suite item (SR-02: lfs-tycoon & dads-book-lore) tracking the Twin Suns & Triple Moons." }
     ];
 
-    // Live State
     const state = {
       sol: 1,
       phaseIdx: 0,
       kpExo: 3.8,
       simSpeed: 1,
       biomeId: "crater_valley",
+      activeZoneId: "zone_01_homestead_grove",
+      activeIndoorRoomId: null,
+      tutorialStepIdx: 0,
+      tutorialDone: false,
       theme: "evergreen-dark",
       reducedMotion: false,
       audioMuted: true,
@@ -914,14 +1354,22 @@
       equippedToolId: "trowel",
       rupees: 60,
       comfortScore: 100,
-      camera: { x: 0, y: 0, zoom: 1.0, followId: "enclave_07_willow" },
+      camera: { x: 16, y: 32, zoom: 1.0, followId: "enclave_07_willow" },
       selectedEntity: { type: "citizen", id: "enclave_07_willow" },
+      dialogueTargetId: "enclave_08_terra",
       keysDown: {},
       grid: [],
       trees: [],
+      signs: [
+        { x: 15, y: 31, title: "🌿 LITTLEROOT HOMESTEAD GROVE", text: "Willow's Alchemist Homestead & Terra's Genesis Garden. Step on the golden doorway mat to enter Willow's Lab!" },
+        { x: 20, y: 20, title: "🍲 MAUVILLE HEARTH PLAZA", text: "Central dining hall & Sibling Grid Notice Board. Step inside Ryn's crimson-roofed Galley for warm Iron-Wheat loaves!" },
+        { x: 30, y: 28, title: "🏛️ LILYCOVE ATLAS TERRACE", text: "Dorian & Vex's Living Atlas Museum & Mind Observatory. Donate geodes, critters, ferro-fish & flora here!" },
+        { x: 21, y: 34, title: "🌊 SLATEPORT FERROFLUID PIER", text: "Equip [3] Ferrofluid Dip-Rod to angle for Coiled Magnetite Ammonites in the standing Rosensweig waves." },
+        { x: 29, y: 13, title: "🌋 LAVARIDGE FORGE SUMMIT", text: "Silas & Leo's First Forge Smelter and Hector & Jane's Stormbreaker Spire." }
+      ],
       resourceNodes: [
-        { id: "node_geode_1", type: "geode", x: 35, y: 12, specId: "spec_geode_bismuth", label: "✦ Bismuth Geode Fissure" },
-        { id: "node_geode_2", type: "geode", x: 40, y: 11, specId: "spec_geode_fulgurite", label: "✦ Ridge Fulgurite Crack" },
+        { id: "node_geode_1", type: "geode", x: 18, y: 33, specId: "spec_geode_bismuth", label: "✦ Bismuth Geode Fissure" },
+        { id: "node_geode_2", type: "geode", x: 35, y: 12, specId: "spec_geode_fulgurite", label: "✦ Ridge Fulgurite Crack" },
         { id: "node_geode_3", type: "geode", x: 12, y: 13, specId: "spec_geode_piezo", label: "✦ Piezo-Quartz Outcrop" },
         { id: "node_geode_4", type: "geode", x: 9, y: 30, specId: "spec_flora_cave_truffle", label: "🍄 Cave-Truffle Mycelium" },
         { id: "node_critter_1", type: "critter", x: 15, y: 27, specId: "spec_critter_prism_moth", label: "🦋 Aurora Prism-Moth" },
@@ -955,69 +1403,97 @@
         { id: "fav_3", requesterId: "enclave_15_dorian", requester: "Dorian & Vex (Living Atlas)", title: "Archive a Crater Specimen", desc: "Donate any geode, critter, ferro-fish, or flora specimen to the Colony Museum.", item: "ANY_SPECIMEN", rup: 10, done: false }
       ],
       storyFeed: [
-        { title: "Willow Lights Her Copper Alembic", summary: "Willow stepped out of her Alchemist Homestead with her 6 Animal Crossing tools ready to tend the Enclave Crater Valley.", phase: "DAWN_SHIFT", sol: 1, rup: 0 },
-        { title: "Sixteen Specialists Across Four Squads", summary: "All 16 canonical MBTI citizens are active around their 8 Grand Projects and 10 civic/residential structures.", phase: "DAWN_SHIFT", sol: 1, rup: 0 }
+        { title: "Willow Steps into Littleroot Homestead Grove", summary: "Willow stepped out onto her porch in the Gen-3 Hoenn overworld with her 6 Animal Crossing tools ready.", phase: "DAWN_SHIFT", sol: 1, rup: 0 },
+        { title: "Five Districts & Sixteen Citizens Active", summary: "All 16 canonical MBTI citizens and 18 landmarks are distributed across the 5 Pokémon Emerald districts.", phase: "DAWN_SHIFT", sol: 1, rup: 0 }
       ],
       citizens: []
     };
 
-    // Initialize 48x48 Grid & Citizens
+    // Initialize 48x48 Hoenn Grid (Grass, Tall Spore-Grass, Jumpable Ledges, Sandy Paths & Shimmering River)
     function initWorldGrid() {
       state.grid = Array.from({ length: GRID_SIZE }, () => Array(GRID_SIZE).fill("grass"));
+
       // Ferrofluid River Channel winding across y = 34..37
       for (let x = 0; x < GRID_SIZE; x++) {
-        const riverY = 34 + Math.round(Math.sin(x * 0.22) * 1.5);
+        const riverY = 34 + Math.round(Math.sin(x * 0.22) * 1.2);
         for (let dy = 0; dy < 3; dy++) {
           const ry = riverY + dy;
           if (ry >= 0 && ry < GRID_SIZE) state.grid[ry][x] = "water";
         }
       }
-      // Central Main Bus Plaza (20..27, 19..24)
-      for (let y = 19; y <= 24; y++) {
+
+      // Central Mauville Hearth Plaza (20..27, 19..23)
+      for (let y = 19; y <= 23; y++) {
         for (let x = 20; x <= 26; x++) {
           state.grid[y][x] = "plaza";
         }
       }
-      // Copper-Basalt Roads connecting the 4 Squad Quadrants & Bridges
+
+      // Scalloped Sandy Hoenn Paths & Wooden Bridges
       for (let x = 6; x < 42; x++) {
         state.grid[14][x] = "road";
         state.grid[23][x] = "road";
+        state.grid[31][x] = "road";
       }
       for (let y = 7; y < 40; y++) {
         state.grid[y][16] = state.grid[y][16] === "water" ? "bridge" : "road";
         state.grid[y][24] = state.grid[y][24] === "water" ? "bridge" : "road";
         state.grid[y][30] = state.grid[y][30] === "water" ? "bridge" : "road";
       }
+
+      // 1-Way Jumpable Hoenn Ledges
+      for (let x = 8; x <= 14; x++) state.grid[21][x] = "ledge";
+      for (let x = 28; x <= 35; x++) state.grid[18][x] = "ledge";
+
+      // Tall Rustling Spore-Grass Patches
+      for (let y = 25; y <= 27; y++) {
+        for (let x = 14; x <= 16; x++) state.grid[y][x] = "tall_grass";
+      }
+      for (let y = 29; y <= 31; y++) {
+        for (let x = 24; x <= 27; x++) state.grid[y][x] = "tall_grass";
+      }
+
       // Genesis Crop Terraces
       for (let y = 28; y <= 30; y++) {
-        for (let x = 11; x <= 15; x++) {
+        for (let x = 11; x <= 14; x++) {
           state.grid[y][x] = "crop";
         }
       }
-      // Deterministic Perimeter & Grove Voxel Trees
+
+      // Perimeter & Grove Hoenn Trees
       state.trees = [];
       const treeCoords = [
         [3,4],[5,5],[4,11],[3,19],[4,28],[4,40],[8,42],[14,42],[28,42],[36,41],[43,38],[44,28],[44,16],[43,6],
-        [20,6],[26,6],[11,19],[35,20],[19,39],[33,39]
+        [20,6],[26,6],[11,19],[35,20],[19,39],[33,39],[8,24],[21,28],[29,28]
       ];
       treeCoords.forEach(([tx, ty], i) => {
-        state.trees.push({ x: tx, y: ty, scale: 0.9 + (i % 3) * 0.15 });
+        state.trees.push({ x: tx, y: ty, scale: 0.95 + (i % 3) * 0.12 });
       });
 
-      // Spawn 16 Citizens near their home buildings
+      // Spawn 16 Citizens near their home buildings (with Mentor Soren & Terra greeting Willow by her porch!)
       state.citizens = CITIZENS_INIT.map((c, idx) => {
         const b = BUILDINGS.find(bldg => bldg.id === c.home) || BUILDINGS[0];
-        const sx = b.x + (idx % 3);
-        const sy = b.y + b.d + 1;
+        let sx = b.x + (idx % 3);
+        let sy = b.y + b.d + 1;
+        if (c.id === "enclave_07_willow") {
+          sx = 17;
+          sy = 32;
+        } else if (c.id === "enclave_08_terra") {
+          sx = 15;
+          sy = 30;
+        }
         return {
           ...c,
           x: sx,
           y: sy,
           targetX: sx,
           targetY: sy,
-          walkPhase: idx * 0.7,
-          bubbleText: idx === 6 ? "Ready to forage & craft!" : "",
-          bubbleTimer: idx === 6 ? 240 : 0
+          facing: "down",
+          walkPhase: idx * 0.5,
+          jumpZ: 0,
+          toolSwingTimer: 0,
+          bubbleText: c.id === "enclave_08_terra" ? "👋 Welcome home, Willow!" : "",
+          bubbleTimer: c.id === "enclave_08_terra" ? 360 : 0
         };
       });
     }
@@ -1049,18 +1525,252 @@
       el._timer = setTimeout(() => el.classList.remove("visible"), 2600);
     }
 
-    // Render Willow's 6-Slot AC Tool Hotbar
+    function triggerHoennRouteSign(bannerText, subText) {
+      const sign = document.getElementById("hoenn-route-sign");
+      document.getElementById("hoenn-route-title").textContent = bannerText;
+      document.getElementById("hoenn-route-sub").textContent = subText;
+      sign.classList.add("visible");
+      clearTimeout(sign._timer);
+      sign._timer = setTimeout(() => {
+        sign.classList.remove("visible");
+      }, 2500);
+    }
+
+    function detectZoneForCoords(x, y) {
+      for (const z of Object.values(EMERALD_DISTRICTS)) {
+        if (x >= z.bounds.x1 && x <= z.bounds.x2 && y >= z.bounds.y1 && y <= z.bounds.y2) {
+          return z.id;
+        }
+      }
+      return state.activeZoneId;
+    }
+
+    function warpToDistrict(zoneId) {
+      const z = EMERALD_DISTRICTS[zoneId];
+      if (!z) return;
+      state.activeIndoorRoomId = null;
+      state.activeZoneId = zoneId;
+      state.biomeId = z.biomeId;
+      const willow = state.citizens.find(c => c.id === "enclave_07_willow");
+      if (willow) {
+        willow.x = z.spawn.x;
+        willow.y = z.spawn.y;
+        willow.targetX = z.spawn.x;
+        willow.targetY = z.spawn.y;
+        state.camera.x = willow.x;
+        state.camera.y = willow.y;
+      }
+      playChime(640, 0.11);
+      triggerHoennRouteSign(z.banner, `${z.name} • ${z.hearthBiome}`);
+      refreshAllPanels();
+    }
+
+    function enterIndoorRoom(roomId) {
+      const rm = INDOOR_ROOMS[roomId];
+      if (!rm) return;
+      state.activeIndoorRoomId = roomId;
+      state.activeZoneId = rm.parentZoneId;
+      const willow = state.citizens.find(c => c.id === "enclave_07_willow");
+      if (willow) {
+        willow.x = rm.exitX;
+        willow.y = rm.exitY - 1;
+        willow.targetX = willow.x;
+        willow.targetY = willow.y;
+        willow.facing = "up";
+      }
+      playChime(720, 0.12);
+      triggerHoennRouteSign(rm.banner, `${rm.name} • Step South to Exit`);
+      showToast(`Entered ${rm.name}`);
+      refreshAllPanels();
+    }
+
+    function exitIndoorRoom() {
+      const rm = INDOOR_ROOMS[state.activeIndoorRoomId];
+      if (!rm) return;
+      state.activeIndoorRoomId = null;
+      const willow = state.citizens.find(c => c.id === "enclave_07_willow");
+      if (willow) {
+        willow.x = rm.exitX;
+        willow.y = rm.exitY + 0.6;
+        willow.targetX = willow.x;
+        willow.targetY = willow.y;
+        willow.facing = "down";
+      }
+      const z = EMERALD_DISTRICTS[rm.parentZoneId] || EMERALD_DISTRICTS.zone_01_homestead_grove;
+      playChime(540, 0.1);
+      triggerHoennRouteSign(z.banner, `${z.name} • ${z.hearthBiome}`);
+      refreshAllPanels();
+    }
+
+    // Guided 6-Step Tutorial Logic
+    function updateTutorialBanner() {
+      const bar = document.getElementById("emerald-tutorial-bar");
+      if (state.tutorialDone) {
+        bar.classList.add("hidden");
+        return;
+      }
+      const stepObj = TUTORIAL_STEPS[Math.min(state.tutorialStepIdx, TUTORIAL_STEPS.length - 1)];
+      document.getElementById("tutorial-step-text").textContent = stepObj.prompt;
+    }
+
+    function advanceOnboardingTutorial() {
+      if (state.tutorialDone) return;
+      const stepObj = TUTORIAL_STEPS[state.tutorialStepIdx];
+      if (!stepObj) return;
+
+      // Warp to step zone and execute its demonstration action
+      if (state.activeZoneId !== stepObj.zoneId) {
+        warpToDistrict(stepObj.zoneId);
+      }
+      const willow = state.citizens.find(c => c.id === "enclave_07_willow");
+      if (willow) {
+        willow.x = stepObj.targetX;
+        willow.y = stepObj.targetY + 1;
+        willow.targetX = willow.x;
+        willow.targetY = willow.y;
+        willow.toolSwingTimer = 18;
+      }
+      state.rupees += 5;
+      openDialogueBox(stepObj.speaker, stepObj.badge, stepObj.dialogue, true);
+
+      if (state.tutorialStepIdx < TUTORIAL_STEPS.length - 1) {
+        state.tutorialStepIdx++;
+      } else {
+        state.tutorialDone = true;
+      }
+      updateTutorialBanner();
+      syncBridgeStateToLocalStorage();
+      refreshAllPanels();
+    }
+
+    function skipOnboardingTutorial() {
+      state.tutorialDone = true;
+      updateTutorialBanner();
+      showToast("Guided Tutorial hidden — Free-Roam active!");
+    }
+
+    function checkAutoAdvanceTutorial(actionKind) {
+      if (state.tutorialDone) return;
+      const cur = TUTORIAL_STEPS[state.tutorialStepIdx];
+      if (!cur) return;
+      const mapKind = {
+        talk: 1,
+        trowel: 2,
+        watering_can: 3,
+        bug_net: 4,
+        gift_satchel: 5,
+        museum_or_diy: 6
+      };
+      if (mapKind[actionKind] === cur.step) {
+        if (state.tutorialStepIdx < TUTORIAL_STEPS.length - 1) {
+          state.tutorialStepIdx++;
+        } else {
+          state.tutorialDone = true;
+        }
+        updateTutorialBanner();
+      }
+    }
+
+    // GBA Dialogue Box
+    function openDialogueBox(speakerName, badgeText, text, useWillowPortrait = false, targetId = null) {
+      state.dialogueTargetId = targetId;
+      document.getElementById("gba-speaker-name").textContent = speakerName;
+      document.getElementById("gba-speaker-badge").textContent = badgeText;
+      document.getElementById("gba-dialogue-text").textContent = text;
+      const img = document.getElementById("gba-dialogue-portrait");
+      const fb = document.getElementById("gba-portrait-fallback");
+      if (useWillowPortrait || speakerName.includes("Willow")) {
+        img.style.display = "block";
+        fb.style.display = "none";
+      } else {
+        img.style.display = "none";
+        fb.style.display = "block";
+        const cit = state.citizens.find(c => c.id === targetId);
+        fb.textContent = cit ? cit.icon : "💬";
+      }
+      document.getElementById("gba-dialogue-box").classList.add("open");
+      playChime(680, 0.08);
+    }
+
+    function closeDialogueBox() {
+      document.getElementById("gba-dialogue-box").classList.remove("open");
+    }
+
+    function handleDialogueChoice(choice) {
+      if (choice === "chat") {
+        checkAutoAdvanceTutorial("talk");
+        const cit = state.citizens.find(c => c.id === state.dialogueTargetId) || state.citizens[7];
+        openDialogueBox(
+          `${cit.name} (${cit.epithet})`,
+          `${cit.mbti} • ${cit.enneagram}`,
+          `"${cit.quote}" — Working on ${cit.project} (Stress: ${cit.stress.toFixed(2)}, Willow Bond: ${cit.bond.toFixed(2)}).`,
+          false,
+          cit.id
+        );
+      } else if (choice === "gift") {
+        const targetId = state.dialogueTargetId || "enclave_13_ryn";
+        giftSpecificCitizen(targetId);
+        checkAutoAdvanceTutorial("gift_satchel");
+      } else if (choice === "craft") {
+        closeDialogueBox();
+        openDrawerSection("diy");
+      }
+    }
+
+    // START Menu & On-Demand Drawer
+    function toggleStartMenu() {
+      const menu = document.getElementById("gba-start-menu");
+      const btn = document.getElementById("btn-gba-start");
+      const isOpen = menu.classList.toggle("open");
+      btn.classList.toggle("active", isOpen);
+      if (!isOpen) closeDrawerModal();
+      playChime(580, 0.07);
+    }
+
+    function closeStartMenu() {
+      document.getElementById("gba-start-menu").classList.remove("open");
+      document.getElementById("btn-gba-start").classList.remove("active");
+      closeDrawerModal();
+    }
+
+    function openDrawerSection(secId) {
+      document.getElementById("gba-start-menu").classList.add("open");
+      document.getElementById("gba-drawer-modal").classList.add("open");
+      const titles = {
+        dex: "📖 ENCLAVE DEX (16 CITIZENS & 18 LANDMARKS)",
+        bag: "🎒 WILLOW'S BAG & 6 ALCHEMIST TOOLS",
+        diy: "🔨 DIY WORKBENCH & LIVING ATLAS MUSEUM",
+        map: "🗺️ HOENN 5-DISTRICT MAP & CATALYSTS",
+        card: "🪪 WILLOW ALCHEMIST TRAINER CARD",
+        options: "⚙️ LDS THEME & COMFORT OPTIONS"
+      };
+      document.getElementById("drawer-modal-title").textContent = titles[secId] || "📖 ENCLAVE DEX";
+      ["dex", "bag", "diy", "map", "card", "options"].forEach(id => {
+        document.getElementById("drawer-sec-" + id).style.display = id === secId ? "flex" : "none";
+        const mbtn = document.getElementById("menu-btn-" + id);
+        if (mbtn) mbtn.classList.toggle("active", id === secId);
+      });
+      refreshAllPanels();
+    }
+
+    function closeDrawerModal() {
+      document.getElementById("gba-drawer-modal").classList.remove("open");
+    }
+
+    // Tool Hotbar & Cycling
     function renderToolHotbar() {
+      const tool = WILLOW_TOOLS.find(t => t.id === state.equippedToolId) || WILLOW_TOOLS[0];
+      document.getElementById("equipped-tool-Readout").textContent = `[Q / ${tool.slot}] ${tool.icon} ${tool.label}`;
       const bar = document.getElementById("willow-tool-hotbar");
-      bar.innerHTML = WILLOW_TOOLS.map(t => `
-        <button class="tool-slot ${state.equippedToolId === t.id ? 'equipped' : ''}"
-                type="button"
-                onclick="equipWillowTool('${t.id}')"
-                title="${t.name}">
-          <span class="tool-key">${t.slot}</span>
-          <span>${t.icon} ${t.label}</span>
-        </button>
-      `).join("");
+      if (bar) {
+        bar.innerHTML = WILLOW_TOOLS.map(t => `
+          <button class="lds-btn ${state.equippedToolId === t.id ? 'active' : ''}"
+                  type="button"
+                  onclick="equipWillowTool('${t.id}')">
+            [${t.slot}] ${t.icon} ${t.label}
+          </button>
+        `).join("");
+      }
     }
 
     function equipWillowTool(toolId) {
@@ -1071,29 +1781,88 @@
       if (tool) showToast(`Equipped ${tool.icon} ${tool.name}`);
     }
 
+    function cycleWillowTool() {
+      const idx = WILLOW_TOOLS.findIndex(t => t.id === state.equippedToolId);
+      const next = WILLOW_TOOLS[(idx + 1) % WILLOW_TOOLS.length];
+      equipWillowTool(next.id);
+    }
+
+    function interactOrUseTool() {
+      const willow = state.citizens.find(c => c.id === "enclave_07_willow");
+      if (!willow) return;
+
+      // 1. Check if standing near a doorway to enter an indoor room
+      if (!state.activeIndoorRoomId) {
+        for (const b of BUILDINGS) {
+          if (b.roomId) {
+            const doorX = b.x + b.w * 0.5;
+            const doorY = b.y + b.d;
+            if (Math.hypot(willow.x - doorX, willow.y - doorY) < 1.8) {
+              enterIndoorRoom(b.roomId);
+              return;
+            }
+          }
+        }
+      } else {
+        // Inside room: check if near exit mat
+        const rm = INDOOR_ROOMS[state.activeIndoorRoomId];
+        if (rm && willow.y >= rm.exitY - 0.3) {
+          exitIndoorRoom();
+          return;
+        }
+      }
+
+      // 2. Check if standing near a wooden Route Sign
+      for (const s of state.signs) {
+        if (Math.hypot(willow.x - s.x, willow.y - s.y) < 1.7) {
+          openDialogueBox(s.title, "HOENN SIGNPOST", s.text, false);
+          return;
+        }
+      }
+
+      // 3. Check if standing near an NPC citizen and using Gift Satchel or talking
+      for (const c of state.citizens) {
+        if (c.id !== "enclave_07_willow" && Math.hypot(c.x - willow.x, c.y - willow.y) < 2.1) {
+          if (state.equippedToolId === "gift_satchel") {
+            useEquippedWillowTool();
+          } else {
+            checkAutoAdvanceTutorial("talk");
+            openDialogueBox(`${c.name} — ${c.epithet}`, `${c.mbti} • ${c.squad}`, `"${c.quote}"`, false, c.id);
+          }
+          return;
+        }
+      }
+
+      // 4. Otherwise swing equipped Animal Crossing tool!
+      useEquippedWillowTool();
+    }
+
     function useEquippedWillowTool() {
       const tool = WILLOW_TOOLS.find(t => t.id === state.equippedToolId) || WILLOW_TOOLS[0];
       const willow = state.citizens.find(c => c.id === "enclave_07_willow");
+      willow.toolSwingTimer = 20;
       playChime(740, 0.12);
 
       if (tool.id === "trowel") {
         state.inventory.spec_geode_bismuth = (state.inventory.spec_geode_bismuth || 0) + 1;
         state.inventory.spec_flora_cave_truffle = (state.inventory.spec_flora_cave_truffle || 0) + 1;
         state.rupees += 5;
-        willow.bubbleText = "⚗️ Unearthed a Bismuth Geode & Cave-Truffle!";
-        willow.bubbleTimer = 200;
+        willow.bubbleText = "⚗️ Unearthed Bismuth Geode!";
+        willow.bubbleTimer = 180;
+        checkAutoAdvanceTutorial("trowel");
         pushStoryFeed("Unearthed Hopper-Crystal Bismuth Geode", "Willow tapped a resonant fissure with her Copper Trowel, chelating the soil and extracting a Bismuth Geode (+5 RUP).", 5);
       } else if (tool.id === "bug_net") {
         state.inventory.spec_critter_prism_moth = (state.inventory.spec_critter_prism_moth || 0) + 1;
         state.rupees += 5;
-        willow.bubbleText = "🦋 Caught an Aurora Prism-Moth!";
-        willow.bubbleTimer = 200;
+        willow.bubbleText = "🦋 Caught Aurora Prism-Moth!";
+        willow.bubbleTimer = 180;
+        checkAutoAdvanceTutorial("bug_net");
         pushStoryFeed("Cataloged Aurora Prism-Moth", "Willow gently netted a shimmering Aurora Prism-Moth near the spore lanterns (+5 RUP).", 5);
       } else if (tool.id === "dip_rod") {
         state.inventory.spec_fish_ammonite = (state.inventory.spec_fish_ammonite || 0) + 1;
         state.rupees += 5;
-        willow.bubbleText = "🎣 Angled a Coiled Magnetite Ammonite!";
-        willow.bubbleTimer = 200;
+        willow.bubbleText = "🎣 Angled Magnetite Ammonite!";
+        willow.bubbleTimer = 180;
         pushStoryFeed("Angled Coiled Magnetite Ammonite", "Casting her Ferrofluid Dip-Rod into the standing Rosensweig waves, Willow reeled in a Magnetite Ammonite (+5 RUP).", 5);
       } else if (tool.id === "watering_can") {
         state.resourceNodes.filter(n => n.type === "crop").forEach(n => { n.watered = true; });
@@ -1102,8 +1871,9 @@
         const g = BUILDINGS.find(b => b.id === "proj_04_genesis_garden");
         if (g) g.progress = Math.min(100, +(g.progress + 1.5).toFixed(1));
         state.rupees += 5;
-        willow.bubbleText = "💧 Irrigated Crystalline Iron-Wheat!";
-        willow.bubbleTimer = 200;
+        willow.bubbleText = "💧 Irrigated Iron-Wheat!";
+        willow.bubbleTimer = 180;
+        checkAutoAdvanceTutorial("watering_can");
         pushStoryFeed("Irrigated Genesis Garden Terraces", "Willow watered the Crystalline Iron-Wheat & Spore-Orchids with triple-distilled rainwater (+5 RUP).", 5);
       } else if (tool.id === "tinker_wrench") {
         const decX = Math.max(3, Math.min(GRID_SIZE - 4, Math.round(willow.x + 1)));
@@ -1119,11 +1889,11 @@
         });
         state.comfortScore += 5;
         state.rupees += 5;
-        willow.bubbleText = "🪑 Placed Bismuth Streetlamp!";
-        willow.bubbleTimer = 200;
+        willow.bubbleText = "🪑 Placed Bismuth Lantern!";
+        willow.bubbleTimer = 180;
+        checkAutoAdvanceTutorial("museum_or_diy");
         pushStoryFeed("Placed Yard Decoration", `Willow placed a Bismuth-Glass Geode Streetlamp at (${decX}, ${decY}), raising Homestead Comfort to ${state.comfortScore} (+5 RUP).`, 5);
-      } else if (tool.id === "gift_citizen") {
-        // Find nearest non-Willow citizen
+      } else if (tool.id === "gift_satchel") {
         let nearest = state.citizens[0];
         let bestDist = 999;
         state.citizens.forEach(c => {
@@ -1136,8 +1906,9 @@
         nearest.bubbleText = "💖 Thank you, Willow!";
         nearest.bubbleTimer = 200;
         willow.bubbleText = `🎁 Gifted tonic to ${nearest.name}!`;
-        willow.bubbleTimer = 200;
+        willow.bubbleTimer = 180;
         state.rupees += 10;
+        checkAutoAdvanceTutorial("gift_satchel");
         pushStoryFeed(`Gifted Alchemical Tonic to ${nearest.name}`, `Willow shared an herbal tonic with ${nearest.name}, raising bond_strength to ${nearest.bond.toFixed(2)} and easing stress (+10 RUP).`, 10);
       }
 
@@ -1157,16 +1928,17 @@
       showToast(`${title} ${rup > 0 ? '(+' + rup + ' RUP)' : ''}`);
     }
 
-    // Trigger 5 Constitutional Lore Catalysts
     function triggerCatalyst(cat) {
       playChime(660, 0.14);
       const willow = state.citizens.find(c => c.id === "enclave_07_willow");
       if (cat === "feast") {
-        state.phaseIdx = 3; // THE_FEAST
+        state.phaseIdx = 3;
+        state.activeIndoorRoomId = null;
+        state.activeZoneId = "zone_02_hearth_plaza";
         const hearth = BUILDINGS.find(b => b.id === "proj_08_hearth_metabolic_engine");
         state.citizens.forEach((c, idx) => {
           c.targetX = hearth.x + (idx % 6);
-          c.targetY = hearth.y + hearth.d + Math.floor(idx / 6);
+          c.targetY = hearth.y + hearth.d + 1 + Math.floor(idx / 6);
           c.x = c.targetX;
           c.y = c.targetY;
           c.stress = Math.max(0.05, +(c.stress - 0.18).toFixed(2));
@@ -1174,17 +1946,13 @@
           c.bubbleTimer = 240;
         });
         state.rupees += 25;
-        pushStoryFeed(`Sol ${state.sol} Nightly Feast Convergence (Law L13)`, "All 16 citizens gathered around Ryn and Elara's Hearth. Willow slipped herbal joint-liniment vials beside Silas and Leo's plates (+25 RUP).", 25);
+        triggerHoennRouteSign("🍲 MAUVILLE HEARTH PLAZA", "Nightly Feast Convergence (All 16 Citizens)");
+        pushStoryFeed(`Sol ${state.sol} Nightly Feast Convergence (Law L13)`, "All 16 citizens gathered around Ryn and Elara's Hearth (+25 RUP).", 25);
       } else if (cat === "prank") {
         state.rupees += 5;
-        const hector = state.citizens.find(c => c.id === "enclave_01_hector");
-        if (hector) {
-          hector.bubbleText = "📮 3-Sol gauge prank seeded!";
-          hector.bubbleTimer = 220;
-        }
-        pushStoryFeed("Sibling Grid 3-Sol Prank Seeded (Law L12)", `Hector rigged a harmless whistling kettle-reed on Silas's pressure gauge—maturing on Sol ${state.sol + 3} in Ryn's galley (lethality=0, +5 RUP).`, 5);
+        pushStoryFeed("Sibling Grid 3-Sol Prank Seeded (Law L12)", `Hector rigged a harmless whistling kettle-reed on Silas's pressure gauge—maturing on Sol ${state.sol + 3} (lethality=0, +5 RUP).`, 5);
       } else if (cat === "expedition") {
-        state.phaseIdx = 1; // MIDDAY_EXPEDITION
+        state.phaseIdx = 1;
         BUILDINGS.filter(b => b.category === "grand_project").forEach(b => {
           b.progress = Math.min(100, +(b.progress + 2.0).toFixed(1));
         });
@@ -1192,7 +1960,7 @@
         state.inventory.spec_geode_piezo = (state.inventory.spec_geode_piezo || 0) + 1;
         state.rupees += 10;
         willow.bubbleText = "🧭 Expedition geodes collected!";
-        willow.bubbleTimer = 220;
+        willow.bubbleTimer = 200;
         pushStoryFeed("Midday Ridge Geode & Botanical Expedition", "Willow, Kaio, Zara, and Hector surveyed the basalt fault-line, advancing all 8 Grand Projects (+10 RUP).", 10);
       } else if (cat === "solar_flare") {
         state.kpExo = 7.5;
@@ -1200,9 +1968,9 @@
           c.stress = Math.min(0.78, +(c.stress + 0.06).toFixed(2));
         });
         state.rupees += 10;
-        pushStoryFeed("Twin-Sun Magnetospheric Shear Spike (Kp 7.5)", "Counter-rotating solar winds drove Kp_exo to 7.5! Jane and Hector channeled the surge into The Stormbreaker while Willow brewed grounding tonics (+10 RUP).", 10);
+        pushStoryFeed("Twin-Sun Magnetospheric Shear Spike (Kp 7.5)", "Counter-rotating solar winds drove Kp_exo to 7.5! Jane and Hector channeled the surge into The Stormbreaker (+10 RUP).", 10);
       } else if (cat === "harvest_moot") {
-        state.phaseIdx = 2; // DUSK_CRAFT
+        state.phaseIdx = 2;
         state.rupees += 10;
         pushStoryFeed("Schrödinger's Harvest Moot Accord", "The Wilds, The Forge, and The Hub reached a cooperative accord on Crystalline Iron-Wheat Batch #14 (+10 RUP).", 10);
       }
@@ -1249,6 +2017,7 @@
           color: rec.color || "#32f5c8"
         });
       }
+      checkAutoAdvanceTutorial("museum_or_diy");
       playChime(698, 0.12);
       pushStoryFeed(`Crafted ${rec.name}`, `Willow crafted ${rec.name} at her Homestead Alembic Workbench (+${rec.comfort} Comfort, +10 RUP).`, 10);
       syncBridgeStateToLocalStorage();
@@ -1264,6 +2033,7 @@
       state.rupees += spec.rup;
       const museumFavor = state.favors.find(f => f.id === "fav_3");
       if (museumFavor && !museumFavor.done) museumFavor.done = true;
+      checkAutoAdvanceTutorial("museum_or_diy");
       playChime(880, 0.15);
       pushStoryFeed(`Donated ${spec.name} to Living Atlas Museum`, `Dorian and Vex cataloged ${spec.name} in the ${spec.wing} Wing (${state.donatedSpecimens.length}/${MUSEUM_SPECIMENS.length}, +${spec.rup} RUP).`, spec.rup);
       syncBridgeStateToLocalStorage();
@@ -1295,32 +2065,6 @@
       };
     }
 
-    // Hydrate UI directly from engine/enclave_city_sim.py snapshot (enclave_city_state.json)
-    function hydrateFromEngineSnapshot(snap) {
-      if (!snap || snap.schema !== "enclave-voxel-city-v2") return false;
-      if (snap.biome_id && BIOMES[snap.biome_id]) state.biomeId = snap.biome_id;
-      if (snap.chronosphere && typeof snap.chronosphere.colony_sol === "number") {
-        state.sol = snap.chronosphere.colony_sol;
-      }
-      if (snap.weather && typeof snap.weather.kp_exo === "number") {
-        state.kpExo = snap.weather.kp_exo;
-      }
-      if (typeof snap.willow_homestead_comfort_score === "number") {
-        state.comfortScore = snap.willow_homestead_comfort_score;
-      }
-      if (typeof snap.city_rupee_bonus === "number") {
-        state.rupees = 60 + snap.city_rupee_bonus;
-      }
-      if (Array.isArray(snap.museum_donations)) {
-        state.donatedSpecimens = snap.museum_donations.slice();
-      }
-      if (snap.willow_inventory && typeof snap.willow_inventory === "object") {
-        state.inventory = { ...state.inventory, ...snap.willow_inventory };
-      }
-      refreshAllPanels();
-      return true;
-    }
-
     function syncBridgeStateToLocalStorage() {
       try {
         const biome = BIOMES[state.biomeId] || BIOMES.crater_valley;
@@ -1334,6 +2078,7 @@
           enclaveCitySummary: {
             schema: "enclave-voxel-city-v2",
             active_biome_id: state.biomeId,
+            active_zone_id: state.activeZoneId,
             active_crucible_hearth_biome: biome.hearthBiome,
             museum_donations_count: state.donatedSpecimens.length,
             willow_homestead_comfort_score: state.comfortScore,
@@ -1348,19 +2093,48 @@
       } catch (_) {}
     }
 
-    // Sidebar Rendering
     function refreshAllPanels() {
       const biome = BIOMES[state.biomeId];
-      document.getElementById("biome-title-display").textContent = `${biome.name} • ${biome.hearthBiome}`;
+      const zone = EMERALD_DISTRICTS[state.activeZoneId] || EMERALD_DISTRICTS.zone_01_homestead_grove;
+      document.getElementById("biome-title-display").textContent = `${zone.name} • ${biome.hearthBiome}`;
       const phase = DAY_PHASES[state.phaseIdx];
       document.getElementById("clock-phase-badge").textContent = `${PHASE_ICONS[phase]} SOL ${state.sol} • ${phase}`;
       document.getElementById("kp-weather-badge").textContent = `⚡ Kp_exo: ${state.kpExo.toFixed(1)} (${state.kpExo >= 6.5 ? 'Storm Shear' : 'Nominal'})`;
-      document.getElementById("comfort-score-badge").textContent = `🏡 Comfort: ${state.comfortScore}`;
-      document.getElementById("museum-progress-badge").textContent = `🏛️ Museum: ${state.donatedSpecimens.length}/${MUSEUM_SPECIMENS.length}`;
+      document.getElementById("comfort-score-badge").textContent = `🏡 Homestead Comfort: ${state.comfortScore}`;
+      document.getElementById("museum-progress-badge").textContent = `🏛️ Museum Archive: ${state.donatedSpecimens.length}/${MUSEUM_SPECIMENS.length}`;
       document.getElementById("rupee-satchel-badge").textContent = `💎 ${state.rupees} RUP`;
       document.getElementById("satchel-rup-inline").textContent = `💎 ${state.rupees} RUP`;
+      document.getElementById("menu-museum-count").textContent = `${state.donatedSpecimens.length}/${MUSEUM_SPECIMENS.length}`;
+      document.getElementById("menu-rup-count").textContent = `${state.rupees} RUP`;
 
-      // Tab 1: Favors & Feed
+      // Town Map 5 Districts & 3 Indoor Rooms
+      const distBox = document.getElementById("emerald-districts-list");
+      if (distBox) {
+        distBox.innerHTML = Object.values(EMERALD_DISTRICTS).map(d => `
+          <div class="codex-item" style="cursor:pointer;" onclick="warpToDistrict('${d.id}')">
+            <div class="item-header">
+              <span>${d.banner}</span>
+              <span class="pill-badge ${state.activeZoneId === d.id ? 'bio' : ''}">${state.activeZoneId === d.id ? '📍 Current' : 'Warp ▶'}</span>
+            </div>
+            <div class="item-sub">${d.name} &bull; Hearth: ${d.hearthBiome}</div>
+          </div>
+        `).join("");
+      }
+
+      const roomBox = document.getElementById("indoor-rooms-list");
+      if (roomBox) {
+        roomBox.innerHTML = Object.values(INDOOR_ROOMS).map(rm => `
+          <div class="codex-item" style="cursor:pointer;" onclick="enterIndoorRoom('${rm.id}')">
+            <div class="item-header">
+              <span>${rm.banner}</span>
+              <span class="pill-badge ${state.activeIndoorRoomId === rm.id ? 'bio' : ''}">${state.activeIndoorRoomId === rm.id ? '🚪 Inside' : 'Enter 🚪'}</span>
+            </div>
+            <div class="item-sub">${rm.name}</div>
+          </div>
+        `).join("");
+      }
+
+      // Favors & Story Feed
       const doneCount = state.favors.filter(f => f.done).length;
       document.getElementById("favors-counter-label").textContent = `${doneCount}/${state.favors.length} Done`;
       document.getElementById("daily-favors-list").innerHTML = state.favors.map(f => `
@@ -1374,7 +2148,7 @@
         </div>
       `).join("");
 
-      document.getElementById("story-feed-list").innerHTML = state.storyFeed.slice(0, 10).map(item => `
+      document.getElementById("story-feed-list").innerHTML = state.storyFeed.slice(0, 8).map(item => `
         <div class="feed-item">
           <div class="item-header">
             <span>${item.title}</span>
@@ -1384,10 +2158,10 @@
         </div>
       `).join("");
 
-      // Tab 2: Inspector
+      // Inspector
       renderInspectorPanel();
 
-      // Tab 3: Bag, DIY & Museum
+      // Bag, DIY & Museum
       const invEntries = Object.entries(state.inventory).filter(([_, qty]) => qty > 0);
       document.getElementById("willow-inventory-grid").innerHTML = invEntries.map(([id, qty]) => {
         const spec = MUSEUM_SPECIMENS.find(s => s.id === id) || DIY_RECIPES_CATALOG.find(r => r.id === id) || { name: id, icon: "📦" };
@@ -1428,7 +2202,7 @@
         `;
       }).join("");
 
-      // Tab 4: Codex
+      // Codex
       document.getElementById("codex-citizens-list").innerHTML = state.citizens.map(c => `
         <div class="codex-item" style="cursor:pointer;" onclick="selectAndFocusEntity('citizen', '${c.id}')">
           <div class="item-header">
@@ -1452,24 +2226,27 @@
 
     function renderInspectorPanel() {
       const box = document.getElementById("inspector-content");
+      if (!box) return;
       if (state.selectedEntity.type === "building") {
         const b = BUILDINGS.find(x => x.id === state.selectedEntity.id) || BUILDINGS[0];
         box.innerHTML = `
           <div class="panel-card highlight">
             <div class="item-header">
-              <span style="font-size:15px;">${b.icon} ${b.name}</span>
+              <span style="font-size:14px;">${b.icon} ${b.name}</span>
               <span class="pill-badge bio">${b.squad} &bull; ${b.hearthBiome}</span>
             </div>
             <div class="item-sub">${b.desc}</div>
             <div class="stat-bar-row">
-              <span>Project Progress</span>
+              <span>Progress</span>
               <div class="stat-track"><div class="stat-fill" style="width:${b.progress}%"></div></div>
               <span>${b.progress}%</span>
             </div>
-            <div class="item-sub"><strong>Coordinates:</strong> (${b.x}, ${b.y}) &bull; <strong>Footprint:</strong> ${b.w}&times;${b.d}&times;${b.h} voxels</div>
-            <button class="lds-btn primary" type="button" onclick="walkWillowTo(${b.x + 1}, ${b.y + b.d + 1})">
-              🚪 Walk Willow Here &amp; Assist (+5 RUP)
-            </button>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;">
+              <button class="lds-btn primary" type="button" onclick="walkWillowTo(${b.x + 1}, ${b.y + b.d + 1})">
+                🚶 Walk Willow Here (+5 RUP)
+              </button>
+              ${b.roomId ? `<button class="lds-btn" type="button" onclick="enterIndoorRoom('${b.roomId}')">🚪 Enter Interior</button>` : ""}
+            </div>
           </div>
         `;
         return;
@@ -1480,24 +2257,17 @@
       box.innerHTML = `
         <div class="panel-card highlight">
           <div class="item-header">
-            <span style="font-size:15px;">${c.icon} ${c.name} (${c.epithet})</span>
+            <span style="font-size:14px;">${c.icon} ${c.name} (${c.epithet})</span>
             <span class="pill-badge bio">${c.mbti} &bull; ${c.enneagram}</span>
           </div>
           <div class="item-sub">
-            <strong>Squad:</strong> ${c.squad} (${c.role}, Age ${c.age})<br/>
-            <strong>Grand Project:</strong> ${c.project}<br/>
-            <strong>Polarity Inversion Sign:</strong> ${c.polarity}
+            <strong>Squad:</strong> ${c.squad} (${c.role}, Age ${c.age}) &bull; <strong>Project:</strong> ${c.project}
           </div>
           <div class="item-sub" style="font-style:italic;color:var(--brass-bright);">"${c.quote}"</div>
           <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:4px;">
-            <button class="lds-btn" type="button" onclick="state.camera.followId='${c.id}';showToast('Following ${c.name}')">🎥 Follow</button>
             <button class="lds-btn" type="button" onclick="walkWillowToCitizen('${c.id}')">💬 Talk as Willow</button>
             <button class="lds-btn primary" type="button" onclick="giftSpecificCitizen('${c.id}')">🎁 Give Gift (+Bond)</button>
           </div>
-        </div>
-
-        <div class="panel-card">
-          <div class="section-title"><span>Whole-Trait OCEAN &amp; Momentary ODE State</span><span>Law L04/L05</span></div>
           ${c.ocean.map((val, i) => `
             <div class="stat-bar-row">
               <span>${labels[i]}</span>
@@ -1505,31 +2275,23 @@
               <span>${val.toFixed(2)}</span>
             </div>
           `).join("")}
-          <div class="stat-bar-row">
-            <span>Momentary Stress</span>
-            <div class="stat-track"><div class="stat-fill stress" style="width:${Math.round(c.stress * 100)}%"></div></div>
-            <span>${c.stress.toFixed(2)}</span>
-          </div>
-          <div class="stat-bar-row">
-            <span>Willow Bond</span>
-            <div class="stat-track"><div class="stat-fill" style="width:${Math.round(c.bond * 100)}%"></div></div>
-            <span>${c.bond.toFixed(2)}</span>
-          </div>
         </div>
       `;
     }
 
     function selectAndFocusEntity(type, id) {
       state.selectedEntity = { type, id };
-      switchSidebarTab("inspector");
       if (type === "citizen") {
-        state.camera.followId = id;
+        const c = state.citizens.find(x => x.id === id);
+        if (c) {
+          const willow = state.citizens.find(x => x.id === "enclave_07_willow");
+          willow.targetX = c.x + 1;
+          willow.targetY = c.y;
+        }
       } else {
         const b = BUILDINGS.find(x => x.id === id);
         if (b) {
-          state.camera.followId = null;
-          state.camera.x = b.x + b.w / 2;
-          state.camera.y = b.y + b.d / 2;
+          walkWillowTo(b.x + 1, b.y + b.d + 1);
         }
       }
       refreshAllPanels();
@@ -1537,10 +2299,13 @@
 
     function walkWillowTo(tx, ty) {
       const willow = state.citizens.find(c => c.id === "enclave_07_willow");
+      state.activeIndoorRoomId = null;
       willow.targetX = Math.max(2, Math.min(GRID_SIZE - 3, tx));
       willow.targetY = Math.max(2, Math.min(GRID_SIZE - 3, ty));
+      willow.x = willow.targetX;
+      willow.y = willow.targetY;
       state.rupees += 5;
-      showToast(`Willow walking to (${Math.round(tx)}, ${Math.round(ty)}) (+5 RUP)`);
+      showToast(`Willow traveled to (${Math.round(tx)}, ${Math.round(ty)}) (+5 RUP)`);
       refreshAllPanels();
     }
 
@@ -1548,8 +2313,7 @@
       const target = state.citizens.find(c => c.id === cid);
       if (!target) return;
       walkWillowTo(target.x + 1, target.y);
-      target.bubbleText = target.quote.slice(0, 48) + "...";
-      target.bubbleTimer = 240;
+      openDialogueBox(`${target.name} — ${target.epithet}`, `${target.mbti} • ${target.squad}`, `"${target.quote}"`, false, target.id);
     }
 
     function giftSpecificCitizen(cid) {
@@ -1557,7 +2321,7 @@
       if (!target) return;
       target.bond = Math.min(1.0, +(target.bond + 0.04).toFixed(2));
       target.stress = Math.max(0.05, +(target.stress - 0.08).toFixed(2));
-      target.bubbleText = "💖 Thank you for the alchemical tonic, Willow!";
+      target.bubbleText = "💖 Thank you for the tonic, Willow!";
       target.bubbleTimer = 240;
       state.rupees += 10;
       playChime(740, 0.12);
@@ -1566,18 +2330,11 @@
       refreshAllPanels();
     }
 
-    // UI Controls
-    function switchSidebarTab(tabId) {
-      ["lore", "inspector", "bag", "codex"].forEach(id => {
-        document.getElementById("tab-btn-" + id).classList.toggle("active", id === tabId);
-        document.getElementById("tab-pane-" + id).classList.toggle("active", id === tabId);
-      });
-    }
-
     function setSimSpeed(spd) {
       state.simSpeed = spd;
       [0, 1, 2, 4].forEach(s => {
-        document.getElementById("speed-" + s).classList.toggle("active", s === spd);
+        const el = document.getElementById("speed-" + s);
+        if (el) el.classList.toggle("active", s === spd);
       });
     }
 
@@ -1597,69 +2354,75 @@
     function toggleWillowControlMode() {
       state.willowPlayerControl = !state.willowPlayerControl;
       const btn = document.getElementById("btn-willow-mode");
-      btn.textContent = state.willowPlayerControl ? "🎮 Control Willow (WASD/Click)" : "🤖 Auto-Companion";
-      btn.classList.toggle("active", state.willowPlayerControl);
+      if (btn) {
+        btn.textContent = state.willowPlayerControl ? "🎮 Control Willow" : "🤖 Auto-Companion";
+        btn.classList.toggle("active", state.willowPlayerControl);
+      }
     }
 
     function toggleAudioMuted() {
       state.audioMuted = !state.audioMuted;
       const btn = document.getElementById("btn-audio-toggle");
-      btn.textContent = state.audioMuted ? "🔇 Audio Off" : "🔊 Synth On";
-      btn.classList.toggle("active", !state.audioMuted);
+      if (btn) {
+        btn.textContent = state.audioMuted ? "🔇 Audio Off" : "🔊 Synth On";
+        btn.classList.toggle("active", !state.audioMuted);
+      }
       if (!state.audioMuted) playChime(528, 0.1);
     }
 
     function toggleLabels() {
       state.showLabels = !state.showLabels;
-      document.getElementById("btn-toggle-labels").classList.toggle("active", state.showLabels);
+      const btn = document.getElementById("btn-toggle-labels");
+      if (btn) btn.classList.toggle("active", state.showLabels);
     }
 
     function toggleReducedMotion() {
       state.reducedMotion = !state.reducedMotion;
       const btn = document.getElementById("btn-reduced-motion");
-      btn.textContent = `🧘 Reduced Motion: ${state.reducedMotion ? 'On' : 'Off'}`;
-      btn.classList.toggle("active", state.reducedMotion);
-    }
-
-    function centerCamera() {
-      state.camera.followId = null;
-      state.camera.x = GRID_SIZE / 2;
-      state.camera.y = GRID_SIZE / 2;
-    }
-
-    function focusWillow() {
-      state.camera.followId = "enclave_07_willow";
-      selectAndFocusEntity("citizen", "enclave_07_willow");
+      if (btn) {
+        btn.textContent = `🧘 Reduced Motion: ${state.reducedMotion ? 'On' : 'Off'}`;
+        btn.classList.toggle("active", state.reducedMotion);
+      }
     }
 
     function adjustZoom(factor) {
-      state.camera.zoom = Math.max(0.55, Math.min(2.2, state.camera.zoom * factor));
+      state.camera.zoom = Math.max(0.75, Math.min(1.85, state.camera.zoom * factor));
     }
 
     // ==========================================================================
-    // 2.5D STEPPED VOXEL CANVAS RENDERER & INTERACTION LOOP
+    // POKÉMON EMERALD (GEN-3 HOENN) PIXEL OVERWORLD & SPRITE RENDERER
     // ==========================================================================
     const canvas = document.getElementById("town-canvas");
     const ctx = canvas.getContext("2d");
-    const TILE_SIZE = 28;
 
     function resizeCanvas() {
-      canvas.width = canvas.parentElement.clientWidth;
-      canvas.height = canvas.parentElement.clientHeight;
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
     }
     window.addEventListener("resize", resizeCanvas);
 
-    // Keyboard Controls for Willow (WASD / Arrows / 1-6 Tool Hotkeys / E or Space)
+    // Keyboard Controls: WASD/Arrows, [Z / E / Space] Act, [Q / 1-6] Tools, [Enter / Esc] START Menu
     window.addEventListener("keydown", e => {
       if (["INPUT", "SELECT", "TEXTAREA"].includes(document.activeElement?.tagName)) return;
-      state.keysDown[e.key.toLowerCase()] = true;
+      const k = e.key.toLowerCase();
+      state.keysDown[k] = true;
+
       if (e.key >= "1" && e.key <= "6") {
         const slot = parseInt(e.key, 10);
         const tool = WILLOW_TOOLS.find(t => t.slot === slot);
         if (tool) equipWillowTool(tool.id);
-      } else if (e.key.toLowerCase() === "e" || e.key === " ") {
+      } else if (k === "q") {
+        cycleWillowTool();
+      } else if (k === "z" || k === "e" || e.key === " ") {
         e.preventDefault();
-        useEquippedWillowTool();
+        interactOrUseTool();
+      } else if (e.key === "Enter" || e.key === "Escape") {
+        e.preventDefault();
+        if (document.getElementById("gba-dialogue-box").classList.contains("open")) {
+          closeDialogueBox();
+        } else {
+          toggleStartMenu();
+        }
       }
     });
 
@@ -1667,32 +2430,8 @@
       state.keysDown[e.key.toLowerCase()] = false;
     });
 
-    // Mouse Click & Drag on Voxel Canvas
-    let isDragging = false;
-    let dragStart = { x: 0, y: 0 };
-    let camStart = { x: 0, y: 0 };
-
-    canvas.addEventListener("mousedown", e => {
-      isDragging = false;
-      dragStart = { x: e.clientX, y: e.clientY };
-      camStart = { x: state.camera.x, y: state.camera.y };
-    });
-
-    window.addEventListener("mousemove", e => {
-      if (e.buttons !== 1) return;
-      const dx = e.clientX - dragStart.x;
-      const dy = e.clientY - dragStart.y;
-      if (Math.hypot(dx, dy) > 6) {
-        isDragging = true;
-        state.camera.followId = null;
-        const scale = TILE_SIZE * state.camera.zoom;
-        state.camera.x = camStart.x - dx / scale;
-        state.camera.y = camStart.y - dy / scale;
-      }
-    });
-
+    // Click to walk Willow or talk to NPC / enter doorway
     canvas.addEventListener("click", e => {
-      if (isDragging) return;
       const rect = canvas.getBoundingClientRect();
       const mx = e.clientX - rect.left;
       const my = e.clientY - rect.top;
@@ -1700,62 +2439,246 @@
       const wx = state.camera.x + (mx - canvas.width / 2) / scale;
       const wy = state.camera.y + (my - canvas.height / 2) / scale;
 
-      // 1. Check if clicked a Citizen
       for (const c of state.citizens) {
-        if (Math.hypot(wx - c.x, wy - c.y) < 1.25) {
-          selectAndFocusEntity("citizen", c.id);
+        if (c.id !== "enclave_07_willow" && Math.hypot(wx - c.x, wy - c.y) < 1.2) {
+          openDialogueBox(`${c.name} — ${c.epithet}`, `${c.mbti} • ${c.squad}`, `"${c.quote}"`, false, c.id);
           return;
         }
       }
-      // 2. Check if clicked a Building
+
       for (const b of BUILDINGS) {
-        if (wx >= b.x && wx <= b.x + b.w && wy >= b.y - 1 && wy <= b.y + b.d) {
-          selectAndFocusEntity("building", b.id);
+        if (b.roomId && Math.hypot(wx - (b.x + b.w * 0.5), wy - (b.y + b.d)) < 1.3) {
+          enterIndoorRoom(b.roomId);
           return;
         }
       }
-      // 3. Otherwise walk Willow to clicked tile
+
       if (state.willowPlayerControl) {
         const willow = state.citizens.find(c => c.id === "enclave_07_willow");
         willow.targetX = Math.max(2, Math.min(GRID_SIZE - 3, wx));
         willow.targetY = Math.max(2, Math.min(GRID_SIZE - 3, wy));
-        document.getElementById("willow-nearby-hint").textContent = `🌿 Walking Willow to (${Math.round(willow.targetX)}, ${Math.round(willow.targetY)})`;
       }
     });
 
-    // Helper: Draw a 2.5D Stepped Voxel Box
-    function drawVoxelBox(sx, sy, w, d, hPx, topColor, frontColor, borderColor = "rgba(0,0,0,0.35)") {
-      // Drop shadow
-      ctx.fillStyle = "rgba(0, 0, 0, 0.28)";
-      ctx.fillRect(sx + 4, sy + 4, w, d);
-      // Front facade
-      ctx.fillStyle = frontColor;
-      ctx.fillRect(sx, sy + d - hPx, w, hPx);
-      // Roof / Top face shifted up by hPx
-      ctx.fillStyle = topColor;
-      ctx.fillRect(sx, sy - hPx, w, d);
-      ctx.strokeStyle = borderColor;
-      ctx.lineWidth = 1;
-      ctx.strokeRect(sx, sy - hPx, w, d);
+    // Draw a Gen-3 Hoenn 3/4 Pitched-Roof Building with Corrugated Roof Tiles & Doorway Mat
+    function drawHoennBuilding(b, sx, sy, scale) {
+      const bw = b.w * scale;
+      const bd = b.d * scale;
+      const wallH = scale * 1.15;
+      const roofH = bd * 0.72;
+
+      // Ground drop shadow
+      ctx.fillStyle = "rgba(0, 0, 0, 0.35)";
+      ctx.fillRect(sx + 6, sy + 6, bw, bd);
+
+      // Front plaster/timber wall facade
+      ctx.fillStyle = b.wall;
+      ctx.fillRect(sx, sy + bd - wallH, bw, wallH);
+      ctx.strokeStyle = "#14201b";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(sx, sy + bd - wallH, bw, wallH);
+
+      // Corner brass/timber pilasters
+      ctx.fillStyle = b.trim;
+      ctx.fillRect(sx, sy + bd - wallH, 5, wallH);
+      ctx.fillRect(sx + bw - 5, sy + bd - wallH, 5, wallH);
+
+      // Pitched Gen-3 Hoenn Roof with horizontal ridge ribs
+      const roofTopY = sy - wallH * 0.45;
+      ctx.fillStyle = b.roof;
+      ctx.fillRect(sx - 4, roofTopY, bw + 8, roofH);
+      ctx.strokeStyle = b.trim;
+      ctx.lineWidth = 2;
+      ctx.strokeRect(sx - 4, roofTopY, bw + 8, roofH);
+
+      // Roof shingle ribs
+      ctx.fillStyle = "rgba(255, 255, 255, 0.14)";
+      for (let ry = roofTopY + 8; ry < roofTopY + roofH - 6; ry += 10) {
+        ctx.fillRect(sx, ry, bw, 3);
+      }
+
+      // Glowing Paned Windows
+      ctx.fillStyle = "#ffe680";
+      const winW = scale * 0.52;
+      const winH = scale * 0.44;
+      ctx.fillRect(sx + scale * 0.45, sy + bd - wallH * 0.75, winW, winH);
+      ctx.fillRect(sx + bw - scale * 0.95, sy + bd - wallH * 0.75, winW, winH);
+
+      // Front Door & Golden Welcome Mat (if enterable room)
+      const doorW = scale * 0.68;
+      const doorH = scale * 0.78;
+      const doorX = sx + bw * 0.5 - doorW * 0.5;
+      const doorY = sy + bd - doorH;
+      ctx.fillStyle = b.roomId ? "#22140d" : "#4a2e1b";
+      ctx.fillRect(doorX, doorY, doorW, doorH);
+      ctx.strokeStyle = b.trim;
+      ctx.strokeRect(doorX, doorY, doorW, doorH);
+
+      if (b.roomId) {
+        ctx.fillStyle = "#ffd866";
+        ctx.fillRect(doorX - 2, sy + bd + 2, doorW + 4, 8);
+      }
+
+      if (state.showLabels) {
+        ctx.font = "bold 11px sans-serif";
+        ctx.textAlign = "center";
+        const lbl = `${b.icon} ${b.name}`;
+        const tw = ctx.measureText(lbl).width + 12;
+        ctx.fillStyle = "rgba(9, 22, 18, 0.88)";
+        ctx.fillRect(sx + bw / 2 - tw / 2, roofTopY - 22, tw, 18);
+        ctx.strokeStyle = b.trim;
+        ctx.lineWidth = 1;
+        ctx.strokeRect(sx + bw / 2 - tw / 2, roofTopY - 22, tw, 18);
+        ctx.fillStyle = "#f4ead5";
+        ctx.fillText(lbl, sx + bw / 2, roofTopY - 9);
+      }
+    }
+
+    // Draw Playable Willow (32x48 Gen-3 Pokémon Emerald Alchemist Sprite) or Citizen Sprite
+    function drawGen3CharacterSprite(c, cx, cy, scale) {
+      const isWillow = c.id === "enclave_07_willow";
+      const stride = state.reducedMotion ? 0 : Math.sin(c.walkPhase) * 4;
+      const bob = state.reducedMotion ? 0 : Math.abs(Math.sin(c.walkPhase)) * 3 + (c.jumpZ || 0);
+
+      // Ground Oval Shadow
+      ctx.fillStyle = "rgba(0, 0, 0, 0.38)";
+      ctx.beginPath();
+      ctx.ellipse(cx, cy + 6, scale * 0.32, scale * 0.16, 0, 0, Math.PI * 2);
+      ctx.fill();
+
+      if (isWillow) {
+        // Subtle Emerald Alchemist Aura Ring
+        ctx.strokeStyle = "rgba(50, 245, 200, 0.65)";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.ellipse(cx, cy + 5, scale * 0.42, scale * 0.22, 0, 0, Math.PI * 2);
+        ctx.stroke();
+
+        const sy = cy - bob;
+        // Copper Boots (Animated 4-directional stride)
+        ctx.fillStyle = "#8c4a27";
+        ctx.fillRect(cx - 8, sy - 6 + stride * 0.5, 6, 8);
+        ctx.fillRect(cx + 2, sy - 6 - stride * 0.5, 6, 8);
+
+        // Teal-Bronze Pleated Alchemist Dress
+        ctx.fillStyle = "#169c82";
+        ctx.fillRect(cx - 11, sy - 22, 22, 17);
+        ctx.fillStyle = "#f0bc68"; // Brass alchemist belt & trim
+        ctx.fillRect(cx - 11, sy - 14, 22, 3);
+        ctx.fillRect(cx - 9, sy - 8, 18, 2);
+
+        // Flowing Copper Twin-Tails
+        const tailSway = stride * 0.4;
+        ctx.fillStyle = "#c8602c";
+        ctx.fillRect(cx - 16 - tailSway, sy - 34, 6, 18);
+        ctx.fillRect(cx + 10 - tailSway, sy - 34, 6, 18);
+
+        // Head & Dark Visor with Glowing #00FF66 Emerald Eyes
+        ctx.fillStyle = "#10211c";
+        ctx.fillRect(cx - 10, sy - 38, 20, 16);
+        ctx.fillStyle = "#00ff66";
+        const eyeOffsetX = c.facing === "left" ? -3 : c.facing === "right" ? 3 : 0;
+        if (c.facing !== "up") {
+          ctx.fillRect(cx - 6 + eyeOffsetX, sy - 31, 4, 4);
+          ctx.fillRect(cx + 2 + eyeOffsetX, sy - 31, 4, 4);
+        }
+
+        // Horned Bronze Alchemist Circlet
+        ctx.fillStyle = "#f0bc68";
+        ctx.fillRect(cx - 11, sy - 40, 22, 4);
+        ctx.fillRect(cx - 9, sy - 45, 4, 5);
+        ctx.fillRect(cx + 5, sy - 45, 4, 5);
+
+        // Visible Tool-Swing Animation when using any of the 6 AC Tools!
+        if (c.toolSwingTimer > 0) {
+          const tool = WILLOW_TOOLS.find(t => t.id === state.equippedToolId) || WILLOW_TOOLS[0];
+          ctx.font = "20px sans-serif";
+          ctx.textAlign = "center";
+          ctx.fillText(tool.icon, cx + 18, sy - 18);
+        }
+      } else {
+        const sy = cy - bob;
+        // Citizen Boots
+        ctx.fillStyle = "#2b2b2b";
+        ctx.fillRect(cx - 7, sy - 5 + stride * 0.4, 5, 7);
+        ctx.fillRect(cx + 2, sy - 5 - stride * 0.4, 5, 7);
+        // Citizen Tunic
+        ctx.fillStyle = c.shirt;
+        ctx.fillRect(cx - 10, sy - 20, 20, 16);
+        // Citizen Head & Hair
+        ctx.fillStyle = "#f5cba7";
+        ctx.fillRect(cx - 8, sy - 33, 16, 13);
+        ctx.fillStyle = c.hair || "#4a3b32";
+        ctx.fillRect(cx - 9, sy - 36, 18, 6);
+      }
+
+      if (state.showLabels || isWillow) {
+        ctx.font = "bold 11px sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillStyle = isWillow ? "#32f5c8" : "#f4ead5";
+        ctx.shadowColor = "rgba(0,0,0,0.85)";
+        ctx.shadowBlur = 4;
+        ctx.fillText(`${c.icon} ${c.name}`, cx, cy - 48 - bob);
+        ctx.shadowBlur = 0;
+      }
+
+      if (c.bubbleTimer > 0 && c.bubbleText) {
+        ctx.font = "bold 11px sans-serif";
+        const bw = ctx.measureText(c.bubbleText).width + 14;
+        ctx.fillStyle = "rgba(10, 24, 20, 0.95)";
+        ctx.fillRect(cx - bw / 2, cy - 72 - bob, bw, 20);
+        ctx.strokeStyle = "#32f5c8";
+        ctx.strokeRect(cx - bw / 2, cy - 72 - bob, bw, 20);
+        ctx.fillStyle = "#f4ead5";
+        ctx.fillText(c.bubbleText, cx, cy - 58 - bob);
+      }
     }
 
     let tickCounter = 0;
     function updateSimulation() {
       tickCounter++;
       const willow = state.citizens.find(c => c.id === "enclave_07_willow");
+      if (willow.toolSwingTimer > 0) willow.toolSwingTimer--;
+      if (willow.jumpZ > 0) willow.jumpZ = Math.max(0, willow.jumpZ - 1.5);
 
-      // Direct WASD / Arrow movement for Willow
-      const moveStep = 0.14;
+      // Direct WASD / Arrow movement (Hold Shift for Running Shoes!)
+      const isRunning = state.keysDown["shift"];
+      const moveStep = isRunning ? 0.17 : 0.11;
       let movedByKeys = false;
-      if (state.keysDown["w"] || state.keysDown["arrowup"]) { willow.y -= moveStep; movedByKeys = true; }
-      if (state.keysDown["s"] || state.keysDown["arrowdown"]) { willow.y += moveStep; movedByKeys = true; }
-      if (state.keysDown["a"] || state.keysDown["arrowleft"]) { willow.x -= moveStep; movedByKeys = true; }
-      if (state.keysDown["d"] || state.keysDown["arrowright"]) { willow.x += moveStep; movedByKeys = true; }
+      if (state.keysDown["w"] || state.keysDown["arrowup"]) { willow.y -= moveStep; willow.facing = "up"; movedByKeys = true; }
+      if (state.keysDown["s"] || state.keysDown["arrowdown"]) { willow.y += moveStep; willow.facing = "down"; movedByKeys = true; }
+      if (state.keysDown["a"] || state.keysDown["arrowleft"]) { willow.x -= moveStep; willow.facing = "left"; movedByKeys = true; }
+      if (state.keysDown["d"] || state.keysDown["arrowright"]) { willow.x += moveStep; willow.facing = "right"; movedByKeys = true; }
+
       if (movedByKeys) {
         willow.x = Math.max(2, Math.min(GRID_SIZE - 3, willow.x));
         willow.y = Math.max(2, Math.min(GRID_SIZE - 3, willow.y));
         willow.targetX = willow.x;
         willow.targetY = willow.y;
+        if (!state.reducedMotion) willow.walkPhase += isRunning ? 0.42 : 0.28;
+
+        // Ledge hop check when walking south over a Hoenn ledge
+        const gx = Math.round(willow.x);
+        const gy = Math.round(willow.y);
+        if (state.grid[gy] && state.grid[gy][gx] === "ledge" && willow.facing === "down") {
+          willow.y += 0.85;
+          willow.targetY = willow.y;
+          willow.jumpZ = 14;
+          playChime(480, 0.06);
+        }
+
+        // Seamless Zone Transition & Route Banner
+        if (!state.activeIndoorRoomId) {
+          const newZone = detectZoneForCoords(willow.x, willow.y);
+          if (newZone !== state.activeZoneId) {
+            state.activeZoneId = newZone;
+            const z = EMERALD_DISTRICTS[newZone];
+            if (z) {
+              state.biomeId = z.biomeId;
+              triggerHoennRouteSign(z.banner, `${z.name} • ${z.hearthBiome}`);
+            }
+          }
+        }
       }
 
       // Advance citizens
@@ -1765,61 +2688,74 @@
         const dy = c.targetY - c.y;
         const dist = Math.hypot(dx, dy);
         if (dist > 0.08) {
-          const spd = (c.id === "enclave_07_willow" ? 0.11 : 0.05 * Math.max(1, state.simSpeed));
+          const spd = (c.id === "enclave_07_willow" ? 0.12 : 0.04 * Math.max(1, state.simSpeed));
           c.x += (dx / dist) * Math.min(dist, spd);
           c.y += (dy / dist) * Math.min(dist, spd);
-          if (!state.reducedMotion) c.walkPhase += 0.25;
-        } else if (state.simSpeed > 0 && (c.id !== "enclave_07_willow" || !state.willowPlayerControl)) {
-          // Deterministic gentle patrol around home or plaza
-          if ((tickCounter + idx * 19) % 180 === 0) {
+          if (Math.abs(dx) > Math.abs(dy)) c.facing = dx > 0 ? "right" : "left";
+          else c.facing = dy > 0 ? "down" : "up";
+          if (!state.reducedMotion) c.walkPhase += 0.24;
+        } else if (state.simSpeed > 0 && c.id !== "enclave_07_willow" && c.id !== "enclave_08_terra") {
+          if ((tickCounter + idx * 23) % 210 === 0) {
             const b = BUILDINGS.find(bldg => bldg.id === c.home) || BUILDINGS[0];
             const angle = ((tickCounter + idx * 37) % 360) * (Math.PI / 180);
-            c.targetX = Math.max(3, Math.min(GRID_SIZE - 4, b.x + Math.cos(angle) * 4));
-            c.targetY = Math.max(3, Math.min(GRID_SIZE - 4, b.y + b.d + 1 + Math.sin(angle) * 3));
+            c.targetX = Math.max(3, Math.min(GRID_SIZE - 4, b.x + Math.cos(angle) * 3));
+            c.targetY = Math.max(3, Math.min(GRID_SIZE - 4, b.y + b.d + 1 + Math.sin(angle) * 2.5));
           }
         }
       });
 
-      // Check nearby interactive node for Willow prompt hint
-      let nearLabel = "";
-      for (const n of state.resourceNodes) {
-        if (Math.hypot(n.x - willow.x, n.y - willow.y) < 2.6) {
-          nearLabel = n.label;
-          break;
-        }
-      }
-      if (!nearLabel) {
-        for (const c of state.citizens) {
-          if (c.id !== "enclave_07_willow" && Math.hypot(c.x - willow.x, c.y - willow.y) < 2.4) {
-            nearLabel = `${c.icon} ${c.name} (${c.mbti})`;
-            break;
-          }
-        }
-      }
-      if (nearLabel) {
-        document.getElementById("willow-nearby-hint").textContent = `✨ Near: ${nearLabel}`;
-      }
-
-      // Camera follow
-      if (state.camera.followId) {
-        const target = state.citizens.find(c => c.id === state.camera.followId);
-        if (target) {
-          state.camera.x += (target.x - state.camera.x) * 0.14;
-          state.camera.y += (target.y - state.camera.y) * 0.14;
-        }
-      }
+      // Center camera tightly on Willow (Pokémon Emerald GBA style)
+      state.camera.x += (willow.x - state.camera.x) * 0.22;
+      state.camera.y += (willow.y - state.camera.y) * 0.22;
     }
 
     function renderScene() {
-      const biome = BIOMES[state.biomeId];
-      ctx.fillStyle = "#050b09";
+      const biome = BIOMES[state.biomeId] || BIOMES.crater_valley;
+      ctx.fillStyle = "#06100d";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       const scale = TILE_SIZE * state.camera.zoom;
       const offsetX = canvas.width / 2 - state.camera.x * scale;
       const offsetY = canvas.height / 2 - state.camera.y * scale;
 
-      // 1. Render 48x48 Ground & River Tiles
+      // Indoor Room Rendering Mode
+      if (state.activeIndoorRoomId) {
+        const rm = INDOOR_ROOMS[state.activeIndoorRoomId];
+        const rx = offsetX + (rm.exitX - 5) * scale;
+        const ry = offsetY + (rm.exitY - 6) * scale;
+        const rw = 10 * scale;
+        const rh = 7 * scale;
+
+        ctx.fillStyle = rm.floorColor;
+        ctx.fillRect(rx, ry, rw, rh);
+        ctx.strokeStyle = "#f0bc68";
+        ctx.lineWidth = 4;
+        ctx.strokeRect(rx, ry, rw, rh);
+
+        ctx.fillStyle = rm.rugColor;
+        ctx.fillRect(rx + scale * 2, ry + scale * 1.5, scale * 6, scale * 4);
+
+        // Exit Mat
+        ctx.fillStyle = "#e74c3c";
+        ctx.fillRect(offsetX + (rm.exitX - 0.5) * scale, offsetY + rm.exitY * scale, scale, scale * 0.45);
+
+        rm.props.forEach(p => {
+          const px = offsetX + (rm.exitX + p.dx) * scale;
+          const py = offsetY + (rm.exitY - 2 + p.dy) * scale;
+          ctx.font = "24px sans-serif";
+          ctx.textAlign = "center";
+          ctx.fillText(p.icon, px, py);
+          ctx.font = "bold 10px sans-serif";
+          ctx.fillStyle = "#f4ead5";
+          ctx.fillText(p.label, px, py + 16);
+        });
+
+        const willow = state.citizens.find(c => c.id === "enclave_07_willow");
+        drawGen3CharacterSprite(willow, offsetX + willow.x * scale, offsetY + willow.y * scale, scale);
+        return;
+      }
+
+      // 1. Render Hoenn Pixel Ground, 3-Blade Grass Tufts, Ledges, Tall Grass & Shimmering Water
       for (let y = 0; y < GRID_SIZE; y++) {
         for (let x = 0; x < GRID_SIZE; x++) {
           const sx = offsetX + x * scale;
@@ -1829,77 +2765,103 @@
           const cell = state.grid[y][x];
           if (cell === "water") {
             ctx.fillStyle = biome.water;
-            ctx.fillRect(sx, sy, scale + 0.6, scale + 0.6);
-            if ((x + y + Math.floor(tickCounter / 20)) % 5 === 0) {
+            ctx.fillRect(sx, sy, scale + 0.8, scale + 0.8);
+            // White shoreline foam on top edge
+            if (y > 0 && state.grid[y - 1][x] !== "water") {
+              ctx.fillStyle = "rgba(235, 252, 255, 0.78)";
+              ctx.fillRect(sx, sy, scale + 0.8, 5);
+            }
+            if ((x + y + Math.floor(tickCounter / 18)) % 4 === 0) {
               ctx.fillStyle = biome.waterSparkle;
-              ctx.fillRect(sx + scale * 0.25, sy + scale * 0.45, scale * 0.35, 2.5);
+              ctx.fillRect(sx + scale * 0.22, sy + scale * 0.45, scale * 0.38, 3);
             }
           } else if (cell === "road") {
             ctx.fillStyle = biome.road;
-            ctx.fillRect(sx, sy, scale + 0.6, scale + 0.6);
+            ctx.fillRect(sx, sy, scale + 0.8, scale + 0.8);
+            ctx.fillStyle = biome.roadEdge;
+            ctx.fillRect(sx + 4, sy + 4, 4, 4);
+            ctx.fillRect(sx + scale - 8, sy + scale - 8, 4, 4);
           } else if (cell === "plaza") {
             ctx.fillStyle = biome.plaza;
-            ctx.fillRect(sx, sy, scale + 0.6, scale + 0.6);
+            ctx.fillRect(sx, sy, scale + 0.8, scale + 0.8);
+            ctx.strokeStyle = "rgba(0,0,0,0.12)";
+            ctx.strokeRect(sx, sy, scale, scale);
           } else if (cell === "bridge") {
-            ctx.fillStyle = "#a6763c";
-            ctx.fillRect(sx, sy, scale + 0.6, scale + 0.6);
+            ctx.fillStyle = "#b88244";
+            ctx.fillRect(sx, sy, scale + 0.8, scale + 0.8);
+            ctx.fillStyle = "#7a5224";
+            ctx.fillRect(sx, sy + 6, scale, 3);
           } else if (cell === "crop") {
-            ctx.fillStyle = "#4e3824";
-            ctx.fillRect(sx, sy, scale + 0.6, scale + 0.6);
-            ctx.fillStyle = "#d4af37";
+            ctx.fillStyle = "#593e25";
+            ctx.fillRect(sx, sy, scale + 0.8, scale + 0.8);
+            ctx.fillStyle = "#ffd866";
             ctx.fillRect(sx + scale * 0.25, sy + scale * 0.2, scale * 0.5, scale * 0.6);
           } else {
             ctx.fillStyle = biome.grass[(x * 3 + y * 5) % 3];
-            ctx.fillRect(sx, sy, scale + 0.6, scale + 0.6);
+            ctx.fillRect(sx, sy, scale + 0.8, scale + 0.8);
+            // 3-Blade Hoenn Grass Tufts
+            if ((x * 7 + y * 11) % 4 === 0) {
+              ctx.fillStyle = biome.tuft;
+              ctx.fillRect(sx + 10, sy + 14, 3, 7);
+              ctx.fillRect(sx + 15, sy + 12, 3, 9);
+              ctx.fillRect(sx + 20, sy + 15, 3, 6);
+            }
+            if (cell === "tall_grass") {
+              const sway = state.reducedMotion ? 0 : Math.sin(tickCounter * 0.08 + x) * 2;
+              ctx.fillStyle = "#195932";
+              ctx.fillRect(sx + 6 + sway, sy + 8, scale - 12, scale - 14);
+              ctx.fillStyle = "#45e680";
+              ctx.fillRect(sx + 10 + sway, sy + 10, 4, scale - 18);
+              ctx.fillRect(sx + 22 + sway, sy + 8, 4, scale - 16);
+              ctx.fillRect(sx + 34 + sway, sy + 11, 4, scale - 18);
+            } else if (cell === "ledge") {
+              ctx.fillStyle = "#5c4228";
+              ctx.fillRect(sx, sy + scale * 0.62, scale + 0.8, scale * 0.24);
+              ctx.fillStyle = "rgba(0, 0, 0, 0.42)";
+              ctx.fillRect(sx, sy + scale * 0.86, scale + 0.8, 5);
+            }
           }
         }
       }
 
-      // 2. Render Central Plaza Captured-Lightning Geode Obelisk (x=23, y=21)
-      {
-        const ox = offsetX + 23 * scale;
-        const oy = offsetY + 21 * scale;
-        drawVoxelBox(ox, oy, scale, scale, scale * 1.6, "#32f5c8", "#187a68", "#f0bc68");
-      }
+      // 2. Render Wooden Hoenn Signposts
+      state.signs.forEach(s => {
+        const sx = offsetX + s.x * scale;
+        const sy = offsetY + s.y * scale;
+        ctx.fillStyle = "#5c3a1e";
+        ctx.fillRect(sx + scale * 0.42, sy + scale * 0.45, scale * 0.16, scale * 0.4);
+        ctx.fillStyle = "#a6703d";
+        ctx.fillRect(sx + scale * 0.18, sy + scale * 0.18, scale * 0.64, scale * 0.36);
+        ctx.strokeStyle = "#f0bc68";
+        ctx.lineWidth = 1.5;
+        ctx.strokeRect(sx + scale * 0.18, sy + scale * 0.18, scale * 0.64, scale * 0.36);
+      });
 
-      // 3. Render Resource Nodes (Geode Cracks, Critters, Ferro-Fish Shadows, Crops)
+      // 3. Render Resource Nodes
       state.resourceNodes.forEach(n => {
         const nx = offsetX + n.x * scale;
         const ny = offsetY + n.y * scale;
-        ctx.font = `${Math.max(11, Math.round(scale * 0.65))}px sans-serif`;
+        ctx.font = `${Math.max(14, Math.round(scale * 0.52))}px sans-serif`;
         ctx.textAlign = "center";
         if (n.type === "geode") {
           ctx.fillStyle = "#ffd866";
-          ctx.fillText("✦", nx + scale * 0.5, ny + scale * 0.7);
+          ctx.fillText("✦", nx + scale * 0.5, ny + scale * 0.65);
         } else if (n.type === "critter") {
-          const flutter = state.reducedMotion ? 0 : Math.sin(tickCounter * 0.1 + n.x) * 3;
+          const flutter = state.reducedMotion ? 0 : Math.sin(tickCounter * 0.1 + n.x) * 4;
           ctx.fillText("🦋", nx + scale * 0.5, ny + scale * 0.5 + flutter);
         } else if (n.type === "fish") {
           ctx.fillText("🐟", nx + scale * 0.5, ny + scale * 0.65);
         } else if (n.type === "crop") {
-          ctx.fillText(n.watered ? "🌾" : "🌱", nx + scale * 0.5, ny + scale * 0.7);
+          ctx.fillText(n.watered ? "🌾" : "🌱", nx + scale * 0.5, ny + scale * 0.68);
         }
       });
 
-      // 4. Depth-Sorted Render Queue (Trees, Placed Decorations, 18 Buildings, 16 Citizens)
+      // 4. Depth-Sorted Render Queue (Trees, Decorations, 18 Hoenn Buildings, 16 Gen-3 Citizens)
       const renderables = [];
-
-      state.trees.forEach(t => {
-        renderables.push({ sortY: t.y + 0.8, kind: "tree", data: t });
-      });
-
-      state.decorations.forEach(d => {
-        renderables.push({ sortY: d.y + 0.8, kind: "decor", data: d });
-      });
-
-      BUILDINGS.forEach(b => {
-        renderables.push({ sortY: b.y + b.d, kind: "building", data: b });
-      });
-
-      state.citizens.forEach(c => {
-        renderables.push({ sortY: c.y, kind: "citizen", data: c });
-      });
-
+      state.trees.forEach(t => renderables.push({ sortY: t.y + 0.8, kind: "tree", data: t }));
+      state.decorations.forEach(d => renderables.push({ sortY: d.y + 0.8, kind: "decor", data: d }));
+      BUILDINGS.forEach(b => renderables.push({ sortY: b.y + b.d, kind: "building", data: b }));
+      state.citizens.forEach(c => renderables.push({ sortY: c.y, kind: "citizen", data: c }));
       renderables.sort((a, b) => a.sortY - b.sortY);
 
       renderables.forEach(item => {
@@ -1907,91 +2869,48 @@
           const t = item.data;
           const tx = offsetX + t.x * scale;
           const ty = offsetY + t.y * scale;
-          drawVoxelBox(tx + scale * 0.3, ty + scale * 0.3, scale * 0.4, scale * 0.4, scale * 0.5, "#5c3d28", "#422a1b");
-          drawVoxelBox(tx, ty, scale, scale, scale * 1.1, biome.foliage[1], biome.foliage[0]);
-          drawVoxelBox(tx + scale * 0.15, ty - scale * 0.4, scale * 0.7, scale * 0.7, scale * 0.7, biome.foliage[2], biome.foliage[1]);
+          ctx.fillStyle = "rgba(0,0,0,0.28)";
+          ctx.beginPath();
+          ctx.ellipse(tx + scale * 0.5, ty + scale * 0.85, scale * 0.45, scale * 0.22, 0, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.fillStyle = "#5c3d28";
+          ctx.fillRect(tx + scale * 0.36, ty + scale * 0.45, scale * 0.28, scale * 0.42);
+          ctx.fillStyle = biome.foliage[0];
+          ctx.beginPath();
+          ctx.arc(tx + scale * 0.5, ty + scale * 0.35, scale * 0.48, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.fillStyle = biome.foliage[2];
+          ctx.beginPath();
+          ctx.arc(tx + scale * 0.5, ty + scale * 0.22, scale * 0.35, 0, Math.PI * 2);
+          ctx.fill();
         } else if (item.kind === "decor") {
           const d = item.data;
           const dx = offsetX + d.x * scale;
           const dy = offsetY + d.y * scale;
-          drawVoxelBox(dx + scale * 0.15, dy + scale * 0.15, scale * 0.7, scale * 0.7, scale * 0.65, d.color, "#5c4328", "#f0bc68");
-          ctx.font = `${Math.max(11, Math.round(scale * 0.55))}px sans-serif`;
+          ctx.font = `${Math.max(16, Math.round(scale * 0.5))}px sans-serif`;
           ctx.textAlign = "center";
-          ctx.fillText(d.icon, dx + scale * 0.5, dy - scale * 0.15);
+          ctx.fillText(d.icon, dx + scale * 0.5, dy + scale * 0.65);
         } else if (item.kind === "building") {
           const b = item.data;
-          const bx = offsetX + b.x * scale;
-          const by = offsetY + b.y * scale;
-          const bw = b.w * scale;
-          const bd = b.d * scale;
-          const bh = b.h * scale * 0.48;
-
-          // Main Voxel Body + Stepped Roof
-          drawVoxelBox(bx, by, bw, bd, bh, b.roof, b.wall, b.trim);
-          drawVoxelBox(bx + scale * 0.25, by - scale * 0.15, bw - scale * 0.5, bd - scale * 0.5, bh * 0.38, b.roof, b.trim);
-
-          // Glowing Windows & Door on Front Facade
-          ctx.fillStyle = "#52331c";
-          ctx.fillRect(bx + bw * 0.42, by + bd - scale * 0.65, scale * 0.6, scale * 0.65);
-          ctx.fillStyle = "#ffdf78";
-          ctx.fillRect(bx + scale * 0.35, by + bd - bh * 0.7, scale * 0.45, scale * 0.4);
-          ctx.fillRect(bx + bw - scale * 0.8, by + bd - bh * 0.7, scale * 0.45, scale * 0.4);
-
-          if (state.showLabels) {
-            ctx.font = `bold ${Math.max(10, Math.round(scale * 0.38))}px sans-serif`;
-            ctx.textAlign = "center";
-            const labelText = `${b.icon} ${b.name}`;
-            const tw = ctx.measureText(labelText).width + 10;
-            ctx.fillStyle = "rgba(7, 17, 14, 0.84)";
-            ctx.fillRect(bx + bw / 2 - tw / 2, by - bh - 22, tw, 17);
-            ctx.strokeStyle = b.trim;
-            ctx.strokeRect(bx + bw / 2 - tw / 2, by - bh - 22, tw, 17);
-            ctx.fillStyle = "#f4ead5";
-            ctx.fillText(labelText, bx + bw / 2, by - bh - 10);
-          }
+          drawHoennBuilding(b, offsetX + b.x * scale, offsetY + b.y * scale, scale);
         } else if (item.kind === "citizen") {
           const c = item.data;
-          const cx = offsetX + c.x * scale;
-          const cy = offsetY + c.y * scale;
-          const bob = state.reducedMotion ? 0 : Math.abs(Math.sin(c.walkPhase)) * 4;
-          const isWillow = c.id === "enclave_07_willow";
-
-          // Glowing Alchemist Aura for Willow
-          if (isWillow) {
-            ctx.beginPath();
-            ctx.arc(cx, cy, scale * 0.58, 0, Math.PI * 2);
-            ctx.fillStyle = "rgba(50, 245, 200, 0.25)";
-            ctx.fill();
-            ctx.strokeStyle = "#ffd866";
-            ctx.lineWidth = 2;
-            ctx.stroke();
-          }
-
-          // Voxel Torso & Head
-          const cw = scale * 0.56;
-          drawVoxelBox(cx - cw / 2, cy - cw / 2 - bob, cw, cw, scale * 0.55, "#f5cba7", c.shirt, isWillow ? "#32f5c8" : "#000");
-
-          // Name & Icon Tag
-          if (state.showLabels || isWillow) {
-            ctx.font = `bold ${Math.max(10, Math.round(scale * 0.36))}px sans-serif`;
-            ctx.textAlign = "center";
-            ctx.fillStyle = isWillow ? "#32f5c8" : "#f4ead5";
-            ctx.fillText(`${c.icon} ${c.name}`, cx, cy - scale * 0.9 - bob);
-          }
-
-          // Speech Bubble
-          if (c.bubbleTimer > 0 && c.bubbleText) {
-            ctx.font = "bold 11px sans-serif";
-            const bw = ctx.measureText(c.bubbleText).width + 14;
-            ctx.fillStyle = "rgba(13, 29, 24, 0.94)";
-            ctx.fillRect(cx - bw / 2, cy - scale * 1.65 - bob, bw, 20);
-            ctx.strokeStyle = "#32f5c8";
-            ctx.strokeRect(cx - bw / 2, cy - scale * 1.65 - bob, bw, 20);
-            ctx.fillStyle = "#f4ead5";
-            ctx.fillText(c.bubbleText, cx, cy - scale * 1.65 - bob + 14);
-          }
+          drawGen3CharacterSprite(c, offsetX + c.x * scale, offsetY + c.y * scale, scale);
         }
       });
+
+      // 5. Render Bouncing Golden Tutorial Objective Arrow (▼) in the Overworld
+      if (!state.tutorialDone) {
+        const stepObj = TUTORIAL_STEPS[Math.min(state.tutorialStepIdx, TUTORIAL_STEPS.length - 1)];
+        if (stepObj) {
+          const ax = offsetX + stepObj.targetX * scale + scale * 0.5;
+          const ay = offsetY + stepObj.targetY * scale - 28 + (state.reducedMotion ? 0 : Math.sin(tickCounter * 0.15) * 6);
+          ctx.font = "bold 22px sans-serif";
+          ctx.textAlign = "center";
+          ctx.fillStyle = "#ffd866";
+          ctx.fillText("▼", ax, ay);
+        }
+      }
 
       if (window.EnclaveArtLighting) {
         const lightingOpts = {
@@ -2016,13 +2935,63 @@
       requestAnimationFrame(mainLoop);
     }
 
-    // Boot Application
+    async function syncLiveRepositorySnapshot() {
+      const candidateUrls = ["../snapshots/latest.json", "./snapshots/latest.json"];
+      for (const url of candidateUrls) {
+        try {
+          const resp = await fetch(url, { cache: "no-store" });
+          if (!resp.ok) continue;
+          const snap = await resp.json();
+          if (!snap || typeof snap !== "object") continue;
+          if (typeof snap.colony_sol === "number") state.sol = snap.colony_sol;
+          if (typeof snap.tick_id === "number") state.tick = snap.tick_id;
+          if (typeof snap.day_phase === "string") {
+            const pIdx = DAY_PHASES.indexOf(snap.day_phase);
+            if (pIdx >= 0) state.phaseIdx = pIdx;
+          }
+          if (snap.characters && typeof snap.characters === "object" && Array.isArray(state.citizens)) {
+            state.citizens.forEach(cit => {
+              const liveChar = snap.characters[cit.id];
+              if (liveChar && typeof liveChar === "object") {
+                if (typeof liveChar.stress === "number") cit.stress = liveChar.stress;
+                if (typeof liveChar.morale === "number") cit.morale = liveChar.morale;
+                if (typeof liveChar.fatigue === "number") cit.fatigue = liveChar.fatigue;
+                if (typeof liveChar.bond_strength === "number") cit.bond = liveChar.bond_strength;
+                if (typeof liveChar.active_project === "string") cit.project = liveChar.active_project;
+                if (typeof liveChar.current_zone === "string") cit.zone = liveChar.current_zone;
+              }
+            });
+          }
+          if (Array.isArray(snap.recent_segments) && snap.recent_segments.length > 0) {
+            state.storyFeed = snap.recent_segments.map(seg => ({
+              title: `${seg.segment_id || "Live Segment"} (${seg.active_pov_id || ""} → ${seg.next_pov_target || ""})`,
+              summary: seg.excerpt || "Live Rashomon Relay handoff recorded.",
+              phase: seg.day_phase || DAY_PHASES[state.phaseIdx] || "DAWN_SHIFT",
+              sol: seg.colony_sol || state.sol,
+              tick: seg.tick_id || state.tick || 1,
+              rup: 0
+            }));
+          }
+          syncBridgeStateToLocalStorage();
+          refreshAllPanels();
+          return true;
+        } catch (_) {
+          // Offline / file:// fallback preserves embedded defaults
+        }
+      }
+      return false;
+    }
+
+    // Boot Pokémon Emerald Overworld Application
     initWorldGrid();
     resizeCanvas();
     renderToolHotbar();
-    focusWillow();
+    updateTutorialBanner();
+    triggerHoennRouteSign("🌿 LITTLEROOT HOMESTEAD GROVE", "District 1/5 • Porch Hearth • Enclave Crater Valley");
     syncBridgeStateToLocalStorage();
     refreshAllPanels();
+    syncLiveRepositorySnapshot();
+    setInterval(syncLiveRepositorySnapshot, 15000);
     requestAnimationFrame(mainLoop);
   </script>
 </body>

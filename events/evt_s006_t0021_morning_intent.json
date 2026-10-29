@@ -14,9 +14,7 @@
   "active_pov_id": "enclave_03_silas",
   "next_pov_target": "enclave_01_hector",
   "prev_next_pov_target": "enclave_03_silas",
-  "disallow_overwrite": false,
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
-  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
   "context_manifest": {
     "full_cards_loaded_count": 1,
     "interlocutor_full_cards_loaded": 0,
@@ -153,10 +151,5 @@
     }
   },
   "narrative_prose": "Silas braced against the oppressively hot and dry static charge prickling his skin in The First Forge, surrounded by dim amber glows reflecting off polished copper. The heavy thud of pneumatic hammers and the sharp metallic ozone mingling with molten brass filled the air as the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea threatened to disrupt alignment, but Silas adjusted the thermal baffle to DEFEND the delicate instrumentation while tasting the static tang of ozone on his tongue. He used the scrap pile to CONCEAL fragile components and the magnetic conductor to ATTRACT stray droplets, finally pressing the heavy baton firmly into Hector's hands.",
-  "steward_note": "deterministic-enclave-5section-v2",
-  "second_pass_repair_constraint": "enclave:16017190491470851455",
-  "f120_stall_timeout": "session_exceeded_25m_cut_loss_relaunch",
-  "CONF": "1.00",
-  "TIME": "2026-10-28T16:38:05Z",
-  "PROV": "sol006_t0021"
+  "steward_note": "deterministic-enclave-5section-v2"
 }

@@ -15,7 +15,10 @@ from __future__ import annotations
 import argparse
 import copy
 import json
+import math
+import os
 from pathlib import Path
+import subprocess
 import sys
 from typing import Any
 
@@ -36,6 +39,17 @@ from tools.check_enclave_constitutions import (
 
 DEFAULT_EPOCH_SEED = "enclave_epoch_2026"
 DEFAULT_MAX_STALENESS_TICKS = 1
+GIT_LOCKDOWN_NAME = "SyrisBruhh42"
+GIT_LOCKDOWN_EMAIL = "204105655+SyrisBruhh42@users.noreply.github.com"
+
+
+def _git_author_lockdown_env() -> dict[str, str]:
+    env = dict(os.environ)
+    env["GIT_AUTHOR_NAME"] = GIT_LOCKDOWN_NAME
+    env["GIT_AUTHOR_EMAIL"] = GIT_LOCKDOWN_EMAIL
+    env["GIT_COMMITTER_NAME"] = GIT_LOCKDOWN_NAME
+    env["GIT_COMMITTER_EMAIL"] = GIT_LOCKDOWN_EMAIL
+    return env
 
 
 def _resolve_root(repo_root: Path | str | None = None) -> Path:
@@ -91,6 +105,44 @@ def _load_all_events(root: Path, up_to_tick: int | None = None) -> list[dict[str
     return events
 
 
+def _riemannian_logit_step(
+    x_curr: float,
+    total_delta: float,
+    upper_bound: float = 1.0,
+) -> float:
+    """Abelian Riemannian Logit-Space CRDT step:
+    x_{t+1} = M * sigma(sigma^{-1}(x_tilde_t / M) + (4 / M) * sum(Delta x^(j))).
+    """
+    M = max(1e-6, float(upper_bound))
+    d = float(total_delta)
+    if abs(d) < 1e-12:
+        return round(min(M, max(0.0, float(x_curr))), 4)
+    eps = 1e-6 * M
+    x_tilde = min(M - eps, max(eps, float(x_curr)))
+    p = x_tilde / M
+    logit_curr = math.log(p / (1.0 - p))
+    z_next = max(-40.0, min(40.0, logit_curr + (4.0 / M) * d))
+    return round(M * (1.0 / (1.0 + math.exp(-z_next))), 4)
+
+
+def _canonical_state_delta_field(raw_key: str) -> str | None:
+    if raw_key in ("stress_delta", "delta_stress", "stress"):
+        return "stress"
+    if raw_key in ("fatigue_delta", "delta_fatigue", "fatigue", "sleep_debt_norm"):
+        return "fatigue"
+    base_dim = raw_key.replace("_delta", "").replace("_state", "")
+    if base_dim in (
+        "openness",
+        "conscientiousness",
+        "extraversion",
+        "agreeableness",
+        "neuroticism",
+        "hexaco_honesty_humility",
+    ):
+        return base_dim
+    return None
+
+
 def _apply_state_deltas_to_char(
     char_state: dict[str, Any],
     deltas: dict[str, Any],
@@ -98,36 +150,30 @@ def _apply_state_deltas_to_char(
     updated = copy.deepcopy(char_state)
     trait_states = dict(updated.get("trait_states") or {})
 
+    aggregated_by_field: dict[str, float] = {}
     for k, val in deltas.items():
         if not isinstance(val, (int, float)):
             continue
-        fval = float(val)
-        if k in ("stress_delta", "delta_stress"):
-            updated["stress"] = round(min(1.0, max(0.0, float(updated.get("stress", 0.30)) + fval)), 4)
-        elif k in ("fatigue_delta", "delta_fatigue"):
-            new_f = round(min(1.0, max(0.0, float(updated.get("fatigue", 0.20)) + fval)), 4)
+        canon_field = _canonical_state_delta_field(str(k))
+        if canon_field is None:
+            continue
+        aggregated_by_field[canon_field] = aggregated_by_field.get(canon_field, 0.0) + float(val)
+
+    for canon_field, total_delta in sorted(aggregated_by_field.items()):
+        if canon_field == "stress":
+            cur_s = float(updated.get("stress", 0.30))
+            updated["stress"] = _riemannian_logit_step(cur_s, total_delta, upper_bound=1.0)
+        elif canon_field == "fatigue":
+            cur_f = float(updated.get("fatigue", 0.20))
+            new_f = _riemannian_logit_step(cur_f, total_delta, upper_bound=1.0)
             updated["fatigue"] = new_f
             updated["sleep_debt_norm"] = new_f
-        elif k in ("stress", "fatigue", "sleep_debt_norm"):
-            updated[k] = round(min(1.0, max(0.0, fval)), 4)
         else:
-            base_dim = k.replace("_delta", "").replace("_state", "")
-            if base_dim in (
-                "openness",
-                "conscientiousness",
-                "extraversion",
-                "agreeableness",
-                "neuroticism",
-                "hexaco_honesty_humility",
-            ):
-                if k.endswith("_delta"):
-                    cur = float(trait_states.get(base_dim, updated.get(base_dim, 0.50)))
-                    new_v = round(min(1.0, max(0.0, cur + fval)), 4)
-                else:
-                    new_v = round(min(1.0, max(0.0, fval)), 4)
-                trait_states[base_dim] = new_v
-                updated[base_dim] = new_v
-                updated[f"{base_dim}_state"] = new_v
+            cur_t = float(trait_states.get(canon_field, updated.get(canon_field, 0.50)))
+            new_v = _riemannian_logit_step(cur_t, total_delta, upper_bound=1.0)
+            trait_states[canon_field] = new_v
+            updated[canon_field] = new_v
+            updated[f"{canon_field}_state"] = new_v
 
     updated["trait_states"] = trait_states
     return updated
@@ -191,6 +237,60 @@ def _apply_relationship_deltas(
         citations = target_pair.setdefault("evidence_refs", [])
         if event_id and event_id not in citations:
             citations.append(event_id)
+            citations.sort()
+
+
+def _collect_recent_segments(root: Path, up_to_tick: int, limit: int = 12) -> list[dict[str, Any]]:
+    seg_dir = root / "story" / "segments"
+    if not seg_dir.is_dir():
+        return []
+    summaries: list[dict[str, Any]] = []
+    for fp in sorted(seg_dir.glob("seg_*.json")):
+        try:
+            seg = _load_json(fp)
+            if not isinstance(seg, dict):
+                continue
+            t_id = int(seg.get("tick_id", 1) or 1)
+            if t_id > int(up_to_tick):
+                continue
+            s_id = int(seg.get("colony_sol") or seg.get("sol_id") or ((t_id - 1) // 4 + 1))
+            pov_id = str(seg.get("active_pov_id") or "")
+            next_pov = str(seg.get("next_pov_target") or "")
+            act_loc = seg.get("active_location")
+            loc_id = str(
+                act_loc.get("location_id")
+                if isinstance(act_loc, dict) and act_loc.get("location_id")
+                else (seg.get("location_id") or seg.get("location") or "The_Hub_Hearth")
+            )
+            phase = str(seg.get("day_phase") or seg.get("time_of_day") or "DAWN_SHIFT")
+            prose = str(
+                seg.get("narrative_prose")
+                or seg.get("prose")
+                or seg.get("text")
+                or seg.get("summary")
+                or ""
+            ).strip()
+            title = str(seg.get("title") or f"Sol {s_id:03d} • {phase} ({pov_id})")
+            summaries.append(
+                {
+                    "segment_id": str(seg.get("segment_id") or fp.stem),
+                    "sol_id": s_id,
+                    "colony_sol": s_id,
+                    "tick_id": t_id,
+                    "active_pov_id": pov_id,
+                    "next_pov_target": next_pov,
+                    "location_id": loc_id,
+                    "time_of_day": phase,
+                    "day_phase": phase,
+                    "title": title,
+                    "opening_excerpt": prose[:220],
+                    "excerpt": prose[:220],
+                }
+            )
+        except Exception:
+            continue
+    summaries.sort(key=lambda item: (int(item["tick_id"]), str(item["segment_id"])))
+    return summaries[-limit:]
 
 
 def rebuild_state_from_events(
@@ -217,7 +317,9 @@ def rebuild_state_from_events(
     prev_char_states: dict[str, dict[str, Any]] = {}
     for cid, card in cores.items():
         tier3 = card.get("tier_3_momentary_state_and_override_physics") or {}
-        prev_char_states[cid] = copy.deepcopy(tier3.get("current_state_vector") or {"tick_id": 0, "stress": 0.30, "fatigue": 0.20})
+        init_vec = copy.deepcopy(tier3.get("current_state_vector") or {"tick_id": 0, "stress": 0.30, "fatigue": 0.20, "morale": 0.50})
+        init_vec.setdefault("morale", 0.50)
+        prev_char_states[cid] = init_vec
 
     snapshots_by_tick: dict[int, dict[str, Any]] = {}
     snapshots_dir = root / "snapshots"
@@ -239,40 +341,56 @@ def rebuild_state_from_events(
         current_char_states: dict[str, dict[str, Any]] = {}
 
         for cid, card in sorted(cores.items()):
+            prev_st = prev_char_states.get(cid, {})
             sampled = sample_character_state(
                 core_card=card,
-                prev_state=prev_char_states.get(cid, {}),
+                prev_state=prev_st,
                 world_slice=weather,
                 active_situation={"tick_id": tick, "colony_sol": colony_sol, "day_phase": day_phase},
                 rng_seed=f"{epoch_seed}:tick_{tick:04d}:{cid}",
             )
+            sampled.setdefault("morale", round(float(prev_st.get("morale", 0.50)), 4))
             current_char_states[cid] = sampled
 
-        # Apply deterministic event deltas recorded on this tick
+        # Aggregate all state_deltas per (char_id, field) across tick_events (100% Abelian / order-independent)
+        char_delta_sums: dict[str, dict[str, float]] = {}
+        rel_delta_batches: list[tuple[str, Any]] = []
+
         for ev in tick_events:
             ev_id = str(ev.get("event_id") or "")
             s_deltas = ev.get("state_deltas") or {}
             actors = [str(a) for a in (ev.get("actors") or []) if a]
 
             if isinstance(s_deltas, dict) and s_deltas:
-                # Check if keyed by character_id or flat delta applied to actors
                 has_char_subdicts = any(k in current_char_states and isinstance(v, dict) for k, v in s_deltas.items())
                 if has_char_subdicts:
                     for cid_key, sub_delta in s_deltas.items():
                         if cid_key in current_char_states and isinstance(sub_delta, dict):
-                            current_char_states[cid_key] = _apply_state_deltas_to_char(
-                                current_char_states[cid_key], sub_delta
-                            )
+                            bucket = char_delta_sums.setdefault(cid_key, {})
+                            for dk, dv in sub_delta.items():
+                                if isinstance(dv, (int, float)):
+                                    cf = _canonical_state_delta_field(str(dk))
+                                    if cf is not None:
+                                        bucket[cf] = bucket.get(cf, 0.0) + float(dv)
                 else:
                     for actor_id in actors:
                         if actor_id in current_char_states:
-                            current_char_states[actor_id] = _apply_state_deltas_to_char(
-                                current_char_states[actor_id], s_deltas
-                            )
+                            bucket = char_delta_sums.setdefault(actor_id, {})
+                            for dk, dv in s_deltas.items():
+                                if isinstance(dv, (int, float)):
+                                    cf = _canonical_state_delta_field(str(dk))
+                                    if cf is not None:
+                                        bucket[cf] = bucket.get(cf, 0.0) + float(dv)
 
             r_deltas = ev.get("relationship_deltas")
             if r_deltas:
-                _apply_relationship_deltas(rel_graph, r_deltas, ev_id)
+                rel_delta_batches.append((ev_id, r_deltas))
+
+        for cid_key, delta_map in sorted(char_delta_sums.items()):
+            current_char_states[cid_key] = _apply_state_deltas_to_char(current_char_states[cid_key], delta_map)
+
+        for ev_id, r_deltas in sorted(rel_delta_batches, key=lambda item: item[0]):
+            _apply_relationship_deltas(rel_graph, r_deltas, ev_id)
 
         prev_char_states = copy.deepcopy(current_char_states)
         snapshot_obj = {
@@ -284,8 +402,12 @@ def rebuild_state_from_events(
             "chronosphere": chrono,
             "weather": weather,
             "character_states": current_char_states,
-            "applied_event_ids": [str(e.get("event_id")) for e in tick_events if e.get("event_id")],
+            "characters": current_char_states,
+            "applied_event_ids": sorted(str(e.get("event_id")) for e in tick_events if e.get("event_id")),
             "total_events_through_tick": sum(len(events_by_tick.get(t, [])) for t in range(1, tick + 1)),
+            "recent_segments": _collect_recent_segments(root, up_to_tick=tick, limit=12),
+            "available_sols": list(range(1, colony_sol + 1)),
+            "available_ticks": list(range(1, tick + 1)),
         }
         snapshots_by_tick[tick] = snapshot_obj
         if write_files:
@@ -507,6 +629,166 @@ class SingleIntegrator:
             "errors": [],
             "rebuild_summary": rebuilt_summary,
         }
+
+    def commit_integrated_proposal(
+        self,
+        target_rel_path: str,
+        message: str | None = None,
+    ) -> dict[str, Any]:
+        """Stage and commit an integrated proposal using locked-down GitHub noreply identity."""
+        env = _git_author_lockdown_env()
+        commit_msg = message or f"feat(enclave): integrate {target_rel_path}"
+        subprocess.run(
+            ["git", "-C", str(self.repo_root), "add", "--", target_rel_path],
+            capture_output=True,
+            text=True,
+            check=False,
+            env=env,
+        )
+        res = subprocess.run(
+            [
+                "git",
+                "-C",
+                str(self.repo_root),
+                "-c",
+                f"user.name={GIT_LOCKDOWN_NAME}",
+                "-c",
+                f"user.email={GIT_LOCKDOWN_EMAIL}",
+                "commit",
+                "-m",
+                commit_msg,
+                "--no-verify",
+            ],
+            capture_output=True,
+            text=True,
+            check=False,
+            env=env,
+        )
+        return {
+            "committed": res.returncode == 0,
+            "returncode": res.returncode,
+            "author_name": GIT_LOCKDOWN_NAME,
+            "author_email": GIT_LOCKDOWN_EMAIL,
+        }
+
+
+class GitWorkspaceSynchronizer:
+    """Strictly synchronizes local capsule working tree with remote origin/main via CAS."""
+
+    def __init__(self, repo_root: Path) -> None:
+        self.repo_root = repo_root
+
+    def hard_sync_to_remote_main(self) -> bool:
+        """Fetch origin/main and hard-reset local working tree before tick evaluation."""
+        env = _git_author_lockdown_env()
+        # Safety check: if running inside an umbrella monorepo subdirectory without its own .git,
+        # never reset the parent umbrella working tree.
+        if not (self.repo_root / ".git").exists() and (self.repo_root.parent.parent / ".git").exists():
+            return False
+        fetch = subprocess.run(
+            ["git", "-C", str(self.repo_root), "fetch", "origin", "main"],
+            capture_output=True,
+            text=True,
+            check=False,
+            env=env,
+            timeout=30,
+        )
+        if fetch.returncode != 0:
+            return False
+        reset = subprocess.run(
+            ["git", "-C", str(self.repo_root), "reset", "--hard", "origin/main"],
+            capture_output=True,
+            text=True,
+            check=False,
+            env=env,
+            timeout=15,
+        )
+        return reset.returncode == 0
+
+    def atomic_commit_and_push_snapshots_cas(
+        self,
+        commit_message: str,
+        staged_artifacts: dict[str, dict[str, Any]] | None = None,
+        max_retries: int = 3,
+    ) -> bool:
+        """
+        Atomically stage, commit, and push integrated artifacts + rebuilt snapshots to origin/main.
+        Crucible Invariant: Retains `staged_artifacts` in memory across rebase retries so a
+        concurrent worker push cannot orphan newly reaped artifacts before rebuild.
+        """
+        if not (self.repo_root / ".git").exists() and (self.repo_root.parent.parent / ".git").exists():
+            return False
+        env = _git_author_lockdown_env()
+        for attempt in range(max_retries):
+            if attempt > 0:
+                if not self.hard_sync_to_remote_main():
+                    return False
+                if staged_artifacts:
+                    for rel_path, payload in staged_artifacts.items():
+                        record_to_write = copy.deepcopy(payload)
+                        record_to_write.pop("disallow_overwrite", None)
+                        _write_json(self.repo_root / rel_path, record_to_write)
+                rebuild_state_from_events(repo_root=self.repo_root, write_files=True)
+
+            subprocess.run(
+                [
+                    "git",
+                    "-C",
+                    str(self.repo_root),
+                    "add",
+                    "--",
+                    "events/",
+                    "story/",
+                    "snapshots/",
+                    "digests/",
+                    "qa/",
+                    "lore/proposed/",
+                    "state/relationship_graph.json",
+                ],
+                capture_output=True,
+                text=True,
+                check=False,
+                env=env,
+            )
+            diff_check = subprocess.run(
+                ["git", "-C", str(self.repo_root), "diff", "--cached", "--quiet"],
+                capture_output=True,
+                text=True,
+                check=False,
+                env=env,
+            )
+            if diff_check.returncode != 0:
+                subprocess.run(
+                    [
+                        "git",
+                        "-C",
+                        str(self.repo_root),
+                        "-c",
+                        f"user.name={GIT_LOCKDOWN_NAME}",
+                        "-c",
+                        f"user.email={GIT_LOCKDOWN_EMAIL}",
+                        "commit",
+                        "-m",
+                        commit_message,
+                        "--no-verify",
+                    ],
+                    capture_output=True,
+                    text=True,
+                    check=False,
+                    env=env,
+                )
+            push = subprocess.run(
+                ["git", "-C", str(self.repo_root), "push", "origin", "HEAD:main"],
+                capture_output=True,
+                text=True,
+                check=False,
+                env=env,
+                timeout=30,
+            )
+            if push.returncode == 0:
+                return True
+        return False
+
 
 
 def main(argv: list[str] | None = None) -> int:

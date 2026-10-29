@@ -56,6 +56,7 @@ ALLOWED_WORKER_PREFIXES: tuple[str, ...] = (
     "story/feasts/",
     "digests/",
     "qa/",
+    "lore/proposed/",
 )
 
 PROTECTED_SHARED_PREFIXES: tuple[str, ...] = (
@@ -65,6 +66,37 @@ PROTECTED_SHARED_PREFIXES: tuple[str, ...] = (
     "ops/",
     "engine/",
     "tools/",
+)
+
+PROHIBITED_HALLUCINATED_KEYS: frozenset[str] = frozenset(
+    {
+        "error_type",
+        "missing_key",
+        "raw_traceback",
+        "loc",
+        "pydantic_error",
+        "second_pass_repair_constraint",
+        "changeset_gate_rejection",
+        "constitutional_baseline",
+        "retry_recovery_mode",
+        "f120_stall_timeout",
+        "empty_or_unparseable_completed",
+        "ENT",
+        "ATTR",
+        "VAL",
+        "CONF",
+        "TIME",
+        "PROV",
+        "@ENT",
+        "@ATTR",
+    }
+)
+
+CANONICAL_POV_ROTATION: tuple[str, ...] = (
+    "enclave_03_silas",
+    "enclave_01_hector",
+    "enclave_05_kaio",
+    "enclave_13_ryn",
 )
 
 # Law L03: 16 Canonical MBTI types and 16 character IDs
@@ -597,14 +629,19 @@ def check_state_bounds_and_trait_immutability(
         )
         for container in state_containers:
             if container is obj.get("state_deltas"):
-                # Deltas can be negative, but absolute state values inside state_deltas (or out-of-range > 1 / < -1) are invalid
-                for k, v in container.items():
-                    if isinstance(v, (int, float)):
-                        if k in ("stress", "fatigue", "openness_state", "conscientiousness_state", "extraversion_state", "agreeableness_state", "neuroticism_state"):
-                            if float(v) < 0.0 or float(v) > 1.0:
-                                errors.append(f"Law L05 violation: {label} state value '{k}'={v} out of bounds [0.0, 1.0].")
-                        elif abs(float(v)) > 1.0:
-                            errors.append(f"Law L05 violation: {label} state delta '{k}'={v} exceeds unit bounds [-1.0, 1.0].")
+                upper = 1.0
+                for k, delta_val in container.items():
+                    if isinstance(delta_val, (int, float)):
+                        if not (abs(float(delta_val)) <= upper):
+                            errors.append(
+                                f"Law L05 violation: {label} state delta '{k}'={delta_val} exceeds unit bounds [-{upper}, {upper}]."
+                            )
+                    elif isinstance(delta_val, dict):
+                        for sk, sub_val in delta_val.items():
+                            if isinstance(sub_val, (int, float)) and not (abs(float(sub_val)) <= upper):
+                                errors.append(
+                                    f"Law L05 violation: {label} state delta '{k}.{sk}'={sub_val} exceeds unit bounds [-{upper}, {upper}]."
+                                )
                 continue
 
             for k in bounded_keys:
@@ -879,7 +916,7 @@ def check_baton_handoff_continuity(
     proposal: dict[str, Any] | None = None,
     repo_root: Path | str | None = None,
 ) -> tuple[bool, list[str]]:
-    """Law L10: Segment k's active_pov_id equals segment k-1's next_pov_target."""
+    """Law L10: Segment active_pov_id matches CANONICAL_POV_ROTATION[(tick_id - 1) % 4] or preceding tick next_pov_target."""
     errors: list[str] = []
     root = _resolve_root(repo_root)
 
@@ -911,25 +948,57 @@ def check_baton_handoff_continuity(
     seg_dir = root / "story" / "segments"
     if seg_dir.is_dir():
         seg_files = sorted(seg_dir.glob("*.json"))
-        segments_by_sol: dict[int, list[dict[str, Any]]] = {}
+        segments_by_sol: dict[int, list[tuple[str, dict[str, Any]]]] = {}
+        segments_by_tick: dict[int, list[dict[str, Any]]] = {}
         for sf in seg_files:
             try:
                 seg = _load_json(sf)
                 if isinstance(seg, dict):
                     sol = int(seg.get("colony_sol", 1) or 1)
-                    segments_by_sol.setdefault(sol, []).append(seg)
+                    t_id = int(seg.get("tick_id", 0) or 0)
+                    segments_by_sol.setdefault(sol, []).append((sf.name, seg))
+                    if t_id >= 1:
+                        segments_by_tick.setdefault(t_id, []).append(seg)
             except Exception as exc:
                 errors.append(f"Law L10 error reading {sf.name}: {exc}")
 
-        for sol, segs in sorted(segments_by_sol.items()):
-            segs.sort(key=lambda s: (int(s.get("tick_id", 0)), int(s.get("segment_index", 0))))
-            for idx in range(1, len(segs)):
-                prev_target = str(segs[idx - 1].get("next_pov_target") or "").strip()
-                curr_pov = str(segs[idx].get("active_pov_id") or "").strip()
-                if prev_target and curr_pov and prev_target != curr_pov:
+        for sol, named_segs in sorted(segments_by_sol.items()):
+            named_segs.sort(key=lambda item: (int(item[1].get("tick_id", 0)), int(item[1].get("segment_index", 0)), item[0]))
+            for idx, (fname, curr_seg) in enumerate(named_segs):
+                curr_pov = str(curr_seg.get("active_pov_id") or "").strip()
+                if not curr_pov:
+                    continue
+                if re.search(r"_w\d{2}_", fname) or re.search(r"_w\d{2}_", str(curr_seg.get("segment_id") or "")):
+                    if curr_pov not in CANONICAL_16_CHARACTER_IDS:
+                        errors.append(
+                            f"Law L10 violation on Sol {sol} ({fname}): collateral wave segment active_pov_id '{curr_pov}' "
+                            f"is not in CANONICAL_16_CHARACTER_IDS."
+                        )
+                    continue
+
+                t_id = int(curr_seg.get("tick_id", 0) or 0)
+                allowed_povs: set[str] = set()
+                if t_id >= 1:
+                    allowed_povs.add(CANONICAL_POV_ROTATION[(t_id - 1) % 4])
+                    for pseg in segments_by_tick.get(t_id - 1, []):
+                        pt = str(pseg.get("next_pov_target") or "").strip()
+                        if pt:
+                            allowed_povs.add(pt)
+                if idx >= 1:
+                    prev_target = str(named_segs[idx - 1][1].get("next_pov_target") or "").strip()
+                    if prev_target:
+                        allowed_povs.add(prev_target)
+
+                explicit_prev = str(curr_seg.get("prev_next_pov_target") or "").strip()
+                if explicit_prev and explicit_prev != curr_pov:
                     errors.append(
-                        f"Law L10 violation on Sol {sol}: segment {idx} active_pov_id '{curr_pov}' "
-                        f"!= previous segment next_pov_target '{prev_target}'."
+                        f"Law L10 violation on Sol {sol} ({fname}): active_pov_id '{curr_pov}' "
+                        f"!= prev_next_pov_target '{explicit_prev}'."
+                    )
+                elif allowed_povs and curr_pov not in allowed_povs:
+                    errors.append(
+                        f"Law L10 violation on Sol {sol} ({fname}): segment {idx} active_pov_id '{curr_pov}' "
+                        f"not in allowed rotation/handoff set {sorted(allowed_povs)}."
                     )
 
     return len(errors) == 0, errors
@@ -1456,7 +1525,7 @@ def validate_showrunner_storytelling_contract(
             errors.append("Showrunner contract violation (Mercer 3-Feature Rule): active_location requires exactly 3 interactive_features.")
         else:
             for idx, feat in enumerate(features):
-                verb = str((feat or {}).get("system_verb") or "")
+                verb = str((feat if isinstance(feat, dict) else {}).get("system_verb") or "")
                 if verb not in ("DEFEND", "ATTRACT", "CONSUME", "CONCEAL"):
                     errors.append(
                         f"Showrunner contract violation: feature[{idx}] has invalid system_verb '{verb}'."
@@ -1503,6 +1572,123 @@ def validate_showrunner_storytelling_contract(
     }
 
 
+def check_no_hallucinated_diagnostic_keys(
+    repo_root: Path | str | dict[str, Any] | None = None,
+    proposal_files: list[str] | None = None,
+    proposal: dict[str, Any] | None = None,
+) -> tuple[bool, list[str]]:
+    """Reject JSON payloads polluted by induction-head copying of EAV or diagnostic keys."""
+    if isinstance(repo_root, dict) and proposal is None:
+        proposal = repo_root
+        repo_root = None
+    errors: list[str] = []
+    root = _resolve_root(repo_root)
+    eav_prefix_tokens = ("@ENT[", "@ATTR[", "@VAL[", "@CONF[", "@TIME[", "@PROV[")
+
+    def _walk(node: Any, label: str) -> None:
+        if isinstance(node, dict):
+            for k, v in node.items():
+                ks = str(k)
+                if ks in PROHIBITED_HALLUCINATED_KEYS or any(ks.startswith(tok[:4]) for tok in eav_prefix_tokens):
+                    errors.append(
+                        f"Lexical firewall violation: {label} contains prohibited hallucinated diagnostic/EAV key '{ks}'."
+                    )
+                _walk(v, f"{label}.{ks}")
+        elif isinstance(node, list):
+            for idx, item in enumerate(node):
+                _walk(item, f"{label}[{idx}]")
+        elif isinstance(node, str):
+            for tok in eav_prefix_tokens:
+                if tok in node:
+                    errors.append(
+                        f"Lexical firewall violation: {label} contains raw EAV token '{tok}' inside string value."
+                    )
+                    break
+
+    if proposal is not None:
+        _walk(proposal, "proposal")
+        return len(errors) == 0, errors
+
+    if proposal_files is not None:
+        for rel_or_abs in proposal_files:
+            fp = Path(rel_or_abs)
+            if not fp.is_absolute():
+                fp = root / str(rel_or_abs).lstrip("./")
+            if not fp.is_file():
+                continue
+            try:
+                _walk(_load_json(fp), str(fp.relative_to(root) if fp.is_relative_to(root) else fp.name))
+            except Exception as exc:
+                errors.append(f"Lexical firewall error reading {fp.name}: {exc}")
+        return len(errors) == 0, errors
+
+    for dname in ("events", "story", "digests", "qa", "lore"):
+        target_dir = root / dname
+        if not target_dir.is_dir():
+            continue
+        for fp in sorted(target_dir.rglob("*.json")):
+            try:
+                _walk(_load_json(fp), str(fp.relative_to(root)))
+            except Exception as exc:
+                errors.append(f"Lexical firewall error reading {fp.name}: {exc}")
+
+    return len(errors) == 0, errors
+
+
+class PreDispatchVerificationError(RuntimeError):
+    """Raised when a session brief or target path violates Constitutional Laws before dispatch."""
+
+
+class PreDispatchContractVerifier:
+    """Pre-dispatch witness verifier W(C, S) enforcing path prefix, tick/sol positivity, and lexical hygiene."""
+
+    @classmethod
+    def verify_brief_before_dispatch(
+        cls,
+        repo_root: Path | str | None,
+        brief_text: str,
+        explicit_target_path: str | None = None,
+        sol: int = 1,
+        tick: int = 1,
+    ) -> str:
+        _ = _resolve_root(repo_root)
+        if int(sol) < 1 or int(tick) < 1:
+            raise PreDispatchVerificationError(
+                f"PreDispatchContractVerifier rejected non-positive sol={sol} or tick={tick}."
+            )
+        target_path = str(explicit_target_path or "").strip().lstrip("./")
+        if not target_path:
+            m = re.search(
+                r"((?:events|story/segments|story/feasts|digests|qa|lore/proposed)/[A-Za-z0-9_./-]+\.json)",
+                str(brief_text or ""),
+            )
+            if m:
+                target_path = m.group(1)
+        if not target_path:
+            raise PreDispatchVerificationError(
+                "PreDispatchContractVerifier rejected brief: missing explicit_target_path."
+            )
+        if ".." in Path(target_path).parts:
+            raise PreDispatchVerificationError(
+                f"PreDispatchContractVerifier rejected path traversal in '{target_path}'."
+            )
+        if any(target_path.startswith(pref) for pref in PROTECTED_SHARED_PREFIXES):
+            raise PreDispatchVerificationError(
+                f"PreDispatchContractVerifier rejected protected target_path '{target_path}'."
+            )
+        if not any(target_path.startswith(pref) for pref in ALLOWED_WORKER_PREFIXES):
+            raise PreDispatchVerificationError(
+                f"PreDispatchContractVerifier rejected target_path '{target_path}' outside {ALLOWED_WORKER_PREFIXES}."
+            )
+        text = str(brief_text or "")
+        for forbidden_tok in ("@ENT[", "@ATTR[", "@VAL[", "@CONF[", "@TIME[", "@PROV["):
+            if forbidden_tok in text:
+                raise PreDispatchVerificationError(
+                    f"PreDispatchContractVerifier rejected brief containing raw EAV token '{forbidden_tok}'."
+                )
+        return target_path
+
+
 # ============================================================================
 # MASTER REGISTRY & VALIDATION ENTRYPOINTS
 # ============================================================================
@@ -1530,7 +1716,7 @@ def validate_proposal(
     proposal: dict[str, Any],
     repo_root: Path | str | None = None,
 ) -> dict[str, Any]:
-    """Validate a candidate proposal bundle against all 16 Constitutional Laws (L01..L16)."""
+    """Validate a candidate proposal bundle against all 16 Constitutional Laws (L01..L16) + Lexical Firewall."""
     root = _resolve_root(repo_root)
     violated_laws: list[str] = []
     all_errors: list[str] = []
@@ -1548,6 +1734,12 @@ def validate_proposal(
             violated_laws.append(law_id)
             all_errors.extend(errs)
 
+    lex_ok, lex_errs = check_no_hallucinated_diagnostic_keys(repo_root=root, proposal=proposal)
+    if not lex_ok:
+        if "L05" not in violated_laws:
+            violated_laws.append("L05")
+        all_errors.extend(lex_errs)
+
     return {
         "valid": len(violated_laws) == 0,
         "violated_laws": violated_laws,
@@ -1560,7 +1752,7 @@ def validate_repository(
     repo_root: Path | str | None = None,
     strict: bool = True,
 ) -> dict[str, Any]:
-    """Validate the repository state against all 16 Constitutional Laws (L01..L16)."""
+    """Validate the repository state against all 16 Constitutional Laws (L01..L16) + Lexical Firewall."""
     root = _resolve_root(repo_root)
     violated_laws: list[str] = []
     all_errors: list[str] = []
@@ -1577,6 +1769,14 @@ def validate_repository(
         if not passed:
             violated_laws.append(law_id)
             all_errors.extend(errs)
+
+    lex_ok, lex_errs = check_no_hallucinated_diagnostic_keys(repo_root=root)
+    if not lex_ok:
+        if "L05" not in violated_laws:
+            violated_laws.append("L05")
+        law_results["L05"]["passed"] = False
+        law_results["L05"]["errors"].extend(lex_errs)
+        all_errors.extend(lex_errs)
 
     return {
         "valid": len(violated_laws) == 0,

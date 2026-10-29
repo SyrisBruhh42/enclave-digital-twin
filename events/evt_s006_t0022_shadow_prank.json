@@ -66,7 +66,6 @@
     "evt_s003_t0010_shadow_prank"
   ],
   "target_path": "events/evt_s006_t0022_shadow_prank.json",
-  "disallow_overwrite": false,
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "showrunner_ledger": {
     "campaign_metadata": {
@@ -181,10 +180,5 @@
     }
   },
   "base_snapshot_tick": 21,
-  "steward_note": "deterministic-enclave-5section-v2",
-  "second_pass_repair_constraint": "@ENT[enclave:18172209916239946375] @ATTR[changeset_gate_rejection] = Stale proposal rejected: base_snapshot_tick=1 lags current_tick=18 by &amp;gt; 4 ticks. @CONF[1.00] @TIME[2026-10-28T13:38:12Z] @PROV[f120_salvage_gate] @ENT[enclave:17010506127070939524] @ATTR[changeset_gate_re",
-  "VAL": "@ENT[enclave:18172209916239946375] @ATTR[changeset_gate_rejection] = Stale proposal rejected: base_snapshot_tick=1 lags current_tick=18 by &amp;gt; 4 ticks. @CONF[1.00] @TIME[2026-10-28T13:38:12Z] @PROV[f120_salvage_gate] @ENT[enclave:17010506127070939524] @ATTR[changeset_gate_re",
-  "CONF": "1.00",
-  "TIME": "2026-10-28T17:12:02Z",
-  "PROV": "sol006_t0022"
+  "steward_note": "deterministic-enclave-5section-v2"
 }

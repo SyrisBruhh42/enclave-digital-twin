@@ -3,7 +3,6 @@
   "colony_sol": 3,
   "tick_id": 12,
   "target_path": "digests/daily/sol_003_dispatch.json",
-  "disallow_overwrite": false,
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "active_pov_id": "enclave_13_ryn",
   "next_pov_target": "enclave_03_silas",
@@ -203,7 +202,5 @@
       }
     }
   },
-  "narrative_prose": "The Hub Hearth exudes a comforting, stifling warmth, heavily insulated from the external chaos. Large copper kettles bubble softly along the curved induction ranges, catching the amber light. Ryn carefully adjusts the magnetic coils to DEFEND the simmering broth from the erratic Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea outside, letting the rich scent ATTRACT the tired crew. With a sharp nod, she commands them to CONSUME their portions before the chill sets back in, wiping her hands on her apron before stepping away from the heat. She watches for a moment, then steps over to Silas, explicitly handing the heavy, steaming ceramic bowl\u2014an actual physical object\u2014over to him to pass the baton of the evening.",
-  "second_pass_repair_constraint": "enclave:15497117182264535630",
-  "f120_stall_timeout": "session_exceeded_25m_cut_loss_relaunch"
+  "narrative_prose": "The Hub Hearth exudes a comforting, stifling warmth, heavily insulated from the external chaos. Large copper kettles bubble softly along the curved induction ranges, catching the amber light. Ryn carefully adjusts the magnetic coils to DEFEND the simmering broth from the erratic Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea outside, letting the rich scent ATTRACT the tired crew. With a sharp nod, she commands them to CONSUME their portions before the chill sets back in, wiping her hands on her apron before stepping away from the heat. She watches for a moment, then steps over to Silas, explicitly handing the heavy, steaming ceramic bowl\u2014an actual physical object\u2014over to him to pass the baton of the evening."
 }

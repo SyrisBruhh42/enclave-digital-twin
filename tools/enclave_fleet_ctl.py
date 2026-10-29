@@ -48,8 +48,14 @@ from tools.jules_enclave_dispatcher import (
     PLAN_CEILING_24H,
     ROLLING_SAFETY_BUFFER,
     SCHEDULED_PRODUCTIVE_CAP,
+    UNIFIED_AUTONOMOUS_CEILING_24H,
+    VIP_IDEA_QUEUE_RESERVE_24H,
     JulesEnclaveDispatcher,
+    compute_dynamic_290_fleet_caps,
     default_budget_state,
+    get_capsule_segment_state_safe,
+    verify_factory_abac_authority,
+    verify_repo_is_public,
 )
 
 
@@ -138,6 +144,7 @@ def compute_cross_fleet_rolling_telemetry(repo_root: Path = REPO_ROOT) -> dict[s
     enclave_budget = dispatcher.load_budget(now_iso=now_iso)
     standby_guard = dispatcher.check_standby_or_paused()
     sympathy = local_mgr.evaluate_hardware_sympathy()
+    dyn_caps = compute_dynamic_290_fleet_caps(now_dt)
 
     state_home = _xdg_state_home()
     tycoon_stats = _count_factory_sessions_24h(state_home / "lfs-tycoon-factory" / "state.json", now_dt)
@@ -162,12 +169,17 @@ def compute_cross_fleet_rolling_telemetry(repo_root: Path = REPO_ROOT) -> dict[s
         + arcade_stats["in_flight"]
         + willow_stats["in_flight"]
     )
+    effective_auto_ceiling = int(dyn_caps.get("effective_autonomous_ceiling_24h", UNIFIED_AUTONOMOUS_CEILING_24H))
+    vip_dispatched_24h = int(dyn_caps.get("vip_idea_dispatched_24h", 0))
 
     payload = {
-        "schema_version": "lfs_jules_fleet_rolling_300_v2.0.0",
+        "schema_version": "lfs_jules_fleet_rolling_300_v2.1.0",
         "updated_at_iso": now_iso,
         "plan_ceiling_rolling_24h": PLAN_CEILING_24H,
         "hard_dispatch_ceiling_24h": HARD_DISPATCH_CEILING_24H,
+        "autonomous_4fleet_ceiling_24h": UNIFIED_AUTONOMOUS_CEILING_24H,
+        "vip_idea_queue_reserve_24h": VIP_IDEA_QUEUE_RESERVE_24H,
+        "effective_autonomous_ceiling_24h": effective_auto_ceiling,
         "ultra_concurrent_vm_cap": 60,
         "enclave_launch_state": standby_guard["launch_state"],
         "enclave_enabled": standby_guard["enabled"],
@@ -185,12 +197,27 @@ def compute_cross_fleet_rolling_telemetry(repo_root: Path = REPO_ROOT) -> dict[s
             "lfs_tycoon_dispatched_24h": tycoon_stats["dispatched_24h"],
             "lfs_trasharcade_dispatched_24h": arcade_stats["dispatched_24h"],
             "willow_guild_dispatched_24h": willow_stats["dispatched_24h"],
+            "vip_idea_queue_dispatched_24h": vip_dispatched_24h,
             "total_live_dispatched_24h": total_live_24h,
+            "autonomous_4fleet_ceiling_24h": UNIFIED_AUTONOMOUS_CEILING_24H,
+            "effective_autonomous_ceiling_24h": effective_auto_ceiling,
+            "remaining_autonomous_ceiling_24h": max(0, effective_auto_ceiling - total_live_24h),
             "remaining_hard_ceiling_24h": max(0, HARD_DISPATCH_CEILING_24H - total_live_24h),
-            "remaining_plan_ceiling_24h": max(0, PLAN_CEILING_24H - total_live_24h),
+            "remaining_plan_ceiling_24h": max(0, PLAN_CEILING_24H - (total_live_24h + vip_dispatched_24h)),
             "total_in_flight_vms": total_in_flight,
             "available_concurrent_vm_slots": max(0, 60 - total_in_flight),
             "next_enclave_slot_reclaim_at_iso": enclave_budget.get("next_slot_reclaim_at_iso", now_iso),
+            "dynamic_290_fleet_caps": dyn_caps.get("dynamic_caps", {}),
+            "segment_states": dyn_caps.get("segment_states", {}),
+        },
+        "unified_4fleet_290_allocation_24h": {
+            "enclave_digital_twin": 110,
+            "lfs_trash_arcade": 96,
+            "lfs_tycoon": 54,
+            "willow_guild": 30,
+            "total_autonomous_24h": 290,
+            "vip_idea_queue_reserve_24h": 10,
+            "global_ultra_ceiling_24h": 300,
         },
         "enclave_300_session_allocation": {
             "scheduled_productive_cap_24h": SCHEDULED_PRODUCTIVE_CAP,
@@ -242,14 +269,15 @@ def set_launch_state(
     if fleet_mode in ("UNIFIED_FLEET", "ENCLAVE_DEDICATED_300"):
         cfg["fleet_mode"] = fleet_mode
     cfg["unified_4fleet_allocation_24h"] = {
-        "enclave_digital_twin": 96,
-        "lfs_trash_arcade": 72,
-        "lfs_tycoon": 48,
-        "willow_guild": 24,
-        "scheduled_total_24h": 240,
-        "auto_retry_reserve_24h": 30,
-        "hard_ceiling_24h": 270,
-        "safety_buffer_24h": 30,
+        "enclave_digital_twin": 110,
+        "lfs_trash_arcade": 96,
+        "lfs_tycoon": 54,
+        "willow_guild": 30,
+        "scheduled_total_24h": 290,
+        "total_autonomous_24h": 290,
+        "vip_idea_queue_reserve_24h": 10,
+        "hard_ceiling_24h": 290,
+        "safety_buffer_24h": 10,
         "plan_ceiling_24h": 300,
     }
     cfg["updated_at_iso"] = _utc_now_iso()
@@ -317,7 +345,41 @@ def install_systemd_units(repo_root: Path = REPO_ROOT, enable_timers: bool = Tru
     }
 
 
-def run_wave_tick(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
+def _compute_disk_verified_barrier(repo_root: Path = REPO_ROOT) -> tuple[int, int]:
+    """Find highest tick tau >= 1 where both an event and a segment exist on disk.
+
+    Returns (next_sol_id, next_tick_id = disk_verified_tick + 1).
+    """
+    import re
+
+    root = Path(repo_root).resolve()
+    tick_re = re.compile(r"_t(\d{4,})_")
+    sol_re = re.compile(r"sol_(\d{3,})_feast\.json$")
+
+    event_ticks: set[int] = set()
+    for fp in root.glob("events/evt_s*_t*.json"):
+        m = tick_re.search(fp.name)
+        if m:
+            event_ticks.add(int(m.group(1)))
+
+    segment_ticks: set[int] = set()
+    for fp in root.glob("story/segments/seg_s*_t*.json"):
+        m = tick_re.search(fp.name)
+        if m:
+            segment_ticks.add(int(m.group(1)))
+    for fp in root.glob("story/feasts/sol_*_feast.json"):
+        ms = sol_re.search(fp.name)
+        if ms:
+            segment_ticks.add(int(ms.group(1)) * 4)
+
+    verified_ticks = {tau for tau in (event_ticks & segment_ticks) if tau >= 1}
+    disk_verified_tick = max(verified_ticks) if verified_ticks else 0
+    next_tick_id = disk_verified_tick + 1
+    next_sol_id = (next_tick_id - 1) // 4 + 1
+    return next_sol_id, next_tick_id
+
+
+def run_wave_tick(repo_root: Path = REPO_ROOT, dry_run: bool = False) -> dict[str, Any]:
     """Execute a wave tick (no-op heartbeat when on `STANDBY`)."""
     runtime_budget = _resolve_runtime_budget_file(repo_root)
     guard_dispatcher = JulesEnclaveDispatcher(repo_root=repo_root, budget_file=runtime_budget, dry_run=True)
@@ -333,20 +395,74 @@ def run_wave_tick(repo_root: Path = REPO_ROOT) -> dict[str, Any]:
             "cross_fleet_rolling_24h": telemetry["cross_fleet_rolling_24h"],
         }
 
-    # Determine current wave index from UTC hour/minute
+    seg_state = get_capsule_segment_state_safe("enclave-digital-twin")
+    if seg_state in ("CHECKED_OUT_TO_USB", "DOCKED_DEHYDRATED", "UNDOCKED_ABSENT"):
+        return {
+            "status": "PAUSED_PORTABLE_SEGMENT_OUT",
+            "capsule_id": "enclave-digital-twin",
+            "segment_state": seg_state,
+            "sessions_dispatched": 0,
+            "cross_fleet_rolling_24h": telemetry["cross_fleet_rolling_24h"],
+        }
+
+    abac_ok, abac_reason = verify_factory_abac_authority("capsule.launch", "enclave-digital-twin")
+    if not abac_ok:
+        return {
+            "status": "BLOCKED_ABAC_AUTHORITY",
+            "reason": abac_reason,
+            "sessions_dispatched": 0,
+            "cross_fleet_rolling_24h": telemetry["cross_fleet_rolling_24h"],
+        }
+
+    is_pub, pub_info = verify_repo_is_public("SyrisBruhh42/enclave-digital-twin")
+    if not is_pub:
+        return {
+            "status": "BLOCKED_PRIVATE_REPO",
+            "repo": "SyrisBruhh42/enclave-digital-twin",
+            "visibility_info": pub_info,
+            "sessions_dispatched": 0,
+            "cross_fleet_rolling_24h": telemetry["cross_fleet_rolling_24h"],
+        }
+
     live_dispatcher = JulesEnclaveDispatcher(
         repo_root=repo_root,
         budget_file=runtime_budget,
-        dry_run=False,
+        dry_run=dry_run,
     )
+    if not dry_run:
+        from tools.integrator import GitWorkspaceSynchronizer
+
+        GitWorkspaceSynchronizer(repo_root).hard_sync_to_remote_main()
+        live_dispatcher.reap_stalled_sessions(persist=True)
+
     now_dt = datetime.now(timezone.utc)
     minute_of_day = now_dt.hour * 60 + now_dt.minute
     wave_idx = (minute_of_day // 60) % 24 + 1
-    tick_id = ((wave_idx - 1) // 6) * 4 + ((wave_idx - 1) % 4) + 1
-    res = live_dispatcher.dispatch_tick_sessions(tick_id=tick_id, persist=True)
+
+    next_sol_id, tick_id = _compute_disk_verified_barrier(repo_root)
+    disk_verified_tick = max(0, tick_id - 1)
+
+    res = live_dispatcher.dispatch_tick_sessions(
+        tick_id=tick_id,
+        colony_sol=next_sol_id,
+        persist=True,
+        full_4fleet_wave=True,
+        wave_idx=wave_idx,
+    )
+    if runtime_budget.is_file():
+        try:
+            post_state = json.loads(runtime_budget.read_text(encoding="utf-8"))
+            post_state["last_dispatched_tick_id"] = disk_verified_tick
+            runtime_budget.write_text(json.dumps(post_state, indent=2) + "\n", encoding="utf-8")
+        except Exception:
+            pass
     return {
         "status": "WAVE_DISPATCHED",
         "wave_index_1_to_24": wave_idx,
+        "tick_id": tick_id,
+        "colony_sol": next_sol_id,
+        "disk_verified_tick": disk_verified_tick,
+        "disk_max_tick": disk_verified_tick,
         "dispatch_result": res,
     }
 

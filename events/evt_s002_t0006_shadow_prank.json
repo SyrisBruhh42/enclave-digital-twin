@@ -55,7 +55,6 @@
   "active_pov_id": "enclave_01_hector",
   "next_pov_target": "enclave_05_kaio",
   "prev_next_pov_target": "enclave_01_hector",
-  "disallow_overwrite": false,
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "context_manifest": {
     "full_cards_loaded_count": 1,

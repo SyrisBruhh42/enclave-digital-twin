@@ -7,17 +7,11 @@
   "base_snapshot_tick": 22,
   "event_type": "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK",
   "location": "The Forge Interior",
-  "disallow_overwrite": false,
   "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "next_pov_target": "enclave_13_ryn",
   "prev_next_pov_target": "enclave_05_kaio",
-  "second_pass_repair_constraint": "enclave:16017190491470851455",
-  "f120_stall_timeout": "session_exceeded_25m_cut_loss_relaunch",
-  "CONF": "1.00",
-  "TIME": "2026-10-28T18:12:04Z",
-  "PROV": "sol006_t0023",
   "narrative_prose": "Kaio analyzed the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, noting the way it rippled against the containment grid. He carefully decided to DEFEND the delicate diagnostic array from the creeping heat, while attempting to ATTRACT the stray magnetic currents to a safe ground point. A sudden, sharp crackle of static made the system CONSUME excess power, filling the room with the scent of ozone and the cold vibration of overtaxed metal. With the readings finally stable, he physically handed the heavy diagnostic baton over to Ryn.",
   "actors": [
     "enclave_05_kaio",
@@ -129,5 +123,6 @@
         "agency_handoff_prompt": "Hand off the baton to Ryn."
       }
     }
-  }
+  },
+  "target_path": "qa/sol_006_t0023_dusk_factcheck.json"
 }

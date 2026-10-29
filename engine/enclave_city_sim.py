@@ -45,6 +45,7 @@ from tools.check_enclave_constitutions import (
 )
 
 SCHEMA_VERSION = "enclave-voxel-city-v2"
+ENCLAVE_VOXEL_CITY_SCHEMA = SCHEMA_VERSION
 GRID_SIZE = 48
 OASIS_CMY_RUPEE_TIERS: tuple[int, ...] = (1, 5, 10, 25, 50, 100, 250, 500, 1000)
 
@@ -954,6 +955,361 @@ CHARACTER_VISUAL_PROFILES: dict[str, dict[str, str]] = {
     "enclave_16_elara": {"icon": "🩺", "shirt": "#f39c12", "hair": "#f2f4f4", "home_bldg": "proj_08_hearth_metabolic_engine"},
 }
 
+# ============================================================================
+# 6. FIVE POKÉMON EMERALD (GEN-3 HOENN) OVERWORLD DISTRICTS & THREE INDOOR ROOMS
+#    Distributes all 18 canonical buildings and 16 canonical citizens cleanly
+#    so no single screen is overcrowded (2-5 landmarks and 1-5 citizens per zone).
+# ============================================================================
+ENCLAVE_EMERALD_DISTRICTS: dict[str, dict[str, Any]] = {
+    "zone_01_homestead_grove": {
+        "zone_id": "zone_01_homestead_grove",
+        "name": "Littleroot Homestead & Genesis Grove",
+        "hoenn_route_banner": "🌿 LITTLEROOT HOMESTEAD GROVE",
+        "biome_id": "crater_valley",
+        "hearth_biome": "Porch Hearth",
+        "grid_width": 24,
+        "grid_height": 18,
+        "willow_spawn": {"x": 11, "y": 10},
+        "buildings": [
+            "bldg_willow_homestead",
+            "proj_04_genesis_garden",
+            "bldg_wilds_nook",
+        ],
+        "citizens": [
+            "enclave_07_willow",
+            "enclave_08_terra",
+            "enclave_05_kaio",
+        ],
+        "enterable_rooms": ["room_willow_home"],
+        "connections": {
+            "east": "zone_02_hearth_plaza",
+            "south": "zone_04_ferro_pier",
+            "north": "zone_03_atlas_terrace",
+        },
+        "description": (
+            "Lush Hoenn-style starter grove centering on Willow's emerald-roofed Alchemist Homestead, "
+            "Terra's Genesis Garden Conservatory, jumpable ledges, and rustling spore-grass."
+        ),
+    },
+    "zone_02_hearth_plaza": {
+        "zone_id": "zone_02_hearth_plaza",
+        "name": "Mauville Hearth & Metabolic Plaza",
+        "hoenn_route_banner": "🍲 MAUVILLE HEARTH PLAZA",
+        "biome_id": "crater_valley",
+        "hearth_biome": "Porch Hearth",
+        "grid_width": 24,
+        "grid_height": 18,
+        "willow_spawn": {"x": 5, "y": 10},
+        "buildings": [
+            "proj_08_hearth_metabolic_engine",
+            "bldg_sibling_post",
+            "bldg_curio_pavilion",
+            "bldg_hub_gables",
+        ],
+        "citizens": [
+            "enclave_13_ryn",
+            "enclave_16_elara",
+            "enclave_09_orion",
+        ],
+        "enterable_rooms": ["room_hearth_galley"],
+        "connections": {
+            "west": "zone_01_homestead_grove",
+            "north": "zone_03_atlas_terrace",
+            "east": "zone_05_forge_summit",
+            "south": "zone_04_ferro_pier",
+        },
+        "description": (
+            "Bustling cobble plaza anchored by Ryn and Elara's crimson-roofed Hearth Galley, "
+            "the Sibling Grid Pneumatic Notice Board, and Aegis Curio Pavilion."
+        ),
+    },
+    "zone_03_atlas_terrace": {
+        "zone_id": "zone_03_atlas_terrace",
+        "name": "Lilycove Living Atlas & Mind Terrace",
+        "hoenn_route_banner": "🏛️ LILYCOVE ATLAS TERRACE",
+        "biome_id": "genesis_terraces",
+        "hearth_biome": "Flow Hourglass",
+        "grid_width": 24,
+        "grid_height": 18,
+        "willow_spawn": {"x": 12, "y": 14},
+        "buildings": [
+            "proj_07_living_atlas",
+            "proj_05_simulacrum",
+            "proj_06_lyceum_of_the_mind",
+            "bldg_mind_loft",
+            "bldg_prodigy_west",
+        ],
+        "citizens": [
+            "enclave_15_dorian",
+            "enclave_14_vex",
+            "enclave_10_isla",
+            "enclave_11_kenna",
+            "enclave_12_elias",
+        ],
+        "enterable_rooms": ["room_atlas_museum"],
+        "connections": {
+            "south": "zone_02_hearth_plaza",
+            "west": "zone_01_homestead_grove",
+            "east": "zone_05_forge_summit",
+        },
+        "description": (
+            "Elevated sapphire-roofed museum terrace housing Dorian and Vex's Living Atlas Colony Museum, "
+            "the Simulacrum Rotunda, and the Lyceum of the Mind."
+        ),
+    },
+    "zone_04_ferro_pier": {
+        "zone_id": "zone_04_ferro_pier",
+        "name": "Slateport Ferrofluid Basin Pier & Sanctuary",
+        "hoenn_route_banner": "🌊 SLATEPORT FERROFLUID PIER",
+        "biome_id": "spore_glade",
+        "hearth_biome": "Rain Garden",
+        "grid_width": 24,
+        "grid_height": 18,
+        "willow_spawn": {"x": 11, "y": 5},
+        "buildings": [
+            "bldg_ferro_pier",
+            "proj_03_sanctuary",
+        ],
+        "citizens": [
+            "enclave_06_zara",
+        ],
+        "enterable_rooms": [],
+        "connections": {
+            "north": "zone_01_homestead_grove",
+            "east": "zone_02_hearth_plaza",
+        },
+        "description": (
+            "Cerulean ferrofluid waterfront with white shoreline foam, brass-railed angling pier, "
+            "and Zara's Magnetotropic Fauna Sanctuary."
+        ),
+    },
+    "zone_05_forge_summit": {
+        "zone_id": "zone_05_forge_summit",
+        "name": "Lavaridge First Forge & Stormbreaker Summit",
+        "hoenn_route_banner": "🌋 LAVARIDGE FORGE SUMMIT",
+        "biome_id": "forge_caldera",
+        "hearth_biome": "Alchemist Crucible",
+        "grid_width": 24,
+        "grid_height": 18,
+        "willow_spawn": {"x": 5, "y": 11},
+        "buildings": [
+            "proj_01_first_forge",
+            "proj_02_stormbreaker",
+            "bldg_forge_lodge",
+            "bldg_prodigy_east",
+        ],
+        "citizens": [
+            "enclave_03_silas",
+            "enclave_04_leo",
+            "enclave_01_hector",
+            "enclave_02_jane",
+        ],
+        "enterable_rooms": [],
+        "connections": {
+            "west": "zone_02_hearth_plaza",
+            "north": "zone_03_atlas_terrace",
+        },
+        "description": (
+            "Obsidian-and-gold caldera ridge where Silas and Leo tend The First Forge busbars "
+            "and Hector and Jane harvest lightning at The Stormbreaker Spire."
+        ),
+    },
+}
+
+ENCLAVE_INDOOR_ROOMS: dict[str, dict[str, Any]] = {
+    "room_willow_home": {
+        "room_id": "room_willow_home",
+        "name": "Willow's Alchemist Homestead Interior",
+        "hoenn_route_banner": "🏡 WILLOW'S ALCHEMIST LAB",
+        "parent_zone_id": "zone_01_homestead_grove",
+        "parent_building_id": "bldg_willow_homestead",
+        "hearth_biome": "Alchemist Crucible",
+        "grid_width": 14,
+        "grid_height": 10,
+        "entry_spawn": {"x": 7, "y": 8},
+        "exit_spawn": {"zone_id": "zone_01_homestead_grove", "x": 8, "y": 10},
+        "residents": ["enclave_07_willow"],
+        "interactive_props": [
+            "Copper Alembic Workbench (DIY Crafting)",
+            "Steampunk Wardrobe Mirror (SR-08 Bridge)",
+            "Blackberry Cordial Gourd Shelf",
+            "Porch Hearth Fireplace",
+        ],
+    },
+    "room_hearth_galley": {
+        "room_id": "room_hearth_galley",
+        "name": "The Hearth & Metabolic Galley Interior",
+        "hoenn_route_banner": "🍲 RYN & ELARA'S HEARTH GALLEY",
+        "parent_zone_id": "zone_02_hearth_plaza",
+        "parent_building_id": "proj_08_hearth_metabolic_engine",
+        "hearth_biome": "Porch Hearth",
+        "grid_width": 16,
+        "grid_height": 11,
+        "entry_spawn": {"x": 8, "y": 9},
+        "exit_spawn": {"zone_id": "zone_02_hearth_plaza", "x": 11, "y": 10},
+        "residents": ["enclave_13_ryn", "enclave_16_elara"],
+        "interactive_props": [
+            "Iron-Wheat Steam Oven",
+            "Long Feast Convergence Table (Law L13)",
+            "Elara's Herbal Apothecary Counter",
+            "Whistling Kettle Pressure Gauge (3-Sol Prank)",
+        ],
+    },
+    "room_atlas_museum": {
+        "room_id": "room_atlas_museum",
+        "name": "Living Atlas Observatory & Colony Museum Hall",
+        "hoenn_route_banner": "🏛️ LIVING ATLAS MUSEUM HALL",
+        "parent_zone_id": "zone_03_atlas_terrace",
+        "parent_building_id": "proj_07_living_atlas",
+        "hearth_biome": "Flow Hourglass",
+        "grid_width": 16,
+        "grid_height": 11,
+        "entry_spawn": {"x": 8, "y": 9},
+        "exit_spawn": {"zone_id": "zone_03_atlas_terrace", "x": 11, "y": 10},
+        "residents": ["enclave_15_dorian", "enclave_14_vex"],
+        "interactive_props": [
+            "Captured Geodes Wing Pedestal",
+            "Magneto-Critter Vivarium",
+            "Ferro-Basin Aquarium Tank",
+            "Concordance Epistemic Archive Desk (SR-05)",
+        ],
+    },
+}
+
+# ============================================================================
+# 7. SIX-STEP GUIDED POKÉMON EMERALD ONBOARDING TUTORIAL
+# ============================================================================
+ENCLAVE_ONBOARDING_TUTORIAL_STEPS: tuple[dict[str, Any], ...] = (
+    {
+        "step_index": 1,
+        "step_id": "STEP_1_MEET_SOREN",
+        "title": "Meet Mentor Soren & Terra by Your Porch",
+        "zone_id": "zone_01_homestead_grove",
+        "required_action": "advance_tutorial",
+        "target_entity_id": "enclave_08_terra",
+        "target_x": 12,
+        "target_y": 9,
+        "rup_reward": 5,
+        "prompt": (
+            "Step 1/6: Walk with [WASD / Arrows] to Mentor Soren & Terra by your porch "
+            "and press [Z / E / Space]"
+        ),
+        "dialogue": (
+            "Welcome to Littleroot Homestead Grove, Willow! Mentor Soren (Silas) and Terra have "
+            "calibrated your 6 Alchemist Tools. Let's test your Copper Trowel on a resonant geode fissure!"
+        ),
+    },
+    {
+        "step_index": 2,
+        "step_id": "STEP_2_DIG_GEODE",
+        "title": "Unearth the Glowing Bismuth Geode Fissure",
+        "zone_id": "zone_01_homestead_grove",
+        "required_action": "forage_dig",
+        "target_entity_id": "node_geode_01",
+        "target_x": 15,
+        "target_y": 11,
+        "rup_reward": 5,
+        "prompt": (
+            "Step 2/6: Equip [1] Copper Trowel, walk to the glowing ✦ Geode Fissure, "
+            "and press [Z / E / Space] to dig"
+        ),
+        "dialogue": (
+            "Splendid chelation! You unearthed a Hopper-Crystal Bismuth Geode and an aromatic Cave-Truffle. "
+            "Next, let's irrigate the Crystalline Iron-Wheat sprouts!"
+        ),
+    },
+    {
+        "step_index": 3,
+        "step_id": "STEP_3_WATER_SPROUT",
+        "title": "Irrigate Crystalline Iron-Wheat Sprouts",
+        "zone_id": "zone_01_homestead_grove",
+        "required_action": "water_crop",
+        "target_entity_id": "node_crop_01",
+        "target_x": 7,
+        "target_y": 12,
+        "rup_reward": 5,
+        "prompt": (
+            "Step 3/6: Press [4] for Distilled Rainwater Can and water the 🌱 Iron-Wheat Plot "
+            "with [Z / E / Space]"
+        ),
+        "dialogue": (
+            "The Crystalline Iron-Wheat is singing in 432 Hz resonance! Look—an Aurora Prism-Moth "
+            "just fluttered into the tall spore-grass!"
+        ),
+    },
+    {
+        "step_index": 4,
+        "step_id": "STEP_4_CATCH_MOTH",
+        "title": "Catch an Aurora Prism-Moth in the Spore Grass",
+        "zone_id": "zone_01_homestead_grove",
+        "required_action": "catch_critter",
+        "target_entity_id": "node_critter_01",
+        "target_x": 17,
+        "target_y": 7,
+        "rup_reward": 5,
+        "prompt": (
+            "Step 4/6: Press [2] for Magnetotropic Bug Net and catch the fluttering 🦋 Prism-Moth "
+            "with [Z / E / Space]"
+        ),
+        "dialogue": (
+            "Gentle sweep! You cataloged an Aurora Prism-Moth without disturbing its magnetite antennae. "
+            "Now head East to Mauville Hearth Plaza to greet Chef Ryn!"
+        ),
+    },
+    {
+        "step_index": 5,
+        "step_id": "STEP_5_PLAZA_MEET_RYN",
+        "title": "Visit Hearth Plaza & Share a Tonic with Ryn",
+        "zone_id": "zone_02_hearth_plaza",
+        "required_action": "gift_citizen",
+        "target_entity_id": "enclave_13_ryn",
+        "target_x": 11,
+        "target_y": 10,
+        "rup_reward": 10,
+        "prompt": (
+            "Step 5/6: Travel East to Hearth Plaza, equip [6] Gift Satchel, and share a tonic "
+            "with Chef Ryn [Z / E / Space]"
+        ),
+        "dialogue": (
+            "Ryn beamed and handed you a warm Crystalline Iron-Wheat roll! Finally, visit the "
+            "Living Atlas Museum or your Homestead Alembic to archive your specimen!"
+        ),
+    },
+    {
+        "step_index": 6,
+        "step_id": "STEP_6_MUSEUM_OR_HOMESTEAD",
+        "title": "Donate to the Living Atlas Museum or Craft at Home",
+        "zone_id": "zone_03_atlas_terrace",
+        "required_action": "donate_museum",
+        "target_entity_id": "proj_07_living_atlas",
+        "target_x": 11,
+        "target_y": 9,
+        "rup_reward": 15,
+        "prompt": (
+            "Step 6/6: Donate your specimen at the Living Atlas Museum or craft DIY decor "
+            "via the [START] Menu!"
+        ),
+        "dialogue": (
+            "Congratulations, Willow! You've mastered all 6 Alchemist Tools and unlocked full "
+            "free-roam across all 5 Hoenn Districts and 3 Indoor Rooms of The Enclave!"
+        ),
+    },
+)
+
+
+def _building_zone_id(building_id: str) -> str:
+    for zid, zspec in ENCLAVE_EMERALD_DISTRICTS.items():
+        if building_id in zspec["buildings"]:
+            return zid
+    return "zone_01_homestead_grove"
+
+
+def _citizen_zone_id(character_id: str) -> str:
+    for zid, zspec in ENCLAVE_EMERALD_DISTRICTS.items():
+        if character_id in zspec["citizens"]:
+            return zid
+    return "zone_01_homestead_grove"
+
 
 def _sanitize_pve_text(text: str) -> str:
     """Guarantee Law L11 compliance by scrubbing any accidental hostile keyword."""
@@ -1103,6 +1459,7 @@ def generate_enclave_city_state(
     buildings_by_id: dict[str, dict[str, Any]] = {}
     for b_spec in ENCLAVE_BUILDINGS:
         b_item = copy.deepcopy(b_spec)
+        b_item["zone_id"] = _building_zone_id(str(b_item["building_id"]))
         pid = b_item.get("project_id")
         if pid and pid in projects_by_id:
             proj = projects_by_id[pid]
@@ -1186,6 +1543,7 @@ def generate_enclave_city_state(
             "polarity_inversion_active": bool(ode_state["polarity_inversion_active"]),
             "x": float(spawn_x),
             "y": float(spawn_y),
+            "zone_id": _citizen_zone_id(cid),
             "home_building_id": vis["home_bldg"],
             "icon": vis["icon"],
             "shirt_color": vis["shirt"],
@@ -1326,6 +1684,17 @@ def generate_enclave_city_state(
         "active_biome_id": selected_biome_id,
         "active_biome": biome,
         "biomes_catalog": copy.deepcopy(ENCLAVE_BIOMES),
+        "active_zone_id": "zone_01_homestead_grove",
+        "active_indoor_room_id": None,
+        "emerald_districts": copy.deepcopy(ENCLAVE_EMERALD_DISTRICTS),
+        "indoor_rooms": copy.deepcopy(ENCLAVE_INDOOR_ROOMS),
+        "onboarding_tutorial": {
+            "steps": copy.deepcopy(list(ENCLAVE_ONBOARDING_TUTORIAL_STEPS)),
+            "current_step_index": 1,
+            "current_step_id": ENCLAVE_ONBOARDING_TUTORIAL_STEPS[0]["step_id"],
+            "completed_step_ids": [],
+            "completed": False,
+        },
         "crucible_hearth_biomes": list(CRUCIBLE_ELEMENTAL_HEARTH_BIOMES),
         "living_atlas_epistemic_tiers": list(DADS_BOOK_LORE_EPISTEMIC_TIERS),
         "tycoon_crafting_themes": list(LFS_TYCOON_CRAFTING_THEMES),
@@ -1743,8 +2112,113 @@ def perform_willow_ac_action(
                 "The Wilds, The Forge, and The Hub reached a cooperative accord on Crystalline Iron-Wheat "
                 "Batch #14: seed stock for Terra, husk ash flux for Silas, and warm flour for Ryn's galley."
             )
+
+    elif action_type == "advance_tutorial":
+        tut = city_state.setdefault(
+            "onboarding_tutorial",
+            {
+                "steps": copy.deepcopy(list(ENCLAVE_ONBOARDING_TUTORIAL_STEPS)),
+                "current_step_index": 1,
+                "current_step_id": ENCLAVE_ONBOARDING_TUTORIAL_STEPS[0]["step_id"],
+                "completed_step_ids": [],
+                "completed": False,
+            },
+        )
+        completed_ids: list[str] = tut.setdefault("completed_step_ids", [])
+        requested_step_id = str(params.get("step_id") or "")
+        step_obj = next(
+            (s for s in ENCLAVE_ONBOARDING_TUTORIAL_STEPS if s["step_id"] == requested_step_id),
+            None,
+        )
+        if step_obj is None:
+            step_obj = next(
+                (s for s in ENCLAVE_ONBOARDING_TUTORIAL_STEPS if s["step_id"] not in completed_ids),
+                ENCLAVE_ONBOARDING_TUTORIAL_STEPS[-1],
+            )
+        sid = str(step_obj["step_id"])
+        if sid not in completed_ids:
+            completed_ids.append(sid)
+        next_uncompleted = next(
+            (s for s in ENCLAVE_ONBOARDING_TUTORIAL_STEPS if s["step_id"] not in completed_ids),
+            None,
+        )
+        if next_uncompleted is None:
+            tut["completed"] = True
+            tut["current_step_index"] = len(ENCLAVE_ONBOARDING_TUTORIAL_STEPS)
+            tut["current_step_id"] = ENCLAVE_ONBOARDING_TUTORIAL_STEPS[-1]["step_id"]
+        else:
+            tut["completed"] = False
+            tut["current_step_index"] = int(next_uncompleted["step_index"])
+            tut["current_step_id"] = str(next_uncompleted["step_id"])
+            target_zone = str(next_uncompleted.get("zone_id") or city_state.get("active_zone_id") or "zone_01_homestead_grove")
+            if target_zone in ENCLAVE_EMERALD_DISTRICTS:
+                city_state["active_zone_id"] = target_zone
+                willow_cit["zone_id"] = target_zone
+
+        rup_delta = int(step_obj.get("rup_reward", 5))
+        headline = f"Tutorial Step {step_obj['step_index']}/6 Complete: {step_obj['title']}"
+        summary = str(step_obj["dialogue"])
+        actors.extend(["enclave_08_terra", "enclave_03_silas"])
+
+    elif action_type == "warp_zone":
+        room_id = params.get("room_id")
+        zone_id = str(params.get("zone_id") or city_state.get("active_zone_id") or "zone_01_homestead_grove")
+        if room_id and str(room_id) in ENCLAVE_INDOOR_ROOMS:
+            rm = ENCLAVE_INDOOR_ROOMS[str(room_id)]
+            city_state["active_indoor_room_id"] = str(room_id)
+            city_state["active_zone_id"] = str(rm["parent_zone_id"])
+            willow_cit["zone_id"] = str(rm["parent_zone_id"])
+            willow_cit["x"] = float(rm["entry_spawn"]["x"])
+            willow_cit["y"] = float(rm["entry_spawn"]["y"])
+            rup_delta = 5
+            headline = f"Entered {rm['name']}"
+            summary = f"Willow stepped inside {rm['name']} ({rm['hoenn_route_banner']})."
+            actors.extend([cid for cid in rm.get("residents", []) if cid != "enclave_07_willow"])
+        else:
+            if zone_id not in ENCLAVE_EMERALD_DISTRICTS:
+                zone_id = "zone_01_homestead_grove"
+            dist = ENCLAVE_EMERALD_DISTRICTS[zone_id]
+            city_state["active_indoor_room_id"] = None
+            city_state["active_zone_id"] = zone_id
+            biome_id = str(dist["biome_id"])
+            if biome_id in ENCLAVE_BIOMES:
+                city_state["active_biome_id"] = biome_id
+                city_state["active_biome"] = copy.deepcopy(ENCLAVE_BIOMES[biome_id])
+            willow_cit["zone_id"] = zone_id
+            willow_cit["x"] = float(params.get("x", dist["willow_spawn"]["x"]))
+            willow_cit["y"] = float(params.get("y", dist["willow_spawn"]["y"]))
+            rup_delta = 5
+            headline = f"Arrived at {dist['name']}"
+            summary = f"Willow traveled to {dist['hoenn_route_banner']} — {dist['description']}"
     else:
         raise ValueError(f"Unsupported Willow AC action_type: {action_type!r}")
+
+    # Automatically advance onboarding tutorial when an in-world action satisfies a tutorial step
+    if action_type != "advance_tutorial" and "onboarding_tutorial" in city_state:
+        tut = city_state["onboarding_tutorial"]
+        completed_ids = tut.setdefault("completed_step_ids", [])
+        action_alias = "donate_museum" if action_type in ("craft_diy", "place_decor") else action_type
+        for step_spec in ENCLAVE_ONBOARDING_TUTORIAL_STEPS:
+            sid = str(step_spec["step_id"])
+            if sid in completed_ids:
+                continue
+            if step_spec["required_action"] == action_alias:
+                if sid == "STEP_2_DIG_GEODE" and "STEP_1_MEET_SOREN" not in completed_ids:
+                    completed_ids.append("STEP_1_MEET_SOREN")
+                completed_ids.append(sid)
+                break
+        next_uncompleted = next(
+            (s for s in ENCLAVE_ONBOARDING_TUTORIAL_STEPS if s["step_id"] not in completed_ids),
+            None,
+        )
+        if next_uncompleted is None:
+            tut["completed"] = True
+            tut["current_step_index"] = len(ENCLAVE_ONBOARDING_TUTORIAL_STEPS)
+            tut["current_step_id"] = ENCLAVE_ONBOARDING_TUTORIAL_STEPS[-1]["step_id"]
+        else:
+            tut["completed"] = False
+            tut["current_step_index"] = int(next_uncompleted["step_index"])
+            tut["current_step_id"] = str(next_uncompleted["step_id"])
 
     meta_econ["city_rupee_bonus"] = int(meta_econ.get("city_rupee_bonus", 0)) + int(rup_delta)
     meta_econ["total_actions_performed"] = int(meta_econ.get("total_actions_performed", 0)) + 1
@@ -1776,6 +2250,7 @@ def summarize_enclave_city_state(city_state: dict[str, Any]) -> dict[str, Any]:
     museum = city_state.get("museum") or {}
     favors = city_state.get("daily_favors") or []
     meta_econ = city_state.get("meta_Economy") or {}
+    tut = city_state.get("onboarding_tutorial") or {}
     donated_ids = list(museum.get("donated_specimen_ids") or [])
     completed_favors = sum(1 for f in favors if f.get("completed"))
 
@@ -1784,6 +2259,12 @@ def summarize_enclave_city_state(city_state: dict[str, Any]) -> dict[str, Any]:
         "grid_size": int(city_state.get("grid_size", GRID_SIZE)),
         "active_biome_id": str(city_state.get("active_biome_id") or "crater_valley"),
         "active_biome_name": str((city_state.get("active_biome") or {}).get("name") or "Enclave Crater Valley"),
+        "active_zone_id": str(city_state.get("active_zone_id") or "zone_01_homestead_grove"),
+        "active_indoor_room_id": city_state.get("active_indoor_room_id"),
+        "emerald_districts_count": len(city_state.get("emerald_districts") or ENCLAVE_EMERALD_DISTRICTS),
+        "indoor_rooms_count": len(city_state.get("indoor_rooms") or ENCLAVE_INDOOR_ROOMS),
+        "tutorial_step_index": int(tut.get("current_step_index", 1)),
+        "tutorial_completed": bool(tut.get("completed", False)),
         "crucible_hearth_biomes": list(CRUCIBLE_ELEMENTAL_HEARTH_BIOMES),
         "living_atlas_epistemic_tiers": list(DADS_BOOK_LORE_EPISTEMIC_TIERS),
         "tycoon_crafting_themes": list(LFS_TYCOON_CRAFTING_THEMES),
@@ -1845,6 +2326,17 @@ class EnclaveVoxelCityEngine:
 
     def perform_action(self, action_type: str, payload: dict[str, Any] | None = None) -> dict[str, Any]:
         return perform_willow_ac_action(self.state, action_type=action_type, payload=payload)
+
+    def advance_tutorial(self, step_id: str | None = None) -> dict[str, Any]:
+        payload = {"step_id": step_id} if step_id else {}
+        return perform_willow_ac_action(self.state, action_type="advance_tutorial", payload=payload)
+
+    def warp_zone(self, zone_id: str | None = None, room_id: str | None = None) -> dict[str, Any]:
+        return perform_willow_ac_action(
+            self.state,
+            action_type="warp_zone",
+            payload={"zone_id": zone_id, "room_id": room_id},
+        )
 
     def advance_tick(self) -> dict[str, Any]:
         return advance_city_tick(self.state, repo_root=self.repo_root)

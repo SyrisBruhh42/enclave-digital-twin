@@ -20,7 +20,6 @@
   "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
-  "disallow_overwrite": false,
   "target_path": "events/evt_s007_t0026_expedition_consequence.json",
   "context_manifest": {
     "full_cards_loaded_count": 1,
@@ -153,11 +152,5 @@
         "agency_handoff_prompt": "Kaio, take the baton."
       }
     }
-  },
-  "second_pass_repair_constraint": "enclave:7298660649132524014",
-  "changeset_gate_rejection": "Law L02 violation: target_path 'lore/proposed/lore_s006_t0022_expedition_discovery.json' outside ('events/', 'story/segments/', 'story/feasts/'",
-  "CONF": "1.00",
-  "TIME": "2026-10-28T21:12:04Z",
-  "PROV": "sol007_t0026",
-  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR"
+  }
 }

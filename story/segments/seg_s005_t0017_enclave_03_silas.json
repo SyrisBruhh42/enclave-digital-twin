@@ -8,116 +8,119 @@
   "active_pov_id": "enclave_03_silas",
   "next_pov_target": "enclave_01_hector",
   "location": "The_First_Forge",
-  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
-  "narrative_prose": "Silas tightened his grip on the heavy brass baton, the cold, rigid surface biting into his calloused palm. He stood near the entrance of The First Forge, staring out at the violet horizon. The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea churned violently in the distance, a chaotic dance of deep greens and blinding azure. The harsh metallic tang of ozone filled his nose, cutting through the warm, earthy smell of the morning forge fire. The rhythmic clang of Leo's hammer against the anvil echoed against the basalt walls, a steady heartbeat beneath the howling roar of the magnetic storm outside. 'Inefficient,' he muttered, checking the containment tolerances of the baton's core one last time. He adjusted his stance, ready to DEFEND his position if a stray arc of sympathetic lightning bridged the gap. Slowly, he shifted the baton to his left hand to ATTRACT the latent charge from the nearest geode capacitor, ensuring the payload remained stable. Finally, he turned, aiming to CONCEAL the sensitive readouts from the worst of the grit, and thrust the baton firmly into Hector's waiting hand, ignoring the younger man's eager grin. The transfer of responsibility was absolute.",
-  "campaign_metadata": {
-    "session_number": 5,
-    "colony_sol": 5,
-    "tick_id": 17,
-    "pacing_mode": "MERCER_IMMERSIVE",
-    "consequential_fights_since_short_rest": 0,
-    "horizon_goals": {
-      "immediate_session_goal": "Transfer the stabilized core metrics to Hector for The Stormbreaker",
-      "mid_term_milestone": "Reinforce the First Forge against the rising ferrofluid tides",
-      "campaign_arc_climax": "Maintain structural integrity through the twin suns' polarity shift"
-    }
-  },
-  "active_location": {
-    "location_id": "The_First_Forge",
-    "macro_silhouette": "The First Forge stood as a monolithic testament to precision against the chaotic exoplanet elements, its heavy basalt walls lined with humming geode capacitors and reinforced brass framing. Sparks cascaded from the central anvil, casting long, sharp shadows across the meticulously organized workbenches. The air was thick with the heat of the fire and the electric hum of contained energy, while the heavy, sealed blast doors muffled the raging storm outside.",
-    "sensory_palette": {
-      "sight_and_color": "Cascading orange sparks against polished brass and deep violet exterior storms",
-      "sound": "Rhythmic hammer strikes over a steady, low-frequency hum",
-      "smell": "Sharp ozone mixed with warm, metallic dust",
-      "tactile_temperature": "Oppressive radiant heat warring with brief drafts of electric chill",
-      "taste_optional": "Faint trace of metallic static tang on the tongue"
-    },
-    "interactive_features": [
-      {
-        "feature_name": "Heavy Brass Blast Doors",
-        "affordance_description": "Thick doors that can be braced against sudden magnetic surges.",
-        "system_verb": "DEFEND",
-        "associated_check_dc": 14
-      },
-      {
-        "feature_name": "Geode Capacitor Array",
-        "affordance_description": "Exposed crystalline nodes that pull ambient static.",
-        "system_verb": "ATTRACT",
-        "associated_check_dc": 14
-      },
-      {
-        "feature_name": "Workstation Lead Shielding",
-        "affordance_description": "A heavy fold-down screen to protect sensitive components.",
-        "system_verb": "CONCEAL",
-        "associated_check_dc": 14
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "narrative_prose": "The First Forge hummed ominously as the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea struck the outer hull, sending violent shudders through the hand-forged brass ribbing. Blinding, stuttering violet arcs of raw static danced across the heavy observation viewport, casting sharp shadows over the grease-stained workstations. The pungent scent of vaporized copper flux and thick ozone bit sharply into Silas's throat, while the oppressive, bone-shaking vibration resonated through his very boots, and the faint, metallic tang of ionized iron settled on his tongue. With the primary containment array buckling under the impossible strain, Silas hurriedly engaged the heavy master shunt lever to DEFEND the excess charge and shielded the delicate secondary relays behind a welded copper bulwark to CONCEAL them. Shouting over the deafening hum that seemed to CONSUME all other sound, he shoved the sparking, heavily insulated calibration baton firmly into Hector's waiting grasp, demanding he finish the ascent.",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 5,
+      "colony_sol": 5,
+      "tick_id": 17,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Stabilize the primary induction mast before the shear wave hits",
+        "mid_term_milestone": "Upgrade the colony's magnetospheric shielding",
+        "campaign_arc_climax": "Survive the convergence of the twin suns' polarity inversion"
       }
-    ]
-  },
-  "reactive_toys": [
-    {
-      "entity_id": "ferrofluid_storm_surge",
-      "name_and_role": "Ferrofluid Sea Shear Wave",
-      "motivation_goal": "Destabilize ungrounded metallic structures",
-      "consistent_method": "Pounding the cliffside with magnetically charged liquid impacts",
-      "immediate_complication": "Vibrations threaten to knock the baton out of alignment before handoff",
-      "pressure_index": 7,
-      "uninterrupted_escalation": "Could cause a sympathetic overload in the forge's main capacitor"
-    }
-  ],
-  "encounter_matrix": {
-    "three_levels_of_why": {
-      "level_1_immediate": "Silas must ensure the baton's charge holds before Hector takes it into the storm.",
-      "level_2_local": "The Stormbreaker project relies on this precise calibration to function safely.",
-      "level_3_campaign_arc": "The colony's survival depends on mastering both static defense and dynamic exploration."
     },
-    "active_specialist_roles": [
-      {
-        "actor_id": "enclave_03_silas",
-        "tactical_role": "DEFENDER"
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "The First Forge's observation deck hung precariously over the ferrofluid sea, its hand-forged brass ribbing groaning under the onslaught of the magnetohydrodynamic storm. Inside, the heavy shadows were broken only by the violent, stuttering glare of the central induction core struggling to maintain a stable plasma torus.",
+      "sensory_palette": {
+        "sight_and_color": "Blinding violet plasma arcs and heavy, oxidized bronze shadows",
+        "sound": "Deafening, low-frequency structural groans and the sharp crackle of static discharge",
+        "smell": "Pungent ozone, scorched flux, and hot oil",
+        "tactile_temperature": "Oppressively hot blasts radiating from the core, offset by the bone-shaking vibration in the floor",
+        "taste_optional": "Metallic tang of ionized iron dust"
       },
+      "interactive_features": [
+        {
+          "feature_name": "Primary Flux Shunt",
+          "affordance_description": "A massive, heavy-duty lever designed to ground excess energy.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Resonant Copper Coil",
+          "affordance_description": "Exposed winding that pulses with unstable induction fields.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Overloaded Bellows Vent",
+          "affordance_description": "A screaming pressure release valve venting superheated gas.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
       {
-        "actor_id": "enclave_01_hector",
-        "tactical_role": "STRIKER"
+        "entity_id": "shear_storm_front",
+        "name_and_role": "Kelvin-Helmholtz Shear Front",
+        "motivation_goal": "Tear apart the magnetic containment lattice",
+        "consistent_method": "Pulsing erratic spikes of sympathetic core-iron feedback",
+        "immediate_complication": "The outer hull integrity is failing faster than predicted",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "Will cause a full cascade failure of the workshop's power grid"
       }
     ],
-    "strain_accumulated_upward": 1,
-    "prerolled_hazard_queue": [
-      12,
-      19,
-      5,
-      14,
-      8
-    ]
-  },
-  "lpi_metrics": {
-    "relational_tension_density": 0.5,
-    "motivational_vector_saturation": 0.6,
-    "unresolved_conflict_ratio": 0.4,
-    "temporal_horizon_immediacy": 0.8,
-    "composite_lpi": 0.57,
-    "classification": "Campaign-Ready"
-  },
-  "dual_agent_contract": {
-    "judge_tactician": {
-      "provider": "local_inference",
-      "model": "judge_v1",
-      "temperature": 0.1,
-      "explicit_pre_roll_dc": 14,
-      "failure_stakes_declared": "The baton's core charge fluctuates during handoff, requiring Silas to re-calibrate it, delaying Hector's departure.",
-      "graduated_outcomes": {
-        "nat_1_false_intuition": "You misjudge the grounding, taking a painful shock that drops the baton and completely discharges it.",
-        "below_dc_complicated_fail_forward": "The handoff is clumsy; Hector gets the baton, but its efficiency is reduced by 15% for the next hour.",
-        "meets_dc_clean_success": "A perfect, firm exchange. Hector receives the baton with its structural integrity and charge flawlessly preserved.",
-        "dc_plus_5_or_20_extended_lore": "Your precise grip actively reinforces the core lattice, granting Hector a temporary boost in resistance against the storm."
-      }
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The containment lattice must be reinforced to prevent an explosion.",
+        "level_2_local": "The First Forge relies on this stability to smelt necessary alloys.",
+        "level_3_campaign_arc": "Mastering the ferrofluid sea's dynamics is key to long-term colony survival."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "DEFENDER"
+        },
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        }
+      ],
+      "strain_accumulated_upward": 2,
+      "prerolled_hazard_queue": [
+        12,
+        8,
+        19,
+        4,
+        15
+      ]
     },
-    "master_narrator": {
-      "executor": "jules",
-      "temperature": 0.7,
-      "calypso_zero_raw_stats": true,
-      "prosodic_micro_pauses_enabled": true,
-      "agency_handoff_prompt": "Hector grips the baton, feeling the steady hum of Silas's work. What does Hector do next?"
+    "lpi_metrics": {
+      "relational_tension_density": 0.65,
+      "motivational_vector_saturation": 0.8,
+      "unresolved_conflict_ratio": 0.75,
+      "temporal_horizon_immediacy": 0.9,
+      "composite_lpi": 0.77,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_inference",
+        "model": "judge_v1",
+        "temperature": 0.1,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The induction mast will blow out, plunging the Forge into darkness and delaying critical smelting.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "You miscalculate the resonance frequency; the coil surges, causing severe equipment damage.",
+          "below_dc_complicated_fail_forward": "You stabilize the mast but at the cost of shorting out the secondary arrays.",
+          "meets_dc_clean_success": "The mast is secured, perfectly dissipating the excess load.",
+          "dc_plus_5_or_20_extended_lore": "You secure the mast so efficiently that you capture a residual charge, boosting the Forge's efficiency."
+        }
+      },
+      "master_narrator": {
+        "executor": "jules",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Hector receives the baton and grins as the storm howls. What does he do?"
+      }
     }
   },
   "context_manifest": {
@@ -128,9 +131,10 @@
     "interlocutor_full_cards_loaded": 0
   },
   "context_manifest_path": "context/manifests/manifest_s005_t0017_enclave_03_silas.json",
-  "total_prompt_tokens": 750,
+  "total_prompt_tokens": 850,
   "target_path": "story/segments/seg_s005_t0017_enclave_03_silas.json",
-  "disallow_overwrite": false,
-  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
-  "constitutional_baseline": "laws_L01_through_L16_and_calypso_verified"
+  "prev_next_pov_target": "enclave_03_silas",
+  "event_id": "seg_s005_t0017_enclave_03_silas",
+  "world_timestamp_iso": "2026-10-25T00:00:00Z",
+  "event_type": "POV_RASHOMON_RELAY_SCENES"
 }
