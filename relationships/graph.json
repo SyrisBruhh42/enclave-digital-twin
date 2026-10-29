@@ -763,15 +763,16 @@
       "squad_a": "The Forge",
       "squad_b": "The Hub",
       "relationship_type": "Intellectual_Rivals_Phase_4",
-      "bond_strength": 0.91,
-      "trust": 0.95,
+      "bond_strength": 0.96,
+      "trust": 1.0,
       "affection": 0.88,
       "intellectual_friction": 0.42,
       "how_a_sees_b": "Grumbles that Ryn guards the iron-wheat silos like a dragon, while secretly respecting her uncompromising ledger discipline more than anyone else's.",
       "how_b_sees_a": "Battles Silas weekly over Schr\u00f6dinger's Harvest grain allocations, then bakes his favorite low-sodium crust rolls to soothe his arthritic knuckles.",
       "shared_history_hook": "Veteran adversaries of every Harvest Partition debate, united by a mutual hatred of wasted grams and sloppy arithmetic.",
       "evidence_refs": [
-        "evt_s003_t0012_reflection"
+        "evt_s003_t0012_reflection",
+        "evt_s009_t0036_reflection"
       ]
     },
     {
@@ -6557,6 +6558,6 @@
       }
     }
   },
-  "updated_at_tick": 35,
-  "applied_event_count": 39
+  "updated_at_tick": 36,
+  "applied_event_count": 40
 }
