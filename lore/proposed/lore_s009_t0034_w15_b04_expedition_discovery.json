@@ -1,0 +1,111 @@
+{
+  "event_type": "EXPEDITION_DISCOVERY",
+  "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "campaign_metadata": {
+    "session_number": 9,
+    "colony_sol": 9,
+    "tick_id": 34,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Stabilize the magnetohydrodynamic induction rig before the shear wave hits.",
+      "mid_term_milestone": "Map the ferrofluid sea currents.",
+      "campaign_arc_climax": "Survive the great magnetic reversal."
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea_coast",
+    "macro_silhouette": "The turbulent coastline is dominated by jagged basalt formations that crackle with latent static. The ferrofluid sea itself writhes and peaks in sharp, rhythmic spikes, driven by the intense magnetic shear overhead. Dark, metallic waves crash against the shore, leaving behind a shimmering, magnetic residue. The sky is a bruised purple, fractured by sudden arcs of atmospheric plasma. The sheer scale of the magnetic turbulence creates a dizzying, disorienting vista.",
+    "sensory_palette": {
+      "sight_and_color": "Iridescent black waves, blinding white arcs of plasma, deep purple bruised sky.",
+      "sound": "Deafening roar of magnetic shear, sharp cracks of static discharge, deep low-frequency hum of the ferrofluid sea.",
+      "smell": "Ozone, burnt copper, metallic tang.",
+      "tactile_temperature": "Oppressive electrical tension on the skin, biting cold wind, sudden bursts of localized heat."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetized Basalt Spire",
+        "affordance_description": "Can be used to ground excess charge or as a vantage point.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Surge Pool",
+        "affordance_description": "Can be manipulated to alter the local magnetic field.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 16
+      },
+      {
+        "feature_name": "Static-Charged Fog Bank",
+        "affordance_description": "Provides cover but risks sudden discharge.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "mhd_shear_wave",
+      "name_and_role": "Magnetohydrodynamic Shear Wave - Environmental Hazard",
+      "motivation_goal": "To equalize the extreme magnetic pressure differential.",
+      "consistent_method": "Unleashing chaotic, high-energy plasma arcs and sudden surges in the ferrofluid sea.",
+      "immediate_complication": "The shear wave threatens to overwhelm Hector's induction rig.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "The wave will increase in amplitude and frequency, eventually triggering a localized magnetic storm."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The immediate danger is the magnetohydrodynamic Kelvin-Helmholtz shear destabilizing the rig.",
+      "level_2_local": "This shear is localized friction caused by the Enclave's failing magnetosphere.",
+      "level_3_campaign_arc": "The escalating instability threatens the very existence of the Enclave."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [ 4, 8, 12, 16, 20 ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.9,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.85,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4-turbo",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If Hector fails to stabilize the rig, the sheer wave will obliterate the sensor array, leaving the Enclave blind to the coming storm.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Hector mistakenly believes the shear wave is subsiding, leading him to lower the rig's defenses prematurely.",
+        "below_dc_complicated_fail_forward": "Hector manages to save the primary sensor, but the resulting backlash shorts out his own protective gear.",
+        "meets_dc_clean_success": "Hector deftly navigates the shear wave, stabilizing the rig and capturing crucial telemetry.",
+        "dc_plus_5_or_20_extended_lore": "Hector not only stabilizes the rig but discovers a harmonic resonance in the ferrofluid sea that could provide a new power source."
+      }
+    },
+    "master_narrator": {
+      "executor": "anthropic",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector grips the shuddering induction rig, the ozone thick in his lungs. 'Kaio! I need the shunt cable connected, now!' he yells over the roar of the magnetic shear, tossing the heavy, sparking coil towards them."
+    }
+  }
+}
