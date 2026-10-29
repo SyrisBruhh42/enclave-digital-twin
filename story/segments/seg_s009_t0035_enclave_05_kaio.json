@@ -1,0 +1,145 @@
+{
+  "event_id": "seg_s009_t0035_enclave_05_kaio",
+  "tick_id": 35,
+  "colony_sol": 9,
+  "day_phase": "DUSK_CRAFT",
+  "world_timestamp_iso": "2026-11-02T18:00:00Z",
+  "base_snapshot_tick": 34,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "Ferrofluid_Sea_Outpost",
+  "actors": [
+    "enclave_05_kaio",
+    "enclave_13_ryn"
+  ],
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "narrative_prose": "Kaio's boots scrambled for purchase on the trembling basalt as the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea intensified, its deafening roar vibrating through his teeth like a swarm of angry bees. The air smelled of burned ozone and scorched metal, while blinding violet arcs illuminated the jagged peaks of liquid black iron surging toward the ridge outpost. He tasted the static on his tongue, his hands shaking slightly as he gripped the heavy expedition baton Hector had handed him, feeling the biting cold of the handle against his palm. With a sudden shift in the magnetic currents, a massive ferrofluid wave threatened to crest over the outpost, forcing Kaio to swiftly DEFEND the baton by wedging it under a reinforced brass bulkhead to avoid the crushing weight. He frantically waved a luminescent glow-stick to ATTRACT Ryn's attention through the static haze, knowing the survival of the outpost relied on passing the relay forward before the magnetic shear CONSUME their entire scaffolding.",
+  "summary": "Kaio navigates the violent magnetohydrodynamic shear wave to physically hand off the baton to Ryn.",
+  "importance": 8.0,
+  "novelty_score": 0.85,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "state_deltas": {
+    "stress_delta": 0.05
+  },
+  "relationship_deltas": [
+    {
+      "from": "enclave_05_kaio",
+      "to": "enclave_13_ryn",
+      "bond_delta": 0.03,
+      "trust_delta": 0.03
+    }
+  ],
+  "evidence_refs": [],
+  "campaign_metadata": {
+    "session_number": 9,
+    "colony_sol": 9,
+    "tick_id": 35,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Survive the shear wave and execute the handoff to Ryn.",
+      "mid_term_milestone": "Reinforce the ridge outpost against the ferrofluid tides.",
+      "campaign_arc_climax": "Master the magnetohydrodynamic flows of the ferrofluid sea."
+    }
+  },
+  "active_location": {
+    "location_id": "Ferrofluid_Sea_Outpost",
+    "macro_silhouette": "A precarious scaffolding platform clinging to the edge of the abyss, battered by the elements. The surging metallic sea below throws violent magnetic storms into the air, creating a chaotic display of arcs and jagged spikes. It is a hostile, exposed environment that demands absolute precision to survive.",
+    "sensory_palette": {
+      "sight_and_color": "Blinding violet arcs and shimmering metallic waves.",
+      "sound": "Deafening roar vibrating through teeth like angry bees.",
+      "smell": "Burned ozone and scorched metal.",
+      "tactile_temperature": "Biting cold of the handle against palm and static shocks.",
+      "taste_optional": "Static on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Brass Bulkhead",
+        "affordance_description": "A reinforced wall.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetic Grapple",
+        "affordance_description": "A winch.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Shadow Trench",
+        "affordance_description": "A deep rut.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "Ferrofluid Wave",
+      "name_and_role": "Magnetohydrodynamic shear fluctuation",
+      "motivation_goal": "Disrupt alignment.",
+      "consistent_method": "Pulsing unpredictable magnetic fields.",
+      "immediate_complication": "Baton transfer becomes difficult.",
+      "pressure_index": 6,
+      "uninterrupted_escalation": "true"
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Handoff the baton to Ryn amidst the tempest.",
+      "level_2_local": "Secure the expedition data.",
+      "level_3_campaign_arc": "Maintain infrastructure for The Enclave."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "DEFENDER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      4,
+      8,
+      15,
+      16,
+      23
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.6,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.7,
+    "composite_lpi": 0.6,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_ai",
+      "model": "qwen3.5:4b-q4_K_M",
+      "temperature": 0.1,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The baton handoff to Ryn is fumbled.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Catastrophic misalignment and minor burns.",
+        "below_dc_complicated_fail_forward": "Handoff complete but equipment damaged.",
+        "meets_dc_clean_success": "Flawless handoff.",
+        "dc_plus_5_or_20_extended_lore": "Flawless handoff with new insight into ferrofluid behavior."
+      }
+    },
+    "master_narrator": {
+      "executor": "local_ai",
+      "temperature": 0.4,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Ryn, take the baton."
+    }
+  }
+}
