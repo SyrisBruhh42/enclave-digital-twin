@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "active_pov_id": "enclave_01_hector",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "colony_sol": 8,
+      "tick_id": 30,
+      "session_number": 1,
+      "consequential_fights_since_short_rest": 0,
+      "pacing_mode": "MULLIGAN_CRISIS",
+      "horizon_goals": {
+        "immediate_session_goal": "Navigate the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+        "mid_term_milestone": "Reach the Enclave checkpoint",
+        "campaign_arc_climax": "Survival of the Enclave"
+      }
+    },
+    "active_location": {
+      "location_id": "ferrofluid_sea_shear",
+      "macro_silhouette": "A vast, churning expanse of dark metallic fluid. Jagged magnetic fields slice through the surface, creating a violent visual shear. The chaotic waves clash against ancient metallic structures that stand resilient against the storm. Hector finds himself on a precarious copper mast, looking over the stormy horizon.",
+      "sensory_palette": "The air tastes of heavy ozone and rust. He hears the deafening roar of liquid metal colliding and the sharp crackle of arcing electricity. The wind carries a burnt copper scent, biting against his skin. The sheer cold and violent vibrations of the copper mast course through his boots.",
+      "interactive_features": [
+        {
+          "feature_name": "Oscillating Magnetic Shunt",
+          "affordance_description": "A heavy iron lever that can reverse the local magnetic polarity, potentially calming the shear temporarily.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Exposed Copper Grounding Coil",
+          "affordance_description": "A raw, highly conductive coil that can be used to draw rogue electrical arcs away from the party.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 12
+        },
+        {
+          "feature_name": "Corroded Maintenance Hatch",
+          "affordance_description": "A small, rusted hatchway that provides a brief refuge from the ferrofluid spray.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 10
+        }
+      ]
+    },
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The shear is destabilizing the structural integrity of the copper mast.",
+        "level_2_local": "This sector of the ferrofluid sea protects the primary induction relay to the Enclave.",
+        "level_3_campaign_arc": "Mastering this environment is critical to unlocking the ancient technologies required for the Enclave's survival."
+      },
+      "active_specialist_roles": [
+        "Hector (Kinetic Opportunist)"
+      ],
+      "prerolled_hazard_queue": [
+        "Ferrofluid Splash",
+        "Magnetic Resonance Burst"
+      ],
+      "strain_accumulated_upward": 2
+    },
+    "reactive_toys": [
+      {
+        "name_and_role": "Kaio (Scout)",
+        "entity_id": "enclave_05_kaio",
+        "motivation_goal": "Locate a safe path through the shear.",
+        "immediate_complication": "Trapped on a shifting metallic platform.",
+        "pressure_index": 0.8,
+        "consistent_method": "Agile evasion and precise grappling hook deployment.",
+        "uninterrupted_escalation": true
+      }
+    ]
+  },
+  "dual_agent_contract": {
+    "master_narrator": {
+      "executor": "Jules",
+      "agency_handoff_prompt": "Hector balances on the copper mast, assessing the violent shear. 'Hold on tight!' he yells over the roar, preparing to jump. Kaio watches from below. What happens next?",
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "temperature": 0.8
+    },
+    "judge_tactician": {
+      "provider": "Aegis",
+      "model": "v2",
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "A misstep means plummeting into the searing, electrified ferrofluid, causing severe burns and equipment loss.",
+      "temperature": 0.2,
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Hector leaps but misjudges the magnetic flux, careening straight into a liquid metal wave.",
+        "below_dc_complicated_fail_forward": "He makes the jump but slips on the rusted landing, dangling by one hand as sparks shower him.",
+        "meets_dc_clean_success": "A perfect, kinetic leap. He lands squarely, grinning as he secures the shunt lever.",
+        "dc_plus_5_or_20_extended_lore": "Not only does he stick the landing, but his trajectory accidentally aligns an ancient tuning fork, revealing a hidden stabilized path through the sea."
+      }
+    }
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.7,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.6,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "active_pov_id": "enclave_01_hector",
+    "interlocutor_full_cards_loaded": 0,
+    "leaked_interlocutor_private_cards": false
+  },
+  "event_type": "DYNAMIC_LORE_CARD_PROPOSALS"
+}
