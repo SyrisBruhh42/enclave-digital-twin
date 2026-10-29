@@ -766,7 +766,7 @@
       "squad_a": "The Forge",
       "squad_b": "The Hub",
       "relationship_type": "Intellectual_Rivals_Phase_4",
-      "bond_strength": 0.96,
+      "bond_strength": 1.0,
       "trust": 1.0,
       "affection": 0.88,
       "intellectual_friction": 0.42,
@@ -775,7 +775,8 @@
       "shared_history_hook": "Veteran adversaries of every Harvest Partition debate, united by a mutual hatred of wasted grams and sloppy arithmetic.",
       "evidence_refs": [
         "evt_s003_t0012_reflection",
-        "evt_s009_t0036_reflection"
+        "evt_s009_t0036_reflection",
+        "evt_s010_t0040_reflection"
       ]
     },
     {
@@ -6561,6 +6562,6 @@
       }
     }
   },
-  "updated_at_tick": 39,
-  "applied_event_count": 44
+  "updated_at_tick": 40,
+  "applied_event_count": 45
 }
