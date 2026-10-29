@@ -1,0 +1,112 @@
+{
+  "event_type": "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "campaign_metadata": {
+    "session_number": 9,
+    "colony_sol": 9,
+    "tick_id": 33,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Diagnose the shear instability before it compromises the primary cooling loop.",
+      "mid_term_milestone": "Stabilize the ferrofluid sea boundary.",
+      "campaign_arc_climax": "Complete the First Forge integration with the sanctuary grid."
+    }
+  },
+  "active_location": {
+    "location_id": "The_First_Forge",
+    "macro_silhouette": "The First Forge hums with a resonant baseline, its brass-banded induction coils glowing a dull, angry orange against the cavern walls. Heavy copper busbars run overhead like geometric vines, vibrating slightly in sympathy with the magnetic flux. The air is thick with the scent of ozone and the sharp tang of hot metal.",
+    "sensory_palette": {
+      "sight_and_color": "Dull orange glow of coils and reflective gleam of polished brass.",
+      "sound": "Low, resonant hum of magnetic flux.",
+      "smell": "Ozone and hot metal.",
+      "tactile_temperature": "Oppressively warm, vibrating ambient air.",
+      "taste_optional": "Metallic tang on the back of the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Overloaded Brass Induction Coil",
+        "affordance_description": "Can be shielded or shunted to prevent a feedback loop.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Sea Observation Port",
+        "affordance_description": "Can be focused on to draw critical diagnostic data.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Emergency Copper Grounding Bus",
+        "affordance_description": "Can be used to absorb and dissipate excess thermal energy.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "mhd_kelvin_helmholtz_shear",
+      "name_and_role": "Magnetohydrodynamic Shear Force",
+      "motivation_goal": "Destabilize rigid metallic structures with resonant harmonic vibration.",
+      "consistent_method": "Ramps up frequency in unpredictable bursts.",
+      "immediate_complication": "Threatens to snap the primary cooling lines.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The vibrations escalate into a harmonic scream, fracturing brittle components."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The shear across the ferrofluid sea is causing dangerous harmonic vibrations.",
+      "level_2_local": "The First Forge's cooling loop cannot handle the unexpected spike in thermal load.",
+      "level_3_campaign_arc": "The exoplanet's native magnetic forces are actively testing the Enclave's structural resilience."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      },
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [ 4, 18, 7, 12, 19 ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.45,
+    "motivational_vector_saturation": 0.60,
+    "unresolved_conflict_ratio": 0.50,
+    "temporal_horizon_immediacy": 0.85,
+    "composite_lpi": 0.60,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4-turbo",
+      "temperature": 0.1,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The cooling loop fractures, flooding the chamber with superheated ferrofluid.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Silas misreads the harmonic frequency, making the vibration worse.",
+        "below_dc_complicated_fail_forward": "The loop holds, but a secondary conduit ruptures, requiring manual repair.",
+        "meets_dc_clean_success": "Silas successfully shunts the excess energy, stabilizing the forge.",
+        "dc_plus_5_or_20_extended_lore": "Silas not only stabilizes the forge but discovers a stable node in the ferrofluid sea's magnetic field."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Silas completes his structural check and passes the heavy spanner to Hector."
+    }
+  }
+}
