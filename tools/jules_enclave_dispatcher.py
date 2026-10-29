@@ -2083,8 +2083,20 @@ class JulesEnclaveDispatcher:
             else:
                 still_running.append(sess)
 
-        # 1. Persist active_sessions = still_running and eav_lessons BEFORE dispatching retries
+        # 1. Persist active_sessions = still_running, session_ledger_24h outcomes, and eav_lessons BEFORE dispatching retries
         state["active_sessions"] = still_running
+        integrated_sids = {str(x.get("session_id")).split("/")[-1] for x in integrated if isinstance(x, dict)}
+        reaped_sids = {str(x.get("session_id")).split("/")[-1] for x in reaped if isinstance(x, dict)}
+        for l_rec in state.get("session_ledger_24h", []):
+            if not isinstance(l_rec, dict):
+                continue
+            rsid = str(l_rec.get("remote_session_id") or l_rec.get("session_id") or "").split("/")[-1]
+            if rsid in integrated_sids:
+                l_rec["state"] = "INTEGRATED"
+                l_rec["outcome"] = "integrated"
+            elif rsid in reaped_sids:
+                l_rec["state"] = "REAPED"
+                l_rec["outcome"] = "reaped"
         state.setdefault("eav_lessons", [])
         if persist:
             self.save_budget(state)
