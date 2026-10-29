@@ -1,0 +1,138 @@
+{
+  "event_id": "event_sol_008_t0031_w08_b02_counterfactual_replay",
+  "bucket": "COUNTERFACTUAL_PERSONALITY_STUDY_REPLAYS",
+  "colony_sol": 8,
+  "tick_id": 31,
+  "day_phase": "DUSK_CRAFT",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "entity_id": "enclave_05_kaio",
+  "actors": [
+    "enclave_05_kaio",
+    "enclave_13_ryn"
+  ],
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 8,
+      "colony_sol": 8,
+      "tick_id": 31,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Chart the shifting ferrofluid tides for the impending caravan crossing.",
+        "mid_term_milestone": "Map the subterranean resonance pathways for The Sanctuary",
+        "campaign_arc_climax": "Safely guide a full colony caravan across the magnetic sea"
+      }
+    },
+    "active_location": {
+      "location_id": "Ferrofluid_Sea_Cliffs",
+      "macro_silhouette": "The obsidian waves of the ferrofluid sea surged and shattered against the jagged basalt cliffs under the screaming Magnetohydrodynamic Kelvin-Helmholtz shear. Arcs of erratic violet lightning traced the impossible crests of liquid metal as they were violently sheared by the bifurcated thermal winds. Towering crystalline spires on the ridge hummed with a bone-rattling resonance, casting fractured shadows across the unstable shoreline. The unpredictable gravitational anomalies warped the very air, bending the luminescent spores into wild spirals.",
+      "sensory_palette": {
+        "sight_and_color": "Violet lightning and shifting obsidian ferrofluid",
+        "sound": "Screaming magnetic shear and resonant crystalline humming",
+        "smell": "Ozone and deep metallic tang",
+        "tactile_temperature": "Biting cold wind mixed with static-charged warmth",
+        "taste_optional": "Copper on the back of the tongue"
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Resonant Crystalline Spire",
+          "affordance_description": "A vibrating geode formation that deflects localized shear",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Magnetized Bioluminescent Spores",
+          "affordance_description": "Glowing drifting spores caught in the magnetic eddy",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Basalt Overhang",
+          "affordance_description": "A deep cleft in the cliff face shielded from the static arcs",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "Kelvin_Helmholtz_Shear_Eddy",
+        "name_and_role": "Magnetohydrodynamic Ripcurrent",
+        "motivation_goal": "Drag loose magnetic material into the churning sea",
+        "consistent_method": "Creating sudden, unpredictable gravitational anomalies on the cliff edge",
+        "immediate_complication": "Kaio's brass sextant is vibrating violently and pulling him toward the drop",
+        "pressure_index": 7,
+        "uninterrupted_escalation": "True"
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The shear threatens to pull Kaio's essential navigation equipment into the sea.",
+        "level_2_local": "Kaio needs accurate readings of this shear to map safe passage for Zara's beasts.",
+        "level_3_campaign_arc": "Understanding the ferrofluid tides is critical to the survival of The Sanctuary project."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_05_kaio",
+          "tactical_role": "STRIKER"
+        },
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        6,
+        14,
+        17,
+        8,
+        2
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.5,
+      "motivational_vector_saturation": 0.9,
+      "unresolved_conflict_ratio": 0.6,
+      "temporal_horizon_immediacy": 0.8,
+      "composite_lpi": 0.7,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "deterministic-enclave-5section-v2",
+        "model": "local_steward",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "Kaio's sextant is ripped from his hands, plummeting into the ferrofluid sea.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Kaio misreads the magnetic undertow, losing his gear and nearly falling in.",
+          "below_dc_complicated_fail_forward": "Kaio saves the gear but takes a massive static shock, scrambling the readings.",
+          "meets_dc_clean_success": "Kaio perfectly anchors himself, securing the readings and his equipment.",
+          "dc_plus_5_or_20_extended_lore": "Kaio identifies a hidden sub-surface current, mapping a new shortcut."
+        }
+      },
+      "master_narrator": {
+        "executor": "deterministic-enclave-5section-v2",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Kaio passes the initiative to Ryn."
+      }
+    }
+  },
+  "narrative_prose": "Kaio leaned precariously over the jagged basalt edge, his heavy boots grinding against the vibrating rock as the Magnetohydrodynamic Kelvin-Helmholtz shear screamed across the ferrofluid sea below. The volatile expanse of liquid obsidian shattered into fractal waves, throwing violent arcs of violet lightning into the static-choked air. He fought to DEFEND his brass sextant against the relentless magnetic ripcurrent, the heavy metal pulling fiercely toward the churning abyss, threatening to ruin his vital cartographic work. He desperately tried to CONCEAL the worst of the trembling in his hands behind a crystal outcrop, hoping the glowing spores would ATTRACT some of the stray current away from his gear. Tasting copper and smelling ozone, he secured his grip on the readings before turning toward the heavily-laden figure trudging up the path. He tossed a statically charged hunk of ridge-crystal toward Ryn's heavy apron, forcing the baton handoff. 'Catch! The shear is stabilizing, Chef!'",
+  "target_path": "qa/sol_008_t0031_w08_b02_counterfactual_replay.json"
+}
