@@ -1,0 +1,114 @@
+{
+  "bucket": "COUNTERFACTUAL_PERSONALITY_STUDY_REPLAYS",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "campaign_metadata": {
+    "session_number": 20,
+    "colony_sol": 10,
+    "tick_id": 39,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Navigate the ferrofluid sea to establish a forward scout camp.",
+      "mid_term_milestone": "Map the magnetic topography of the northern reaches.",
+      "campaign_arc_climax": "Uncover the source of the magnetic disturbances threatening the Enclave."
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea_ridge",
+    "macro_silhouette": "The ferrofluid sea churns violently beneath a starless sky, its metallic waves drawn into jagged, liquid-iron spikes by the sheer magnetic force. A colossal magnetohydrodynamic Kelvin-Helmholtz shear tears through the upper atmosphere, producing neon-blue auroras that crackle across the horizon. Sporadic basalt pillars rise from the shifting metallic tide, offering the only stable footholds amidst the mesmerizing, lethal expanse.",
+    "sensory_palette": {
+      "sight_and_color": "Blinding neon-blue auroras and pitch-black metallic waves.",
+      "sound": "Deafening crackle and hum of raw atmospheric voltage.",
+      "smell": "Pungent ozone mixed with the deep tang of wet iron.",
+      "tactile_temperature": "A freezing, oppressive wind that bites with static charge.",
+      "taste_optional": "The sharp, copper-like taste of static electricity on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Ferrofluid Surge",
+        "affordance_description": "A sudden rise in the metallic tide that can be manipulated to block incoming threats.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetic Eddy",
+        "affordance_description": "A swirling vortex in the sea that pulls loose objects into its center.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Basalt Obelisk",
+        "affordance_description": "A towering pillar offering cover from the glowing wind-streams.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "magnetic_anomaly_01",
+      "name_and_role": "Wandering Shear Vortex",
+      "motivation_goal": "To equalize the magnetic disparities across the ferrofluid sea by absorbing localized charges.",
+      "consistent_method": "Drifts erratically, ripping loose metal and static charge from anyone nearby.",
+      "immediate_complication": "Kaio's brass sextant is suddenly magnetized, pulling him toward the edge of the basalt pillar.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The vortex will expand, tearing the basalt pillar apart if the magnetic shear is not redirected."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio must stabilize his footing and rescue his mapping equipment from the magnetic pull.",
+      "level_2_local": "Failing to map the shear could leave the squad blind to sudden shifts in the ferrofluid sea's tide.",
+      "level_3_campaign_arc": "Understanding the Magnetohydrodynamic Kelvin-Helmholtz shear is key to preventing the Enclave's ultimate destruction by the storms."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      12,
+      18,
+      4,
+      15,
+      9
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.7,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Aegis_Judge",
+      "model": "v4_tactical",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If Kaio fails, he loses his grip on the sextant, and the sheer magnetic force drags him into the churning ferrofluid, forcing a perilous recovery effort.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio completely misjudges the magnetic flux, leaping directly into a concentrated pocket of the shear, losing his equipment and suffering a massive static shock.",
+        "below_dc_complicated_fail_forward": "Kaio manages to hold onto his sextant but is pulled off the pillar, landing hard on a lower, unstable outcropping just above the churning sea.",
+        "meets_dc_clean_success": "Kaio gracefully redirects his momentum, using the magnetic pull to swing himself to a higher, stable vantage point with his equipment intact.",
+        "dc_plus_5_or_20_extended_lore": "Kaio not only secures his footing but perfectly charts the shear's frequency, discovering a hidden, stable pathway through the ferrofluid sea that avoids the hazard entirely."
+      }
+    },
+    "master_narrator": {
+      "executor": "Aegis_Narrator",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": false,
+      "agency_handoff_prompt": "Kaio anchors himself against the howling magnetic storm, his breathless wonder momentarily giving way to the sheer physical strain. He turns, breathless, shouting over the crackle of raw voltage, 'Ryn, the shear is stabilizing—now's your chance!'"
+    }
+  }
+}
