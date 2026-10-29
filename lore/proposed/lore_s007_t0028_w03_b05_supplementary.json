@@ -1,0 +1,125 @@
+{
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 7,
+      "colony_sol": 7,
+      "tick_id": 28,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Maintain the caloric ledger during The Feast while Ryn supervises The Hub.",
+        "mid_term_milestone": "Stabilize the colony's thermal balance before the next freeze.",
+        "campaign_arc_climax": "Prove that the Enclave's metabolic engine can survive the encroaching wilderness."
+      }
+    },
+    "active_location": {
+      "location_id": "The_Hearth",
+      "macro_silhouette": "The Hearth is a massive, warm cavern carved from living rock, the walls smoothed by generations of thermal exchange. At its center roars a towering forge-fire that also serves as the main cooking hearth, casting long, dancing shadows across the long brass tables. Steam rises from copper kettles, carrying the scent of rich, spiced broth and baked bread into the damp air.",
+      "sensory_palette": {
+        "sight_and_color": "The Hearth is painted in warm oranges and deep, ruddy browns, the air thick with steam and the soft glow of the forge-fire.",
+        "sound": "The hiss of steam, the clatter of heavy brass ladles, and the low, rhythmic hum of the forge-fire.",
+        "smell": "The rich, savory aroma of spiced broth, roasted roots, and fresh-baked bread.",
+        "tactile_temperature": "The air is warm and slightly humid, a stark contrast to the biting cold outside.",
+        "taste_optional": "The metallic tang of the ferrofluid sea lingers on the tongue, mingling with the savory broth."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "The Great Stockpot",
+          "affordance_description": "A massive, bubbling cauldron of stew that can be used to feed the colony or scald an unwary intruder.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "The Brass Ladle",
+          "affordance_description": "A heavy, sturdy ladle that can be used to serve the stew or defend the kitchen.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "The Spice Rack",
+          "affordance_description": "A collection of rare, pungent spices that can be used to flavor the stew or distract an intruder.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "The_Ferrofluid_Surge",
+        "name_and_role": "The Ferrofluid Surge",
+        "motivation_goal": "To destabilize the colony's thermal balance.",
+        "consistent_method": "It creates unpredictable Magnetohydrodynamic Kelvin-Helmholtz shear waves across the ferrofluid sea.",
+        "immediate_complication": "The shear waves are causing the forge-fire to fluctuate, threatening to ruin the stew.",
+        "pressure_index": 5,
+        "uninterrupted_escalation": "The fluctuating forge-fire will eventually cause a thermal cascade, freezing the Enclave."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The forge-fire is fluctuating due to the Magnetohydrodynamic Kelvin-Helmholtz shear.",
+        "level_2_local": "The shear is destabilizing the colony's thermal balance, threatening the food supply.",
+        "level_3_campaign_arc": "The ferrofluid sea is becoming increasingly volatile, testing the limits of the Enclave's metabolic engine."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 0,
+      "prerolled_hazard_queue": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.5,
+      "motivational_vector_saturation": 0.5,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.5,
+      "composite_lpi": 0.5,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "aegis-ollama.service",
+        "model": "qwen3.5:4b-q4_K_M",
+        "temperature": 0.05,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "If Ryn fails to compensate for the Magnetohydrodynamic Kelvin-Helmholtz shear, the stew will be ruined and the colony will go hungry.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Ryn miscalculates the thermal fluctuations and the stew boils over, scalding the kitchen.",
+          "below_dc_complicated_fail_forward": "Ryn manages to save the stew, but the thermal fluctuations cause a minor explosion in the pantry.",
+          "meets_dc_clean_success": "Ryn successfully compensates for the shear, saving the stew.",
+          "dc_plus_5_or_20_extended_lore": "Ryn successfully compensates for the shear and discovers a way to harness the energy to improve the forge-fire's efficiency."
+        }
+      },
+      "master_narrator": {
+        "executor": "aegis-ollama.service",
+        "temperature": 0.35,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Ryn turned to Silas, extending the heavy brass ladle. 'Your turn, Engineer. Don't let the fire die.'"
+      }
+    }
+  },
+  "narrative_prose": "The Hearth roared, its fiery tongue licking the massive copper stockpot. Ryn, the Quartermaster Commander, stood before the blaze, her face a mask of fierce concentration. She consulted the worn caloric ledger, calculating the exact Maillard caramelization curve for the bubbling stew as the forge-fire flickered unpredictably. The unpredictable Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea was causing the thermal balance to fluctuate wildly. The air was thick with the scent of roasted roots and spiced broth, the heat a tangible weight pressing against her skin, while the metallic tang of the ferrofluid lingered on the tongue. She had to maintain the balance, to ensure the metabolic engine of the Enclave didn't falter. With a crisp command, she directed the forge squad, her voice cutting through the hiss of steam.",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "day_phase": "THE_FEAST",
+  "steward_note": " deterministic-enclave-5section-v2: Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_13_ryn -> Handoff=enclave_03_silas.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
+    "interlocutor_full_cards_loaded": 0,
+    "active_pov_id": "enclave_13_ryn"
+  }
+}
