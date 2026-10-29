@@ -1,0 +1,113 @@
+{
+  "event_type": "INCHARACTER_PSYCHOMETRIC_DRIFT_AUDITS",
+  "bucket": "INCHARACTER_PSYCHOMETRIC_DRIFT_AUDITS",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_13_ryn -> Handoff=enclave_03_silas.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 10,
+    "tick_id": 40,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Maintain metabolic equilibrium against the magnetic storm.",
+      "mid_term_milestone": "Secure the primary boiler efficiency for the winter cycle.",
+      "campaign_arc_climax": "Prove the Enclave's thermodynamic independence."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Hearth",
+    "macro_silhouette": "The Hearth is bathed in the radiant heat of the main galley stoves, casting long shadows across the smooth, polished brass and copper fixtures. The heavy scent of slow-cooked mire-lentils and roasted tubers fills the air, mingling with the metallic tang of the ferrofluid sea just beyond the thick bay windows, leaving a faint salty iron taste on the tongue. Gentle clinking of cast-iron pots and the low hum of the metabolic engine create a soothing, rhythmic backdrop to the bustling prep stations.",
+    "sensory_palette": {
+      "sight_and_color": "Radiant warm light, polished brass, glowing coals.",
+      "sound": "Clinking cast-iron pots, low rhythmic hum of the metabolic engine.",
+      "smell": "Slow-cooked mire-lentils, roasted tubers.",
+      "tactile_temperature": "Radiant heat from the stoves, smooth cool copper handles.",
+      "taste_optional": "Faint salty iron taste on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Heavy Brass Ladle",
+        "affordance_description": "Can be used to enforce galley discipline or serve perfectly portioned broth.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Simmering Stockpot",
+        "affordance_description": "Emits a rich aroma that draws the hungry crew closer to the prep station.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Freshly Baked Sourdough",
+        "affordance_description": "Provides essential carbohydrates and a massive morale boost when eaten.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_shear_wave",
+      "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+      "motivation_goal": "To relentlessly challenge the thermal stability of the Enclave.",
+      "consistent_method": "Inducing unpredictable barometric drops and magnetic surges.",
+      "immediate_complication": "Causes the sourdough starter to overflow and threatens to chill the main galley.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "If ignored, the shear waves will freeze the exterior vents, backing up exhaust into the kitchen and spoiling the feast."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The ferrofluid shear wave threatens to ruin the precise thermodynamic balance of the feast prep.",
+      "level_2_local": "Maintaining caloric output is crucial to prevent the Enclave from freezing during the magnetic storm.",
+      "level_3_campaign_arc": "Mastering the metabolic engine against chaotic environmental elements proves the colony can survive long-term."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 0,
+    "prerolled_hazard_queue": [14, 8, 12, 18, 5]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If Ryn fails to stabilize the metabolic output, the feast will be delayed and the colony's stress levels will spike.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Ryn misreads the pressure gauge; she accidentally quenches the main boiler, chilling the galley entirely.",
+        "below_dc_complicated_fail_forward": "The stew is saved, but Ryn burns her hands on the heavy brass ladle, taking a penalty to future precise tasks.",
+        "meets_dc_clean_success": "Ryn perfectly balances the thermal output, resulting in a flawless, morale-boosting feast.",
+        "dc_plus_5_or_20_extended_lore": "Ryn discovers a new resonant frequency in the copper kettles that improves caloric efficiency permanently."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules_dm",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": false,
+      "agency_handoff_prompt": "Silas, as the chill bites the edges of the room, you step forward to brace the manifold. How do you reinforce the galley?"
+    }
+  }
+}
