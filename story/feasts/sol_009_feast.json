@@ -1,0 +1,141 @@
+{
+  "world_timestamp_iso": "2024-10-30T12:00:00Z",
+  "base_snapshot_tick": 36,
+  "event_type": "THE_FEAST_CONVERGENCE",
+  "location": "The Enclave of the 16",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_02_jane",
+    "enclave_03_silas",
+    "enclave_04_leo",
+    "enclave_05_kaio",
+    "enclave_06_zara",
+    "enclave_07_willow",
+    "enclave_08_terra",
+    "enclave_09_orion",
+    "enclave_10_isla",
+    "enclave_11_kenna",
+    "enclave_12_elias",
+    "enclave_13_ryn",
+    "enclave_14_vex",
+    "enclave_15_dorian",
+    "enclave_16_elara"
+  ],
+  "summary": "Ryn hands off to Silas at the feast while dealing with the shear.",
+  "importance": 8,
+  "novelty_score": 8,
+  "evidence_refs": [],
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_13_ryn -> Handoff=enclave_03_silas.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "campaign_metadata": {
+    "colony_sol": 9,
+    "tick_id": 36,
+    "session_number": 9,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Secure the feast",
+      "mid_term_milestone": "Stabilize the sea",
+      "campaign_arc_climax": "Escape"
+    }
+  },
+  "active_location": {
+    "location_id": "LOC-001",
+    "macro_silhouette": "A dimly lit industrial mess hall overlooking a dark metallic ocean. The hull groans under pressure.",
+    "sensory_palette": {
+      "sight_and_color": "The stark metallic gleam of the walls against the churning black sea outside.",
+      "sound": "The groaning of the hull and the rhythmic sloshing of the ferrofluid.",
+      "smell": "A mix of ozone and stale synthetic rations.",
+      "tactile_temperature": "The cold vibration of the deck plating beneath their boots.",
+      "taste_optional": "The metallic tang of recycled air."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Emergency Blast Doors",
+        "affordance_description": "Can be sealed to protect against breaches.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetized Rations",
+        "affordance_description": "Can be consumed to restore minor energy.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 10
+      },
+      {
+        "feature_name": "Maintenance Vent",
+        "affordance_description": "Can be used to hide from the shear's effects.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.5,
+    "motivational_vector_saturation": 0.5,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.5,
+    "composite_lpi": 0.5,
+    "classification": "Campaign-Ready"
+  },
+  "encounter_matrix": {
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "prerolled_hazard_queue": [
+      10, 11, 12, 13, 14
+    ],
+    "strain_accumulated_upward": 1,
+    "three_levels_of_why": {
+      "level_1_immediate": "The shear disrupts the feast.",
+      "level_2_local": "The ferrofluid sea is unstable.",
+      "level_3_campaign_arc": "The enclave is failing."
+    }
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "TOY-001",
+      "name_and_role": "Ferrofluid Sea",
+      "motivation_goal": "Destabilize the enclave.",
+      "consistent_method": "Magnetohydrodynamic Kelvin-Helmholtz shear.",
+      "immediate_complication": "Breach the hull.",
+      "pressure_index": 5,
+      "uninterrupted_escalation": "The shear intensifies, causing the hull to groan louder."
+    }
+  ],
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The feast is ruined and the hull breaches.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "The shear breaches the hull immediately.",
+        "below_dc_complicated_fail_forward": "The feast is partially ruined, and the hull strains.",
+        "meets_dc_clean_success": "The feast is secured against the shear.",
+        "dc_plus_5_or_20_extended_lore": "The feast is secured, and they discover a way to harness the shear."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "agency_handoff_prompt": "Ryn hands off the baton to Silas.",
+      "prosodic_micro_pauses_enabled": true,
+      "calypso_zero_raw_stats": true,
+      "temperature": 0.7
+    }
+  },
+  "state_deltas": {},
+  "relationship_deltas": []
+}
