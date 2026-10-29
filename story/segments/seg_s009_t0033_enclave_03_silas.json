@@ -13,7 +13,10 @@
   "next_pov_target": "enclave_01_hector",
   "prev_next_pov_target": "enclave_03_silas",
   "location": "The_First_Forge",
-  "actors": ["enclave_03_silas", "enclave_01_hector"],
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
   "summary": "Silas examines the ferrofluid sea shear forces threatening the forge supports before handing off observation duties to Hector.",
   "importance": 0.8,
   "novelty_score": 0.7,
@@ -91,7 +94,13 @@
       }
     ],
     "strain_accumulated_upward": 1,
-    "prerolled_hazard_queue": [ 12, 18, 5, 14, 9 ]
+    "prerolled_hazard_queue": [
+      12,
+      18,
+      5,
+      14,
+      9
+    ]
   },
   "lpi_metrics": {
     "relational_tension_density": 0.3,
