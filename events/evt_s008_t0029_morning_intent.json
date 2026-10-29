@@ -1,0 +1,169 @@
+{
+  "event_id": "evt_s008_t0029_morning_intent",
+  "tick_id": 29,
+  "colony_sol": 8,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-10-28T00:12:00Z",
+  "base_snapshot_tick": 28,
+  "event_type": "MORNING_INTENT",
+  "location": "The_First_Forge",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "disallow_overwrite": false,
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
+  "second_pass_repair_constraint": "@ENT[enclave:3800217491768740553]",
+  "changeset_gate_rejection": "Showrunner contract violation (Mercer 3-Feature Rule): active_location requires exactly 3 interactive_features.",
+  "VAL": "Showrunner contract violation (Mercer 3-Feature Rule): active_location requires exactly 3 interactive_features.",
+  "ENT": "enclave:10785334878835238916",
+  "CONF": "1.00",
+  "TIME": "2026-10-29T00:12:00Z",
+  "PROV": "sol008_t0029",
+  "context_manifest": {
+    "active_pov_id": "enclave_03_silas",
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
+    "total_tokens": 1200
+  },
+  "narrative_prose": "Silas firmly braces the reinforced thermal baffles to DEFEND against the radiant heat, observing the harsh amber light reflecting off oxidized rust as the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea causes raw lightning to spit sharp metallic ozone into the dry, statically charged air. He can hear the rhythmic thud of pneumatic hammers and taste the metallic tang of ozone on his tongue, prompting him to CONCEAL the delicate copper components from the chaotic magnetic fields that ATTRACT stray ferrofluid droplets. He firmly presses the insulated baton into Hector's waiting grip, trusting the prodigy to handle the volatile alignment.",
+  "importance": 8.0,
+  "novelty_score": 0.85,
+  "lethality": 0,
+  "state_deltas": {
+    "stress_delta": 0.05
+  },
+  "relationship_deltas": [
+    {
+      "from": "enclave_03_silas",
+      "to": "enclave_01_hector",
+      "bond_delta": 0.01,
+      "trust_delta": 0.01
+    }
+  ],
+  "evidence_refs": [],
+  "target_path": "events/evt_s008_t0029_morning_intent.json",
+  "file_operations": [
+    {
+      "action": "A",
+      "path": "events/evt_s008_t0029_morning_intent.json"
+    }
+  ],
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 8,
+      "colony_sol": 8,
+      "tick_id": 29,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Establish morning intents while managing ferrofluid shear.",
+        "mid_term_milestone": "Stabilize the magnetosphere.",
+        "campaign_arc_climax": "Complete the grand projects."
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "The First Forge's reinforced blast doors seal off the roaring heat of the crucible, yet the thrumming hum of magnetic containment vibrates through the iron deck. A fine layer of oxidized rust dust coats the copper workbenches, glowing faintly in the dim amber light.",
+      "sensory_palette": {
+        "sight_and_color": "Dim amber glows reflecting off polished copper and oxidized rust.",
+        "sound": "The rhythmic, heavy thud of pneumatic hammers and the hum of magnetic containment.",
+        "smell": "Sharp metallic ozone mingling with the scent of molten brass.",
+        "tactile_temperature": "Oppressively hot and dry, with a noticeable static charge prickling the skin.",
+        "taste_optional": "The metallic tang of ozone."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Thermal Baffle",
+          "affordance_description": "Can block the radiant heat and stray sparks from the main crucible.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Magnetic Conductor",
+          "affordance_description": "Pulls stray ferrofluid droplets back into alignment.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Scrap Pile",
+          "affordance_description": "Can be used to cover up a mistake or hide delicate materials from the shear.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "Ferrofluid Wave",
+        "name_and_role": "Magnetohydrodynamic shear fluctuation",
+        "motivation_goal": "Disrupt alignment through chaotic shear.",
+        "consistent_method": "Pulsing unpredictable magnetic fields.",
+        "immediate_complication": "Baton transfer becomes difficult due to the pull on metal.",
+        "pressure_index": 6,
+        "uninterrupted_escalation": true
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Need to hand off the shift smoothly to Hector.",
+        "level_2_local": "Manage the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea.",
+        "level_3_campaign_arc": "Maintain infrastructure and trust for The Enclave."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "LEADER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        4,
+        8,
+        15,
+        16,
+        20
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.6,
+      "motivational_vector_saturation": 0.6,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.7,
+      "composite_lpi": 0.6,
+      "classification": "Campaign-Ready",
+      "lpi_score": 0.6
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_ai",
+        "model": "qwen3.5:4b-q4_K_M",
+        "temperature": 0.1,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The baton handoff is fumbled due to shear forces.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Catastrophic misalignment and minor burns.",
+          "below_dc_complicated_fail_forward": "Handoff complete but equipment damaged.",
+          "meets_dc_clean_success": "Flawless handoff.",
+          "dc_plus_5_or_20_extended_lore": "Flawless handoff with new insight into ferrofluid behavior."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_ai",
+        "temperature": 0.4,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Hector, take the baton and mind the shear."
+      }
+    }
+  }
+}
