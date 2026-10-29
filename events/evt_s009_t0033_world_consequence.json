@@ -7,7 +7,10 @@
   "base_snapshot_tick": 32,
   "event_type": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
   "location": "The_First_Forge",
-  "actors": ["enclave_03_silas", "enclave_01_hector"],
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
   "summary": "Silas hands off the baton to Hector during a magnetic shear crisis.",
   "importance": 0.8,
   "novelty_score": 0.7,
@@ -90,7 +93,13 @@
       }
     ],
     "strain_accumulated_upward": 2,
-    "prerolled_hazard_queue": [1, 2, 3, 4, 5]
+    "prerolled_hazard_queue": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
   },
   "lpi_metrics": {
     "relational_tension_density": 0.5,
