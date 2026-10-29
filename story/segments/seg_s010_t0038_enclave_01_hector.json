@@ -1,0 +1,135 @@
+{
+  "event_id": "seg_s010_t0038_enclave_01_hector",
+  "tick_id": 38,
+  "colony_sol": 10,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-11-03T12:00:00Z",
+  "base_snapshot_tick": 37,
+  "event_type": "POV_SCENE_SEGMENT",
+  "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable=Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "location": "The_Ferrofluid_Coast",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_05_kaio"
+  ],
+  "summary": "Hector bounds across the churning, spiky ferrofluid coastline to recalibrate a volatile ground shunt, grinning through the magnetic squall before spotting Kaio on the ridge and throwing the relay baton.",
+  "importance": 0.85,
+  "novelty_score": 0.75,
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "campaign_metadata": {
+    "session_number": 10,
+    "colony_sol": 10,
+    "tick_id": 38,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Re-align the forward magnetohydrodynamic grounding shunt before the shear force rips it loose.",
+      "mid_term_milestone": "Stabilize the coastal energy relays ahead of the approaching storm front.",
+      "campaign_arc_climax": "Master the exoplanet's unpredictable magneto-weather phenomena."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Ferrofluid_Coast",
+    "macro_silhouette": "The jagged coastline violently rips apart and reforms, the ferrofluid sea whipping into razor-sharp metallic peaks as the magnetic shear intensifies. Lightning dances off the heavy copper grounding shunts hammered into the bedrock, casting harsh, stroboscopic shadows across the slick stone. Above, the twin suns bleed through a thick, spore-laden gale that threatens to swallow the entire staging area.",
+    "sensory_palette": {
+      "sight_and_color": "Blinding white arcs of ozone discharge, the deep liquid obsidian of the sea, and the oxidized green of desperate copper repairs.",
+      "sound": "The deafening crack of thunderous discharge layered over the rhythmic, heavy slosh of metallic waves.",
+      "smell": "Scorched ozone, raw copper tang, and the musty rot of displaced fungal spores.",
+      "tactile_temperature": "A blistering wave of dielectric heat followed instantly by the icy bite of the storm wind.",
+      "taste_optional": "A sharp, metallic battery-acid tang on the back of the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Primary Grounding Shunt",
+        "affordance_description": "Can be manually jammed deeper into the bedrock to secure the connection.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Overcharged Geode Cluster",
+        "affordance_description": "Can be cracked open to pull the ambient magnetic shear away from the sea.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Scrap-Metal Breakwater",
+        "affordance_description": "Can be toppled to shield the forward sensors from the ferrofluid spray.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "kelvin_helmholtz_magnetic_shear",
+      "name_and_role": "The Kelvin-Helmholtz Magnetic Shear",
+      "motivation_goal": "To rip apart any stable conductive structures along the coastline.",
+      "consistent_method": "Generating cascading waves of intense polarity reversal that snap metal like dry twigs.",
+      "immediate_complication": "The primary grounding shunt is vibrating at a fatal resonance frequency and is seconds from catastrophic failure.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "The shunt will detonate, launching lethal copper shrapnel and severing the coastal relay."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The magnetohydrodynamic Kelvin-Helmholtz shear is vibrating the primary grounding shunt to the breaking point.",
+      "level_2_local": "If the shunt fails, the coastal relays will overload and The Forge will lose critical power data.",
+      "level_3_campaign_arc": "The colony's survival depends on mastering the exoplanet's aggressive magneto-weather phenomena."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      14,
+      17,
+      6,
+      15,
+      8
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.6,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.65,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_engine",
+      "model": "gpt-4",
+      "temperature": 0.8,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The grounding shunt detonates, causing blunt trauma and forcing a chaotic retreat from the coast.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Hector misjudges the resonance frequency, his strike worsening the vibration and triggering an immediate, violent explosion of the shunt.",
+        "below_dc_complicated_fail_forward": "Hector manages to drive the shunt down, but a burst of ferrofluid spray scores his armor and temporarily shorts out his comms.",
+        "meets_dc_clean_success": "Hector perfectly times his strike between shear waves, locking the shunt firmly into the bedrock with a grin.",
+        "dc_plus_5_or_20_extended_lore": "Hector not only secures the shunt but realizes the shear waves follow a predictable harmonic, information vital for future coastal engineering."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.85,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector wipes a splatter of hot ozone from his visor, his grin wild in the strobe of the lightning. He hefts his torque wrench over his shoulder and points to the ridge where Kaio is waving frantically. 'The grounding's solid! Over to you, Scout!'"
+    }
+  }
+}
