@@ -1,0 +1,54 @@
+{
+  "dispatch_id": "dispatch_sol_009",
+  "tick_id": 36,
+  "colony_sol": 9,
+  "base_snapshot_tick": 36,
+  "title": "Evening Dispatch Sol 9",
+  "headline": "Evening Dispatch",
+  "anchor_intro": "Good evening, Enclave. The ferrofluid sea churns with magnetohydrodynamic shear.",
+  "broadcast_script": "Ryn hands the mic to Silas. The air tastes of ozone.",
+  "broadcast_markdown": "# Evening Dispatch\n\nRyn hands the mic to Silas.",
+  "weather_report": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "magnetosphere_and_weather_report": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "exoplanet_weather_almanac": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "quote_of_the_sol": "The sea rises.",
+  "target_path": "digests/daily/sol_009_dispatch.json",
+  "newscaster_anchors": [
+    "enclave_13_ryn",
+    "enclave_03_silas"
+  ],
+  "gossip_items": [],
+  "gossip_and_shadow_column": [],
+  "sibling_grid_blind_spot_column": [],
+  "developing_stories": [],
+  "read_full_scene_links": [],
+  "all_cited_event_ids": [
+    "evt_s009_t0034_expedition_consequence"
+  ],
+  "covered_day_phases": [
+    "DAWN_SHIFT",
+    "MIDDAY_EXPEDITION",
+    "DUSK_CRAFT",
+    "THE_FEAST"
+  ],
+  "lead_stories": [],
+  "block_digests": [],
+  "four_block_digests": [],
+  "lead_story": {
+    "headline": "Sol 9 Lead — Evening Dispatch",
+    "summary": "Hector battles the magnetohydrodynamic shear wave to hand off the baton to Kaio at the ferrofluid sea outpost.",
+    "cited_event_ids": [
+      "evt_s009_t0034_expedition_consequence"
+    ],
+    "evidence_refs": [
+      "evt_s009_t0034_expedition_consequence"
+    ],
+    "actors": [
+      "enclave_01_hector",
+      "enclave_05_kaio"
+    ],
+    "location": "Ferrofluid_Sea_Outpost",
+    "day_phase": "MIDDAY_EXPEDITION",
+    "salience_score": 0.95
+  }
+}
