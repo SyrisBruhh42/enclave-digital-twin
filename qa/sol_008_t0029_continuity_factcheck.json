@@ -1,0 +1,129 @@
+{
+  "event_id": "qa_sol_008_t0029_factcheck",
+  "tick_id": 29,
+  "colony_sol": 8,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-10-29T00:12:09Z",
+  "base_snapshot_tick": 29,
+  "event_type": "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK",
+  "location": "The Forge Interior",
+  "disallow_overwrite": false,
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "second_pass_repair_constraint": "enclave:3800217491768740553",
+  "retry_recovery_mode": "SECOND_PASS_SELF_REPAIR",
+  "changeset_gate_rejection": "Showrunner contract violation (Mercer 3-Feature Rule): active_location requires exactly 3 interactive_features.",
+  "ENT": [
+    "enclave-digital-twin:CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK",
+    "enclave:3800217491768740553",
+    "enclave:10785334878835238916"
+  ],
+  "ATTR": [
+    "second_pass_repair_constraint",
+    "changeset_gate_rejection"
+  ],
+  "CONF": 1.0,
+  "TIME": "2026-10-29T00:12:09Z",
+  "PROV": "sol008_t0029",
+  "VAL": "Showrunner contract violation (Mercer 3-Feature Rule): active_location requires exactly 3 interactive_features.",
+  "narrative_prose": "Silas monitored the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, noting the way it seemed to CONSUME the ambient energy. The air was thick with the smell of scorched ozone and the sharp taste of copper. The low hum of the generators vibrated through the floorboards, a rhythmic pulse that he could almost ATTRACT towards himself. In the corner, a pile of spare parts could easily CONCEAL a small diagnostic drone. Silas adjusted the console, securing the data, before passing the physical baton to Hector, completing his shift.",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 8,
+      "tick_id": 29,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Analyze the ferrofluid sea shear.",
+        "mid_term_milestone": "Stabilize the Forge systems.",
+        "campaign_arc_climax": "Complete The First Forge."
+      }
+    },
+    "active_location": {
+      "location_id": "the_forge_interior",
+      "macro_silhouette": "The Forge hummed with barely contained energy, its massive gears casting long, erratic shadows. The air itself seemed to vibrate with the sheer power of the generators.",
+      "sensory_palette": {
+        "sight_and_color": "erratic shadows and pulsing energy",
+        "sound": "low hum of generators",
+        "smell": "scorched ozone",
+        "tactile_temperature": "vibrating floorboards and thick air",
+        "taste_optional": "sharp copper"
+      },
+      "interactive_features": [
+        "CONSUME",
+        "ATTRACT",
+        "CONCEAL"
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_sea",
+        "name_and_role": "Ferrofluid Sea",
+        "motivation_goal": "Expand and disrupt",
+        "consistent_method": "Magnetic shear",
+        "immediate_complication": "Destabilizing generators",
+        "pressure_index": 5,
+        "uninterrupted_escalation": true
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The Magnetohydrodynamic Kelvin-Helmholtz shear is causing immediate power fluctuations.",
+        "level_2_local": "The Forge's power grid is strained.",
+        "level_3_campaign_arc": "The First Forge's completion is threatened by environmental instability."
+      },
+      "active_specialist_roles": [
+        "Engineer"
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        "Power surge",
+        "Magnetic anomaly"
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.5,
+      "motivational_vector_saturation": 0.6,
+      "unresolved_conflict_ratio": 0.4,
+      "temporal_horizon_immediacy": 0.8,
+      "composite_lpi": 0.6,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "anthropic",
+        "model": "claude-3-opus",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The shear disrupts the primary generator, causing a temporary blackout.",
+        "graduated_outcomes": {
+          "critical_success_10_plus": "Shear analyzed and stabilized permanently.",
+          "mixed_success_cost": "Shear analyzed, but auxiliary power drained.",
+          "fail_forward_escalation": "Shear worsens, requiring immediate intervention from Hector."
+        }
+      },
+      "master_narrator": {
+        "executor": "jules",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Hector, the baton is yours. The shear is worsening. What do you do?"
+      }
+    }
+  }
+}
