@@ -1,0 +1,112 @@
+{
+  "event_type": "POV_SCENE_SEGMENT",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 10,
+    "tick_id": 39,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Harness the ferrofluid sea anomalies for crafting materials.",
+      "mid_term_milestone": "Map the magnetic currents of the underground biome.",
+      "campaign_arc_climax": "Complete the Sanctuary and stabilize the Enclave's core."
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_cavern_01",
+    "macro_silhouette": "The cavern ceiling arches into shadows, interrupted only by the jagged stalactites dripping thick, obsidian-like fluid. Against the far wall, a makeshift crafting bench is illuminated by the flickering, unnatural glow of bioluminescent moss. The dark, metallic waves of the ferrofluid sea crash against the rocky shore, governed by invisible magnetic tides.",
+    "sensory_palette": {
+      "sight_and_color": "A shifting matrix of glossy black waves peaking with crystalline, metallic spikes under a hazy cyan bioluminescence.",
+      "sound": "A rhythmic, heavy sloshing that occasionally tears into a sharp, static crackle.",
+      "smell": "Ozone and oxidized iron mixed with the damp, earthy scent of disturbed cave mold.",
+      "tactile_temperature": "A biting, clammy chill that vibrates against the skin with an underlying electromagnetic hum.",
+      "taste_optional": "A faint, metallic tang of copper settling on the back of the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Ferrofluid Breaker Wall",
+        "affordance_description": "A dense, solidified wave of ferrofluid that can be shaped to block the encroaching acidic mist.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetic Resonator Crystals",
+        "affordance_description": "Crystalline formations that emit a hum, capable of drawing the chaotic energy currents if properly tuned.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Shear Vortex Node",
+        "affordance_description": "A swirling anomaly in the sea that pulls in loose matter and breaks it down into raw energy.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_ferrofluid_shear",
+      "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz Shear",
+      "motivation_goal": "To destabilize the boundary layer between the magnetic sea and the cavern air.",
+      "consistent_method": "Generates increasing wave turbulence and static discharges along the shore.",
+      "immediate_complication": "Kaio's crafting materials are being magnetically pulled towards the chaotic surf.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The shear will eventually collapse the shoreline into a violent magnetic maelstrom."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio needs stable materials from the ferrofluid sea for his crafting artifact.",
+      "level_2_local": "The magnetic shear is creating unpredictable waves that threaten to scatter the supplies.",
+      "level_3_campaign_arc": "Mastering these magnetohydrodynamic forces is essential for powering the Sanctuary."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [4, 9, 12, 17, 2]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.8,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.85,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "GPT-4",
+      "model": "gpt-4-turbo",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If Kaio fails to stabilize the magnetic shear, the crafted artifact will shatter, spraying razor-sharp iron filings across the workspace.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio misreads the magnetic resonance, causing the ferrofluid to violently repel the tools, resulting in a shattered artifact and damaged equipment.",
+        "below_dc_complicated_fail_forward": "Kaio struggles to shape the fluid, saving the core artifact but losing secondary components to the sea's turbulent pull.",
+        "meets_dc_clean_success": "Kaio smoothly guides the magnetic currents, perfectly solidifying the artifact without losing any materials.",
+        "dc_plus_5_or_20_extended_lore": "Kaio not only crafts the artifact flawlessly but discovers a stable harmonic frequency that reveals hidden patterns in the ferrofluid sea's depths."
+      }
+    },
+    "master_narrator": {
+      "executor": "Claude-3-Opus",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio wipes his brow as the humming artifact settles into a steady glow. He turns to Ryn, holding out the newly forged magnetic compass. 'Your turn, Ryn. Keep the alignment steady.'"
+    }
+  }
+}
