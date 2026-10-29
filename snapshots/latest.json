@@ -1427,20 +1427,6 @@
   "total_events_through_tick": 39,
   "recent_segments": [
     {
-      "segment_id": "seg_s005_t0018_enclave_01_hector",
-      "sol_id": 5,
-      "colony_sol": 5,
-      "tick_id": 18,
-      "active_pov_id": "enclave_01_hector",
-      "next_pov_target": "enclave_05_kaio",
-      "location_id": "The_Ferrofluid_Sea_Dock",
-      "time_of_day": "MIDDAY_EXPEDITION",
-      "day_phase": "MIDDAY_EXPEDITION",
-      "title": "Sol 005 \u2022 MIDDAY_EXPEDITION (enclave_01_hector)",
-      "opening_excerpt": "The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea tore at Hector's reinforced trench coat as he sprinted along the precarious dock. The howling vortex of metallic winds drowned out the crunch of hi",
-      "excerpt": "The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea tore at Hector's reinforced trench coat as he sprinted along the precarious dock. The howling vortex of metallic winds drowned out the crunch of hi"
-    },
-    {
       "segment_id": "seg_s005_t0019_enclave_05_kaio",
       "sol_id": 5,
       "colony_sol": 5,
@@ -1593,6 +1579,20 @@
       "title": "Sol 009 \u2022 DAWN_SHIFT (enclave_03_silas)",
       "opening_excerpt": "Silas examines the ferrofluid sea shear forces threatening the forge supports before handing off observation duties to Hector.",
       "excerpt": "Silas examines the ferrofluid sea shear forces threatening the forge supports before handing off observation duties to Hector."
+    },
+    {
+      "segment_id": "seg_s009_t0034_enclave_01_hector",
+      "sol_id": 9,
+      "colony_sol": 9,
+      "tick_id": 34,
+      "active_pov_id": "enclave_01_hector",
+      "next_pov_target": "enclave_05_kaio",
+      "location_id": "The_First_Forge",
+      "time_of_day": "MIDDAY_EXPEDITION",
+      "day_phase": "MIDDAY_EXPEDITION",
+      "title": "Sol 009 \u2022 MIDDAY_EXPEDITION (enclave_01_hector)",
+      "opening_excerpt": "Hector desperately tries to manage the rising Magnetohydrodynamic Kelvin-Helmholtz shear threatening the forge, eventually tossing the calibration spanner to Kaio as the pressure becomes critical.",
+      "excerpt": "Hector desperately tries to manage the rising Magnetohydrodynamic Kelvin-Helmholtz shear threatening the forge, eventually tossing the calibration spanner to Kaio as the pressure becomes critical."
     }
   ],
   "available_sols": [
