@@ -1,0 +1,143 @@
+{
+  "entity_id": "enclave_13_ryn",
+  "audit_type": "psychometric_drift",
+  "colony_sol": 7,
+  "tick_id": 28,
+  "event_type": "INCHARACTER_PSYCHOMETRIC_DRIFT_AUDITS",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "day_phase": "THE_FEAST",
+  "narrative_prose": "Ryn stands in the humid galley of The Hearth, adjusting the pressure on the steam-jacketed kettles to counteract the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea as flickering copper light dances on the walls. The air smells intensely of roasted tubers and tastes faintly of metallic tang, while she listens to the bubbling stew and feels the intense heat radiating from the stovetop. Realizing the thermal mass needs to be monitored closely to prevent the feast from freezing, she presses the glowing command baton firmly into Silas's hands.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
+    "interlocutor_full_cards_loaded": 0,
+    "total_tokens": 1500,
+    "max_tokens": 3500,
+    "active_pov_id": "enclave_13_ryn"
+  },
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 7,
+      "tick_id": 28,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "audit drift",
+        "mid_term_milestone": "survive",
+        "campaign_arc_climax": "win"
+      }
+    },
+    "active_location": {
+      "location_id": "the_hearth",
+      "macro_silhouette": "The Hearth is a humid interior galley lined with copper walls. The intense heat of the stovetops fights back against the chill of the outside.",
+      "sensory_palette": {
+        "sight_and_color": "flickering copper light",
+        "sound": "bubbling stew",
+        "smell": "roasted tubers",
+        "tactile_temperature": "intense radiating heat",
+        "taste_optional": "faint metallic tang"
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Steam-Jacketed Kettle",
+          "affordance_description": "Can be used to maintain precise thermal equilibrium.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Magnetic Induction Vent",
+          "affordance_description": "Can draw excess energy from the anomalous weather.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Ferrofluid Filtration Sink",
+          "affordance_description": "Can consume contaminated water to purify it.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_draft",
+        "name_and_role": "Ferrofluid Draft",
+        "motivation_goal": "To cool the hearth's precise thermodynamic setup.",
+        "consistent_method": "Blowing sudden gusts of freezing magnetic wind through the vents.",
+        "immediate_complication": "It threatens to ruin the evening feast by dropping the temperature too rapidly.",
+        "pressure_index": 7,
+        "uninterrupted_escalation": true
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea is wreaking havoc on the galley's thermal stability.",
+        "level_2_local": "Ryn must maintain the metabolic balance of the colony during The Feast.",
+        "level_3_campaign_arc": "The colony's survival depends on mastering the planet's magnetosphere to secure sustainable resources."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "LEADER"
+        }
+      ],
+      "strain_accumulated_upward": 0,
+      "prerolled_hazard_queue": [
+        3,
+        7,
+        12,
+        18,
+        20
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.6,
+      "motivational_vector_saturation": 0.7,
+      "unresolved_conflict_ratio": 0.8,
+      "temporal_horizon_immediacy": 0.9,
+      "composite_lpi": 0.75,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_ai",
+        "model": "ollama",
+        "temperature": 0.7,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "Failure means the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea freezes the feast, demoralizing the colony.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Ryn miscalculates the thermal mass, ruining the entire meal.",
+          "below_dc_complicated_fail_forward": "The food is saved but barely edible, causing minor stress across the colony.",
+          "meets_dc_clean_success": "Ryn perfectly balances the temperature, serving a flawless feast.",
+          "dc_plus_5_or_20_extended_lore": "Ryn not only serves a perfect feast but discovers a new culinary use for the magnetic flora."
+        }
+      },
+      "master_narrator": {
+        "executor": "jules_standby",
+        "temperature": 0.6,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Silas takes the baton and looks at the hissing pressure valves. What does Silas do?"
+      }
+    }
+  },
+  "drift_audit": {
+    "max_abs_z": 1.5,
+    "axis_z_scores": {
+      "x": 1.5
+    },
+    "drift_alert": false,
+    "corrective_authors_note": "Ryn is maintaining her core traits effectively during The Feast.",
+    "re_anchor_ticks": 0
+  },
+  "target_path": "qa/sol_007_t0028_w03_b03_drift_audit.json",
+  "disallow_overwrite": false
+}
