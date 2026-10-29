@@ -1,0 +1,133 @@
+{
+  "disallow_overwrite": false,
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 8,
+      "tick_id": 30,
+      "pacing_mode": "MULLIGAN_CRISIS",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Survive the expedition.",
+        "mid_term_milestone": "Reach the next outpost.",
+        "campaign_arc_climax": "Solve the mystery of the enclave."
+      }
+    },
+    "active_location": {
+      "location_id": "the_ferrofluid_sea",
+      "macro_silhouette": "The ferrofluid sea churned wildly under the Magnetohydrodynamic Kelvin-Helmholtz shear. Jagged black waves erupted into the sky, suspended by the immense magnetic forces. The sheer kinetic energy of the landscape was breathtaking.",
+      "sensory_palette": {
+        "sight_and_color": "Swirling black spikes against a bruised purple sky.",
+        "sound": "The deafening crackle of displaced air and roaring fluid.",
+        "smell": "Ozone and metallic tang.",
+        "tactile_temperature": "A biting cold mixed with the prickle of static electricity.",
+        "taste_optional": "A metallic tang on the tongue."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Magnetic Funnel",
+          "affordance_description": "A dense concentration of magnetic force that can rip tools away.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Ferrofluid Spire",
+          "affordance_description": "A rising column of fluid that can be used to redirect energy.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Kinetic Eddy",
+          "affordance_description": "A swirling vortex that absorbs kinetic energy.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "magnetic_storm",
+        "name_and_role": "Magnetic Shear Storm",
+        "motivation_goal": "Disrupt all electrical and magnetic systems.",
+        "consistent_method": "Unpredictable bursts of kinetic energy.",
+        "immediate_complication": "Threatens to overload the induction rigging.",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "True"
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The induction rigging is failing under the shear.",
+        "level_2_local": "The ferrofluid sea is experiencing unprecedented volatility.",
+        "level_3_campaign_arc": "The planet's magnetic field is destabilizing."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        },
+        {
+          "actor_id": "enclave_05_kaio",
+          "tactical_role": "LEADER"
+        }
+      ],
+      "strain_accumulated_upward": 10,
+      "prerolled_hazard_queue": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.5,
+      "motivational_vector_saturation": 0.6,
+      "unresolved_conflict_ratio": 0.7,
+      "temporal_horizon_immediacy": 0.8,
+      "composite_lpi": 0.65,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local",
+        "model": "qwen3.5:4b-q4_K_M",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The induction rigging blows, causing severe damage.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Hector completely misreads the shear and causes a cascade failure.",
+          "below_dc_complicated_fail_forward": "Hector manages to stabilize the rigging but loses his tools in the process.",
+          "meets_dc_clean_success": "Hector perfectly calibrates the shunt and stabilizes the system.",
+          "dc_plus_5_or_20_extended_lore": "Hector not only stabilizes the system but discovers a new pattern in the shear."
+        }
+      },
+      "master_narrator": {
+        "executor": "local",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Kaio, your turn."
+      }
+    }
+  },
+  "narrative_prose": "Hector snatched the telemetry baton from Silas, grinning into the ozone gale as he sprinted toward the induction rigging. The air crackled with the sheer voltage of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, snapping around his boots like impatient hounds. He didn't hesitate to CONSUME the raw arc-flash data through the baton's interface, ignoring the stinging warmth of the copper grip as he read the live kinetics. Ahead, a heavy magnetic funnel threatened to rip his tools away, but he managed to DEFEND his utility belt with a swift pivot, laughing loudly over the storm's roar. With a daring leap over a sparking capacitor bank, he tossed a decoy wrench to ATTRACT a stray discharge, clearing his path to Kaio. The wind howled as he landed gracefully, shoving the glowing baton firmly into Kaio's hands without missing a beat.",
+  "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "context_manifest": {
+    "manifest": {
+      "full_cards_loaded_count": 1,
+      "interlocutor_full_cards_loaded": 0,
+      "loaded_full_card_ids": [
+        "enclave_01_hector"
+      ],
+      "active_pov_id": "enclave_01_hector",
+      "leaked_interlocutor_private_cards": false,
+      "total_tokens": 1000,
+      "max_tokens": 3500
+    }
+  }
+}
