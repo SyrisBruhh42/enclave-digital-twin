@@ -1,0 +1,123 @@
+{
+  "campaign_metadata": {
+    "session_number": 8,
+    "colony_sol": 8,
+    "tick_id": 29,
+    "pacing_mode": "MERCER_EXPLORATION",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Analyze the anomalous ferrofluid sea shear.",
+      "mid_term_milestone": "Stabilize the local magnetosphere.",
+      "campaign_arc_climax": "Ensure the colony's survival against exoplanetary physics."
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea_observation_deck",
+    "macro_silhouette": "The ferrofluid sea churns beneath an oppressive, metallic sky, jagged waves cresting like obsidian fangs. An observation deck hangs precariously over the abyss, vibrating with every electromagnetic surge. A low hum of raw power permeates the air, rattling tools against the deck plating.",
+    "sensory_palette": {
+      "sight_and_color": "Obsidian waves, metallic silver spray, blinding violet electrical arcs.",
+      "sound": "Low hum of raw power, rattling of metal tools, churning of the sea.",
+      "smell": "Ozone, heated iron, and a sharp metallic tang.",
+      "tactile_temperature": "Oppressively hot and electrically charged, hair standing on end.",
+      "taste_optional": "Copper and salt on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Ferrofluid Surge Arrester",
+        "affordance_description": "A massive grounding rod that can be thrown to dispel incoming waves.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Magnetic Resonance Tuner",
+        "affordance_description": "A delicate instrument used to draw out sympathetic ore.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Kinetic Dampening Field",
+        "affordance_description": "A localized shield that absorbs kinetic impacts.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 16
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_anomaly_alpha",
+      "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz shear",
+      "motivation_goal": "To destabilize the observation deck.",
+      "consistent_method": "Surging upwards and disrupting magnetic fields.",
+      "immediate_complication": "The primary surge arrester is sparking wildly.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "True"
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The ferrofluid sea is experiencing unusual shear.",
+      "level_2_local": "The shear is threatening the observation deck's structural integrity.",
+      "level_3_campaign_arc": "Understanding the shear is vital to surviving the planet's magnetic storms."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      },
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 3,
+    "prerolled_hazard_queue": [
+      14,
+      8,
+      19,
+      2,
+      12
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.7,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.6,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Aegis",
+      "model": "Jules-DM",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The observation deck takes structural damage, and the characters suffer kinetic feedback.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "The shear completely misleads Silas, causing him to overload the surge arrester.",
+        "below_dc_complicated_fail_forward": "Silas manages to stabilize the deck, but takes significant kinetic feedback damage in the process.",
+        "meets_dc_clean_success": "Silas expertly predicts the shear and engages the surge arrester flawlessly.",
+        "dc_plus_5_or_20_extended_lore": "Silas not only stabilizes the deck but discovers a new sympathetic resonance frequency."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules-DM",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Silas tightens his grip on the calipers, his eyes narrowing at the churning sea. He turns to Hector, tossing him a heavy spanner. \"Your turn, prodigy. Try not to break it.\""
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ]
+  },
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "prev_next_pov_target": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector"
+}
