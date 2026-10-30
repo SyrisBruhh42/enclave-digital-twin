@@ -1455,7 +1455,7 @@
   "applied_event_ids": [
     "evt_s007_t0026_expedition_consequence"
   ],
-  "total_events_through_tick": 31,
+  "total_events_through_tick": 32,
   "recent_segments": [
     {
       "segment_id": "seg_s003_t0011_enclave_05_kaio",

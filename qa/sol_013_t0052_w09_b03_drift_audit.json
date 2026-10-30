@@ -108,5 +108,8 @@
       "prosodic_micro_pauses_enabled": true,
       "agency_handoff_prompt": "Silas, take the baton and see if you can reinforce the manifold."
     }
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
   }
 }

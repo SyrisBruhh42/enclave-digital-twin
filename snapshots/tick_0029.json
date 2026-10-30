@@ -1439,7 +1439,7 @@
   "applied_event_ids": [
     "evt_s008_t0029_world_consequence"
   ],
-  "total_events_through_tick": 35,
+  "total_events_through_tick": 36,
   "recent_segments": [
     {
       "segment_id": "seg_s004_t0014_enclave_01_hector",
