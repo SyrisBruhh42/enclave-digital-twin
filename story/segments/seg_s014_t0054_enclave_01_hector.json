@@ -1,0 +1,111 @@
+{
+  "event_type": "POV_SCENE_SEGMENT",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 14,
+    "tick_id": 54,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Secure the ferrofluid containment.",
+      "mid_term_milestone": "Stabilize the primary induction loop.",
+      "campaign_arc_climax": "Prevent the Great Polarity Reversal."
+    }
+  },
+  "active_location": {
+    "location_id": "LOC_FERROFLUID_SEA",
+    "macro_silhouette": "A churning expanse of black metallic liquid.",
+    "sensory_palette": {
+      "sight_and_color": "Iridescent streaks of oil against obsidian waves.",
+      "smell": "Ozone and metallic tang.",
+      "sound": "The low, resonant hum of magnetic shearing forces.",
+      "tactile_temperature": "A sharp, static chill biting through the environment.",
+      "taste_optional": "The alkaline static tang of ozone."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetized Bulkhead",
+        "affordance_description": "A heavy metal door resisting the shear forces.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Uptake Valve",
+        "affordance_description": "A suction mechanism drawing in the black fluid.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Magnetic Shear Anomaly",
+        "affordance_description": "A chaotic whirlpool of magnetic force.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 16
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "TOY_HECTOR_WRENCH",
+      "name_and_role": "Hector's Torque Wrench",
+      "motivation_goal": "Tighten the loose bolts.",
+      "consistent_method": "Apply kinetic force.",
+      "immediate_complication": "Slips due to the magnetic pull.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The wrench flies into the ferrofluid sea."
+    }
+  ],
+  "encounter_matrix": {
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "Primary Engineer"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "Relay Anchor"
+      }
+    ],
+    "prerolled_hazard_queue": [
+      12,
+      5,
+      18,
+      9,
+      14
+    ],
+    "strain_accumulated_upward": 15,
+    "three_levels_of_why": {
+      "level_1_immediate": "The containment field is buckling under shear stress.",
+      "level_2_local": "The storm has disrupted the local magnetosphere.",
+      "level_3_campaign_arc": "The planetary magnetic core is destabilizing."
+    }
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4o",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Hector loses his grip on the relay baton, sending it plummeting towards the turbulent ferrofluid sea.",
+      "graduated_outcomes": {
+        "critical_success": "Flawless maneuver.",
+        "success": "Task accomplished.",
+        "mixed_success": "Task accomplished with strain.",
+        "failure": "Task failed, strain increases.",
+        "critical_failure": "Catastrophic failure."
+      }
+    },
+    "master_narrator": {
+      "executor": "claude",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector braces against the whistling wind, turning to spot Kaio scrambling up the scaffolding. 'Catch!' he yells, throwing the heavy brass baton over the churning black sea. Over to you, Kaio."
+    }
+  }
+}
