@@ -63,7 +63,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.3608,
+      "stress": 0.3161,
       "fatigue": 0.16,
       "sleep_debt_norm": 0.16,
       "kp_exo": 7.41,
@@ -149,7 +149,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.3079,
+      "stress": 0.267,
       "fatigue": 0.12,
       "sleep_debt_norm": 0.12,
       "kp_exo": 7.41,
@@ -235,7 +235,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.3837,
+      "stress": 0.3376,
       "fatigue": 0.2664,
       "sleep_debt_norm": 0.2664,
       "kp_exo": 7.41,
@@ -761,7 +761,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.3608,
+      "stress": 0.3161,
       "fatigue": 0.16,
       "sleep_debt_norm": 0.16,
       "kp_exo": 7.41,
@@ -847,7 +847,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.3079,
+      "stress": 0.267,
       "fatigue": 0.12,
       "sleep_debt_norm": 0.12,
       "kp_exo": 7.41,
@@ -933,7 +933,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.3837,
+      "stress": 0.3376,
       "fatigue": 0.2664,
       "sleep_debt_norm": 0.2664,
       "kp_exo": 7.41,
@@ -1437,9 +1437,10 @@
     }
   },
   "applied_event_ids": [
-    "evt_s013_t0050_expedition_consequence"
+    "evt_s013_t0050_expedition_consequence",
+    "evt_s013_t0050_shadow_prank"
   ],
-  "total_events_through_tick": 58,
+  "total_events_through_tick": 59,
   "recent_segments": [
     {
       "segment_id": "seg_s009_t0035_enclave_05_kaio",
