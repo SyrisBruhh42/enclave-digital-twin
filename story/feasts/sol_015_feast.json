@@ -1,0 +1,149 @@
+{
+  "event_id": "sol_015_feast",
+  "tick_id": 60,
+  "colony_sol": 15,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-11-08T18:00:00Z",
+  "base_snapshot_tick": 59,
+  "event_type": "THE_FEAST_CONVERGENCE",
+  "location": "The_Hearth",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_02_jane",
+    "enclave_03_silas",
+    "enclave_04_leo",
+    "enclave_05_kaio",
+    "enclave_06_zara",
+    "enclave_07_willow",
+    "enclave_08_terra",
+    "enclave_09_orion",
+    "enclave_10_isla",
+    "enclave_11_kenna",
+    "enclave_12_elias",
+    "enclave_13_ryn",
+    "enclave_14_vex",
+    "enclave_15_dorian",
+    "enclave_16_elara"
+  ],
+  "summary": "Ryn wrestles with the caloric ledger as a Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea threatens the evening induction stoves, ultimately handing Silas a grounding rod to stabilize the kitchen.",
+  "importance": 8,
+  "novelty_score": 8,
+  "evidence_refs": [],
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_13_ryn -> Handoff=enclave_03_silas.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "campaign_metadata": {
+    "colony_sol": 15,
+    "tick_id": 60,
+    "session_number": 15,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Maintain metabolic equilibrium during the magnetic surge",
+      "mid_term_milestone": "Reinforce The Hearth's structural integrity",
+      "campaign_arc_climax": "Harness the planet's anomalous energies"
+    }
+  },
+  "active_location": {
+    "location_id": "The_Hearth",
+    "macro_silhouette": "The grand galley of The Hearth echoes with the rhythmic hiss of pressure valves as Ryn orchestrates the evening meal. Heavy iron stanchions vibrate ominously under the strain of the external magnetic surge, shaking dust into the bubbling cauldrons. The ambient lighting flickers in chaotic intervals, throwing long, distorted shadows across the mess hall tables.",
+    "sensory_palette": {
+      "sight_and_color": "Erratic flashes of harsh utility lighting battling the deep amber glow of the cooking fires.",
+      "sound": "The deep, resonant hum of the station's hull vibrating in time with the magnetic shear outside.",
+      "smell": "The rich, savory aroma of caramelized root vegetables tinged with the sharp scent of ionized air.",
+      "tactile_temperature": "Oppressive waves of heat rolling off the main stoves, cut by sudden blasts of icy air from compromised vents.",
+      "taste_optional": "A persistent metallic tang that coats the tongue, a side effect of the heavy magnetic fields."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Reinforced Galley Blast Door",
+        "affordance_description": "Can be braced to seal off the main kitchen from unpredictable atmospheric pressure spikes.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetized Spice Rack",
+        "affordance_description": "Can pull scattered metal tools into a singular, manageable cluster if polarized correctly.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Dense Steam Vent",
+        "affordance_description": "Releases thick, opaque vapor that can shroud personnel during a sudden internal hazard.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "TOY_FERROFLUID_SHEAR",
+      "name_and_role": "Ferrofluid Sea Shear",
+      "motivation_goal": "Destabilize the local magnetic field.",
+      "consistent_method": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea.",
+      "immediate_complication": "Induce a magnetic surge that threatens to short out the induction stoves.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The shear intensifies, causing metallic objects to rattle violently and the hull to groan with dangerous resonance."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The shear threatens to disrupt the delicate metabolic balance of the colony's evening meal.",
+      "level_2_local": "The ferrofluid sea's instability is causing unpredictable magnetic fluctuations throughout the sector.",
+      "level_3_campaign_arc": "The enclave must adapt to the exoplanet's increasingly hostile physical anomalies to survive."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      12,
+      14,
+      16,
+      18,
+      20
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.65,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The magnetic surge ruins the meal and causes a minor system overload in The Hearth.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "The stove explodes, scattering half-cooked rations and injuring the crew.",
+        "below_dc_complicated_fail_forward": "The meal is salvaged but heavily singed, and the power grid flickers ominously.",
+        "meets_dc_clean_success": "The meal is perfectly cooked and the stoves are shielded from the surge.",
+        "dc_plus_5_or_20_extended_lore": "Not only is the feast pristine, but Silas discovers a way to syphon the shear's energy to recharge the local grid."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Ryn wipes her brow, eyes darting to the flickering lights. 'Silas, take this grounding rod and anchor the magnetic resonance near the main induction array!'"
+    }
+  },
+  "state_deltas": {},
+  "relationship_deltas": []
+}
