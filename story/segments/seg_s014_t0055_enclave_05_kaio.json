@@ -1,0 +1,124 @@
+{
+  "event_type": "POV_SCENE_SEGMENT",
+  "event_id": "seg_s014_t0055_enclave_05_kaio",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "tick_id": 55,
+  "colony_sol": 14,
+  "day_phase": "DUSK_CRAFT",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2: Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "calypso_zero_raw_stats": true,
+  "summary": "Kaio scans the bedrock fracture and reports the readings up to Hector, while analyzing the Magnetohydrodynamic Kelvin-Helmholtz shear.",
+  "campaign_metadata": {
+    "session_number": 14,
+    "colony_sol": 14,
+    "tick_id": 55,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Rebalance the magnetic induction arrays against the ferrofluid waves",
+      "mid_term_milestone": "Secure The First Forge foundation",
+      "campaign_arc_climax": "Master the magnetic turbulence of the exoplanet"
+    }
+  },
+  "active_location": {
+    "location_id": "The_First_Forge",
+    "macro_silhouette": "Down on the rocky shore of The First Forge, bioluminescent moss flickers wildly as the jet-black metallic tides slam against the reinforced foundation. The roaring ozone winds whip across the churning ferrofluid sea, where the relentless Kelvin-Helmholtz shear tears at the magnetic induction lines.",
+    "sensory_palette": {
+      "sight_and_color": "Blinding blue electrical arcs illuminating the slick, jet-black peaks of the metallic waves.",
+      "sound": "Deafening thunderclaps of discharged voltage overlaid with the deep, sickening crunch of the shear.",
+      "smell": "Heavy, stinging ozone mixed with a sharp tang of vaporized iron.",
+      "tactile_temperature": "A biting sleet contrasting with the heat radiating from the overheated shunts above.",
+      "taste_optional": "A coppery, electric sizzle that fills the mouth and raises the hairs on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Fractured Bedrock Node",
+        "affordance_description": "Can be scanned to map the escalating shear forces.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Surge Pool",
+        "affordance_description": "Can be safely diverted to bleed off the kinetic energy.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetic Shielding Strut",
+        "affordance_description": "Can be reinforced to protect the lower foundation from the surge.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The relentless Kelvin-Helmholtz shear is tearing at the magnetic induction lines, threatening immediate electrocution and structural failure.",
+      "level_2_local": "If the bedrock fracture widens, The First Forge's foundation will be undermined by the ferrofluid sea.",
+      "level_3_campaign_arc": "The exoplanet's fundamental physical forces stubbornly resist Enclave engineering."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "SQUISHY_DEBUFFER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 4,
+    "prerolled_hazard_queue": [
+      12,
+      19,
+      6,
+      15,
+      2
+    ]
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "GPT-4o",
+      "model": "gpt-4o",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If the scan fails, the bedrock fracture will unexpectedly widen, destabilizing Kaio's footing.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio misinterprets the sensor readings, causing Hector to recalibrate the shunt incorrectly.",
+        "below_dc_complicated_fail_forward": "The scan completes, but the sensor array shorts out from a sudden magnetic spike.",
+        "meets_dc_clean_success": "Kaio perfectly maps the fracture, allowing Hector to ground the cascade.",
+        "dc_plus_5_or_20_extended_lore": "Kaio discovers a deep resonance in the fracture, hinting at a larger subterranean cavern network."
+      }
+    },
+    "master_narrator": {
+      "executor": "Claude-3-Opus",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio taps the sensor array one last time and keys the comms, directing their voice to the command deck. 'Ryn, I have the readings. The fracture is stabilizing, but we need a macro-assessment of the local magnetic field. What's the readout up there?'"
+    }
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "kelvin_helmholtz_shear_vortex",
+      "name_and_role": "Ferrofluid Shear Vortex",
+      "motivation_goal": "To violently equilibrate the magnetic differential across the surface.",
+      "consistent_method": "Pulsing erratic spikes of kinetic and magnetic energy into rigid Enclave structures.",
+      "immediate_complication": "A deep resonance is vibrating the bedrock, threatening to widen the fracture.",
+      "pressure_index": 9,
+      "uninterrupted_escalation": "The fracture will widen enough to swallow the sensor array and destabilize the foundation."
+    }
+  ],
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.75,
+    "unresolved_conflict_ratio": 0.85,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.83,
+    "classification": "Campaign-Ready"
+  }
+}
