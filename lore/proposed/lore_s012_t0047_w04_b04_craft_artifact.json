@@ -1,0 +1,114 @@
+{
+  "event_type": "DYNAMIC_LORE_CARD_PROPOSALS",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "campaign_metadata": {
+    "session_number": 12,
+    "colony_sol": 12,
+    "tick_id": 47,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Understand the sheer mechanics to stabilize the raft.",
+      "mid_term_milestone": "Cross the ferrofluid sea safely.",
+      "campaign_arc_climax": "Solve the mystery of the planet's magnetic core."
+    }
+  },
+  "active_location": {
+    "location_id": "Ferrofluid_Sea_Interior",
+    "macro_silhouette": "The cramped interior of the submersible raft shakes violently with every magnetic shift. The rusted iron walls hum with latent energy, casting a dull, flickering orange glow across the scattered diagnostic equipment.",
+    "sensory_palette": {
+      "sight_and_color": "Flickering orange glow, rusted iron walls.",
+      "sound": "Deep metallic humming, violent shaking.",
+      "smell": "Ozone and stale air.",
+      "tactile_temperature": "Hot, vibrating metal.",
+      "taste_optional": "Copper."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Diagnostic Console",
+        "affordance_description": "Can be rewired to absorb the magnetic shock.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Coolant Vent",
+        "affordance_description": "Vents steam to hide the raft's heat signature.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetic Anchor",
+        "affordance_description": "Draws the surrounding ferrofluid to stabilize the craft.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "magneto_shear_pulse",
+      "name_and_role": "Kelvin-Helmholtz Shear Pulse (Environmental Hazard)",
+      "motivation_goal": "To crush the submersible raft.",
+      "consistent_method": "Emitting powerful magnetic pulses.",
+      "immediate_complication": "The pulse threatens to tear apart the raft's hull.",
+      "pressure_index": 9,
+      "uninterrupted_escalation": "The hull will breach, flooding the interior with deadly ferrofluid."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio needs to calibrate the sensors to predict the shear.",
+      "level_2_local": "To safely navigate the ferrofluid sea.",
+      "level_3_campaign_arc": "To unlock the secrets of the planet's magnetic anomalies."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "SPECIALIST"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.8,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "OpenAI",
+      "model": "gpt-4",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Kaio fails to calibrate, resulting in significant damage to the sensors, but the raft survives.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio misinterprets the data, leading the raft into a stronger pulse.",
+        "below_dc_complicated_fail_forward": "Kaio calibrates the sensors, but they short out immediately after.",
+        "meets_dc_clean_success": "Kaio successfully calibrates the sensors.",
+        "dc_plus_5_or_20_extended_lore": "Kaio successfully calibrates and discovers a hidden safe path."
+      }
+    },
+    "master_narrator": {
+      "executor": "Claude",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Pass the physical baton to Ryn to steer the raft."
+    }
+  }
+}
