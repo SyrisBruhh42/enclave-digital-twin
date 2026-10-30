@@ -1,0 +1,121 @@
+{
+  "event_type": "NIGHTLY_REFLECTION",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_13_ryn -> Handoff=enclave_03_silas.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "cited_event_ids": [
+    "evt_s013_t0050_shadow_prank"
+  ],
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 13,
+    "tick_id": 52,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Maintain metabolic engine stability through the feast",
+      "mid_term_milestone": "Survive the ferrofluid storm",
+      "campaign_arc_climax": "The Hearth & Metabolic Engine grand project completion"
+    }
+  },
+  "active_location": {
+    "location_id": "the_hearth_galley",
+    "macro_silhouette": "A massive, steam-filled industrial galley built into a refurbished thermal shaft, buzzing with activity and the sharp smell of iron. Copper and brass pipes weave across the ceiling, conducting waste heat from the colony's reactor.",
+    "sensory_palette": {
+      "sight_and_color": "The heavy copper pots gleam under low-light fluoros.",
+      "sound": "Hissing steam pipes provide a steady, deafening hum beneath the clatter of brass ladles.",
+      "smell": "The rich smell of roasting mire-lentils cuts through the metallic tang of the ferrofluid sea outside.",
+      "tactile_temperature": "The ambient heat radiating from the main stoves sticks to the skin like a humid blanket.",
+      "taste_optional": "The air tastes of ozone and caramelized myco-proteins."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Main Induction Stove",
+        "affordance_description": "Can be used to defend the feast from the magnetic shear.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Caramelized Myco-Proteins",
+        "affordance_description": "Can be consumed to restore metabolic balance.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 10
+      },
+      {
+        "feature_name": "Steam Pipes",
+        "affordance_description": "Can be used to attract attention or conceal movement.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_storm",
+      "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+      "motivation_goal": "To destabilize the colony's thermal equilibrium",
+      "consistent_method": "Pulsing erratic magnetic fields that interfere with the metabolic engine",
+      "immediate_complication": "The shear is causing the galley's thermal regulation to spike unpredictably, threatening to scorch the feast.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The magnetic fluctuations will blow a fuse on the primary induction stoves if not stabilized."
+    }
+  ],
+  "encounter_matrix": {
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "prerolled_hazard_queue": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "strain_accumulated_upward": 1,
+    "three_levels_of_why": {
+      "level_1_immediate": "Ryn must manually modulate the stove's thermal dampers as the magnetic shear spikes.",
+      "level_2_local": "If the feast is scorched, the colony's caloric deficit alert will trigger, plummeting morale.",
+      "level_3_campaign_arc": "The Hearth's integrity is the physical and emotional anchor of the Enclave; failing here means failing her grand project."
+    }
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.5,
+    "motivational_vector_saturation": 0.6,
+    "unresolved_conflict_ratio": 0.4,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.55,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Anthropic",
+      "model": "claude-3-opus",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The feast is burnt and Ryn's stress spikes, forcing an exhaustion check.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Ryn turns the wrong dial and the entire batch of food is scorched.",
+        "below_dc_complicated_fail_forward": "The food is somewhat salvaged, but Silas must sprint to bypass the circuit breaker.",
+        "meets_dc_clean_success": "The thermal dampers are stabilized and the feast is saved without complication.",
+        "dc_plus_5_or_20_extended_lore": "Ryn discovers a new culinary technique while modulating the dampers that increases caloric efficiency."
+      }
+    },
+    "master_narrator": {
+      "executor": "Anthropic",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Ryn tightly gripped the brass ladle, feeling the ambient heat radiating from the main stoves stick to her skin like a humid blanket. The hissing steam pipes provided a steady, deafening hum beneath the clatter of her tools as she tried to maintain the metabolic engine's stability. The air tasted of ozone and caramelized myco-proteins, momentarily distracting her from the heavy copper pots gleaming under the low-light fluoros. She needed to stabilize the thermal dampers quickly. The rich smell of roasting mire-lentils cut through the metallic tang of the ferrofluid sea outside, where the Magnetohydrodynamic Kelvin-Helmholtz shear pulsed erratic magnetic fields. If she couldn't keep the feast from scorching, the resulting caloric deficit would be disastrous for the colony. She passed the baton to Silas, gesturing frantically for him to sprint to the circuit breaker before the main induction stoves blew a fuse."
+    }
+  }
+}
