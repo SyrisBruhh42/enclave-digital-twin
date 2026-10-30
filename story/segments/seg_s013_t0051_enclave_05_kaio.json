@@ -72,7 +72,13 @@
           "tactical_role": "Quartermaster"
         }
       ],
-      "prerolled_hazard_queue": [ 1, 2, 3, 4, 5 ],
+      "prerolled_hazard_queue": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
       "strain_accumulated_upward": 0,
       "three_levels_of_why": {
         "level_1_immediate": "Kaio wants to show Ryn a discovery.",
@@ -113,5 +119,5 @@
       }
     }
   },
-  "narrative_prose": "Kaio practically vibrated with excitement as he scrambled up the slick black basalt pillar, his brass sextant clutched tightly. Below him, the silvery ripples of magnetic fluid collided in fractal patterns—a perfect example of magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. The deep, resonant thrum of the shear wave echoed through his boots, and the air smelled sharply of metallic tang and ozone. He turned toward the path where Ryn would be approaching, an eager grin on his face, ready to thrust a handful of luminescent ridge-crystals into the quartermaster's meticulous hands. \"Look at the eddy currents, Ryn!\" he shouted over the noise, completely forgetting that he was supposed to be doing a routine supply check."
+  "narrative_prose": "Kaio practically vibrated with excitement as he scrambled up the slick black basalt pillar, his brass sextant clutched tightly. Below him, the silvery ripples of magnetic fluid collided in fractal patterns\u2014a perfect example of magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. The deep, resonant thrum of the shear wave echoed through his boots, and the air smelled sharply of metallic tang and ozone. He turned toward the path where Ryn would be approaching, an eager grin on his face, ready to thrust a handful of luminescent ridge-crystals into the quartermaster's meticulous hands. \"Look at the eddy currents, Ryn!\" he shouted over the noise, completely forgetting that he was supposed to be doing a routine supply check."
 }

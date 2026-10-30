@@ -1570,6 +1570,20 @@
       "excerpt": "[DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration "
     },
     {
+      "segment_id": "seg_s013_t0051_enclave_05_kaio",
+      "sol_id": 1,
+      "colony_sol": 1,
+      "tick_id": 1,
+      "active_pov_id": "enclave_05_kaio",
+      "next_pov_target": "enclave_13_ryn",
+      "location_id": "The_Hub_Hearth",
+      "time_of_day": "DAWN_SHIFT",
+      "day_phase": "DAWN_SHIFT",
+      "title": "Sol 001 \u2022 DAWN_SHIFT (enclave_05_kaio)",
+      "opening_excerpt": "Kaio practically vibrated with excitement as he scrambled up the slick black basalt pillar, his brass sextant clutched tightly. Below him, the silvery ripples of magnetic fluid collided in fractal patterns\u2014a perfect exam",
+      "excerpt": "Kaio practically vibrated with excitement as he scrambled up the slick black basalt pillar, his brass sextant clutched tightly. Below him, the silvery ripples of magnetic fluid collided in fractal patterns\u2014a perfect exam"
+    },
+    {
       "segment_id": "seg_s001_t0002_enclave_01_hector",
       "sol_id": 1,
       "colony_sol": 1,
