@@ -1,0 +1,107 @@
+{
+  "event_type": "POV_SCENE_SEGMENT",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "campaign_metadata": {
+    "colony_sol": 12,
+    "tick_id": 47,
+    "session_number": 4,
+    "consequential_fights_since_short_rest": 0,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "horizon_goals": {
+      "immediate_session_goal": "Map the ferrofluid sea shear boundaries",
+      "mid_term_milestone": "Secure the southern biome corridors",
+      "campaign_arc_climax": "Complete the Sanctuary"
+    }
+  },
+  "active_location": {
+    "location_id": "Ferrofluid_Sea_Coast",
+    "macro_silhouette": "A sweeping shoreline of jagged basalt where dark, metallic liquid churns in eerie, silent peaks. The air above the shore twists and hums, bending light and scattering bioluminescent spores in mesmerizing patterns across the dark horizon. The distant horizon crackles with an auroral glow as the Kelvin-Helmholtz shear visibly distorts the dusky sky.",
+    "sensory_palette": {
+      "sight_and_color": "Swirling metallic blacks, glowing electric blue spore-clouds, jagged dark basalt.",
+      "sound": "A deep, resonant thrumming of magnetic waves against stone, punctuated by sharp, static cracks.",
+      "smell": "Ozone and cold copper.",
+      "tactile_temperature": "A biting chill that raises hairs, accompanied by a tingling static charge.",
+      "taste_optional": "A faint, metallic tang of iron on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetized Basalt Outcropping",
+        "affordance_description": "A tall shard of rock crackling with latent energy, perfect for sheltering from the shear winds.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Ferrofluid Surge Pool",
+        "affordance_description": "A churning eddy of magnetic liquid that occasionally pulls stray metallic objects inward.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Spore-Dense Fog Bank",
+        "affordance_description": "A thick blanket of glowing mist hanging low over the shore, offering complete visual obscurity.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "encounter_matrix": {
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "Scout"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "Chef"
+      }
+    ],
+    "prerolled_hazard_queue": [ 4, 12, 19, 2, 8 ],
+    "strain_accumulated_upward": 2,
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio wants to map the shear currents, but they are erratic and dangerous.",
+      "level_2_local": "The unpredictable magnetic shear threatens the stability of the nearby encampment.",
+      "level_3_campaign_arc": "Mastering this environment is critical for The Sanctuary."
+    }
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "Magnetic_Shear_Anomaly",
+      "name_and_role": "Shear Anomaly - Environmental Hazard",
+      "motivation_goal": "To equalize magnetic pressure unpredictably.",
+      "consistent_method": "Emitting bursts of localized polarity inversion.",
+      "immediate_complication": "Throws metallic equipment out of alignment or rips it away.",
+      "uninterrupted_escalation": "The shear front will widen, destabilizing the entire coast.",
+      "pressure_index": 7
+    }
+  ],
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If Kaio fails, his brass sextant is magnetized and rendered temporarily useless, and he must scramble to recover his bearings.",
+      "graduated_outcomes": "Fail forward: the map is flawed but still usable, though it costs them time and puts Ryn's supply lines in a tricky spot."
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio finishes his sketch and turns to Ryn, holding out the vibrating sextant."
+    }
+  },
+  "lpi_metrics": {
+    "composite_lpi": 0.85,
+    "classification": "PLAYABLE",
+    "motivational_vector_saturation": 0.9,
+    "relational_tension_density": 0.8,
+    "temporal_horizon_immediacy": 0.8,
+    "unresolved_conflict_ratio": 0.9
+  }
+}
