@@ -1,0 +1,114 @@
+{
+  "event_type": "POV_SCENE_SEGMENT",
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "campaign_metadata": {
+    "session_number": 13,
+    "colony_sol": 13,
+    "tick_id": 49,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Maintain structural integrity during the magnetic shear event.",
+      "mid_term_milestone": "Calibrate the forge's sympathetic resonance.",
+      "campaign_arc_climax": "Master the magnetic anomalies of the exoplanet."
+    }
+  },
+  "active_location": {
+    "location_id": "The_First_Forge",
+    "macro_silhouette": "The First Forge reverberates with the deep, rhythmic hum of its magnetic confinement coils, the air thick with the smell of ozone and hot brass. Heavy iron gantries cast long, jagged shadows against the reinforced plating, while the ambient light flickers between the steady amber of the furnaces and the erratic blue arcs of sympathetic discharge. Beyond the heavy blast doors, the distant roar of the ferrofluid sea breaking against the hull serves as a constant, looming threat.",
+    "sensory_palette": {
+      "sight_and_color": "Flickering amber from the primary furnace, cut by harsh, erratic flashes of blue electrical discharge along the containment coils.",
+      "sound": "The oppressive, rhythmic thrumming of the magnetic coils, punctuated by sharp crackles of static and Silas's heavy, measured breathing.",
+      "smell": "A pungent mix of heated brass, sharp ozone from electrical arcing, and a faint, acrid undertone of burnt insulation.",
+      "tactile_temperature": "A stifling, dry heat radiating from the forge, countered by abrupt, chilling drafts whenever a pressure vent cycles.",
+      "taste_optional": "The metallic tang of ozone lingering on the back of the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Primary Magnetic Containment Console",
+        "affordance_description": "A heavy, analog control board bristling with oversized brass levers and flickering pressure dials.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Sympathetic Resonance Chamber",
+        "affordance_description": "A reinforced viewport overlooking the core, glowing with volatile blue plasma.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Emergency Venting Hatch",
+        "affordance_description": "A heavy steel grating set into the floor, capable of bleeding off excess magnetic pressure.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_magnetic_shear_spike",
+      "name_and_role": "Magnetohydrodynamic Shear Anomaly",
+      "motivation_goal": "To destabilize the forge's core magnetic containment.",
+      "consistent_method": "Sending unpredictable, high-frequency magnetic pulses through the structural girders.",
+      "immediate_complication": "The primary containment console begins to read dangerous pressure spikes, threatening a blowout.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "The magnetic containment will fail, causing a cascading blowout that destroys the forge's primary coil."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Silas must stabilize the containment console to prevent an immediate blowout from the magnetic shear.",
+      "level_2_local": "The First Forge provides crucial structural and energetic support for the entire colony.",
+      "level_3_campaign_arc": "Understanding and adapting to the ferrofluid sea's anomalies is key to long-term survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "ANCHOR"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      12,
+      4,
+      19,
+      8,
+      14
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.67,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.3,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The magnetic shear overwhelms Silas's recalibration attempt, blowing out the primary coil and leaving the forge vulnerable.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Silas applies the wrong offset, accidentally amplifying the magnetic pulse and causing immediate structural damage.",
+        "below_dc_complicated_fail_forward": "Silas prevents a total blowout, but the console burns out, requiring hours of meticulous repair work.",
+        "meets_dc_clean_success": "Silas smoothly recalibrates the containment field, perfectly absorbing the magnetic shear with measured precision.",
+        "dc_plus_5_or_20_extended_lore": "Silas not only stabilizes the forge but discovers a harmonic frequency in the shear that can be used to passively charge the reserve batteries."
+      }
+    },
+    "master_narrator": {
+      "executor": "claude-3-opus",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Silas grunts, securing the heavy brass lever in place, and thrusts a data-pad covered in frantic scribbles toward Hector. 'The containment is holding, but it's inefficient. Check those tertiary relays before the next spike hits,' he commands."
+    }
+  }
+}
