@@ -1,0 +1,118 @@
+{
+  "event_type": "POV_SCENE_SEGMENT",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "active_pov_id": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "campaign_metadata": {
+    "session_number": 14,
+    "colony_sol": 14,
+    "tick_id": 55,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Craft a stabilized grounding shunt for the ferrofluid sea expedition",
+      "mid_term_milestone": "Establish a stable grounding shunt network",
+      "campaign_arc_climax": "Master the exoplanet's turbulent electromagnetic forces"
+    }
+  },
+  "active_location": {
+    "location_id": "workshop_b04",
+    "macro_silhouette": "The cramped workshop hums with latent static, its walls lined with half-finished prototypes and sparking capacitors. Workbenches are cluttered with scorched iron components and insulated wiring, illuminated by the harsh, erratic flickering of overtaxed lumen globes.",
+    "sensory_palette": {
+      "sight_and_color": "Harsh, erratic flickering of overtaxed lumen globes illuminating scorched iron components",
+      "sound": "A constant, low-frequency hum from the power conduits, punctuated by the occasional pop of a bursting capacitor",
+      "smell": "Thick ozone mixed with the acrid stench of burning flux and melting insulation",
+      "tactile_temperature": "Stiflingly hot and oppressively dry, causing the skin to feel tight and prickly",
+      "taste_optional": "A bitter, metallic tang that coats the tongue with every breath"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Reinforced Drafting Table",
+        "affordance_description": "A heavy, grounded table that can serve as a barrier against electrical surges or shrapnel from exploding prototypes.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetic Flux Condenser",
+        "affordance_description": "A jury-rigged device capable of temporarily redirecting ambient magnetic fields toward it.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Dense Coolant Fog",
+        "affordance_description": "A thick blanket of inert gas leaking from a ruptured cooling line, providing heavy obscuration.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 13
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "unstable_ferro_core",
+      "name_and_role": "Unstable Ferro-Core (Crafting Component Hazard)",
+      "motivation_goal": "To violently discharge its stored magnetic energy if not properly calibrated.",
+      "consistent_method": "Emitting escalating pulses of electromagnetic interference that disrupt nearby tools and nervous systems.",
+      "immediate_complication": "The core is currently resonating dangerously close to its fracture point, threatening to blow.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "If left unchecked, the core will detonate in a devastating EMP blast, ruining the prototype and injuring anyone nearby."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The Enclave desperately needs the grounding shunt to survive the ferrofluid sea's magnetic shears.",
+      "level_2_local": "Successfully crafting this artifact proves Kaio's theories on exoplanetary electromagnetism are viable.",
+      "level_3_campaign_arc": "Mastering these volatile crafting techniques is essential to adapting to the planet's hostile environment."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "DEFENDER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "SUPPORT"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      9,
+      18,
+      6,
+      11
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.7,
+    "temporal_horizon_immediacy": 0.85,
+    "composite_lpi": 0.73,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Enclave_Core",
+      "model": "v2_tactical",
+      "temperature": 0.1,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The prototype overloads during calibration, destroying the rare ferro-core and causing a severe electrical burn.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio reverses the polarity on the final connection, causing an immediate, catastrophic meltdown.",
+        "below_dc_complicated_fail_forward": "The core stabilizes, but a feedback loop fuses the primary array, rendering it functional but permanently locked at half efficiency.",
+        "meets_dc_clean_success": "Kaio deftly solders the final joint exactly as the core hits resonance, perfectly sealing the magnetic loop.",
+        "dc_plus_5_or_20_extended_lore": "Kaio not only seals the loop but discovers a secondary harmonic that increases the shunt's effective range, providing extra protection."
+      }
+    },
+    "master_narrator": {
+      "executor": "Enclave_Narrative",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio wiped a bead of sweat from his forehead, the oppressive heat of the workshop pressing in as the ferro-core pulsed a dangerous, angry violet. He gritted his teeth, steadying his hands to make the final, crucial connection. The sudden snap of ozone filled the air as the circuit closed, and the violent humming settled into a steady, resonant thrum. He turned to Ryn, tossing the heavy, insulated diagnostic baton toward them. 'It's holding! Your turn to check the telemetry, Ryn!'"
+    }
+  }
+}
