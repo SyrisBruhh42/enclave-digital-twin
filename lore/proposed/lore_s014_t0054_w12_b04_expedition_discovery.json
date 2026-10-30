@@ -88,7 +88,8 @@
   "lpi_metrics": {
     "lethality_index": 0.0,
     "puzzle_complexity": 0.6,
-    "interpersonal_friction": 0.8
+    "interpersonal_friction": 0.8,
+    "composite_lpi": 0.68
   },
   "dual_agent_contract": {
     "judge_tactician": {
@@ -111,5 +112,8 @@
       "prosodic_micro_pauses_enabled": true,
       "agency_handoff_prompt": "Hector gripped the sputtering tether, feeling the immediate jolt of the Magnetohydrodynamic Kelvin-Helmholtz shear threatening to rip his arm from its socket. He gritted his teeth, adrenaline overriding the sting of the ozone, and slammed the anchor point home on the basalt spire. Breathing hard, he turned and tossed the heavy brass relay baton through the crackling mist straight towards Kaio. 'Your turn, Scout! Don't let the sea bite!'"
     }
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
   }
 }
