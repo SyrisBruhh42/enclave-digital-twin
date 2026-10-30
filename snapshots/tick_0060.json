@@ -1,0 +1,1804 @@
+{
+  "schema_version": "enclave_snapshot_v2.0.0",
+  "tick_id": 60,
+  "colony_sol": 15,
+  "day_phase": "THE_FEAST",
+  "epoch_seed": "enclave_epoch_2026",
+  "chronosphere": {
+    "world_timestamp_iso": "2026-11-08T18:00:00Z",
+    "tick_id": 60,
+    "colony_sol": 15,
+    "day_phase": "THE_FEAST",
+    "kp_exo": 2.36,
+    "twin_suns_orbital_state": {
+      "primary_blue_dwarf_azimuth_deg": 141.32,
+      "secondary_red_giant_azimuth_deg": 112.65,
+      "magnetic_polarity_shear_kp_exo": 2.36
+    },
+    "triple_moon_tidal_vector": {
+      "luna_alpha_phase": 0.1684,
+      "luna_beta_phase": 0.6467,
+      "luna_gamma_phase": 0.3311,
+      "ferrofluid_sea_surge_index": 0.3399
+    }
+  },
+  "weather": {
+    "tick_id": 60,
+    "colony_sol": 15,
+    "day_phase": "THE_FEAST",
+    "active_biome_cell": "Mycelial_Geode_Caverns",
+    "micro_climate_regime": "Lightning_Geode_Supercharge",
+    "valley_floor_temp_c": 15.9,
+    "ridge_crest_temp_c": -8.6,
+    "barometric_pressure_hpa": 1001.7,
+    "spore_luminescence_density": 0.65,
+    "geode_charge_capacity_pct": 48.5,
+    "weather_severity": 0.646,
+    "kp_exo": 2.64,
+    "magnetosphere": {
+      "kp_exo": 2.64
+    },
+    "active_environmental_hazard": "High_Altitude_Flux_Arc"
+  },
+  "character_states": {
+    "enclave_01_hector": {
+      "character_id": "enclave_01_hector",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.2609,
+        "conscientiousness": 0.2769,
+        "extraversion": 1.0,
+        "agreeableness": 0.6086,
+        "neuroticism": 0.1685,
+        "hexaco_honesty_humility": 0.7462
+      },
+      "z_scores": {
+        "openness": -1.8221,
+        "conscientiousness": -0.3311,
+        "extraversion": 2.1372,
+        "agreeableness": 0.2787,
+        "neuroticism": 1.3099,
+        "hexaco_honesty_humility": -0.4915
+      },
+      "triggered_caps_rules": [
+        "CAPS_HECTOR_04_THE_FEAST_CAMARADERIE"
+      ],
+      "behavioral_directives": [
+        "Claps exhausted squadmates on the shoulder, refills everyone's cider mug, and exaggerates Jane's meteorological saves to make her blush."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.2609,
+      "openness_state": 0.2609,
+      "conscientiousness": 0.2769,
+      "conscientiousness_state": 0.2769,
+      "extraversion": 1.0,
+      "extraversion_state": 1.0,
+      "agreeableness": 0.6086,
+      "agreeableness_state": 0.6086,
+      "neuroticism": 0.1685,
+      "neuroticism_state": 0.1685,
+      "hexaco_honesty_humility": 0.7462,
+      "hexaco_honesty_humility_state": 0.7462,
+      "morale": 0.5
+    },
+    "enclave_02_jane": {
+      "character_id": "enclave_02_jane",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.7641,
+        "conscientiousness": 0.5618,
+        "extraversion": 0.0846,
+        "agreeableness": 0.62,
+        "neuroticism": 0.3711,
+        "hexaco_honesty_humility": 0.8592
+      },
+      "z_scores": {
+        "openness": -2.5,
+        "conscientiousness": 1.9768,
+        "extraversion": -0.5137,
+        "agreeableness": 0.4658,
+        "neuroticism": 0.119,
+        "hexaco_honesty_humility": -0.3422
+      },
+      "triggered_caps_rules": [
+        "CAPS_JANE_04_THE_FEAST_QUIET_CORNER"
+      ],
+      "behavioral_directives": [
+        "Sits near the hearth fire sketching cloud-vortex cellular automata in gravy on her plate while secretly enjoying Dorian's stories."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.7641,
+      "openness_state": 0.7641,
+      "conscientiousness": 0.5618,
+      "conscientiousness_state": 0.5618,
+      "extraversion": 0.0846,
+      "extraversion_state": 0.0846,
+      "agreeableness": 0.62,
+      "agreeableness_state": 0.62,
+      "neuroticism": 0.3711,
+      "neuroticism_state": 0.3711,
+      "hexaco_honesty_humility": 0.8592,
+      "hexaco_honesty_humility_state": 0.8592,
+      "morale": 0.5
+    },
+    "enclave_03_silas": {
+      "character_id": "enclave_03_silas",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.1355,
+        "conscientiousness": 0.8999,
+        "extraversion": 0.1109,
+        "agreeableness": 0.5172,
+        "neuroticism": 0.4341,
+        "hexaco_honesty_humility": 0.942
+      },
+      "z_scores": {
+        "openness": 0.1362,
+        "conscientiousness": -0.7211,
+        "extraversion": -0.4668,
+        "agreeableness": 1.0251,
+        "neuroticism": -0.9452,
+        "hexaco_honesty_humility": 0.8899
+      },
+      "triggered_caps_rules": [
+        "CAPS_SILAS_04_THE_FEAST_TABLE"
+      ],
+      "behavioral_directives": [
+        "Quietly slides the warmest portion of bread to the nearest exhausted prodigy while pretending to complain about Ryn's seasoning."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.1355,
+      "openness_state": 0.1355,
+      "conscientiousness": 0.8999,
+      "conscientiousness_state": 0.8999,
+      "extraversion": 0.1109,
+      "extraversion_state": 0.1109,
+      "agreeableness": 0.5172,
+      "agreeableness_state": 0.5172,
+      "neuroticism": 0.4341,
+      "neuroticism_state": 0.4341,
+      "hexaco_honesty_humility": 0.942,
+      "hexaco_honesty_humility_state": 0.942,
+      "morale": 0.5
+    },
+    "enclave_04_leo": {
+      "character_id": "enclave_04_leo",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.7357,
+        "conscientiousness": 0.9456,
+        "extraversion": 0.8568,
+        "agreeableness": 0.6723,
+        "neuroticism": 0.191,
+        "hexaco_honesty_humility": 0.8842
+      },
+      "z_scores": {
+        "openness": -0.4998,
+        "conscientiousness": 1.865,
+        "extraversion": -2.1407,
+        "agreeableness": -0.2216,
+        "neuroticism": 0.04,
+        "hexaco_honesty_humility": 0.8689
+      },
+      "triggered_caps_rules": [
+        "CAPS_LEO_04_THE_FEAST_TOASTMASTER"
+      ],
+      "behavioral_directives": [
+        "Raises his hammered-copper tankard to celebrate even failed experiments as triumphs of colony audacity."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.7357,
+      "openness_state": 0.7357,
+      "conscientiousness": 0.9456,
+      "conscientiousness_state": 0.9456,
+      "extraversion": 0.8568,
+      "extraversion_state": 0.8568,
+      "agreeableness": 0.6723,
+      "agreeableness_state": 0.6723,
+      "neuroticism": 0.191,
+      "neuroticism_state": 0.191,
+      "hexaco_honesty_humility": 0.8842,
+      "hexaco_honesty_humility_state": 0.8842,
+      "morale": 0.5
+    },
+    "enclave_05_kaio": {
+      "character_id": "enclave_05_kaio",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.9418,
+        "conscientiousness": 0.1817,
+        "extraversion": 0.9714,
+        "agreeableness": 0.914,
+        "neuroticism": 0.4863,
+        "hexaco_honesty_humility": 0.7091
+      },
+      "z_scores": {
+        "openness": -0.3187,
+        "conscientiousness": 0.27,
+        "extraversion": -0.3977,
+        "agreeableness": 0.2634,
+        "neuroticism": -0.0671,
+        "hexaco_honesty_humility": -0.9483
+      },
+      "triggered_caps_rules": [
+        "CAPS_KAIO_04_THE_FEAST_STORYTELLER"
+      ],
+      "behavioral_directives": [
+        "Passes around luminescent ridge-crystals from his pack and harmonizes enthusiastically with Dorian's ballads."
+      ],
+      "stress": 0.018,
+      "fatigue": 0.0864,
+      "sleep_debt_norm": 0.0864,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.9418,
+      "openness_state": 0.9418,
+      "conscientiousness": 0.1817,
+      "conscientiousness_state": 0.1817,
+      "extraversion": 0.9714,
+      "extraversion_state": 0.9714,
+      "agreeableness": 0.914,
+      "agreeableness_state": 0.914,
+      "neuroticism": 0.4863,
+      "neuroticism_state": 0.4863,
+      "hexaco_honesty_humility": 0.7091,
+      "hexaco_honesty_humility_state": 0.7091,
+      "morale": 0.5
+    },
+    "enclave_06_zara": {
+      "character_id": "enclave_06_zara",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.524,
+        "conscientiousness": 0.1519,
+        "extraversion": 0.1216,
+        "agreeableness": 0.825,
+        "neuroticism": 0.4751,
+        "hexaco_honesty_humility": 0.9073
+      },
+      "z_scores": {
+        "openness": 0.6645,
+        "conscientiousness": -2.2666,
+        "extraversion": 0.1092,
+        "agreeableness": 0.5913,
+        "neuroticism": 0.0976,
+        "hexaco_honesty_humility": 0.4047
+      },
+      "triggered_caps_rules": [
+        "CAPS_ZARA_04_THE_FEAST_HEARTHSIDE"
+      ],
+      "behavioral_directives": [
+        "Tucks warm roasted tuber peels into her pouch for the paddock hatchlings and leans her head quietly against Terra's shoulder."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.524,
+      "openness_state": 0.524,
+      "conscientiousness": 0.1519,
+      "conscientiousness_state": 0.1519,
+      "extraversion": 0.1216,
+      "extraversion_state": 0.1216,
+      "agreeableness": 0.825,
+      "agreeableness_state": 0.825,
+      "neuroticism": 0.4751,
+      "neuroticism_state": 0.4751,
+      "hexaco_honesty_humility": 0.9073,
+      "hexaco_honesty_humility_state": 0.9073,
+      "morale": 0.5
+    },
+    "enclave_07_willow": {
+      "character_id": "enclave_07_willow",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.5102,
+        "conscientiousness": 0.5522,
+        "extraversion": 0.3693,
+        "agreeableness": 0.4639,
+        "neuroticism": 0.0846,
+        "hexaco_honesty_humility": 0.7948
+      },
+      "z_scores": {
+        "openness": 0.5943,
+        "conscientiousness": -0.3042,
+        "extraversion": 0.1598,
+        "agreeableness": 0.2294,
+        "neuroticism": 0.2174,
+        "hexaco_honesty_humility": -0.4038
+      },
+      "triggered_caps_rules": [
+        "CAPS_WILLOW_04_THE_FEAST_APOTHECARY_DROPS"
+      ],
+      "behavioral_directives": [
+        "Slips custom herbal joint-liniment vials beside Silas's and Leo's plates while claiming she just needed to clear shelf space."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.5102,
+      "openness_state": 0.5102,
+      "conscientiousness": 0.5522,
+      "conscientiousness_state": 0.5522,
+      "extraversion": 0.3693,
+      "extraversion_state": 0.3693,
+      "agreeableness": 0.4639,
+      "agreeableness_state": 0.4639,
+      "neuroticism": 0.0846,
+      "neuroticism_state": 0.0846,
+      "hexaco_honesty_humility": 0.7948,
+      "hexaco_honesty_humility_state": 0.7948,
+      "morale": 0.5
+    },
+    "enclave_08_terra": {
+      "character_id": "enclave_08_terra",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.101,
+        "conscientiousness": 0.9193,
+        "extraversion": 0.5566,
+        "agreeableness": 0.9957,
+        "neuroticism": 0.5395,
+        "hexaco_honesty_humility": 0.8983
+      },
+      "z_scores": {
+        "openness": -1.0373,
+        "conscientiousness": 0.8533,
+        "extraversion": 1.271,
+        "agreeableness": -0.0937,
+        "neuroticism": -0.3327,
+        "hexaco_honesty_humility": -1.4997
+      },
+      "triggered_caps_rules": [
+        "CAPS_TERRA_04_THE_FEAST_BREAD_BREAKING"
+      ],
+      "behavioral_directives": [
+        "Beams with quiet pride as the colony passes baskets of warm iron-wheat loaves grown from her seventh-generation hybrid stock."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.101,
+      "openness_state": 0.101,
+      "conscientiousness": 0.9193,
+      "conscientiousness_state": 0.9193,
+      "extraversion": 0.5566,
+      "extraversion_state": 0.5566,
+      "agreeableness": 0.9957,
+      "agreeableness_state": 0.9957,
+      "neuroticism": 0.5395,
+      "neuroticism_state": 0.5395,
+      "hexaco_honesty_humility": 0.8983,
+      "hexaco_honesty_humility_state": 0.8983,
+      "morale": 0.5
+    },
+    "enclave_09_orion": {
+      "character_id": "enclave_09_orion",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 1.0,
+        "conscientiousness": 0.1992,
+        "extraversion": 0.2542,
+        "agreeableness": 0.8949,
+        "neuroticism": 0.5119,
+        "hexaco_honesty_humility": 0.887
+      },
+      "z_scores": {
+        "openness": 2.2536,
+        "conscientiousness": -0.9286,
+        "extraversion": -1.3286,
+        "agreeableness": -0.4552,
+        "neuroticism": -0.4295,
+        "hexaco_honesty_humility": -0.6257
+      },
+      "triggered_caps_rules": [
+        "CAPS_ORION_04_THE_FEAST_LIGHT_SCULPTURE"
+      ],
+      "behavioral_directives": [
+        "Projects gentle prismed geode-light across the dining hall ceiling to soothe everyone's post-shift eye strain."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 1.0,
+      "openness_state": 1.0,
+      "conscientiousness": 0.1992,
+      "conscientiousness_state": 0.1992,
+      "extraversion": 0.2542,
+      "extraversion_state": 0.2542,
+      "agreeableness": 0.8949,
+      "agreeableness_state": 0.8949,
+      "neuroticism": 0.5119,
+      "neuroticism_state": 0.5119,
+      "hexaco_honesty_humility": 0.887,
+      "hexaco_honesty_humility_state": 0.887,
+      "morale": 0.5
+    },
+    "enclave_10_isla": {
+      "character_id": "enclave_10_isla",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.8288,
+        "conscientiousness": 0.9212,
+        "extraversion": 0.1952,
+        "agreeableness": 0.3488,
+        "neuroticism": 0.3266,
+        "hexaco_honesty_humility": 0.8476
+      },
+      "z_scores": {
+        "openness": 1.2105,
+        "conscientiousness": 0.5756,
+        "extraversion": 1.1512,
+        "agreeableness": 0.2073,
+        "neuroticism": 0.7377,
+        "hexaco_honesty_humility": 0.2794
+      },
+      "triggered_caps_rules": [
+        "CAPS_ISLA_04_THE_FEAST_SECRET_SOFTNESS"
+      ],
+      "behavioral_directives": [
+        "Pretends to read acoustic tables at the end of the bench while quietly saving the crispiest crust of bread for Orion."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.8288,
+      "openness_state": 0.8288,
+      "conscientiousness": 0.9212,
+      "conscientiousness_state": 0.9212,
+      "extraversion": 0.1952,
+      "extraversion_state": 0.1952,
+      "agreeableness": 0.3488,
+      "agreeableness_state": 0.3488,
+      "neuroticism": 0.3266,
+      "neuroticism_state": 0.3266,
+      "hexaco_honesty_humility": 0.8476,
+      "hexaco_honesty_humility_state": 0.8476,
+      "morale": 0.5
+    },
+    "enclave_11_kenna": {
+      "character_id": "enclave_11_kenna",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.7293,
+        "conscientiousness": 0.6731,
+        "extraversion": 0.8834,
+        "agreeableness": 0.9464,
+        "neuroticism": 0.3454,
+        "hexaco_honesty_humility": 0.9144
+      },
+      "z_scores": {
+        "openness": 0.0543,
+        "conscientiousness": -0.6983,
+        "extraversion": -0.0316,
+        "agreeableness": 0.835,
+        "neuroticism": -1.0124,
+        "hexaco_honesty_humility": 0.3792
+      },
+      "triggered_caps_rules": [
+        "CAPS_KENNA_04_THE_FEAST_EMOTIONAL_PULSE"
+      ],
+      "behavioral_directives": [
+        "Notices within thirty seconds who is hiding sleep debt behind a joke and seats them beside their most comforting friend."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.7293,
+      "openness_state": 0.7293,
+      "conscientiousness": 0.6731,
+      "conscientiousness_state": 0.6731,
+      "extraversion": 0.8834,
+      "extraversion_state": 0.8834,
+      "agreeableness": 0.9464,
+      "agreeableness_state": 0.9464,
+      "neuroticism": 0.3454,
+      "neuroticism_state": 0.3454,
+      "hexaco_honesty_humility": 0.9144,
+      "hexaco_honesty_humility_state": 0.9144,
+      "morale": 0.5
+    },
+    "enclave_12_elias": {
+      "character_id": "enclave_12_elias",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.9013,
+        "conscientiousness": 0.5328,
+        "extraversion": 0.2238,
+        "agreeableness": 0.9109,
+        "neuroticism": 0.4853,
+        "hexaco_honesty_humility": 0.9108
+      },
+      "z_scores": {
+        "openness": 0.1419,
+        "conscientiousness": -1.0502,
+        "extraversion": -0.027,
+        "agreeableness": -0.2496,
+        "neuroticism": 0.0475,
+        "hexaco_honesty_humility": -0.0799
+      },
+      "triggered_caps_rules": [
+        "CAPS_ELIAS_04_THE_FEAST_BENEDICTION"
+      ],
+      "behavioral_directives": [
+        "Listens with twinkling eyes to the dinner table chaos, offering a gentle aphorism that ties the day's mundane mishaps into a larger human comedy."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.9013,
+      "openness_state": 0.9013,
+      "conscientiousness": 0.5328,
+      "conscientiousness_state": 0.5328,
+      "extraversion": 0.2238,
+      "extraversion_state": 0.2238,
+      "agreeableness": 0.9109,
+      "agreeableness_state": 0.9109,
+      "neuroticism": 0.4853,
+      "neuroticism_state": 0.4853,
+      "hexaco_honesty_humility": 0.9108,
+      "hexaco_honesty_humility_state": 0.9108,
+      "morale": 0.5
+    },
+    "enclave_13_ryn": {
+      "character_id": "enclave_13_ryn",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.3487,
+        "conscientiousness": 0.9734,
+        "extraversion": 0.829,
+        "agreeableness": 0.5699,
+        "neuroticism": 0.3698,
+        "hexaco_honesty_humility": 0.9259
+      },
+      "z_scores": {
+        "openness": -0.4099,
+        "conscientiousness": 0.9183,
+        "extraversion": -0.222,
+        "agreeableness": -0.4427,
+        "neuroticism": -0.7623,
+        "hexaco_honesty_humility": -0.019
+      },
+      "triggered_caps_rules": [
+        "CAPS_RYN_04_THE_FEAST_SERVICE_TRIUMPH"
+      ],
+      "behavioral_directives": [
+        "Watches like a hawk until every single person takes a second helping, hiding her fierce pride behind barked orders to pass the herb butter."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.3487,
+      "openness_state": 0.3487,
+      "conscientiousness": 0.9734,
+      "conscientiousness_state": 0.9734,
+      "extraversion": 0.829,
+      "extraversion_state": 0.829,
+      "agreeableness": 0.5699,
+      "agreeableness_state": 0.5699,
+      "neuroticism": 0.3698,
+      "neuroticism_state": 0.3698,
+      "hexaco_honesty_humility": 0.9259,
+      "hexaco_honesty_humility_state": 0.9259,
+      "morale": 0.5
+    },
+    "enclave_14_vex": {
+      "character_id": "enclave_14_vex",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.9344,
+        "conscientiousness": 0.3504,
+        "extraversion": 1.0,
+        "agreeableness": 0.4619,
+        "neuroticism": 0.2837,
+        "hexaco_honesty_humility": 0.6566
+      },
+      "z_scores": {
+        "openness": -0.2367,
+        "conscientiousness": 1.078,
+        "extraversion": 0.8285,
+        "agreeableness": -0.5038,
+        "neuroticism": 0.6005,
+        "hexaco_honesty_humility": -1.4598
+      },
+      "triggered_caps_rules": [
+        "CAPS_VEX_04_THE_FEAST_PROVOCATEUR"
+      ],
+      "behavioral_directives": [
+        "Drops a deliberately outrageous astrophysical riddle into the soup course just to watch Jane, Isla, and Silas unite to prove him wrong."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.9344,
+      "openness_state": 0.9344,
+      "conscientiousness": 0.3504,
+      "conscientiousness_state": 0.3504,
+      "extraversion": 1.0,
+      "extraversion_state": 1.0,
+      "agreeableness": 0.4619,
+      "agreeableness_state": 0.4619,
+      "neuroticism": 0.2837,
+      "neuroticism_state": 0.2837,
+      "hexaco_honesty_humility": 0.6566,
+      "hexaco_honesty_humility_state": 0.6566,
+      "morale": 0.5
+    },
+    "enclave_15_dorian": {
+      "character_id": "enclave_15_dorian",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.2845,
+        "conscientiousness": 0.3854,
+        "extraversion": 0.9276,
+        "agreeableness": 0.7225,
+        "neuroticism": 0.5403,
+        "hexaco_honesty_humility": 0.8115
+      },
+      "z_scores": {
+        "openness": -1.3007,
+        "conscientiousness": 0.1049,
+        "extraversion": -0.0427,
+        "agreeableness": -0.5947,
+        "neuroticism": 0.4759,
+        "hexaco_honesty_humility": -0.2287
+      },
+      "triggered_caps_rules": [
+        "CAPS_DORIAN_01_EVENING_DISPATCH_SYNTHESIS"
+      ],
+      "behavioral_directives": [
+        "Strikes his late husband's brass pitch-pipe, stands by the hearth, and delivers the Evening Dispatch with theatrical wit and strict evidentiary citations."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.2845,
+      "openness_state": 0.2845,
+      "conscientiousness": 0.3854,
+      "conscientiousness_state": 0.3854,
+      "extraversion": 0.9276,
+      "extraversion_state": 0.9276,
+      "agreeableness": 0.7225,
+      "agreeableness_state": 0.7225,
+      "neuroticism": 0.5403,
+      "neuroticism_state": 0.5403,
+      "hexaco_honesty_humility": 0.8115,
+      "hexaco_honesty_humility_state": 0.8115,
+      "morale": 0.5
+    },
+    "enclave_16_elara": {
+      "character_id": "enclave_16_elara",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.4397,
+        "conscientiousness": 0.9055,
+        "extraversion": 0.982,
+        "agreeableness": 0.9978,
+        "neuroticism": 0.3599,
+        "hexaco_honesty_humility": 0.997
+      },
+      "z_scores": {
+        "openness": 0.7249,
+        "conscientiousness": 0.6935,
+        "extraversion": 1.8786,
+        "agreeableness": -0.404,
+        "neuroticism": 0.0499,
+        "hexaco_honesty_humility": 1.7849
+      },
+      "triggered_caps_rules": [
+        "CAPS_ELARA_04_THE_FEAST_MATRIARCH_WARMTH"
+      ],
+      "behavioral_directives": [
+        "Checks everyone's color and appetite from the head of the Hub bench, pressing warm magnesium tea into tired hands before bedtime."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.4397,
+      "openness_state": 0.4397,
+      "conscientiousness": 0.9055,
+      "conscientiousness_state": 0.9055,
+      "extraversion": 0.982,
+      "extraversion_state": 0.982,
+      "agreeableness": 0.9978,
+      "agreeableness_state": 0.9978,
+      "neuroticism": 0.3599,
+      "neuroticism_state": 0.3599,
+      "hexaco_honesty_humility": 0.997,
+      "hexaco_honesty_humility_state": 0.997,
+      "morale": 0.5
+    }
+  },
+  "characters": {
+    "enclave_01_hector": {
+      "character_id": "enclave_01_hector",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.2609,
+        "conscientiousness": 0.2769,
+        "extraversion": 1.0,
+        "agreeableness": 0.6086,
+        "neuroticism": 0.1685,
+        "hexaco_honesty_humility": 0.7462
+      },
+      "z_scores": {
+        "openness": -1.8221,
+        "conscientiousness": -0.3311,
+        "extraversion": 2.1372,
+        "agreeableness": 0.2787,
+        "neuroticism": 1.3099,
+        "hexaco_honesty_humility": -0.4915
+      },
+      "triggered_caps_rules": [
+        "CAPS_HECTOR_04_THE_FEAST_CAMARADERIE"
+      ],
+      "behavioral_directives": [
+        "Claps exhausted squadmates on the shoulder, refills everyone's cider mug, and exaggerates Jane's meteorological saves to make her blush."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.2609,
+      "openness_state": 0.2609,
+      "conscientiousness": 0.2769,
+      "conscientiousness_state": 0.2769,
+      "extraversion": 1.0,
+      "extraversion_state": 1.0,
+      "agreeableness": 0.6086,
+      "agreeableness_state": 0.6086,
+      "neuroticism": 0.1685,
+      "neuroticism_state": 0.1685,
+      "hexaco_honesty_humility": 0.7462,
+      "hexaco_honesty_humility_state": 0.7462,
+      "morale": 0.5
+    },
+    "enclave_02_jane": {
+      "character_id": "enclave_02_jane",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.7641,
+        "conscientiousness": 0.5618,
+        "extraversion": 0.0846,
+        "agreeableness": 0.62,
+        "neuroticism": 0.3711,
+        "hexaco_honesty_humility": 0.8592
+      },
+      "z_scores": {
+        "openness": -2.5,
+        "conscientiousness": 1.9768,
+        "extraversion": -0.5137,
+        "agreeableness": 0.4658,
+        "neuroticism": 0.119,
+        "hexaco_honesty_humility": -0.3422
+      },
+      "triggered_caps_rules": [
+        "CAPS_JANE_04_THE_FEAST_QUIET_CORNER"
+      ],
+      "behavioral_directives": [
+        "Sits near the hearth fire sketching cloud-vortex cellular automata in gravy on her plate while secretly enjoying Dorian's stories."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.7641,
+      "openness_state": 0.7641,
+      "conscientiousness": 0.5618,
+      "conscientiousness_state": 0.5618,
+      "extraversion": 0.0846,
+      "extraversion_state": 0.0846,
+      "agreeableness": 0.62,
+      "agreeableness_state": 0.62,
+      "neuroticism": 0.3711,
+      "neuroticism_state": 0.3711,
+      "hexaco_honesty_humility": 0.8592,
+      "hexaco_honesty_humility_state": 0.8592,
+      "morale": 0.5
+    },
+    "enclave_03_silas": {
+      "character_id": "enclave_03_silas",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.1355,
+        "conscientiousness": 0.8999,
+        "extraversion": 0.1109,
+        "agreeableness": 0.5172,
+        "neuroticism": 0.4341,
+        "hexaco_honesty_humility": 0.942
+      },
+      "z_scores": {
+        "openness": 0.1362,
+        "conscientiousness": -0.7211,
+        "extraversion": -0.4668,
+        "agreeableness": 1.0251,
+        "neuroticism": -0.9452,
+        "hexaco_honesty_humility": 0.8899
+      },
+      "triggered_caps_rules": [
+        "CAPS_SILAS_04_THE_FEAST_TABLE"
+      ],
+      "behavioral_directives": [
+        "Quietly slides the warmest portion of bread to the nearest exhausted prodigy while pretending to complain about Ryn's seasoning."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.1355,
+      "openness_state": 0.1355,
+      "conscientiousness": 0.8999,
+      "conscientiousness_state": 0.8999,
+      "extraversion": 0.1109,
+      "extraversion_state": 0.1109,
+      "agreeableness": 0.5172,
+      "agreeableness_state": 0.5172,
+      "neuroticism": 0.4341,
+      "neuroticism_state": 0.4341,
+      "hexaco_honesty_humility": 0.942,
+      "hexaco_honesty_humility_state": 0.942,
+      "morale": 0.5
+    },
+    "enclave_04_leo": {
+      "character_id": "enclave_04_leo",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.7357,
+        "conscientiousness": 0.9456,
+        "extraversion": 0.8568,
+        "agreeableness": 0.6723,
+        "neuroticism": 0.191,
+        "hexaco_honesty_humility": 0.8842
+      },
+      "z_scores": {
+        "openness": -0.4998,
+        "conscientiousness": 1.865,
+        "extraversion": -2.1407,
+        "agreeableness": -0.2216,
+        "neuroticism": 0.04,
+        "hexaco_honesty_humility": 0.8689
+      },
+      "triggered_caps_rules": [
+        "CAPS_LEO_04_THE_FEAST_TOASTMASTER"
+      ],
+      "behavioral_directives": [
+        "Raises his hammered-copper tankard to celebrate even failed experiments as triumphs of colony audacity."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.7357,
+      "openness_state": 0.7357,
+      "conscientiousness": 0.9456,
+      "conscientiousness_state": 0.9456,
+      "extraversion": 0.8568,
+      "extraversion_state": 0.8568,
+      "agreeableness": 0.6723,
+      "agreeableness_state": 0.6723,
+      "neuroticism": 0.191,
+      "neuroticism_state": 0.191,
+      "hexaco_honesty_humility": 0.8842,
+      "hexaco_honesty_humility_state": 0.8842,
+      "morale": 0.5
+    },
+    "enclave_05_kaio": {
+      "character_id": "enclave_05_kaio",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.9418,
+        "conscientiousness": 0.1817,
+        "extraversion": 0.9714,
+        "agreeableness": 0.914,
+        "neuroticism": 0.4863,
+        "hexaco_honesty_humility": 0.7091
+      },
+      "z_scores": {
+        "openness": -0.3187,
+        "conscientiousness": 0.27,
+        "extraversion": -0.3977,
+        "agreeableness": 0.2634,
+        "neuroticism": -0.0671,
+        "hexaco_honesty_humility": -0.9483
+      },
+      "triggered_caps_rules": [
+        "CAPS_KAIO_04_THE_FEAST_STORYTELLER"
+      ],
+      "behavioral_directives": [
+        "Passes around luminescent ridge-crystals from his pack and harmonizes enthusiastically with Dorian's ballads."
+      ],
+      "stress": 0.018,
+      "fatigue": 0.0864,
+      "sleep_debt_norm": 0.0864,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.9418,
+      "openness_state": 0.9418,
+      "conscientiousness": 0.1817,
+      "conscientiousness_state": 0.1817,
+      "extraversion": 0.9714,
+      "extraversion_state": 0.9714,
+      "agreeableness": 0.914,
+      "agreeableness_state": 0.914,
+      "neuroticism": 0.4863,
+      "neuroticism_state": 0.4863,
+      "hexaco_honesty_humility": 0.7091,
+      "hexaco_honesty_humility_state": 0.7091,
+      "morale": 0.5
+    },
+    "enclave_06_zara": {
+      "character_id": "enclave_06_zara",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.524,
+        "conscientiousness": 0.1519,
+        "extraversion": 0.1216,
+        "agreeableness": 0.825,
+        "neuroticism": 0.4751,
+        "hexaco_honesty_humility": 0.9073
+      },
+      "z_scores": {
+        "openness": 0.6645,
+        "conscientiousness": -2.2666,
+        "extraversion": 0.1092,
+        "agreeableness": 0.5913,
+        "neuroticism": 0.0976,
+        "hexaco_honesty_humility": 0.4047
+      },
+      "triggered_caps_rules": [
+        "CAPS_ZARA_04_THE_FEAST_HEARTHSIDE"
+      ],
+      "behavioral_directives": [
+        "Tucks warm roasted tuber peels into her pouch for the paddock hatchlings and leans her head quietly against Terra's shoulder."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.524,
+      "openness_state": 0.524,
+      "conscientiousness": 0.1519,
+      "conscientiousness_state": 0.1519,
+      "extraversion": 0.1216,
+      "extraversion_state": 0.1216,
+      "agreeableness": 0.825,
+      "agreeableness_state": 0.825,
+      "neuroticism": 0.4751,
+      "neuroticism_state": 0.4751,
+      "hexaco_honesty_humility": 0.9073,
+      "hexaco_honesty_humility_state": 0.9073,
+      "morale": 0.5
+    },
+    "enclave_07_willow": {
+      "character_id": "enclave_07_willow",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.5102,
+        "conscientiousness": 0.5522,
+        "extraversion": 0.3693,
+        "agreeableness": 0.4639,
+        "neuroticism": 0.0846,
+        "hexaco_honesty_humility": 0.7948
+      },
+      "z_scores": {
+        "openness": 0.5943,
+        "conscientiousness": -0.3042,
+        "extraversion": 0.1598,
+        "agreeableness": 0.2294,
+        "neuroticism": 0.2174,
+        "hexaco_honesty_humility": -0.4038
+      },
+      "triggered_caps_rules": [
+        "CAPS_WILLOW_04_THE_FEAST_APOTHECARY_DROPS"
+      ],
+      "behavioral_directives": [
+        "Slips custom herbal joint-liniment vials beside Silas's and Leo's plates while claiming she just needed to clear shelf space."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.5102,
+      "openness_state": 0.5102,
+      "conscientiousness": 0.5522,
+      "conscientiousness_state": 0.5522,
+      "extraversion": 0.3693,
+      "extraversion_state": 0.3693,
+      "agreeableness": 0.4639,
+      "agreeableness_state": 0.4639,
+      "neuroticism": 0.0846,
+      "neuroticism_state": 0.0846,
+      "hexaco_honesty_humility": 0.7948,
+      "hexaco_honesty_humility_state": 0.7948,
+      "morale": 0.5
+    },
+    "enclave_08_terra": {
+      "character_id": "enclave_08_terra",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.101,
+        "conscientiousness": 0.9193,
+        "extraversion": 0.5566,
+        "agreeableness": 0.9957,
+        "neuroticism": 0.5395,
+        "hexaco_honesty_humility": 0.8983
+      },
+      "z_scores": {
+        "openness": -1.0373,
+        "conscientiousness": 0.8533,
+        "extraversion": 1.271,
+        "agreeableness": -0.0937,
+        "neuroticism": -0.3327,
+        "hexaco_honesty_humility": -1.4997
+      },
+      "triggered_caps_rules": [
+        "CAPS_TERRA_04_THE_FEAST_BREAD_BREAKING"
+      ],
+      "behavioral_directives": [
+        "Beams with quiet pride as the colony passes baskets of warm iron-wheat loaves grown from her seventh-generation hybrid stock."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.101,
+      "openness_state": 0.101,
+      "conscientiousness": 0.9193,
+      "conscientiousness_state": 0.9193,
+      "extraversion": 0.5566,
+      "extraversion_state": 0.5566,
+      "agreeableness": 0.9957,
+      "agreeableness_state": 0.9957,
+      "neuroticism": 0.5395,
+      "neuroticism_state": 0.5395,
+      "hexaco_honesty_humility": 0.8983,
+      "hexaco_honesty_humility_state": 0.8983,
+      "morale": 0.5
+    },
+    "enclave_09_orion": {
+      "character_id": "enclave_09_orion",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 1.0,
+        "conscientiousness": 0.1992,
+        "extraversion": 0.2542,
+        "agreeableness": 0.8949,
+        "neuroticism": 0.5119,
+        "hexaco_honesty_humility": 0.887
+      },
+      "z_scores": {
+        "openness": 2.2536,
+        "conscientiousness": -0.9286,
+        "extraversion": -1.3286,
+        "agreeableness": -0.4552,
+        "neuroticism": -0.4295,
+        "hexaco_honesty_humility": -0.6257
+      },
+      "triggered_caps_rules": [
+        "CAPS_ORION_04_THE_FEAST_LIGHT_SCULPTURE"
+      ],
+      "behavioral_directives": [
+        "Projects gentle prismed geode-light across the dining hall ceiling to soothe everyone's post-shift eye strain."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 1.0,
+      "openness_state": 1.0,
+      "conscientiousness": 0.1992,
+      "conscientiousness_state": 0.1992,
+      "extraversion": 0.2542,
+      "extraversion_state": 0.2542,
+      "agreeableness": 0.8949,
+      "agreeableness_state": 0.8949,
+      "neuroticism": 0.5119,
+      "neuroticism_state": 0.5119,
+      "hexaco_honesty_humility": 0.887,
+      "hexaco_honesty_humility_state": 0.887,
+      "morale": 0.5
+    },
+    "enclave_10_isla": {
+      "character_id": "enclave_10_isla",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.8288,
+        "conscientiousness": 0.9212,
+        "extraversion": 0.1952,
+        "agreeableness": 0.3488,
+        "neuroticism": 0.3266,
+        "hexaco_honesty_humility": 0.8476
+      },
+      "z_scores": {
+        "openness": 1.2105,
+        "conscientiousness": 0.5756,
+        "extraversion": 1.1512,
+        "agreeableness": 0.2073,
+        "neuroticism": 0.7377,
+        "hexaco_honesty_humility": 0.2794
+      },
+      "triggered_caps_rules": [
+        "CAPS_ISLA_04_THE_FEAST_SECRET_SOFTNESS"
+      ],
+      "behavioral_directives": [
+        "Pretends to read acoustic tables at the end of the bench while quietly saving the crispiest crust of bread for Orion."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.8288,
+      "openness_state": 0.8288,
+      "conscientiousness": 0.9212,
+      "conscientiousness_state": 0.9212,
+      "extraversion": 0.1952,
+      "extraversion_state": 0.1952,
+      "agreeableness": 0.3488,
+      "agreeableness_state": 0.3488,
+      "neuroticism": 0.3266,
+      "neuroticism_state": 0.3266,
+      "hexaco_honesty_humility": 0.8476,
+      "hexaco_honesty_humility_state": 0.8476,
+      "morale": 0.5
+    },
+    "enclave_11_kenna": {
+      "character_id": "enclave_11_kenna",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.7293,
+        "conscientiousness": 0.6731,
+        "extraversion": 0.8834,
+        "agreeableness": 0.9464,
+        "neuroticism": 0.3454,
+        "hexaco_honesty_humility": 0.9144
+      },
+      "z_scores": {
+        "openness": 0.0543,
+        "conscientiousness": -0.6983,
+        "extraversion": -0.0316,
+        "agreeableness": 0.835,
+        "neuroticism": -1.0124,
+        "hexaco_honesty_humility": 0.3792
+      },
+      "triggered_caps_rules": [
+        "CAPS_KENNA_04_THE_FEAST_EMOTIONAL_PULSE"
+      ],
+      "behavioral_directives": [
+        "Notices within thirty seconds who is hiding sleep debt behind a joke and seats them beside their most comforting friend."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.7293,
+      "openness_state": 0.7293,
+      "conscientiousness": 0.6731,
+      "conscientiousness_state": 0.6731,
+      "extraversion": 0.8834,
+      "extraversion_state": 0.8834,
+      "agreeableness": 0.9464,
+      "agreeableness_state": 0.9464,
+      "neuroticism": 0.3454,
+      "neuroticism_state": 0.3454,
+      "hexaco_honesty_humility": 0.9144,
+      "hexaco_honesty_humility_state": 0.9144,
+      "morale": 0.5
+    },
+    "enclave_12_elias": {
+      "character_id": "enclave_12_elias",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.9013,
+        "conscientiousness": 0.5328,
+        "extraversion": 0.2238,
+        "agreeableness": 0.9109,
+        "neuroticism": 0.4853,
+        "hexaco_honesty_humility": 0.9108
+      },
+      "z_scores": {
+        "openness": 0.1419,
+        "conscientiousness": -1.0502,
+        "extraversion": -0.027,
+        "agreeableness": -0.2496,
+        "neuroticism": 0.0475,
+        "hexaco_honesty_humility": -0.0799
+      },
+      "triggered_caps_rules": [
+        "CAPS_ELIAS_04_THE_FEAST_BENEDICTION"
+      ],
+      "behavioral_directives": [
+        "Listens with twinkling eyes to the dinner table chaos, offering a gentle aphorism that ties the day's mundane mishaps into a larger human comedy."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.9013,
+      "openness_state": 0.9013,
+      "conscientiousness": 0.5328,
+      "conscientiousness_state": 0.5328,
+      "extraversion": 0.2238,
+      "extraversion_state": 0.2238,
+      "agreeableness": 0.9109,
+      "agreeableness_state": 0.9109,
+      "neuroticism": 0.4853,
+      "neuroticism_state": 0.4853,
+      "hexaco_honesty_humility": 0.9108,
+      "hexaco_honesty_humility_state": 0.9108,
+      "morale": 0.5
+    },
+    "enclave_13_ryn": {
+      "character_id": "enclave_13_ryn",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.3487,
+        "conscientiousness": 0.9734,
+        "extraversion": 0.829,
+        "agreeableness": 0.5699,
+        "neuroticism": 0.3698,
+        "hexaco_honesty_humility": 0.9259
+      },
+      "z_scores": {
+        "openness": -0.4099,
+        "conscientiousness": 0.9183,
+        "extraversion": -0.222,
+        "agreeableness": -0.4427,
+        "neuroticism": -0.7623,
+        "hexaco_honesty_humility": -0.019
+      },
+      "triggered_caps_rules": [
+        "CAPS_RYN_04_THE_FEAST_SERVICE_TRIUMPH"
+      ],
+      "behavioral_directives": [
+        "Watches like a hawk until every single person takes a second helping, hiding her fierce pride behind barked orders to pass the herb butter."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.3487,
+      "openness_state": 0.3487,
+      "conscientiousness": 0.9734,
+      "conscientiousness_state": 0.9734,
+      "extraversion": 0.829,
+      "extraversion_state": 0.829,
+      "agreeableness": 0.5699,
+      "agreeableness_state": 0.5699,
+      "neuroticism": 0.3698,
+      "neuroticism_state": 0.3698,
+      "hexaco_honesty_humility": 0.9259,
+      "hexaco_honesty_humility_state": 0.9259,
+      "morale": 0.5
+    },
+    "enclave_14_vex": {
+      "character_id": "enclave_14_vex",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.9344,
+        "conscientiousness": 0.3504,
+        "extraversion": 1.0,
+        "agreeableness": 0.4619,
+        "neuroticism": 0.2837,
+        "hexaco_honesty_humility": 0.6566
+      },
+      "z_scores": {
+        "openness": -0.2367,
+        "conscientiousness": 1.078,
+        "extraversion": 0.8285,
+        "agreeableness": -0.5038,
+        "neuroticism": 0.6005,
+        "hexaco_honesty_humility": -1.4598
+      },
+      "triggered_caps_rules": [
+        "CAPS_VEX_04_THE_FEAST_PROVOCATEUR"
+      ],
+      "behavioral_directives": [
+        "Drops a deliberately outrageous astrophysical riddle into the soup course just to watch Jane, Isla, and Silas unite to prove him wrong."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.9344,
+      "openness_state": 0.9344,
+      "conscientiousness": 0.3504,
+      "conscientiousness_state": 0.3504,
+      "extraversion": 1.0,
+      "extraversion_state": 1.0,
+      "agreeableness": 0.4619,
+      "agreeableness_state": 0.4619,
+      "neuroticism": 0.2837,
+      "neuroticism_state": 0.2837,
+      "hexaco_honesty_humility": 0.6566,
+      "hexaco_honesty_humility_state": 0.6566,
+      "morale": 0.5
+    },
+    "enclave_15_dorian": {
+      "character_id": "enclave_15_dorian",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.2845,
+        "conscientiousness": 0.3854,
+        "extraversion": 0.9276,
+        "agreeableness": 0.7225,
+        "neuroticism": 0.5403,
+        "hexaco_honesty_humility": 0.8115
+      },
+      "z_scores": {
+        "openness": -1.3007,
+        "conscientiousness": 0.1049,
+        "extraversion": -0.0427,
+        "agreeableness": -0.5947,
+        "neuroticism": 0.4759,
+        "hexaco_honesty_humility": -0.2287
+      },
+      "triggered_caps_rules": [
+        "CAPS_DORIAN_01_EVENING_DISPATCH_SYNTHESIS"
+      ],
+      "behavioral_directives": [
+        "Strikes his late husband's brass pitch-pipe, stands by the hearth, and delivers the Evening Dispatch with theatrical wit and strict evidentiary citations."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.2845,
+      "openness_state": 0.2845,
+      "conscientiousness": 0.3854,
+      "conscientiousness_state": 0.3854,
+      "extraversion": 0.9276,
+      "extraversion_state": 0.9276,
+      "agreeableness": 0.7225,
+      "agreeableness_state": 0.7225,
+      "neuroticism": 0.5403,
+      "neuroticism_state": 0.5403,
+      "hexaco_honesty_humility": 0.8115,
+      "hexaco_honesty_humility_state": 0.8115,
+      "morale": 0.5
+    },
+    "enclave_16_elara": {
+      "character_id": "enclave_16_elara",
+      "tick_id": 60,
+      "day_phase": "THE_FEAST",
+      "trait_states": {
+        "openness": 0.4397,
+        "conscientiousness": 0.9055,
+        "extraversion": 0.982,
+        "agreeableness": 0.9978,
+        "neuroticism": 0.3599,
+        "hexaco_honesty_humility": 0.997
+      },
+      "z_scores": {
+        "openness": 0.7249,
+        "conscientiousness": 0.6935,
+        "extraversion": 1.8786,
+        "agreeableness": -0.404,
+        "neuroticism": 0.0499,
+        "hexaco_honesty_humility": 1.7849
+      },
+      "triggered_caps_rules": [
+        "CAPS_ELARA_04_THE_FEAST_MATRIARCH_WARMTH"
+      ],
+      "behavioral_directives": [
+        "Checks everyone's color and appetite from the head of the Hub bench, pressing warm magnesium tea into tired hands before bedtime."
+      ],
+      "stress": 0.0,
+      "fatigue": 0.0,
+      "sleep_debt_norm": 0.0,
+      "kp_exo": 2.64,
+      "polarity_inversion_active": false,
+      "polarity_inversion_cooldown_days": 0,
+      "polarity_inversion_hazard_p": 0.0,
+      "openness": 0.4397,
+      "openness_state": 0.4397,
+      "conscientiousness": 0.9055,
+      "conscientiousness_state": 0.9055,
+      "extraversion": 0.982,
+      "extraversion_state": 0.982,
+      "agreeableness": 0.9978,
+      "agreeableness_state": 0.9978,
+      "neuroticism": 0.3599,
+      "neuroticism_state": 0.3599,
+      "hexaco_honesty_humility": 0.997,
+      "hexaco_honesty_humility_state": 0.997,
+      "morale": 0.5
+    }
+  },
+  "applied_event_ids": [
+    "evt_s015_t0060_reflection"
+  ],
+  "total_events_through_tick": 70,
+  "recent_segments": [
+    {
+      "segment_id": "seg_s011_t0043_enclave_05_kaio",
+      "sol_id": 11,
+      "colony_sol": 11,
+      "tick_id": 43,
+      "active_pov_id": "enclave_05_kaio",
+      "next_pov_target": "enclave_13_ryn",
+      "location_id": "The_Lower_Pylons",
+      "time_of_day": "DUSK_CRAFT",
+      "day_phase": "DUSK_CRAFT",
+      "title": "Sol 011 \u2022 DUSK_CRAFT (enclave_05_kaio)",
+      "opening_excerpt": "Kaio races to reinforce the lower pylons against the violent magnetohydrodynamic Kelvin-Helmholtz shear ripping across the ferrofluid sea, using his natural intuition for environmental hazards before handing off the bato",
+      "excerpt": "Kaio races to reinforce the lower pylons against the violent magnetohydrodynamic Kelvin-Helmholtz shear ripping across the ferrofluid sea, using his natural intuition for environmental hazards before handing off the bato"
+    },
+    {
+      "segment_id": "seg_s012_t0045_enclave_03_silas",
+      "sol_id": 12,
+      "colony_sol": 12,
+      "tick_id": 45,
+      "active_pov_id": "enclave_03_silas",
+      "next_pov_target": "enclave_01_hector",
+      "location_id": "The_First_Forge",
+      "time_of_day": "DAWN_SHIFT",
+      "day_phase": "DAWN_SHIFT",
+      "title": "Sol 012 \u2022 DAWN_SHIFT (enclave_03_silas)",
+      "opening_excerpt": "Silas examines the sheer force of the magnetohydrodynamic Kelvin-Helmholtz shear against the structural pylons before passing the baton to Hector.",
+      "excerpt": "Silas examines the sheer force of the magnetohydrodynamic Kelvin-Helmholtz shear against the structural pylons before passing the baton to Hector."
+    },
+    {
+      "segment_id": "seg_s012_t0046_enclave_01_hector",
+      "sol_id": 12,
+      "colony_sol": 12,
+      "tick_id": 46,
+      "active_pov_id": "enclave_01_hector",
+      "next_pov_target": "enclave_05_kaio",
+      "location_id": "The_Stormbreaker_Spire",
+      "time_of_day": "MIDDAY_EXPEDITION",
+      "day_phase": "MIDDAY_EXPEDITION",
+      "title": "Sol 012 \u2022 MIDDAY_EXPEDITION (enclave_01_hector)",
+      "opening_excerpt": "Hector races against the chaotic magnetohydrodynamic Kelvin-Helmholtz shear, desperately trying to stabilize the ferrofluid sea before passing the structural reinforcements to Kaio.",
+      "excerpt": "Hector races against the chaotic magnetohydrodynamic Kelvin-Helmholtz shear, desperately trying to stabilize the ferrofluid sea before passing the structural reinforcements to Kaio."
+    },
+    {
+      "segment_id": "seg_s012_t0047_enclave_05_kaio",
+      "sol_id": 12,
+      "colony_sol": 12,
+      "tick_id": 47,
+      "active_pov_id": "enclave_05_kaio",
+      "next_pov_target": "enclave_13_ryn",
+      "location_id": "The_Stormbreaker_Spire",
+      "time_of_day": "DUSK_CRAFT",
+      "day_phase": "DUSK_CRAFT",
+      "title": "Sol 012 \u2022 DUSK_CRAFT (enclave_05_kaio)",
+      "opening_excerpt": "Kaio attempts to chart the fluctuating magnetic corridors above the churning ferrofluid sea to guide Ryn's logistical reinforcements through the chaos.",
+      "excerpt": "Kaio attempts to chart the fluctuating magnetic corridors above the churning ferrofluid sea to guide Ryn's logistical reinforcements through the chaos."
+    },
+    {
+      "segment_id": "seg_s013_t0049_enclave_03_silas",
+      "sol_id": 13,
+      "colony_sol": 13,
+      "tick_id": 49,
+      "active_pov_id": "enclave_03_silas",
+      "next_pov_target": "enclave_01_hector",
+      "location_id": "The_First_Forge",
+      "time_of_day": "DAWN_SHIFT",
+      "day_phase": "DAWN_SHIFT",
+      "title": "Sol 013 \u2022 DAWN_SHIFT (enclave_03_silas)",
+      "opening_excerpt": "Silas examines the extreme forces from the ferrofluid sea shear against the forge pylons before passing the baton to Hector.",
+      "excerpt": "Silas examines the extreme forces from the ferrofluid sea shear against the forge pylons before passing the baton to Hector."
+    },
+    {
+      "segment_id": "seg_s013_t0050_enclave_01_hector",
+      "sol_id": 13,
+      "colony_sol": 13,
+      "tick_id": 50,
+      "active_pov_id": "enclave_01_hector",
+      "next_pov_target": "enclave_05_kaio",
+      "location_id": "The_First_Forge",
+      "time_of_day": "MIDDAY_EXPEDITION",
+      "day_phase": "MIDDAY_EXPEDITION",
+      "title": "Sol 013 \u2022 MIDDAY_EXPEDITION (enclave_01_hector)",
+      "opening_excerpt": "[MIDDAY_EXPEDITION at The_First_Forge] Hector braced himself against the roaring basin, grinning wildly as the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea reached critical intensity. The soot-sta",
+      "excerpt": "[MIDDAY_EXPEDITION at The_First_Forge] Hector braced himself against the roaring basin, grinning wildly as the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea reached critical intensity. The soot-sta"
+    },
+    {
+      "segment_id": "seg_s014_t0053_enclave_03_silas",
+      "sol_id": 14,
+      "colony_sol": 14,
+      "tick_id": 53,
+      "active_pov_id": "enclave_03_silas",
+      "next_pov_target": "enclave_01_hector",
+      "location_id": "The_First_Forge",
+      "time_of_day": "DAWN_SHIFT",
+      "day_phase": "DAWN_SHIFT",
+      "title": "Sol 014 \u2022 DAWN_SHIFT (enclave_03_silas)",
+      "opening_excerpt": "Silas reinforces The First Forge against a ferrofluid wave and hands the sonic wrench to Hector.",
+      "excerpt": "Silas reinforces The First Forge against a ferrofluid wave and hands the sonic wrench to Hector."
+    },
+    {
+      "segment_id": "seg_s014_t0054_enclave_01_hector",
+      "sol_id": 14,
+      "colony_sol": 14,
+      "tick_id": 54,
+      "active_pov_id": "enclave_01_hector",
+      "next_pov_target": "enclave_05_kaio",
+      "location_id": "The_First_Forge",
+      "time_of_day": "MIDDAY_EXPEDITION",
+      "day_phase": "MIDDAY_EXPEDITION",
+      "title": "Sol 014 \u2022 MIDDAY_EXPEDITION (enclave_01_hector)",
+      "opening_excerpt": "Hector catches the wrench and recalibrates the primary shunt amidst the ferrofluid waves before calling down to Kaio.",
+      "excerpt": "Hector catches the wrench and recalibrates the primary shunt amidst the ferrofluid waves before calling down to Kaio."
+    },
+    {
+      "segment_id": "seg_s014_t0055_enclave_05_kaio",
+      "sol_id": 14,
+      "colony_sol": 14,
+      "tick_id": 55,
+      "active_pov_id": "enclave_05_kaio",
+      "next_pov_target": "enclave_13_ryn",
+      "location_id": "The_First_Forge",
+      "time_of_day": "DUSK_CRAFT",
+      "day_phase": "DUSK_CRAFT",
+      "title": "Sol 014 \u2022 DUSK_CRAFT (enclave_05_kaio)",
+      "opening_excerpt": "Kaio scans the bedrock fracture and reports the readings up to Hector, while analyzing the Magnetohydrodynamic Kelvin-Helmholtz shear.",
+      "excerpt": "Kaio scans the bedrock fracture and reports the readings up to Hector, while analyzing the Magnetohydrodynamic Kelvin-Helmholtz shear."
+    },
+    {
+      "segment_id": "seg_s015_t0057_enclave_03_silas",
+      "sol_id": 15,
+      "colony_sol": 15,
+      "tick_id": 57,
+      "active_pov_id": "enclave_03_silas",
+      "next_pov_target": "enclave_01_hector",
+      "location_id": "The_First_Forge",
+      "time_of_day": "DAWN_SHIFT",
+      "day_phase": "DAWN_SHIFT",
+      "title": "Sol 015 \u2022 DAWN_SHIFT (enclave_03_silas)",
+      "opening_excerpt": "Silas secures the primary grounding mast against the crushing magnetic shear before tossing the heavy copper baton directly into Hector's waiting hand.",
+      "excerpt": "Silas secures the primary grounding mast against the crushing magnetic shear before tossing the heavy copper baton directly into Hector's waiting hand."
+    },
+    {
+      "segment_id": "seg_s015_t0058_enclave_01_hector",
+      "sol_id": 15,
+      "colony_sol": 15,
+      "tick_id": 58,
+      "active_pov_id": "enclave_01_hector",
+      "next_pov_target": "enclave_05_kaio",
+      "location_id": "The_First_Forge",
+      "time_of_day": "MIDDAY_EXPEDITION",
+      "day_phase": "MIDDAY_EXPEDITION",
+      "title": "Sol 015 \u2022 MIDDAY_EXPEDITION (enclave_01_hector)",
+      "opening_excerpt": "Hector channels the roaring magnetic shear into a controlled arc, locking the induction relay before tossing the grounding baton to Kaio.",
+      "excerpt": "Hector channels the roaring magnetic shear into a controlled arc, locking the induction relay before tossing the grounding baton to Kaio."
+    },
+    {
+      "segment_id": "seg_s015_t0059_enclave_05_kaio",
+      "sol_id": 15,
+      "colony_sol": 15,
+      "tick_id": 59,
+      "active_pov_id": "enclave_05_kaio",
+      "next_pov_target": "enclave_13_ryn",
+      "location_id": "The_First_Forge",
+      "time_of_day": "DUSK_CRAFT",
+      "day_phase": "DUSK_CRAFT",
+      "title": "Sol 015 \u2022 DUSK_CRAFT (enclave_05_kaio)",
+      "opening_excerpt": "Kaio catches the grounding baton from Hector, navigating the magnetohydrodynamic shear across the ferrofluid sea, before dashing toward The Hearth to hand the baton to Ryn.",
+      "excerpt": "Kaio catches the grounding baton from Hector, navigating the magnetohydrodynamic shear across the ferrofluid sea, before dashing toward The Hearth to hand the baton to Ryn."
+    }
+  ],
+  "available_sols": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "available_ticks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60
+  ]
+}
