@@ -1,0 +1,39 @@
+{
+  "event_id": "evt_s016_t0064_reflection",
+  "tick_id": 64,
+  "colony_sol": 16,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-11-09T23:00:00Z",
+  "base_snapshot_tick": 64,
+  "event_type": "NIGHTLY_REFLECTION",
+  "location": "The_Hub_Hearth",
+  "actors": [
+    "enclave_13_ryn"
+  ],
+  "summary": "Ryn reflected on the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea while scouring the copper kettles, mentally preparing to hand off duty to Silas.",
+  "importance": 7.5,
+  "novelty_score": 0.6,
+  "lethality": 0,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {
+    "stress_delta": -0.1
+  },
+  "relationship_deltas": [],
+  "cited_event_ids": [
+    "evt_s016_t0062_expedition_consequence"
+  ],
+  "active_pov_id": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_13_ryn -> Handoff=enclave_03_silas.",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
+    "interlocutor_full_cards_loaded": 0,
+    "active_pov_id": "enclave_13_ryn"
+  },
+  "narrative_prose": "The dense warmth of the hearth presses outward against the chilling draft of the valley floor, the copper kettles glowing a deep umber in the low light. Plumes of spiced steam catch the erratic flickers of the ferrofluid manifold's ambient glow. It is a tight, secure sanctuary of boiling stock and scrubbed metal, anchoring the chaotic sprawl of the settlement. The magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea threatens to destabilize the thirty-gallon steam-jacketed kettle, so Ryn adjusts the valves to ensure thermodynamic equilibrium. If the thermal buffer fails, the week's myco-protein harvest is lost to carbonization. With the galley finally quiet, Ryn wipes her brow and firmly presses the baton into Silas's awaiting hand."
+}
