@@ -1,0 +1,155 @@
+{
+  "event_id": "evt_s016_t0062_expedition_consequence",
+  "tick_id": 62,
+  "colony_sol": 16,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-11-09T12:00:00Z",
+  "base_snapshot_tick": 61,
+  "event_type": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+  "location": "Ferrofluid_Sea_Outpost",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_05_kaio"
+  ],
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "narrative_prose": "Hector grimaced as the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea ripped through the outpost, tasting the bitter copper static on his tongue. The blinding flashes of white-blue electricity illuminated the churning metallic waves, accompanied by the deafening screech of twisted alloy and the heavy scent of electrified ozone that saturated the humid air. Desperately trying to CONCEAL the critical core drive from the swirling magnetic currents, he moved quickly to ATTRACT Kaio's attention, preparing to toss the brass baton. With the raging forces threatening to CONSUME their footing, Hector braced himself and successfully executed the baton handoff.",
+  "summary": "Hector struggles through a violent magnetohydrodynamic shear storm over the ferrofluid sea to pass the baton to Kaio.",
+  "importance": 8.0,
+  "novelty_score": 0.85,
+  "lethality": 0,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ]
+  },
+  "state_deltas": {
+    "stress_delta": 0.15
+  },
+  "relationship_deltas": [
+    {
+      "from": "enclave_01_hector",
+      "to": "enclave_05_kaio",
+      "bond_delta": 0.05,
+      "trust_delta": 0.04
+    }
+  ],
+  "calypso_zero_raw_stats": true,
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 16,
+      "colony_sol": 16,
+      "tick_id": 62,
+      "pacing_mode": "MULLIGAN_CRISIS",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Execute baton handoff to Kaio amidst the magnetic shear storm.",
+        "mid_term_milestone": "Stabilize the Ferrofluid Sea Outpost's grounding grid.",
+        "campaign_arc_climax": "Master the raw kinetic flow of the ferrofluid sea's magnetohydrodynamic forces."
+      }
+    },
+    "active_location": {
+      "location_id": "Ferrofluid_Sea_Outpost",
+      "macro_silhouette": "A battered, precariously dangling scaffold suspended over the churning expanse of the ferrofluid sea. Thick induction cables and jagged copper masts pierce the dense, metallic fog. The outpost trembles under the relentless magnetic shear, threatening to dislodge at any moment.",
+      "sensory_palette": {
+        "sight_and_color": "Blinding flashes of white-blue electricity and swirling metallic waves",
+        "sound": "Screeching of twisted alloy and the deafening roar of the storm",
+        "smell": "Heavy scent of electrified ozone",
+        "taste_optional": "Bitter taste of copper",
+        "tactile_temperature": "Intense vibration and a scalding static charge in the air"
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Critical Core Drive",
+          "affordance_description": "A fragile data containment module.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Emergency Flare",
+          "affordance_description": "A brightly burning chemical signal.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Unstable Walkway",
+          "affordance_description": "A buckling platform threatening to collapse.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "Magnetic_Shear_Storm",
+        "name_and_role": "Violent environmental hazard",
+        "motivation_goal": "Strip away electrical and structural cohesion.",
+        "consistent_method": "Unleashing powerful, unpredictable magnetic pulses.",
+        "immediate_complication": "Makes holding onto metallic objects, like the baton, difficult.",
+        "pressure_index": 9,
+        "uninterrupted_escalation": "true"
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Pass the baton safely to Kaio before the structure fails.",
+        "level_2_local": "Ensure the expedition's data is transferred without corruption.",
+        "level_3_campaign_arc": "Prove the Enclave can operate within the harsh ferrofluid sea environment."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        },
+        {
+          "actor_id": "enclave_05_kaio",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 2,
+      "prerolled_hazard_queue": [
+        3,
+        7,
+        12,
+        18,
+        22
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.7,
+      "motivational_vector_saturation": 0.8,
+      "unresolved_conflict_ratio": 0.6,
+      "temporal_horizon_immediacy": 0.9,
+      "composite_lpi": 0.75,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_ai",
+        "model": "qwen3.5:4b-q4_K_M",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The baton is dropped and nearly lost to the magnetic currents.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Hector is shocked severely and the baton is flung away.",
+          "below_dc_complicated_fail_forward": "The baton is transferred, but the critical core drive takes damage.",
+          "meets_dc_clean_success": "Perfect, smooth transfer despite the chaos.",
+          "dc_plus_5_or_20_extended_lore": "Perfect transfer, plus Hector spots a pattern in the magnetic shear for future navigation."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_ai",
+        "temperature": 0.5,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Kaio, you've got the baton. What do you do?"
+      }
+    }
+  }
+}
