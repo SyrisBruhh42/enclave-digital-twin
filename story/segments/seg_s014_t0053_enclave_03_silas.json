@@ -111,5 +111,8 @@
       "pressure_index": 8,
       "uninterrupted_escalation": "The pylon will sheer off completely, collapsing half the forge into the ocean."
     }
-  ]
+  ],
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
+  }
 }
