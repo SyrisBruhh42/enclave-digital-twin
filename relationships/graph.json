@@ -113,7 +113,8 @@
         "evt_s009_t0034_expedition_consequence",
         "evt_s010_t0038_expedition_consequence",
         "evt_s011_t0042_expedition_consequence",
-        "evt_s012_t0046_expedition_consequence"
+        "evt_s012_t0046_expedition_consequence",
+        "evt_s013_t0050_expedition_consequence"
       ]
     },
     {
@@ -6569,6 +6570,6 @@
       }
     }
   },
-  "updated_at_tick": 49,
-  "applied_event_count": 57
+  "updated_at_tick": 50,
+  "applied_event_count": 58
 }
