@@ -1,0 +1,106 @@
+{
+  "event_id": "evt_c4821ff6-39ba-4bd0-b3cb-11e75ada4742",
+  "tick_id": 65,
+  "colony_sol": 17,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2085-01-17T06:00:00Z",
+  "base_snapshot_tick": 60,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The First Forge",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "summary": "Silas examines the ferrofluid shear and hands off to Hector.",
+  "importance": 5,
+  "novelty_score": 5,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "steward_note": "deterministic-enclave-5section-v2: Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "calypso_zero_raw_stats": true,
+  "narrative_prose": "Silas tightened his grip on the brass railing as the ferrofluid sea below tore into jagged, fractal crests under the shear of exoplanetary winds. The heavy clunk of the copper magnetic lever vibrated through the floorboards as he forced the resonance fields into phase alignment. 'Your turn, Stormbreaker,' he grunted, shoving the buzzing diagnostic datapad into Hector's chest.",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ]
+  },
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 17,
+    "tick_id": 65,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Stabilize the Forge (Pre-Roll DC: 14)",
+      "mid_term_milestone": "Calibrate the Stormbreaker",
+      "long_term_campaign_victory": "Master the exoplanetary physics"
+    }
+  },
+  "active_location": {
+    "node_id": "loc_forge",
+    "name": "The First Forge",
+    "sensory_palette": {
+      "sight": "Dark metallic fluid",
+      "sound": "Loud clunks of machinery",
+      "smell": "Ozone and hot copper",
+      "touch": "Vibrating floor",
+      "taste_optional": "Metallic tang"
+    },
+    "interactive_features": [
+      {
+        "name": "Brass railing",
+        "system_verb": "DEFEND",
+        "stakes": "Falling"
+      },
+      {
+        "name": "Copper lever",
+        "system_verb": "DEFEND",
+        "stakes": "Resonance failure"
+      },
+      {
+        "name": "Diagnostic datapad",
+        "system_verb": "ATTRACT",
+        "stakes": "Miscalibration"
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_01",
+      "name_and_role": "Ferrofluid Sea, Hazard",
+      "motivation_goal": "Churn",
+      "consistent_method": "Shear",
+      "immediate_complication": "Resonance",
+      "pressure_index": 5,
+      "uninterrupted_escalation": "Breach"
+    }
+  ],
+  "encounter_matrix": {
+    "active_combat": false,
+    "turn_order": [],
+    "environmental_hazards": []
+  },
+  "lpi_metrics": {
+    "lethality_gauge": 1,
+    "pacing_speed": 1,
+    "immersion_depth": 9
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "current_ruling": "Success",
+      "graduated_outcomes": {}
+    },
+    "narrator_dramatist": {
+      "current_beat": "Handoff",
+      "emotional_resonance": "Tense"
+    }
+  }
+}
