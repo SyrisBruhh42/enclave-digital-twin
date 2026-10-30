@@ -63,7 +63,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.2339,
+      "stress": 0.2199,
       "fatigue": 0.12,
       "sleep_debt_norm": 0.12,
       "kp_exo": 3.53,
@@ -243,7 +243,7 @@
       "behavioral_directives": [
         "Climbs the nearest basalt pinnacle with his brass sextant and sketches glowing wind-streams while whistling three-note bird calls."
       ],
-      "stress": 0.1921,
+      "stress": 0.1799,
       "fatigue": 0.2064,
       "sleep_debt_norm": 0.2064,
       "kp_exo": 3.53,
@@ -761,7 +761,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.2339,
+      "stress": 0.2199,
       "fatigue": 0.12,
       "sleep_debt_norm": 0.12,
       "kp_exo": 3.53,
@@ -941,7 +941,7 @@
       "behavioral_directives": [
         "Climbs the nearest basalt pinnacle with his brass sextant and sketches glowing wind-streams while whistling three-note bird calls."
       ],
-      "stress": 0.1921,
+      "stress": 0.1799,
       "fatigue": 0.2064,
       "sleep_debt_norm": 0.2064,
       "kp_exo": 3.53,
@@ -1437,9 +1437,10 @@
     }
   },
   "applied_event_ids": [
-    "evt_s016_t0062_expedition_consequence"
+    "evt_s016_t0062_expedition_consequence",
+    "evt_s016_t0062_shadow_prank"
   ],
-  "total_events_through_tick": 73,
+  "total_events_through_tick": 74,
   "recent_segments": [
     {
       "segment_id": "seg_s012_t0046_enclave_01_hector",
