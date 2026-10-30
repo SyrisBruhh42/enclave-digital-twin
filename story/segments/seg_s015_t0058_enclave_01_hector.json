@@ -1,0 +1,124 @@
+{
+  "event_type": "POV_SCENE_SEGMENT",
+  "event_id": "seg_s015_t0058_enclave_01_hector",
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "tick_id": 58,
+  "colony_sol": 15,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2: Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "calypso_zero_raw_stats": true,
+  "summary": "Hector channels the roaring magnetic shear into a controlled arc, locking the induction relay before tossing the grounding baton to Kaio.",
+  "campaign_metadata": {
+    "session_number": 15,
+    "colony_sol": 15,
+    "tick_id": 58,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Rebalance the magnetic induction arrays against the ferrofluid waves",
+      "mid_term_milestone": "Secure The First Forge foundation",
+      "campaign_arc_climax": "Master the magnetic turbulence of the exoplanet"
+    }
+  },
+  "active_location": {
+    "location_id": "The_First_Forge",
+    "macro_silhouette": "The First Forge's primary induction deck vibrates violently as the magnetohydrodynamic Kelvin-Helmholtz shear tears across the ferrofluid sea below. Heavy brass bulkheads shudder under the magnetic stress, while sputtering blue lightning cascades down the hand-forged copper armatures. The relentless jet-black metallic waves crash against the bedrock foundation, threatening to overwhelm the sanctuary.",
+    "sensory_palette": {
+      "sight_and_color": "blinding blue electrical arcs illuminating the slick, jet-black peaks of the metallic waves",
+      "sound": "deafening thunderclaps of discharged voltage overlaid with the deep, sickening crunch of the magnetic shear",
+      "smell": "heavy, stinging ozone mixed with a sharp tang of vaporized iron",
+      "tactile_temperature": "a chilling, biting cold radiating from the stone beneath the oppressive ambient heat of the electrical discharge",
+      "taste_optional": "a coppery, electric sizzle that fills the mouth and raises the hairs on the tongue"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Primary Induction Relay",
+        "affordance_description": "Can be hastily recalibrated to bleed the accumulating magnetic charge deep into the bedrock.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Surge Pool",
+        "affordance_description": "Can be safely diverted to bleed off the kinetic energy.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetic Shielding Strut",
+        "affordance_description": "Can be reinforced to protect the lower foundation from the surge.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The Kelvin-Helmholtz shear is tearing at the magnetic induction lines, threatening immediate electrocution and structural failure.",
+      "level_2_local": "If the bedrock fracture widens, The First Forge's foundation will be undermined by the ferrofluid sea.",
+      "level_3_campaign_arc": "The exoplanet's living environment fundamentally rejects stationary Enclave engineering, requiring constant adaptation."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "SQUISHY_DEBUFFER"
+      }
+    ],
+    "strain_accumulated_upward": 4,
+    "prerolled_hazard_queue": [
+      12,
+      19,
+      6,
+      15,
+      2
+    ]
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_ai",
+      "model": "ollama",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The induction relay fractures, unleashing a localized arc-flash that severely burns the immediate area.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Hector overtightens the coupling, causing a micro-fracture that exacerbates the charge buildup.",
+        "below_dc_complicated_fail_forward": "The relay holds, but the back-surge blows out the secondary lighting arrays, plunging the deck into gloom.",
+        "meets_dc_clean_success": "Hector expertly vents the shear pressure, stabilizing the relay against the encroaching tide.",
+        "dc_plus_5_or_20_extended_lore": "Hector discovers a way to permanently reinforce the relay using the very resonance of the shear."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector grinned into the ozone gale, the blue corona dancing across his hair as he slammed the heavy brass retaining clamp into place. He spun, the heavy copper grounding baton sparking in his grip, and lobbed it down the scaffolding directly at Kaio. 'Relay is anchored, scout! Map the fracture before the next wave hits!'"
+    }
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_sea",
+      "name_and_role": "Ferrofluid Sea Surge",
+      "motivation_goal": "Overwhelm structural integrity of the Enclave.",
+      "consistent_method": "Magnetohydrodynamic Kelvin-Helmholtz shear.",
+      "immediate_complication": "A massive rogue wave of magnetized liquid is cresting directly toward the primary relay.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "The wave will crush the outer retaining wall and flood the forge floor with lethal charge."
+    }
+  ],
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.75,
+    "unresolved_conflict_ratio": 0.85,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.83,
+    "classification": "Campaign-Ready"
+  }
+}
