@@ -1,0 +1,115 @@
+{
+  "event_type": "POV_SCENE_SEGMENT",
+  "event_id": "seg_s014_t0053_enclave_03_silas",
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "tick_id": 53,
+  "colony_sol": 14,
+  "day_phase": "DAWN_SHIFT",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2: Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "calypso_zero_raw_stats": true,
+  "summary": "Silas reinforces The First Forge against a ferrofluid wave and hands the sonic wrench to Hector.",
+  "campaign_metadata": {
+    "session_number": 14,
+    "colony_sol": 14,
+    "tick_id": 53,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Maintain the pylons against the shear waves",
+      "mid_term_milestone": "Secure The First Forge foundation",
+      "campaign_arc_climax": "Master the magnetic turbulence of the exoplanet"
+    }
+  },
+  "active_location": {
+    "location_id": "The_First_Forge",
+    "macro_silhouette": "The First Forge groans under immense torque, its tarnished brass struts and copper plating vibrating wildly in the early dawn. Outside the thick reinforced glass, the ferrofluid sea is a chaotic nightmare of spiky, jet-black peaks crashing into each other, driven by intense magnetohydrodynamic Kelvin-Helmholtz shear. The entire facility trembles with the violent, erratic rhythm of the fluid below.",
+    "sensory_palette": {
+      "sight_and_color": "Flashing warning strobes casting amber light across tarnished brass, and the jagged, black metallic waves outside.",
+      "sound": "The deep, grinding protest of overstressed support beams and the wet, heavy slamming of ferrofluid against the pylons.",
+      "smell": "Ozone from sparking relays mixed with the stale sweat of exhaustion.",
+      "tactile_temperature": "A chilling dampness that pervades the air, broken only by the intense, radiant heat radiating off the primary conduit.",
+      "taste_optional": "A metallic tang of copper dust on the back of the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Primary Resonance Dampener",
+        "affordance_description": "Can be manually tuned to counter the specific frequency of the shear.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Static Discharge Capacitor",
+        "affordance_description": "Can be vented to release built-up kinetic tension safely into the atmosphere.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetic Baffle Shielding",
+        "affordance_description": "Can be adjusted to temporarily hide delicate internal components from flux spikes.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The magnetohydrodynamic Kelvin-Helmholtz shear is producing unprecedented stress on the primary pylons.",
+      "level_2_local": "We cannot continue production of the new array until the forge's foundation is secured.",
+      "level_3_campaign_arc": "The exoplanet is fundamentally hostile to our rigid, Earth-designed architecture."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      },
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      14,
+      7,
+      11,
+      3,
+      18
+    ]
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "GPT-4o",
+      "model": "gpt-4o",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If not defended, the shear vortex will warp the primary pylon, forcing structural collapse.",
+      "graduated_outcomes": {
+        "dc_threshold": 14,
+        "result_tier": "SUCCESS",
+        "consequence": "The dampener negates the wave, saving the pylon."
+      }
+    },
+    "master_narrator": {
+      "executor": "Claude-3-Opus",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Silas turns, his jaw set as he tosses the heavy wrench. What does Hector do next?"
+    }
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "kelvin_helmholtz_shear_vortex",
+      "name_and_role": "Ferrofluid Shear Vortex",
+      "motivation_goal": "To rip the forge from its moorings via intense magnetic friction.",
+      "consistent_method": "Generating cascading waves of magnetic turbulence that target rigid joints.",
+      "immediate_complication": "A massive shear wave is building directly under the main structural pylon.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "The pylon will sheer off completely, collapsing half the forge into the ocean."
+    }
+  ]
+}
