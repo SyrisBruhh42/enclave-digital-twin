@@ -1,0 +1,118 @@
+{
+  "active_pov_id": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "event_type": "DYNAMIC_LORE_CARD_PROPOSALS",
+  "campaign_metadata": {
+    "session_number": 13,
+    "colony_sol": 13,
+    "tick_id": 51,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Determine the source of the magnetic shear destabilizing the ferrofluid sea.",
+      "mid_term_milestone": "Calibrate the Hub's metabolic engines against ambient environmental interference.",
+      "campaign_arc_climax": "Unravel the core mystery behind the Enclave's anomalous electromagnetosphere."
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea_observation_post",
+    "macro_silhouette": "The ferrofluid sea churns beneath an oppressive, ozone-scented sky, its surface roiling with impossible geometries dictated by invisible magnetic currents. Towering basalt pinnacles pierce the liquid iron expanse, glowing faintly with symbiotic fungal blooms that pulse in time with the tide. A slender observation platform, forged from salvaged copper and brass, clings precariously to the largest spire, shivering as the Kelvin-Helmholtz shear tears through the atmosphere. Above, the twin suns bleed through the Resonant Spore Fog, casting long, bruised shadows across the metallic waves.",
+    "sensory_palette": {
+      "sight_and_color": "Iridescent streaks of cobalt and violently churning black ferrofluid, illuminated by the sick chartreuse glow of spore banks and the bruised twilight of the twin suns.",
+      "sound": "The grinding, low-frequency hum of magnetic fields tearing at each other, punctuated by the sharp crackle of static discharge and the hollow rushing of wind against basalt.",
+      "smell": "Sharp ozone, oxidized iron, and the rich, earthy musk of bruised mycelium.",
+      "tactile_temperature": "The air bites with a sudden, unnatural chill as the shear front passes, raising the hairs on exposed arms while static electricity prickles the skin like invisible needles.",
+      "taste_optional": "A faint metallic tang, like licking a battery, coats the back of the throat with every inhaled breath of the spore-choked air."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetized Basalt Spire",
+        "affordance_description": "A sheer vertical face of volcanic rock infused with volatile lodestone veins.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Surge Eddy",
+        "affordance_description": "A churning whirlpool of liquid iron acting as a temporary resonant sink.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Bioluminescent Mycelial Node",
+        "affordance_description": "A dense cluster of glowing fungi that reacts to kinetic impact with a burst of blinding spores.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_kh_shear_front",
+      "name_and_role": "The Kelvin-Helmholtz Shear Front",
+      "motivation_goal": "To equalize the extreme magnetic gradients across the ferrofluid sea.",
+      "consistent_method": "Manifests as sudden, violent updrafts of static-charged wind that destabilize electronic equipment and metallic structures.",
+      "immediate_complication": "The shear front threatens to snap the delicate copper moorings of the observation platform.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "If unchecked, the shear will create a resonant cascade, permanently blinding the Enclave's long-range sensors and destroying the platform."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The physical shear force is physically damaging critical observation equipment.",
+      "level_2_local": "The anomaly disrupts the carefully balanced ecosystem of the ferrofluid sea, threatening both The Forge's resources and The Wild's biological preserves.",
+      "level_3_campaign_arc": "The sheer scale of the disturbance suggests the planet's core magnetic engine is awakening, pointing toward the ultimate secret of the exoplanet."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      3,
+      8,
+      12,
+      15,
+      19
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.65,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.85,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.77,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Kaio's associative leaps fail to track the erratic shear waves, resulting in damage to Ryn's metabolic calibration equipment and creating inter-squad friction over wasted resources.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio misinterprets a surge in the ferrofluid as a safe eddy. His misdirection causes Ryn to recalibrate the engines directly into a magnetic feedback loop, blowing a primary fuse.",
+        "below_dc_complicated_fail_forward": "Kaio manages to map the edge of the shear, but only by using Ryn's delicate atmospheric sensors as an improvised kite. The data is secured, but the equipment is ruined.",
+        "meets_dc_clean_success": "By syncing his breathing to the piezo-electric hum of the basalt, Kaio perfectly anticipates the next shear wave, guiding Ryn through a flawless calibration sequence.",
+        "dc_plus_5_or_20_extended_lore": "Not only does Kaio anticipate the wave, he identifies a rhythmic harmonic in the shear\u2014a planetary heartbeat that maps directly to ancient geological fault lines, revealing a hidden subterranean access point."
+      }
+    },
+    "master_narrator": {
+      "executor": "claude-3-5-sonnet",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio, his pockets rattling with magnetized stones, slides down the final stretch of the basalt spire, landing heavily on the metal decking next to Ryn. He holds out a hastily scribbled chart of the wind shears, grinning despite the ozone burns on his jacket. 'Your turn, Chef. Don't let the soup boil over.' What does Ryn do?"
+    }
+  }
+}
