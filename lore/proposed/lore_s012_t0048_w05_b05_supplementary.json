@@ -1,0 +1,114 @@
+{
+  "event_type": "POV_SCENE_SEGMENT",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "campaign_metadata": {
+    "session_number": 12,
+    "colony_sol": 12,
+    "tick_id": 48,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Prepare the feast amidst the ferrofluid anomalies.",
+      "mid_term_milestone": "Stabilize the metabolic engine's caloric output.",
+      "campaign_arc_climax": "Achieve harmony between biological needs and environmental hazards."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Hearth_Kitchen",
+    "macro_silhouette": "The Hearth kitchen pulses with the rhythmic thrum of the metabolic engine, its vaulted ceiling ribbed with oxidized copper pipes that hiss steam in tandem with Ryn's swift chopping. Heavy cast-iron stoves radiate a comforting, dry heat, grounding the space against the encroaching chill. Beyond the reinforced viewport, the dark ferrofluid sea writhes in chaotic, spiked waves, a stark contrast to the ordered warmth within.",
+    "sensory_palette": {
+      "sight_and_color": "Gleaming copper pots catching the amber glow of the hearth fire, starkly contrasted by the obsidian spikes of the ferrofluid sea outside.",
+      "sound": "The rhythmic, heavy thud of a cleaver, the hissing of steam vents, and the distant, low hum of magnetic shear.",
+      "smell": "The rich, savory aroma of roasting mire-lentils overlaid with the sharp, ozone tang of atmospheric static.",
+      "tactile_temperature": "A dense, comforting warmth from the stoves that quickly gives way to a creeping, metallic chill near the viewport.",
+      "taste_optional": "The lingering, savory grit of salt and earthy root vegetables."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "The Steam-Jacketed Kettles",
+        "affordance_description": "Massive copper pots that can be adjusted to vent steam or intensify heat.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Observation Viewport",
+        "affordance_description": "A reinforced window offering a direct line of sight to the magnetic anomalies outside.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Spice and Herb Cache",
+        "affordance_description": "A carefully organized array of dried aromatics hidden behind the stove.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_ferrofluid_shear",
+      "name_and_role": "Magnetohydrodynamic Shear Force",
+      "motivation_goal": "To destabilize local thermodynamic systems.",
+      "consistent_method": "Pulsing erratic magnetic fields that interfere with thermal regulation.",
+      "immediate_complication": "The kitchen's heat exchangers are miscalibrated by the magnetic interference.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The heat exchangers will fail, ruining the stew and freezing the hearth."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Ryn needs to prepare the feast despite the magnetic interference.",
+      "level_2_local": "The Hearth must remain the stabilizing force for the colony's morale.",
+      "level_3_campaign_arc": "Mastering the alien environment is essential for the Enclave's long-term survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      7,
+      12,
+      18,
+      4,
+      15
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.5,
+    "motivational_vector_saturation": 0.6,
+    "unresolved_conflict_ratio": 0.4,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.55,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.3,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The magnetic shear causes the main kettle to over-pressurize, ruining the feast's core dish and lowering morale.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Ryn misreads the pressure gauge entirely, causing a messy explosion of lentil stew.",
+        "below_dc_complicated_fail_forward": "The kettle vents properly but the heat is lost; the meal is served lukewarm, causing mild grumbling.",
+        "meets_dc_clean_success": "Ryn perfectly balances the pressure vents against the magnetic pulses, cooking the stew to perfection.",
+        "dc_plus_5_or_20_extended_lore": "Not only is the stew perfect, but Ryn discovers a way to harness the magnetic shear to enhance the cooking process."
+      }
+    },
+    "master_narrator": {
+      "executor": "claude-3-opus",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Ryn wipes her brow with a flour-dusted cloth and hands the heavy ladel directly to Silas. 'Keep this at a rolling boil, no matter what that magnetic field does,' she barks."
+    }
+  }
+}
