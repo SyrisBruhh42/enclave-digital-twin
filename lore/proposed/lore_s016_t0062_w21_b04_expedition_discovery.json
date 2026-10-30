@@ -1,0 +1,118 @@
+{
+  "event_type": "EXPEDITION_DISCOVERY",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "active_pov_id": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "campaign_metadata": {
+    "session_number": 16,
+    "colony_sol": 16,
+    "tick_id": 62,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Survive the Magnetohydrodynamic Kelvin-Helmholtz shear expedition",
+      "mid_term_milestone": "Establish a stable grounding shunt network",
+      "campaign_arc_climax": "Master the exoplanet's turbulent electromagnetic forces"
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea_coast",
+    "macro_silhouette": "The turbulent coast of the ferrofluid sea writhes in metallic spikes, a chaotic dance of magnetic attraction. Dark, viscous waves crest into razor-sharp ridges before collapsing under their own density. Overhead, the charged atmosphere crackles in erratic sync with the ocean's churning abyss.",
+    "sensory_palette": {
+      "sight_and_color": "Iridescent streaks of cobalt and violent violet flashing against an ink-black, spiky sea",
+      "sound": "A deafening, low-frequency thrum that rattles the teeth, punctuated by sharp, supersonic cracks",
+      "smell": "Overwhelming ozone mixed with the coppery tang of raw voltage and scorched iron",
+      "tactile_temperature": "Oppressively hot and tingling, making hair stand on end and skin prickle",
+      "taste_optional": "A lingering metallic sourness at the back of the throat"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetized Basalt Outcropping",
+        "affordance_description": "A dense, stable spire protruding from the churning metallic foam, capable of anchoring heavily insulated cables.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Oscillating Ferro-Tide Pool",
+        "affordance_description": "A temporarily calm basin where magnetic flux is momentarily inverted, drawing raw charged matter towards it.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Electrified Mist Bank",
+        "affordance_description": "A dense cloud of supercharged aerosolized iron that blocks visual and thermal scanning.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 13
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "kelvin_helmholtz_shear_wave",
+      "name_and_role": "The Kelvin-Helmholtz Shear Wave (Environmental Hazard)",
+      "motivation_goal": "To equalize the extreme kinetic and magnetic pressure differentials violently.",
+      "consistent_method": "Surging unexpected rogue waves of magnetized ferrofluid that rip through conductive materials.",
+      "immediate_complication": "The wave is currently threatening to strip the insulation off the expedition's primary tether.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "If left unchecked, the wave will fully magnetize the tether, dragging whoever is attached into the lethal, churning deep."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The expedition must traverse the ferrofluid sea coast without being magnetically shredded.",
+      "level_2_local": "Securing this path is critical to accessing the next ley-line node for the Enclave's power grid.",
+      "level_3_campaign_arc": "Mastering the physics of the exoplanet's oceans is the key to achieving long-term self-sufficiency and surviving the upcoming grand convergence."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      12,
+      17,
+      8,
+      14,
+      19
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.9,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.85,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Enclave_Core",
+      "model": "v2_tactical",
+      "temperature": 0.1,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The tether is severely compromised, forcing an immediate, dangerous free-climb to safety and losing critical equipment.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Hector completely misreads the wave's polarity, anchoring to a spike that shatters, causing a catastrophic fall.",
+        "below_dc_complicated_fail_forward": "The tether holds, but the magnetic backlash superheats Hector's gauntlets, forcing him to drop a vital scanner to brace himself.",
+        "meets_dc_clean_success": "Hector perfectly times the surge, clipping the tether to a grounded spire just as the shear wave crests beneath him.",
+        "dc_plus_5_or_20_extended_lore": "Hector not only secures the tether but discovers a resonant harmonic in the wave that Kaio can use to safely ride the next surge."
+      }
+    },
+    "master_narrator": {
+      "executor": "Enclave_Narrative",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector gripped the sputtering tether, feeling the immediate jolt of the Magnetohydrodynamic Kelvin-Helmholtz shear threatening to rip his arm from its socket. He gritted his teeth, adrenaline overriding the sting of the ozone, and slammed the anchor point home on the basalt spire. Breathing hard, he turned and tossed the heavy brass relay baton through the crackling mist straight towards Kaio. 'Your turn, Scout! Don't let the sea bite!'"
+    }
+  }
+}
