@@ -1,0 +1,120 @@
+{
+  "event_type": "INCHARACTER_PSYCHOMETRIC_DRIFT_AUDITS",
+  "bucket": "INCHARACTER_PSYCHOMETRIC_DRIFT_AUDITS",
+  "phase": "THE_FEAST",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 16,
+    "tick_id": 64,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Maintain colony caloric and metabolic stability during the magnetohydrodynamic Kelvin-Helmholtz shear event.",
+      "mid_term_milestone": "Ensure safe rationing and adequate nutrient delivery for all Enclave members during extended magnetic storms.",
+      "campaign_arc_climax": "Integrate the ferrofluid sea's thermodynamic properties into the Enclave's long-term agricultural and thermal management systems."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Hearth",
+    "macro_silhouette": "The Hearth is a sprawling, steam-filled sanctuary anchored by thirty-gallon copper kettles and cast-iron butcher blocks, built directly against the Enclave's thermal vents. Condensation beads on the vaulted ceiling as heat from the fires combats the creeping chill from the ferrofluid sea. Thick wooden tables, scarred by years of knives and hot pans, form the communal heart of the room.",
+    "sensory_palette": {
+      "sight_and_color": "The rich, warm glow of roaring fires, reflecting off highly polished copper kettles and the deep, dark gleam of cast iron.",
+      "sound": "The rhythmic, heavy chop of a brass ladle against a wooden block, accompanied by the low, bubbling hum of a massive stockpot and the distant hiss of escaping steam.",
+      "smell": "The savory, rich aroma of braised mire-lentils, roasting root vegetables, and the sharp tang of salt and vinegar used for scouring.",
+      "tactile_temperature": "A wave of localized, intense heat radiating from the massive stoves, contrasting sharply with the ambient chill creeping in from the colony's exterior walls.",
+      "taste_optional": "The hearty, earthy flavor of perfectly seasoned stew with a hint of smoky char from the open flame."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Thirty-Gallon Steam-Jacketed Kettle",
+        "affordance_description": "A massive, bubbling pot of stew that can be strategically tipped or vented to create a distraction or a localized hazard.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Heavy Cast-Iron Butcher Block",
+        "affordance_description": "A solid, immovable object that can be used for cover or to brace heavy equipment against sudden environmental shifts.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Thermal Vent Grates",
+        "affordance_description": "Vents from the colony's geothermal system that can be temporarily obscured to hide vital supplies from the cold or unauthorized foragers.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_shear_storm",
+      "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz Shear",
+      "motivation_goal": "To relentlessly sap thermal energy and disrupt metabolic efficiency across the colony.",
+      "consistent_method": "Generating sudden, localized temperature drops and magnetic fluctuations that interfere with the Hearth's heating systems.",
+      "immediate_complication": "A sudden temperature drop in the valley floor triggers a caloric deficit alert, forcing Ryn to drastically readjust the rationing ledger.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "If unchecked, the shear will cause a cascading failure of the Hearth's secondary heating vents, endangering the night's Feast."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The immediate drop in temperature forces Ryn to defend the colony's immediate caloric intake to prevent shivering-induced exhaustion.",
+      "level_2_local": "The Kelvin-Helmholtz shear threatens the stability of the local thermal vents that power the Hearth's massive kettles.",
+      "level_3_campaign_arc": "Mastering the thermodynamic challenges of the ferrofluid sea is critical for the Enclave's long-term survival and self-sufficiency."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      3,
+      8,
+      12,
+      15,
+      19
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.6,
+    "unresolved_conflict_ratio": 0.3,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.525,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If the thermal adjustment fails, the resulting temperature drop will force the colony to consume emergency rations, severely depleting the reserves.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Ryn miscalculates the shear's intensity, venting too much heat and causing a localized flash-freeze in the pantry.",
+        "below_dc_complicated_fail_forward": "The stew is saved, but the effort strains the venting system, requiring Silas to perform emergency maintenance before morning.",
+        "meets_dc_clean_success": "Ryn perfectly balances the thermal output against the shear, securing the Feast and maintaining optimal caloric ratios.",
+        "dc_plus_5_or_20_extended_lore": "Ryn discovers a novel way to harness the magnetic fluctuations of the shear to actually improve the efficiency of the steam-jacketed kettles."
+      }
+    },
+    "master_narrator": {
+      "executor": "claude-3-opus",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": false,
+      "agency_handoff_prompt": "Ryn wiped a smudge of soot from her cheek with the back of a flour-dusted hand, her eyes darting over the frantic notations on her ledger. The chill from the ferrofluid sea was biting at the edges of the Hearth, a relentless Kelvin-Helmholtz shear that threatened to undo hours of careful simmering. She rapped her heavy brass ladle sharply against the butcher block, the sound ringing out over the bubbling hiss of the thirty-gallon kettles. 'We are losing three degrees a minute on the secondary vents!' she barked, turning to thrust a steaming bowl of braised lentils into the hands of the nearest figure. 'Silas, get this down you before your core temp drops another fraction, then take this spanner and brace the manifold before we all freeze.' With a sharp nod, she pressed the heavy iron tool directly into his chest, forcing him to take it."
+    }
+  }
+}
