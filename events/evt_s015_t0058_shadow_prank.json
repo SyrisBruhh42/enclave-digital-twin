@@ -1,0 +1,172 @@
+{
+  "prank_id": "prank_sol15_abcd1234",
+  "entry_id": "prank_sol15_abcd1234",
+  "event_id": "evt_s015_t0058_shadow_prank",
+  "event_type": "SHADOW_ECONOMY_PRANK_SEEDED",
+  "status": "PENDING",
+  "matured": false,
+  "origin_sol": 15,
+  "maturity_sol": 18,
+  "feast_delay": 3,
+  "lethality": 0,
+  "law_l11_clamped": false,
+  "severity": "PETTY_AFFECTIONATE_INCONVENIENCE",
+  "node_a": "enclave_01_hector",
+  "node_b": "enclave_05_kaio",
+  "node_c": "enclave_13_ryn",
+  "instigator": "enclave_01_hector",
+  "intended_target": "enclave_05_kaio",
+  "collateral_recipient": "enclave_13_ryn",
+  "target_b_missed": true,
+  "blamed_node": "enclave_01_hector",
+  "attributed_to": "enclave_01_hector",
+  "prank_description": "Rigged the magnetic polarity invertor to play a jovial tune when Kaio tries to stabilize the shear.",
+  "summary": "Hector rigged a harmless prank for Kaio; Kaio missed it, leaving Ryn to deal with the tune.",
+  "blind_spot_attribution": {
+    "instigator_node_a": "enclave_01_hector",
+    "oblivious_target_node_b": "enclave_05_kaio",
+    "target_b_missed": true,
+    "inconvenienced_node_c": "enclave_13_ryn",
+    "blamed_by_c": "enclave_01_hector",
+    "asymmetric_loop_closed": true
+  },
+  "tick_id": 58,
+  "colony_sol": 15,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-11-08T12:00:00Z",
+  "base_snapshot_tick": 57,
+  "location": "The_First_Forge",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_05_kaio",
+    "enclave_13_ryn"
+  ],
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ]
+  },
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "importance": 6.0,
+  "novelty_score": 0.68,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {
+    "stress_delta": -0.02
+  },
+  "relationship_deltas": [],
+  "evidence_refs": [],
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 15,
+      "tick_id": 58,
+      "pacing_mode": "MULLIGAN_CRISIS",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Endure the magnetohydrodynamic Kelvin-Helmholtz shear.",
+        "mid_term_milestone": "Stabilize the ferrofluid currents.",
+        "campaign_arc_climax": "Master the exoplanet anomalies."
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "The First Forge reverberates with the suppressed energy of a captured star, its brass and iron plating shifting under the immense pressure of the ferrofluid sea magnetohydrodynamic shear. Coils of thick cable spark with static electricity, winding across stations laden with half-finished prototypes. A thick pall of acrid smoke billows from the primary vent, swirling in the dim amber glow.",
+      "sensory_palette": {
+        "sight_and_color": "Dim amber illumination pierced by stark blue static arcs.",
+        "sound": "A heavy, vibrating thrum punctuated by the sharp snap of electrical discharges.",
+        "smell": "Pungent ozone masking the scent of hot, oiled metal.",
+        "tactile_temperature": "Stiflingly hot and arid, with static electricity clinging to exposed skin.",
+        "taste_optional": "A persistent metallic tang of copper and ozone."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Static Grounding Rod",
+          "affordance_description": "Absorbs dangerous stray charges during shear waves.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Magnetic Anomaly",
+          "affordance_description": "A swirling vortex of loose metal scraps.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Ferrofluid Plume",
+          "affordance_description": "A jet of fluid metal that can mask movement.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "Shear Wave",
+        "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz shear",
+        "motivation_goal": "Disrupt the forge magnetic containment.",
+        "consistent_method": "Unpredictable pulses of extreme magnetic force.",
+        "immediate_complication": "Makes passing the heavy brass baton physically difficult.",
+        "pressure_index": 7,
+        "uninterrupted_escalation": "1"
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Hector must successfully pass the baton to Kaio despite the severe magnetic turbulence.",
+        "level_2_local": "They must maintain operational continuity in the forge during the shear event.",
+        "level_3_campaign_arc": "The Enclave survival hinges on the forge uninterrupted output."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        5,
+        10,
+        15,
+        20,
+        25
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.6,
+      "motivational_vector_saturation": 0.6,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.7,
+      "composite_lpi": 0.6,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_ai",
+        "model": "qwen3.5:4b-q4_K_M",
+        "temperature": 0.1,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The baton is dropped, risking critical failure of delicate calibration instruments.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Catastrophic containment breach during the handoff.",
+          "below_dc_complicated_fail_forward": "Handoff succeeds but blinding sparks disorient them.",
+          "meets_dc_clean_success": "Perfectly timed handoff between magnetic pulses.",
+          "dc_plus_5_or_20_extended_lore": "Flawless handoff revealing a predictable rhythm in the shear wave."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_ai",
+        "temperature": 0.4,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Kaio, grab the baton."
+      }
+    }
+  },
+  "narrative_prose": "The First Forge groans under the magnetic strain, its aged copper bulkheads complaining as the magnetohydrodynamic Kelvin-Helmholtz shear sweeps across the nearby ferrofluid sea. Hector tightens his grip on the workbench, the air thick with the acrid scent of hot metal and ozone, a dry heat radiating through his heavy boots. With careful precision, he extends the heavy brass relay baton toward Kaio, preparing to hand it off before the magnetic currents surge again."
+}
