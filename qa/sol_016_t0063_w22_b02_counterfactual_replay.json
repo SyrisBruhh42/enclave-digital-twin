@@ -1,0 +1,119 @@
+{
+  "bucket": "COUNTERFACTUAL_PERSONALITY_STUDY_REPLAYS",
+  "phase": "DUSK_CRAFT",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 16,
+    "tick_id": 63,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Understand and map the sheer forces across the sea.",
+      "mid_term_milestone": "Secure the settlement's perimeter against unexpected magnetic squalls.",
+      "campaign_arc_climax": "Complete the Grand Map of the sanctuary's shifting topography."
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea_overlook",
+    "macro_silhouette": "The jagged basalt overlook juts directly into the churning ferrofluid sea, where glowing spore-drifts collide with liquid magnetism. Deep violet waves crest and shatter in slow-motion, bound by invisible tethers of raw polar energy, while the salty metallic mist coats the air in a shimmering, abrasive dust. Wind howls through the stone crags, carrying the unmistakable low hum of the planet's restless core.",
+    "sensory_palette": {
+      "sight_and_color": "Deep violet waves, shimmering metallic mist, and glowing spore-drifts.",
+      "sound": "Howling wind and a low, resonant piezo-electric hum.",
+      "smell": "Ozone and metallic rust mixed with damp cave moss.",
+      "tactile_temperature": "Biting cold wind and abrasive metallic dust clinging to exposed skin.",
+      "taste_optional": "A sharp, coppery tang lingering on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetized Basalt Spire",
+        "affordance_description": "A tall outcrop resonating with latent charge, capable of shielding against stray shear winds if braced properly.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Drifting Luminescent Geode",
+        "affordance_description": "A floating concentration of pure magnetic flux that can be pulled in and harvested.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Dense Spore-Fog Eddy",
+        "affordance_description": "A thick, swirling patch of bioluminescent fog offering a momentary hiding spot from the sensory overload.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_magnetic_shear_wave",
+      "name_and_role": "Kelvin-Helmholtz Shear Wave",
+      "motivation_goal": "To violently balance the pressure differentials between the liquid lodestone and the atmosphere.",
+      "consistent_method": "Surging up the cliff face in unpredictable, gravity-defying arcs.",
+      "immediate_complication": "The resulting metallic spray threatens to short out precision mapping equipment.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "If left unmonitored, the shear wave will fully crest over the overlook, sweeping away unsecured supplies and blinding observers."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio is struggling to chart the chaotic Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea before the dusk cycle shifts the polar alignment.",
+      "level_2_local": "Ryn needs precise trajectory data to know if the metabolic engines will be battered by stray magnetic surges during the night.",
+      "level_3_campaign_arc": "Mastering the Enclave's erratic exoplanet meteorology is essential to stabilizing the sanctuary against deep-core anomalies."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      14,
+      8,
+      19,
+      4,
+      12
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.65,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Anthropic",
+      "model": "claude-3-5-sonnet",
+      "temperature": 0.4,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Kaio misreads the shear vector, getting a face full of abrasive ferrofluid spray that ruins his current sketch and leaves him temporally disoriented.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio confidently maps an eddy that is actually a feedback loop, drawing Ryn into the splash zone and coating their rations in metallic grit.",
+        "below_dc_complicated_fail_forward": "Kaio manages to trace the general flow but loses a borrowed compass to a sudden magnetic snatch.",
+        "meets_dc_clean_success": "Kaio accurately plots the shear interference, successfully warning Ryn of the incoming pressure wave with a precise baton pass.",
+        "dc_plus_5_or_20_extended_lore": "Kaio completely maps the subterranean liquid lodestone currents, discovering a hidden rhythmic pattern to the sea's surges."
+      }
+    },
+    "master_narrator": {
+      "executor": "Claude",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio grinned, tossing the glowing geode core into Ryn's waiting hand, signaling it was their turn to manage the chaos."
+    }
+  }
+}
