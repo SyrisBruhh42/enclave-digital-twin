@@ -1,0 +1,118 @@
+{
+  "event_type": "EXPEDITION_DISCOVERY",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 14,
+    "tick_id": 54,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Secure the expedition site despite the ferrofluid sea shear.",
+      "mid_term_milestone": "Establish a stable bridgehead across the ferrofluid sea.",
+      "campaign_arc_climax": "Harness the planet's core magnetic energy."
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea_shore",
+    "macro_silhouette": "The jagged coastline of the ferrofluid sea is a chaotic dance of liquid spikes, twisting upward like black metallic stalagmites as the twin suns pull a severe Magnetohydrodynamic Kelvin-Helmholtz shear across the surface. Magnetic turbulence rends the air, creating a persistent, static-charged ozone haze. Crashing waves of heavy, viscous fluid slam against the copper-reinforced retaining walls of the expedition outpost.",
+    "sensory_palette": {
+      "sight_and_color": "Swirling obsidian liquid spiked with violent blue arc flashes.",
+      "sound": "A deafening, rhythmic booming of heavy fluid slamming into metal, underscored by the high-pitched hiss of static discharge.",
+      "smell": "Overwhelming, acrid ozone mixed with the coppery tang of raw iron.",
+      "tactile_temperature": "A biting cold wind that paradoxically sears the skin with micro-static shocks.",
+      "taste_optional": "The metallic taste of a battery on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Copper Retaining Wall",
+        "affordance_description": "A reinforced barrier struggling against the ferrofluid tide.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetic Induction Spike",
+        "affordance_description": "A partially buried, charged spire acting as a chaotic lightning rod.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Wave Surge",
+        "affordance_description": "A towering swell of the heavy, spiky liquid threatening to engulf equipment.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "kelvin_helmholtz_shear_wave",
+      "name_and_role": "Ferrofluid Shear Wave - Environmental Hazard",
+      "motivation_goal": "Destabilize the local magnetic field and overwhelm the outpost.",
+      "consistent_method": "Pulsing surges of liquid iron and localized static discharges.",
+      "immediate_complication": "The shear wave threatens to rip the magnetic induction spike from its moorings.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "If unchecked, the wave will collapse the retaining wall and flood the camp."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The expedition gear must be secured before the shear wave sweeps it away.",
+      "level_2_local": "The outpost serves as a critical monitoring station for the ferrofluid sea's anomalies.",
+      "level_3_campaign_arc": "Understanding the ferrofluid dynamics is key to mastering the planet's magnetosphere."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      12,
+      18,
+      5,
+      20,
+      8
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.9,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.85,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Anthropic",
+      "model": "claude-3-5-sonnet",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The induction spike is torn away, and the retaining wall takes critical structural damage.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Hector mistakenly believes he can ride the shear wave, slipping and risking immediate consumption by the heavy fluid.",
+        "below_dc_complicated_fail_forward": "Hector secures the spike, but the resultant discharge fries his primary tool belt and shocks him severely.",
+        "meets_dc_clean_success": "Hector perfectly times the surge, locking the spike down just as the wave breaks over the wall, shunting the energy safely.",
+        "dc_plus_5_or_20_extended_lore": "Hector not only secures the spike but harnesses the shear wave's energy to temporarily supercharge the outpost's grid, revealing a new frequency pattern in the sea."
+      }
+    },
+    "master_narrator": {
+      "executor": "Claude",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector braces against the gale, turning toward Kaio. 'I've got the spike! You need to hold the line!'"
+    }
+  }
+}
