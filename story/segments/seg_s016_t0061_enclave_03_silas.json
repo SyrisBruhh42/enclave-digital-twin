@@ -1,0 +1,131 @@
+{
+  "event_type": "POV_SCENE_SEGMENT",
+  "event_id": "seg_s016_t0061_enclave_03_silas",
+  "tick_id": 61,
+  "colony_sol": 16,
+  "day_phase": "DAWN_SHIFT",
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2: Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "calypso_zero_raw_stats": true,
+  "summary": "Silas reinforces the brass bulkheads of The First Forge against the ferocious magnetic tides, subsequently passing a crucial calibrator baton to Hector.",
+  "campaign_metadata": {
+    "session_number": 16,
+    "colony_sol": 16,
+    "tick_id": 61,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Secure the primary grounding mast from the magnetic shear",
+      "mid_term_milestone": "Stabilize The First Forge's perimeter",
+      "campaign_arc_climax": "Prevent the encroaching ferrofluid wave from causing a total polarity inversion"
+    }
+  },
+  "active_location": {
+    "location_id": "The_First_Forge",
+    "macro_silhouette": "The First Forge's heavy brass bulkheads ground and hummed, an anchor resisting the immense pressure of the magnetohydrodynamic Kelvin-Helmholtz shear tearing across the ferrofluid sea just outside. Sputtering blue lightning arced across hand-forged copper armatures, casting long, erratic shadows across the slick basalt floor. Outside, jet-black metallic waves crested violently against the retaining walls, threatening to overwhelm the structural tolerances.",
+    "sensory_palette": {
+      "sight_and_color": "blinding azure electrical arcs against matte jet-black metallic waves",
+      "sound": "a relentless, bone-rattling hum of sheer magnetic force punishing the stressed brass bulkheads",
+      "smell": "acrid, burning ozone thickly layered over the heavy, metallic scent of cold iron",
+      "tactile_temperature": "a biting, localized chill radiating from the basalt floor beneath the oppressive ambient heat of the electrical discharge",
+      "taste_optional": "a sharp, battery-acid tang clinging to the back of the throat"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Primary Grounding Mast",
+        "affordance_description": "Can be hastily recalibrated to bleed the accumulating magnetic charge deep into the bedrock.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Resonant Geode Cluster",
+        "affordance_description": "Can draw away the sheer kinetic force of the ferrofluid impact if properly aligned.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Thermal Exhaust Vents",
+        "affordance_description": "Can safely dissipate the excess thermal load before the brass bulkheads warp.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_sea",
+      "name_and_role": "Ferrofluid Sea Surge",
+      "motivation_goal": "Overwhelm structural integrity of the Enclave.",
+      "consistent_method": "Magnetohydrodynamic Kelvin-Helmholtz shear.",
+      "immediate_complication": "A massive rogue wave of magnetized liquid is cresting directly toward the primary mast.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "The wave will crush the outer retaining wall and flood the forge floor with lethal charge."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The Kelvin-Helmholtz shear is buckling the primary grounding mast, threatening immediate catastrophic discharge.",
+      "level_2_local": "If the mast fails, The First Forge will be ripped apart by the feral magnetic tide.",
+      "level_3_campaign_arc": "The exoplanet's living environment fundamentally rejects stationary Enclave engineering, requiring constant adaptation."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      },
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      7,
+      18,
+      3,
+      9
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.6,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_ai",
+      "model": "ollama",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The mast fractures, unleashing a localized arc-flash that severely burns the immediate area.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Silas overtightens the coupling, causing a micro-fracture that exacerbates the charge buildup.",
+        "below_dc_complicated_fail_forward": "The mast holds, but the back-surge blows out the secondary lighting arrays, plunging the forge into gloom.",
+        "meets_dc_clean_success": "Silas expertly vents the shear pressure, stabilizing the mast against the encroaching tide.",
+        "dc_plus_5_or_20_extended_lore": "Silas discovers a way to permanently reinforce the mast using the very resonance of the shear."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Silas grunted, his muscles straining against the immense force as he locked the final brass retaining clamp of the primary grounding mast into place, feeling the violent hum of the magnetohydrodynamic Kelvin-Helmholtz shear shudder through the metal. He turned, his boots slipping slightly on the slick basalt, and tossed the heavy copper calibration baton, slick with condensation, directly into Hector's waiting hand. 'Inefficient to stand there gawking, kid! Anchor the relay before the next wave crests!'"
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ]
+  }
+}

@@ -1443,20 +1443,6 @@
   "total_events_through_tick": 72,
   "recent_segments": [
     {
-      "segment_id": "seg_s011_t0043_enclave_05_kaio",
-      "sol_id": 11,
-      "colony_sol": 11,
-      "tick_id": 43,
-      "active_pov_id": "enclave_05_kaio",
-      "next_pov_target": "enclave_13_ryn",
-      "location_id": "The_Lower_Pylons",
-      "time_of_day": "DUSK_CRAFT",
-      "day_phase": "DUSK_CRAFT",
-      "title": "Sol 011 \u2022 DUSK_CRAFT (enclave_05_kaio)",
-      "opening_excerpt": "Kaio races to reinforce the lower pylons against the violent magnetohydrodynamic Kelvin-Helmholtz shear ripping across the ferrofluid sea, using his natural intuition for environmental hazards before handing off the bato",
-      "excerpt": "Kaio races to reinforce the lower pylons against the violent magnetohydrodynamic Kelvin-Helmholtz shear ripping across the ferrofluid sea, using his natural intuition for environmental hazards before handing off the bato"
-    },
-    {
       "segment_id": "seg_s012_t0045_enclave_03_silas",
       "sol_id": 12,
       "colony_sol": 12,
@@ -1609,6 +1595,20 @@
       "title": "Sol 015 \u2022 DUSK_CRAFT (enclave_05_kaio)",
       "opening_excerpt": "Kaio catches the grounding baton from Hector, navigating the magnetohydrodynamic shear across the ferrofluid sea, before dashing toward The Hearth to hand the baton to Ryn.",
       "excerpt": "Kaio catches the grounding baton from Hector, navigating the magnetohydrodynamic shear across the ferrofluid sea, before dashing toward The Hearth to hand the baton to Ryn."
+    },
+    {
+      "segment_id": "seg_s016_t0061_enclave_03_silas",
+      "sol_id": 16,
+      "colony_sol": 16,
+      "tick_id": 61,
+      "active_pov_id": "enclave_03_silas",
+      "next_pov_target": "enclave_01_hector",
+      "location_id": "The_First_Forge",
+      "time_of_day": "DAWN_SHIFT",
+      "day_phase": "DAWN_SHIFT",
+      "title": "Sol 016 \u2022 DAWN_SHIFT (enclave_03_silas)",
+      "opening_excerpt": "Silas reinforces the brass bulkheads of The First Forge against the ferocious magnetic tides, subsequently passing a crucial calibrator baton to Hector.",
+      "excerpt": "Silas reinforces the brass bulkheads of The First Forge against the ferocious magnetic tides, subsequently passing a crucial calibrator baton to Hector."
     }
   ],
   "available_sols": [
