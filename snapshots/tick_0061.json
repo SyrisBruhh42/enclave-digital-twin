@@ -63,7 +63,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.2384,
+      "stress": 0.2766,
       "fatigue": 0.06,
       "sleep_debt_norm": 0.06,
       "kp_exo": 7.14,
@@ -149,7 +149,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.2384,
+      "stress": 0.2766,
       "fatigue": 0.06,
       "sleep_debt_norm": 0.06,
       "kp_exo": 7.14,
@@ -761,7 +761,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.2384,
+      "stress": 0.2766,
       "fatigue": 0.06,
       "sleep_debt_norm": 0.06,
       "kp_exo": 7.14,
@@ -847,7 +847,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.2384,
+      "stress": 0.2766,
       "fatigue": 0.06,
       "sleep_debt_norm": 0.06,
       "kp_exo": 7.14,
@@ -1437,9 +1437,10 @@
     }
   },
   "applied_event_ids": [
-    "evt_s016_t0061_morning_intent"
+    "evt_s016_t0061_morning_intent",
+    "evt_s016_t0061_world_consequence"
   ],
-  "total_events_through_tick": 71,
+  "total_events_through_tick": 72,
   "recent_segments": [
     {
       "segment_id": "seg_s011_t0043_enclave_05_kaio",
