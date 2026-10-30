@@ -1440,7 +1440,7 @@
     "evt_s006_t0021_morning_intent",
     "evt_s006_t0021_world_consequence"
   ],
-  "total_events_through_tick": 24,
+  "total_events_through_tick": 25,
   "recent_segments": [
     {
       "segment_id": "seg_s002_t0006_enclave_01_hector",

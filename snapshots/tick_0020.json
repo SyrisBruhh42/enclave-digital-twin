@@ -1559,7 +1559,7 @@
   "applied_event_ids": [
     "evt_s005_t0020_reflection"
   ],
-  "total_events_through_tick": 22,
+  "total_events_through_tick": 23,
   "recent_segments": [
     {
       "segment_id": "seg_s002_t0005_enclave_03_silas",

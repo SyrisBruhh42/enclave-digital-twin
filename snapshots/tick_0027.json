@@ -1432,7 +1432,7 @@
     "evt_s007_t0027_dusk_craft",
     "evt_s007_t0027_world_consequence"
   ],
-  "total_events_through_tick": 32,
+  "total_events_through_tick": 33,
   "recent_segments": [
     {
       "segment_id": "seg_s004_t0013_enclave_03_silas",

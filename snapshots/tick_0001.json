@@ -1424,7 +1424,7 @@
     "evt_s001_t0001_dawn_shift",
     "evt_s001_t0001_morning_intent"
   ],
-  "total_events_through_tick": 3,
+  "total_events_through_tick": 4,
   "recent_segments": [
     {
       "segment_id": "seg_s001_t0001_enclave_03_silas",

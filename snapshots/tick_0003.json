@@ -1447,7 +1447,7 @@
   "applied_event_ids": [
     "evt_s001_t0003_dusk_craft"
   ],
-  "total_events_through_tick": 6,
+  "total_events_through_tick": 7,
   "recent_segments": [
     {
       "segment_id": "seg_s001_t0001_enclave_03_silas",
