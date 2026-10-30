@@ -129,7 +129,7 @@
       "temperature": 0.8,
       "calypso_zero_raw_stats": true,
       "prosodic_micro_pauses_enabled": true,
-      "agency_handoff_prompt": "Silas steps back from the trembling console, his jaw set in a tight line. 'The magnetohydrodynamic Kelvin-Helmholtz shear is holding, but it's inefficient. We are bleeding too much kinetic energy. Hector, take the helm. Do not—' he taps a heavy finger against the main readout, '—exceed the yellow threshold. I'm going to check the secondary braces.'"
+      "agency_handoff_prompt": "Silas steps back from the trembling console, his jaw set in a tight line. 'The magnetohydrodynamic Kelvin-Helmholtz shear is holding, but it's inefficient. We are bleeding too much kinetic energy. Hector, take the helm. Do not\u2014' he taps a heavy finger against the main readout, '\u2014exceed the yellow threshold. I'm going to check the secondary braces.'"
     }
   }
 }
