@@ -1427,20 +1427,6 @@
   "total_events_through_tick": 64,
   "recent_segments": [
     {
-      "segment_id": "seg_s010_t0037_enclave_03_silas",
-      "sol_id": 10,
-      "colony_sol": 10,
-      "tick_id": 37,
-      "active_pov_id": "enclave_03_silas",
-      "next_pov_target": "enclave_01_hector",
-      "location_id": "The_First_Forge",
-      "time_of_day": "DAWN_SHIFT",
-      "day_phase": "DAWN_SHIFT",
-      "title": "Sol 010 \u2022 DAWN_SHIFT (enclave_03_silas)",
-      "opening_excerpt": "Silas examines the intense magnetohydrodynamic Kelvin-Helmholtz shear threatening the forge supports before passing the observation baton to Hector.",
-      "excerpt": "Silas examines the intense magnetohydrodynamic Kelvin-Helmholtz shear threatening the forge supports before passing the observation baton to Hector."
-    },
-    {
       "segment_id": "seg_s010_t0038_enclave_01_hector",
       "sol_id": 10,
       "colony_sol": 10,
@@ -1593,6 +1579,20 @@
       "title": "Sol 014 \u2022 DAWN_SHIFT (enclave_03_silas)",
       "opening_excerpt": "Silas reinforces The First Forge against a ferrofluid wave and hands the sonic wrench to Hector.",
       "excerpt": "Silas reinforces The First Forge against a ferrofluid wave and hands the sonic wrench to Hector."
+    },
+    {
+      "segment_id": "seg_s014_t0054_enclave_01_hector",
+      "sol_id": 14,
+      "colony_sol": 14,
+      "tick_id": 54,
+      "active_pov_id": "enclave_01_hector",
+      "next_pov_target": "enclave_05_kaio",
+      "location_id": "The_First_Forge",
+      "time_of_day": "MIDDAY_EXPEDITION",
+      "day_phase": "MIDDAY_EXPEDITION",
+      "title": "Sol 014 \u2022 MIDDAY_EXPEDITION (enclave_01_hector)",
+      "opening_excerpt": "Hector catches the wrench and recalibrates the primary shunt amidst the ferrofluid waves before calling down to Kaio.",
+      "excerpt": "Hector catches the wrench and recalibrates the primary shunt amidst the ferrofluid waves before calling down to Kaio."
     }
   ],
   "available_sols": [
