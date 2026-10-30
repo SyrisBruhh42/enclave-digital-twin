@@ -97,7 +97,8 @@
     "lpi_metrics": {
       "lethality": 0,
       "pacing": 8,
-      "intrigue": 5
+      "intrigue": 5,
+      "composite_lpi": 0.68
     },
     "dual_agent_contract": {
       "judge_tactician": {
@@ -122,5 +123,8 @@
         "agency_handoff_prompt": "Silas extends the baton. Hector, what do you do as the magnetic shear intensifies?"
       }
     }
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
   }
 }
