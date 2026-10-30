@@ -1,0 +1,110 @@
+{
+  "event_type": "POV_SCENE_SEGMENT",
+  "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "campaign_metadata": {
+    "session_number": 13,
+    "colony_sol": 13,
+    "tick_id": 50,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Stabilize the magnetohydrodynamic grounding shunt.",
+      "mid_term_milestone": "Map the subterranean thermal vents.",
+      "campaign_arc_climax": "Survive the Kp-8 magnetic shear storm."
+    }
+  },
+  "active_location": {
+    "biome_name": "The Ferrofluid Sea",
+    "sensory_palette": {
+      "sight": "Arcs of blue corona lightning skittering across the cresting, metallic waves of the ferrofluid sea, casting long, jagged shadows against the basalt spires.",
+      "sound": "The deafening, low-frequency hum of a multi-tesla magnetic shear ripping through the air, punctuated by the sharp crack of dielectric discharge.",
+      "smell": "Ozone masking the tang of copper and the sharp scent of raw voltage.",
+      "taste_optional": "The metallic tang of electricity dancing on the tongue.",
+      "touch": "The violent, kinetic drag of the wind threatening to pull boots from the rigging, while the piezo-electric hum resonates directly through teeth and bone."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "High-Tension Grounding Mast",
+        "affordance_description": "A copper-reinforced spire vibrating under the strain of the incoming shear storm.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Rogue Ferrofluid Wave",
+        "affordance_description": "A cresting wave of magnetic fluid threatening to swallow the lower catwalks.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Induction Vane Hand-Crank",
+        "affordance_description": "A massive, gear-driven crank that requires brute force to align against the magnetic flux.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_01",
+      "name_and_role": "Magnetohydrodynamic Anchor",
+      "motivation_goal": "To stabilize the catwalk against the shear.",
+      "consistent_method": "By providing immense mass and magnetic resistance.",
+      "immediate_complication": "The anchor's retaining bolts are shearing under the stress.",
+      "pressure_index": 5,
+      "uninterrupted_escalation": "The anchor's retaining bolts shear completely, sending it swinging wildly towards the catwalk."
+    }
+  ],
+  "encounter_matrix": {
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "Prodigy (The Stormbreaker)"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "Prodigy (The Scout)"
+      }
+    ],
+    "prerolled_hazard_queue": [
+      14,
+      18,
+      7,
+      2,
+      19
+    ],
+    "strain_accumulated_upward": 1,
+    "three_levels_of_why": {
+      "level_1_immediate": "The magnetohydrodynamic Kelvin-Helmholtz shear is tearing at the ferrofluid sea's surface.",
+      "level_2_local": "The shear threatens to rip the primary grounding mast from its basalt foundations.",
+      "level_3_campaign_arc": "If the mast falls, the Enclave's power grid will be exposed to the full brunt of the Kp-8 magnetic storm."
+    }
+  },
+  "lpi_metrics": {
+    "composite_lpi": 0.55
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.3,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If the grounding shunt isn't stabilized, the lower catwalks will be flooded by a rogue ferrofluid wave, cutting off the escape route.",
+      "graduated_outcomes": [
+        "Success (>= 14): Hector successfully engages the grounding shunt, dispersing the magnetic shear.",
+        "Failure (< 14): Hector loses his grip on the hand-crank, allowing the ferrofluid wave to breach the catwalk, forcing him to leap to Kaio for a mid-air rescue."
+      ]
+    },
+    "master_narrator": {
+      "executor": "claude-3-opus",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector stabilizes the shunt but the catwalk gives way beneath him, sending him falling towards the swirling ferrofluid sea below, forcing him to hand off the physical baton\u2014his lucky copper wrench\u2014to Kaio, who is perched on a nearby basalt pinnacle."
+    }
+  }
+}
