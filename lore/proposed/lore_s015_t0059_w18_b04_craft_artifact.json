@@ -1,0 +1,125 @@
+{
+  "event_type": "POV_SCENE_SEGMENT",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "calypso_zero_raw_stats": true,
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 15,
+      "tick_id": 59,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Hand off the ferrofluid craft artifact to Ryn.",
+        "mid_term_milestone": "Secure the ferrofluid sea against anomalous shear.",
+        "campaign_arc_climax": "Complete the grand project The Sanctuary."
+      }
+    },
+    "active_location": {
+      "location_id": "Ferrofluid Sea Observation Deck",
+      "macro_silhouette": "The observation deck hovers precariously above the churning, midnight-hued expanse of the ferrofluid sea. The dark metallic waves peak and crash against invisible magnetic containment fields, occasionally spraying crystalline fractals into the air. Above, a lattice of copper and brass wiring hums with raw power, vibrating in time with the magnetohydrodynamic Kelvin-Helmholtz shear below.",
+      "sensory_palette": {
+        "sight_and_color": "Swirling metallic blacks, copper sparks, and eerie violet corona discharges.",
+        "sound": "A deep, oscillating hum of magnetic shear and the rhythmic snapping of electric arcs.",
+        "smell": "Ozone and hot copper.",
+        "tactile_temperature": "A prickly, static-charged heat that makes hair stand on end.",
+        "taste_optional": "A sharp, metallic tang in the back of the throat."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Magnetic Containment Lattice",
+          "affordance_description": "Can be adjusted to shield against errant ferrofluid splatters.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Resonant Copper Coil",
+          "affordance_description": "Emits a frequency that draws volatile ferrofluid spikes toward it.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 16
+        },
+        {
+          "feature_name": "Venting Scrubber Plumes",
+          "affordance_description": "Thick clouds of ion-exhaust that can hide a person from sight.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 12
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "Ferrofluid_Shear_Eddy",
+        "name_and_role": "Anomalous Shear Eddy",
+        "motivation_goal": "To violently equalize magnetic pressure across the boundary layer.",
+        "consistent_method": "Forming sudden, jagged stalagmites of solidifying ferrofluid that reach toward grounded conductors.",
+        "immediate_complication": "A massive spike is forming right under Kaio's footing.",
+        "pressure_index": 7,
+        "uninterrupted_escalation": "The spike will breach the deck plating and scatter the components Kaio is trying to assemble."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Kaio must finish assembling the artifact using the ferrofluid sea's ambient shear forces.",
+        "level_2_local": "Ryn needs this artifact to stabilize the local magnetic grid before it shorts out.",
+        "level_3_campaign_arc": "Mastering the ferrofluid sea's anomalies is key to finishing The Sanctuary."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_05_kaio",
+          "tactical_role": "STRIKER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        7,
+        12,
+        19,
+        4,
+        15
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.4,
+      "motivational_vector_saturation": 0.6,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.8,
+      "composite_lpi": 0.575,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "openai",
+        "model": "gpt-4-turbo",
+        "temperature": 0.7,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "If Kaio fails, the shear eddy shatters his newly crafted artifact, forcing him to salvage components while the deck loses stability.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Kaio misreads the magnetic lines entirely, causing a blowout that damages the deck and ruins the components.",
+          "below_dc_complicated_fail_forward": "Kaio manages to fuse the core, but the shear eddy clips his hand; the artifact is unstable and requires Ryn's immediate intervention to prevent a meltdown.",
+          "meets_dc_clean_success": "Kaio successfully aligns the artifact with the shear forces, securing the magnetic core perfectly just before handing it off.",
+          "dc_plus_5_or_20_extended_lore": "Kaio not only crafts the artifact perfectly but recognizes a repeating fractal pattern in the ferrofluid, giving him vital insight into the sea's deeper currents."
+        }
+      },
+      "master_narrator": {
+        "executor": "claude-3-opus",
+        "temperature": 0.8,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "With the artifact glowing with stabilized magnetic potential, Kaio passes it to Ryn. Over to Ryn."
+      }
+    },
+    "context_manifest": {
+      "full_cards_loaded_count": 1,
+      "interlocutor_full_cards_loaded": 0,
+      "loaded_full_card_ids": [
+        "enclave_05_kaio"
+      ]
+    }
+  },
+  "narrative_prose": "The observation deck trembled as the magnetohydrodynamic Kelvin-Helmholtz shear tore through the ferrofluid sea below, whipping metallic black waves into jagged, crystalline peaks. Kaio leaned over the railing, squinting through the violet corona discharges, his fingers deftly twisting copper filaments around a resonant lodestone core. He could feel the prickly heat of the ambient static making the hair on his arms stand up, tasting the sharp metallic tang of ozone with every breath. A sudden, anomalous shear eddy surged upward, forming a violent stalagmite of solidifying ferrofluid that reached hungrily for the deck plating. Ignoring the threat, Kaio perfectly timed his final connection with the rhythmic snapping of the electric arcs around him. The newly crafted artifact hummed to life in his hands, casting a warm, stable glow against the chaotic dark. He spun around, boots clanking against the metal grate, and pressed the humming device firmly into Ryn's waiting hands."
+}
