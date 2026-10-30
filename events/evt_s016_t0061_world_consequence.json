@@ -1,0 +1,155 @@
+{
+  "event_id": "evt_s016_t0061_world_consequence",
+  "tick_id": 61,
+  "colony_sol": 16,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-11-09T00:12:00Z",
+  "base_snapshot_tick": 61,
+  "event_type": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+  "location": "The_First_Forge",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ]
+  },
+  "narrative_prose": "The First Forge's reinforced blast doors shudder against the roaring heat of the crucible. A blinding amber flash illuminates the room, accompanied by a deafening hum and the sharp scent of molten brass that clings to the sweltering heat, leaving a distinct metallic taste of ozone in the air. The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea threatens to CONSUME the delicate alignment of the main busbar. Silas, struggling to DEFEND the fragile thermal baffle from the intense heat, firmly presses the insulated baton into Hector's grip, trusting the prodigy to ATTRACT the necessary polarities to stabilize the current.",
+  "importance": 8.0,
+  "novelty_score": 0.85,
+  "lethality": 0,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "state_deltas": {
+    "stress_delta": 0.05
+  },
+  "relationship_deltas": [
+    {
+      "from": "enclave_03_silas",
+      "to": "enclave_01_hector",
+      "bond_delta": 0.01,
+      "trust_delta": 0.01
+    }
+  ],
+  "evidence_refs": [],
+  "calypso_zero_raw_stats": true,
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 16,
+      "colony_sol": 16,
+      "tick_id": 61,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Stabilize the ferrofluid sea.",
+        "mid_term_milestone": "Master the magnetohydrodynamic shear.",
+        "campaign_arc_climax": "Achieve full resonance."
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "The First Forge's reinforced blast doors seal off the roaring heat of the crucible. The room is a chaotic workshop of hand-forged brass, copper, and captured lightning geodes.",
+      "sensory_palette": {
+        "sight_and_color": "Blinding amber flash.",
+        "sound": "Deafening hum.",
+        "smell": "Sharp scent of molten brass.",
+        "tactile_temperature": "Sweltering heat.",
+        "taste_optional": "Distinct metallic taste of ozone."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Thermal Baffle",
+          "affordance_description": "Can block the radiant heat.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Magnetic Containment",
+          "affordance_description": "Can draw polarities.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Ferrofluid Sea",
+          "affordance_description": "Can absorb excess energy.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_shear",
+        "name_and_role": "Ferrofluid Shear",
+        "motivation_goal": "Destabilize alignment.",
+        "consistent_method": "Magnetic fluctuations.",
+        "immediate_complication": "Threatens to consume the delicate alignment.",
+        "pressure_index": 8,
+        "uninterrupted_escalation": "Will overload the containment field."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The shear is destabilizing the current alignment.",
+        "level_2_local": "The First Forge requires precise magnetic control.",
+        "level_3_campaign_arc": "Mastery of magnetohydrodynamics is essential for the sanctuary."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "DEFENDER"
+        },
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        }
+      ],
+      "strain_accumulated_upward": 2,
+      "prerolled_hazard_queue": [
+        14,
+        12,
+        18,
+        5,
+        20
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.5,
+      "motivational_vector_saturation": 0.6,
+      "unresolved_conflict_ratio": 0.4,
+      "temporal_horizon_immediacy": 0.8,
+      "composite_lpi": 0.6,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_ai",
+        "model": "qwen3.5:4b-q4_K_M",
+        "temperature": 0.1,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The baton handoff is fumbled.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Catastrophic misalignment.",
+          "below_dc_complicated_fail_forward": "Handoff complete but equipment damaged.",
+          "meets_dc_clean_success": "Flawless handoff.",
+          "dc_plus_5_or_20_extended_lore": "Flawless handoff with new insight."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_ai",
+        "temperature": 0.4,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Hector, take the baton."
+      }
+    }
+  }
+}
