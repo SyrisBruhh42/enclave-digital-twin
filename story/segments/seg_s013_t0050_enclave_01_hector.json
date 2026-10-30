@@ -1,0 +1,134 @@
+{
+  "segment_id": "seg_s013_t0050_enclave_01_hector",
+  "segment_index": 50,
+  "tick_id": 50,
+  "colony_sol": 13,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "base_snapshot_tick": 49,
+  "event_type": "POV_SCENE_SEGMENT",
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "location": "The_First_Forge",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "steward_note": "deterministic-enclave-5section-v2: Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "text": "[MIDDAY_EXPEDITION at The_First_Forge] Hector braced himself against the roaring basin, grinning wildly as the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea reached critical intensity. The soot-stained brass walls of the interior chamber hummed violently with trapped kinetic energy, vibrating under the immense magnetic pressure that threatened the delicate induction arrays. The scent of ozone and hot copper filled the oppressive radiant heat of the forge, while the sharp tang of cooling slag stung the back of his throat. Swiftly analyzing the tactile feedback of the tensile strain, he stabilized the primary strut and tossed the heavy-duty calibration wrench directly to Kaio, who stood ready at the secondary array.",
+  "campaign_metadata": {
+    "session_number": 13,
+    "colony_sol": 13,
+    "tick_id": 50,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Stabilize the primary strut against the ferrofluid shear",
+      "mid_term_milestone": "Reinforce the First Forge against the rising ferrofluid sea",
+      "campaign_arc_climax": "Maintain structural stability during the impending suns' polarity inversion"
+    }
+  },
+  "active_location": {
+    "location_id": "The_First_Forge",
+    "macro_silhouette": "The interior of the First Forge was a fortress of brass and copper, its soot-stained walls humming with trapped kinetic energy and heat. A thick quartz viewport allowed observation of the exterior ferrofluid sea, while heavily reinforced struts braced against the relentless magnetic shear.",
+    "sensory_palette": {
+      "sight_and_color": "Soot-stained brass walls and glowing hot slag",
+      "sound": "Oscillating hum of resonance chambers and microscopic vibrations",
+      "smell": "Ozone mixing with hot copper",
+      "tactile_temperature": "Oppressive radiant heat from the cooling vents",
+      "taste_optional": "Sharp tang of cooling slag"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Oscillating Resonance Chamber",
+        "affordance_description": "A delicate mechanism that must be kept stable to prevent structural micro-fractures.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Cooling Slag Vents",
+        "affordance_description": "Vents expelling excess heat that can be tapped to rapidly melt scrap.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Heavy Blast Doors",
+        "affordance_description": "Thick doors that can be sealed to protect against sudden external pressure waves.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "shear_induced_vibrations",
+      "name_and_role": "Microscopic Structural Vibrations",
+      "motivation_goal": "Weaken the primary brass struts supporting the forge's viewport",
+      "consistent_method": "Exploiting the Magnetohydrodynamic Kelvin-Helmholtz shear to create resonant frequencies",
+      "immediate_complication": "The structural diagnostics are picking up a dangerous resonance spike",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Will cause a micro-fracture in the viewport, letting in toxic magnetic vapor"
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Hector must secure the heavy-duty calibration wrench before the shear could warp the primary strut.",
+      "level_2_local": "Kaio needs the wrench to secure the secondary array.",
+      "level_3_campaign_arc": "The First Forge must survive the chaotic magnetic forces to build future colony defenses."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "DEFENDER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      5,
+      12,
+      19,
+      8
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.85,
+    "unresolved_conflict_ratio": 0.7,
+    "temporal_horizon_immediacy": 0.85,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_inference",
+      "model": "judge_v1",
+      "temperature": 0.1,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Hector will hesitate during the resonance spike, failing to stabilize the wrench before handing it off.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "You miscalculate the resonance, causing a minor blowout that chars the calibration wrench entirely.",
+        "below_dc_complicated_fail_forward": "You secure the wrench, but the heat slightly warps it, making it difficult for Kaio to use.",
+        "meets_dc_clean_success": "You swiftly secure the primary strut, handing over a pristine calibration wrench to Kaio.",
+        "dc_plus_5_or_20_extended_lore": "You perfectly dampen the resonance, capturing incredibly stable data and reducing the forge's strain."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio catches the heavy-duty calibration wrench. What does Kaio do?"
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  },
+  "context_manifest_path": "context/manifests/manifest_s013_t0050_enclave_01_hector.json"
+}
