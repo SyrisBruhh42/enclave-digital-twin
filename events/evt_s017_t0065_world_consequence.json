@@ -1,0 +1,39 @@
+{
+  "event_id": "evt_s017_t0065_world_consequence",
+  "tick_id": 65,
+  "colony_sol": 17,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2042-08-17T06:30:00Z",
+  "base_snapshot_tick": 64,
+  "event_type": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+  "location": "The_First_Forge",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "summary": "Silas examines the ferrofluid sea shear, realizing the magnetic flux requires Hector's intervention.",
+  "importance": 8,
+  "novelty_score": 0.75,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {
+    "enclave_03_silas": {
+      "stress_delta": 0.1,
+      "fatigue_delta": 0.05
+    }
+  },
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "narrative_prose": "The First Forge hummed with a low, vibrating resonance that rattled the brass fittings on Silas\u2019s workbench. He adjusted the calibration knob on his magnetometer, his eyes fixed on the undulating waves of the ferrofluid sea outside the reinforced viewing port. The sheer magnitude of the Magnetohydrodynamic Kelvin-Helmholtz shear tearing across the metallic expanse was, in his own words, inefficient. The flux lines were completely erratic, creating a localized magnetic anomaly that threatened to overload the containment grid. He could smell the ozone crackling in the air, a sharp, coppery tang that mingled with the scent of hot oil and oxidized iron. The chronometer ticked steadily. The magnetic shielding held for now, a testament to his own precise tolerances, but the erratic fluctuations required immediate physical realignment of the outer pylons. 'Inefficient,' he muttered, gripping the heavy iron spanner. The situation demanded brute force application and intuitive timing\u2014traits he lacked, but someone else possessed in spades. He turned as the heavy blast door cycled open, passing the spanner to Hector with a grim nod.",
+  "steward_note": "deterministic-enclave-5section-v2: Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ]
+  }
+}
