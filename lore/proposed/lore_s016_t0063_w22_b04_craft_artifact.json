@@ -1,0 +1,146 @@
+{
+  "event_type": "POV_SCENE_SEGMENT",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "active_pov_id": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "calypso_zero_raw_stats": true,
+  "event_id": "lore_s016_t0063_w22_b04_craft_artifact",
+  "tick_id": 63,
+  "colony_sol": 16,
+  "day_phase": "DUSK_CRAFT",
+  "world_timestamp_iso": "2142-10-16T18:00:00Z",
+  "base_snapshot_tick": 62,
+  "location": "Ferrofluid Sea Coast",
+  "actors": [
+    "enclave_05_kaio",
+    "enclave_13_ryn"
+  ],
+  "summary": "Kaio explores the turbulent coast, mapping the magnetohydrodynamic anomalies and handing off observations to Ryn.",
+  "importance": 0.8,
+  "novelty_score": 0.7,
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 16,
+      "colony_sol": 16,
+      "tick_id": 63,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Survive the Magnetohydrodynamic Kelvin-Helmholtz shear expedition",
+        "mid_term_milestone": "Establish a stable grounding shunt network",
+        "campaign_arc_climax": "Master the exoplanet's turbulent electromagnetic forces"
+      }
+    },
+    "active_location": {
+      "location_id": "ferrofluid_sea_coast_interior",
+      "macro_silhouette": "The observation blind clings to the basalt like a copper limpet, shaking with every ferro-tide crash. Inside, the cramped space smells of ozone and roasting tubers. The reinforced quartz window reveals the churning, spiky sea outside.",
+      "sensory_palette": {
+        "sight_and_color": "Flickering amber lamplight contrasting with the violent violet lightning outside",
+        "sound": "The deafening thrum of the sea muffled by heavy insulation, and the sizzle of the camp stove",
+        "smell": "Ozone, scorched copper wire, and Ryn's spiced root-mash",
+        "tactile_temperature": "Stiflingly warm, the air prickling with static charge",
+        "taste_optional": "A lingering metallic tang mingling with the sharp spice of the cooking food"
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Reinforced Observation Hatch",
+          "affordance_description": "A heavy hatch that can be sealed to protect against sudden magnetic spikes.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Makeshift Magnetic Siphon",
+          "affordance_description": "A copper coil setup designed to draw in ambient charge for the batteries.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Lead-Lined Storage Crate",
+          "affordance_description": "A heavy crate used to protect sensitive equipment from the ambient field.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "kelvin_helmholtz_shear_wave",
+        "name_and_role": "The Kelvin-Helmholtz Shear Wave (Environmental Hazard)",
+        "motivation_goal": "To equalize the extreme kinetic and magnetic pressure differentials violently.",
+        "consistent_method": "Surging unexpected rogue waves of magnetized ferrofluid that rip through conductive materials.",
+        "immediate_complication": "A particularly aggressive shear wave is currently threatening to overload the blind's grounding shunts.",
+        "pressure_index": 7,
+        "uninterrupted_escalation": "If the grounding shunts fail, the blind will become a deadly faraday cage trapping the occupants inside with the surge."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Kaio must finalize the mapping data of the shear wave patterns without the equipment overloading.",
+        "level_2_local": "Accurate maps are needed for Ryn to plan the next safe harvest route.",
+        "level_3_campaign_arc": "Mastering the physics of the exoplanet's oceans is the key to achieving long-term self-sufficiency and surviving the upcoming grand convergence."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_05_kaio",
+          "tactical_role": "STRIKER"
+        },
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        12,
+        17,
+        8,
+        14,
+        19
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.8,
+      "motivational_vector_saturation": 0.7,
+      "unresolved_conflict_ratio": 0.9,
+      "temporal_horizon_immediacy": 0.95,
+      "composite_lpi": 0.85,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "Enclave_Core",
+        "model": "v2_tactical",
+        "temperature": 0.1,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The mapping equipment fries, destroying hours of work and forcing a blind navigation attempt later.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Kaio miscalibrates the sensor, drawing a massive surge that destroys the array and starts an electrical fire.",
+          "below_dc_complicated_fail_forward": "Kaio gets the data, but the backlash arcs through his sextant, singing his eyebrows and draining the primary battery.",
+          "meets_dc_clean_success": "Kaio expertly rides the interference, capturing the shear wave's frequency just before the shunt overloads.",
+          "dc_plus_5_or_20_extended_lore": "Kaio captures the data and discovers a hidden resonance frequency in the ferro-tide that could be used for passive power generation."
+        }
+      },
+      "master_narrator": {
+        "executor": "Enclave_Narrative",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Kaio grinned despite the static making his hair stand on end, his fingers flying across the brass dials as the roar of the ferro-tide grew louder. The needle jumped, the Magnetohydrodynamic Kelvin-Helmholtz shear finally revealing its pattern in a beautiful, terrifying oscillation. He slapped the final reading into the ledger and spun around, tossing the heavy book over the sizzling camp stove. 'Got it! Ryn, catch! Let's see if this tells us where to find those salt-blossoms before the next surge hits!'"
+      }
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ]
+  },
+  "narrative_prose": "Inside the cramped observation blind, the air tasted of scorched ozone and Ryn's spiced root-mash bubbling on the stove. Outside, the turbulent coast of the ferrofluid sea writhed in metallic spikes. The heavy reinforced hatch rattled fiercely as another rogue wave slammed the basalt spire. Kaio grinned despite the static making his hair stand on end, his fingers flying across the brass dials of his makeshift sensor array. The needle jumped, the Magnetohydrodynamic Kelvin-Helmholtz shear finally revealing its pattern in a beautiful, terrifying oscillation. He slapped the final reading into the ledger and spun around, tossing the heavy book over the sizzling camp stove. 'Got it! Ryn, catch! Let's see if this tells us where to find those salt-blossoms before the next surge hits!'"
+}
