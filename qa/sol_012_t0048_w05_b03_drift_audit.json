@@ -1,0 +1,113 @@
+{
+  "event_type": "INCHARACTER_PSYCHOMETRIC_DRIFT_AUDITS",
+  "bucket": "INCHARACTER_PSYCHOMETRIC_DRIFT_AUDITS",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "campaign_metadata": {
+    "colony_sol": 12,
+    "tick_id": 48,
+    "session_number": 5,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Audit the psychometric drift of the primary systems.",
+      "mid_term_milestone": "Stabilize the ferrofluid sea.",
+      "campaign_arc_climax": "Prevent the systemic collapse of the colony."
+    }
+  },
+  "active_location": {
+    "location_id": "Ferrofluid_Sea_Shore",
+    "macro_silhouette": "The dark, undulating shore of the ferrofluid sea stretches as far as the eye can see. Magnetic fields whip the metallic liquid into fractal spikes and crushing waves under a bruised alien sky. The cold air bites at the exposed skin, a constant reminder of the hostile environment.",
+    "sensory_palette": {
+      "sight_and_color": "Iridescent black spikes of ferrofluid crashing into obsidian sand.",
+      "sound": "The deep, grinding hum of magnetic shear ripping through the liquid.",
+      "smell": "Ozone and metallic tang thick in the cold air.",
+      "tactile_temperature": "Bitter, biting cold that seeps right through the thermal mesh.",
+      "taste_optional": "A sharp, battery-acid sting on the back of the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetic Fractile Wave",
+        "affordance_description": "A surging wave of solidifying metal that can be hidden behind.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Plume",
+        "affordance_description": "A geyser of liquid metal that draws magnetic debris.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Solidified Iron Ridge",
+        "affordance_description": "A temporary ridge of hardened ferrofluid offering a defensive barrier.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 16
+      }
+    ]
+  },
+  "encounter_matrix": {
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "Quartermaster"
+      },
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "Engineer"
+      }
+    ],
+    "prerolled_hazard_queue": [12, 4, 18, 9, 20],
+    "strain_accumulated_upward": 2,
+    "three_levels_of_why": {
+      "level_1_immediate": "The magnetic shear is destabilizing the thermal generators.",
+      "level_2_local": "Without thermal stability, the colony's food reserves will freeze.",
+      "level_3_campaign_arc": "The ferrofluid sea is beginning to encroach on the Enclave itself."
+    }
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "Magnetic_Distortion_Field",
+      "name_and_role": "Magnetic Distortion Field (Hazard)",
+      "motivation_goal": "Disrupt mechanical and thermal systems.",
+      "consistent_method": "Pulsing erratic magnetic waves.",
+      "immediate_complication": "The galley's thermal units are losing efficiency rapidly.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "The field will eventually freeze the entire colony if not dispersed."
+    }
+  ],
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "anthropic",
+      "model": "claude-3",
+      "temperature": 0.4,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Thermal systems shut down, spoiling the week's rations.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "You think the field is stabilizing, but it suddenly spikes, frying the control boards.",
+        "below_dc_complicated_fail_forward": "You manage to shield the core, but the outer sensors are destroyed.",
+        "meets_dc_clean_success": "You perfectly calibrate the thermal output to counter the shear.",
+        "dc_plus_5_or_20_extended_lore": "Not only do you counter the shear, but you map its exact frequency for future prediction."
+      }
+    },
+    "master_narrator": {
+      "executor": "claude-3",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Silas, take the baton and see if you can reinforce the manifold."
+    }
+  },
+  "lpi_metrics": {
+    "composite_lpi": 0.85,
+    "classification": "Immersive",
+    "motivational_vector_saturation": 0.8,
+    "relational_tension_density": 0.7,
+    "temporal_horizon_immediacy": 0.9,
+    "unresolved_conflict_ratio": 0.6
+  }
+}
