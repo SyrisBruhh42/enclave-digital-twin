@@ -96,7 +96,7 @@
       "failure_stakes_declared": "If Ryn fails to buffer the intake, the shear spikes the temperature, causing localized equipment damage and a difficult recovery for Silas.",
       "graduated_outcomes": {
         "nat_1_false_intuition": "Ryn misreads the wave frequency entirely; the feedback knocks the terminal offline, escalating the hazard.",
-        "below_dc_complicated_fail_forward": "Ryn buffers the intake just enough to prevent a blowout, but the controls fuse shut—Silas will have to bypass the relay manually.",
+        "below_dc_complicated_fail_forward": "Ryn buffers the intake just enough to prevent a blowout, but the controls fuse shut\u2014Silas will have to bypass the relay manually.",
         "meets_dc_clean_success": "Ryn perfectly syncs the buffer with the shear, stabilizing the flow and smoothly handing off control to Silas.",
         "dc_plus_5_or_20_extended_lore": "Ryn isolates a harmonious resonance in the shear, not only stabilizing the flow but revealing a new, highly efficient thermal tapping method."
       }
