@@ -1,0 +1,114 @@
+{
+  "event_type": "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK",
+  "campaign_metadata": {
+    "session_number": 16,
+    "colony_sol": 16,
+    "tick_id": 61,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Maintain continuity check amidst magnetohydrodynamic stress.",
+      "mid_term_milestone": "Calibrate First Forge for new alloy experiments.",
+      "campaign_arc_climax": "Complete structural resonance alignment."
+    }
+  },
+  "active_location": {
+    "location_id": "The_First_Forge",
+    "macro_silhouette": "The First Forge hums under the immense pressure of the magnetohydrodynamic Kelvin-Helmholtz shear radiating from the ferrofluid sea. Brass armatures creak under the immense weight, while copper coils spark intermittently in the dim, soot-stained light.",
+    "sensory_palette": {
+      "sight_and_color": "Flickering orange forge-fire against tarnished brass, underscored by the violent, shifting purples of the magnetic shear outside.",
+      "sound": "The rhythmic, deafening clang of the drop-hammer, punctuated by the high-pitched whine of overstressed copper coils.",
+      "smell": "Ozone, hot oil, and the unmistakable tang of melting copper.",
+      "tactile_temperature": "Oppressively hot and dry near the forge, with sudden, hair-raising static bursts from the magnetic field.",
+      "taste_optional": "A metallic tang of ozone and copper coating the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Reinforced Bellows Shield",
+        "affordance_description": "A heavy iron shield used to protect the fragile bellows mechanism from sudden spark ejections.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetic Resonance Trap",
+        "affordance_description": "A hastily assembled copper wire trap that can draw the ambient magnetic shear towards a harmless grounded spike.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 16
+      },
+      {
+        "feature_name": "Overloaded Heat Sink",
+        "affordance_description": "A massive block of thermal-absorbent stone that will violently evaporate any liquid poured on it, absorbing extreme thermal energy in the process.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_surge",
+      "name_and_role": "Ferrofluid Sea Surge",
+      "motivation_goal": "To equalize the extreme magnetic variance through the path of least resistance.",
+      "consistent_method": "Pulsing erratic magnetic waves that disrupt unshielded electronics and metal structures.",
+      "immediate_complication": "The surge is beginning to warp the primary support struts of the forge.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "If unchecked, the structural warping will cause a localized collapse of the forge roof."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Silas must stabilize the forge against the current magnetic shear spike.",
+      "level_2_local": "The raw power of the ferrofluid sea threatens to overwhelm the colony's central infrastructure.",
+      "level_3_campaign_arc": "Mastering the exoplanet's aggressive magnetic environment is crucial for the colony's long-term survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      12,
+      4,
+      19,
+      8,
+      15
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.6,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.575,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If Silas fails, the magnetic shear will permanently warp a crucial forge component, significantly delaying future projects and increasing his stress.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Silas completely misreads the magnetic resonance frequency, accidentally amplifying the shear and taking structural damage.",
+        "below_dc_complicated_fail_forward": "Silas stabilizes the structure, but a localized spark explosion forces him to discard a set of irreplaceable tools.",
+        "meets_dc_clean_success": "Silas successfully reinforces the struts, completely neutralizing the immediate threat of the shear.",
+        "dc_plus_5_or_20_extended_lore": "Silas perfectly dampens the shear and discovers a stable harmonic frequency that could be used to harvest the magnetic energy."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules_dm",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Silas wipes the soot from his brow and turns to Hector, holding out the battered diagnostic gauge. What does Hector say when he takes it?"
+    }
+  },
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas"
+}
