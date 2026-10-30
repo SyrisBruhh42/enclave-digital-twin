@@ -1423,7 +1423,7 @@
   "applied_event_ids": [
     "evt_s004_t0014_shadow_prank"
   ],
-  "total_events_through_tick": 16,
+  "total_events_through_tick": 17,
   "recent_segments": [
     {
       "segment_id": "seg_s001_t0001_enclave_03_silas",
