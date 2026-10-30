@@ -1,0 +1,151 @@
+{
+  "event_id": "evt_s012_t0045_morning_intent",
+  "tick_id": 45,
+  "colony_sol": 12,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-11-05T00:12:00Z",
+  "base_snapshot_tick": 44,
+  "event_type": "MORNING_INTENT",
+  "location": "The_First_Forge",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ]
+  },
+  "narrative_prose": "Silas leaned heavily on the iron workbench, his joints aching as the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea sent sympathetic tremors through The First Forge. The air tasted of copper and smelled of burnt ozone, a static charge raising the hairs on his arms. With a nod of mutual understanding, he handed the brass baton to Hector amidst the roaring hum.",
+  "summary": "Silas readies the forge against the magnetohydrodynamic shear and initiates the baton handoff to Hector.",
+  "importance": 8.0,
+  "novelty_score": 0.85,
+  "lethality": 0,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {
+    "stress_delta": 0.05
+  },
+  "relationship_deltas": [
+    {
+      "from": "enclave_03_silas",
+      "to": "enclave_01_hector",
+      "bond_delta": 0.01,
+      "trust_delta": 0.01
+    }
+  ],
+  "evidence_refs": [],
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 12,
+      "tick_id": 45,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Endure the magnetohydrodynamic Kelvin-Helmholtz shear.",
+        "mid_term_milestone": "Stabilize the ferrofluid currents.",
+        "campaign_arc_climax": "Master the exoplanet's anomalies."
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "The First Forge hums with the contained fury of a captured star, its brass and iron bulkheads trembling under the strain of the ferrofluid sea's magnetohydrodynamic shear. Thick cables pulse with static charge along the floor, weaving through stations piled high with half-finished tools. Acrid smoke rolls from the primary vent, catching the amber light in mesmerizing swirls as the morning shift begins.",
+      "sensory_palette": {
+        "sight_and_color": "Amber light, sparking blue static, and swirling gray smoke.",
+        "sound": "A deep, resonant thrum overlaid with the sharp crackle of arcing electricity.",
+        "smell": "Burnt ozone and hot copper.",
+        "tactile_temperature": "Oppressively hot and dry, sending static tingles across the skin.",
+        "taste_optional": "The metallic tang of ozone on the tongue."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Static Grounding Rod",
+          "affordance_description": "Absorbs dangerous stray charges during shear waves.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Magnetic Anomaly",
+          "affordance_description": "A swirling vortex of loose metal scraps.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Ferrofluid Plume",
+          "affordance_description": "A jet of fluid metal that can mask movement.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "Shear Wave",
+        "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz shear",
+        "motivation_goal": "Disrupt the forge's magnetic containment.",
+        "consistent_method": "Unpredictable pulses of extreme magnetic force.",
+        "immediate_complication": "Makes passing the heavy brass baton physically difficult.",
+        "pressure_index": 7,
+        "uninterrupted_escalation": "true"
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Silas must successfully pass the baton to Hector without dropping it.",
+        "level_2_local": "They must keep the forge operating during the shear event.",
+        "level_3_campaign_arc": "The Enclave relies on the forge's output for survival."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "LEADER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        5,
+        10,
+        15,
+        20,
+        25
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.6,
+      "motivational_vector_saturation": 0.6,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.7,
+      "composite_lpi": 0.6,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_ai",
+        "model": "qwen3.5:4b-q4_K_M",
+        "temperature": 0.1,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The baton is dropped, risking damage to sensitive equipment.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Catastrophic containment breach during the handoff.",
+          "below_dc_complicated_fail_forward": "Handoff succeeds but sparks blind them momentarily.",
+          "meets_dc_clean_success": "Perfectly timed handoff between pulses.",
+          "dc_plus_5_or_20_extended_lore": "Flawless handoff revealing a pattern in the shear wave."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_ai",
+        "temperature": 0.4,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Hector, brace for the shear and take the baton."
+      }
+    }
+  },
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector."
+}
