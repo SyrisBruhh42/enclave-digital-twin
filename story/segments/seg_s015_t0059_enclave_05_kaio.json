@@ -119,5 +119,8 @@
     "loaded_full_card_ids": [
       "enclave_05_kaio"
     ]
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
   }
 }
