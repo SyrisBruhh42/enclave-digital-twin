@@ -1,0 +1,118 @@
+{
+  "event_type": "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK",
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "campaign_metadata": {
+    "session_number": 13,
+    "colony_sol": 13,
+    "tick_id": 49,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Pass the physical baton to Hector amidst the ferrofluid storm.",
+      "mid_term_milestone": "Map the magnetic currents of the ferrofluid sea.",
+      "campaign_arc_climax": "Harness the sea's power to stabilize the enclave's energy grid."
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea_shoreline",
+    "macro_silhouette": "The dark waves of the ferrofluid sea roil under the magnetic storm. Spires of sharp black liquid erupt into the air before crashing down onto the metallic shoreline. The atmosphere is thick with ozone and static electricity, crackling with every shift in the wind. Silas braces himself against the biting cold, searching for Hector through the shifting metallic fog.",
+    "sensory_palette": {
+      "sight_and_color": "Shimmering black fluid against violent violet lightning.",
+      "sound": "The heavy crash of liquid metal and the sharp crackle of static.",
+      "smell": "Intense ozone and roasted minerals.",
+      "tactile_temperature": "A biting, vibrating cold that tingles across the skin.",
+      "taste_optional": "A lingering metallic tang of copper on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Solidified Magnetic Spire",
+        "affordance_description": "A temporary pillar of hardened fluid offering shelter from the wind.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Swirling Ferrofluid Vortex",
+        "affordance_description": "A powerful magnetic drain that can pull in nearby loose objects.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Static Interference Cloud",
+        "affordance_description": "A dense fog of ionized particles that masks visual and thermal signatures.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_shear",
+      "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz shear",
+      "motivation_goal": "To violently balance the differing magnetic velocities.",
+      "consistent_method": "Generating massive, chaotic shear waves along the fluid boundary.",
+      "immediate_complication": "The shear waves tear the shoreline apart, threatening to engulf anyone standing near the edge.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "The shear waves increase in frequency and amplitude, eventually collapsing the entire shoreline into the sea."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Silas must navigate the shear to hand off the baton without being swept away.",
+      "level_2_local": "The specialist friction from the shear threatens to disrupt the relay entirely.",
+      "level_3_campaign_arc": "Understanding these magnetic anomalies is vital to the colony's survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      14,
+      8,
+      17,
+      12,
+      19
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.6,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "anthropic",
+      "model": "claude-3-opus",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Silas loses his footing in the shear, dropping the baton into the turbulent magnetic currents.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Silas fundamentally misreads the magnetic flow, stepping directly into a collapsing wave.",
+        "below_dc_complicated_fail_forward": "Silas stumbles through the shear, taking a severe battering but managing to toss the baton to Hector.",
+        "meets_dc_clean_success": "Silas perfectly times his movement between the shear waves, cleanly passing the baton.",
+        "dc_plus_5_or_20_extended_lore": "Silas navigates the shear flawlessly, discovering a hidden harmonic frequency in the waves during the handoff."
+      }
+    },
+    "master_narrator": {
+      "executor": "Mercer",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "The magnetic storm roars around you as the shear wave approaches. What do you do?"
+    }
+  }
+}
