@@ -1,0 +1,126 @@
+{
+  "event_id": "evt_s016_t0061_morning_intent",
+  "tick_id": 61,
+  "colony_sol": 16,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-11-09T00:61:00Z",
+  "base_snapshot_tick": 60,
+  "event_type": "MORNING_INTENT",
+  "location": "The_First_Forge",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ]
+  },
+  "narrative_prose": "The First Forge's bulkheads groan audibly, copper panels buckling under the intense magnetic strain of the magnetohydrodynamic Kelvin-Helmholtz shear surging across the ferrofluid sea outside. Silas tightens his grip on the primary workbench, grounding himself as arcs of static electricity dance across the brass tools, turning the air thick with the smell of ozone and hot metal. The heat radiates through his heavy reinforced boots, a stifling dryness that makes every breath feel like drawing in desert sand. A heavy, vibrating thrum echoes constantly, punctuated only by sharp snaps of electrical discharge that illuminate the dim, amber-lit room with stark flashes of blue. With steady, practiced motions to avoid the localized magnetic surges, he extends the heavy, solid-state relay baton toward Hector, preparing to pass the shift's burden before the next major shear wave hits.",
+  "summary": "Silas hands off the relay baton to Hector amidst a severe magnetohydrodynamic Kelvin-Helmholtz shear event.",
+  "importance": 7.5,
+  "novelty_score": 0.8,
+  "lethality": 0,
+  "calypso_zero_raw_stats": true,
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 1,
+      "colony_sol": 16,
+      "tick_id": 61,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Endure the magnetohydrodynamic Kelvin-Helmholtz shear.",
+        "mid_term_milestone": "Stabilize the ferrofluid currents.",
+        "campaign_arc_climax": "Master the exoplanet's anomalies."
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "The First Forge reverberates with the suppressed energy of a captured star, its brass and iron plating shifting under the immense pressure of the ferrofluid sea's magnetohydrodynamic shear. Coils of thick cable spark with static electricity, winding across stations laden with half-finished prototypes. A thick pall of acrid smoke billows from the primary vent, swirling in the dim amber glow as the dawn shift begins.",
+      "sensory_palette": {
+        "sight_and_color": "Dim amber illumination pierced by stark blue static arcs.",
+        "sound": "A heavy, vibrating thrum punctuated by the sharp snap of electrical discharges.",
+        "smell": "Pungent ozone masking the scent of hot, oiled metal.",
+        "tactile_temperature": "Stiflingly hot and arid, with static electricity clinging to exposed skin.",
+        "taste_optional": "A metallic tang on the tongue from the ionized air."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Magnetically Shielded Workbench",
+          "affordance_description": "A heavy bench providing cover from minor electrical arcs and localized magnetic surges.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Overloaded Capacitance Coil",
+          "affordance_description": "A sparking coil that can be thrown or re-routed to draw attention or discharge energy.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 15
+        },
+        {
+          "feature_name": "Ferrofluid Emergency Drain",
+          "affordance_description": "A grated drain that can quickly siphon away spilled hazardous materials.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 12
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "toy_magnetic_anomaly",
+        "name_and_role": "Localized Magnetic Anomaly - Hazard",
+        "motivation_goal": "To disrupt delicate electronics and impede movement.",
+        "consistent_method": "Pulsing with sudden, sharp spikes in magnetic field strength.",
+        "immediate_complication": "Causes tools and loose metal to fly unpredictably across the room.",
+        "pressure_index": 7,
+        "uninterrupted_escalation": "If ignored, it will permanently magnetize the primary forge relays, disabling them."
+      }
+    ],
+    "encounter_matrix": {
+      "hostile_forces": [],
+      "environmental_hazards": [
+        "Magnetohydrodynamic Kelvin-Helmholtz shear"
+      ],
+      "ticking_clocks": [
+        "The relay baton must be handed over before the next major shear wave hits."
+      ]
+    },
+    "lpi_metrics": {
+      "lethality": 0,
+      "pacing": 8,
+      "intrigue": 5
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "openai",
+        "model": "gpt-4-turbo",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "If the handoff fails, the baton will be magnetically ripped away, potentially damaging the forge's control core.",
+        "graduated_outcomes": {
+          "critical_success": "Flawless handoff, gaining a brief window of stabilized magnetic fields.",
+          "success": "Handoff completed with minor struggles against the magnetic pull.",
+          "mixed_success": "Handoff completed, but Hector drops a minor tool in the process.",
+          "failure": "The baton is pulled away, striking a nearby console.",
+          "critical_failure": "The baton is ripped away and strikes a critical power conduit, causing an immediate blackout."
+        }
+      },
+      "master_narrator": {
+        "executor": "claude",
+        "temperature": 0.8,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Silas extends the baton. Hector, what do you do as the magnetic shear intensifies?"
+      }
+    }
+  }
+}
