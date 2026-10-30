@@ -1,0 +1,135 @@
+{
+  "event_id": "seg_s012_t0046_enclave_01_hector",
+  "tick_id": 46,
+  "colony_sol": 12,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-11-05T12:00:00Z",
+  "base_snapshot_tick": 45,
+  "event_type": "POV_SCENE_SEGMENT",
+  "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "location": "The_Stormbreaker_Spire",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_05_kaio"
+  ],
+  "summary": "Hector races against the chaotic magnetohydrodynamic Kelvin-Helmholtz shear, desperately trying to stabilize the ferrofluid sea before passing the structural reinforcements to Kaio.",
+  "importance": 0.8,
+  "novelty_score": 0.7,
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "campaign_metadata": {
+    "session_number": 12,
+    "colony_sol": 12,
+    "tick_id": 46,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Avert the devastating feedback loop of the magnetohydrodynamic Kelvin-Helmholtz shear.",
+      "mid_term_milestone": "Reinforce the foundational support structures of The Stormbreaker.",
+      "campaign_arc_climax": "Adapt the colony to the exoplanet's unpredictable magnetosphere."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Stormbreaker_Spire",
+    "macro_silhouette": "The Stormbreaker Spire thrusts violently into the ozone-choked sky, its copper grounding masts vibrating under the chaotic strain of the local magnetosphere. Blinding white arcs of geode static leap between the induction vanes, illuminating the churning, spiky obsidian waves of the ferrofluid sea below in rhythmic strobe flashes. The gale-force winds howl through the lattice, threatening to tear any loose rigging right off the superstructure.",
+    "sensory_palette": {
+      "sight_and_color": "Blinding white corona flashes, oxidized green copper, and the deep, shifting obsidian of the ferrofluid sea below.",
+      "sound": "The deafening howl of ozone-gales, the frantic sparking of live voltage, and the heavy sloshing impact of ferrofluid.",
+      "smell": "Sharp, acrid ozone, hot melted brass, and the earthy fungal scent of the spore fog whipping by.",
+      "tactile_temperature": "A freezing gale laced with sudden, blistering waves of dry heat radiating from the arcing busbars.",
+      "taste_optional": "A sharp, metallic tang of static electricity."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Failing Shunt Cable",
+        "affordance_description": "Can be manually pulled into alignment to stop the arcing.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Loose Copper Caliper",
+        "affordance_description": "Can be thrown into the arcing field to draw the current away.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Surge Wave",
+        "affordance_description": "Can be directed via polarization to absorb the excess thermal load.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 16
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_ferrofluid_shear_wave",
+      "name_and_role": "Magnetohydrodynamic Shear Wave - Environmental Hazard",
+      "motivation_goal": "Destabilize the spire's magnetic containment field.",
+      "consistent_method": "Pulsing erratic magnetic spikes that strip the copper grounding.",
+      "immediate_complication": "A massive rogue crest of ferrofluid is rising, threatening to short the lower induction arrays.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "If ignored, the shear wave will breach the lower housing, triggering an explosive arc-flash."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The magnetohydrodynamic shear is physically ripping the shunt cables apart.",
+      "level_2_local": "The storm's intensity has breached the theoretical tolerances calculated by Jane.",
+      "level_3_campaign_arc": "The exoplanet's shifting magnetosphere is rejecting the Enclave's attempts to harvest energy."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      12,
+      18,
+      5,
+      14,
+      9
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.5,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.6,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.65,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_engine",
+      "model": "gpt-4",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Hector gets thrown clear by an arc-flash, causing severe burns and leaving the shunt disconnected, risking total system failure.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Hector grabs the wrong cable, completing the circuit through his own body and blowing the main breaker.",
+        "below_dc_complicated_fail_forward": "Hector connects the shunt, but the kinetic feedback shatters his best insulated boots and jams the lower gear mechanism.",
+        "meets_dc_clean_success": "Hector perfectly times the surge, snapping the shunt into place just as the shear wave peaks.",
+        "dc_plus_5_or_20_extended_lore": "Hector not only secures the shunt but discovers a feedback loop in the shear wave that perfectly charges the reserve geodes."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector swings down from the roaring induction vane, his hair standing on end from the residual static. He tosses a scorched wrench down to the catwalk below. 'Kaio! I got the shunt closed, but that shear wave is pulling a massive load on the lower pylons! You need to brace it before the whole grid buckles!'"
+    }
+  }
+}
