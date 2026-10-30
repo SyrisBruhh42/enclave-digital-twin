@@ -1,0 +1,40 @@
+{
+  "dispatch_id": "dispatch_sol_015",
+  "tick_id": 60,
+  "colony_sol": 15,
+  "base_snapshot_tick": 60,
+  "title": "Evening Dispatch Sol 15",
+  "headline": "Evening Dispatch",
+  "anchor_intro": "Good evening, Enclave. The air in the command module feels heavy and stale tonight, a stark contrast to the volatile magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea outside. The metallic tang of ozone clings to the rusted bulkheads, and the soft amber glow of the emergency lumen strips struggles against the encroaching shadows. We must DEFEND the remaining power conduits from the magnetic resonance, ATTRACT the stray ambient heat into the central radiator manifold, and CONCEAL our secondary comms relays from the atmospheric interference.",
+  "broadcast_script": "Ryn grips the bronze microphone, her voice steady despite the aggressive hum of the ferrofluid sea's sheer wave. 'The magnetohydrodynamic Kelvin-Helmholtz shear is tearing at the outer hull. If we don't recalibrate the flux dampeners, we lose the primary turbine, and with it, the thermal loop. We have to fail forward\u2014if the dampeners blow, we reroute the sheer kinetic energy into the backup capacitor banks. Why? Because the dampeners are barely holding together. Why? Because we haven't scavenged enough palladium for proper repairs. Why? Because the ferrofluid sea has been too volatile to cross.' Ryn physically hands the heavy baton to Silas. 'Your turn, Silas. Keep the heat flowing.'",
+  "broadcast_markdown": "# Evening Dispatch\n\nRyn hands the mic to Silas.",
+  "weather_report": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "quote_of_the_sol": "Keep the heat flowing.",
+  "newscaster_anchors": [
+    "enclave_13_ryn",
+    "enclave_03_silas"
+  ],
+  "covered_day_phases": [
+    "DAWN_SHIFT",
+    "MIDDAY_EXPEDITION",
+    "DUSK_CRAFT",
+    "THE_FEAST"
+  ],
+  "lead_story": {
+    "headline": "Sol 15 Lead",
+    "summary": "Hector struggles against the magnetohydrodynamic shear wave to hand off the baton to Kaio at the ferrofluid sea outpost.",
+    "cited_event_ids": [
+      "evt_s015_t0058_expedition_consequence"
+    ],
+    "actors": [
+      "enclave_01_hector",
+      "enclave_05_kaio"
+    ],
+    "location": "Ferrofluid_Sea_Outpost",
+    "day_phase": "MIDDAY_EXPEDITION",
+    "salience_score": 0.95
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.72
+  }
+}
