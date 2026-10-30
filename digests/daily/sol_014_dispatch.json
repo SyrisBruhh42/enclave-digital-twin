@@ -1,0 +1,40 @@
+{
+  "dispatch_id": "dispatch_sol_014",
+  "tick_id": 56,
+  "colony_sol": 14,
+  "base_snapshot_tick": 56,
+  "title": "Evening Dispatch Sol 14",
+  "headline": "Evening Dispatch",
+  "anchor_intro": "Good evening, Enclave. The ambient hum of the colony feels thin tonight, overshadowed by the chaotic Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. Inside the Hearth, the warmth is fleeting; the bronze radiators click and hiss, struggling against the pervasive chill. We must CONCEAL the remaining thermal batteries from the encroaching frost, DEFEND the main turbine housing from structural resonance, and ATTRACT whatever ambient heat we can into the secondary circulation loop.",
+  "broadcast_script": "Ryn leans into the bronze microphone, her voice carrying over the low rumble of the ferrofluid sea. 'The magnetohydrodynamic Kelvin-Helmholtz shear is tearing at the outer hull. If we don't recalibrate the flux dampeners, we lose the primary turbine, and with it, the thermal loop. We have to fail forward\u2014if the dampeners blow, we reroute the sheer kinetic energy into the backup capacitor banks. Why? Because the dampeners are barely holding together. Why? Because we haven't scavenged enough palladium for proper repairs. Why? Because the ferrofluid sea has been too volatile to cross.' Ryn physically hands the heavy baton to Silas. 'Your turn, Silas. Keep the heat flowing.'",
+  "broadcast_markdown": "# Evening Dispatch\n\nRyn hands the mic to Silas.",
+  "weather_report": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "quote_of_the_sol": "Keep the heat flowing.",
+  "newscaster_anchors": [
+    "enclave_13_ryn",
+    "enclave_03_silas"
+  ],
+  "covered_day_phases": [
+    "DAWN_SHIFT",
+    "MIDDAY_EXPEDITION",
+    "DUSK_CRAFT",
+    "THE_FEAST"
+  ],
+  "lead_story": {
+    "headline": "Sol 14 Lead",
+    "summary": "Hector struggles against the magnetohydrodynamic shear wave to hand off the baton to Kaio at the ferrofluid sea outpost.",
+    "cited_event_ids": [
+      "evt_s014_t0054_expedition_consequence"
+    ],
+    "actors": [
+      "enclave_01_hector",
+      "enclave_05_kaio"
+    ],
+    "location": "Ferrofluid_Sea_Outpost",
+    "day_phase": "MIDDAY_EXPEDITION",
+    "salience_score": 0.95
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.72
+  }
+}
