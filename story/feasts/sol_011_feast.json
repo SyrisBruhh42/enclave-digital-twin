@@ -1,0 +1,149 @@
+{
+  "event_id": "sol_011_feast",
+  "tick_id": 44,
+  "colony_sol": 11,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-11-04T18:00:00Z",
+  "base_snapshot_tick": 43,
+  "event_type": "THE_FEAST_CONVERGENCE",
+  "location": "The_Hearth",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_02_jane",
+    "enclave_03_silas",
+    "enclave_04_leo",
+    "enclave_05_kaio",
+    "enclave_06_zara",
+    "enclave_07_willow",
+    "enclave_08_terra",
+    "enclave_09_orion",
+    "enclave_10_isla",
+    "enclave_11_kenna",
+    "enclave_12_elias",
+    "enclave_13_ryn",
+    "enclave_14_vex",
+    "enclave_15_dorian",
+    "enclave_16_elara"
+  ],
+  "summary": "Ryn fights the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea to save the Feast, before throwing a wrench to Silas.",
+  "importance": 8,
+  "novelty_score": 8,
+  "evidence_refs": [],
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_13_ryn -> Handoff=enclave_03_silas.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "campaign_metadata": {
+    "colony_sol": 11,
+    "tick_id": 44,
+    "session_number": 11,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Secure the feast against the ferrofluid shear",
+      "mid_term_milestone": "Stabilize The Hearth's power grid",
+      "campaign_arc_climax": "Master the exoplanet's anomalies"
+    }
+  },
+  "active_location": {
+    "location_id": "The_Hearth",
+    "macro_silhouette": "A roaring hearth illuminates the cavernous mess hall, shadows dancing across polished copper pipes and heavy brass valves. Outside, the ferrofluid sea churns violently, casting eerie ripples of black against the reinforced viewport.",
+    "sensory_palette": {
+      "sight_and_color": "The warm amber glow of the fire contrasting with the cold, dark ripples of the ferrofluid sea.",
+      "sound": "The rhythmic clatter of heavy cookware against the low, rumbling groan of the hull under magnetic stress.",
+      "smell": "The rich, savory aroma of caramelizing myco-proteins masking the faint tang of ozone.",
+      "tactile_temperature": "The intense radiant heat of the stoves juxtaposed with the chill radiating from the outer bulkheads.",
+      "taste_optional": "A lingering metallic aftertaste on the tongue from the charged atmosphere."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Heavy Brass Ladle",
+        "affordance_description": "Can be used to defend the stew from unauthorized snacking.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetic Condenser Core",
+        "affordance_description": "Can attract loose metallic utensils if not carefully shielded.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Steam-Jacketed Kettle",
+        "affordance_description": "Boiling stew consumes raw ingredients to produce nourishing meals.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.65,
+    "classification": "Campaign-Ready"
+  },
+  "encounter_matrix": {
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "prerolled_hazard_queue": [
+      12,
+      14,
+      16,
+      18,
+      20
+    ],
+    "strain_accumulated_upward": 2,
+    "three_levels_of_why": {
+      "level_1_immediate": "The shear threatens to disrupt the delicate metabolic balance of the colony's evening meal.",
+      "level_2_local": "The ferrofluid sea's instability is causing unpredictable magnetic fluctuations throughout the sector.",
+      "level_3_campaign_arc": "The enclave must adapt to the exoplanet's increasingly hostile physical anomalies to survive."
+    }
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "TOY-002",
+      "name_and_role": "Ferrofluid Sea Shear",
+      "motivation_goal": "Destabilize the local magnetic field.",
+      "consistent_method": "Magnetohydrodynamic Kelvin-Helmholtz shear.",
+      "immediate_complication": "Induce a magnetic surge that threatens to short out the induction stoves.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The shear intensifies, causing metallic objects to rattle violently and the hull to groan with dangerous resonance."
+    }
+  ],
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The magnetic surge ruins the meal and causes a minor system overload in The Hearth.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "The stove explodes, scattering half-cooked rations and injuring the crew.",
+        "below_dc_complicated_fail_forward": "The meal is salvaged but heavily singed, and the power grid flickers ominously.",
+        "meets_dc_clean_success": "The meal is perfectly cooked and the stoves are shielded from the surge.",
+        "dc_plus_5_or_20_extended_lore": "Not only is the feast pristine, but Silas discovers a way to syphon the shear's energy to recharge the local grid."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "agency_handoff_prompt": "Ryn wipes her brow, eyes darting to the flickering lights. 'Silas, take this wrench and lock down that auxiliary manifold before we lose the heat!'",
+      "prosodic_micro_pauses_enabled": true,
+      "calypso_zero_raw_stats": true,
+      "temperature": 0.7
+    }
+  },
+  "state_deltas": {},
+  "relationship_deltas": []
+}
