@@ -1,0 +1,131 @@
+{
+  "event_type": "POV_SCENE_SEGMENT",
+  "event_id": "seg_s016_t0063_enclave_05_kaio",
+  "tick_id": 63,
+  "colony_sol": 16,
+  "day_phase": "DUSK_CRAFT",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "deterministic-enclave-5section-v2: Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "calypso_zero_raw_stats": true,
+  "summary": "Kaio attempts to chart a path through the chaotic magnetic sheer before handing off the navigation baton to Ryn.",
+  "campaign_metadata": {
+    "session_number": 16,
+    "colony_sol": 16,
+    "tick_id": 63,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Chart a path through the magnetic shear",
+      "mid_term_milestone": "Stabilize The Sanctuary's perimeter",
+      "campaign_arc_climax": "Prevent the encroaching ferrofluid wave from causing a total polarity inversion"
+    }
+  },
+  "active_location": {
+    "location_id": "The_Sanctuary_Outskirts",
+    "macro_silhouette": "The outer edge of The Sanctuary stood stark against the churning abyss of the ferrofluid sea, where the magnetohydrodynamic Kelvin-Helmholtz shear whipped the viscous, jet-black liquid into jagged, crystalline peaks. Sputtering blue lightning arced from the metallic crests, casting long, erratic shadows across the slick basalt outcroppings. The relentless, crushing pressure of the magnetic tide threatened to tear apart the delicate balance of the environment, forcing a precarious dance of survival.",
+    "sensory_palette": {
+      "sight_and_color": "blinding azure electrical arcs against matte jet-black metallic waves",
+      "sound": "a relentless, bone-rattling hum of sheer magnetic force punishing the stressed basalt",
+      "smell": "acrid, burning ozone thickly layered over the heavy, metallic scent of cold iron",
+      "tactile_temperature": "a biting, localized chill radiating from the basalt outcroppings beneath the oppressive ambient heat of the electrical discharge",
+      "taste_optional": "a sharp, battery-acid tang clinging to the back of the throat"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetic Resonance Tuning Fork",
+        "affordance_description": "Can be struck to create a localized counter-frequency that temporarily smooths the ferrofluid surface.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Lightning Trap Node",
+        "affordance_description": "Can be repositioned to draw away the sheer kinetic force of the ferrofluid impact.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Drain Vents",
+        "affordance_description": "Can safely channel the excess metallic liquid back into the deep crust.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_sea",
+      "name_and_role": "Ferrofluid Sea Surge",
+      "motivation_goal": "Overwhelm structural integrity of the Enclave.",
+      "consistent_method": "Magnetohydrodynamic Kelvin-Helmholtz shear.",
+      "immediate_complication": "A massive rogue wave of magnetized liquid is cresting directly toward the primary observation deck.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "The wave will crush the outer retaining wall and flood the observation deck with lethal charge."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The Kelvin-Helmholtz shear is buckling the observation deck, threatening immediate catastrophic discharge.",
+      "level_2_local": "If the deck fails, The Sanctuary will be exposed to the feral magnetic tide.",
+      "level_3_campaign_arc": "The exoplanet's living environment fundamentally rejects stationary Enclave engineering, requiring constant adaptation."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      7,
+      18,
+      3,
+      9
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.6,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_ai",
+      "model": "ollama",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The tuning fork fails, unleashing a localized arc-flash that severely burns the immediate area.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio strikes the tuning fork at the wrong angle, causing a micro-fracture that exacerbates the charge buildup.",
+        "below_dc_complicated_fail_forward": "The tuning fork holds, but the back-surge blows out the secondary lighting arrays, plunging the deck into gloom.",
+        "meets_dc_clean_success": "Kaio expertly strikes the tuning fork, stabilizing the deck against the encroaching tide.",
+        "dc_plus_5_or_20_extended_lore": "Kaio discovers a way to permanently reinforce the deck using the very resonance of the shear."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio snatched the heavy copper baton from Hector, his eyes locked onto the churning chaos of the ferrofluid sea. The magnetohydrodynamic Kelvin-Helmholtz shear ripped through the heavy atmosphere, a symphony of destruction tearing at the edges of their world. He struck the magnetic resonance tuning fork against the basalt outcropping, the sharp, clean ring momentarily slicing through the chaotic roar and forcing the jet-black liquid to momentarily flatten. With a quick, practiced motion, he tossed the baton to Ryn. 'Your turn, keep it steady!'"
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ]
+  }
+}
