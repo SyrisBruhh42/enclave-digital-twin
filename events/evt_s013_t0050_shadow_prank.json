@@ -1,0 +1,167 @@
+{
+  "prank_id": "prank_sol13_evt0050",
+  "entry_id": "prank_sol13_evt0050",
+  "event_id": "evt_s013_t0050_shadow_prank",
+  "event_type": "SHADOW_ECONOMY_PRANK_SEEDED",
+  "status": "PENDING",
+  "matured": false,
+  "origin_sol": 13,
+  "maturity_sol": 16,
+  "feast_delay": 3,
+  "lethality": 0,
+  "law_l11_clamped": false,
+  "severity": "PETTY_AFFECTIONATE_INCONVENIENCE",
+  "node_a": "enclave_01_hector",
+  "node_b": "enclave_05_kaio",
+  "node_c": "enclave_03_silas",
+  "instigator": "enclave_01_hector",
+  "intended_target": "enclave_05_kaio",
+  "collateral_recipient": "enclave_03_silas",
+  "target_b_missed": true,
+  "blamed_node": "enclave_01_hector",
+  "attributed_to": "enclave_01_hector",
+  "prank_description": "Hector swapped Kaio's magnetic baton grip with an inverted polarity core.",
+  "summary": "Hector attempted to prank Kaio with an inverted magnetic grip during the handoff, but Kaio seamlessly flipped it, causing the repulsive force to knock Silas's clipboard into the ferrofluid mist.",
+  "blind_spot_attribution": {
+    "instigator_node_a": "enclave_01_hector",
+    "oblivious_target_node_b": "enclave_05_kaio",
+    "target_b_missed": true,
+    "inconvenienced_node_c": "enclave_03_silas",
+    "blamed_by_c": "enclave_01_hector",
+    "asymmetric_loop_closed": true
+  },
+  "tick_id": 50,
+  "colony_sol": 13,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-11-06T12:00:00Z",
+  "base_snapshot_tick": 49,
+  "location": "The_Stormbreaker_Spire_Exterior",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_05_kaio",
+    "enclave_03_silas"
+  ],
+  "importance": 7.0,
+  "novelty_score": 0.85,
+  "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "state_deltas": {
+    "stress_delta": -0.05
+  },
+  "relationship_deltas": [],
+  "evidence_refs": [],
+  "target_path": "events/evt_s013_t0050_shadow_prank.json",
+  "campaign_metadata": {
+    "session_number": 13,
+    "colony_sol": 13,
+    "tick_id": 50,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Resolve the relay handoff amidst the ferrofluid storm.",
+      "mid_term_milestone": "Reinforce the Enclave against the incoming magnetosphere storm.",
+      "campaign_arc_climax": "Master the raw energy of the planet's core."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Stormbreaker_Spire_Exterior",
+    "macro_silhouette": "The Stormbreaker Spire rises like a fractured copper needle against a bruised, heavy sky. Below it, the dark ferrofluid sea writhes in chaotic patterns driven by raw magnetic forces. Arc-lightning flashes from the jagged iron outcroppings, momentarily painting the precarious catwalks in stuttering, violent violet light.",
+    "sensory_palette": {
+      "sight_and_color": "Stuttering violet arc-flashes illuminating churning black ferrofluid with stark silver highlights.",
+      "sound": "The deep, groaning hum of stressed copper lines punctuated by sharp, echoing atmospheric cracks.",
+      "smell": "Pungent ozone mixing with the sharp, acidic tang of vaporized iron particles.",
+      "tactile_temperature": "A rhythmic, bone-rattling vibration ascending through the boots, chilled by a statically-charged wind.",
+      "taste_optional": "The metallic, acidic sting of charged ozone settling on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Overloaded Main Shunt",
+        "affordance_description": "A sparking control junction that can be bypassed to dump excess voltage.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Wave Surge",
+        "affordance_description": "A cresting magnetic wave that can be used to propel conductive debris.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 16
+      },
+      {
+        "feature_name": "Shadowed Gantry Nook",
+        "affordance_description": "A sheltered recess behind the main capacitor bank shielding from the wind and arcs.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_shear_wave",
+      "name_and_role": "Magnetohydrodynamic Shear",
+      "motivation_goal": "To rip apart the precarious lower catwalks and disrupt the relay line.",
+      "consistent_method": "Violently lashing the spire supports with highly magnetized, dense liquid iron.",
+      "immediate_complication": "The resulting shear wave generates a fluctuating magnetic field that heavily disrupts equipment handling.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "Failure to synchronize the handoff will cause the wave to shatter the primary strut, plunging the catwalk into the abyss."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Hector must precisely hand off the relay baton to Kaio before the static charge overloads the node.",
+      "level_2_local": "The extreme ferrofluid shear is wreaking havoc on all local comms and mechanical relays, threatening spire isolation.",
+      "level_3_campaign_arc": "Harnessing and surviving this intense environmental anomaly is crucial to surviving the looming macro-storm."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 5,
+    "prerolled_hazard_queue": [
+      12,
+      9,
+      17,
+      4,
+      15
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.65,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.6,
+    "temporal_horizon_immediacy": 0.85,
+    "composite_lpi": 0.7,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "jules_local",
+      "model": "judge_v1",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If the relay handoff is botched, the concentrated magnetic burst will short out the active sensory gear and dramatically worsen the shear wave.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Hector drops the baton straight into the ferrofluid mist, triggering an immediate catastrophic blowout of the local grid.",
+        "below_dc_complicated_fail_forward": "The handoff is fumbled; the baton is secured but Kaio sustains a severe static shock, impairing their next tactical response.",
+        "meets_dc_clean_success": "A seamless, dynamic pass-off through the screaming wind, keeping the relay perfectly synchronized despite the prank.",
+        "dc_plus_5_or_20_extended_lore": "A flawless pass that simultaneously grounds the erratic static charge, temporarily subduing the shear wave and exposing a stable magnetic pathway."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules_narrator",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector hurls himself across the gap, arm extended to deliver the glowing relay baton into Kaio's grasp amidst the roaring storm."
+    }
+  }
+}
