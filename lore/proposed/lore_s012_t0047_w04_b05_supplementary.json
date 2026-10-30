@@ -60,7 +60,13 @@
         "tactical_role": "Chef"
       }
     ],
-    "prerolled_hazard_queue": [ 4, 12, 19, 2, 8 ],
+    "prerolled_hazard_queue": [
+      4,
+      12,
+      19,
+      2,
+      8
+    ],
     "strain_accumulated_upward": 2,
     "three_levels_of_why": {
       "level_1_immediate": "Kaio wants to map the shear currents, but they are erratic and dangerous.",
