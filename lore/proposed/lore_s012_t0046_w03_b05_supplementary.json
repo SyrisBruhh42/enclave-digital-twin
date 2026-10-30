@@ -1,0 +1,118 @@
+{
+  "event_type": "POV_SCENE_SEGMENT",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "campaign_metadata": {
+    "session_number": 12,
+    "colony_sol": 12,
+    "tick_id": 46,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Navigate the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+      "mid_term_milestone": "Establish a stable crossing protocol for the ferrofluid sea",
+      "campaign_arc_climax": "Master the exoplanet's anomalies to ensure the Enclave's survival"
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea",
+    "macro_silhouette": "The ferrofluid sea stretches endlessly, its metallic waves dancing in erratic rhythms under the pale twilight. Spires of magnetized liquid erupt sporadically, twisting into jagged formations before collapsing back into the churning abyss. A relentless hum of conflicting polarities vibrates through the dense, ionized air, creating a disorienting haze above the volatile surface. Massive currents driven by Kelvin-Helmholtz shear slide past each other in turbulent layers.",
+    "sensory_palette": {
+      "sight_and_color": "Shimmering obsidian waves and crackling cobalt arcs of static.",
+      "sound": "A deep, resonant thrum overlaid with the sharp crackle of electrical discharge.",
+      "smell": "Ozone and metallic tang.",
+      "tactile_temperature": "A biting cold mixed with sudden, localized bursts of static heat.",
+      "taste_optional": "A faint, lingering coppery taste on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetized Obsidian Spire",
+        "affordance_description": "A temporarily solidified spike of ferrofluid that can block incoming electrical discharges.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Resonant Iron Vein",
+        "affordance_description": "A conductive pathway that draws the electrical discharge away from the squad.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Sub-Surface Polarity Churn",
+        "affordance_description": "A dense layer of churning metallic fluid that can hide the squad from incoming magnetic storms.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "kelvin_helmholtz_shear",
+      "name_and_role": "Ferrofluid Shear Wave - The Environmental Hazard",
+      "motivation_goal": "To destabilize and overturn any structured matter entering its domain.",
+      "consistent_method": "Generating turbulent vortices and sudden magnetic spikes.",
+      "immediate_complication": "The shear wave threatens to rip the crossing vessel apart.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The vortices will coalesce into a massive, unavoidable magnetic maelstrom."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Hector and Kaio must traverse the sea to reach a critical scouting objective.",
+      "level_2_local": "The ferrofluid sea is a natural barrier that must be understood to secure the Sanctuary.",
+      "level_3_campaign_arc": "Mastering the exoplanet's extreme physics is essential for the Enclave's long-term survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 0,
+    "prerolled_hazard_queue": [
+      12,
+      15,
+      8,
+      19,
+      4
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.65,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Aegis_Tactician",
+      "model": "gpt-4",
+      "temperature": 0.4,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The magnetic shear will damage the crossing vessel and delay the expedition.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Hector completely misreads the wave pattern, leading the vessel directly into a maelstrom.",
+        "below_dc_complicated_fail_forward": "The vessel takes a damaging hit, but the momentum carries them partially through the shear.",
+        "meets_dc_clean_success": "Hector perfectly aligns the vessel's polarity to glide smoothly over the shear.",
+        "dc_plus_5_or_20_extended_lore": "Hector not only crosses safely but discovers a harmonic frequency that neutralizes the ferrofluid."
+      }
+    },
+    "master_narrator": {
+      "executor": "Aegis_Narrator",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector grips the helm as the magnetic shear intensifies, physical baton ready to hand off to Kaio over the roaring sea. What do you do?"
+    }
+  }
+}
