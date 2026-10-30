@@ -35,5 +35,8 @@
     "interlocutor_full_cards_loaded": 0,
     "active_pov_id": "enclave_13_ryn"
   },
-  "narrative_prose": "The dense warmth of the hearth presses outward against the chilling draft of the valley floor, the copper kettles glowing a deep umber in the low light. Plumes of spiced steam catch the erratic flickers of the ferrofluid manifold's ambient glow. It is a tight, secure sanctuary of boiling stock and scrubbed metal, anchoring the chaotic sprawl of the settlement. The magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea threatens to destabilize the thirty-gallon steam-jacketed kettle, so Ryn adjusts the valves to ensure thermodynamic equilibrium. If the thermal buffer fails, the week's myco-protein harvest is lost to carbonization. With the galley finally quiet, Ryn wipes her brow and firmly presses the baton into Silas's awaiting hand."
+  "narrative_prose": "The dense warmth of the hearth presses outward against the chilling draft of the valley floor, the copper kettles glowing a deep umber in the low light. Plumes of spiced steam catch the erratic flickers of the ferrofluid manifold's ambient glow. It is a tight, secure sanctuary of boiling stock and scrubbed metal, anchoring the chaotic sprawl of the settlement. The magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea threatens to destabilize the thirty-gallon steam-jacketed kettle, so Ryn adjusts the valves to ensure thermodynamic equilibrium. If the thermal buffer fails, the week's myco-protein harvest is lost to carbonization. With the galley finally quiet, Ryn wipes her brow and firmly presses the baton into Silas's awaiting hand.",
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
+  }
 }
