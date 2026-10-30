@@ -61,7 +61,13 @@
         "tactical_role": "Engineer"
       }
     ],
-    "prerolled_hazard_queue": [12, 4, 18, 9, 20],
+    "prerolled_hazard_queue": [
+      12,
+      4,
+      18,
+      9,
+      20
+    ],
     "strain_accumulated_upward": 2,
     "three_levels_of_why": {
       "level_1_immediate": "The magnetic shear is destabilizing the thermal generators.",
