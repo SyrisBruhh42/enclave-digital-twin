@@ -1,0 +1,119 @@
+{
+  "event_type": "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "steward_note": "deterministic-enclave-5section-v2",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 16,
+    "tick_id": 63,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Transfer the physical baton across the Kelvin-Helmholtz shear.",
+      "mid_term_milestone": "Stabilize the First Forge containment.",
+      "campaign_arc_climax": "Harmonize the twin suns orbital state."
+    }
+  },
+  "active_location": {
+    "location_id": "The_First_Forge",
+    "macro_silhouette": "The First Forge stands tall against the turbulent horizon, its brass spires conducting ambient geode lightning. Steam hisses from colossal vents, creating a dense fog that obscures the lower levels.",
+    "sensory_palette": {
+      "sight_and_color": "Flashes of indigo and violent violet from arcing geodes.",
+      "sound": "The rhythmic, deafening crash of drop hammers.",
+      "smell": "Ozone and oxidized iron.",
+      "tactile_temperature": "Oppressively hot near the crucibles, biting cold near the vents.",
+      "taste_optional": "A metallic tang on the back of the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Ferrofluid Sea Valve",
+        "affordance_description": "Can be opened to cool the main reactor.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Brass Bulkhead Door",
+        "affordance_description": "Can be locked to isolate the shear.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Lightning Arrester",
+        "affordance_description": "Can draw excess static away from the forge.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_ferrofluid_shear",
+      "name_and_role": "Magnetohydrodynamic Shear (Environmental Hazard)",
+      "motivation_goal": "To destabilize the structural integrity of the forge.",
+      "consistent_method": "Pulsing erratic magnetic waves.",
+      "immediate_complication": "The shear disrupts the precision instruments.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The waves will shatter the primary containment vessel."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The shear is causing immediate structural stress.",
+      "level_2_local": "The First Forge's stability is crucial for the colony.",
+      "level_3_campaign_arc": "Mastering the ferrofluid sea is necessary for long-term survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "DEFENDER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 0,
+    "prerolled_hazard_queue": [
+      12,
+      15,
+      8,
+      19,
+      4
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.7,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.85,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local",
+      "model": "jules-v2",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The forge loses structural integrity.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio completely misreads the shear.",
+        "below_dc_complicated_fail_forward": "Kaio stabilizes the forge but takes damage.",
+        "meets_dc_clean_success": "Kaio perfectly dampens the shear.",
+        "dc_plus_5_or_20_extended_lore": "Kaio discovers a new property of the ferrofluid."
+      }
+    },
+    "master_narrator": {
+      "executor": "local",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio hands the baton to Ryn."
+    }
+  },
+  "narrative_prose": "Kaio traces the erratic wind currents with his brass sextant, fascinated by the way the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea warps the light. The First Forge stands tall against the turbulent horizon, its brass spires conducting ambient geode lightning into violent purple flashes. Steam hisses from colossal vents, creating a dense fog that obscures the lower levels while the rhythmic, deafening crash of drop hammers reverberates through the heavy air. The oppressive heat carries a strong tang of ozone and oxidized iron. Carefully securing his glowing rock samples, Kaio steps forward and hands the physical baton to Ryn."
+}
