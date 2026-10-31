@@ -51,5 +51,8 @@
         "associated_check_dc": 15
       }
     ]
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
   }
 }

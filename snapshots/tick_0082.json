@@ -1437,9 +1437,10 @@
     }
   },
   "applied_event_ids": [
+    "evt_s021_t0082_expedition_consequence",
     "evt_s021_t0082_shadow_prank"
   ],
-  "total_events_through_tick": 98,
+  "total_events_through_tick": 99,
   "recent_segments": [
     {
       "segment_id": "seg_s017_t0067_enclave_05_kaio",
