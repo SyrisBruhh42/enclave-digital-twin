@@ -1,0 +1,78 @@
+{
+  "event_id": "evt_s022_t0088_reflection",
+  "tick_id": 88,
+  "colony_sol": 22,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-11-15T20:00:00Z",
+  "base_snapshot_tick": 86,
+  "event_type": "NIGHTLY_REFLECTION",
+  "location": "The_Hub_Hearth",
+  "actors": [
+    "enclave_15_dorian",
+    "enclave_02_jane"
+  ],
+  "active_pov_id": "enclave_15_dorian",
+  "next_pov_target": "enclave_02_jane",
+  "prev_next_pov_target": "enclave_15_dorian",
+  "narrative_prose": "Dorian did not look at the world; he looked at the wireframe beneath it.\n\nStanding before the Living Atlas, he adjusted the focal length of the crystalline projector. He was analyzing the day's anomalous readings, specifically the process of extracting fossilized piezoelectric signal echoes stored inside ancient precursor chitin-quartz resonator nodes overgrown by deep-crustal hyphae. It was an elegant puzzle of acoustic memory locked in crystal, but it carried an unstable charge that was currently ghosting across the settlement's local grid. Projects a three-dimensional holographic magnetosphere map across thousands of crustal sensors, then has to tell Leo to ground every metal soup spoon in the kitchen.\n\n\"The capacitance of the resonator nodes is discharging asymmetrically into the local bedrock,\" Dorian announced to the room at large, his voice carrying a dry, theatrical resonance. \"If we don't bleed the ambient static, tonight's stew will be noticeably electrified. Leo, I suggest you ground the cutlery. Yes, even the spoons.\"\n\nFrom across the hall, a tired voice drifted back. \"If you're complaining and no one is laughing, you're complaining wrong,\" someone muttered.\n\nDorian smiled softly, a flicker of amusement breaking his focused scowl. The stress of the overarching signal extraction had been mounting, pushing his meticulous INTJ nature to the brink of his Aries Vanguard override. He felt the sudden, audacious urge to simply flood the nodes with a massive kinetic pulse to see what would shatter first. 'Then today is a good day for science,' he thought, the reckless impulse momentarily intoxicating.\n\nHe reeled himself in, stepping away from the holographic projection. The immediate danger of the grid surge required action. Moving toward the central table where Jane was quietly reviewing atmospheric models, he retrieved a physical data core, warm and buzzing faintly with stored telemetry. He extended his hand, meeting her gaze squarely, and passed the heavy brass baton directly into her grasp. \"The sky is yours now, Jane. Try not to break it.\"",
+  "summary": "Dorian reflects on the piezoelectric echoes from precursor nodes, leading him to instruct Leo to ground the kitchen cutlery, before handing off telemetry to Jane.",
+  "importance": 7.5,
+  "novelty_score": 0.8,
+  "science_vegetable": "Extracting fossilized piezoelectric signal echoes stored inside ancient precursor chitin-quartz resonator nodes overgrown by deep-crustal hyphae.",
+  "state_deltas": {
+    "stress_delta": -0.1
+  },
+  "relationship_deltas": [
+    {
+      "from": "enclave_15_dorian",
+      "to": "enclave_02_jane",
+      "bond_delta": 0.05,
+      "trust_delta": 0.05
+    }
+  ],
+  "evidence_refs": [
+    "evt_s022_t0086_expedition_consequence"
+  ],
+  "cited_event_ids": [
+    "evt_s022_t0086_expedition_consequence"
+  ],
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_15_dorian"
+    ],
+    "interlocutor_full_cards_loaded": 0,
+    "active_pov_id": "enclave_15_dorian"
+  },
+  "active_location": {
+    "location_id": "The_Hub_Hearth",
+    "macro_silhouette": "Ancient carved stone lanterns beneath the fungal canopy chiming softly when the mycelial pulse passes through them. The Hearth remains the warm, copper-lined center of the Enclave.",
+    "sensory_palette": {
+      "sight_and_color": "Soft bioluminescent green and warm amber hearth light.",
+      "sound": "Chiming stone lanterns and the low hum of the Living Atlas projector.",
+      "smell": "Ozone from static discharge mixed with roasted myco-protein.",
+      "tactile_temperature": "A comforting radiant warmth cutting through sharp atmospheric static.",
+      "taste_optional": "A lingering metallic tang from ionized air."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Living Atlas Projector",
+        "affordance_description": "Projects a three-dimensional holographic magnetosphere map.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Grounded Cutlery",
+        "affordance_description": "Metal soup spoons wired to disperse static buildup.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Data Core Baton",
+        "affordance_description": "A heavy brass module storing piezoelectric telemetry.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  }
+}
