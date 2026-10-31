@@ -63,7 +63,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.2737,
+      "stress": 0.2287,
       "fatigue": 0.1228,
       "sleep_debt_norm": 0.1228,
       "kp_exo": 6.53,
@@ -235,7 +235,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.2832,
+      "stress": 0.2371,
       "fatigue": 0.1664,
       "sleep_debt_norm": 0.1664,
       "kp_exo": 6.53,
@@ -761,7 +761,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.2737,
+      "stress": 0.2287,
       "fatigue": 0.1228,
       "sleep_debt_norm": 0.1228,
       "kp_exo": 6.53,
@@ -933,7 +933,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.2832,
+      "stress": 0.2371,
       "fatigue": 0.1664,
       "sleep_debt_norm": 0.1664,
       "kp_exo": 6.53,
@@ -1437,24 +1437,11 @@
     }
   },
   "applied_event_ids": [
+    "evt_s018_t0070_expedition_consequence",
     "evt_s018_t0070_shadow_prank"
   ],
-  "total_events_through_tick": 83,
+  "total_events_through_tick": 84,
   "recent_segments": [
-    {
-      "segment_id": "seg_s014_t0054_enclave_01_hector",
-      "sol_id": 14,
-      "colony_sol": 14,
-      "tick_id": 54,
-      "active_pov_id": "enclave_01_hector",
-      "next_pov_target": "enclave_05_kaio",
-      "location_id": "The_First_Forge",
-      "time_of_day": "MIDDAY_EXPEDITION",
-      "day_phase": "MIDDAY_EXPEDITION",
-      "title": "Sol 014 \u2022 MIDDAY_EXPEDITION (enclave_01_hector)",
-      "opening_excerpt": "Hector catches the wrench and recalibrates the primary shunt amidst the ferrofluid waves before calling down to Kaio.",
-      "excerpt": "Hector catches the wrench and recalibrates the primary shunt amidst the ferrofluid waves before calling down to Kaio."
-    },
     {
       "segment_id": "seg_s014_t0055_enclave_05_kaio",
       "sol_id": 14,
@@ -1608,6 +1595,20 @@
       "title": "Sol 018 \u2022 DAWN_SHIFT (enclave_03_silas)",
       "opening_excerpt": "Silas reinforces the pressure valves against the magnetic shear before tossing the calibration baton to Hector.",
       "excerpt": "Silas reinforces the pressure valves against the magnetic shear before tossing the calibration baton to Hector."
+    },
+    {
+      "segment_id": "seg_s018_t0070_enclave_01_hector",
+      "sol_id": 18,
+      "colony_sol": 18,
+      "tick_id": 70,
+      "active_pov_id": "enclave_01_hector",
+      "next_pov_target": "enclave_05_kaio",
+      "location_id": "the_stormbreaker_spire",
+      "time_of_day": "DAWN_SHIFT",
+      "day_phase": "DAWN_SHIFT",
+      "title": "Sol 018 \u2022 DAWN_SHIFT (enclave_01_hector)",
+      "opening_excerpt": "",
+      "excerpt": ""
     }
   ],
   "available_sols": [
