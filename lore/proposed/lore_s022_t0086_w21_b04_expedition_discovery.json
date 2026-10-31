@@ -1,0 +1,118 @@
+{
+  "base_snapshot_tick": 86,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_06_zara"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "campaign_metadata": {
+    "session_number": 22,
+    "colony_sol": 22,
+    "tick_id": 86,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Establish first-contact photophore syntax with an abyssal chemosynthetic cephalopod.",
+      "mid_term_milestone": "Map the subterranean iron-sulfur aquifer.",
+      "campaign_arc_climax": "Decode the planetary bioluminescent syntax network."
+    }
+  },
+  "active_location": {
+    "location_id": "abyssal_chemosynthetic_aquifer",
+    "macro_silhouette": "The cave didn't end; it drowned. A motionless black underground lake stretches into pitch darkness, the water heavy with dissolved iron. Spiralling blue bioluminescent lures bloom in the deep, revealing an iron-sulfur chemosynthetic trophic web where sunlight has never touched.",
+    "sensory_palette": {
+      "sight_and_color": "Pitch blackness pierced by staccato blue and green prime-number bioluminescent flashes.",
+      "sound": "Total acoustic silence broken only by the slosh of heavy, iron-rich water.",
+      "smell": "Metallic tang of ferrous iron mixed with faint hydrogen sulfide.",
+      "tactile_temperature": "Crushing, freezing abyssal pressure against the dive suit.",
+      "taste_optional": "The metallic tang of adrenaline and recycled air."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Voltage-Sensitive Ion Channels",
+        "affordance_description": "Can be triggered by modulated optical polarization to emit prime-number photon bursts.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Chemosynthetic Fungal Mat",
+        "affordance_description": "Absorbs mechanical shock and filters hydrogen sulfide from the water.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Hex-Pedal Carapace Camouflage",
+        "affordance_description": "Oil-slick iridescence that blends perfectly into the ferro-moss ravines.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 16
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "abyssal_cephalopod_01",
+      "name_and_role": "Chemosynthetic Cephalopod (First Contact Entity)",
+      "motivation_goal": "Determine if the novel light-source (Zara) is a predator, prey, or kin.",
+      "consistent_method": "Uses chromatic photophore muscular iris-shutters to emit spatial wave-patterns.",
+      "immediate_complication": "Misinterprets continuous light as an aggressive territorial display.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Will release a blinding bioluminescent ink cloud and trigger a localized pressure wave if panicked."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Zara must establish non-hostile contact with the cephalopod using its own photophore syntax.",
+      "level_2_local": "This contact proves the existence of complex intelligence in the deep-biosphere, altering the Sanctuary's mapping priorities.",
+      "level_3_campaign_arc": "Understanding planetary bio-syntax is the key to synchronizing the Enclave with the exoplanet's ecosystem."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_06_zara",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_10_isla",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      14,
+      8,
+      19,
+      3,
+      11
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.9,
+    "unresolved_conflict_ratio": 0.7,
+    "temporal_horizon_immediacy": 0.85,
+    "composite_lpi": 0.81,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Local_Deterministic",
+      "model": "Rules_Engine_v1",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Cephalopod retreats into the depths, locking out the biological sequence data and triggering Zara's Gemini Vex Override in the silence.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Zara misinterprets a hunting lure as a greeting, provoking a kinetic strike that damages her suit's polarization filter.",
+        "below_dc_complicated_fail_forward": "Contact is made, but the syntax is clumsy. The cephalopod shares a fragment of the sequence before fleeing into the iron-rich dark.",
+        "meets_dc_clean_success": "Zara perfectly mimics the prime-number syntax. The cephalopod allows close proximity, unlocking the full enzymatic luciferin sequence.",
+        "dc_plus_5_or_20_extended_lore": "Not only is the sequence acquired, but the cephalopod guides Zara to a pristine, untouched grove of ironwood trees hidden in the aquifer."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules_Showrunner",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "The cave didn't end; it drowned.\nZara stood at the edge of the subterranean lake. The water was black, motionless, and heavy with iron.\n\nShe waded in. Her suit adjusted, pressurizing against the weight of the deep. Down here, there was no light but what you brought, or what lived.\n\nSomething brushed her leg.\n\nShe froze. In the dark, a pattern of lights ignited. Blue dots, spiraling in a mesmerizing circle. A lure.\n\nIt was a cephalopod-like creature, but adapted for iron-rich subterranean water. It had no shell, just a muscular mantle and arms lined with photophores. It was communicating through enzymatic luciferin-luciferase oxidation, gated by voltage-sensitive ion channels. The flashes were deliberate, mathematical. Prime-number sequences.\n\nZara turned off her headlamp. It was the ultimate act of trust. To a creature of the dark, continuous light was an assault. \n\nIn the total darkness, the creature bloomed. Waves of color washed over its skin, a silent symphony of chromatic photophore mimicry. The tension in the water shifted. \n\nShe held out a hand, mimicking the pattern with her suit's wrist-lights, modulating the optical polarization to match its syntax. Blue-blue-spiral. Pause. Blue-blue-green.\n\nThe creature hesitated. Then, it reached out a tentacle, touching her glove. A connection.\n\n\"Hello,\" she whispered in the dark, her voice a soft hum against the crushing silence. \"I'm not food.\"\n\nBut the silence was heavy, and the weight of the water above pressed against her mind. She thought of the Sanctuary pens waiting to be mucked out, the mundane chore contrasting wildly with the alien intelligence wrapping around her fingers. The sheer isolation of the moment flickered against her nerves. \n\n\"It's fascinating,\" she blurted out, the words tumbling rapidly into the comms, her Gemini Vex Override threatening to break the quiet. \"The muscular iris-shutters operate on a neural delay of less than four milliseconds. It's not just displaying emotion, it's articulating a full environmental state-vector. If Kaio could see the spatial wave-patterns\u2014\"\n\nShe clamped her jaw shut, forcing herself to breathe. \n\nShe carefully unclasped the data-slate from her belt, the movement slow and deliberate, and passed it up toward the surface, a physical baton handoff to Isla, who was waiting on the rocky shore above to encode the telemetry into the 5D optical lattice."
+    }
+  }
+}
