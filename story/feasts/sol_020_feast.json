@@ -1,0 +1,77 @@
+{
+  "event_id": "evt_s020_t0080_feast",
+  "tick_id": 80,
+  "colony_sol": 20,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-10-25T20:00:00Z",
+  "base_snapshot_tick": 80,
+  "event_type": "THE_FEAST_CONVERGENCE",
+  "location": "The_Hearth",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_02_jane",
+    "enclave_03_silas",
+    "enclave_04_leo",
+    "enclave_05_kaio",
+    "enclave_06_zara",
+    "enclave_07_willow",
+    "enclave_08_terra",
+    "enclave_09_orion",
+    "enclave_10_isla",
+    "enclave_11_kenna",
+    "enclave_12_elias",
+    "enclave_13_ryn",
+    "enclave_14_vex",
+    "enclave_15_dorian",
+    "enclave_16_elara"
+  ],
+  "summary": "Ryn orchestrates the evening meal despite the unstable magnetic field, passing the culinary baton and duty of care to Silas.",
+  "importance": 8.0,
+  "novelty_score": 7.0,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ]
+  },
+  "narrative_prose": "The Hearth galley vibrated intensely, its copper-jacketed kettles rattling under the warm amber glow of sodium-vapor lamps. Ryn adjusted the thermal induction valves on the butcher block, monitoring the simmering vats of braised mire-lentils. The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea was creating erratic magnetic pulses, threatening to prematurely scorch the glowing cave-truffles. If the induction regulators failed to stabilize, the meal would be ruined, costing the colony precious morale and calories. She gritted her teeth, relying on her culinary intuition to anticipate the fluctuations and tweak the heat precisely as the magnetic shear peaked. A misstep meant carbonized truffles, a minor tragedy she refused to author. Satisfied as the stew achieved a rich, earthy aroma, she turned and spotted Silas waiting patiently by the service hatch. Ryn carefully ladled a perfect portion into a heavy ceramic bowl, thrusting it into Silas's hands with a firm nod, passing the physical baton of the meal to his steadfast care.",
+  "active_location": {
+    "location_id": "The_Hearth",
+    "macro_silhouette": "The Hearth is a cavernous, copper-lined sanctuary dominating the colony's central core. Steam billows from massive, jacketed kettles, misting the heavy brass butcher blocks scattered across the floor. Warm amber sodium-vapor lamps cast deep, flickering shadows against the industrial bulkheads.",
+    "sensory_palette": {
+      "sight_and_color": "Amber sodium-vapor glow and gleaming polished copper.",
+      "sound": "The rattling of copper-jacketed kettles and the hum of thermal induction valves.",
+      "smell": "Rich, earthy braised root vegetables and a faint ozone tang.",
+      "tactile_temperature": "Oppressively humid and radiantly warm.",
+      "taste_optional": "Savory umami of glowing cave-truffles and salt."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Thirty-Gallon Steam-Jacketed Kettles",
+        "affordance_description": "Massive vats providing radiant heat and bulk sustenance.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Heavy Brass Butcher Block",
+        "affordance_description": "A sturdy work surface that doubles as a tactical barricade.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Aromatic Spice Crocks",
+        "affordance_description": "Jars of potent spices that draw hungry colonists.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 10
+      }
+    ]
+  }
+}
