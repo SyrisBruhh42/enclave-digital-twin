@@ -1,0 +1,64 @@
+{
+  "event_id": "evt_s023_t0090_expedition_consequence",
+  "tick_id": 90,
+  "colony_sol": 23,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-11-16T12:00:00Z",
+  "base_snapshot_tick": 86,
+  "event_type": "EXPEDITION_DISCOVERY",
+  "location": "Enclave_Crater_Valley",
+  "actors": ["enclave_07_willow", "enclave_09_orion"],
+  "summary": "Willow wrestles with enzymatic chitin tenderization under an ionization storm while Orion watches, resulting in a sudden burst of frantic protectiveness from the pragmatic alchemist.",
+  "importance": 0.8,
+  "novelty_score": 0.7,
+  "science_vegetable": "Precision 72°C enzymatic chitin tenderization and gas-chromatograph methional flavor-pairing to trigger popcorn-aromatic Maillard reactions during an ionization storm.",
+  "state_deltas": {
+    "willow_stress": 0.15
+  },
+  "relationship_deltas": {
+    "enclave_07_willow": {
+      "enclave_09_orion": 0.05
+    }
+  },
+  "evidence_refs": [],
+  "active_pov_id": "enclave_07_willow",
+  "next_pov_target": "enclave_09_orion",
+  "prev_next_pov_target": "enclave_07_willow",
+  "pacing_mode": "MULLIGAN_CRISIS",
+  "active_location": {
+    "location_id": "loc_kitchen_forge",
+    "macro_silhouette": "The timber hall shudders under the relentless hammering of thunder from the ionization storm outside. Warm hearth-fire casts long, flickering shadows over the stone floor, catching the gleam of thick copper ankle-grounding wires bolted to the heavy oak tables.",
+    "sensory_palette": {
+      "sight_and_color": "Flickering orange hearth-light reflecting off metallic grounding wires and bubbling amber cauldrons.",
+      "sound": "The staccato crack of overhead thunder masking the low, steady boil of the chitin stew.",
+      "smell": "The sudden, disarming scent of buttered popcorn rising from the breaking fungal cell walls.",
+      "tactile_temperature": "Oppressively hot near the hearth, undercut by sudden chills of static electricity that raise the hairs on bare arms.",
+      "taste_optional": "A faint, metallic tang of ozone layered over the rich, savory depth of methional-heavy tubers."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Steaming Compost Heap",
+        "affordance_description": "A dense pile of partially broken-down fungal material radiating heat and static charge.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Copper Ankle-Grounding Wires",
+        "affordance_description": "Thick braided wires snaking across the stone floor to safely disperse electrical build-up.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 10
+      },
+      {
+        "feature_name": "Aromatic Chitin Cauldron",
+        "affordance_description": "A heavy iron pot bubbling at precisely 72°C, releasing popcorn-scented methional compounds.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "context_manifest": {
+    "loaded_full_card_ids": ["enclave_07_willow"],
+    "full_cards_loaded_count": 1
+  },
+  "narrative_prose": "Under the microscope, the mushroom didn't look like a plant. It looked like a city.\n\nWillow adjusted the focus. The hyphae—the thread-like roots—were pulsing with light. Calcium ions flowing through the cell walls, carrying signals like data packets on a fiber optic cable. She was on the verge of unlocking fungal Boolean logic gates and cellular regeneration, the crowning achievement of the Genesis Garden.\n\nInstead, she had to stop and turn the steaming compost heap with a pitchfork.\n\nThe timber hall shuddered under the relentless hammering of thunder from the ionization storm outside. Warm hearth-fire cast long, flickering shadows over the stone floor, catching the gleam of thick copper ankle-grounding wires bolted to the heavy oak tables. The mundane maintenance chafed at her competence, but the bubbling cauldron in the corner demanded her attention. It wasn't just stew; it was precision 72°C enzymatic chitin tenderization, specifically calibrated via gas-chromatograph methional flavor-pairing to trigger popcorn-aromatic Maillard reactions.\n\n\"It smells like a movie theater before the world ended,\" Orion remarked softly from the doorway. He was hovering, a gentle presence amidst the sharp angles of the kitchen.\n\nWillow gripped the pitchfork tighter. A sudden, inexplicable surge of protective anxiety rose in her chest. Her Cancer Vex Override was fully armed. The pragmatic, detached alchemist evaporated, replaced by an overwhelming urge to wrap Orion in conductive mesh and shove him under a table.\n\n\"Don't stand there, Orion. The magnetic flux is spiking. Get away from the iron hinges and put on your grounding wire. Now!\"\n\nShe abandoned the pitchfork, the tool clattering against the stone floor, and practically dragged him toward the safety of the hearth.\n\n\"I just wanted to see if the flavor-pairing worked,\" Orion said, bemused but compliant as she forced the thick copper wire around his ankle.\n\nWillow didn't smile. She checked the connection twice, her hands moving with frantic precision. The scent of roasted popcorn filled the air, a ridiculous contrast to her sudden, clinging desperation. She had to defend this space, to consume the threat of the storm, and to attract nothing but safety for the fragile genius beside her.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" she muttered, forcing a semblance of her usual dry wit through the panic. She patted his shoulder, hard. \"Stay here. I'm not losing you to a rogue plasma arc because you wanted a snack.\""
+}
