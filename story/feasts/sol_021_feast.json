@@ -14,10 +14,22 @@
   "importance": 7,
   "novelty_score": 5,
   "actors": [
-    "enclave_01_hector", "enclave_02_jane", "enclave_03_silas", "enclave_04_leo",
-    "enclave_05_kaio", "enclave_06_zara", "enclave_07_willow", "enclave_08_terra",
-    "enclave_09_orion", "enclave_10_isla", "enclave_11_kenna", "enclave_12_elias",
-    "enclave_13_ryn", "enclave_14_vex", "enclave_15_dorian", "enclave_16_elara"
+    "enclave_01_hector",
+    "enclave_02_jane",
+    "enclave_03_silas",
+    "enclave_04_leo",
+    "enclave_05_kaio",
+    "enclave_06_zara",
+    "enclave_07_willow",
+    "enclave_08_terra",
+    "enclave_09_orion",
+    "enclave_10_isla",
+    "enclave_11_kenna",
+    "enclave_12_elias",
+    "enclave_13_ryn",
+    "enclave_14_vex",
+    "enclave_15_dorian",
+    "enclave_16_elara"
   ],
   "evidence_refs": [],
   "state_deltas": {
@@ -25,7 +37,9 @@
   },
   "relationship_deltas": [],
   "context_manifest": {
-    "loaded_full_card_ids": ["enclave_13_ryn"],
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
     "full_cards_loaded_count": 1,
     "active_relationships": []
   },
@@ -60,5 +74,8 @@
       }
     ]
   },
-  "narrative_prose": "Ryn rapped her heavy brass ladle sharply against the butcher block, demanding the attention of the sixteen hungry souls gathered in The Hearth. The air was thick with the scent of caramelized amino-acids and the sharp ozone tang that rolled off the valley's resonant spore fog drift. Outside, a particularly vicious Magnetohydrodynamic Kelvin-Helmholtz shear rippled across the ferrofluid sea, an anomaly that sent a low, trembling resonance directly into the iron grates of her steam-jacketed kettles. The heavy pots threatened to vibrate off their burners, but Ryn adjusted the manifold valves with practiced precision, stabilizing the thermal output. \"Listen to me very carefully!\" she barked over the hiss of steam, eyeing the tired faces around the grand table. \"The ridge temperature is plummeting, and if any of you skip this course, you will be burning your own muscle mass before Dawn Shift!\" The ambient tension of the day—the competing claims over the iron-wheat harvest—hung in the air, but her ironclad authority as The Chef left no room for debate. She moved down the line, ensuring the dense, calorie-rich loaves were distributed equitably. The magnetic shear intensified, causing a few iron-rich crusts to literally levitate an inch above their platters, but Ryn simply slammed them back down with a scowl. Finding Silas seated near the edge, meticulously inspecting his utensils, she grabbed the warmest, most perfectly baked portion of bread and shoved it into his calloused hands. She handed him the ladle—the baton of command for the moment—and stepped back, wiping her brow as Silas quietly accepted the offering, pretending to inspect its structural integrity before taking a bite."
+  "narrative_prose": "Ryn rapped her heavy brass ladle sharply against the butcher block, demanding the attention of the sixteen hungry souls gathered in The Hearth. The air was thick with the scent of caramelized amino-acids and the sharp ozone tang that rolled off the valley's resonant spore fog drift. Outside, a particularly vicious Magnetohydrodynamic Kelvin-Helmholtz shear rippled across the ferrofluid sea, an anomaly that sent a low, trembling resonance directly into the iron grates of her steam-jacketed kettles. The heavy pots threatened to vibrate off their burners, but Ryn adjusted the manifold valves with practiced precision, stabilizing the thermal output. \"Listen to me very carefully!\" she barked over the hiss of steam, eyeing the tired faces around the grand table. \"The ridge temperature is plummeting, and if any of you skip this course, you will be burning your own muscle mass before Dawn Shift!\" The ambient tension of the day\u2014the competing claims over the iron-wheat harvest\u2014hung in the air, but her ironclad authority as The Chef left no room for debate. She moved down the line, ensuring the dense, calorie-rich loaves were distributed equitably. The magnetic shear intensified, causing a few iron-rich crusts to literally levitate an inch above their platters, but Ryn simply slammed them back down with a scowl. Finding Silas seated near the edge, meticulously inspecting his utensils, she grabbed the warmest, most perfectly baked portion of bread and shoved it into his calloused hands. She handed him the ladle\u2014the baton of command for the moment\u2014and stepped back, wiping her brow as Silas quietly accepted the offering, pretending to inspect its structural integrity before taking a bite.",
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
+  }
 }
