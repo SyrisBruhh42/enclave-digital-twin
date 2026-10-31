@@ -56,5 +56,8 @@
       "enclave_03_silas"
     ],
     "full_cards_loaded_count": 1
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
   }
 }

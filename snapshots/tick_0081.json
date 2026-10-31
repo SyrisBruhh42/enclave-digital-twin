@@ -1453,9 +1453,10 @@
     }
   },
   "applied_event_ids": [
-    "evt_s021_t0081_morning_intent"
+    "evt_s021_t0081_morning_intent",
+    "evt_s021_t0081_world_consequence"
   ],
-  "total_events_through_tick": 96,
+  "total_events_through_tick": 97,
   "recent_segments": [
     {
       "segment_id": "seg_s017_t0066_enclave_01_hector",
