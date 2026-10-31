@@ -1,0 +1,62 @@
+{
+  "event_id": "evt_s022_t0085_world_consequence",
+  "tick_id": 85,
+  "colony_sol": 22,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2084-06-22T06:00:00Z",
+  "base_snapshot_tick": 85,
+  "event_type": "EXPEDITION_DISCOVERY",
+  "location": "The Ferrofluid Sea",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "summary": "Silas diagnoses the unstable magnetic shear and hands off structural stabilization duties to Hector.",
+  "importance": 8,
+  "novelty_score": 7,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "active_location": {
+    "location_id": "loc_ferrofluid_sea",
+    "macro_silhouette": "The dark expanse of the ferrofluid sea roils with unnatural, jagged spikes as the magnetic tide pulls its dense surface upward. The shoreline is a treacherous rim of slick, magnetized stone. Chaotic currents of raw charge leap through the freezing, hazy atmosphere, distorting the horizon.",
+    "sensory_palette": {
+      "sight_and_color": "Swirling pitch-black fluid forming sharp metallic peaks against an orange haze.",
+      "sound": "A deep, resonant thrum of magnetic tension overlapping with the sloshing of heavy liquid.",
+      "smell": "Pungent ozone and cold iron.",
+      "tactile_temperature": "A freezing bite in the air with static electricity raising hairs on the skin.",
+      "taste_optional": "A sharp metallic tang on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetic shielding generator",
+        "affordance_description": "Can be engaged to repulse the encroaching fluid.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Floating metallic debris",
+        "affordance_description": "Can be polarized to draw small objects toward it.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Exposed power core",
+        "affordance_description": "Draws excess charge from the storm.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "active_pov_id": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "narrative_prose": "Silas grimaced as his calipers snapped violently against the iron railing, pulled by the erratic flux of the environment. The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea was no longer just a theoretical anomaly; the jagged waves were visibly warping the structural lattice of their field equipment. If they failed to stabilize the resonance cascade within the hour, the localized shear would tear the primary cooling vents straight off the Forge, leaving their core completely vulnerable to raw kinetic heat. Refusing to succumb to the growing magnetic pressure, Silas wrenched the diagnostic baton free from the railing with a grunt and turned to the young prodigy beside him. 'The sheer gradient is wildly inefficient, Hector,' Silas grumbled, physically shoving the heavy brass baton into the younger man's chest. 'It is your turn. Do not let the polarity invert.' Hector caught the baton firmly, the residual static from Silas's grip transferring instantly.",
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
+    "full_cards_loaded_count": 1
+  }
+}
