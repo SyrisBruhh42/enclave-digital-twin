@@ -12,7 +12,10 @@
   "next_pov_target": "enclave_07_willow",
   "prev_next_pov_target": "enclave_02_jane",
   "location": "Enclave_Crater_Valley_Stormbreaker_Base",
-  "actors": ["enclave_02_jane", "enclave_07_willow"],
+  "actors": [
+    "enclave_02_jane",
+    "enclave_07_willow"
+  ],
   "summary": "Jane successfully models the planetary storm dynamics but is forced to dig a muddy trench to ground a copper rod alongside Willow.",
   "importance": 6,
   "novelty_score": 0.7,
@@ -51,7 +54,12 @@
   },
   "narrative_prose": "The atmospheric potential gradient hit exactly 50 kilovolts per meter, precisely as Jane had modeled on her hand-cranked brass difference engine. A violet laser needle stitched the bruised purple thunderhead to a screaming copper spire fifty meters above the valley. It was a beautiful proof of concept: Femtosecond Laser-Induced Plasma Channels ionizing a conductive step-leader highway straight into the bedrock capacitor geode. Pure, deterministic physics. And yet.\n\nJane wiped a thick smear of iron-rich mud from her forehead and glared at the shovel in her hands. She could model a planet-wide Lorenz strange attractor in phase space, yet here she was, spending her afternoon digging a muddy trench by hand to ground a copper rod. The indignity of the physical world was astounding.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Willow's voice drifted over from the adjacent trench, accompanied by the squelch of heavy boots in the muck. Willow was expertly packing the soil around a secondary coupling, treating the muddy earth with the same detached, analytical precision she applied to fungal logic gates.\n\n\"I am not complaining,\" Jane muttered, stabbing the shovel into the dirt. \"I am calculating the inefficiency of manual labor versus robotic automation, and the results are depressing.\"\n\n\"The results are you need to dig faster,\" Willow replied calmly. \"The secondary front is moving in, and if this ground rod isn't seated before the magnetic shear hits, your beautiful plasma highway is going to discharge directly into the hub's life support systems.\"\n\nJane paused, a sudden spike of anxiety piercing her annoyance. She hated when Willow was right. But the thought of the colony's oxygen recyclers frying because she couldn't shovel fast enough was a terrifying variable she couldn't ignore.\n\n\"Fine,\" Jane snapped, her Leo Vex Override threatening to surface. She wanted to demand a round of applause for her mathematical foresight, not a shovel. \"But I'm taking the baton. Here. You take the shovel. I need to verify the telemetry on the primary geode array.\"\n\nShe tossed the physical telemetry relay baton to Willow, who caught it with an effortless one-handed grab without looking up from the mud.",
   "context_manifest": {
-    "loaded_full_card_ids": ["enclave_02_jane"],
+    "loaded_full_card_ids": [
+      "enclave_02_jane"
+    ],
     "full_cards_loaded_count": 1
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
   }
 }

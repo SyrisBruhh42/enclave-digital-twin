@@ -1,0 +1,117 @@
+{
+  "base_snapshot_tick": 89,
+  "context_manifest": {
+    "active_pov_id": "enclave_02_jane",
+    "next_pov_target": "enclave_07_willow",
+    "prev_next_pov_target": "enclave_02_jane",
+    "loaded_full_card_ids": [
+      "enclave_02_jane"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "campaign_metadata": {
+    "session_number": 23,
+    "colony_sol": 23,
+    "tick_id": 89,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Ground the Femtosecond Laser-Induced Plasma Channels (LIPC).",
+      "mid_term_milestone": "Stabilize The Stormbreaker.",
+      "campaign_arc_climax": "Master the planetary Lorenz strange attractor in phase space."
+    }
+  },
+  "active_location": {
+    "location_id": "valley_trench_line",
+    "macro_silhouette": "A violet laser needle stitching the bruised purple thunderhead to a screaming copper spire fifty meters above the valley. The jagged bedrock trench is slick with ionized mud, waiting to receive a conductive step-leader highway. Above, the sky seethes with 50 kV/m atmospheric potential gradient.",
+    "sensory_palette": {
+      "sight_and_color": "Bruised purple thunderhead stitched by a violet laser needle.",
+      "sound": "Screaming copper spire vibrating at resonance.",
+      "smell": "Ozone and scorched earth.",
+      "tactile_temperature": "Oppressive electrostatic heat and cold muddy trench.",
+      "taste_optional": "Metallic ozone."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Copper Grounding Rod",
+        "affordance_description": "Drive deep into the bedrock capacitor geode.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ionized Mud Trench",
+        "affordance_description": "Channel the step-leader away from the primary bunker.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Femtosecond LIPC Terminal",
+        "affordance_description": "Prevent reverse-arcing back into the array.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "atmospheric_potential",
+      "name_and_role": "50 kV/m Potential Gradient",
+      "motivation_goal": "Discharge gigajoules into the path of least resistance.",
+      "consistent_method": "Ionizing the local air mass.",
+      "immediate_complication": "Induces micro-currents in nearby metal tools.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "Will strike the nearest ungrounded structure."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Ground the rod to survive the incoming discharge.",
+      "level_2_local": "Harness the storm to feed the capacitor geode.",
+      "level_3_campaign_arc": "Prove the Lorenz strange attractor can be tamed."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_02_jane",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      12,
+      8,
+      17,
+      4,
+      19
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.3,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.625,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "LOCAL_DETERMINISTIC",
+      "model": "rule_engine_v1",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The grounding rod fails to seat, causing a dangerous back-feed.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Jane incorrectly calculates the trench depth, exposing the array.",
+        "below_dc_complicated_fail_forward": "The rod seats, but Jane's comms are fried by a secondary arc.",
+        "meets_dc_clean_success": "The rod is grounded perfectly just as the step-leader hits.",
+        "dc_plus_5_or_20_extended_lore": "The strike reveals a deeper resonant frequency in the bedrock geode."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Jane wiped a smear of ionized mud from her forehead, glaring at the stubborn copper rod she was wrestling into the bedrock capacitor geode. She could model a planet-wide Lorenz strange attractor in phase space in her sleep, predicting exactly where the femtosecond laser-induced plasma channels would ionize a conductive step-leader highway at 50 kV/m atmospheric potential gradient. Yet here she was, spending her afternoon digging a muddy trench by hand.\n\nA violet laser needle stitched the bruised purple thunderhead to a screaming copper spire fifty meters above the valley, the air thick with ozone and static. She braced herself against the trench wall, forcing the heavy rod down. She hated manual labor, she really did. It felt inefficient. But as the sky above rumbled, demanding to discharge, she realized that sometimes the most elegant equation had to be solved with a hammer.\n\nShe felt her mind straining, the urge to demand someone applaud her brilliant calculation of the strike zone rising\u2014a flare of Leo diva energy\u2014but she shoved it down. \"If you're complaining and no one is laughing, you're complaining wrong,\" she muttered to herself, echoing Hector's obnoxious advice.\n\nShe drove the rod home just as the potential gradient spiked. Now, she just needed Willow to synthesize the epoxy-sap to seal the junction before the rain started. She pulled herself out of the mud, clutching her toolkit, and headed for the greenhouse."
+    }
+  }
+}
