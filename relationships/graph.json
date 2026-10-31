@@ -68,7 +68,8 @@
         "evt_s015_t0057_morning_intent",
         "evt_s016_t0061_world_consequence",
         "evt_s017_t0065_morning_intent",
-        "evt_s018_t0069_morning_intent"
+        "evt_s018_t0069_morning_intent",
+        "evt_s019_t0073_morning_intent"
       ]
     },
     {
@@ -6578,6 +6579,6 @@
       }
     }
   },
-  "updated_at_tick": 72,
-  "applied_event_count": 85
+  "updated_at_tick": 73,
+  "applied_event_count": 87
 }

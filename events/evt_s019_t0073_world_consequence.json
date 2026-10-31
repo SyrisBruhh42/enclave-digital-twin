@@ -7,7 +7,10 @@
   "base_snapshot_tick": 73,
   "event_type": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
   "location": "The_First_Forge",
-  "actors": ["enclave_03_silas", "enclave_01_hector"],
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
   "active_pov_id": "enclave_03_silas",
   "next_pov_target": "enclave_01_hector",
   "prev_next_pov_target": "enclave_03_silas",
@@ -17,18 +20,23 @@
   "context_manifest": {
     "full_cards_loaded_count": 1,
     "interlocutor_full_cards_loaded": 0,
-    "loaded_full_card_ids": ["enclave_03_silas"],
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
     "narrative_focus_ratio": 1.0,
     "context_window_pressure": 0.4
   },
-  "narrative_prose": "Silas ran his calloused thumb along the edge of the containment housing, feeling the subtle, high-frequency vibration before the chronometer even registered the pulse. The heavy brass and iron room smelled of ozone and scorched flux, illuminated only by the frantic violet sparks arcing from the primary geode stack. 'Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea,' he muttered, checking the load tolerances. The sheer instability of the magnetic waves caused the sympathetic ore to sing a dangerous, harmonic whine. He reached for a heavy iron lever, wrenching it downward in an attempt to bleed the excess pressure into the grounding coils. The attempt only partially succeeded; a gout of blue plasma scorched his left gauntlet, but the primary breach was averted for now—a classic fail-forward scenario. Through the thick glass of the forge, he could see Hector approaching, completely oblivious to the narrow margin of safety they were operating under. Silas grabbed the glowing calibration wrench and shoved it into Hector's hands the moment he stepped through the bulkhead. 'Take this,' Silas barked, his voice carrying the weight of a dozen near-misses. 'The pulse is shifting, and you need to realign the secondary array before the resonance turns us both into a memory. Don't drop it.'",
+  "narrative_prose": "Silas ran his calloused thumb along the edge of the containment housing, feeling the subtle, high-frequency vibration before the chronometer even registered the pulse. The heavy brass and iron room smelled of ozone and scorched flux, illuminated only by the frantic violet sparks arcing from the primary geode stack. 'Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea,' he muttered, checking the load tolerances. The sheer instability of the magnetic waves caused the sympathetic ore to sing a dangerous, harmonic whine. He reached for a heavy iron lever, wrenching it downward in an attempt to bleed the excess pressure into the grounding coils. The attempt only partially succeeded; a gout of blue plasma scorched his left gauntlet, but the primary breach was averted for now\u2014a classic fail-forward scenario. Through the thick glass of the forge, he could see Hector approaching, completely oblivious to the narrow margin of safety they were operating under. Silas grabbed the glowing calibration wrench and shoved it into Hector's hands the moment he stepped through the bulkhead. 'Take this,' Silas barked, his voice carrying the weight of a dozen near-misses. 'The pulse is shifting, and you need to realign the secondary array before the resonance turns us both into a memory. Don't drop it.'",
   "campaign_metadata": {
     "session_number": 1,
     "colony_sol": 19,
     "tick_id": 73,
     "pacing_mode": "MERCER_IMMERSIVE",
     "consequential_fights_since_short_rest": 0,
-    "horizon_goals": ["Stabilize the ferrofluid sea", "Complete the primary forge housing"]
+    "horizon_goals": [
+      "Stabilize the ferrofluid sea",
+      "Complete the primary forge housing"
+    ]
   },
   "active_location": {
     "location_id": "The_First_Forge",
@@ -85,7 +93,9 @@
     }
   ],
   "encounter_matrix": {
-    "active_factions_in_play": ["The_Forge"],
+    "active_factions_in_play": [
+      "The_Forge"
+    ],
     "escalation_clock_ticks": 2,
     "nearest_safe_haven": "The_Genesis_Garden",
     "hostile_awareness_level": "OBLIVIOUS",
