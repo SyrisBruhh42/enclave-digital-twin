@@ -1,0 +1,55 @@
+{
+  "event_id": "evt_s021_t0082_expedition_consequence",
+  "tick_id": 82,
+  "colony_sol": 21,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-11-14T12:00:00Z",
+  "base_snapshot_tick": 82,
+  "event_type": "EXPEDITION_DISCOVERY",
+  "location": "Ferrofluid Sea Shelf",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_05_kaio"
+  ],
+  "summary": "Hector attempts to brace the induction rigging against the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea but struggles, leading to an emergency handoff to Kaio.",
+  "importance": 8,
+  "novelty_score": 7,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "narrative_prose": "The magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea roared around Hector, an invisible wall of force that threatened to strip the flux-core shielding right off the induction rigging. Immediate Level One: He needed to brace the primary strut before it snapped under the immense magnetic torque. Level Two Local: If the strut failed, the localized magnetic turbulence would short out the entire expedition's navigation array, stranding them. Level Three Campaign: This failure would push back the sanctuary's energy grid completion, leaving the colony vulnerable to the encroaching winter storms. The sheer tactile force of the shear pulled at him. He adjusted his grip, a graduated fail-forward attempt to secure the line. The rigging groaned and partially held, giving just enough time for a desperate handoff. He tossed the heavy physical baton through the biting wind to Kaio, The Scout, trusting her to complete the circuit.",
+  "active_location": {
+    "location_id": "ferrofluid_sea_shelf",
+    "macro_silhouette": "The dark ferrofluid sea crashed against the jagged magnetic rocks with terrifying momentum. Bright blue lightning arcs danced across the sky overhead, tracing the invisible lines of magnetic force. The sheer scale of the magnetohydrodynamic Kelvin-Helmholtz shear painted an imposing backdrop of chaotic energy.",
+    "sensory_palette": {
+      "sight_and_color": "Dark ferrofluid ripples, bright blue lightning.",
+      "sound": "Roaring wind and crackling arcs.",
+      "smell": "Ozone and metallic sea salt.",
+      "tactile_temperature": "Biting cold wind.",
+      "taste_optional": "Metallic tang of ozone."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetic Rock Cover",
+        "affordance_description": "A large jagged outcropping capable of blocking flying debris.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Surge Pool",
+        "affordance_description": "A pool of magnetic liquid that can swallow small items.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Lightning Arcs",
+        "affordance_description": "Bright flashes that can draw attention if manipulated.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 15
+      }
+    ]
+  }
+}
