@@ -15,6 +15,47 @@
   "jules_rolling_24h_dispatched": 10,
   "jules_remaining_hard_ceiling": 260,
   "sample_domain_friction": 0.586589,
+  "enclave_city_summary": {
+    "schema": "enclave-voxel-city-v2",
+    "grid_size": 48,
+    "active_biome_id": "crater_valley",
+    "active_biome_name": "Enclave Crater Valley",
+    "active_zone_id": "zone_01_homestead_grove",
+    "active_indoor_room_id": null,
+    "emerald_districts_count": 5,
+    "indoor_rooms_count": 3,
+    "tutorial_step_index": 1,
+    "tutorial_completed": false,
+    "crucible_hearth_biomes": [
+      "Porch Hearth",
+      "Rain Garden",
+      "Flow Hourglass",
+      "Alchemist Crucible"
+    ],
+    "living_atlas_epistemic_tiers": [
+      "TIER_1_VERIFIED_EVENT",
+      "TIER_2_EMPIRICAL_SPECIMEN",
+      "TIER_3_ORAL_BALLAD",
+      "TIER_4_SPECULATIVE_HYPOTHESIS"
+    ],
+    "tycoon_crafting_themes": [
+      "theme_enclave_first_forge",
+      "theme_enclave_living_atlas"
+    ],
+    "bridge_global": "window.ArcadeAssetBridge",
+    "citizens_count": 16,
+    "buildings_count": 18,
+    "museum_donations_count": 2,
+    "museum_total_specimens": 16,
+    "diy_recipes_unlocked": 12,
+    "daily_favors_completed": 0,
+    "daily_favors_total": 3,
+    "placed_decorations_count": 3,
+    "willow_homestead_comfort_score": 102,
+    "city_rupee_bonus": 25,
+    "currency_code": "RUP",
+    "in_world_economy_monetary": false
+  },
   "wp4_modules_linked": {
     "story_sifter": true,
     "evening_dispatch": true,
