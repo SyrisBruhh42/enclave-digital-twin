@@ -1,0 +1,114 @@
+{
+  "base_snapshot_tick": 83,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "campaign_metadata": {
+    "session_number": 21,
+    "colony_sol": 21,
+    "tick_id": 83,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Investigate the anomalous readings near the ferrofluid sea.",
+      "mid_term_milestone": "Map the boundaries of the anomalous zone.",
+      "campaign_arc_climax": "Uncover the origins of the Sanctuary anomalies."
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea_coast",
+    "macro_silhouette": "The jagged coastline curves out into an ink-black expanse of the ferrofluid sea, where slow, magnetic waves surge and crash in silent, geometric spikes. The horizon is perpetually bruised with an auroral glow, illuminating the shoreline's crystalline salt deposits that crunch underfoot like broken glass. Above, the sky feels unnervingly close, heavy with static electricity that hums through the humid air.",
+    "sensory_palette": {
+      "sight_and_color": "Geometric spikes of black liquid rising and falling under auroral hues.",
+      "sound": "The low, resonant thrum of shifting magnetic fields.",
+      "smell": "Ozone and metallic tang.",
+      "tactile_temperature": "Heavy, static-charged air pricking the skin.",
+      "taste_optional": "A metallic, alkaline residue on the back of the throat."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "magnetic_shallows",
+        "affordance_description": "The edges of the sea where the fluid reacts strongly to passing currents.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "salt_spires",
+        "affordance_description": "Jagged formations of crystallized minerals that offer cover.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "conductive_tidepools",
+        "affordance_description": "Small pools that draw away electrical charge.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "anomalous_shear_wave",
+      "name_and_role": "Magnetohydrodynamic Wave",
+      "pressure_index": 7,
+      "motivation_goal": "To destabilize the immediate magnetic environment.",
+      "consistent_method": "Creating rapid, unpredictable fluctuations in local gravity and polarity.",
+      "immediate_complication": "The shear wave threatens to pull in unsecured gear or trip explorers.",
+      "uninterrupted_escalation": "The wave will culminate in a massive, disorienting polarity inversion burst."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The shear is tearing at the equipment.",
+      "level_2_local": "The ferrofluid sea is becoming increasingly unstable.",
+      "level_3_campaign_arc": "The Sanctuary anomalies are accelerating."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      18,
+      5,
+      20,
+      11
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.5,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.6,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.7,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Anthropic",
+      "model": "claude-3-opus",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If Kaio fails to navigate the shear, the resulting magnetic burst will scramble their mapping gear, forcing a blind retreat.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio misreads the shear pattern completely, moving directly into a surging polarity inversion that ruins their equipment and leaves them disoriented.",
+        "below_dc_complicated_fail_forward": "Kaio manages to dodge the worst of the wave but loses their grip on a vital piece of scanning tech, complicating the return journey.",
+        "meets_dc_clean_success": "Kaio expertly rides the shifting magnetic currents, gathering pristine data on the shear before stepping safely out of the disturbance.",
+        "dc_plus_5_or_20_extended_lore": "Kaio not only navigates the shear flawlessly but discovers a stable harmonic frequency within the waves, revealing a hidden pathway deeper into the sea."
+      }
+    },
+    "master_narrator": {
+      "executor": "claude-3-opus",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio skidded across the crystalline shoreline, their boots sparking as the Magnetohydrodynamic Kelvin-Helmholtz shear crested in a jagged, obsidian wave. The ferrofluid sea thrummed with a heavy, metallic vibration that set Kaio's teeth on edge. They needed to anchor the telemetry beacon before the wave crashed, relying on their intuition to read the shifting polarity. With a final, practiced motion, Kaio slammed the beacon into a salt spire just as the wave shattered around them, sending a shower of harmless, magnetic droplets into the air. Brushing off the clinging fluid, Kaio grabbed the datapad and jogged back toward the rendezvous point. Breaking through the treeline, they spotted Ryn setting up the field stove. 'Hey,' Kaio called out, tossing the glowing datapad through the air. Ryn caught it smoothly, their eyes already scanning the fresh telemetry. 'Got the readings. Your turn to make sense of this mess.'"
+    }
+  }
+}
