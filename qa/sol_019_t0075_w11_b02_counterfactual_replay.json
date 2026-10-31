@@ -1,0 +1,112 @@
+{
+  "base_snapshot_tick": 75,
+  "campaign_metadata": {
+    "session_number": 11,
+    "colony_sol": 19,
+    "tick_id": 75,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Resolve the tension caused by the magnetohydrodynamic Kelvin-Helmholtz shear.",
+      "mid_term_milestone": "Secure the ferrofluid sea against future shears.",
+      "campaign_arc_climax": "Complete the integration of the colony's disparate systems into a stable whole."
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea_overlook",
+    "macro_silhouette": "The jagged basalt cliffs plunge down into the churning, iridescent expanse of the ferrofluid sea. Great spires of magnetized rock pierce the metallic waves, creating a treacherous maze of shifting tides and deadly shear forces. The sky above is bruised purple, heavy with the weight of the oncoming storm, while the air itself seems to vibrate with the sheer kinetic energy of the sea below.",
+    "sensory_palette": {
+      "sight_and_color": "Iridescent black waves crashing against rusty red basalt, throwing off sparks of blue magnetic fire.",
+      "sound": "A deafening, rhythmic booming like a gigantic heartbeat, punctuated by the high-pitched screech of shearing metal.",
+      "smell": "Ozone and crushed iron ore, with a sharp undertone of static electricity.",
+      "tactile_temperature": "The air is freezing, yet the rock beneath feels feverishly hot to the touch.",
+      "taste_optional": "Metallic and bitter, like biting down on a copper coin."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetic Resonance Anchor",
+        "affordance_description": "A heavy, brass-bound pillar driven deep into the cliff, vibrating with stored energy.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Geyser Vent",
+        "affordance_description": "A fissure in the rock venting superheated, highly magnetic gas.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Kinetic Dampening Field Generator",
+        "affordance_description": "A jury-rigged device emitting a faint, localized anti-magnetic field.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "kelvin_helmholtz_shear_wave",
+      "name_and_role": "The Magnetic Shear (Environmental Hazard)",
+      "motivation_goal": "To tear apart anything caught in its chaotic magnetic current.",
+      "consistent_method": "Generates localized gravity wells and sharp bursts of EMP.",
+      "immediate_complication": "The shear wave is accelerating, threatening to rip the overlook's anchors free.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Will eventually tear the cliff face itself apart, sending anyone on it into the sea."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The shear wave is destabilizing the cliff face, putting Kaio's scouting position at risk.",
+      "level_2_local": "This shear is a symptom of a larger, systemic imbalance in the ferrofluid sea's magnetic tides.",
+      "level_3_campaign_arc": "Failing to understand these tides could doom the colony's long-term survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      12,
+      8,
+      15,
+      4,
+      19
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.7,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4o",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If Kaio fails to stabilize the anchor, the sheer force of the wave will rip the cliff face apart, tossing him into the sea and losing the crucial sensor data.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio misreads the magnetic currents entirely, anchoring to a fault line that instantly shatters, dumping him towards the sea.",
+        "below_dc_complicated_fail_forward": "Kaio manages to secure the anchor, but the feedback loop fries his main sensor array, leaving them blind to the next wave.",
+        "meets_dc_clean_success": "Kaio successfully stabilizes the anchor and rides out the wave, securing the data.",
+        "dc_plus_5_or_20_extended_lore": "Kaio not only stabilizes the anchor but discovers a harmonic frequency in the wave that could be used to predict future shears."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio, his pockets full of useless, glowing rocks, scrambled up the shivering basalt as the Magnetohydrodynamic Kelvin-Helmholtz shear ripped through the ferrofluid sea below. The air tasted of ozone and copper, the magnetic force pulling at his very teeth. He jammed his sextant into a crevice to take a final reading, just as the rock face groaned in protest. Panting, he slid down the safe side of the ridge, nearly colliding with Ryn, who was already marching up with a grim expression and a satchel of emergency rations. Kaio shoved the data crystal and his lucky sextant into Ryn's hands. 'The lower vents are blowing! I mapped the resonance, but you've got maybe three minutes before the whole shelf drops!' Ryn, clutching the still-warm crystal, felt the vibration of the impending collapse rattling his own bones as he looked past Kaio toward the churning sea."
+    }
+  }
+}
