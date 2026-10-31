@@ -76,7 +76,8 @@
     "tension_velocity": 0.5,
     "humor_frequency": 0.2,
     "combat_density": 0.0,
-    "pacing_differential": 0.1
+    "pacing_differential": 0.1,
+    "composite_lpi": 0.68
   },
   "dual_agent_contract": {
     "master_narrator": {
@@ -108,5 +109,8 @@
     "loaded_full_card_ids": [
       "enclave_13_ryn"
     ]
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
   }
 }
