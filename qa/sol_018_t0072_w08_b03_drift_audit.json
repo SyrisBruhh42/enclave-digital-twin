@@ -70,7 +70,13 @@
       }
     ],
     "strain_accumulated_upward": 1,
-    "prerolled_hazard_queue": [7, 14, 2, 19, 11]
+    "prerolled_hazard_queue": [
+      7,
+      14,
+      2,
+      19,
+      11
+    ]
   },
   "lpi_metrics": {
     "relational_tension_density": 0.65,
@@ -110,7 +116,10 @@
   "base_snapshot_tick": 72,
   "event_type": "DRIFT_AUDIT",
   "location": "The_Hearth",
-  "actors": ["enclave_13_ryn", "enclave_03_silas"],
+  "actors": [
+    "enclave_13_ryn",
+    "enclave_03_silas"
+  ],
   "summary": "Ryn combats intense magnetic shear threatening the evening feast, handing off physical control to Silas.",
   "importance": 7,
   "novelty_score": 5,
@@ -123,7 +132,9 @@
   "context_manifest": {
     "full_cards_loaded_count": 1,
     "interlocutor_full_cards_loaded": 0,
-    "loaded_full_card_ids": ["enclave_13_ryn"],
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
     "relationship_edges_loaded": 1,
     "lore_cards_loaded": 1
   },
