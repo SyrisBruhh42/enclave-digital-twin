@@ -1436,8 +1436,10 @@
       "morale": 0.5
     }
   },
-  "applied_event_ids": [],
-  "total_events_through_tick": 108,
+  "applied_event_ids": [
+    "evt_s023_t0090_expedition_consequence"
+  ],
+  "total_events_through_tick": 109,
   "recent_segments": [
     {
       "segment_id": "seg_s019_t0075_enclave_05_kaio",
