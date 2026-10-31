@@ -1,0 +1,125 @@
+{
+  "event_id": "evt_sol018_t0071_w07_b03",
+  "tick_id": 71,
+  "colony_sol": 18,
+  "day_phase": "DUSK_CRAFT",
+  "event_type": "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "campaign_metadata": {
+    "session_number": 71,
+    "colony_sol": 18,
+    "tick_id": 71,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Factcheck continuity log before the feast",
+      "mid_term_milestone": "Stabilize the Enclave's resources",
+      "campaign_arc_climax": "Uncover the secrets of the Exoplanet PvE Sanctuary"
+    }
+  },
+  "active_location": {
+    "location_id": "loc_enclave_dusk_craft_zone",
+    "macro_silhouette": "The dusk craft zone is lit by the flickering glow of the ferrofluid sea, where magnetohydrodynamic shear creates swirling patterns of light. The metallic walls hum with latent energy, casting long, wavering shadows. In the center, a large workbench is covered in half-finished tools and glowing geodes.",
+    "sensory_palette": {
+      "sight_and_color": "Swirling, bioluminescent blues and deep metallic greys.",
+      "sound": "The low, resonant hum of magnetic shear and the occasional crackle of static.",
+      "smell": "Ozone mixed with the earthy scent of nearby spore-fog.",
+      "tactile_temperature": "A biting, metallic chill in the air, countered by bursts of residual heat from the geodes.",
+      "taste_optional": "A faint, metallic tang on the back of the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetic Workbench",
+        "affordance_description": "A heavy iron workbench imbued with temporary polarity fields.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Glowing Geode Cluster",
+        "affordance_description": "A volatile cluster of geodes that can be triggered to release a burst of energy.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Shadowed Alcove",
+        "affordance_description": "A recess in the metallic wall, heavily shadowed by the flickering light.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_ferrofluid_eddy",
+      "name_and_role": "Ferrofluid Eddy (Environmental Hazard)",
+      "motivation_goal": "To expand and destabilize the local magnetic field.",
+      "consistent_method": "Surging rhythmically with the twin suns' alignment.",
+      "immediate_complication": "Threatens to overload the geode charge capacity.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The eddy will cause a cascading magnetic failure across the dusk craft zone."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The magnetohydrodynamic shear is interfering with the continuity logs.",
+      "level_2_local": "The local magnetic field must be recalibrated before the ferrofluid sea surges.",
+      "level_3_campaign_arc": "Mastering the exoplanet's wild physics is key to the Enclave's survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      14,
+      8,
+      19,
+      3,
+      11
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.6,
+    "unresolved_conflict_ratio": 0.3,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.55,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Ollama",
+      "model": "jules-judge",
+      "temperature": 0.1,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If the check fails, the magnetic shear will scramble the logs, causing a minor discontinuity.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio misreads the magnetic currents entirely, introducing a false log entry.",
+        "below_dc_complicated_fail_forward": "The logs are secured, but the process drains Kaio's stamina significantly.",
+        "meets_dc_clean_success": "Kaio smoothly stabilizes the field and secures the logs.",
+        "dc_plus_5_or_20_extended_lore": "Kaio not only secures the logs but discovers a hidden pattern in the ferrofluid sea's rhythm."
+      }
+    },
+    "master_narrator": {
+      "executor": "Ollama",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio finishes auditing the logs, shaking the static from his fingers. He grabs the brass data-baton, its surface still warm, and jogs over to the Hub. He spots Ryn near the metabolic engine and tosses the baton directly to him. 'All logged and clear, chef. Try not to drop it in the soup.'"
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ]
+  },
+  "base_snapshot_tick": 71
+}
