@@ -1,0 +1,60 @@
+{
+  "event_id": "evt_s021_t0081_world_consequence",
+  "tick_id": 81,
+  "colony_sol": 21,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2084-06-21T06:00:00Z",
+  "base_snapshot_tick": 81,
+  "event_type": "EXPEDITION_DISCOVERY",
+  "location": "The Ferrofluid Sea",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "summary": "Silas examines the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea and hands off duties to Hector.",
+  "importance": 7,
+  "novelty_score": 6,
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "active_location": {
+    "location_id": "loc_ferrofluid_sea",
+    "macro_silhouette": "The ferrofluid sea churns with unnatural, dark spikes, drawn upward by the strange magnetic tides of the exoplanet. The shore is slick and perilous. The magnetic storm creates chaotic, invisible currents in the air and the liquid itself.",
+    "sensory_palette": {
+      "sight_and_color": "Dark, spiky fluid surface and a hazy, charged atmosphere.",
+      "sound": "Low hum of magnetic fields and sloshing metallic liquid.",
+      "smell": "Ozone and metallic tang.",
+      "tactile_temperature": "Prickling sensation of static on skin and heavy, freezing air.",
+      "taste_optional": "Metallic."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetic shielding generator",
+        "affordance_description": "Can be engaged to repulse the encroaching fluid.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Floating metallic debris",
+        "affordance_description": "Can be polarized to draw small objects toward it.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 10
+      },
+      {
+        "feature_name": "Exposed power core",
+        "affordance_description": "Draws excess charge from the storm.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "narrative_prose": "Silas stared intently at the swirling anomalies, a clear Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea manifesting right before his eyes. The stakes were high; if the shear patterns destabilized, the local magnetic field would fluctuate wildly, disrupting their instruments, and if they failed to adapt, the resulting electromagnetic pulse would fry the entire sector's grid. He turned as Hector approached, the heavy metallic boots clanking on the grating. 'It's getting worse,' Silas said, physically handing Hector the magnetic diagnostic baton. 'You're up. Keep a close watch on those shear patterns.' Hector took the baton, feeling the low-frequency hum vibrating through its casing, a stark reminder of the volatile forces at play.",
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
+    "full_cards_loaded_count": 1
+  }
+}
