@@ -1,0 +1,118 @@
+{
+  "base_snapshot_tick": 83,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "campaign_metadata": {
+    "session_number": 19,
+    "colony_sol": 21,
+    "tick_id": 83,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Assess the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea.",
+      "mid_term_milestone": "Stabilize the primary magnetic containment perimeter.",
+      "campaign_arc_climax": "Complete the Sanctuary and ensure Enclave survival."
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea_overlook",
+    "macro_silhouette": "The obsidian cliffside drops precipitously into the churning expanse of the ferrofluid sea, where silvery crests twist into impossible, jagged peaks under the twin suns. Luminescent spore-fog clings to the jagged basalt outcroppings, occasionally illuminated by arcing static discharges from the depths. The wind howls through the natural archways, carrying the metallic scent of ionized iron and the unsettling hum of deep-sea magnetic friction.",
+    "sensory_palette": {
+      "sight_and_color": "Silvery ferrofluid peaks against dark basalt, flashes of cerulean static discharge.",
+      "sound": "A deep, resonant hum of magnetic shear and the sharp crackle of arcing static.",
+      "smell": "Ozone, rusted iron, and the sharp tang of electrified spore-fog.",
+      "tactile_temperature": "Biting cold wind juxtaposed with sudden, stinging bursts of static heat.",
+      "taste_optional": "A metallic, battery-acid tang on the back of the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Basalt Pinnacle Observatory",
+        "affordance_description": "A tall, natural spire that provides a clear line of sight over the shear wave patterns.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetized Spore Cloud",
+        "affordance_description": "A dense, clinging fog that can mask thermal and visual signatures.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Ferrofluid Surge Pool",
+        "affordance_description": "An unstable, swirling pool of liquid iron that can devour and trap loose metallic gear.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "kelvin_helmholtz_wave_anomaly",
+      "name_and_role": "Ferrofluid Shear Wave Anomaly",
+      "motivation_goal": "To equalize the magnetic pressure gradient across the coastal boundary.",
+      "consistent_method": "Generating erratic, towering spikes of liquid iron that crash against the shoreline.",
+      "immediate_complication": "The anomalous waves are disrupting Kaio's navigational instruments and causing localized gravity distortions.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "If ignored, the shear waves will trigger a massive magnetic storm, blinding all sensor arrays and threatening the Sanctuary's outer pylons."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio needs to map the unpredictable Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea before the next storm hits.",
+      "level_2_local": "The shear waves threaten to destabilize the Enclave's coastal supply routes and disrupt Ryn's foraging schedules.",
+      "level_3_campaign_arc": "Mastering the exoplanet's wild magnetic meteorology is essential to securing the Sanctuary's long-term viability."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      12,
+      8,
+      17,
+      4,
+      19
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.65,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.4,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.6875,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "aegis_host",
+      "model": "gpt-4-turbo",
+      "temperature": 0.4,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If Kaio misreads the shear, his sextant will be magnetically fused, leaving him blind in the coming spore-storm.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio completely misinterprets the shear wave, leading him directly into a localized gravity inversion that traps him on a crumbling ledge.",
+        "below_dc_complicated_fail_forward": "Kaio manages to chart the shear, but a sudden ferrofluid surge magnetizes his pack, forcing him to abandon some of his glowing rocks.",
+        "meets_dc_clean_success": "Kaio correctly calculates the shear frequency, securing safe passage and preserving his equipment.",
+        "dc_plus_5_or_20_extended_lore": "Kaio perfectly predicts the waves, uncovering a hidden sub-surface current that could provide a safer route for future expeditions."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules_narrative_engine",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "The wind howled, a biting gust that carried the metallic tang of the churning sea below. Kaio clung to the basalt pinnacle, his brass sextant vibrating violently in his grip. He was tracking the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, watching in breathless wonder as the liquid iron peaked into impossible, jagged crests. 'Okay, hear me out,' he muttered to himself, tracing a glowing line of spore-fog with his finger, 'the magnetic shear isn't random\u2014it's dancing.' A sudden crack of static electricity arched from a rising wave, singing the edge of his cloak. He laughed, a bright, buoyant sound against the roar of the anomaly. The erratic spikes were beautiful, but they were creeping dangerously close to the coastal path. If he couldn't plot the frequency, the resulting storm would rip through their supply routes. He scrambled down the outcropping, boots slipping on the slick, magnetized moss, until he reached the safety of the lower ridge. There, waiting with crossed arms and a remarkably unamused expression, was Ryn. Kaio practically vaulted the last few feet, landing with a clatter of glowing rocks spilling from his pockets. He shoved the vibrating, static-charged sextant directly into the chef's hands. 'Ryn! You won't believe the resonance frequencies! Just don't let it touch your whisk!'"
+    }
+  }
+}
