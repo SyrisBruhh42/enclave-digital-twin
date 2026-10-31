@@ -575,13 +575,16 @@
       "squad_a": "The Forge",
       "squad_b": "The Hub",
       "relationship_type": "Mentor_Mentee",
-      "bond_strength": 0.79,
-      "trust": 0.83,
+      "bond_strength": 0.84,
+      "trust": 0.88,
       "affection": 0.81,
       "intellectual_friction": 0.45,
       "how_a_sees_b": "Appreciates Dorian's generous cross-disciplinary advice and loves hearing Dorian's stories of Old Earth during Evening Dispatch.",
       "how_b_sees_a": "Watches over Jane's work on The Stormbreaker with fond cross-squad mentorship, offering The Hub insights whenever Jane asks.",
-      "shared_history_hook": "Collaborated across The Forge and The Hub during last winter's spore-fog lock-in to cross-calibrate The Stormbreaker with The Living Atlas & Mycelial Concordance."
+      "shared_history_hook": "Collaborated across The Forge and The Hub during last winter's spore-fog lock-in to cross-calibrate The Stormbreaker with The Living Atlas & Mycelial Concordance.",
+      "evidence_refs": [
+        "evt_s022_t0088_reflection"
+      ]
     },
     {
       "pair_id": "enclave_02_jane__enclave_16_elara",
@@ -6580,6 +6583,6 @@
       }
     }
   },
-  "updated_at_tick": 87,
-  "applied_event_count": 105
+  "updated_at_tick": 88,
+  "applied_event_count": 106
 }
