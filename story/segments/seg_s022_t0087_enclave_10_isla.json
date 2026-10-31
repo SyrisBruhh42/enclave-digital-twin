@@ -1,0 +1,140 @@
+{
+  "event_id": "seg_s022_t0087_enclave_10_isla",
+  "tick_id": 87,
+  "colony_sol": 22,
+  "day_phase": "DUSK_CRAFT",
+  "world_timestamp_iso": "2026-10-25T18:00:00Z",
+  "base_snapshot_tick": 87,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The Simulacrum",
+  "actors": [
+    "enclave_10_isla",
+    "enclave_15_dorian"
+  ],
+  "summary": "Isla encodes holographic storm telemetry into nanostructured quartz while hand-polishing lenses, eventually passing the baton to Dorian.",
+  "importance": 5,
+  "novelty_score": 8,
+  "science_vegetable": "Magneto-acoustic cymatics coupling polyphonic synthesizer harmonics into an electromagnet matrix to suspend ferrofluid droplets in gravity-defying resonant spires.",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "active_pov_id": "enclave_10_isla",
+  "next_pov_target": "enclave_15_dorian",
+  "prev_next_pov_target": "enclave_10_isla",
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_10_isla"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "narrative_prose": "Isla didn't trust hard drives. They spun. They failed. They rusted. Crystals were forever.\n\nShe sat in the darkened heart of the Simulacrum, the chamber humming with captured telemetry. In the center of the room, orbiting droplets of liquid iron danced in the dark to a minor-key cello chord. It was Orion's work, of course—magneto-acoustic cymatics coupling polyphonic synthesizer harmonics into an electromagnet matrix. The acoustic waves manifested as physical geometry, suspending the ferrofluid in gravity-defying resonant spires. It was beautiful, but to Isla, it was a volatile variable hanging perilously close to her pristine optical quartz.\n\nThe paradox of her existence was a quiet, cramping agony in her right hand. The Simulacrum was currently encoding terabytes per second of five-dimensional holographic storm telemetry into the nanostructured quartz, modifying refractive indexes at femtosecond precision. Yet, to ensure the beam remained focused, Isla had spent the last three hours hand-polishing the primary optical lenses with a piece of chamois leather. A single smudge would scatter the laser, corrupting a planetary lifetime of data.\n\nA sudden, sharp spike in the geomagnetic field rattled the chamber. The minor-key cello chord wavered, and the ferrofluid spires shuddered, losing their surface tension. A spray of liquid iron threatened to splatter across the exposed quartz array. The pressure spiked. Most days, Isla would meticulously recalculate the Helmholtz boundary tensors. Today, the stress of the impending storm pushed her past caution. Her Sagittarius override kicked in. Instead of safely aborting the sequence, she slammed the focal length to maximum, betting the entire optical lattice on a single, untested electromagnetic pulse to repel the fluid while simultaneously finishing the data write.\n\nThe laser flared a blinding violet. The ferrofluid snapped back into its gravity-defying spires, repelled by the sudden magnetic surge, and the quartz pinged with a flawless completion chime. She exhaled a long, measured breath, massaging her cramped fingers.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Dorian's dry voice echoed from the doorway. He stood there, slate in hand, his eyes tracking the wireframe projection of the planet above them.\n\n\"I wasn't complaining,\" Isla replied crisply, though she couldn't suppress a faint, satisfied smirk. \"I was merely observing the inefficiency of genius requiring manual labor.\" She stood up, retrieving the heavy brass data baton from the console. \"The telemetry is encoded. The lattice is stable.\" She stepped forward and physically pressed the baton into Dorian's palm. \"The sequence is yours.\"",
+  "campaign_metadata": {
+    "session_number": 22,
+    "colony_sol": 22,
+    "tick_id": 87,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Encode telemetry into quartz.",
+      "mid_term_milestone": "Calibrate the Simulacrum projector.",
+      "campaign_arc_climax": "Complete The Simulacrum"
+    }
+  },
+  "active_location": {
+    "location_id": "the_simulacrum_chamber",
+    "macro_silhouette": "The Simulacrum chamber is a darkened vault centered around a crystalline projector, humming with captured telemetry. Orbiting droplets of liquid iron dance in the dark to a minor-key cello chord, suspended in gravity-defying resonant spires.",
+    "sensory_palette": {
+      "sight_and_color": "Violet laser light etching into quartz and black ferrofluid spikes.",
+      "sound": "A minor-key cello chord and the low hum of the holographic projector.",
+      "smell": "Ozone and hot brass.",
+      "tactile_temperature": "Warm air with a slight magnetic tingle on the skin.",
+      "taste_optional": "A faint metallic tang from the ionized air."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Optical Quartz Lens",
+        "system_verb": "ATTRACT",
+        "affordance_description": "Can be polished to focus the femtosecond laser.",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Electromagnet Matrix",
+        "system_verb": "DEFEND",
+        "affordance_description": "Provides a barrier of intense magnetic flux.",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Cymatic Resonance Basin",
+        "system_verb": "CONSUME",
+        "affordance_description": "Can absorb stray acoustic harmonics to stabilize the room.",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "cymatic_ferrofluid_spire",
+      "name_and_role": "Cymatic Ferrofluid Spire",
+      "motivation_goal": "To respond to the ambient harmonics.",
+      "consistent_method": "Forming jagged, gravity-defying shapes in time with the minor-key cello chord.",
+      "immediate_complication": "A sudden shift in the magnetic field causes the spire to destabilize.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The spire collapses and splatters liquid iron across the pristine quartz lenses."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Encode the telemetry into the optical lattice.",
+      "level_2_local": "Prevent the ferrofluid from ruining the lenses.",
+      "level_3_campaign_arc": "Finalize the Simulacrum's architecture."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_10_isla",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_15_dorian",
+        "tactical_role": "SUPPORT"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      18,
+      7,
+      3,
+      19
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.7,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_ai",
+      "model": "v2",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The ferrofluid destabilizes.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Isla believes the lattice is secure when it isn't.",
+        "below_dc_complicated_fail_forward": "The lattice holds, but the lenses are smudged.",
+        "meets_dc_clean_success": "The telemetry is perfectly encoded.",
+        "dc_plus_5_or_20_extended_lore": "Isla discovers a new harmonic frequency."
+      }
+    },
+    "master_narrator": {
+      "executor": "local_ai",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Isla physically passes the data baton to Dorian."
+    }
+  }
+}
