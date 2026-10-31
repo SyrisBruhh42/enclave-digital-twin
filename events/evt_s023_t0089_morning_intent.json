@@ -105,7 +105,13 @@
         }
       ],
       "strain_accumulated_upward": 1,
-      "prerolled_hazard_queue": [ 4, 8, 15, 12, 18 ]
+      "prerolled_hazard_queue": [
+        4,
+        8,
+        15,
+        12,
+        18
+      ]
     },
     "lpi_metrics": {
       "relational_tension_density": 0.6,
@@ -134,7 +140,7 @@
         "temperature": 0.4,
         "calypso_zero_raw_stats": true,
         "prosodic_micro_pauses_enabled": true,
-        "agency_handoff_prompt": "Jane wiped the mud from her cheek, calculating the atmospheric potential gradient in her head. She could model a planet-wide Lorenz strange attractor in phase space, adjusting the femtosecond Laser-Induced Plasma Channels to ionize a conductive step-leader highway at 50 kV/m into the bedrock capacitor geode. Yet, despite her ability to map deterministic chaos across the exoplanet, she was currently knee-deep in a muddy trench, spending her afternoon digging by hand just to ground a copper rod.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Jane muttered to herself, echoing a sentiment she barely believed right now. The wind tore at her clothes, whistling around the copper spire fifty meters above the crater valley. The sky wasn't just grey; it was a bruised purple thunderhead, lit from within by constant sheet lightning. A violet laser needle stitched the clouds to the screaming copper spire above her.\n\n\"It's not random,\" Jane muttered, her eyes darting across the muddy trench. \"It's chaotic. Deterministic chaos. There's a pattern, it just has infinite variables. And right now, one of those variables is this shovel.\"\n\nA sharp spike of frustration pierced her usual detached logic. Her mind, perfectly tuned to solve differential equations, recoiled at the sheer indignity of manual labor. For a terrifying second, her Vex Override threatened to surface—a sudden, dramatic urge to climb out of the trench, drape herself in the grounding wire, and demand that the storm applaud her elegant code.\n\nShe pushed the diva down and focused. The laser channel was primed. The ionization path was set. She just needed to hand off the physical connection. Willow approached through the gloom, looking entirely too comfortable in the damp chill.\n\n\"Here,\" Jane said, thrusting the muddy spool of sensor cable toward the alchemist. \"Don't drop it. The potential gradient is passing 50 kilovolts per meter. If the step-leader connects before this is spliced, you'll be a crispy anecdote.\""
+        "agency_handoff_prompt": "Jane wiped the mud from her cheek, calculating the atmospheric potential gradient in her head. She could model a planet-wide Lorenz strange attractor in phase space, adjusting the femtosecond Laser-Induced Plasma Channels to ionize a conductive step-leader highway at 50 kV/m into the bedrock capacitor geode. Yet, despite her ability to map deterministic chaos across the exoplanet, she was currently knee-deep in a muddy trench, spending her afternoon digging by hand just to ground a copper rod.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Jane muttered to herself, echoing a sentiment she barely believed right now. The wind tore at her clothes, whistling around the copper spire fifty meters above the crater valley. The sky wasn't just grey; it was a bruised purple thunderhead, lit from within by constant sheet lightning. A violet laser needle stitched the clouds to the screaming copper spire above her.\n\n\"It's not random,\" Jane muttered, her eyes darting across the muddy trench. \"It's chaotic. Deterministic chaos. There's a pattern, it just has infinite variables. And right now, one of those variables is this shovel.\"\n\nA sharp spike of frustration pierced her usual detached logic. Her mind, perfectly tuned to solve differential equations, recoiled at the sheer indignity of manual labor. For a terrifying second, her Vex Override threatened to surface\u2014a sudden, dramatic urge to climb out of the trench, drape herself in the grounding wire, and demand that the storm applaud her elegant code.\n\nShe pushed the diva down and focused. The laser channel was primed. The ionization path was set. She just needed to hand off the physical connection. Willow approached through the gloom, looking entirely too comfortable in the damp chill.\n\n\"Here,\" Jane said, thrusting the muddy spool of sensor cable toward the alchemist. \"Don't drop it. The potential gradient is passing 50 kilovolts per meter. If the step-leader connects before this is spliced, you'll be a crispy anecdote.\""
       }
     }
   }
