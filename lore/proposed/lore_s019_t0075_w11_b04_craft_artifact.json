@@ -1,0 +1,143 @@
+{
+  "base_snapshot_tick": 75,
+  "event_id": "lore_s019_t0075_w11_b04_craft_artifact",
+  "tick_id": 75,
+  "colony_sol": 19,
+  "day_phase": "DUSK_CRAFT",
+  "world_timestamp_iso": "2026-10-25T00:00:00Z",
+  "event_type": "POV_SCENE_SEGMENT",
+  "summary": "Kaio navigates the Kelvin-Helmholtz shear at the ferrofluid sea.",
+  "importance": 7,
+  "novelty_score": 8,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "campaign_metadata": {
+    "session_number": 19,
+    "colony_sol": 19,
+    "tick_id": 75,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Resolve the Kelvin-Helmholtz shear.",
+      "mid_term_milestone": "Secure the ferrofluid sea.",
+      "campaign_arc_climax": "Complete The Sanctuary."
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea_shore",
+    "macro_silhouette": "The shore of the ferrofluid sea churns with magnetic tension, dark waves rising into jagged spikes before crashing in slow motion. Above, the twin suns cast a surreal glow, illuminating the magnetohydrodynamic Kelvin-Helmholtz shear that tears at the boundary layer. The chaotic energy forms shifting geometric patterns across the horizon.",
+    "sensory_palette": {
+      "sight_and_color": "Dark metallic liquid peaking into sharp thorns.",
+      "sound": "A deep piezoelectric hum and cracking shear.",
+      "smell": "Ozone and metallic tang.",
+      "tactile_temperature": "Static electricity dancing on the skin.",
+      "taste_optional": "Copper."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetic Shear Wave",
+        "affordance_description": "Can be stabilized to prevent it from consuming the shore.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Spikes",
+        "affordance_description": "Can be gathered to attract passing metallic wildlife.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Conductive Geodes",
+        "affordance_description": "Can be tapped to drain excess energy.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "shear_vortex",
+      "name_and_role": "Magnetohydrodynamic Vortex",
+      "motivation_goal": "To destabilize the shoreline boundary.",
+      "consistent_method": "Generating cascading shear waves.",
+      "immediate_complication": "Threatens to overwhelm Kaio's sensory instruments.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Will eventually tear apart the local magnetic field."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The shear is destabilizing the immediate shore.",
+      "level_2_local": "This threatens the structural integrity of the local biome.",
+      "level_3_campaign_arc": "Mastering this phenomenon is key to The Sanctuary."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.6,
+    "unresolved_conflict_ratio": 0.3,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.5,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "GPT-4",
+      "model": "gpt-4-turbo",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The sheer wave corrupts Kaio's sextant.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio misreads the wave.",
+        "below_dc_complicated_fail_forward": "Kaio stabilizes it but drops his notes.",
+        "meets_dc_clean_success": "Kaio accurately maps the shear.",
+        "dc_plus_5_or_20_extended_lore": "Kaio discovers a stable corridor."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio tosses his glowing, ozone-scented sextant to Ryn."
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ]
+  },
+  "location": "ferrofluid_sea_shore",
+  "actors": [
+    "enclave_05_kaio",
+    "enclave_13_ryn"
+  ],
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "narrative_prose": "Kaio bounded across the jagged basalt outcroppings, his brass sextant catching the surreal glow of the twin suns as they dipped low. Before him lay the ferrofluid sea, an alien expanse of dark metallic liquid that didn't just ripple\u2014it sheared. The magnetohydrodynamic Kelvin-Helmholtz instability tore at the boundary layer, throwing up sharp, shifting spikes of iron-rich fluid. He paused, whistling a three-note tune as he charted the chaotic flow, knowing that a single misstep into the resonant spore-fog would mean disaster. The tension in the air was electric, biting at his exposed skin. He had to map this corridor for The Sanctuary, to understand how the currents twisted the local gravity. It wasn't about fighting the current, but finding the rhythm of its violence. A sudden spike of magnetic pressure warned him of a rising wave. He adjusted his stance, shielding his instruments from the spray. With the final measurements locked in, he grinned through the ozone-scented air. Turning back to the ridgeline, he saw Ryn approaching. Kaio jogged over, clapping Ryn on the shoulder, and passed over the glowing, ozone-scented sextant, the baton officially handed off."
+}
