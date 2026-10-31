@@ -1,0 +1,132 @@
+{
+  "event_id": "seg_s018_t0071_enclave_05_kaio",
+  "tick_id": 71,
+  "colony_sol": 18,
+  "day_phase": "DUSK_CRAFT",
+  "world_timestamp_iso": "2042-03-18T18:00:00Z",
+  "base_snapshot_tick": 71,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The_Ferrofluid_Sea",
+  "actors": ["enclave_05_kaio", "enclave_13_ryn"],
+  "summary": "Kaio explores the shoreline of the Ferrofluid Sea.",
+  "importance": 5,
+  "novelty_score": 0.8,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": ["enclave_05_kaio"]
+  },
+  "narrative_prose": "The shoreline of the Ferrofluid Sea was a churning chaos of metallic froth, where the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea created jagged, luminescent waves that crashed against the obsidian cliffs. The air smelled of ozone and rusted iron, a bitter metallic tang that clung to the back of the throat. The deafening roar of the waves masked all other sounds, a constant, rhythmic pounding that resonated deep in the chest. Kaio braced himself against the howling wind, his face numb from the biting cold that radiated from the dark waters. He clambered over a slick, jutting outcropping of rock, his boots finding precarious purchase on the slime-coated surface. A sudden, violent surge of the sea threw him off balance, and he scrambled to grab the slick rock, nearly losing his grip. He managed to pull himself up, his heart pounding in his chest. A jagged spine of the sea rose in an attempt to devour him, a physical manifestation of the sheer force of the storm. He leaned back into a crevice to avoid it, taking deep, shaky breaths. Spotting Ryn waiting for him up ahead, he reached out, clutching the glowing brass compass tightly in his hand, and firmly placed it directly into Ryn's waiting palm, completing the physical baton handoff.",
+  "campaign_metadata": {
+    "session_number": 18,
+    "colony_sol": 18,
+    "tick_id": 71,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Survive the storm",
+      "mid_term_milestone": "Reach the Enclave",
+      "campaign_arc_climax": "Uncover the truth"
+    }
+  },
+  "active_location": {
+    "location_id": "The_Ferrofluid_Sea",
+    "macro_silhouette": "The shoreline of the Ferrofluid Sea was a churning chaos of metallic froth, where the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea created jagged, luminescent waves that crashed against the obsidian cliffs. The dark waters heaved and convulsed with terrifying force. A dense mist of ionized particles hung heavy in the air, glowing faintly with an eerie, sickly green light.",
+    "sensory_palette": {
+      "sight_and_color": "Sickly green light and dark, metallic waters",
+      "sound": "Deafening roar of waves and howling wind",
+      "smell": "Ozone and rusted iron",
+      "tactile_temperature": "Biting cold and slick, slime-coated rock",
+      "taste_optional": "Bitter metallic tang"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Slick Rock Outcropping",
+        "affordance_description": "A treacherous path over the water",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Jagged Sea Spine",
+        "affordance_description": "A sudden hazard rising from the water",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Deep Rock Crevice",
+        "affordance_description": "A narrow space to avoid the waves",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_ferrofluid_sea",
+      "name_and_role": "Ferrofluid Sea",
+      "motivation_goal": "Consume the shoreline",
+      "consistent_method": "Violent surges",
+      "immediate_complication": "A jagged spine of the sea rises",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "The sea claims the entire shoreline"
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Survive the storm",
+      "level_2_local": "Reach safety",
+      "level_3_campaign_arc": "Understand the planet's physics"
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [14, 12, 18, 5, 20]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.5,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.6,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.7,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Kaio is swept away by the sea",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio completely misjudges the wave timing and gets swept off the rocks.",
+        "below_dc_complicated_fail_forward": "Kaio slips and drops some gear, but manages to hold on.",
+        "meets_dc_clean_success": "Kaio successfully navigates the slick rocks.",
+        "dc_plus_5_or_20_extended_lore": "Kaio notices a safe path and learns about the wave patterns."
+      }
+    },
+    "master_narrator": {
+      "executor": "claude",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Spotting Ryn waiting for him up ahead, he reached out, clutching the glowing brass compass tightly in his hand, and firmly placed it directly into Ryn's waiting palm, completing the physical baton handoff."
+    }
+  }
+}
