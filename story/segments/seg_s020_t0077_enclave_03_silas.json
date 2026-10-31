@@ -1,0 +1,144 @@
+{
+  "event_id": "seg_s020_t0077_enclave_03_silas",
+  "tick_id": 77,
+  "colony_sol": 20,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2024-10-31T06:00:00Z",
+  "base_snapshot_tick": 77,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The_First_Forge",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "summary": "Silas repairs the induction array and hands off the heavy wrench to Hector.",
+  "importance": 0.8,
+  "novelty_score": 0.7,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {
+    "conscientiousness_state": 0.05
+  },
+  "relationship_deltas": {
+    "enclave_03_silas_to_enclave_01_hector": 0.02
+  },
+  "evidence_refs": [],
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ]
+  },
+  "campaign_metadata": {
+    "session_number": 20,
+    "colony_sol": 20,
+    "tick_id": 77,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Maintain containment tolerances against the magnetic sheer while passing responsibility.",
+      "mid_term_milestone": "Stabilize the ferrofluid extraction manifold.",
+      "campaign_arc_climax": "Survive the impending polarity inversion cascade."
+    }
+  },
+  "active_location": {
+    "location_id": "The_First_Forge",
+    "macro_silhouette": "The First Forge's primary induction catwalk sways precariously in the roaring ozone winds above the churning ferrofluid sea. Thick copper cables whip and spark as they strain to ground the volatile magnetohydrodynamic forces crashing below. Down on the rocky shore, bioluminescent moss flickers wildly as the jet-black metallic tides slam against the reinforced foundation.",
+    "sensory_palette": {
+      "sight_and_color": "Blinding blue electrical arcs illuminating the slick, jet-black peaks of the metallic waves.",
+      "sound": "Deafening thunderclaps of discharged voltage overlaid with the deep, sickening crunch of the shear.",
+      "smell": "Heavy, stinging ozone mixed with a sharp tang of vaporized iron.",
+      "tactile_temperature": "A blistering heat radiating from the overworked shunts that violently contrasts with the biting sleet.",
+      "taste_optional": "A coppery, electric sizzle that fills the mouth and raises the hairs on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Overloaded Induction Array",
+        "affordance_description": "Can be hastily recalibrated to pull magnetic charge away from the stressed joints.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Emergency Flux Sink",
+        "affordance_description": "Can safely bleed off the escalating Kelvin-Helmholtz shear into the bedrock.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Thermal Shunt Barrier",
+        "affordance_description": "Can be expanded to protect vital structural nodes from the incoming surge.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The relentless Kelvin-Helmholtz shear is tearing at the magnetic induction lines, threatening immediate electrocution and structural failure.",
+      "level_2_local": "If the primary shunts blow, The First Forge will lose its defense against the ferrofluid sea.",
+      "level_3_campaign_arc": "The exoplanet's fundamental physical forces stubbornly resist Enclave engineering."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      },
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 3,
+    "prerolled_hazard_queue": [
+      12,
+      19,
+      6,
+      15,
+      2
+    ]
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "GPT-4o",
+      "model": "gpt-4o",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If the induction array goes uncalibrated, the voltage spike will severely burn Silas before Hector can grab the wrench.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Silas slips, pulling the wrong lever and short-circuiting the array.",
+        "below_dc_complicated_fail_forward": "Silas forces the calibration, taking a small shock and dropping the wrench, but stabilizing the array.",
+        "meets_dc_clean_success": "Silas meticulously calibrates the array, then hands the wrench to Hector smoothly.",
+        "dc_plus_5_or_20_extended_lore": "Silas optimizes the array so well that it begins slowly recharging the colony's reserves before he hands Hector the wrench."
+      }
+    },
+    "master_narrator": {
+      "executor": "Claude-3-Opus",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Silas wiped the metallic grit from his brow, ignoring the sparking array for a moment. He tightened his grip on the heavy wrench, then forcefully pressed it into Hector's chest. 'Don't drop it,' he grumbled, passing the burden to the younger man."
+    }
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "kelvin_helmholtz_shear_vortex",
+      "name_and_role": "Ferrofluid Shear Vortex",
+      "motivation_goal": "To violently equilibrate the magnetic differential across the surface.",
+      "consistent_method": "Pulsing erratic spikes of kinetic and magnetic energy into rigid Enclave structures.",
+      "immediate_complication": "A massive induction surge is racing up the main copper cables toward Silas's position.",
+      "pressure_index": 9,
+      "uninterrupted_escalation": "The surge will vaporize the catwalk and drop the scaffolding directly onto the shore."
+    }
+  ],
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.75,
+    "unresolved_conflict_ratio": 0.85,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.83,
+    "classification": "Campaign-Ready"
+  }
+}
