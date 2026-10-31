@@ -1,0 +1,76 @@
+{
+  "event_id": "evt_sol_022_feast",
+  "tick_id": 88,
+  "colony_sol": 22,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-10-25T20:00:00Z",
+  "base_snapshot_tick": 88,
+  "event_type": "THE_FEAST_CONVERGENCE",
+  "location": "The_Hearth",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_02_jane",
+    "enclave_03_silas",
+    "enclave_04_leo",
+    "enclave_05_kaio",
+    "enclave_06_zara",
+    "enclave_07_willow",
+    "enclave_08_terra",
+    "enclave_09_orion",
+    "enclave_10_isla",
+    "enclave_11_kenna",
+    "enclave_12_elias",
+    "enclave_13_ryn",
+    "enclave_14_vex",
+    "enclave_15_dorian",
+    "enclave_16_elara"
+  ],
+  "summary": "Dorian synthesizes the piezoelectric echoes from ancient precursor nodes into a holographic historical projection, wrapping the colony's raw survival data in a warm, performative narrative before officially handing off the dispatch to Jane.",
+  "importance": 8.0,
+  "novelty_score": 7.0,
+  "science_vegetable": "Extracting fossilized piezoelectric signal echoes stored inside ancient precursor chitin-quartz resonator nodes overgrown by deep-crustal hyphae.",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "active_pov_id": "enclave_15_dorian",
+  "next_pov_target": "enclave_02_jane",
+  "prev_next_pov_target": "enclave_15_dorian",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_15_dorian"
+    ]
+  },
+  "narrative_prose": "Dorian did not look at the world; he looked at the wireframe beneath it.\n\nStanding before the Living Atlas, he adjusted the focal length of the crystalline projector. The map suspended in the air was not a flat projection but a three-dimensional holography of real-time data, fed by thousands of sensors Silas and Leo had embedded in the planet's crust. It was a shimmering ghost of the planet, rendered in lines of light.\n\n\"Listen to this, my brilliant, tired family,\" Dorian announced, his voice carrying the rich resonance of an Old Earth baritone, striking his late husband's brass pitch-pipe to cut through the hiss of Ryn's steam-jacketed kettles. \"Terra brought us a marvel from the deep-crustal hyphae today. Ancient precursor chitin-quartz resonator nodes. They aren't just rocks; they're phonographs.\"\n\nHe tapped the projector's focal lens. The air rippled with fossilized piezoelectric signal echoes, a quiet, chiming symphony that sounded like rain on glass, translated from the raw quartz structure. \"A civilization that spoke in vibration, recorded in stone and overgrown by fungus. I am already engraving the translation on Copper Plate Seventeen.\"\n\nHe leaned over the table, his Aries override—the Vanguard—flashing a rare, audacious grin that cut through his usual measured historiography. \"If you're complaining and no one is laughing, you're complaining wrong,\" he quipped. \"For instance, I project a three-dimensional holographic magnetosphere map across thousands of crustal sensors, then I have to tell Leo to ground every metal soup spoon in the kitchen. Then today is a good day for science!\" he laughed, the sound infectious, grounding the absurdity of their existence in a shared, defiant warmth.\n\nHe swept his gaze across the sixteen, locking eyes with Jane, who was already meticulously calculating the atmospheric potential gradient of tomorrow's storm while eating her soup with a copper grounding wire attached to her spoon. He strode over, placing the heavy copper data-slate into her waiting hands. \"The history is logged, Jane. The future is your problem now.\"",
+  "active_location": {
+    "location_id": "The_Hearth",
+    "macro_silhouette": "The Hearth hums with an almost palpable heat, its copper exhaust hoods gleaming under the erratic flicker of geode lighting. Ancient carved stone lanterns beneath the fungal canopy chime softly when the mycelial pulse passes through them. The warmth is absolute, an anchor point of safety against the bifurcated thermal shear of the valley.",
+    "sensory_palette": {
+      "sight_and_color": "Flickering amber and violet geode light, polished copper, and luminescent holographic wireframes.",
+      "sound": "The clear note of a brass pitch-pipe and the quiet chiming of fossilized piezoelectric echoes.",
+      "smell": "Caramelized amino-acids, sharp vinegar tang, and the distinct ozone scent of charged spores.",
+      "tactile_temperature": "Oppressively cozy, radiating dry heat that seeps into chilled bones.",
+      "taste_optional": "Rich, earthy umami of roasted iron-wheat husks."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Portable Crystalline Projector",
+        "affordance_description": "A delicate, hand-machined brass device that renders piezoelectric echoes into visible holograms.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Heavy Copper Data-Slate",
+        "affordance_description": "A dense block of etched memory metal passed as a physical baton of responsibility.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 10
+      },
+      {
+        "feature_name": "Grounded Metal Soup Spoons",
+        "affordance_description": "Utensils wired directly to the floor plates to prevent static shock during high-ionization events.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 8
+      }
+    ]
+  }
+}
