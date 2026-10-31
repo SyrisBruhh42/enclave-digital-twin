@@ -1,7 +1,9 @@
 {
   "base_snapshot_tick": 87,
   "context_manifest": {
-    "loaded_full_card_ids": ["enclave_10_isla"],
+    "loaded_full_card_ids": [
+      "enclave_10_isla"
+    ],
     "full_cards_loaded_count": 1,
     "active_pov_id": "enclave_10_isla",
     "next_pov_target": "enclave_15_dorian",
@@ -74,7 +76,13 @@
       }
     ],
     "strain_accumulated_upward": 2,
-    "prerolled_hazard_queue": [ 4, 15, 8, 19, 2 ]
+    "prerolled_hazard_queue": [
+      4,
+      15,
+      8,
+      19,
+      2
+    ]
   },
   "lpi_metrics": {
     "relational_tension_density": 0.4,
@@ -103,7 +111,7 @@
       "temperature": 0.8,
       "calypso_zero_raw_stats": true,
       "prosodic_micro_pauses_enabled": true,
-      "agency_handoff_prompt": "Isla didn't trust hard drives. They spun. They failed. They rusted. Crystals were forever. \n\nOrbiting droplets of liquid iron danced in the dark to a minor-key cello chord, suspended in gravity-defying resonant spires. The magneto-acoustic cymatics coupled the polyphonic synthesizer harmonics directly into the electromagnet matrix. She sat in the center of the Simulacrum, encoding terabytes per second of five-dimensional holographic storm telemetry into a sliver of nanostructured quartz. The system hummed with quiet, bioluminescent wonder. \n\nYet, for all the breathtaking complexity of the five-dimensional array, her fingers ached. She held a chamois leather cloth, hand-polishing the delicate optical lenses with agonizing precision. A single speck of dust could refract the femtosecond laser and ruin the entire lattice. Her thumb cramped. It was infuriating to manage such magnificent mathematical perfection, only to be bound by the mundane friction of physical maintenance. \n\nA sudden spike in the acoustic frequency threatened the delicate balance. The ferrofluid spires shivered. The stress clawed at her, and for a terrifying second, the cautious archivist wanted to bet the entire optical lattice on an untested pulse—a wild, Sagittarius gamble. But she clamped down on the impulse, tightening her jaw. \n\n'If you're complaining and no one is laughing, you're complaining wrong,' she muttered to herself, echoing a familiar dry banter. She adjusted the Helmholtz Vernier rings, perfectly realigning the magnetic flux. The data streamed flawlessly into the crystal, safe from entropy. With the task complete, she wrapped the quartz carefully. She turned toward the doorway, extending her cramped hand to pass the newly etched crystal to Dorian, who was already waiting to chronicle the storm's secrets."
+      "agency_handoff_prompt": "Isla didn't trust hard drives. They spun. They failed. They rusted. Crystals were forever. \n\nOrbiting droplets of liquid iron danced in the dark to a minor-key cello chord, suspended in gravity-defying resonant spires. The magneto-acoustic cymatics coupled the polyphonic synthesizer harmonics directly into the electromagnet matrix. She sat in the center of the Simulacrum, encoding terabytes per second of five-dimensional holographic storm telemetry into a sliver of nanostructured quartz. The system hummed with quiet, bioluminescent wonder. \n\nYet, for all the breathtaking complexity of the five-dimensional array, her fingers ached. She held a chamois leather cloth, hand-polishing the delicate optical lenses with agonizing precision. A single speck of dust could refract the femtosecond laser and ruin the entire lattice. Her thumb cramped. It was infuriating to manage such magnificent mathematical perfection, only to be bound by the mundane friction of physical maintenance. \n\nA sudden spike in the acoustic frequency threatened the delicate balance. The ferrofluid spires shivered. The stress clawed at her, and for a terrifying second, the cautious archivist wanted to bet the entire optical lattice on an untested pulse\u2014a wild, Sagittarius gamble. But she clamped down on the impulse, tightening her jaw. \n\n'If you're complaining and no one is laughing, you're complaining wrong,' she muttered to herself, echoing a familiar dry banter. She adjusted the Helmholtz Vernier rings, perfectly realigning the magnetic flux. The data streamed flawlessly into the crystal, safe from entropy. With the task complete, she wrapped the quartz carefully. She turned toward the doorway, extending her cramped hand to pass the newly etched crystal to Dorian, who was already waiting to chronicle the storm's secrets."
     }
   }
 }
