@@ -59,5 +59,8 @@
       }
     ]
   },
-  "narrative_prose": "The plan was flawless in theory: use the Magnetohydrodynamic Kelvin-Helmholtz shear to levitate Silas's favorite torque wrench just out of reach. Hector grinned as he tuned the induction coils, treating the megavolt corona like a warm shower. But the ferrofluid sea had other ideas. A sudden surge amplified the shear, ripping the wrench into a tight orbit around the primary mast. It wasn't quite a disaster, but the spiraling tool was now threatening the weather telemetry array. 'Oops,' Hector muttered, watching the wrench accelerate. He scrambled down the ladder, tossing his insulated gloves to Kaio, who had just arrived with a fresh supply of pitons. 'Your turn, Scout. Catch!'"
+  "narrative_prose": "The plan was flawless in theory: use the Magnetohydrodynamic Kelvin-Helmholtz shear to levitate Silas's favorite torque wrench just out of reach. Hector grinned as he tuned the induction coils, treating the megavolt corona like a warm shower. But the ferrofluid sea had other ideas. A sudden surge amplified the shear, ripping the wrench into a tight orbit around the primary mast. It wasn't quite a disaster, but the spiraling tool was now threatening the weather telemetry array. 'Oops,' Hector muttered, watching the wrench accelerate. He scrambled down the ladder, tossing his insulated gloves to Kaio, who had just arrived with a fresh supply of pitons. 'Your turn, Scout. Catch!'",
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
+  }
 }
