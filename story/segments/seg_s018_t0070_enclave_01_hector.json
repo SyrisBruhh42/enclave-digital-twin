@@ -1,0 +1,129 @@
+{
+    "event_id": "seg_s018_t0070_enclave_01_hector",
+    "tick_id": 70,
+    "colony_sol": 18,
+    "event_type": "POV_SCENE_SEGMENT",
+    "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+    "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+    "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+    "active_pov_id": "enclave_01_hector",
+    "prev_next_pov_target": "enclave_01_hector",
+    "next_pov_target": "enclave_05_kaio",
+    "calypso_zero_raw_stats": true,
+    "campaign_metadata": {
+        "session_number": 18,
+        "colony_sol": 18,
+        "tick_id": 70,
+        "pacing_mode": "MULLIGAN_CRISIS",
+        "consequential_fights_since_short_rest": 1,
+        "horizon_goals": {
+            "immediate_session_goal": "Realign the induction shunt before the storm surge hits.",
+            "mid_term_milestone": "Reinforce the outer colony defenses.",
+            "campaign_arc_climax": "Survive the great tempest of Sol 20."
+        }
+    },
+    "active_location": {
+        "location_id": "the_stormbreaker_spire",
+        "macro_silhouette": "The Stormbreaker Spire thrusts violently upward into the bruised violet sky, a jagged monument of iron and sparking copper mesh. Jagged arcs of static electricity dance across its upper lattice as the ferrofluid sea churns mercilessly below. The entire structure groans under the relentless pressure of the oncoming storm, vibrating with pent-up kinetic energy.",
+        "sensory_palette": {
+            "sight_and_color": "Flashes of harsh actinic blue lightning against deep violet and bruised iron-gray clouds.",
+            "sound": "The deafening crackle of unrestrained ozone discharging, layered over the heavy, rhythmic thrumming of the restless ferrofluid sea.",
+            "smell": "Sharp, metallic ozone cutting through the damp, earthy scent of churned sediment.",
+            "tactile_temperature": "A biting, statically-charged chill that raises hair on end and sears exposed skin.",
+            "taste_optional": "A distinct tang of copper on the tongue."
+        },
+        "interactive_features": [
+            {
+                "feature_name": "Exposed Primary Induction Coil",
+                "affordance_description": "A thick coil of braided copper, dangerously overloaded and shedding sparks.",
+                "system_verb": "CONSUME",
+                "associated_check_dc": 14
+            },
+            {
+                "feature_name": "Slick Access Rungs",
+                "affordance_description": "Metal rungs slick with condensed sea spray, providing the only path higher up the spire.",
+                "system_verb": "DEFEND",
+                "associated_check_dc": 14
+            },
+            {
+                "feature_name": "Overloaded Warning Beacon",
+                "affordance_description": "A blaring, flashing hazard light attempting to signal an impending catastrophic discharge.",
+                "system_verb": "CONCEAL",
+                "associated_check_dc": 14
+            }
+        ]
+    },
+    "reactive_toys": [
+        {
+            "entity_id": "ferrofluid_sea_surge",
+            "name_and_role": "Ferrofluid Sea Surge",
+            "motivation_goal": "To crash against the spire and ground the storm's fury.",
+            "consistent_method": "Violent, rhythmic crashing against the foundations, generating immense structural strain.",
+            "immediate_complication": "The surging sea is amplifying the magnetic shear, accelerating the impending discharge.",
+            "pressure_index": 8,
+            "uninterrupted_escalation": "The waves will crest the lower gantry, shorting out the secondary stabilizers."
+        }
+    ],
+    "encounter_matrix": {
+        "three_levels_of_why": {
+            "level_1_immediate": "The induction shunt must be realigned immediately to prevent a catastrophic blowout.",
+            "level_2_local": "Securing the spire ensures the colony's energy reserves survive the storm.",
+            "level_3_campaign_arc": "Mastering the tempest's power is crucial to long-term survival on the Enclave."
+        },
+        "active_specialist_roles": [
+            {
+                "actor_id": "enclave_01_hector",
+                "tactical_role": "STRIKER"
+            },
+            {
+                "actor_id": "enclave_05_kaio",
+                "tactical_role": "LEADER"
+            }
+        ],
+        "strain_accumulated_upward": 14,
+        "prerolled_hazard_queue": [
+            14,
+            18,
+            5,
+            20,
+            11
+        ]
+    },
+    "lpi_metrics": {
+        "relational_tension_density": 0.85,
+        "motivational_vector_saturation": 0.9,
+        "unresolved_conflict_ratio": 0.75,
+        "temporal_horizon_immediacy": 0.95,
+        "composite_lpi": 0.86,
+        "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+        "judge_tactician": {
+            "provider": "Anthropic",
+            "model": "claude-3-opus-20240229",
+            "temperature": 0.4,
+            "explicit_pre_roll_dc": 14,
+            "failure_stakes_declared": "If the realignment fails, the surge will blow the primary coil and electrocute anyone on the upper gantry.",
+            "graduated_outcomes": {
+                "nat_1_false_intuition": "Hector mistakenly believes the shear is receding and removes his grounding tether too early.",
+                "below_dc_complicated_fail_forward": "Hector realigns the shunt but drops his torque wrench into the churning sea, complicating future repairs.",
+                "meets_dc_clean_success": "Hector perfectly times the surge, snapping the shunt into place just as the wave crests.",
+                "dc_plus_5_or_20_extended_lore": "Hector not only secures the shunt but discovers a resonant frequency in the shear that could optimize future power capture."
+            }
+        },
+        "master_narrator": {
+            "executor": "claude-3-opus-20240229",
+            "temperature": 0.7,
+            "calypso_zero_raw_stats": true,
+            "prosodic_micro_pauses_enabled": true,
+            "agency_handoff_prompt": "Hector gripped the vibrating copper shunt with both hands, muscles screaming as he fought the brutal Magnetohydrodynamic Kelvin-Helmholtz shear tearing across the ferrofluid sea below. The actinic blue lightning was deafening, but his grin was wider than the storm front. With a final, agonizing heave, he slammed the coupling home, a massive spray of sparks showering down the lattice. 'She's holding!' he roared over the gale, though his voice was swallowed by the thunder. He didn't wait for confirmation. Swinging wildly down the slick access rungs, he practically threw himself onto the lower gantry where Kaio was waiting. Hector slapped the heavy, insulated telemetry baton directly into Kaio's chest, nearly knocking the scout backward. 'Your turn, boss! Keep her steady, I'm going back up for the secondary!' he yelled, already turning back toward the sparking nightmare above."
+        }
+    },
+    "context_manifest": {
+        "full_cards_loaded_count": 1,
+        "interlocutor_full_cards_loaded": 0,
+        "loaded_full_card_ids": [
+            "enclave_01_hector"
+        ]
+    }
+}
