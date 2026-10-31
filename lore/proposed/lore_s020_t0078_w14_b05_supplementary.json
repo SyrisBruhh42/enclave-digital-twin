@@ -1,0 +1,117 @@
+{
+  "base_snapshot_tick": 78,
+  "context_manifest": [
+    "canon/schemas/world_state_v2.json",
+    "canon/schemas/jules_dm_campaign_ledger.schema.json",
+    "canon/characters/enclave_01_hector.core.json"
+  ],
+  "campaign_metadata": {
+    "session_number": 20,
+    "colony_sol": 20,
+    "tick_id": 78,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Stabilize the induction rigging amidst the magnetohydrodynamic Kelvin-Helmholtz shear.",
+      "mid_term_milestone": "Establish a reliable power relay across the shifting ferrofluid sea.",
+      "campaign_arc_climax": "Master the planetary magnetosphere and protect the Enclave from total polarity inversion."
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea_coast",
+    "macro_silhouette": "The turbulent coastline stretches out like a jagged scar, where solid rock meets an ocean of undulating, metallic black liquid. Massive, crystalline spires of captured lightning erupt from the surface, casting harsh, strobe-like shadows against the towering cliffs. A swirling vortex of ionized gas churns overhead, matching the rhythmic, aggressive thrashing of the magnetohydrodynamic shear across the ferrofluid waves.",
+    "sensory_palette": {
+      "sight_and_color": "Strobe-lit bursts of azure plasma reflecting off a churning, obsidian metallic surface.",
+      "sound": "Deafening cracks of thunder overlaid with the deep, resonant hum of magnetic shearing.",
+      "smell": "Pungent ozone mixed with the sharp tang of superheated iron.",
+      "tactile_temperature": "Oppressively hot updrafts carrying a static charge that raises every hair on the skin.",
+      "taste_optional": "A bitter, metallic residue of copper and ozone coating the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Oscillating Copper Grounding Mast",
+        "affordance_description": "Can be aligned to redirect the intense electrostatic discharge away from the staging area.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ionized Ferrofluid Geyser",
+        "affordance_description": "Can be utilized to draw wandering arc-flashes into a contained energy sink.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 16
+      },
+      {
+        "feature_name": "Crystalline Shunt Cave",
+        "affordance_description": "A hollow geodes-like formation capable of masking thermal and electromagnetic signatures.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "kelvin_helmholtz_shear_wave",
+      "name_and_role": "Magnetohydrodynamic Shear (Environmental Hazard)",
+      "motivation_goal": "To equalize the extreme magnetic gradients across the ferrofluid sea by violent discharge.",
+      "consistent_method": "Generates towering, razor-sharp waves of magnetized fluid that lash out at metallic structures.",
+      "immediate_complication": "The shear wave is interfering with the squad's telemetry gear, causing false readings on the capacitor banks.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "If ignored, the shear will reach critical mass and trigger a localized polarity inversion, tearing the coastal relays apart."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The induction rigging is failing under the extreme stress of the magnetohydrodynamic Kelvin-Helmholtz shear.",
+      "level_2_local": "The team must secure the power relay to prevent the coastal outpost from losing its magnetic shielding.",
+      "level_3_campaign_arc": "Understanding and surviving the ferrofluid sea's anomalies is vital to completing the Stormbreaker grand project."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      14,
+      8,
+      19,
+      4,
+      12
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.85,
+    "motivational_vector_saturation": 0.9,
+    "unresolved_conflict_ratio": 0.6,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.82,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Aegis",
+      "model": "Claude-3-Opus",
+      "temperature": 0.6,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Failure to stabilize the shunt will result in a catastrophic arc-flash, damaging the equipment and forcing a desperate retreat without the needed data.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "The shear wave creates a phantom reading; the operative grounds the wrong circuit, actively accelerating the overload.",
+        "below_dc_complicated_fail_forward": "The rigging is secured, but a sudden surge forces a dangerous leap to safety, causing a major setback in project timelines.",
+        "meets_dc_clean_success": "The rigging holds firm against the shear, capturing vital telemetry and stabilizing the relay.",
+        "dc_plus_5_or_20_extended_lore": "Not only is the rigging perfectly stabilized, but the harmonic resonance of the ferrofluid reveals a hidden frequency pattern for future magnetic shielding."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules DM",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": false,
+      "agency_handoff_prompt": "Hector grinned wildly into the ozone gale, the ferocious wind whipping around him as he wrestled with the sparking shunt cable. The magnetohydrodynamic Kelvin-Helmholtz shear was tearing across the ferrofluid sea in monstrous, obsidian waves, turning the coastline into a deadly light show of azure plasma. He slammed the heavy copper coupling into its bracket with a satisfying metallic crack, then spun around on the oscillating gantry. 'She's locked! But the feedback loop is climbing!' he shouted over the deafening thunder. Sliding down the precarious rigging with his usual reckless kinetic grace, Hector landed hard on the slick coastal stone right next to his squadmate. Without missing a beat, he shoved the heavy, sparking telemetry baton directly into Kaio's chestplate, slapping him on the shoulder. 'Your turn to hold the line, buddy! Don't let the magnetic gradient drop!'"
+    }
+  }
+}
