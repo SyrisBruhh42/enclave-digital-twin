@@ -1,0 +1,141 @@
+{
+  "event_id": "seg_s021_t0081_enclave_03_silas",
+  "tick_id": 81,
+  "colony_sol": 21,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2081-01-21T06:00:00Z",
+  "base_snapshot_tick": 81,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The Forge Exterior",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "summary": "Silas examines the magnetic sheer and passes the baton to Hector.",
+  "importance": 5,
+  "novelty_score": 6,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
+    "full_cards_loaded_count": 1,
+    "relationships_loaded": [
+      "enclave_01_hector"
+    ]
+  },
+  "campaign_metadata": {
+    "session_number": 21,
+    "colony_sol": 21,
+    "tick_id": 81,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Examine the magnetic sheer and handoff observation to Hector",
+      "mid_term_milestone": "Stabilize The Stormbreaker",
+      "campaign_arc_climax": "Complete The First Forge"
+    }
+  },
+  "active_location": {
+    "location_id": "the_forge_exterior",
+    "macro_silhouette": "The exterior vista of The Forge overlooks the roiling ferrofluid sea, where dark metallic waves crash against the shoreline. Heavy, dark clouds linger above, contrasting with the sharp, jagged edges of the facility's outer shell. The biting wind carries the constant hum of machinery.",
+    "sensory_palette": {
+      "sight_and_color": "Gleaming metallic waves and stark, jagged facility walls.",
+      "sound": "The low hum of generators and the crash of heavy, liquid metal.",
+      "smell": "Ozone and metallic tang.",
+      "tactile_temperature": "Biting cold wind and vibrating deck plates.",
+      "taste_optional": "A faint, coppery residue on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Reinforced Barrier",
+        "affordance_description": "Shielding the viewing platform from magnetic surges.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Magnetic Winch",
+        "affordance_description": "Used for retrieving samples from the ferrofluid sea.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Maintenance Tarp",
+        "affordance_description": "Covering sensitive equipment from the elements.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_sea_shear",
+      "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz Shear",
+      "motivation_goal": "Destabilize the magnetic winch moorings.",
+      "consistent_method": "Tearing at the surface tension with magnetic surges.",
+      "immediate_complication": "The winch is violently shaking.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The winch will be ripped from its moorings, halting sample retrieval."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The shear is threatening the winch.",
+      "level_2_local": "The Forge needs the winch operational for the day.",
+      "level_3_campaign_arc": "Sample retrieval is necessary for The First Forge."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      18,
+      5,
+      11,
+      20
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.3,
+    "motivational_vector_saturation": 0.6,
+    "unresolved_conflict_ratio": 0.4,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.7,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_ai",
+      "model": "v2",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The winch breaks free.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Silas thinks the shear is subsiding.",
+        "below_dc_complicated_fail_forward": "Silas secures the winch, but damages a sensor.",
+        "meets_dc_clean_success": "Silas secures the winch cleanly.",
+        "dc_plus_5_or_20_extended_lore": "Silas secures the winch and discovers a new magnetic harmonic."
+      }
+    },
+    "master_narrator": {
+      "executor": "local_ai",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Silas gripped the reinforced barrier (DEFEND), watching the dark, heavy waves of the ferrofluid sea crash against the shoreline. The magnetohydrodynamic Kelvin-Helmholtz shear was visible, tearing at the surface tension and threatening the stability of the nearby magnetic winch (ATTRACT). If the shear worsened, it would rip the winch from its moorings, completely halting their sample retrieval operations for the sol. He needed to act before the sheer escalated further. He turned to find Hector approaching from behind the heavy maintenance tarp (CONCEAL), ready to take over the observation shift. 'The sheer is volatile today, Hector. Keep a close eye on it,' Silas said, handing over the diagnostic pad, physically passing the baton to the incoming commander."
+    }
+  }
+}
