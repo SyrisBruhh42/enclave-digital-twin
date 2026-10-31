@@ -96,7 +96,13 @@
       }
     ],
     "strain_accumulated_upward": 1,
-    "prerolled_hazard_queue": [ 4, 18, 7, 12, 1 ]
+    "prerolled_hazard_queue": [
+      4,
+      18,
+      7,
+      12,
+      1
+    ]
   },
   "lpi_metrics": {
     "relational_tension_density": 0.4,
@@ -125,7 +131,7 @@
       "temperature": 0.7,
       "calypso_zero_raw_stats": true,
       "prosodic_micro_pauses_enabled": true,
-      "agency_handoff_prompt": "Dorian did not look at the world; he looked at the wireframe beneath it.\n\nStanding before the Living Atlas, he adjusted the focal length of the crystalline projector. The cavern around them hummed, not with the usual mechanical drone of The First Forge, but with something older. Ancient carved stone lanterns beneath the fungal canopy chimed softly when the mycelial pulse passed through them, a polyphonic choir of quartz and memory.\n\n\"Vex,\" Dorian called out, his velvet voice easily carrying over the static crackle. \"If you're complaining and no one is laughing, you're complaining wrong. Adjust the azimuth on node three, please.\"\n\nHe watched the three-dimensional holographic magnetosphere map bloom across thousands of crustal sensors, a breathtaking web of emerald and copper light tracing the fossilized piezoelectric signal echoes stored inside ancient precursor chitin-quartz resonator nodes overgrown by deep-crustal hyphae. It was beautiful, a silent symphony of planetary memory. \n\nThen the static spiked, raising the hair on his arms. A dangerous, familiar hum built in the air.\n\nDorian sighed, pulling his brass pitch-pipe from his velvet coat. He tapped it against the projector housing, not for the sound, but to ground the immediate charge. \"Leo!\" he shouted toward the communications array. \"I need you to ground every metal soup spoon in the kitchen. Now. Or we're going to have very expensive, very explosive popcorn for the Feast!\"\n\nHe felt the familiar pressure of the work, the precise, exacting demands of the archive pressing against the raw chaos of the planet. Under the extreme stress of the creeping static, a spark of audacity flared in his chest—a sudden, measured defiance. *Then today is a good day for science,* he thought, adjusting the lens with a steady hand.\n\n\"Jane,\" Dorian keyed his comms, passing the baton smoothly. \"The map is up, but the static is climbing. What is the storm doing out there?\""
+      "agency_handoff_prompt": "Dorian did not look at the world; he looked at the wireframe beneath it.\n\nStanding before the Living Atlas, he adjusted the focal length of the crystalline projector. The cavern around them hummed, not with the usual mechanical drone of The First Forge, but with something older. Ancient carved stone lanterns beneath the fungal canopy chimed softly when the mycelial pulse passed through them, a polyphonic choir of quartz and memory.\n\n\"Vex,\" Dorian called out, his velvet voice easily carrying over the static crackle. \"If you're complaining and no one is laughing, you're complaining wrong. Adjust the azimuth on node three, please.\"\n\nHe watched the three-dimensional holographic magnetosphere map bloom across thousands of crustal sensors, a breathtaking web of emerald and copper light tracing the fossilized piezoelectric signal echoes stored inside ancient precursor chitin-quartz resonator nodes overgrown by deep-crustal hyphae. It was beautiful, a silent symphony of planetary memory. \n\nThen the static spiked, raising the hair on his arms. A dangerous, familiar hum built in the air.\n\nDorian sighed, pulling his brass pitch-pipe from his velvet coat. He tapped it against the projector housing, not for the sound, but to ground the immediate charge. \"Leo!\" he shouted toward the communications array. \"I need you to ground every metal soup spoon in the kitchen. Now. Or we're going to have very expensive, very explosive popcorn for the Feast!\"\n\nHe felt the familiar pressure of the work, the precise, exacting demands of the archive pressing against the raw chaos of the planet. Under the extreme stress of the creeping static, a spark of audacity flared in his chest\u2014a sudden, measured defiance. *Then today is a good day for science,* he thought, adjusting the lens with a steady hand.\n\n\"Jane,\" Dorian keyed his comms, passing the baton smoothly. \"The map is up, but the static is climbing. What is the storm doing out there?\""
     }
   }
 }
