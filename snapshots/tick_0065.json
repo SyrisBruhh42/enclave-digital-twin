@@ -1427,20 +1427,6 @@
   "total_events_through_tick": 77,
   "recent_segments": [
     {
-      "segment_id": "seg_s012_t0047_enclave_05_kaio",
-      "sol_id": 12,
-      "colony_sol": 12,
-      "tick_id": 47,
-      "active_pov_id": "enclave_05_kaio",
-      "next_pov_target": "enclave_13_ryn",
-      "location_id": "The_Stormbreaker_Spire",
-      "time_of_day": "DUSK_CRAFT",
-      "day_phase": "DUSK_CRAFT",
-      "title": "Sol 012 \u2022 DUSK_CRAFT (enclave_05_kaio)",
-      "opening_excerpt": "Kaio attempts to chart the fluctuating magnetic corridors above the churning ferrofluid sea to guide Ryn's logistical reinforcements through the chaos.",
-      "excerpt": "Kaio attempts to chart the fluctuating magnetic corridors above the churning ferrofluid sea to guide Ryn's logistical reinforcements through the chaos."
-    },
-    {
       "segment_id": "seg_s013_t0049_enclave_03_silas",
       "sol_id": 13,
       "colony_sol": 13,
@@ -1593,6 +1579,20 @@
       "title": "Sol 016 \u2022 DUSK_CRAFT (enclave_05_kaio)",
       "opening_excerpt": "Kaio attempts to chart a path through the chaotic magnetic sheer before handing off the navigation baton to Ryn.",
       "excerpt": "Kaio attempts to chart a path through the chaotic magnetic sheer before handing off the navigation baton to Ryn."
+    },
+    {
+      "segment_id": "seg_s017_t0065_enclave_03_silas",
+      "sol_id": 17,
+      "colony_sol": 17,
+      "tick_id": 65,
+      "active_pov_id": "enclave_03_silas",
+      "next_pov_target": "enclave_01_hector",
+      "location_id": "The_First_Forge",
+      "time_of_day": "DAWN_SHIFT",
+      "day_phase": "DAWN_SHIFT",
+      "title": "Sol 017 \u2022 DAWN_SHIFT (enclave_03_silas)",
+      "opening_excerpt": "Silas battles the brutal magnetic shear in the forge, holding the line before tossing the calibration baton to Hector.",
+      "excerpt": "Silas battles the brutal magnetic shear in the forge, holding the line before tossing the calibration baton to Hector."
     }
   ],
   "available_sols": [
