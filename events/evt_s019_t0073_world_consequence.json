@@ -1,0 +1,124 @@
+{
+  "event_id": "evt_s019_t0073_world_consequence",
+  "tick_id": 73,
+  "colony_sol": 19,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2078-05-19T06:30:00Z",
+  "base_snapshot_tick": 73,
+  "event_type": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+  "location": "The_First_Forge",
+  "actors": ["enclave_03_silas", "enclave_01_hector"],
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": ["enclave_03_silas"],
+    "narrative_focus_ratio": 1.0,
+    "context_window_pressure": 0.4
+  },
+  "narrative_prose": "Silas ran his calloused thumb along the edge of the containment housing, feeling the subtle, high-frequency vibration before the chronometer even registered the pulse. The heavy brass and iron room smelled of ozone and scorched flux, illuminated only by the frantic violet sparks arcing from the primary geode stack. 'Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea,' he muttered, checking the load tolerances. The sheer instability of the magnetic waves caused the sympathetic ore to sing a dangerous, harmonic whine. He reached for a heavy iron lever, wrenching it downward in an attempt to bleed the excess pressure into the grounding coils. The attempt only partially succeeded; a gout of blue plasma scorched his left gauntlet, but the primary breach was averted for now—a classic fail-forward scenario. Through the thick glass of the forge, he could see Hector approaching, completely oblivious to the narrow margin of safety they were operating under. Silas grabbed the glowing calibration wrench and shoved it into Hector's hands the moment he stepped through the bulkhead. 'Take this,' Silas barked, his voice carrying the weight of a dozen near-misses. 'The pulse is shifting, and you need to realign the secondary array before the resonance turns us both into a memory. Don't drop it.'",
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 19,
+    "tick_id": 73,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": ["Stabilize the ferrofluid sea", "Complete the primary forge housing"]
+  },
+  "active_location": {
+    "location_id": "The_First_Forge",
+    "macro_silhouette": "The First Forge stands as a monument to precision, its heavy iron walls groaning under the pressure of exotic energy containment. A vast array of brass piping and massive flywheels dominates the center of the room, turning slowly with immense, deliberate force. Violet light bleeds from the central geode stack, casting long, frantic shadows across the scorched floor grates.",
+    "sensory_palette": {
+      "sight_and_color": "Violet electrical arcs dancing across heavy brass conduits.",
+      "sound": "The harmonic whine of stressed sympathetic ore and the heavy thud of exhaust vents.",
+      "smell": "Ozone, hot copper, and the sharp tang of scorch marks.",
+      "tactile_temperature": "Subtle, high-frequency vibrations in the floor plates and the radiant heat of the core.",
+      "taste_optional": "A metallic tang on the back of the tongue from the ionized air."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Containment Lever",
+        "system_verb": "DEFEND"
+      },
+      {
+        "feature_name": "Calibration Wrench",
+        "system_verb": "ATTRACT"
+      },
+      {
+        "feature_name": "Grounding Coil Array",
+        "system_verb": "CONSUME"
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "toy_id": "containment_lever_01",
+      "pressure_index": 7,
+      "system_verb": "DEFEND",
+      "motivation_goal": "Bleed excess pressure into grounding coils to prevent core breach.",
+      "consistent_method": "Requires immense physical force to pull the iron lever against the magnetic field.",
+      "immediate_complication": "Lever mechanism is partially fused, requiring a difficult physical check.",
+      "uninterrupted_escalation": "If ignored, the plasma will breach the housing and scorch the operator."
+    },
+    {
+      "toy_id": "calibration_wrench_01",
+      "pressure_index": 5,
+      "system_verb": "ATTRACT",
+      "motivation_goal": "Pass control and responsibility for secondary array alignment.",
+      "consistent_method": "Hand off the glowing, dangerously energized tool to the incoming specialist.",
+      "immediate_complication": "The tool is hot enough to blister exposed skin if held improperly.",
+      "uninterrupted_escalation": "Without alignment, the harmonic whine will shatter the glass viewports."
+    },
+    {
+      "toy_id": "grounding_coil_array",
+      "pressure_index": 8,
+      "system_verb": "CONSUME",
+      "motivation_goal": "Absorb the magnetohydrodynamic surge.",
+      "consistent_method": "Direct the excess plasma flow into the copper heat sinks.",
+      "immediate_complication": "The coils are near maximum capacity and may melt.",
+      "uninterrupted_escalation": "A complete coil meltdown will flood the forge with ionized gas."
+    }
+  ],
+  "encounter_matrix": {
+    "active_factions_in_play": ["The_Forge"],
+    "escalation_clock_ticks": 2,
+    "nearest_safe_haven": "The_Genesis_Garden",
+    "hostile_awareness_level": "OBLIVIOUS",
+    "flee_or_parlay_viability": "PARLAY_ONLY"
+  },
+  "lpi_metrics": {
+    "volatility_index": 0.7,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If the lever is not pulled, a plasma gout will cause physical injury.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Silas pulls the wrong lever, accelerating the resonance cascade.",
+        "below_dc_complicated_fail_forward": "Silas bleeds the pressure but takes a scorch to the gauntlet.",
+        "meets_dc_clean_success": "Silas smoothly vents the plasma without injury.",
+        "dc_plus_5_or_20_extended_lore": "Silas vents the plasma perfectly and discovers a new harmonic frequency in the ore."
+      }
+    },
+    "master_narrator": {
+      "executor": "openai",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector receives the heavy, glowing calibration wrench from Silas. The vibration travels immediately up Hector's arm. What does he do next to align the secondary array?"
+    }
+  }
+}
