@@ -1,0 +1,28 @@
+{
+  "event_id": "evt_s018_t0069_world_consequence",
+  "tick_id": 69,
+  "colony_sol": 18,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-11-11T06:00:00Z",
+  "base_snapshot_tick": 69,
+  "event_type": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+  "location": "The_First_Forge",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ]
+  },
+  "narrative_prose": "Silas wiped his grease-stained hands on a rag, eyes fixed on the raw telemetry data pouring across the brass-rimmed display. The magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea had spiked wildly in the last hour, sending localized eddy currents bleeding into the crater's crust. If he couldn't re-calibrate the flux-core shielding to phase with the incoming wave front, the induction overload would fry the primary capacitor banks, a consequence far worse than a mere blown fuse. The ambient air in the forge crackled with rogue static, lifting the hairs on his arms and leaving the unmistakable scent of ozone and scorched copper thick in the cramped space. Beyond the heavy blast doors, the low thrumming of the twin moons' tidal pull vibrated up through the iron floor plating, a tactile reminder of the raw forces clawing at their sanctuary. He stepped forward to DEFEND the central control plinth, sliding the heavy polarity levers into a staggered defensive array. Next, he attempted to ATTRACT the stray arcing energy away from the vulnerable crystal matrices by slamming a grounded, sacrificial copper rod onto the secondary anvil. Finally, needing to CONCEAL the most delicate optical arrays before the peak of the surge hit, he threw a lead-lined blast tarp over the workbench and bolted it down. At that moment, Hector barged through the doors, trailing a wake of cold dawn air and impossible confidence. 'Calculations are inefficient without action, Silas!' the prodigy shouted over the din. The older engineer didn't argue; he merely sighed, flipped the final master shunt, and tossed the heavy, leather-wrapped activation key straight at Hector's chest. 'Don't drop it,' Silas muttered, letting the weight of the moment, and the responsibility, pass on."
+}
