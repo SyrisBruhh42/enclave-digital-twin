@@ -1,0 +1,118 @@
+{
+  "base_snapshot_tick": 82,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "campaign_metadata": {
+    "session_number": 21,
+    "colony_sol": 21,
+    "tick_id": 82,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Survive the magnetohydrodynamic Kelvin-Helmholtz shear.",
+      "mid_term_milestone": "Secure resources from the ferrofluid sea.",
+      "campaign_arc_climax": "Establish stable settlement."
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea",
+    "macro_silhouette": "The turbulent, inky expanse of the ferrofluid sea churns wildly under the twin suns. Jagged crystalline spires erupt from the surface, creating deadly magnetohydrodynamic Kelvin-Helmholtz shears in the roiling liquid. The horizon is a blur of magnetic distortion and metallic spray, threatening to tear apart anything caught in its grip.",
+    "sensory_palette": {
+      "sight_and_color": "Swirling blacks and iridescent metallic blues.",
+      "sound": "Deafening, low-frequency hums and sharp metallic cracking.",
+      "smell": "Ozone and oxidized iron.",
+      "tactile_temperature": "Piercing, unnatural cold accompanied by skin-prickling static.",
+      "taste_optional": "Metallic tang of blood and copper."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Ferrofluid Spire",
+        "affordance_description": "A jagged spire that can be used for cover or magnetic grounding.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetic Eddy",
+        "affordance_description": "A swirling vortex that pulls in loose metallic objects.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 16
+      },
+      {
+        "feature_name": "Iron-rich Silt Bank",
+        "affordance_description": "A dense patch of silt that can hide equipment from magnetic sensors.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferro_squid_01",
+      "name_and_role": "Ferro-Squid Alpha",
+      "motivation_goal": "Protect its territory in the shear.",
+      "consistent_method": "Launching magnetic harpoons.",
+      "immediate_complication": "Latches onto Hector's suit, draining power.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Will eventually breach the suit's magnetic shielding if not removed."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Survive the immediate magnetic shear and ferro-squid attack.",
+      "level_2_local": "Map the treacherous currents of the ferrofluid sea for future navigation.",
+      "level_3_campaign_arc": "Understand the planet's core magnetic fluctuations."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      12,
+      8,
+      19,
+      4,
+      15
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.6,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "anthropic",
+      "model": "claude-3-opus",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Suit breach and magnetic grounding failure, resulting in severe cold exposure.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Hector mistakenly believes the shear is stabilizing, leading him directly into a denser magnetic vortex.",
+        "below_dc_complicated_fail_forward": "Hector survives the shear but his suit's power core is severely drained, requiring immediate handoff to Kaio.",
+        "meets_dc_clean_success": "Hector deftly navigates the shear and passes the sensory data to Kaio seamlessly.",
+        "dc_plus_5_or_20_extended_lore": "Hector not only navigates the shear but discovers a harmonic frequency that repels the ferro-squids."
+      }
+    },
+    "master_narrator": {
+      "executor": "human",
+      "temperature": 0.5,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector gritted his teeth as the magnetohydrodynamic Kelvin-Helmholtz shear threatened to tear his suit apart. The ferrofluid sea below was a roiling nightmare of iridescent blacks and blues. His suit alarms blared, a chaotic symphony of warnings. Fighting the crushing magnetic pressure, he stabilized just long enough to see Kaio's approach. With a desperate lunge, Hector slapped his diagnostic baton into Kaio's outstretched glove, transferring the precious sensor logs and the burden of survival in a single, kinetic motion. 'It's all yours, scout!' he roared over the comms."
+    }
+  }
+}
