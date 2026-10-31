@@ -57,5 +57,8 @@
   "target_b_missed": true,
   "active_pov_id": "enclave_01_hector",
   "prev_next_pov_target": "enclave_01_hector",
-  "next_pov_target": "enclave_05_kaio"
+  "next_pov_target": "enclave_05_kaio",
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
+  }
 }

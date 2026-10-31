@@ -56,5 +56,8 @@
     "loaded_full_card_ids": [
       "enclave_01_hector"
     ]
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
   }
 }
