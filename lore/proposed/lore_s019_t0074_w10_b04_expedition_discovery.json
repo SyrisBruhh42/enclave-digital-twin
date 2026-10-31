@@ -1,0 +1,74 @@
+{
+  "event_id": "lore_s019_t0074_w10_b04_expedition_discovery",
+  "tick_id": 74,
+  "colony_sol": 19,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-11-12T12:00:00Z",
+  "base_snapshot_tick": 74,
+  "event_type": "EXPEDITION_DISCOVERY",
+  "location": "The Ferrofluid Sea",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_05_kaio"
+  ],
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "summary": "Hector battles magnetohydrodynamic Kelvin-Helmholtz shear while handing off the probe to Kaio.",
+  "importance": 8,
+  "novelty_score": 0.8,
+  "state_deltas": {
+    "enclave_01_hector": {
+      "stress_delta": 0.2,
+      "fatigue_delta": 0.1
+    }
+  },
+  "relationship_deltas": {
+    "enclave_01_hector": {
+      "enclave_05_kaio": 0.05
+    }
+  },
+  "evidence_refs": [],
+  "active_location": {
+    "location_id": "ferrofluid_sea_shore",
+    "macro_silhouette": "The obsidian waves of the ferrofluid sea crest and snap under the crushing weight of atmospheric pressure. Twin suns cast warped, polarized shadows across the jagged shoreline, where copper scaffolding hums with latent charge. A violent magnetohydrodynamic Kelvin-Helmholtz shear whips the metallic spume into lethal, geometric shards.",
+    "sensory_palette": {
+      "sight_and_color": "Iridescent streaks of cobalt and violet flashing through the black fluid.",
+      "sound": "A deafening, low-frequency hum punctuated by the crackle of localized ozone bursts.",
+      "smell": "Overwhelming copper and ozone, undercut by a sharp metallic tang.",
+      "tactile_temperature": "Biting cold wind paired with sudden bursts of radiant inductive heat.",
+      "taste_optional": "The alkaline taste of ionized metal on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetized Copper Stanchions",
+        "affordance_description": "Can be grabbed to stabilize oneself against the sheer force of the metallic waves.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Spume",
+        "affordance_description": "Highly reactive pools that can be polarized to alter the local magnetic field.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 16
+      },
+      {
+        "feature_name": "Inductive Heat Vents",
+        "affordance_description": "Vents releasing high energy that can be tapped to power equipment temporarily.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ]
+  },
+  "narrative_prose": "The magnetohydrodynamic Kelvin-Helmholtz shear tore across the ferrofluid sea, whipping the black waves into razor-sharp geometric crests that defied gravity. Hector grinned into the biting, ozone-thick wind, feeling the inductive heat through the soles of his insulated boots as he balanced on the straining copper scaffolding. The sheer electromagnetic force threatened to rip the telemetry probe right from his grip, the metal casing vibrating violently. 'Kaio!' Hector roared over the low-frequency hum, leaning precariously out over the lethal metallic spume. 'You want the real data? You gotta catch it while it's hot!' With a calculated thrust that ignored the agonizing strain in his shoulders, Hector swung the heavy probe forward, releasing it directly into Kaio's waiting hands before the shear could snap the tether."
+}
