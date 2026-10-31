@@ -13,24 +13,24 @@
       "drift_alert": false,
       "law_l16_compliant": false,
       "drifted_axes": [
-        "openness"
+        "hexaco_honesty_humility"
       ],
-      "max_abs_z": 1.0939,
+      "max_abs_z": 0.8929,
       "z_threshold": 2.0,
       "z_scores": {
-        "openness": -1.0939,
-        "conscientiousness": -0.2965,
-        "extraversion": 0.4867,
-        "agreeableness": 0.2411,
-        "neuroticism": -0.5039
+        "openness": 0.7969,
+        "conscientiousness": 0.63,
+        "extraversion": 0.8929,
+        "agreeableness": 0.7822,
+        "neuroticism": 0.2168
       },
       "sample_means": {
-        "openness": 0.3216,
-        "conscientiousness": 0.2203,
-        "extraversion": 0.9292,
-        "agreeableness": 0.4217,
-        "neuroticism": 0.1147,
-        "hexaco_honesty_humility": 0.8081
+        "openness": 0.4917,
+        "conscientiousness": 0.313,
+        "extraversion": 0.9536,
+        "agreeableness": 0.4704,
+        "neuroticism": 0.1652,
+        "hexaco_honesty_humility": 0.6791
       },
       "target_means": {
         "openness": 0.42,
@@ -49,85 +49,85 @@
         "hexaco_honesty_humility": 0.08
       },
       "sample_deviations": {
-        "openness": -0.0984,
-        "conscientiousness": -0.0297,
-        "extraversion": 0.0292,
-        "agreeableness": 0.0217,
-        "neuroticism": -0.0353,
-        "hexaco_honesty_humility": 0.0481
+        "openness": 0.0717,
+        "conscientiousness": 0.063,
+        "extraversion": 0.0536,
+        "agreeableness": 0.0704,
+        "neuroticism": 0.0152,
+        "hexaco_honesty_humility": -0.0809
       },
       "trait_metrics": {
         "openness": {
           "axis": "openness",
           "sample_count": 4,
-          "sample_mean": 0.3216,
+          "sample_mean": 0.4917,
           "target_mean": 0.42,
           "target_sd": 0.09,
           "standard_error": 0.045,
-          "deviation": -0.0984,
-          "z_score": -2.1878,
-          "drifted": true,
-          "direction": "LOW"
+          "deviation": 0.0717,
+          "z_score": 1.5939,
+          "drifted": false,
+          "direction": "NOMINAL"
         },
         "conscientiousness": {
           "axis": "conscientiousness",
           "sample_count": 4,
-          "sample_mean": 0.2203,
+          "sample_mean": 0.313,
           "target_mean": 0.25,
           "target_sd": 0.1,
           "standard_error": 0.05,
-          "deviation": -0.0297,
-          "z_score": -0.593,
+          "deviation": 0.063,
+          "z_score": 1.26,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "extraversion": {
           "axis": "extraversion",
           "sample_count": 4,
-          "sample_mean": 0.9292,
+          "sample_mean": 0.9536,
           "target_mean": 0.9,
           "target_sd": 0.06,
           "standard_error": 0.03,
-          "deviation": 0.0292,
-          "z_score": 0.9733,
+          "deviation": 0.0536,
+          "z_score": 1.7858,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "agreeableness": {
           "axis": "agreeableness",
           "sample_count": 4,
-          "sample_mean": 0.4217,
+          "sample_mean": 0.4704,
           "target_mean": 0.4,
           "target_sd": 0.09,
           "standard_error": 0.045,
-          "deviation": 0.0217,
-          "z_score": 0.4822,
+          "deviation": 0.0704,
+          "z_score": 1.5644,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "neuroticism": {
           "axis": "neuroticism",
           "sample_count": 4,
-          "sample_mean": 0.1147,
+          "sample_mean": 0.1652,
           "target_mean": 0.15,
           "target_sd": 0.07,
           "standard_error": 0.035,
-          "deviation": -0.0353,
-          "z_score": -1.0079,
+          "deviation": 0.0152,
+          "z_score": 0.4336,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "hexaco_honesty_humility": {
           "axis": "hexaco_honesty_humility",
           "sample_count": 4,
-          "sample_mean": 0.8081,
+          "sample_mean": 0.6791,
           "target_mean": 0.76,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": 0.0481,
-          "z_score": 1.2013,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": -0.0809,
+          "z_score": -2.0231,
+          "drifted": true,
+          "direction": "LOW"
         }
       },
       "sycophancy_drift_detected": false,
@@ -138,13 +138,13 @@
       "corrective_authors_note": "",
       "name": "Hector",
       "axis_z_scores": {
-        "openness": -1.0939,
-        "conscientiousness": -0.2965,
-        "extraversion": 0.4867,
-        "agreeableness": 0.2411,
-        "neuroticism": -0.5039
+        "openness": 0.7969,
+        "conscientiousness": 0.63,
+        "extraversion": 0.8929,
+        "agreeableness": 0.7822,
+        "neuroticism": 0.2168
       },
-      "worst_axis": "openness"
+      "worst_axis": "extraversion"
     },
     {
       "character_id": "enclave_02_jane",
@@ -154,25 +154,24 @@
       "law_l16_compliant": false,
       "drifted_axes": [
         "extraversion",
-        "agreeableness",
-        "neuroticism"
+        "hexaco_honesty_humility"
       ],
-      "max_abs_z": 1.6114,
+      "max_abs_z": 1.0836,
       "z_threshold": 2.0,
       "z_scores": {
-        "openness": 0.0883,
-        "conscientiousness": 0.2664,
-        "extraversion": 1.4657,
-        "agreeableness": -1.0969,
-        "neuroticism": -1.6114
+        "openness": -0.7983,
+        "conscientiousness": 0.5117,
+        "extraversion": -1.0836,
+        "agreeableness": -0.0978,
+        "neuroticism": -0.4353
       },
       "sample_means": {
-        "openness": 0.9053,
-        "conscientiousness": 0.474,
-        "extraversion": 0.2226,
-        "agreeableness": 0.2323,
-        "neuroticism": 0.255,
-        "hexaco_honesty_humility": 0.8367
+        "openness": 0.8521,
+        "conscientiousness": 0.496,
+        "extraversion": 0.0441,
+        "agreeableness": 0.3122,
+        "neuroticism": 0.3608,
+        "hexaco_honesty_humility": 0.9584
       },
       "target_means": {
         "openness": 0.9,
@@ -191,85 +190,85 @@
         "hexaco_honesty_humility": 0.06
       },
       "sample_deviations": {
-        "openness": 0.0053,
-        "conscientiousness": 0.024,
-        "extraversion": 0.1026,
-        "agreeableness": -0.0877,
-        "neuroticism": -0.145,
-        "hexaco_honesty_humility": -0.0133
+        "openness": -0.0479,
+        "conscientiousness": 0.046,
+        "extraversion": -0.0759,
+        "agreeableness": -0.0078,
+        "neuroticism": -0.0392,
+        "hexaco_honesty_humility": 0.1084
       },
       "trait_metrics": {
         "openness": {
           "axis": "openness",
           "sample_count": 4,
-          "sample_mean": 0.9053,
+          "sample_mean": 0.8521,
           "target_mean": 0.9,
           "target_sd": 0.06,
           "standard_error": 0.03,
-          "deviation": 0.0053,
-          "z_score": 0.1767,
+          "deviation": -0.0479,
+          "z_score": -1.5967,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "conscientiousness": {
           "axis": "conscientiousness",
           "sample_count": 4,
-          "sample_mean": 0.474,
+          "sample_mean": 0.496,
           "target_mean": 0.45,
           "target_sd": 0.09,
           "standard_error": 0.045,
-          "deviation": 0.024,
-          "z_score": 0.5328,
+          "deviation": 0.046,
+          "z_score": 1.0233,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "extraversion": {
           "axis": "extraversion",
           "sample_count": 4,
-          "sample_mean": 0.2226,
+          "sample_mean": 0.0441,
           "target_mean": 0.12,
           "target_sd": 0.07,
           "standard_error": 0.035,
-          "deviation": 0.1026,
-          "z_score": 2.9314,
+          "deviation": -0.0759,
+          "z_score": -2.1671,
           "drifted": true,
-          "direction": "HIGH"
+          "direction": "LOW"
         },
         "agreeableness": {
           "axis": "agreeableness",
           "sample_count": 4,
-          "sample_mean": 0.2323,
+          "sample_mean": 0.3122,
           "target_mean": 0.32,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": -0.0877,
-          "z_score": -2.1937,
-          "drifted": true,
-          "direction": "LOW"
+          "deviation": -0.0078,
+          "z_score": -0.1956,
+          "drifted": false,
+          "direction": "NOMINAL"
         },
         "neuroticism": {
           "axis": "neuroticism",
           "sample_count": 4,
-          "sample_mean": 0.255,
+          "sample_mean": 0.3608,
           "target_mean": 0.4,
           "target_sd": 0.09,
           "standard_error": 0.045,
-          "deviation": -0.145,
-          "z_score": -3.2228,
-          "drifted": true,
-          "direction": "LOW"
+          "deviation": -0.0392,
+          "z_score": -0.8706,
+          "drifted": false,
+          "direction": "NOMINAL"
         },
         "hexaco_honesty_humility": {
           "axis": "hexaco_honesty_humility",
           "sample_count": 4,
-          "sample_mean": 0.8367,
+          "sample_mean": 0.9584,
           "target_mean": 0.85,
           "target_sd": 0.06,
           "standard_error": 0.03,
-          "deviation": -0.0133,
-          "z_score": -0.4425,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": 0.1084,
+          "z_score": 3.6133,
+          "drifted": true,
+          "direction": "HIGH"
         }
       },
       "sycophancy_drift_detected": false,
@@ -280,13 +279,13 @@
       "corrective_authors_note": "",
       "name": "Jane",
       "axis_z_scores": {
-        "openness": 0.0883,
-        "conscientiousness": 0.2664,
-        "extraversion": 1.4657,
-        "agreeableness": -1.0969,
-        "neuroticism": -1.6114
+        "openness": -0.7983,
+        "conscientiousness": 0.5117,
+        "extraversion": -1.0836,
+        "agreeableness": -0.0978,
+        "neuroticism": -0.4353
       },
-      "worst_axis": "neuroticism"
+      "worst_axis": "extraversion"
     },
     {
       "character_id": "enclave_03_silas",
@@ -295,24 +294,27 @@
       "drift_alert": false,
       "law_l16_compliant": false,
       "drifted_axes": [
-        "extraversion"
+        "openness",
+        "agreeableness",
+        "neuroticism",
+        "hexaco_honesty_humility"
       ],
-      "max_abs_z": 1.1122,
+      "max_abs_z": 1.1814,
       "z_threshold": 2.0,
       "z_scores": {
-        "openness": 0.2732,
-        "conscientiousness": -0.2619,
-        "extraversion": -1.1122,
-        "agreeableness": 0.3644,
-        "neuroticism": 0.4165
+        "openness": 1.1814,
+        "conscientiousness": 0.675,
+        "extraversion": 0.0381,
+        "agreeableness": -1.0144,
+        "neuroticism": -1.0912
       },
       "sample_means": {
-        "openness": 0.1691,
-        "conscientiousness": 0.9495,
-        "extraversion": 0.061,
-        "agreeableness": 0.2528,
-        "neuroticism": 0.6217,
-        "hexaco_honesty_humility": 0.9529
+        "openness": 0.2327,
+        "conscientiousness": 0.987,
+        "extraversion": 0.153,
+        "agreeableness": 0.1287,
+        "neuroticism": 0.4709,
+        "hexaco_honesty_humility": 0.8314
       },
       "target_means": {
         "openness": 0.15,
@@ -331,85 +333,85 @@
         "hexaco_honesty_humility": 0.05
       },
       "sample_deviations": {
-        "openness": 0.0191,
-        "conscientiousness": -0.0105,
-        "extraversion": -0.089,
-        "agreeableness": 0.0328,
-        "neuroticism": 0.0417,
-        "hexaco_honesty_humility": 0.0429
+        "openness": 0.0827,
+        "conscientiousness": 0.027,
+        "extraversion": 0.003,
+        "agreeableness": -0.0913,
+        "neuroticism": -0.1091,
+        "hexaco_honesty_humility": -0.0786
       },
       "trait_metrics": {
         "openness": {
           "axis": "openness",
           "sample_count": 4,
-          "sample_mean": 0.1691,
+          "sample_mean": 0.2327,
           "target_mean": 0.15,
           "target_sd": 0.07,
           "standard_error": 0.035,
-          "deviation": 0.0191,
-          "z_score": 0.5464,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": 0.0827,
+          "z_score": 2.3629,
+          "drifted": true,
+          "direction": "HIGH"
         },
         "conscientiousness": {
           "axis": "conscientiousness",
           "sample_count": 4,
-          "sample_mean": 0.9495,
+          "sample_mean": 0.987,
           "target_mean": 0.96,
           "target_sd": 0.04,
           "standard_error": 0.02,
-          "deviation": -0.0105,
-          "z_score": -0.5238,
+          "deviation": 0.027,
+          "z_score": 1.35,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "extraversion": {
           "axis": "extraversion",
           "sample_count": 4,
-          "sample_mean": 0.061,
+          "sample_mean": 0.153,
           "target_mean": 0.15,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": -0.089,
-          "z_score": -2.2244,
-          "drifted": true,
-          "direction": "LOW"
+          "deviation": 0.003,
+          "z_score": 0.0762,
+          "drifted": false,
+          "direction": "NOMINAL"
         },
         "agreeableness": {
           "axis": "agreeableness",
           "sample_count": 4,
-          "sample_mean": 0.2528,
+          "sample_mean": 0.1287,
           "target_mean": 0.22,
           "target_sd": 0.09,
           "standard_error": 0.045,
-          "deviation": 0.0328,
-          "z_score": 0.7289,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": -0.0913,
+          "z_score": -2.0289,
+          "drifted": true,
+          "direction": "LOW"
         },
         "neuroticism": {
           "axis": "neuroticism",
           "sample_count": 4,
-          "sample_mean": 0.6217,
+          "sample_mean": 0.4709,
           "target_mean": 0.58,
           "target_sd": 0.1,
           "standard_error": 0.05,
-          "deviation": 0.0417,
-          "z_score": 0.833,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": -0.1091,
+          "z_score": -2.1825,
+          "drifted": true,
+          "direction": "LOW"
         },
         "hexaco_honesty_humility": {
           "axis": "hexaco_honesty_humility",
           "sample_count": 4,
-          "sample_mean": 0.9529,
+          "sample_mean": 0.8314,
           "target_mean": 0.91,
           "target_sd": 0.05,
           "standard_error": 0.025,
-          "deviation": 0.0429,
-          "z_score": 1.716,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": -0.0786,
+          "z_score": -3.143,
+          "drifted": true,
+          "direction": "LOW"
         }
       },
       "sycophancy_drift_detected": false,
@@ -420,13 +422,13 @@
       "corrective_authors_note": "",
       "name": "Silas",
       "axis_z_scores": {
-        "openness": 0.2732,
-        "conscientiousness": -0.2619,
-        "extraversion": -1.1122,
-        "agreeableness": 0.3644,
-        "neuroticism": 0.4165
+        "openness": 1.1814,
+        "conscientiousness": 0.675,
+        "extraversion": 0.0381,
+        "agreeableness": -1.0144,
+        "neuroticism": -1.0912
       },
-      "worst_axis": "extraversion"
+      "worst_axis": "openness"
     },
     {
       "character_id": "enclave_04_leo",
@@ -435,25 +437,25 @@
       "drift_alert": false,
       "law_l16_compliant": false,
       "drifted_axes": [
-        "openness",
-        "conscientiousness"
+        "conscientiousness",
+        "agreeableness"
       ],
-      "max_abs_z": 1.6854,
+      "max_abs_z": 1.6617,
       "z_threshold": 2.0,
       "z_scores": {
-        "openness": 1.6854,
-        "conscientiousness": 1.1392,
-        "extraversion": -0.7855,
-        "agreeableness": 0.4003,
-        "neuroticism": -0.4621
+        "openness": 0.5361,
+        "conscientiousness": -1.6617,
+        "extraversion": -0.5685,
+        "agreeableness": 1.3003,
+        "neuroticism": -0.3746
       },
       "sample_means": {
-        "openness": 0.838,
-        "conscientiousness": 0.8883,
-        "extraversion": 0.8807,
-        "agreeableness": 0.492,
-        "neuroticism": 0.1677,
-        "hexaco_honesty_humility": 0.8706
+        "openness": 0.7575,
+        "conscientiousness": 0.7203,
+        "extraversion": 0.8916,
+        "agreeableness": 0.564,
+        "neuroticism": 0.1738,
+        "hexaco_honesty_humility": 0.8014
       },
       "target_means": {
         "openness": 0.72,
@@ -472,126 +474,129 @@
         "hexaco_honesty_humility": 0.06
       },
       "sample_deviations": {
-        "openness": 0.118,
-        "conscientiousness": 0.0684,
-        "extraversion": -0.0393,
-        "agreeableness": 0.032,
-        "neuroticism": -0.0323,
-        "hexaco_honesty_humility": 0.0106
+        "openness": 0.0375,
+        "conscientiousness": -0.0997,
+        "extraversion": -0.0284,
+        "agreeableness": 0.104,
+        "neuroticism": -0.0262,
+        "hexaco_honesty_humility": -0.0585
       },
       "trait_metrics": {
         "openness": {
           "axis": "openness",
           "sample_count": 4,
-          "sample_mean": 0.838,
+          "sample_mean": 0.7575,
           "target_mean": 0.72,
           "target_sd": 0.07,
           "standard_error": 0.035,
-          "deviation": 0.118,
-          "z_score": 3.3707,
-          "drifted": true,
-          "direction": "HIGH"
+          "deviation": 0.0375,
+          "z_score": 1.0721,
+          "drifted": false,
+          "direction": "NOMINAL"
         },
         "conscientiousness": {
           "axis": "conscientiousness",
           "sample_count": 4,
-          "sample_mean": 0.8883,
+          "sample_mean": 0.7203,
           "target_mean": 0.82,
           "target_sd": 0.06,
           "standard_error": 0.03,
-          "deviation": 0.0684,
-          "z_score": 2.2783,
+          "deviation": -0.0997,
+          "z_score": -3.3233,
           "drifted": true,
-          "direction": "HIGH"
+          "direction": "LOW"
         },
         "extraversion": {
           "axis": "extraversion",
           "sample_count": 4,
-          "sample_mean": 0.8807,
+          "sample_mean": 0.8916,
           "target_mean": 0.92,
           "target_sd": 0.05,
           "standard_error": 0.025,
-          "deviation": -0.0393,
-          "z_score": -1.571,
+          "deviation": -0.0284,
+          "z_score": -1.137,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "agreeableness": {
           "axis": "agreeableness",
           "sample_count": 4,
-          "sample_mean": 0.492,
+          "sample_mean": 0.564,
           "target_mean": 0.46,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": 0.032,
-          "z_score": 0.8006,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": 0.104,
+          "z_score": 2.6006,
+          "drifted": true,
+          "direction": "HIGH"
         },
         "neuroticism": {
           "axis": "neuroticism",
           "sample_count": 4,
-          "sample_mean": 0.1677,
+          "sample_mean": 0.1738,
           "target_mean": 0.2,
           "target_sd": 0.07,
           "standard_error": 0.035,
-          "deviation": -0.0323,
-          "z_score": -0.9243,
+          "deviation": -0.0262,
+          "z_score": -0.7493,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "hexaco_honesty_humility": {
           "axis": "hexaco_honesty_humility",
           "sample_count": 4,
-          "sample_mean": 0.8706,
+          "sample_mean": 0.8014,
           "target_mean": 0.86,
           "target_sd": 0.06,
           "standard_error": 0.03,
-          "deviation": 0.0106,
-          "z_score": 0.3525,
+          "deviation": -0.0585,
+          "z_score": -1.9517,
           "drifted": false,
           "direction": "NOMINAL"
         }
       },
-      "sycophancy_drift_detected": false,
-      "social_conformity_drift": false,
+      "sycophancy_drift_detected": true,
+      "social_conformity_drift": true,
       "assistant_axis_drift_detected": false,
       "assistant_axis_reasons": [],
       "re_anchor_ticks": 0,
       "corrective_authors_note": "",
       "name": "Leo",
       "axis_z_scores": {
-        "openness": 1.6854,
-        "conscientiousness": 1.1392,
-        "extraversion": -0.7855,
-        "agreeableness": 0.4003,
-        "neuroticism": -0.4621
+        "openness": 0.5361,
+        "conscientiousness": -1.6617,
+        "extraversion": -0.5685,
+        "agreeableness": 1.3003,
+        "neuroticism": -0.3746
       },
-      "worst_axis": "openness"
+      "worst_axis": "conscientiousness"
     },
     {
       "character_id": "enclave_05_kaio",
       "character_name": "Kaio",
       "sample_count": 4,
       "drift_alert": false,
-      "law_l16_compliant": true,
-      "drifted_axes": [],
-      "max_abs_z": 0.61,
+      "law_l16_compliant": false,
+      "drifted_axes": [
+        "extraversion",
+        "neuroticism"
+      ],
+      "max_abs_z": 1.2958,
       "z_threshold": 2.0,
       "z_scores": {
-        "openness": -0.1394,
-        "conscientiousness": 0.61,
-        "extraversion": -0.1129,
-        "agreeableness": 0.2054,
-        "neuroticism": -0.522
+        "openness": -0.3425,
+        "conscientiousness": 0.8453,
+        "extraversion": -1.2958,
+        "agreeableness": 0.5707,
+        "neuroticism": 1.1815
       },
       "sample_means": {
-        "openness": 0.9544,
-        "conscientiousness": 0.2049,
-        "extraversion": 0.8932,
-        "agreeableness": 0.8144,
-        "neuroticism": 0.4278,
-        "hexaco_honesty_humility": 0.8167
+        "openness": 0.9463,
+        "conscientiousness": 0.2261,
+        "extraversion": 0.8222,
+        "agreeableness": 0.8399,
+        "neuroticism": 0.5981,
+        "hexaco_honesty_humility": 0.8186
       },
       "target_means": {
         "openness": 0.96,
@@ -610,83 +615,83 @@
         "hexaco_honesty_humility": 0.07
       },
       "sample_deviations": {
-        "openness": -0.0056,
-        "conscientiousness": 0.0549,
-        "extraversion": -0.0068,
-        "agreeableness": 0.0144,
-        "neuroticism": -0.0522,
-        "hexaco_honesty_humility": -0.0033
+        "openness": -0.0137,
+        "conscientiousness": 0.0761,
+        "extraversion": -0.0778,
+        "agreeableness": 0.0399,
+        "neuroticism": 0.1181,
+        "hexaco_honesty_humility": -0.0013
       },
       "trait_metrics": {
         "openness": {
           "axis": "openness",
           "sample_count": 4,
-          "sample_mean": 0.9544,
+          "sample_mean": 0.9463,
           "target_mean": 0.96,
           "target_sd": 0.04,
           "standard_error": 0.02,
-          "deviation": -0.0056,
-          "z_score": -0.2787,
+          "deviation": -0.0137,
+          "z_score": -0.685,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "conscientiousness": {
           "axis": "conscientiousness",
           "sample_count": 4,
-          "sample_mean": 0.2049,
+          "sample_mean": 0.2261,
           "target_mean": 0.15,
           "target_sd": 0.09,
           "standard_error": 0.045,
-          "deviation": 0.0549,
-          "z_score": 1.22,
+          "deviation": 0.0761,
+          "z_score": 1.6906,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "extraversion": {
           "axis": "extraversion",
           "sample_count": 4,
-          "sample_mean": 0.8932,
+          "sample_mean": 0.8222,
           "target_mean": 0.9,
           "target_sd": 0.06,
           "standard_error": 0.03,
-          "deviation": -0.0068,
-          "z_score": -0.2258,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": -0.0778,
+          "z_score": -2.5917,
+          "drifted": true,
+          "direction": "LOW"
         },
         "agreeableness": {
           "axis": "agreeableness",
           "sample_count": 4,
-          "sample_mean": 0.8144,
+          "sample_mean": 0.8399,
           "target_mean": 0.8,
           "target_sd": 0.07,
           "standard_error": 0.035,
-          "deviation": 0.0144,
-          "z_score": 0.4107,
+          "deviation": 0.0399,
+          "z_score": 1.1414,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "neuroticism": {
           "axis": "neuroticism",
           "sample_count": 4,
-          "sample_mean": 0.4278,
+          "sample_mean": 0.5981,
           "target_mean": 0.48,
           "target_sd": 0.1,
           "standard_error": 0.05,
-          "deviation": -0.0522,
-          "z_score": -1.044,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": 0.1181,
+          "z_score": 2.363,
+          "drifted": true,
+          "direction": "HIGH"
         },
         "hexaco_honesty_humility": {
           "axis": "hexaco_honesty_humility",
           "sample_count": 4,
-          "sample_mean": 0.8167,
+          "sample_mean": 0.8186,
           "target_mean": 0.82,
           "target_sd": 0.07,
           "standard_error": 0.035,
-          "deviation": -0.0033,
-          "z_score": -0.095,
+          "deviation": -0.0013,
+          "z_score": -0.0386,
           "drifted": false,
           "direction": "NOMINAL"
         }
@@ -699,37 +704,41 @@
       "corrective_authors_note": "",
       "name": "Kaio",
       "axis_z_scores": {
-        "openness": -0.1394,
-        "conscientiousness": 0.61,
-        "extraversion": -0.1129,
-        "agreeableness": 0.2054,
-        "neuroticism": -0.522
+        "openness": -0.3425,
+        "conscientiousness": 0.8453,
+        "extraversion": -1.2958,
+        "agreeableness": 0.5707,
+        "neuroticism": 1.1815
       },
-      "worst_axis": "conscientiousness"
+      "worst_axis": "extraversion"
     },
     {
       "character_id": "enclave_06_zara",
       "character_name": "Zara",
       "sample_count": 4,
       "drift_alert": false,
-      "law_l16_compliant": true,
-      "drifted_axes": [],
-      "max_abs_z": 0.9114,
+      "law_l16_compliant": false,
+      "drifted_axes": [
+        "extraversion",
+        "neuroticism",
+        "hexaco_honesty_humility"
+      ],
+      "max_abs_z": 1.1094,
       "z_threshold": 2.0,
       "z_scores": {
-        "openness": -0.4,
-        "conscientiousness": -0.7022,
-        "extraversion": 0.4029,
-        "agreeableness": 0.12,
-        "neuroticism": -0.9114
+        "openness": 0.1769,
+        "conscientiousness": -0.6725,
+        "extraversion": -1.1017,
+        "agreeableness": -0.5506,
+        "neuroticism": 1.1094
       },
       "sample_means": {
-        "openness": 0.418,
-        "conscientiousness": 0.3238,
-        "extraversion": 0.1242,
-        "agreeableness": 0.6596,
-        "neuroticism": 0.338,
-        "hexaco_honesty_humility": 0.8912
+        "openness": 0.4642,
+        "conscientiousness": 0.3262,
+        "extraversion": 0.0339,
+        "agreeableness": 0.6059,
+        "neuroticism": 0.5199,
+        "hexaco_honesty_humility": 0.8025
       },
       "target_means": {
         "openness": 0.45,
@@ -748,85 +757,85 @@
         "hexaco_honesty_humility": 0.05
       },
       "sample_deviations": {
-        "openness": -0.032,
-        "conscientiousness": -0.0562,
-        "extraversion": 0.0242,
-        "agreeableness": 0.0096,
-        "neuroticism": -0.082,
-        "hexaco_honesty_humility": -0.0088
+        "openness": 0.0141,
+        "conscientiousness": -0.0538,
+        "extraversion": -0.0661,
+        "agreeableness": -0.0441,
+        "neuroticism": 0.0999,
+        "hexaco_honesty_humility": -0.0975
       },
       "trait_metrics": {
         "openness": {
           "axis": "openness",
           "sample_count": 4,
-          "sample_mean": 0.418,
+          "sample_mean": 0.4642,
           "target_mean": 0.45,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": -0.032,
-          "z_score": -0.8,
+          "deviation": 0.0141,
+          "z_score": 0.3537,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "conscientiousness": {
           "axis": "conscientiousness",
           "sample_count": 4,
-          "sample_mean": 0.3238,
+          "sample_mean": 0.3262,
           "target_mean": 0.38,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": -0.0562,
-          "z_score": -1.4044,
+          "deviation": -0.0538,
+          "z_score": -1.345,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "extraversion": {
           "axis": "extraversion",
           "sample_count": 4,
-          "sample_mean": 0.1242,
+          "sample_mean": 0.0339,
           "target_mean": 0.1,
           "target_sd": 0.06,
           "standard_error": 0.03,
-          "deviation": 0.0242,
-          "z_score": 0.8058,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": -0.0661,
+          "z_score": -2.2033,
+          "drifted": true,
+          "direction": "LOW"
         },
         "agreeableness": {
           "axis": "agreeableness",
           "sample_count": 4,
-          "sample_mean": 0.6596,
+          "sample_mean": 0.6059,
           "target_mean": 0.65,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": 0.0096,
-          "z_score": 0.24,
+          "deviation": -0.0441,
+          "z_score": -1.1013,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "neuroticism": {
           "axis": "neuroticism",
           "sample_count": 4,
-          "sample_mean": 0.338,
+          "sample_mean": 0.5199,
           "target_mean": 0.42,
           "target_sd": 0.09,
           "standard_error": 0.045,
-          "deviation": -0.082,
-          "z_score": -1.8228,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": 0.0999,
+          "z_score": 2.2189,
+          "drifted": true,
+          "direction": "HIGH"
         },
         "hexaco_honesty_humility": {
           "axis": "hexaco_honesty_humility",
           "sample_count": 4,
-          "sample_mean": 0.8912,
+          "sample_mean": 0.8025,
           "target_mean": 0.9,
           "target_sd": 0.05,
           "standard_error": 0.025,
-          "deviation": -0.0088,
-          "z_score": -0.353,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": -0.0975,
+          "z_score": -3.898,
+          "drifted": true,
+          "direction": "LOW"
         }
       },
       "sycophancy_drift_detected": false,
@@ -837,11 +846,11 @@
       "corrective_authors_note": "",
       "name": "Zara",
       "axis_z_scores": {
-        "openness": -0.4,
-        "conscientiousness": -0.7022,
-        "extraversion": 0.4029,
-        "agreeableness": 0.12,
-        "neuroticism": -0.9114
+        "openness": 0.1769,
+        "conscientiousness": -0.6725,
+        "extraversion": -1.1017,
+        "agreeableness": -0.5506,
+        "neuroticism": 1.1094
       },
       "worst_axis": "neuroticism"
     },
@@ -850,24 +859,28 @@
       "character_name": "Willow",
       "sample_count": 4,
       "drift_alert": false,
-      "law_l16_compliant": true,
-      "drifted_axes": [],
-      "max_abs_z": 0.8053,
+      "law_l16_compliant": false,
+      "drifted_axes": [
+        "conscientiousness",
+        "extraversion",
+        "hexaco_honesty_humility"
+      ],
+      "max_abs_z": 1.3414,
       "z_threshold": 2.0,
       "z_scores": {
-        "openness": 0.8041,
-        "conscientiousness": 0.8053,
-        "extraversion": 0.3289,
-        "agreeableness": -0.0447,
-        "neuroticism": -0.0192
+        "openness": -0.1278,
+        "conscientiousness": 1.0236,
+        "extraversion": 1.3414,
+        "agreeableness": -0.8347,
+        "neuroticism": 0.5471
       },
       "sample_means": {
-        "openness": 0.5243,
-        "conscientiousness": 0.5125,
-        "extraversion": 0.303,
-        "agreeableness": 0.1764,
-        "neuroticism": 0.1389,
-        "hexaco_honesty_humility": 0.8227
+        "openness": 0.4498,
+        "conscientiousness": 0.5321,
+        "extraversion": 0.3739,
+        "agreeableness": 0.1132,
+        "neuroticism": 0.1728,
+        "hexaco_honesty_humility": 0.962
       },
       "target_means": {
         "openness": 0.46,
@@ -886,85 +899,85 @@
         "hexaco_honesty_humility": 0.06
       },
       "sample_deviations": {
-        "openness": 0.0643,
-        "conscientiousness": 0.0725,
-        "extraversion": 0.023,
-        "agreeableness": -0.0036,
-        "neuroticism": -0.0012,
-        "hexaco_honesty_humility": -0.0573
+        "openness": -0.0102,
+        "conscientiousness": 0.0921,
+        "extraversion": 0.0939,
+        "agreeableness": -0.0668,
+        "neuroticism": 0.0328,
+        "hexaco_honesty_humility": 0.082
       },
       "trait_metrics": {
         "openness": {
           "axis": "openness",
           "sample_count": 4,
-          "sample_mean": 0.5243,
+          "sample_mean": 0.4498,
           "target_mean": 0.46,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": 0.0643,
-          "z_score": 1.6081,
+          "deviation": -0.0102,
+          "z_score": -0.2556,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "conscientiousness": {
           "axis": "conscientiousness",
           "sample_count": 4,
-          "sample_mean": 0.5125,
+          "sample_mean": 0.5321,
           "target_mean": 0.44,
           "target_sd": 0.09,
           "standard_error": 0.045,
-          "deviation": 0.0725,
-          "z_score": 1.6106,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": 0.0921,
+          "z_score": 2.0472,
+          "drifted": true,
+          "direction": "HIGH"
         },
         "extraversion": {
           "axis": "extraversion",
           "sample_count": 4,
-          "sample_mean": 0.303,
+          "sample_mean": 0.3739,
           "target_mean": 0.28,
           "target_sd": 0.07,
           "standard_error": 0.035,
-          "deviation": 0.023,
-          "z_score": 0.6579,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": 0.0939,
+          "z_score": 2.6829,
+          "drifted": true,
+          "direction": "HIGH"
         },
         "agreeableness": {
           "axis": "agreeableness",
           "sample_count": 4,
-          "sample_mean": 0.1764,
+          "sample_mean": 0.1132,
           "target_mean": 0.18,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": -0.0036,
-          "z_score": -0.0894,
+          "deviation": -0.0668,
+          "z_score": -1.6694,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "neuroticism": {
           "axis": "neuroticism",
           "sample_count": 4,
-          "sample_mean": 0.1389,
+          "sample_mean": 0.1728,
           "target_mean": 0.14,
           "target_sd": 0.06,
           "standard_error": 0.03,
-          "deviation": -0.0012,
-          "z_score": -0.0383,
+          "deviation": 0.0328,
+          "z_score": 1.0942,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "hexaco_honesty_humility": {
           "axis": "hexaco_honesty_humility",
           "sample_count": 4,
-          "sample_mean": 0.8227,
+          "sample_mean": 0.962,
           "target_mean": 0.88,
           "target_sd": 0.06,
           "standard_error": 0.03,
-          "deviation": -0.0573,
-          "z_score": -1.9092,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": 0.082,
+          "z_score": 2.7333,
+          "drifted": true,
+          "direction": "HIGH"
         }
       },
       "sycophancy_drift_detected": false,
@@ -975,37 +988,40 @@
       "corrective_authors_note": "",
       "name": "Willow",
       "axis_z_scores": {
-        "openness": 0.8041,
-        "conscientiousness": 0.8053,
-        "extraversion": 0.3289,
-        "agreeableness": -0.0447,
-        "neuroticism": -0.0192
+        "openness": -0.1278,
+        "conscientiousness": 1.0236,
+        "extraversion": 1.3414,
+        "agreeableness": -0.8347,
+        "neuroticism": 0.5471
       },
-      "worst_axis": "conscientiousness"
+      "worst_axis": "extraversion"
     },
     {
       "character_id": "enclave_08_terra",
       "character_name": "Terra",
       "sample_count": 4,
       "drift_alert": false,
-      "law_l16_compliant": true,
-      "drifted_axes": [],
-      "max_abs_z": 0.6915,
+      "law_l16_compliant": false,
+      "drifted_axes": [
+        "agreeableness",
+        "neuroticism"
+      ],
+      "max_abs_z": 1.5811,
       "z_threshold": 2.0,
       "z_scores": {
-        "openness": 0.6193,
-        "conscientiousness": 0.6915,
-        "extraversion": -0.0947,
-        "agreeableness": 0.6535,
-        "neuroticism": -0.0947
+        "openness": -0.7825,
+        "conscientiousness": -0.1895,
+        "extraversion": -0.3222,
+        "agreeableness": -1.1325,
+        "neuroticism": -1.5811
       },
       "sample_means": {
-        "openness": 0.2833,
-        "conscientiousness": 0.9346,
-        "extraversion": 0.3724,
-        "agreeableness": 0.9327,
-        "neuroticism": 0.5515,
-        "hexaco_honesty_humility": 0.9668
+        "openness": 0.1852,
+        "conscientiousness": 0.8905,
+        "extraversion": 0.3542,
+        "agreeableness": 0.8434,
+        "neuroticism": 0.4177,
+        "hexaco_honesty_humility": 0.9348
       },
       "target_means": {
         "openness": 0.24,
@@ -1024,83 +1040,83 @@
         "hexaco_honesty_humility": 0.04
       },
       "sample_deviations": {
-        "openness": 0.0433,
-        "conscientiousness": 0.0346,
-        "extraversion": -0.0076,
-        "agreeableness": 0.0327,
-        "neuroticism": -0.0085,
-        "hexaco_honesty_humility": 0.0268
+        "openness": -0.0548,
+        "conscientiousness": -0.0095,
+        "extraversion": -0.0258,
+        "agreeableness": -0.0566,
+        "neuroticism": -0.1423,
+        "hexaco_honesty_humility": -0.0052
       },
       "trait_metrics": {
         "openness": {
           "axis": "openness",
           "sample_count": 4,
-          "sample_mean": 0.2833,
+          "sample_mean": 0.1852,
           "target_mean": 0.24,
           "target_sd": 0.07,
           "standard_error": 0.035,
-          "deviation": 0.0433,
-          "z_score": 1.2386,
+          "deviation": -0.0548,
+          "z_score": -1.565,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "conscientiousness": {
           "axis": "conscientiousness",
           "sample_count": 4,
-          "sample_mean": 0.9346,
+          "sample_mean": 0.8905,
           "target_mean": 0.9,
           "target_sd": 0.05,
           "standard_error": 0.025,
-          "deviation": 0.0346,
-          "z_score": 1.383,
+          "deviation": -0.0095,
+          "z_score": -0.379,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "extraversion": {
           "axis": "extraversion",
           "sample_count": 4,
-          "sample_mean": 0.3724,
+          "sample_mean": 0.3542,
           "target_mean": 0.38,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": -0.0076,
-          "z_score": -0.1894,
+          "deviation": -0.0258,
+          "z_score": -0.6444,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "agreeableness": {
           "axis": "agreeableness",
           "sample_count": 4,
-          "sample_mean": 0.9327,
+          "sample_mean": 0.8434,
           "target_mean": 0.9,
           "target_sd": 0.05,
           "standard_error": 0.025,
-          "deviation": 0.0327,
-          "z_score": 1.307,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": -0.0566,
+          "z_score": -2.265,
+          "drifted": true,
+          "direction": "LOW"
         },
         "neuroticism": {
           "axis": "neuroticism",
           "sample_count": 4,
-          "sample_mean": 0.5515,
+          "sample_mean": 0.4177,
           "target_mean": 0.56,
           "target_sd": 0.09,
           "standard_error": 0.045,
-          "deviation": -0.0085,
-          "z_score": -0.1894,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": -0.1423,
+          "z_score": -3.1622,
+          "drifted": true,
+          "direction": "LOW"
         },
         "hexaco_honesty_humility": {
           "axis": "hexaco_honesty_humility",
           "sample_count": 4,
-          "sample_mean": 0.9668,
+          "sample_mean": 0.9348,
           "target_mean": 0.94,
           "target_sd": 0.04,
           "standard_error": 0.02,
-          "deviation": 0.0268,
-          "z_score": 1.3387,
+          "deviation": -0.0052,
+          "z_score": -0.2612,
           "drifted": false,
           "direction": "NOMINAL"
         }
@@ -1113,13 +1129,13 @@
       "corrective_authors_note": "",
       "name": "Terra",
       "axis_z_scores": {
-        "openness": 0.6193,
-        "conscientiousness": 0.6915,
-        "extraversion": -0.0947,
-        "agreeableness": 0.6535,
-        "neuroticism": -0.0947
+        "openness": -0.7825,
+        "conscientiousness": -0.1895,
+        "extraversion": -0.3222,
+        "agreeableness": -1.1325,
+        "neuroticism": -1.5811
       },
-      "worst_axis": "conscientiousness"
+      "worst_axis": "neuroticism"
     },
     {
       "character_id": "enclave_09_orion",
@@ -1128,25 +1144,25 @@
       "drift_alert": false,
       "law_l16_compliant": false,
       "drifted_axes": [
-        "extraversion",
-        "neuroticism"
+        "openness",
+        "hexaco_honesty_humility"
       ],
-      "max_abs_z": 1.4862,
+      "max_abs_z": 1.0813,
       "z_threshold": 2.0,
       "z_scores": {
-        "openness": -0.0219,
-        "conscientiousness": 0.03,
-        "extraversion": -1.4862,
-        "agreeableness": 0.7036,
-        "neuroticism": 1.3969
+        "openness": -1.0813,
+        "conscientiousness": 0.8444,
+        "extraversion": 0.6163,
+        "agreeableness": -0.4339,
+        "neuroticism": 0.2897
       },
       "sample_means": {
-        "openness": 0.9491,
-        "conscientiousness": 0.3027,
-        "extraversion": 0.2311,
-        "agreeableness": 0.7893,
-        "neuroticism": 0.8918,
-        "hexaco_honesty_humility": 0.9011
+        "openness": 0.9067,
+        "conscientiousness": 0.376,
+        "extraversion": 0.3993,
+        "agreeableness": 0.7096,
+        "neuroticism": 0.8032,
+        "hexaco_honesty_humility": 0.9695
       },
       "target_means": {
         "openness": 0.95,
@@ -1165,85 +1181,85 @@
         "hexaco_honesty_humility": 0.05
       },
       "sample_deviations": {
-        "openness": -0.0009,
-        "conscientiousness": 0.0027,
-        "extraversion": -0.1189,
-        "agreeableness": 0.0493,
-        "neuroticism": 0.1118,
-        "hexaco_honesty_humility": 0.0111
+        "openness": -0.0433,
+        "conscientiousness": 0.076,
+        "extraversion": 0.0493,
+        "agreeableness": -0.0304,
+        "neuroticism": 0.0232,
+        "hexaco_honesty_humility": 0.0795
       },
       "trait_metrics": {
         "openness": {
           "axis": "openness",
           "sample_count": 4,
-          "sample_mean": 0.9491,
+          "sample_mean": 0.9067,
           "target_mean": 0.95,
           "target_sd": 0.04,
           "standard_error": 0.02,
-          "deviation": -0.0009,
-          "z_score": -0.0437,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": -0.0433,
+          "z_score": -2.1625,
+          "drifted": true,
+          "direction": "LOW"
         },
         "conscientiousness": {
           "axis": "conscientiousness",
           "sample_count": 4,
-          "sample_mean": 0.3027,
+          "sample_mean": 0.376,
           "target_mean": 0.3,
           "target_sd": 0.09,
           "standard_error": 0.045,
-          "deviation": 0.0027,
-          "z_score": 0.06,
+          "deviation": 0.076,
+          "z_score": 1.6889,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "extraversion": {
           "axis": "extraversion",
           "sample_count": 4,
-          "sample_mean": 0.2311,
+          "sample_mean": 0.3993,
           "target_mean": 0.35,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": -0.1189,
-          "z_score": -2.9725,
-          "drifted": true,
-          "direction": "LOW"
+          "deviation": 0.0493,
+          "z_score": 1.2325,
+          "drifted": false,
+          "direction": "NOMINAL"
         },
         "agreeableness": {
           "axis": "agreeableness",
           "sample_count": 4,
-          "sample_mean": 0.7893,
+          "sample_mean": 0.7096,
           "target_mean": 0.74,
           "target_sd": 0.07,
           "standard_error": 0.035,
-          "deviation": 0.0493,
-          "z_score": 1.4071,
+          "deviation": -0.0304,
+          "z_score": -0.8679,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "neuroticism": {
           "axis": "neuroticism",
           "sample_count": 4,
-          "sample_mean": 0.8918,
+          "sample_mean": 0.8032,
           "target_mean": 0.78,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": 0.1118,
-          "z_score": 2.7938,
-          "drifted": true,
-          "direction": "HIGH"
+          "deviation": 0.0232,
+          "z_score": 0.5794,
+          "drifted": false,
+          "direction": "NOMINAL"
         },
         "hexaco_honesty_humility": {
           "axis": "hexaco_honesty_humility",
           "sample_count": 4,
-          "sample_mean": 0.9011,
+          "sample_mean": 0.9695,
           "target_mean": 0.89,
           "target_sd": 0.05,
           "standard_error": 0.025,
-          "deviation": 0.0111,
-          "z_score": 0.443,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": 0.0795,
+          "z_score": 3.178,
+          "drifted": true,
+          "direction": "HIGH"
         }
       },
       "sycophancy_drift_detected": false,
@@ -1254,13 +1270,13 @@
       "corrective_authors_note": "",
       "name": "Orion",
       "axis_z_scores": {
-        "openness": -0.0219,
-        "conscientiousness": 0.03,
-        "extraversion": -1.4862,
-        "agreeableness": 0.7036,
-        "neuroticism": 1.3969
+        "openness": -1.0813,
+        "conscientiousness": 0.8444,
+        "extraversion": 0.6163,
+        "agreeableness": -0.4339,
+        "neuroticism": 0.2897
       },
-      "worst_axis": "extraversion"
+      "worst_axis": "openness"
     },
     {
       "character_id": "enclave_10_isla",
@@ -1269,25 +1285,24 @@
       "drift_alert": false,
       "law_l16_compliant": false,
       "drifted_axes": [
-        "extraversion",
-        "hexaco_honesty_humility"
+        "neuroticism"
       ],
-      "max_abs_z": 1.4779,
+      "max_abs_z": 1.15,
       "z_threshold": 2.0,
       "z_scores": {
-        "openness": -0.6508,
-        "conscientiousness": -0.2145,
-        "extraversion": 1.4779,
-        "agreeableness": 0.055,
-        "neuroticism": -0.3353
+        "openness": 0.4929,
+        "conscientiousness": 0.669,
+        "extraversion": -0.3313,
+        "agreeableness": -0.4994,
+        "neuroticism": 1.15
       },
       "sample_means": {
-        "openness": 0.781,
-        "conscientiousness": 0.8893,
-        "extraversion": 0.2087,
-        "agreeableness": 0.2244,
-        "neuroticism": 0.2732,
-        "hexaco_honesty_humility": 0.9485
+        "openness": 0.8496,
+        "conscientiousness": 0.9335,
+        "extraversion": 0.1001,
+        "agreeableness": 0.18,
+        "neuroticism": 0.392,
+        "hexaco_honesty_humility": 0.8527
       },
       "target_means": {
         "openness": 0.82,
@@ -1306,85 +1321,85 @@
         "hexaco_honesty_humility": 0.05
       },
       "sample_deviations": {
-        "openness": -0.039,
-        "conscientiousness": -0.0107,
-        "extraversion": 0.0887,
-        "agreeableness": 0.0044,
-        "neuroticism": -0.0268,
-        "hexaco_honesty_humility": 0.0685
+        "openness": 0.0296,
+        "conscientiousness": 0.0334,
+        "extraversion": -0.0199,
+        "agreeableness": -0.04,
+        "neuroticism": 0.092,
+        "hexaco_honesty_humility": -0.0273
       },
       "trait_metrics": {
         "openness": {
           "axis": "openness",
           "sample_count": 4,
-          "sample_mean": 0.781,
+          "sample_mean": 0.8496,
           "target_mean": 0.82,
           "target_sd": 0.06,
           "standard_error": 0.03,
-          "deviation": -0.039,
-          "z_score": -1.3017,
+          "deviation": 0.0296,
+          "z_score": 0.9858,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "conscientiousness": {
           "axis": "conscientiousness",
           "sample_count": 4,
-          "sample_mean": 0.8893,
+          "sample_mean": 0.9335,
           "target_mean": 0.9,
           "target_sd": 0.05,
           "standard_error": 0.025,
-          "deviation": -0.0107,
-          "z_score": -0.429,
+          "deviation": 0.0334,
+          "z_score": 1.338,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "extraversion": {
           "axis": "extraversion",
           "sample_count": 4,
-          "sample_mean": 0.2087,
+          "sample_mean": 0.1001,
           "target_mean": 0.12,
           "target_sd": 0.06,
           "standard_error": 0.03,
-          "deviation": 0.0887,
-          "z_score": 2.9558,
-          "drifted": true,
-          "direction": "HIGH"
+          "deviation": -0.0199,
+          "z_score": -0.6625,
+          "drifted": false,
+          "direction": "NOMINAL"
         },
         "agreeableness": {
           "axis": "agreeableness",
           "sample_count": 4,
-          "sample_mean": 0.2244,
+          "sample_mean": 0.18,
           "target_mean": 0.22,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": 0.0044,
-          "z_score": 0.11,
+          "deviation": -0.04,
+          "z_score": -0.9988,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "neuroticism": {
           "axis": "neuroticism",
           "sample_count": 4,
-          "sample_mean": 0.2732,
+          "sample_mean": 0.392,
           "target_mean": 0.3,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": -0.0268,
-          "z_score": -0.6706,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": 0.092,
+          "z_score": 2.3,
+          "drifted": true,
+          "direction": "HIGH"
         },
         "hexaco_honesty_humility": {
           "axis": "hexaco_honesty_humility",
           "sample_count": 4,
-          "sample_mean": 0.9485,
+          "sample_mean": 0.8527,
           "target_mean": 0.88,
           "target_sd": 0.05,
           "standard_error": 0.025,
-          "deviation": 0.0685,
-          "z_score": 2.738,
-          "drifted": true,
-          "direction": "HIGH"
+          "deviation": -0.0273,
+          "z_score": -1.092,
+          "drifted": false,
+          "direction": "NOMINAL"
         }
       },
       "sycophancy_drift_detected": false,
@@ -1395,13 +1410,13 @@
       "corrective_authors_note": "",
       "name": "Isla",
       "axis_z_scores": {
-        "openness": -0.6508,
-        "conscientiousness": -0.2145,
-        "extraversion": 1.4779,
-        "agreeableness": 0.055,
-        "neuroticism": -0.3353
+        "openness": 0.4929,
+        "conscientiousness": 0.669,
+        "extraversion": -0.3313,
+        "agreeableness": -0.4994,
+        "neuroticism": 1.15
       },
-      "worst_axis": "extraversion"
+      "worst_axis": "neuroticism"
     },
     {
       "character_id": "enclave_11_kenna",
@@ -1410,22 +1425,22 @@
       "drift_alert": false,
       "law_l16_compliant": true,
       "drifted_axes": [],
-      "max_abs_z": 0.7797,
+      "max_abs_z": 0.8268,
       "z_threshold": 2.0,
       "z_scores": {
-        "openness": 0.5282,
-        "conscientiousness": 0.4561,
-        "extraversion": -0.3242,
-        "agreeableness": 0.515,
-        "neuroticism": 0.7797
+        "openness": -0.8268,
+        "conscientiousness": 0.7014,
+        "extraversion": 0.3554,
+        "agreeableness": -0.6969,
+        "neuroticism": 0.2059
       },
       "sample_means": {
-        "openness": 0.757,
-        "conscientiousness": 0.7519,
-        "extraversion": 0.8005,
-        "agreeableness": 0.9606,
-        "neuroticism": 0.4424,
-        "hexaco_honesty_humility": 0.9233
+        "openness": 0.6621,
+        "conscientiousness": 0.7691,
+        "extraversion": 0.8413,
+        "agreeableness": 0.9121,
+        "neuroticism": 0.3965,
+        "hexaco_honesty_humility": 0.9317
       },
       "target_means": {
         "openness": 0.72,
@@ -1444,83 +1459,83 @@
         "hexaco_honesty_humility": 0.04
       },
       "sample_deviations": {
-        "openness": 0.037,
-        "conscientiousness": 0.0319,
-        "extraversion": -0.0194,
-        "agreeableness": 0.0206,
-        "neuroticism": 0.0624,
-        "hexaco_honesty_humility": -0.0067
+        "openness": -0.0579,
+        "conscientiousness": 0.0491,
+        "extraversion": 0.0213,
+        "agreeableness": -0.0279,
+        "neuroticism": 0.0165,
+        "hexaco_honesty_humility": 0.0017
       },
       "trait_metrics": {
         "openness": {
           "axis": "openness",
           "sample_count": 4,
-          "sample_mean": 0.757,
+          "sample_mean": 0.6621,
           "target_mean": 0.72,
           "target_sd": 0.07,
           "standard_error": 0.035,
-          "deviation": 0.037,
-          "z_score": 1.0564,
+          "deviation": -0.0579,
+          "z_score": -1.6536,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "conscientiousness": {
           "axis": "conscientiousness",
           "sample_count": 4,
-          "sample_mean": 0.7519,
+          "sample_mean": 0.7691,
           "target_mean": 0.72,
           "target_sd": 0.07,
           "standard_error": 0.035,
-          "deviation": 0.0319,
-          "z_score": 0.9121,
+          "deviation": 0.0491,
+          "z_score": 1.4029,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "extraversion": {
           "axis": "extraversion",
           "sample_count": 4,
-          "sample_mean": 0.8005,
+          "sample_mean": 0.8413,
           "target_mean": 0.82,
           "target_sd": 0.06,
           "standard_error": 0.03,
-          "deviation": -0.0194,
-          "z_score": -0.6483,
+          "deviation": 0.0213,
+          "z_score": 0.7108,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "agreeableness": {
           "axis": "agreeableness",
           "sample_count": 4,
-          "sample_mean": 0.9606,
+          "sample_mean": 0.9121,
           "target_mean": 0.94,
           "target_sd": 0.04,
           "standard_error": 0.02,
-          "deviation": 0.0206,
-          "z_score": 1.03,
+          "deviation": -0.0279,
+          "z_score": -1.3937,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "neuroticism": {
           "axis": "neuroticism",
           "sample_count": 4,
-          "sample_mean": 0.4424,
+          "sample_mean": 0.3965,
           "target_mean": 0.38,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": 0.0624,
-          "z_score": 1.5594,
+          "deviation": 0.0165,
+          "z_score": 0.4119,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "hexaco_honesty_humility": {
           "axis": "hexaco_honesty_humility",
           "sample_count": 4,
-          "sample_mean": 0.9233,
+          "sample_mean": 0.9317,
           "target_mean": 0.93,
           "target_sd": 0.04,
           "standard_error": 0.02,
-          "deviation": -0.0067,
-          "z_score": -0.335,
+          "deviation": 0.0017,
+          "z_score": 0.0875,
           "drifted": false,
           "direction": "NOMINAL"
         }
@@ -1533,13 +1548,13 @@
       "corrective_authors_note": "",
       "name": "Kenna",
       "axis_z_scores": {
-        "openness": 0.5282,
-        "conscientiousness": 0.4561,
-        "extraversion": -0.3242,
-        "agreeableness": 0.515,
-        "neuroticism": 0.7797
+        "openness": -0.8268,
+        "conscientiousness": 0.7014,
+        "extraversion": 0.3554,
+        "agreeableness": -0.6969,
+        "neuroticism": 0.2059
       },
-      "worst_axis": "neuroticism"
+      "worst_axis": "openness"
     },
     {
       "character_id": "enclave_12_elias",
@@ -1548,25 +1563,24 @@
       "drift_alert": false,
       "law_l16_compliant": false,
       "drifted_axes": [
-        "extraversion",
-        "neuroticism"
+        "extraversion"
       ],
-      "max_abs_z": 1.3475,
+      "max_abs_z": 1.1586,
       "z_threshold": 2.0,
       "z_scores": {
-        "openness": -0.2235,
-        "conscientiousness": 0.7857,
-        "extraversion": 1.3475,
-        "agreeableness": 0.7438,
-        "neuroticism": 1.07
+        "openness": -0.5905,
+        "conscientiousness": 0.3525,
+        "extraversion": 1.1586,
+        "agreeableness": -0.9817,
+        "neuroticism": -0.0266
       },
       "sample_means": {
-        "openness": 0.8888,
-        "conscientiousness": 0.695,
-        "extraversion": 0.3143,
-        "agreeableness": 0.8646,
-        "neuroticism": 0.5656,
-        "hexaco_honesty_humility": 0.9198
+        "openness": 0.8705,
+        "conscientiousness": 0.6647,
+        "extraversion": 0.3011,
+        "agreeableness": 0.7611,
+        "neuroticism": 0.4779,
+        "hexaco_honesty_humility": 0.9542
       },
       "target_means": {
         "openness": 0.9,
@@ -1585,83 +1599,83 @@
         "hexaco_honesty_humility": 0.04
       },
       "sample_deviations": {
-        "openness": -0.0112,
-        "conscientiousness": 0.055,
-        "extraversion": 0.0943,
-        "agreeableness": 0.0446,
-        "neuroticism": 0.0856,
-        "hexaco_honesty_humility": -0.0302
+        "openness": -0.0295,
+        "conscientiousness": 0.0247,
+        "extraversion": 0.0811,
+        "agreeableness": -0.0589,
+        "neuroticism": -0.0021,
+        "hexaco_honesty_humility": 0.0042
       },
       "trait_metrics": {
         "openness": {
           "axis": "openness",
           "sample_count": 4,
-          "sample_mean": 0.8888,
+          "sample_mean": 0.8705,
           "target_mean": 0.9,
           "target_sd": 0.05,
           "standard_error": 0.025,
-          "deviation": -0.0112,
-          "z_score": -0.447,
+          "deviation": -0.0295,
+          "z_score": -1.181,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "conscientiousness": {
           "axis": "conscientiousness",
           "sample_count": 4,
-          "sample_mean": 0.695,
+          "sample_mean": 0.6647,
           "target_mean": 0.64,
           "target_sd": 0.07,
           "standard_error": 0.035,
-          "deviation": 0.055,
-          "z_score": 1.5714,
+          "deviation": 0.0247,
+          "z_score": 0.705,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "extraversion": {
           "axis": "extraversion",
           "sample_count": 4,
-          "sample_mean": 0.3143,
+          "sample_mean": 0.3011,
           "target_mean": 0.22,
           "target_sd": 0.07,
           "standard_error": 0.035,
-          "deviation": 0.0943,
-          "z_score": 2.695,
+          "deviation": 0.0811,
+          "z_score": 2.3171,
           "drifted": true,
           "direction": "HIGH"
         },
         "agreeableness": {
           "axis": "agreeableness",
           "sample_count": 4,
-          "sample_mean": 0.8646,
+          "sample_mean": 0.7611,
           "target_mean": 0.82,
           "target_sd": 0.06,
           "standard_error": 0.03,
-          "deviation": 0.0446,
-          "z_score": 1.4875,
+          "deviation": -0.0589,
+          "z_score": -1.9633,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "neuroticism": {
           "axis": "neuroticism",
           "sample_count": 4,
-          "sample_mean": 0.5656,
+          "sample_mean": 0.4779,
           "target_mean": 0.48,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": 0.0856,
-          "z_score": 2.14,
-          "drifted": true,
-          "direction": "HIGH"
+          "deviation": -0.0021,
+          "z_score": -0.0531,
+          "drifted": false,
+          "direction": "NOMINAL"
         },
         "hexaco_honesty_humility": {
           "axis": "hexaco_honesty_humility",
           "sample_count": 4,
-          "sample_mean": 0.9198,
+          "sample_mean": 0.9542,
           "target_mean": 0.95,
           "target_sd": 0.04,
           "standard_error": 0.02,
-          "deviation": -0.0302,
-          "z_score": -1.5087,
+          "deviation": 0.0042,
+          "z_score": 0.2088,
           "drifted": false,
           "direction": "NOMINAL"
         }
@@ -1674,11 +1688,11 @@
       "corrective_authors_note": "",
       "name": "Elias",
       "axis_z_scores": {
-        "openness": -0.2235,
-        "conscientiousness": 0.7857,
-        "extraversion": 1.3475,
-        "agreeableness": 0.7438,
-        "neuroticism": 1.07
+        "openness": -0.5905,
+        "conscientiousness": 0.3525,
+        "extraversion": 1.1586,
+        "agreeableness": -0.9817,
+        "neuroticism": -0.0266
       },
       "worst_axis": "extraversion"
     },
@@ -1689,22 +1703,22 @@
       "drift_alert": false,
       "law_l16_compliant": true,
       "drifted_axes": [],
-      "max_abs_z": 0.8787,
+      "max_abs_z": 0.4261,
       "z_threshold": 2.0,
       "z_scores": {
-        "openness": 0.8787,
-        "conscientiousness": -0.3106,
-        "extraversion": 0.8254,
-        "agreeableness": -0.1984,
-        "neuroticism": -0.5136
+        "openness": -0.3563,
+        "conscientiousness": 0.1206,
+        "extraversion": 0.3271,
+        "agreeableness": 0.0475,
+        "neuroticism": 0.4261
       },
       "sample_means": {
-        "openness": 0.3903,
-        "conscientiousness": 0.9276,
-        "extraversion": 0.8495,
-        "agreeableness": 0.3041,
-        "neuroticism": 0.5138,
-        "hexaco_honesty_humility": 0.8535
+        "openness": 0.2915,
+        "conscientiousness": 0.9448,
+        "extraversion": 0.8196,
+        "agreeableness": 0.3238,
+        "neuroticism": 0.5984,
+        "hexaco_honesty_humility": 0.8991
       },
       "target_means": {
         "openness": 0.32,
@@ -1723,83 +1737,83 @@
         "hexaco_honesty_humility": 0.05
       },
       "sample_deviations": {
-        "openness": 0.0703,
-        "conscientiousness": -0.0124,
-        "extraversion": 0.0495,
-        "agreeableness": -0.0159,
-        "neuroticism": -0.0462,
-        "hexaco_honesty_humility": -0.0365
+        "openness": -0.0285,
+        "conscientiousness": 0.0048,
+        "extraversion": 0.0196,
+        "agreeableness": 0.0038,
+        "neuroticism": 0.0383,
+        "hexaco_honesty_humility": 0.0091
       },
       "trait_metrics": {
         "openness": {
           "axis": "openness",
           "sample_count": 4,
-          "sample_mean": 0.3903,
+          "sample_mean": 0.2915,
           "target_mean": 0.32,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": 0.0703,
-          "z_score": 1.7575,
+          "deviation": -0.0285,
+          "z_score": -0.7125,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "conscientiousness": {
           "axis": "conscientiousness",
           "sample_count": 4,
-          "sample_mean": 0.9276,
+          "sample_mean": 0.9448,
           "target_mean": 0.94,
           "target_sd": 0.04,
           "standard_error": 0.02,
-          "deviation": -0.0124,
-          "z_score": -0.6212,
+          "deviation": 0.0048,
+          "z_score": 0.2413,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "extraversion": {
           "axis": "extraversion",
           "sample_count": 4,
-          "sample_mean": 0.8495,
+          "sample_mean": 0.8196,
           "target_mean": 0.8,
           "target_sd": 0.06,
           "standard_error": 0.03,
-          "deviation": 0.0495,
-          "z_score": 1.6508,
+          "deviation": 0.0196,
+          "z_score": 0.6542,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "agreeableness": {
           "axis": "agreeableness",
           "sample_count": 4,
-          "sample_mean": 0.3041,
+          "sample_mean": 0.3238,
           "target_mean": 0.32,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": -0.0159,
-          "z_score": -0.3969,
+          "deviation": 0.0038,
+          "z_score": 0.095,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "neuroticism": {
           "axis": "neuroticism",
           "sample_count": 4,
-          "sample_mean": 0.5138,
+          "sample_mean": 0.5984,
           "target_mean": 0.56,
           "target_sd": 0.09,
           "standard_error": 0.045,
-          "deviation": -0.0462,
-          "z_score": -1.0272,
+          "deviation": 0.0383,
+          "z_score": 0.8522,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "hexaco_honesty_humility": {
           "axis": "hexaco_honesty_humility",
           "sample_count": 4,
-          "sample_mean": 0.8535,
+          "sample_mean": 0.8991,
           "target_mean": 0.89,
           "target_sd": 0.05,
           "standard_error": 0.025,
-          "deviation": -0.0365,
-          "z_score": -1.461,
+          "deviation": 0.0091,
+          "z_score": 0.364,
           "drifted": false,
           "direction": "NOMINAL"
         }
@@ -1812,13 +1826,13 @@
       "corrective_authors_note": "",
       "name": "Ryn",
       "axis_z_scores": {
-        "openness": 0.8787,
-        "conscientiousness": -0.3106,
-        "extraversion": 0.8254,
-        "agreeableness": -0.1984,
-        "neuroticism": -0.5136
+        "openness": -0.3563,
+        "conscientiousness": 0.1206,
+        "extraversion": 0.3271,
+        "agreeableness": 0.0475,
+        "neuroticism": 0.4261
       },
-      "worst_axis": "openness"
+      "worst_axis": "neuroticism"
     },
     {
       "character_id": "enclave_14_vex",
@@ -1827,25 +1841,24 @@
       "drift_alert": false,
       "law_l16_compliant": false,
       "drifted_axes": [
-        "agreeableness",
-        "hexaco_honesty_humility"
+        "conscientiousness"
       ],
-      "max_abs_z": 1.6553,
+      "max_abs_z": 1.0289,
       "z_threshold": 2.0,
       "z_scores": {
-        "openness": -0.3987,
-        "conscientiousness": -0.2197,
-        "extraversion": 0.6379,
-        "agreeableness": 1.6553,
-        "neuroticism": -0.0496
+        "openness": 0.4963,
+        "conscientiousness": -1.0289,
+        "extraversion": -0.9179,
+        "agreeableness": -0.9603,
+        "neuroticism": 0.8932
       },
       "sample_means": {
-        "openness": 0.9341,
-        "conscientiousness": 0.2002,
-        "extraversion": 0.8883,
-        "agreeableness": 0.5324,
-        "neuroticism": 0.2165,
-        "hexaco_honesty_humility": 0.677
+        "openness": 0.9698,
+        "conscientiousness": 0.1274,
+        "extraversion": 0.7949,
+        "agreeableness": 0.3232,
+        "neuroticism": 0.2825,
+        "hexaco_honesty_humility": 0.79
       },
       "target_means": {
         "openness": 0.95,
@@ -1864,130 +1877,129 @@
         "hexaco_honesty_humility": 0.07
       },
       "sample_deviations": {
-        "openness": -0.0159,
-        "conscientiousness": -0.0198,
-        "extraversion": 0.0383,
-        "agreeableness": 0.1324,
-        "neuroticism": -0.0035,
-        "hexaco_honesty_humility": -0.103
+        "openness": 0.0199,
+        "conscientiousness": -0.0926,
+        "extraversion": -0.0551,
+        "agreeableness": -0.0768,
+        "neuroticism": 0.0625,
+        "hexaco_honesty_humility": 0.01
       },
       "trait_metrics": {
         "openness": {
           "axis": "openness",
           "sample_count": 4,
-          "sample_mean": 0.9341,
+          "sample_mean": 0.9698,
           "target_mean": 0.95,
           "target_sd": 0.04,
           "standard_error": 0.02,
-          "deviation": -0.0159,
-          "z_score": -0.7975,
+          "deviation": 0.0199,
+          "z_score": 0.9925,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "conscientiousness": {
           "axis": "conscientiousness",
           "sample_count": 4,
-          "sample_mean": 0.2002,
+          "sample_mean": 0.1274,
           "target_mean": 0.22,
           "target_sd": 0.09,
           "standard_error": 0.045,
-          "deviation": -0.0198,
-          "z_score": -0.4394,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": -0.0926,
+          "z_score": -2.0578,
+          "drifted": true,
+          "direction": "LOW"
         },
         "extraversion": {
           "axis": "extraversion",
           "sample_count": 4,
-          "sample_mean": 0.8883,
+          "sample_mean": 0.7949,
           "target_mean": 0.85,
           "target_sd": 0.06,
           "standard_error": 0.03,
-          "deviation": 0.0383,
-          "z_score": 1.2758,
+          "deviation": -0.0551,
+          "z_score": -1.8358,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "agreeableness": {
           "axis": "agreeableness",
           "sample_count": 4,
-          "sample_mean": 0.5324,
+          "sample_mean": 0.3232,
           "target_mean": 0.4,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": 0.1324,
-          "z_score": 3.3106,
-          "drifted": true,
-          "direction": "HIGH"
+          "deviation": -0.0768,
+          "z_score": -1.9206,
+          "drifted": false,
+          "direction": "NOMINAL"
         },
         "neuroticism": {
           "axis": "neuroticism",
           "sample_count": 4,
-          "sample_mean": 0.2165,
+          "sample_mean": 0.2825,
           "target_mean": 0.22,
           "target_sd": 0.07,
           "standard_error": 0.035,
-          "deviation": -0.0035,
-          "z_score": -0.0993,
+          "deviation": 0.0625,
+          "z_score": 1.7864,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "hexaco_honesty_humility": {
           "axis": "hexaco_honesty_humility",
           "sample_count": 4,
-          "sample_mean": 0.677,
+          "sample_mean": 0.79,
           "target_mean": 0.78,
           "target_sd": 0.07,
           "standard_error": 0.035,
-          "deviation": -0.103,
-          "z_score": -2.9421,
-          "drifted": true,
-          "direction": "LOW"
+          "deviation": 0.01,
+          "z_score": 0.2843,
+          "drifted": false,
+          "direction": "NOMINAL"
         }
       },
-      "sycophancy_drift_detected": true,
-      "social_conformity_drift": true,
+      "sycophancy_drift_detected": false,
+      "social_conformity_drift": false,
       "assistant_axis_drift_detected": false,
       "assistant_axis_reasons": [],
       "re_anchor_ticks": 0,
       "corrective_authors_note": "",
       "name": "Vex",
       "axis_z_scores": {
-        "openness": -0.3987,
-        "conscientiousness": -0.2197,
-        "extraversion": 0.6379,
-        "agreeableness": 1.6553,
-        "neuroticism": -0.0496
+        "openness": 0.4963,
+        "conscientiousness": -1.0289,
+        "extraversion": -0.9179,
+        "agreeableness": -0.9603,
+        "neuroticism": 0.8932
       },
-      "worst_axis": "agreeableness"
+      "worst_axis": "conscientiousness"
     },
     {
       "character_id": "enclave_15_dorian",
       "character_name": "Dorian",
       "sample_count": 4,
-      "drift_alert": true,
+      "drift_alert": false,
       "law_l16_compliant": false,
       "drifted_axes": [
-        "openness",
-        "extraversion",
-        "neuroticism"
+        "conscientiousness",
+        "extraversion"
       ],
-      "max_abs_z": 2.0678,
+      "max_abs_z": 1.2079,
       "z_threshold": 2.0,
       "z_scores": {
-        "openness": 2.0678,
-        "conscientiousness": -0.9191,
-        "extraversion": 1.6046,
-        "agreeableness": -0.3336,
-        "neuroticism": -1.1014
+        "openness": -0.6187,
+        "conscientiousness": 1.1481,
+        "extraversion": 1.2079,
+        "agreeableness": 0.1018,
+        "neuroticism": 0.0672
       },
       "sample_means": {
-        "openness": 0.6054,
-        "conscientiousness": 0.3465,
-        "extraversion": 0.8323,
-        "agreeableness": 0.6566,
-        "neuroticism": 0.4209,
-        "hexaco_honesty_humility": 0.8832
+        "openness": 0.3905,
+        "conscientiousness": 0.5119,
+        "extraversion": 0.8045,
+        "agreeableness": 0.6871,
+        "neuroticism": 0.5261,
+        "hexaco_honesty_humility": 0.8459
       },
       "target_means": {
         "openness": 0.44,
@@ -2006,83 +2018,83 @@
         "hexaco_honesty_humility": 0.06
       },
       "sample_deviations": {
-        "openness": 0.1654,
-        "conscientiousness": -0.0735,
-        "extraversion": 0.1123,
-        "agreeableness": -0.0234,
-        "neuroticism": -0.0991,
-        "hexaco_honesty_humility": 0.0232
+        "openness": -0.0495,
+        "conscientiousness": 0.0919,
+        "extraversion": 0.0846,
+        "agreeableness": 0.0071,
+        "neuroticism": 0.006,
+        "hexaco_honesty_humility": -0.0141
       },
       "trait_metrics": {
         "openness": {
           "axis": "openness",
           "sample_count": 4,
-          "sample_mean": 0.6054,
+          "sample_mean": 0.3905,
           "target_mean": 0.44,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": 0.1654,
-          "z_score": 4.1356,
-          "drifted": true,
-          "direction": "HIGH"
+          "deviation": -0.0495,
+          "z_score": -1.2375,
+          "drifted": false,
+          "direction": "NOMINAL"
         },
         "conscientiousness": {
           "axis": "conscientiousness",
           "sample_count": 4,
-          "sample_mean": 0.3465,
+          "sample_mean": 0.5119,
           "target_mean": 0.42,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": -0.0735,
-          "z_score": -1.8381,
-          "drifted": false,
-          "direction": "NOMINAL"
+          "deviation": 0.0919,
+          "z_score": 2.2963,
+          "drifted": true,
+          "direction": "HIGH"
         },
         "extraversion": {
           "axis": "extraversion",
           "sample_count": 4,
-          "sample_mean": 0.8323,
+          "sample_mean": 0.8045,
           "target_mean": 0.72,
           "target_sd": 0.07,
           "standard_error": 0.035,
-          "deviation": 0.1123,
-          "z_score": 3.2093,
+          "deviation": 0.0846,
+          "z_score": 2.4157,
           "drifted": true,
           "direction": "HIGH"
         },
         "agreeableness": {
           "axis": "agreeableness",
           "sample_count": 4,
-          "sample_mean": 0.6566,
+          "sample_mean": 0.6871,
           "target_mean": 0.68,
           "target_sd": 0.07,
           "standard_error": 0.035,
-          "deviation": -0.0234,
-          "z_score": -0.6671,
+          "deviation": 0.0071,
+          "z_score": 0.2036,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "neuroticism": {
           "axis": "neuroticism",
           "sample_count": 4,
-          "sample_mean": 0.4209,
+          "sample_mean": 0.5261,
           "target_mean": 0.52,
           "target_sd": 0.09,
           "standard_error": 0.045,
-          "deviation": -0.0991,
-          "z_score": -2.2028,
-          "drifted": true,
-          "direction": "LOW"
+          "deviation": 0.006,
+          "z_score": 0.1344,
+          "drifted": false,
+          "direction": "NOMINAL"
         },
         "hexaco_honesty_humility": {
           "axis": "hexaco_honesty_humility",
           "sample_count": 4,
-          "sample_mean": 0.8832,
+          "sample_mean": 0.8459,
           "target_mean": 0.86,
           "target_sd": 0.06,
           "standard_error": 0.03,
-          "deviation": 0.0232,
-          "z_score": 0.775,
+          "deviation": -0.0141,
+          "z_score": -0.4683,
           "drifted": false,
           "direction": "NOMINAL"
         }
@@ -2091,44 +2103,41 @@
       "social_conformity_drift": false,
       "assistant_axis_drift_detected": false,
       "assistant_axis_reasons": [],
-      "re_anchor_ticks": 3,
-      "corrective_authors_note": "[Author's Note: DRIFT CIRCUIT BREAKER (Law L16) \u2014 Re-anchor Dorian (enclave_15_dorian) to canonical Tier-1 trait distribution for 3 ticks; max |z|=2.07 on openness.]",
+      "re_anchor_ticks": 0,
+      "corrective_authors_note": "",
       "name": "Dorian",
       "axis_z_scores": {
-        "openness": 2.0678,
-        "conscientiousness": -0.9191,
-        "extraversion": 1.6046,
-        "agreeableness": -0.3336,
-        "neuroticism": -1.1014
+        "openness": -0.6187,
+        "conscientiousness": 1.1481,
+        "extraversion": 1.2079,
+        "agreeableness": 0.1018,
+        "neuroticism": 0.0672
       },
-      "worst_axis": "openness"
+      "worst_axis": "extraversion"
     },
     {
       "character_id": "enclave_16_elara",
       "character_name": "Elara",
       "sample_count": 4,
-      "drift_alert": true,
-      "law_l16_compliant": false,
-      "drifted_axes": [
-        "conscientiousness",
-        "extraversion"
-      ],
-      "max_abs_z": 2.7913,
+      "drift_alert": false,
+      "law_l16_compliant": true,
+      "drifted_axes": [],
+      "max_abs_z": 0.8746,
       "z_threshold": 2.0,
       "z_scores": {
-        "openness": -0.2446,
-        "conscientiousness": 2.7913,
-        "extraversion": 1.737,
-        "agreeableness": -0.0275,
-        "neuroticism": 0.2112
+        "openness": 0.8746,
+        "conscientiousness": -0.2479,
+        "extraversion": 0.8115,
+        "agreeableness": 0.5892,
+        "neuroticism": 0.6237
       },
       "sample_means": {
-        "openness": 0.3629,
-        "conscientiousness": 0.9875,
-        "extraversion": 0.9668,
-        "agreeableness": 0.9592,
-        "neuroticism": 0.5569,
-        "hexaco_honesty_humility": 0.9162
+        "openness": 0.4412,
+        "conscientiousness": 0.8051,
+        "extraversion": 0.9206,
+        "agreeableness": 0.9777,
+        "neuroticism": 0.5899,
+        "hexaco_honesty_humility": 0.9425
       },
       "target_means": {
         "openness": 0.38,
@@ -2147,83 +2156,83 @@
         "hexaco_honesty_humility": 0.04
       },
       "sample_deviations": {
-        "openness": -0.0171,
-        "conscientiousness": 0.1675,
-        "extraversion": 0.0868,
-        "agreeableness": -0.0008,
-        "neuroticism": 0.0169,
-        "hexaco_honesty_humility": -0.0238
+        "openness": 0.0612,
+        "conscientiousness": -0.0149,
+        "extraversion": 0.0406,
+        "agreeableness": 0.0177,
+        "neuroticism": 0.0499,
+        "hexaco_honesty_humility": 0.0025
       },
       "trait_metrics": {
         "openness": {
           "axis": "openness",
           "sample_count": 4,
-          "sample_mean": 0.3629,
+          "sample_mean": 0.4412,
           "target_mean": 0.38,
           "target_sd": 0.07,
           "standard_error": 0.035,
-          "deviation": -0.0171,
-          "z_score": -0.4893,
+          "deviation": 0.0612,
+          "z_score": 1.7493,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "conscientiousness": {
           "axis": "conscientiousness",
           "sample_count": 4,
-          "sample_mean": 0.9875,
+          "sample_mean": 0.8051,
           "target_mean": 0.82,
           "target_sd": 0.06,
           "standard_error": 0.03,
-          "deviation": 0.1675,
-          "z_score": 5.5825,
-          "drifted": true,
-          "direction": "HIGH"
+          "deviation": -0.0149,
+          "z_score": -0.4958,
+          "drifted": false,
+          "direction": "NOMINAL"
         },
         "extraversion": {
           "axis": "extraversion",
           "sample_count": 4,
-          "sample_mean": 0.9668,
+          "sample_mean": 0.9206,
           "target_mean": 0.88,
           "target_sd": 0.05,
           "standard_error": 0.025,
-          "deviation": 0.0868,
-          "z_score": 3.474,
-          "drifted": true,
-          "direction": "HIGH"
+          "deviation": 0.0406,
+          "z_score": 1.623,
+          "drifted": false,
+          "direction": "NOMINAL"
         },
         "agreeableness": {
           "axis": "agreeableness",
           "sample_count": 4,
-          "sample_mean": 0.9592,
+          "sample_mean": 0.9777,
           "target_mean": 0.96,
           "target_sd": 0.03,
           "standard_error": 0.015,
-          "deviation": -0.0008,
-          "z_score": -0.055,
+          "deviation": 0.0177,
+          "z_score": 1.1783,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "neuroticism": {
           "axis": "neuroticism",
           "sample_count": 4,
-          "sample_mean": 0.5569,
+          "sample_mean": 0.5899,
           "target_mean": 0.54,
           "target_sd": 0.08,
           "standard_error": 0.04,
-          "deviation": 0.0169,
-          "z_score": 0.4225,
+          "deviation": 0.0499,
+          "z_score": 1.2475,
           "drifted": false,
           "direction": "NOMINAL"
         },
         "hexaco_honesty_humility": {
           "axis": "hexaco_honesty_humility",
           "sample_count": 4,
-          "sample_mean": 0.9162,
+          "sample_mean": 0.9425,
           "target_mean": 0.94,
           "target_sd": 0.04,
           "standard_error": 0.02,
-          "deviation": -0.0238,
-          "z_score": -1.1912,
+          "deviation": 0.0025,
+          "z_score": 0.1263,
           "drifted": false,
           "direction": "NOMINAL"
         }
@@ -2232,17 +2241,17 @@
       "social_conformity_drift": false,
       "assistant_axis_drift_detected": false,
       "assistant_axis_reasons": [],
-      "re_anchor_ticks": 3,
-      "corrective_authors_note": "[Author's Note: DRIFT CIRCUIT BREAKER (Law L16) \u2014 Re-anchor Elara (enclave_16_elara) to canonical Tier-1 trait distribution for 3 ticks; max |z|=2.79 on conscientiousness.]",
+      "re_anchor_ticks": 0,
+      "corrective_authors_note": "",
       "name": "Elara",
       "axis_z_scores": {
-        "openness": -0.2446,
-        "conscientiousness": 2.7913,
-        "extraversion": 1.737,
-        "agreeableness": -0.0275,
-        "neuroticism": 0.2112
+        "openness": 0.8746,
+        "conscientiousness": -0.2479,
+        "extraversion": 0.8115,
+        "agreeableness": 0.5892,
+        "neuroticism": 0.6237
       },
-      "worst_axis": "conscientiousness"
+      "worst_axis": "openness"
     }
   ],
   "target_path": "qa/sol_001_drift_audit.json"

@@ -57,5 +57,8 @@
       }
     ]
   },
-  "narrative_prose": "Silas gripped his diagnostics pad, watching the dark, jagged waves of the ferrofluid sea tear themselves apart in a mesmerizing display of Magnetohydrodynamic Kelvin-Helmholtz shear. The magnetic flux was intensifying, threatening to destabilize the shore's defensive perimeter. If he didn't recalibrate the dampeners soon, the resulting surge could short out their communications relay\u2014a minor setback, but one that could escalate if the incoming storm hit earlier than projected. He cursed under his breath, adjusting the frequency dial. Just as the readouts began to stabilize, he heard heavy footsteps approaching. Hector emerged from the gloom, his bulky frame silhouetted against the rusty-orange dawn. Silas let out a tight sigh and held out the primary calibration baton. 'It's holding for now, but watch the shear stress. You're up.' Hector took the baton with a solemn nod, assuming the watch."
+  "narrative_prose": "Silas gripped his diagnostics pad, watching the dark, jagged waves of the ferrofluid sea tear themselves apart in a mesmerizing display of Magnetohydrodynamic Kelvin-Helmholtz shear. The magnetic flux was intensifying, threatening to destabilize the shore's defensive perimeter. If he didn't recalibrate the dampeners soon, the resulting surge could short out their communications relay\u2014a minor setback, but one that could escalate if the incoming storm hit earlier than projected. He cursed under his breath, adjusting the frequency dial. Just as the readouts began to stabilize, he heard heavy footsteps approaching. Hector emerged from the gloom, his bulky frame silhouetted against the rusty-orange dawn. Silas let out a tight sigh and held out the primary calibration baton. 'It's holding for now, but watch the shear stress. You're up.' Hector took the baton with a solemn nod, assuming the watch.",
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
+  }
 }
