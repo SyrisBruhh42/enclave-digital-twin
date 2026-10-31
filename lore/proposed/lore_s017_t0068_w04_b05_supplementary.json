@@ -1,0 +1,143 @@
+{
+  "event_id": "lore_s017_t0068_w04_b05",
+  "tick_id": 68,
+  "colony_sol": 17,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2050-01-17T20:00:00Z",
+  "base_snapshot_tick": 68,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The Hearth",
+  "actors": [
+    "enclave_13_ryn",
+    "enclave_03_silas"
+  ],
+  "summary": "Ryn hands off to Silas at The Feast.",
+  "importance": 5,
+  "novelty_score": 0.8,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_13_ryn -> Handoff=enclave_03_silas.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ]
+  },
+  "narrative_prose": "The Hearth hummed with the latent warmth of a dozen bodies and the sharp tang of caramelized brass-root. Above the main dining table, a specialized containment globe cast a restless, flickering light, a direct consequence of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea they had barely stabilized earlier. Ryn stood over the massive copper kettles, rapping her heavy ladle against the rim to demand silence, her eyes darting over the mathematically portioned plates. She finally scooped the last ladle of thick, mineral-rich stew into a hammered bowl, marching it over to the head of the table. Without breaking her commanding gaze, she shoved the bowl and the heavy serving ladle directly into Silas's hands. \"Eat every last drop, or I'll use it to polish the turbine manifolds tomorrow.\"",
+  "campaign_metadata": {
+    "session_number": 3,
+    "colony_sol": 17,
+    "tick_id": 68,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Conduct a successful feast despite the unstable ferrofluid sea.",
+      "mid_term_milestone": "Restore complete stability to the Hub's primary systems.",
+      "campaign_arc_climax": "Master the exoplanet's unpredictable weather patterns."
+    }
+  },
+  "active_location": {
+    "location_id": "the_hearth_galley",
+    "macro_silhouette": "The Hearth is a sprawling, steam-filled galley where massive copper kettles bubble over controlled lightning arcs. Warm amber light reflects off hundreds of meticulously arranged cooking implements hung along the riveted brass bulkheads.",
+    "sensory_palette": {
+      "sight_and_color": "Polished copper gleaming under flickering, erratic amber lighting.",
+      "sound": "The rhythmic bubbling of thick stews and the clatter of heavy ladles.",
+      "smell": "Rich, earthy spices cut with a sharp, metallic ozone tang.",
+      "tactile_temperature": "Oppressively hot and humid, causing an immediate sweat.",
+      "taste_optional": "A lingering, savory umami with a hint of static discharge."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Thirty-Gallon Steam-Jacketed Kettle",
+        "affordance_description": "A massive boiling vat that can be used to repel an unwanted advance.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Emergency Ration Cache",
+        "affordance_description": "A concealed panel behind the main spice rack storing high-density caloric bars.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Braised Mire-Lentils Bowl",
+        "affordance_description": "A steaming portion of mathematically balanced nutrients.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_containment_globe",
+      "name_and_role": "Unstable Light Source (Environmental Modifier)",
+      "motivation_goal": "Flicker and pulse in time with the magnetic shear.",
+      "consistent_method": "Casting distracting, erratic shadows across the dining area.",
+      "immediate_complication": "The shifting light makes it difficult to read the precise measurements on the culinary ledger.",
+      "pressure_index": 4,
+      "uninterrupted_escalation": "The globe could shatter, raining magnetic shards into the food."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The feast must proceed to maintain morale despite the recent magnetic anomalies.",
+      "level_2_local": "Ryn's strict caloric accounting is stressed by the fluctuating energy costs of the day.",
+      "level_3_campaign_arc": "The colony is learning to adapt their biological needs to an inherently unstable world."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      3,
+      7,
+      14,
+      18,
+      20
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.5,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.4,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.6,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "OpenAI",
+      "model": "gpt-4",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The containment globe flickers out, plunging the meal into darkness and ruining the carefully curated atmosphere.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Ryn miscalculates the thermal mass, burning the main course entirely.",
+        "below_dc_complicated_fail_forward": "The meal is served, but the fluctuating light gives everyone a slight headache.",
+        "meets_dc_clean_success": "The feast is a resounding success, perfectly balancing the colony's nutritional and emotional needs.",
+        "dc_plus_5_or_20_extended_lore": "Ryn discovers a new way to use the ambient magnetic field to perfectly temper the chocolate dessert."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules",
+      "temperature": 0.6,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": false,
+      "agency_handoff_prompt": "What do you do, Silas?"
+    }
+  }
+}
