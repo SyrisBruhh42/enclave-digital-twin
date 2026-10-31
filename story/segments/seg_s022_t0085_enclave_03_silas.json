@@ -1,0 +1,61 @@
+{
+  "event_id": "seg_s022_t0085_enclave_03_silas",
+  "tick_id": 85,
+  "colony_sol": 22,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-10-25T06:00:00Z",
+  "base_snapshot_tick": 85,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The First Forge",
+  "summary": "Silas examines the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea before handing over to Hector.",
+  "importance": 5,
+  "novelty_score": 6,
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "evidence_refs": [],
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "active_location": {
+    "macro_silhouette": "The metallic waves of the ferrofluid sea crash against the rocky shore, their jagged peaks sculpted by unseen magnetic forces. A dull, rusty-orange light bleeds over the horizon, illuminating the dark, viscous liquid as it continuously shifts and tears itself apart in a mesmerizing display of Magnetohydrodynamic Kelvin-Helmholtz shear.",
+    "sensory_palette": {
+      "sight_and_color": "Dark, spikey waves forming sharp crests",
+      "sound": "A low, continuous hum accompanied by metallic sloshing",
+      "smell": "Ozone and metallic rust",
+      "tactile_temperature": "Vibrations traveling through the rock, static charge in the air",
+      "taste_optional": "A sharp, coppery tang at the back of the throat"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetic Resonator Rod",
+        "system_verb": "ATTRACT",
+        "affordance_description": "Can be used to pull ferrofluid spikes towards the shore.",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Scrap Metal Barricade",
+        "system_verb": "DEFEND",
+        "affordance_description": "Provides cover from unpredictable magnetic surges.",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Rust Deposit Sinkhole",
+        "system_verb": "CONCEAL",
+        "affordance_description": "Allows a small object to be hidden beneath the shifting rust.",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "narrative_prose": "Silas gripped his diagnostics pad, watching the dark, jagged waves of the ferrofluid sea tear themselves apart in a mesmerizing display of Magnetohydrodynamic Kelvin-Helmholtz shear. The magnetic flux was intensifying, threatening to destabilize the shore's defensive perimeter. If he didn't recalibrate the dampeners soon, the resulting surge could short out their communications relay\u2014a minor setback, but one that could escalate if the incoming storm hit earlier than projected. He cursed under his breath, adjusting the frequency dial. Just as the readouts began to stabilize, he heard heavy footsteps approaching. Hector emerged from the gloom, his bulky frame silhouetted against the rusty-orange dawn. Silas let out a tight sigh and held out the primary calibration baton. 'It's holding for now, but watch the shear stress. You're up.' Hector took the baton with a solemn nod, assuming the watch."
+}
