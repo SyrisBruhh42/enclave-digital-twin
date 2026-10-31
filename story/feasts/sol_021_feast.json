@@ -1,0 +1,64 @@
+{
+  "event_id": "evt_sol_021_feast",
+  "world_timestamp_iso": "2026-11-14T19:00:00Z",
+  "tick_id": 84,
+  "colony_sol": 21,
+  "day_phase": "THE_FEAST",
+  "event_type": "POV_SCENE_SEGMENT",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "location": "The_Hearth",
+  "summary": "Ryn commands the feast while navigating the magnetic anomalies affecting the kitchen, eventually handing off a portion to Silas.",
+  "importance": 7,
+  "novelty_score": 5,
+  "actors": [
+    "enclave_01_hector", "enclave_02_jane", "enclave_03_silas", "enclave_04_leo",
+    "enclave_05_kaio", "enclave_06_zara", "enclave_07_willow", "enclave_08_terra",
+    "enclave_09_orion", "enclave_10_isla", "enclave_11_kenna", "enclave_12_elias",
+    "enclave_13_ryn", "enclave_14_vex", "enclave_15_dorian", "enclave_16_elara"
+  ],
+  "evidence_refs": [],
+  "state_deltas": {
+    "hub_caloric_reserves_pct": -0.5
+  },
+  "relationship_deltas": [],
+  "context_manifest": {
+    "loaded_full_card_ids": ["enclave_13_ryn"],
+    "full_cards_loaded_count": 1,
+    "active_relationships": []
+  },
+  "active_location": {
+    "location_id": "The_Hearth",
+    "macro_silhouette": "The Hearth hums with an almost palpable heat, its copper exhaust hoods gleaming under the erratic flicker of geode lighting. Magnetohydrodynamic Kelvin-Helmholtz shear across the distant ferrofluid sea echoes in the very resonance of the cast-iron stovetops, causing pots to tremble rhythmically. The warmth is absolute, an anchor point of safety against the bifurcated thermal shear of the valley.",
+    "sensory_palette": {
+      "sight_and_color": "Polished copper, rich mahogany hues of roasted crusts, flickering amber and violet geode light",
+      "sound": "The hiss of steam escaping heavy kettles, a low magnetic thrum resonating through the floor grates",
+      "smell": "Caramelized amino-acids, sharp vinegar tang, and the distinct ozone scent of charged spores",
+      "tactile_temperature": "Oppressively cozy, radiating dry heat that seeps into chilled bones",
+      "taste_optional": "Rich, earthy umami of roasted iron-wheat husks"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Steam-Jacketed Serving Kettles",
+        "affordance_description": "Heavy brass-fitted pots radiating intense thermal energy, requiring precision to handle without burns.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Resonant Spice Racks",
+        "affordance_description": "Jars of mineral-salts that visibly align with the changing magnetic field.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 10
+      },
+      {
+        "feature_name": "Iron-Wheat Loaves",
+        "affordance_description": "Dense, high-calorie breads crucial for the colony's metabolic baseline.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 8
+      }
+    ]
+  },
+  "narrative_prose": "Ryn rapped her heavy brass ladle sharply against the butcher block, demanding the attention of the sixteen hungry souls gathered in The Hearth. The air was thick with the scent of caramelized amino-acids and the sharp ozone tang that rolled off the valley's resonant spore fog drift. Outside, a particularly vicious Magnetohydrodynamic Kelvin-Helmholtz shear rippled across the ferrofluid sea, an anomaly that sent a low, trembling resonance directly into the iron grates of her steam-jacketed kettles. The heavy pots threatened to vibrate off their burners, but Ryn adjusted the manifold valves with practiced precision, stabilizing the thermal output. \"Listen to me very carefully!\" she barked over the hiss of steam, eyeing the tired faces around the grand table. \"The ridge temperature is plummeting, and if any of you skip this course, you will be burning your own muscle mass before Dawn Shift!\" The ambient tension of the day—the competing claims over the iron-wheat harvest—hung in the air, but her ironclad authority as The Chef left no room for debate. She moved down the line, ensuring the dense, calorie-rich loaves were distributed equitably. The magnetic shear intensified, causing a few iron-rich crusts to literally levitate an inch above their platters, but Ryn simply slammed them back down with a scowl. Finding Silas seated near the edge, meticulously inspecting his utensils, she grabbed the warmest, most perfectly baked portion of bread and shoved it into his calloused hands. She handed him the ladle—the baton of command for the moment—and stepped back, wiping her brow as Silas quietly accepted the offering, pretending to inspect its structural integrity before taking a bite."
+}
