@@ -85,7 +85,8 @@
     "lpi_metrics": {
       "laughs_per_hour": 1.5,
       "gasps_per_hour": 0.5,
-      "tears_per_hour": 0.0
+      "tears_per_hour": 0.0,
+      "composite_lpi": 0.68
     },
     "dual_agent_contract": {
       "mulligan_architect": {
@@ -126,5 +127,8 @@
   "state_deltas": {},
   "relationship_deltas": {},
   "evidence_refs": [],
-  "world_timestamp_iso": "2245-01-20T06:00:00Z"
+  "world_timestamp_iso": "2245-01-20T06:00:00Z",
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
+  }
 }
