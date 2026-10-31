@@ -1,0 +1,120 @@
+{
+  "base_snapshot_tick": 79,
+  "context_manifest": {
+    "primary_focus": "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK",
+    "involved_entities": [
+      "enclave_05_kaio",
+      "enclave_13_ryn"
+    ],
+    "environmental_state": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea"
+  },
+  "campaign_metadata": {
+    "session_number": 20,
+    "colony_sol": 20,
+    "tick_id": 79,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Resolve the continuity factcheck across the ferrofluid sea",
+      "mid_term_milestone": "Prepare for the nightly convergence",
+      "campaign_arc_climax": "Survive the Enclave of the 16"
+    }
+  },
+  "active_location": {
+    "location_id": "LOC_FERROFLUID_SEA",
+    "macro_silhouette": "The dark, metallic waves of the ferrofluid sea crash against the basalt cliffs, driven by the Magnetohydrodynamic Kelvin-Helmholtz shear. The air is thick with the scent of ozone and iron, as the waves form jagged, crystalline peaks that collapse back into the roiling mass. In the distance, the twin suns cast an eerie, bifurcated glow across the chaotic surface.",
+    "sensory_palette": {
+      "sight_and_color": "Metallic black waves, iridescent blue and red glints",
+      "sound": "Crashing metallic waves, crackling ozone",
+      "smell": "Ozone, rusted iron, sulfur",
+      "tactile_temperature": "Cold, damp, staticky",
+      "taste_optional": "Metallic tang"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Ferrofluid Wave Crests",
+        "affordance_description": "Can be manipulated using magnetic polarity inversion to create temporary walkways.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetohydrodynamic Eddy",
+        "affordance_description": "Can be harnessed to charge depleted geode batteries.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Basalt Overhang",
+        "affordance_description": "Provides shelter from the spore-fog drift and magnetic shear.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "TOY_FERROFLUID_SEA",
+      "name_and_role": "Ferrofluid Sea Shear",
+      "motivation_goal": "Disrupt magnetic navigation and isolate explorers",
+      "consistent_method": "Generating unpredictable Magnetohydrodynamic Kelvin-Helmholtz shears",
+      "immediate_complication": "Kaio's compass is spinning wildly, and he needs to hand off the physical baton to Ryn before the shear peaks.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The shear will intensify, causing the ferrofluid waves to crest higher and eventually breach the basalt cliffs."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio must navigate the shear to reach Ryn.",
+      "level_2_local": "The handoff is critical for the evening's Feast preparation.",
+      "level_3_campaign_arc": "Mastering the ferrofluid sea is essential for the Sanctuary's long-term survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      4,
+      12,
+      18,
+      7,
+      2
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.6,
+    "unresolved_conflict_ratio": 0.3,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.525,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Aegis_Deterministic",
+      "model": "Rules_Engine_v1",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Kaio loses the baton in the ferrofluid sea, delaying the Feast.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio misreads the shear and falls into a magnetic eddy, losing the baton and gaining fatigue.",
+        "below_dc_complicated_fail_forward": "Kaio reaches Ryn but drops his glowing pebbles into the sea, increasing stress.",
+        "meets_dc_clean_success": "Kaio navigates the shear perfectly and hands off the baton to Ryn.",
+        "dc_plus_5_or_20_extended_lore": "Kaio uses the shear to propel himself gracefully to Ryn, impressing her and discovering a new magnetic current."
+      }
+    },
+    "master_narrator": {
+      "executor": "Aegis_Narrative",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio bounded across the jagged basalt, the metallic tang of the ferrofluid sea sharp in his nose. The Magnetohydrodynamic Kelvin-Helmholtz shear whipped his hair, but his eyes were fixed on Ryn's sturdy silhouette ahead. With a joyful whoop, he slid the last few feet, thrusting the polished brass baton into Ryn's waiting hand. 'The sea's angry tonight, but she's beautiful!' Kaio yelled over the crashing waves, his pockets jingling with newfound glowing pebbles. Ryn grasped the baton firmly, her grip anchoring the chaotic energy of the handoff."
+    }
+  }
+}
