@@ -1,0 +1,116 @@
+{
+  "base_snapshot_tick": 79,
+  "context_manifest": [
+    "canon/schemas/world_state_v2.json",
+    "canon/characters/enclave_05_kaio.core.json"
+  ],
+  "campaign_metadata": {
+    "session_number": 20,
+    "colony_sol": 20,
+    "tick_id": 79,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Craft a stabilized artifact from the ferrofluid sea.",
+      "mid_term_milestone": "Reinforce the Enclave against the incoming bifurcated thermal shear.",
+      "campaign_arc_climax": "Master the exoplanet's wild magnetosphere to secure The Sanctuary."
+    }
+  },
+  "active_location": {
+    "location_id": "The Forge Outpost Interior",
+    "macro_silhouette": "The cramped interior of the outpost is bathed in the flickering amber glow of captured lightning geodes, casting long, erratic shadows across the brass workbenches. Magnetized tools float gently near the ceiling, anchored only by thin tethers of copper wire. Kaio's sketches of wind-streams cover every inch of the bulkheads, illuminated by the soft hum of the smelting crucible.",
+    "sensory_palette": {
+      "sight_and_color": "Flickering amber glow, erratic shadows, floating brass and copper.",
+      "sound": "Soft hum of the crucible, gentle clinking of tethered tools.",
+      "smell": "Ozone from the geodes and the sharp tang of hot metal.",
+      "tactile_temperature": "Oppressive radiant heat from the forge meeting drafts of chilled air.",
+      "taste_optional": "A metallic tang of static electricity."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetized Copper Tethers",
+        "affordance_description": "Can be rearranged to trap airborne hazards or redirect floating debris.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Resonant Geode Cluster",
+        "affordance_description": "Emits a strong electromagnetic pulse that can pull ferrofluid elements toward it.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Smelting Crucible Exhaust",
+        "affordance_description": "Can be vented to instantly incinerate airborne spore contaminants.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_anomaly_01",
+      "name_and_role": "Ferrofluid Sea Splatter",
+      "motivation_goal": "To coalesce and expand across metallic surfaces.",
+      "consistent_method": "Creeping along magnetic field lines and corroding unsecured brass.",
+      "immediate_complication": "It is currently shorting out the primary lighting geode above the workbench.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Will eventually consume the outpost's power grid, plunging the room into darkness and zero-g."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio must stabilize the ferrofluid sample before it breaches the containment flask.",
+      "level_2_local": "Failing to secure the sample means losing crucial data on the Magnetohydrodynamic Kelvin-Helmholtz shear.",
+      "level_3_campaign_arc": "Understanding this shear is vital for predicting the violent surges of the ferrofluid sea that threaten the Enclave."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      4,
+      12,
+      18,
+      7,
+      2
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.65,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.71,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Aegis_Local",
+      "model": "Tactical_Arbiter_V2",
+      "temperature": 0.4,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If the containment fails, the ferrofluid will coat Kaio's scout gear, ruining his maps and causing minor burns.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio misreads the magnetic polarity, causing a minor explosion that coats the room in slick ferrofluid.",
+        "below_dc_complicated_fail_forward": "The sample is contained, but the containment flask is permanently magnetized, making it clumsy to handle.",
+        "meets_dc_clean_success": "Kaio successfully stabilizes the sample, isolating the Kelvin-Helmholtz shear patterns for study.",
+        "dc_plus_5_or_20_extended_lore": "Kaio not only stabilizes the sample but discovers a harmonic frequency that can calm the ferrofluid sea locally."
+      }
+    },
+    "master_narrator": {
+      "executor": "Aegis_Local_Narrative",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio adjusted the brass sextant, his breathless voice echoing in the cramped forge as he tried to explain the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. The liquid lodestone spun erratically in its flask, a miniature storm of metallic waves threatening to breach the glass. With a sudden burst of frantic energy, he shoved the vibrating flask into the waiting, steady hands of Ryn, hoping the Chef could synthesize a more stable containment matrix from the heavy proteins of their last harvest."
+    }
+  }
+}
