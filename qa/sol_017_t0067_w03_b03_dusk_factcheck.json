@@ -1,0 +1,125 @@
+{
+  "event_type": "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK",
+  "campaign_metadata": {
+    "session_number": 17,
+    "colony_sol": 17,
+    "tick_id": 67,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Resolve the tension in the magnetic sea.",
+      "mid_term_milestone": "Map the ferrofluid currents.",
+      "campaign_arc_climax": "Complete the Great Forge."
+    }
+  },
+  "active_location": {
+    "location_id": "loc_ferrofluid_sea",
+    "macro_silhouette": "The obsidian shores of the ferrofluid sea curl under a heavy, storm-bruised sky. Dark magnetic waves crash against brass pylons, casting jagged shadows across the polished rock. In the distance, arcing static illuminates the misty horizon in flashes of cobalt.",
+    "sensory_palette": {
+      "sight_and_color": "Cobalt arcs over dark, rippling ferrofluid.",
+      "sound": "The deep hum of magnetic shear and crashing fluid.",
+      "smell": "Ozone and metallic tang.",
+      "tactile_temperature": "A sharp, static-charged chill.",
+      "taste_optional": "Copper on the back of the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Brass Anchoring Pylon",
+        "affordance_description": "Can be braced against to resist the magnetic pull of the shoreline.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Rippling Ferrofluid Eddy",
+        "affordance_description": "Can be harvested for its dense, charged particulate matter.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Resonant Quartz Outcropping",
+        "affordance_description": "Provides cover from the blinding static arcs rolling off the sea.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_magnetic_surge",
+      "name_and_role": "Kelvin-Helmholtz Shear Surge - Environmental Hazard",
+      "motivation_goal": "To destabilize the shoreline's magnetic polarity.",
+      "consistent_method": "Pulsing waves of disruptive kinetic force.",
+      "immediate_complication": "Threatens to invert Kaio's navigational compass.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Will eventually tear the brass pylons from the bedrock."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio must stabilize his navigation gear amidst the surge.",
+      "level_2_local": "The surge threatens the local supply caches along the shore.",
+      "level_3_campaign_arc": "Understanding the shear is vital to taming the ferrofluid sea."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 12,
+    "prerolled_hazard_queue": [
+      14,
+      18,
+      7,
+      22,
+      11
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.65,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.4,
+    "temporal_horizon_immediacy": 0.85,
+    "composite_lpi": 0.65,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_inference",
+      "model": "judge_v1",
+      "temperature": 0.1,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Kaio's compass gets permanently polarized.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio misreads the surge and drops his compass into the sea.",
+        "below_dc_complicated_fail_forward": "Kaio struggles to hold his footing, bracing against the pylon but losing a map.",
+        "meets_dc_clean_success": "Kaio deftly recalibrates his compass while bracing against the shear.",
+        "dc_plus_5_or_20_extended_lore": "Kaio maps the shear perfectly, realizing it predicts the next major storm."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "With the compass secure, Kaio tosses it to Ryn. What do you do?"
+    }
+  },
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "active_pov_id": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ]
+  }
+}
