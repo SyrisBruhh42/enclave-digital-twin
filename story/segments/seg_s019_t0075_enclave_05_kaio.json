@@ -1,0 +1,139 @@
+{
+  "event_id": "seg_s019_t0075_enclave_05_kaio",
+  "tick_id": 75,
+  "colony_sol": 19,
+  "day_phase": "DUSK_CRAFT",
+  "world_timestamp_iso": "2026-11-12T18:00:00Z",
+  "base_snapshot_tick": 75,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "ferrofluid_sea_cliffs",
+  "actors": [
+    "enclave_05_kaio",
+    "enclave_13_ryn"
+  ],
+  "summary": "Kaio charts the magnetic shear waves of the ferrofluid sea before handing off his findings to Ryn at The Hub.",
+  "importance": 7,
+  "novelty_score": 0.8,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "steward_note": "deterministic-enclave-5section-v2: Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "calypso_zero_raw_stats": true,
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ]
+  },
+  "campaign_metadata": {
+    "session_number": 19,
+    "colony_sol": 19,
+    "tick_id": 75,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Navigate the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea.",
+      "mid_term_milestone": "Map the ferrofluid sea currents for The Sanctuary.",
+      "campaign_arc_climax": "Integrate all biome corridors for the Enclave's ultimate safety."
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea_cliffs",
+    "macro_silhouette": "The obsidian cliffs jut out sharply against the churning black waves of the ferrofluid sea, where magnetic storms whip the liquid into razor-sharp crests. Strange bioluminescent spores drift in the heavy air, catching in the magnetic eddies of the shear forces. In the distance, the faint glow of the Hub provides the only steady light against the jagged, chaotic horizon.",
+    "sensory_palette": {
+      "sight_and_color": "Swirling black and iridescent silver of the ferrofluid sea under a spore-lit sky.",
+      "sound": "The deep, resonant hum of magnetic shear and the sharp crack of liquid iron against basalt.",
+      "smell": "Ozone, heavy metallic tang, and the earthy musk of bioluminescent fungi.",
+      "tactile_temperature": "Cold, biting wind carrying a stinging spray of micro-shrapnel and magnetic static.",
+      "taste_optional": "A sharp, metallic tang at the back of the throat."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetic Basalt Outcropping",
+        "affordance_description": "Can be used to anchor oneself against the pulling force of the sea.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Drifting Luminescent Spore Cluster",
+        "affordance_description": "Can be lured close to illuminate the path forward through the shear.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Overhanging Iron-Lichen Canopy",
+        "affordance_description": "Thick enough to hide behind from sudden magnetic wave surges.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "kelvin_helmholtz_shear_wave",
+      "name_and_role": "Ferrofluid Shear Eddy (Environmental Hazard)",
+      "motivation_goal": "To equalize the magnetic tension across the sea's surface.",
+      "consistent_method": "Sending unpredictable, razor-edged surges of liquid iron up the cliff face.",
+      "immediate_complication": "Kaio's brass sextant is vibrating violently, threatening to slip from his grasp.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The shear waves will steadily climb the cliff, cutting off the path back to the Hub."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio needs to map the shear currents without being shredded by ferrofluid waves.",
+      "level_2_local": "Accurate readings of the magnetic shear are critical to predict the next surge that could threaten The Hub.",
+      "level_3_campaign_arc": "Understanding the Enclave's deep magnetic rhythms is vital for The Sanctuary's integration."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      14,
+      18,
+      9,
+      22,
+      11
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.65,
+    "motivational_vector_saturation": 0.85,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.88,
+    "composite_lpi": 0.72,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If Kaio fails to navigate the shear, he drops his sextant into the sea and must retreat empty-handed, delaying the mapping.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio misreads the magnetic hum, slipping and sliding toward the razor-waves while losing his mapping data.",
+        "below_dc_complicated_fail_forward": "Kaio secures the readings but his boots are magnetically bonded to the cliff, requiring him to pry them off and lose precious time.",
+        "meets_dc_clean_success": "Kaio perfectly predicts the shear eddies, dancing along the cliff edge while charting the currents flawlessly.",
+        "dc_plus_5_or_20_extended_lore": "Kaio not only charts the currents but recognizes a harmonic resonance indicating a hidden, stable island deeper in the sea."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules_narrative_engine",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio stood near the edge of the obsidian cliffs, his brass sextant vibrating violently in his grip. The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea was putting on a terrifyingly beautiful display, sending razor-edged black waves crashing against the basalt. He leaned out, letting his own pulse align with the piezoelectric hum of the rock, mentally tracing the chaotic eddies of the liquid iron. A sudden shear surge forced him to press back against a magnetic outcropping, clutching his glowing spore-samples tight to his chest. The cold wind bit at his cheeks, carrying a sharp metallic tang that coated his tongue. 'Just a little further,' he whispered, tracking the iridescent silver currents threading through the darkness. The data was clear now—the storm was shifting south. He hastily scribbled his findings into his logbook, the urgency mounting as the waves began climbing higher up the cliff face. Scrambling back up the steep incline before the next surge could trap him, Kaio darted through the overhanging iron-lichen canopy and bolted toward the warm, steady glow of The Hub. Bursting through the heavy pressure doors of the kitchen, breathless and muddy, he nearly collided with Ryn. 'The shear is shifting!' Kaio practically yelled, thrusting his mud-spattered logbook and a faintly humming jar of spore-samples directly into Ryn's hands. Ryn blinked, looking down at the chaotic notes and the vibrating jar, as the heavy kitchen doors sealed shut behind Kaio."
+    }
+  }
+}
