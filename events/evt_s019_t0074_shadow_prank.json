@@ -1,0 +1,75 @@
+{
+  "event_id": "evt_s019_t0074_shadow_prank",
+  "tick_id": 74,
+  "colony_sol": 19,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2050-01-19T12:00:00Z",
+  "base_snapshot_tick": 74,
+  "event_type": "SHADOW_ECONOMY_PRANK_SEEDED",
+  "location": "The_Stormbreaker_Spire",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_03_silas",
+    "enclave_13_ryn"
+  ],
+  "summary": "Hector sets up a magnetic prank meant for Silas, but it targets Ryn instead.",
+  "importance": 5,
+  "novelty_score": 7,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "prank_id": "prank_019_074",
+  "status": "SEEDED",
+  "matured": false,
+  "severity": 3,
+  "instigator": "enclave_01_hector",
+  "node_a": "enclave_01_hector",
+  "node_b": "enclave_03_silas",
+  "node_c": "enclave_13_ryn",
+  "target_b_missed": true,
+  "blamed_node": "enclave_01_hector",
+  "prank_description": "Hector re-routes the grounding shunt to produce a harmless but highly visible magnetic flutter.",
+  "origin_sol": 19,
+  "maturity_sol": 22,
+  "active_location": {
+    "macro_silhouette": "The Stormbreaker Spire looms over the shimmering coastline, a towering scaffold of heavily insulated copper lines and induction vanes built into the jagged rocks. Thick sleet whips across the exterior vistas, reflecting off the dark, churning surface of the nearby ferrofluid sea. The upper observation deck rattles under the fierce magnetic gales, suspended perilously high above the breaking waves.",
+    "sensory_palette": {
+      "sight": "Flashes of blue Saint Elmo's fire across the copper vanes.",
+      "sound": "The howling sleet mixed with the deep hum of high-voltage transformers.",
+      "smell": "Ozone and metallic tang.",
+      "touch": "Freezing wind and the vibration of the grated floor.",
+      "taste_optional": "A faint coppery static on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_id": "f1",
+        "system_verb": "ATTRACT",
+        "narrative_prompt": "Use the high-voltage corona to draw the attention of nearby patrols."
+      },
+      {
+        "feature_id": "f2",
+        "system_verb": "DEFEND",
+        "narrative_prompt": "Shelter behind the thick dielectric shielding walls against the sleet squall."
+      },
+      {
+        "feature_id": "f3",
+        "system_verb": "CONCEAL",
+        "narrative_prompt": "Hide modified wiring inside the main induction housing."
+      }
+    ]
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ]
+  },
+  "narrative_prose": "Hector scaled the upper induction vanes of the Spire, ignoring the howling sleet. He grinned as the storm sparked blue against his insulated gear, reading the tactile feedback of the howling winds perfectly. The magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea down below meant any minor instability in the shunt cable would create a spectacular, though harmless, feedback loop. His plan was simple: rig a bypass to trigger a brilliant light show during the next squad rotation, a perfect prank to break the tension for Silas. But as he connected the copper calipers, an unexpected surge of sheer plasma-arc force yanked the tool from his grip, complicating his setup in an instant. Instead of a clean connection, he found himself struggling to contain a cascading spark cascade, forcing him to improvise quickly before the entire grid tripped. Managing to slap a temporary shunt on the housing, he barely avoided a full blowout. He intended to prank Silas, but the trajectory of the prank shifted such that Silas would remain completely unaware, and Ryn would likely end up receiving the unexpected magnetic static burst instead. Ryn would undoubtedly trace the handiwork back to him. Just as the blue corona subsided into a stable hum, he spotted Kaio climbing the lower ladder to check the telemetry. Hector wiped the static from his goggles, laughed out loud, and reached down to physically hand the data pad baton to Kaio, passing the responsibility of the next reading off."
+}
