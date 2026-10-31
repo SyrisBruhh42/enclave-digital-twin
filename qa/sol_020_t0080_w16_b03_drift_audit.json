@@ -1,0 +1,118 @@
+{
+  "base_snapshot_tick": 80,
+  "context_manifest": {
+    "world_state": "world_state_v2.0.0",
+    "ledgers": [
+      "jules_dm_campaign_ledger.schema.json"
+    ]
+  },
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 20,
+    "tick_id": 80,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Resolve the caloric distribution of the iron-wheat harvest.",
+      "mid_term_milestone": "Stabilize the colony's magnetosphere before the upcoming solar flare.",
+      "campaign_arc_climax": "Complete the 16-node convergence to secure long-term survival."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Hearth",
+    "macro_silhouette": "The Hearth is a bustling, steam-filled galley where copper pots clatter and the scent of caramelized iron-wheat fills the air. A massive, central brass stove hums with thermodynamic precision, radiating warmth that combats the encroaching chill.",
+    "sensory_palette": {
+      "sight_and_color": "Gleaming copper and brass bathed in the warm, orange glow of the main stove, contrasting with the cold, blue shadows at the room's edges.",
+      "sound": "The rhythmic chopping of ingredients on a butcher block, punctuated by the sharp hiss of escaping steam.",
+      "smell": "Rich, savory aromas of braised mire-lentils and the metallic tang of hot iron.",
+      "tactile_temperature": "A comforting, radiant heat near the stove, fading to a crisp coolness near the frost-rimed windows.",
+      "taste_optional": "The hearty, earthy flavor of perfectly seasoned stew."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Brass Stove Controls",
+        "affordance_description": "A complex array of valves and dials controlling the stove's heat output.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Spice Rack",
+        "affordance_description": "A collection of carefully organized jars containing various culinary powders and herbs.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Pantry Door",
+        "affordance_description": "A heavy wooden door leading to the colony's food stores.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "iron_wheat_dough",
+      "name_and_role": "Rising Iron-Wheat Dough",
+      "motivation_goal": "To expand and overflow its container.",
+      "consistent_method": "Slow, inexorable swelling driven by volatile yeast.",
+      "immediate_complication": "Requires constant kneading and temperature management to prevent a mess.",
+      "pressure_index": 5,
+      "uninterrupted_escalation": "If ignored, it will spill over and ruin the pristine counters."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Ryn must manage the iron-wheat harvest to ensure adequate caloric intake for the colony.",
+      "level_2_local": "The tension between culinary needs and industrial demands for the iron-wheat.",
+      "level_3_campaign_arc": "Balancing resource allocation to maintain the colony's fragile equilibrium."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      12,
+      8,
+      15,
+      6,
+      19
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.6,
+    "unresolved_conflict_ratio": 0.3,
+    "temporal_horizon_immediacy": 0.7,
+    "composite_lpi": 0.5,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "ollama",
+      "model": "llama-3-70b-instruct",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If Ryn fails to temper the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, the colony's caloric margin shrinks, causing increased fatigue and stress.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Ryn miscalculates the shear, ruining a batch of iron-wheat and exacerbating the caloric deficit.",
+        "below_dc_complicated_fail_forward": "Ryn manages the shear, but the effort drains her energy, leading to a tense exchange with Silas during the handoff.",
+        "meets_dc_clean_success": "Ryn masterfully navigates the thermodynamic challenge, ensuring a stable, nutritious meal and a smooth handoff to Silas.",
+        "dc_plus_5_or_20_extended_lore": "Ryn discovers a new, hyper-efficient way to process the iron-wheat, permanently increasing the colony's food security and impressing Silas."
+      }
+    },
+    "master_narrator": {
+      "executor": "ollama",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": false,
+      "agency_handoff_prompt": "Ryn, wiping a smudge of flour from her brow, adjusted the final valve on the brass stove. The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea was finally stable, yielding a rich, caloric stew. She turned as Silas entered the galley. 'It's done,' she said, her voice crisp. She handed him the heavy brass ladle, the physical baton of command. 'Keep the temperature steady. If it drops even one degree, the flux-core shielding will fail.' Silas took the ladle, his grip firm, ready to take over the watch."
+    }
+  }
+}
