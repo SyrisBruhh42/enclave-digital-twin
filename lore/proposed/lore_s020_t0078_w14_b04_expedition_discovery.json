@@ -1,0 +1,118 @@
+{
+  "base_snapshot_tick": 78,
+  "context_manifest": {
+    "reference_files": [
+      "canon/schemas/world_state_v2.json",
+      "canon/characters/enclave_01_hector.core.json"
+    ]
+  },
+  "campaign_metadata": {
+    "session_number": 20,
+    "colony_sol": 20,
+    "tick_id": 78,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Resolve the expedition discovery without losing critical resources.",
+      "mid_term_milestone": "Secure the ferrofluid sea periphery.",
+      "campaign_arc_climax": "Complete the Stormbreaker and Genesis Garden alignment."
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea_periphery",
+    "macro_silhouette": "The jagged coastline of the ferrofluid sea churns beneath an oppressive, ozone-laced sky, stretching out into a roiling expanse of magnetic black waves. Monolithic basalt spikes pierce the shore, slick with charged moisture and vibrating gently to the planetary hum. A narrow, unstable land bridge curves over a churning magnetic maelstrom, forming a treacherous path forward.",
+    "sensory_palette": {
+      "sight_and_color": "Deep metallic blacks, sparking copper hues, and sharp flashes of cobalt blue.",
+      "sound": "The deep, resonant hum of magnetic shear and the sharp crackle of static discharge.",
+      "smell": "Heavy ozone, burnt metal, and the sterile tang of ionized air.",
+      "tactile_temperature": "A biting, statically-charged chill that makes hairs stand on end.",
+      "taste_optional": "A faint metallic tang of copper on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Basalt Grounding Spike",
+        "affordance_description": "A natural grounding point capable of deflecting sudden electrical arcs.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Charged Ferro-Wave",
+        "affordance_description": "A dense cluster of liquid magnetic iron that can be shaped into a temporary barricade.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 16
+      },
+      {
+        "feature_name": "Oscillating Magnetic Crevasse",
+        "affordance_description": "A deep fissure that momentarily hides anything dropped into its magnetic shadow.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_ferrofluid_shear",
+      "name_and_role": "The Kelvin-Helmholtz Shear",
+      "motivation_goal": "To relentlessly fold and distort magnetic fields along the shoreline.",
+      "consistent_method": "Unpredictable waves of magnetohydrodynamic turbulence that snap like invisible whips.",
+      "immediate_complication": "The shear disrupts the local grounding fields, threatening to fuse any active electronics.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "If ignored, the shear will permanently magnetize Hector's primary induction rig, rendering it useless."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The fluctuating shear is tearing through the immediate grounding perimeter.",
+      "level_2_local": "This disruption threatens the safety of The Stormbreaker's upcoming test runs.",
+      "level_3_campaign_arc": "Mastering the magnetohydrodynamic flows is essential for the Enclave's long-term survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 4,
+    "prerolled_hazard_queue": [
+      14,
+      18,
+      9,
+      22,
+      11
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.7,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "anthropic",
+      "model": "claude-3",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Failure means losing control of the primary induction coil to the magnetic shear.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "You confidently misjudge the polarity, causing a feedback loop that shocks you.",
+        "below_dc_complicated_fail_forward": "You stabilize the coil, but the resulting surge scrambles your navigational interface.",
+        "meets_dc_clean_success": "You cleanly ground the surge, preserving both the coil and the data.",
+        "dc_plus_5_or_20_extended_lore": "You perfectly channel the surge, discovering a resonant frequency in the ferrofluid sea."
+      }
+    },
+    "master_narrator": {
+      "executor": "anthropic",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector gripped the vibrating copper shunt as the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea sent rippling arcs of static through the air. The heavy scent of ozone filled his lungs as he grinned into the gale, wrestling the induction coil against the violently shifting polarity. With a final, agonizing push, he locked the grounded breaker into place, feeling the deadly surge dissipate into the basalt beneath him. He didn't hesitate; he tossed the heavy, still-warm diagnostic relay unit to Kaio, shouting over the electrical roar for the scout to map the newly stabilized fault line."
+    }
+  }
+}
