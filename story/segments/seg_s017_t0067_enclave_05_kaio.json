@@ -1,0 +1,146 @@
+{
+  "event_id": "seg_s017_t0067_enclave_05_kaio",
+  "tick_id": 67,
+  "colony_sol": 17,
+  "day_phase": "DUSK_CRAFT",
+  "world_timestamp_iso": "2026-11-11T18:00:00Z",
+  "base_snapshot_tick": 67,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The_Stormbreaker_Spire",
+  "actors": [
+    "enclave_05_kaio",
+    "enclave_13_ryn"
+  ],
+  "active_pov_id": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "summary": "Kaio stabilizes the primary capacitor array amidst chaotic magnetic shears, ultimately passing the final diagnostic readout to Ryn.",
+  "importance": 0.8,
+  "novelty_score": 0.7,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "state_deltas": {
+    "enclave_05_kaio": {
+      "stress_delta": 0.1,
+      "fatigue_delta": 0.15
+    }
+  },
+  "relationship_deltas": {
+    "enclave_05_kaio_enclave_13_ryn": {
+      "trust": 0.05,
+      "friction": -0.02
+    }
+  },
+  "evidence_refs": [],
+  "campaign_metadata": {
+    "session_number": 17,
+    "colony_sol": 17,
+    "tick_id": 67,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Repair the grounding shunt before the magnetic shear storm peaks.",
+      "mid_term_milestone": "Stabilize The Stormbreaker's primary capacitor bank.",
+      "campaign_arc_climax": "Master the exoplanet's wild magnetosphere for The Enclave."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Stormbreaker_Spire",
+    "macro_silhouette": "The Stormbreaker Spire dominates the crater ridge, a jagged silhouette of hand-forged copper and brass against a churning sky. Ominous blue auroras dance around the induction vanes as the twin suns push brutal atmospheric tides. Every metal surface hums with latent static, vibrating against the boots of anyone foolish enough to climb.",
+    "sensory_palette": {
+      "sight_and_color": "Blinding violet arcs flashing across blackened copper struts.",
+      "sound": "A deafening, rhythmic booming of expanding ozone and rattling brass.",
+      "smell": "Sharp, acrid scent of ionized air and burning insulation.",
+      "tactile_temperature": "Bitterly cold sleet driving against skin while the metal underneath radiates a prickly electrical warmth.",
+      "taste_optional": "The metallic tang of static charge on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Primary Grounding Shunt",
+        "affordance_description": "A heavy brass lever that must be muscled into place to earth the excess charge.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Loose Induction Vane",
+        "affordance_description": "A thrashing sheet of copper that threatens to sheer the rigging if not secured.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Exposed Telemetry Coil",
+        "affordance_description": "A fragile spool of wire vital for predicting the next magnetic surge.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_magnetic_shear",
+      "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz Shear",
+      "motivation_goal": "To induce chaotic, destructive eddies in the atmosphere.",
+      "consistent_method": "Unleashing unpredictable static bursts and violent wind shifts.",
+      "immediate_complication": "The shear tears a safety line loose.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "If ignored, the shear will rip the primary capacitor from its mountings."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The spire's grounding shunt has decoupled, risking a catastrophic blowout.",
+      "level_2_local": "The unpredictable magnetic shear across the ferrofluid sea is testing the limits of The Forge's engineering.",
+      "level_3_campaign_arc": "The Enclave must adapt to the exoplanet's true, hostile physics to survive."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      14,
+      8,
+      19,
+      3,
+      11
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.4,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.75,
+    "classification": "Explosive but Shallow"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "JudgeLM",
+      "model": "gpt-4-tactical",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If Kaio fails to secure the shunt, the resulting blowout will fuse his tools and drop him onto the lower catwalk.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio mistakenly believes the arc is subsiding and touches a live coil.",
+        "below_dc_complicated_fail_forward": "He secures the shunt, but the backlash melts his favorite calipers.",
+        "meets_dc_clean_success": "He smoothly slams the lever home, perfectly timing the gap between bursts.",
+        "dc_plus_5_or_20_extended_lore": "Not only is the shunt secured, but Kaio realizes the shear pattern exactly matches the ferrofluid sea's tidal harmonics."
+      }
+    },
+    "master_narrator": {
+      "executor": "NarratorLM",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio hands the shuddering telemetry baton to Ryn, his knuckles white with frost and static."
+    }
+  },
+  "narrative_prose": "Kaio felt the raw power of the storm vibrate through his boots as he gripped the shuddering telemetry baton Hector had tossed him. The Magnetohydrodynamic Kelvin-Helmholtz shear screamed across the ferrofluid sea, tearing at the Stormbreaker Spire with violent gusts of ionized wind. He focused on the delicate task of stabilizing the primary capacitor array, his fingers dancing across the brass controls while blue static leapt between his knuckles. A sudden, violent surge threatened to overwhelm the system, but Kaio swiftly engaged the dampening coils, smoothly bleeding the excess charge into the spire's vast grounding sink. 'Ryn!' Kaio called out, dropping onto the lower catwalk beside her. 'The array is stabilized, but the backwash is building fast. Take the baton!'"
+}
