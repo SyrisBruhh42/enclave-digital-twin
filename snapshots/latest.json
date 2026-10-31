@@ -1427,20 +1427,6 @@
   "total_events_through_tick": 105,
   "recent_segments": [
     {
-      "segment_id": "seg_s018_t0070_enclave_01_hector",
-      "sol_id": 18,
-      "colony_sol": 18,
-      "tick_id": 70,
-      "active_pov_id": "enclave_01_hector",
-      "next_pov_target": "enclave_05_kaio",
-      "location_id": "the_stormbreaker_spire",
-      "time_of_day": "DAWN_SHIFT",
-      "day_phase": "DAWN_SHIFT",
-      "title": "Sol 018 \u2022 DAWN_SHIFT (enclave_01_hector)",
-      "opening_excerpt": "",
-      "excerpt": ""
-    },
-    {
       "segment_id": "seg_s018_t0071_enclave_05_kaio",
       "sol_id": 18,
       "colony_sol": 18,
@@ -1593,6 +1579,20 @@
       "title": "Sol 022 \u2022 DAWN_SHIFT (enclave_03_silas)",
       "opening_excerpt": "Silas gripped his diagnostics pad, watching the dark, jagged waves of the ferrofluid sea tear themselves apart in a mesmerizing display of Magnetohydrodynamic Kelvin-Helmholtz shear. The magnetic flux was intensifying, t",
       "excerpt": "Silas gripped his diagnostics pad, watching the dark, jagged waves of the ferrofluid sea tear themselves apart in a mesmerizing display of Magnetohydrodynamic Kelvin-Helmholtz shear. The magnetic flux was intensifying, t"
+    },
+    {
+      "segment_id": "seg_s022_t0086_enclave_06_zara",
+      "sol_id": 22,
+      "colony_sol": 22,
+      "tick_id": 86,
+      "active_pov_id": "enclave_06_zara",
+      "next_pov_target": "enclave_10_isla",
+      "location_id": "the_sanctuary_abyssal_lake",
+      "time_of_day": "MIDDAY_EXPEDITION",
+      "day_phase": "MIDDAY_EXPEDITION",
+      "title": "Sol 022 \u2022 MIDDAY_EXPEDITION (enclave_06_zara)",
+      "opening_excerpt": "The cave didn't end; it drowned.\n\nZara stood at the edge of the subterranean lake. The water was black, motionless, and heavy with iron. Down here, there was no light but what you brought, or what lived. Something brushe",
+      "excerpt": "The cave didn't end; it drowned.\n\nZara stood at the edge of the subterranean lake. The water was black, motionless, and heavy with iron. Down here, there was no light but what you brought, or what lived. Something brushe"
     }
   ],
   "available_sols": [

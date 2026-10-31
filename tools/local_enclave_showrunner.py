@@ -86,6 +86,7 @@ def run_local_oasis_cycle(
     return {
         "ok": bool(audit_res.get("valid")),
         "mode": "LOCAL_OASIS_SHOWRUNNER",
+        "sovereign_forge_endpoint": "http://127.0.0.1:19447/v1alpha",
         "current_sol": current_sol,
         "current_tick": current_tick,
         "rashomon_active_pov": active_pov,
@@ -98,6 +99,31 @@ def run_local_oasis_cycle(
         "oasis_bridge_synced": bool(oasis_res.get("lineage")),
         "constitutional_laws_passed": int(audit_res.get("laws_passed", 0)),
         "simulation_advanced": sim_result is not None,
+    }
+
+
+def synthesize_sovereign_forge_enclave_session(
+    request_body: dict[str, Any],
+    *,
+    repo_root: Path | None = None,
+) -> dict[str, Any]:
+    """Execute a local Sovereign Forge Enclave session when cloud Jules is offline or post-2026-11-10."""
+    root = Path(repo_root).resolve() if repo_root else REPO_ROOT
+    cycle = run_local_oasis_cycle(
+        repo_root=root,
+        advance_sim_sols=0,
+        evolve_17th_node=False,
+        compile_atlas=False,
+        with_audio=False,
+    )
+    title = str(request_body.get("title") or "enclave_local_forge_session")
+    return {
+        "name": f"sessions/forge_enclave_s{cycle['current_sol']:03d}_t{cycle['current_tick']:04d}",
+        "state": "COMPLETED",
+        "title": title,
+        "sovereign_forge_mode": "LOCAL_OASIS_SHOWRUNNER",
+        "rashomon_active_pov": cycle["rashomon_active_pov"],
+        "constitutional_laws_passed": cycle["constitutional_laws_passed"],
     }
 
 
@@ -118,3 +144,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

@@ -1,0 +1,140 @@
+{
+  "event_id": "seg_s022_t0086_enclave_06_zara",
+  "tick_id": 86,
+  "colony_sol": 22,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-10-25T12:00:00Z",
+  "base_snapshot_tick": 86,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The Sanctuary",
+  "actors": [
+    "enclave_06_zara",
+    "enclave_10_isla"
+  ],
+  "summary": "Zara establishes photophore syntax with an abyssal cephalopod, but is interrupted by the mundane need to clean the feed pens before passing the baton to Isla.",
+  "importance": 5,
+  "novelty_score": 8,
+  "science_vegetable": "Enzymatic luciferin-luciferase oxidation gated by voltage-sensitive ion channels flashing in prime-number sequences and optical polarization modulation.",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "active_pov_id": "enclave_06_zara",
+  "next_pov_target": "enclave_10_isla",
+  "prev_next_pov_target": "enclave_06_zara",
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_06_zara"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "narrative_prose": "The cave didn't end; it drowned.\n\nZara stood at the edge of the subterranean lake. The water was black, motionless, and heavy with iron. Down here, there was no light but what you brought, or what lived. Something brushed her leg. She froze. In the dark, a faint blue light ignited in the depths. Under the extreme pressure of the situation, her Gemini override triggered, and she began narrating every tactical observation at breakneck speed. \"The enzymatic luciferin-luciferase oxidation is gated by voltage-sensitive ion channels,\" she whispered rapidly to herself, watching the light. \"It's flashing in prime-number sequences. Two, three, five, seven. Optical polarization modulation. I need to match the syntax.\"\n\nShe adjusted her suit's wrist-lights, mimicking the pattern in the pitch darkness, hoping to establish first-contact with the abyssal chemosynthetic cephalopod without triggering a predatory response. The creature hesitated, then reached out a tentacle, touching her glove. A connection. Yet, even amidst this quiet subterranean bioluminescent wonder of Ferro-moss ravines and ironwood groves lit by ultraviolet auroras, the mundane reality intruded. She still had to muck out the Sanctuary feed pens every morning. The juxtaposition was absurd.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" she muttered, remembering Leo's words. She carefully withdrew her hand, marking the interaction complete. She turned to find Isla standing at the cavern entrance. \"The sequence is yours,\" Zara said, physically pressing the data baton into Isla's hand, seamlessly passing the watch.",
+  "campaign_metadata": {
+    "session_number": 22,
+    "colony_sol": 22,
+    "tick_id": 86,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Establish photophore syntax",
+      "mid_term_milestone": "Map chemosynthetic trophic web",
+      "campaign_arc_climax": "Complete The Sanctuary"
+    }
+  },
+  "active_location": {
+    "location_id": "the_sanctuary_abyssal_lake",
+    "macro_silhouette": "The pitch-black subterranean lake is motionless and heavy with iron, illuminated only sporadically by the quiet, subterranean bioluminescent wonder of Ferro-moss ravines and ironwood groves lit by ultraviolet auroras. Oil-slick hex-pedal carapace camouflage shifts in the darkness.",
+    "sensory_palette": {
+      "sight_and_color": "Pitch darkness punctuated by flashes of blue-blue-green.",
+      "sound": "Total acoustic silence broken only by the slosh of heavy, iron-rich water.",
+      "smell": "Cold rock, ozone, and subterranean sulfur.",
+      "tactile_temperature": "Freezing water and biting chill through the suit.",
+      "taste_optional": "A metallic tang of dissolved ferrous iron."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Ferro-moss Overhang",
+        "system_verb": "CONCEAL",
+        "affordance_description": "Can obscure heat signatures.",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Voltage-sensitive Lure",
+        "system_verb": "ATTRACT",
+        "affordance_description": "Can mimic prime-number luciferin syntax.",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Iron-rich Rock Outcropping",
+        "system_verb": "DEFEND",
+        "affordance_description": "Provides solid cover against sudden strikes.",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "abyssal_cephalopod",
+      "name_and_role": "Chemosynthetic Abyssal Cephalopod",
+      "motivation_goal": "Determine if the flashing light is prey.",
+      "consistent_method": "Approaching cautiously while probing with chromatic photophore mimicry.",
+      "immediate_complication": "Zara's rapid narration might startle it.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "The creature misinterprets the rapid narration and attacks."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Establish contact.",
+      "level_2_local": "Clean the feed pens.",
+      "level_3_campaign_arc": "Understand the chemosynthetic trophic web."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_06_zara",
+        "tactical_role": "CONTROLLER"
+      },
+      {
+        "actor_id": "enclave_10_isla",
+        "tactical_role": "SUPPORT"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      18,
+      7,
+      3,
+      19
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.7,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_ai",
+      "model": "v2",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The cephalopod retreats.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Zara believes the creature is attacking.",
+        "below_dc_complicated_fail_forward": "Zara frightens the creature away.",
+        "meets_dc_clean_success": "Zara successfully establishes a loop.",
+        "dc_plus_5_or_20_extended_lore": "Zara decodes a complex sequence."
+      }
+    },
+    "master_narrator": {
+      "executor": "local_ai",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Use narrative_prose instead."
+    }
+  }
+}
