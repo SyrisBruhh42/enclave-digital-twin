@@ -1,0 +1,57 @@
+{
+  "event_id": "evt_s022_t0086_expedition_consequence",
+  "tick_id": 86,
+  "colony_sol": 22,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-11-15T12:00:00Z",
+  "base_snapshot_tick": 86,
+  "event_type": "EXPEDITION_DISCOVERY",
+  "location": "The_Sanctuary",
+  "actors": ["enclave_06_zara", "enclave_10_isla"],
+  "summary": "Zara establishes first-contact photophore syntax with an abyssal chemosynthetic cephalopod.",
+  "importance": 0.8,
+  "novelty_score": 0.9,
+  "active_pov_id": "enclave_06_zara",
+  "next_pov_target": "enclave_10_isla",
+  "state_deltas": {
+    "hub_caloric_reserves_pct": 0.0,
+    "sanctuary_containment_integrity": 0.0
+  },
+  "relationship_deltas": [
+    {"source": "enclave_06_zara", "target": "enclave_10_isla", "delta": 0.05}
+  ],
+  "evidence_refs": [],
+  "active_location": {
+    "macro_silhouette": "The cave didn't end; it drowned. Zara stood at the edge of the subterranean lake. The water was black, motionless, and heavy with iron. It was a sunless subterranean aquifer ecosystem where primary producers fixed carbon via the oxidation of dissolved ferrous iron.",
+    "sensory_palette": {
+      "sight": "Spiralling blue bioluminescent lures blooming in the dark pitch of the underground lake.",
+      "sound": "Total acoustic silence broken only by the slosh of deep water against the rocks.",
+      "smell": "Metallic tang of ferrous iron and faint hydrogen sulfide.",
+      "touch": "Freezing black water pressure against the hazard suit.",
+      "taste_optional": "Copper."
+    },
+    "interactive_features": [
+      {
+        "feature_id": "abyssal_lake",
+        "description": "The deep, motionless water heavy with iron.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_id": "photophore_lure",
+        "description": "Bioluminescent dermal organs controlled by muscular iris-shutters flashing blue-blue-spiral.",
+        "system_verb": "ATTRACT"
+      },
+      {
+        "feature_id": "subterranean_aquifer",
+        "description": "Chemosynthetic iron-sulfur biosphere.",
+        "system_verb": "CONSUME"
+      }
+    ]
+  },
+  "context_manifest": {
+    "loaded_full_card_ids": ["enclave_06_zara"],
+    "full_cards_loaded_count": 1
+  },
+  "narrative_prose": "The cave didn't end; it drowned.\n\nZara stood at the edge of the subterranean lake. The water was black, motionless, and heavy with iron. Getting here had been a grueling trek through ferro-moss ravines and ironwood groves lit by ultraviolet auroras, constantly watching for the oil-slick hex-pedal carapace camouflage of apex predators. Now, she waded into the freezing depths, her suit pressurizing against the weight of the deep. Down here, in the chemosynthetic iron-sulfur biosphere, primary producers fixed carbon via the oxidation of dissolved ferrous iron and hydrogen sulfide.\n\nSomething brushed her leg. She froze. In the dark, a pattern of lights ignited. Blue dots, spiraling in a mesmerizing circle. It was a lure. An abyssal chemosynthetic cephalopod, adapted for the iron-rich subterranean water.\n\nThe stress of the descent finally hit her. Her Vex Override kicked in, snapping her from silent observer to hyper-verbal narrator. \"Okay, we have contact. Chromatic photophore mimicry, muscular iris-shutters converging on a spatial wave-pattern. It's tracking movement, not heat,\" she muttered at breakneck speed, her voice echoing off the cavern walls. \"I am establishing first-contact photophore syntax with an abyssal cephalopod, and I still have to muck out the Sanctuary feed pens tomorrow morning. This is ridiculous.\"\n\nIsla's voice crackled softly over the comms, dry and affectionate. \"If you're complaining and no one is laughing, you're complaining wrong.\"\n\nZara took a breath, letting the chaotic narration subside. She turned off her headlamp. In the total darkness, the creature bloomed, waves of color washing over its skin. She held out a hand, mimicking the pattern with her suit's wrist-lights. The sequence was precise: enzymatic luciferin-luciferase oxidation gated by voltage-sensitive ion channels flashing in prime-number sequences and optical polarization modulation. Blue-blue-spiral.\n\nThe creature hesitated. Then, it reached out a tentacle, touching her glove. A connection.\n\n\"Hello,\" she whispered in the dark. \"I'm not food.\"\n\nShe looked back at the shore. \"Isla,\" Zara said softly. \"You're going to want to see this.\""
+}
