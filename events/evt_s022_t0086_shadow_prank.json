@@ -1,0 +1,62 @@
+{
+  "event_id": "evt_s022_t0086_shadow_prank",
+  "tick_id": 86,
+  "colony_sol": 22,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-11-15T12:00:00Z",
+  "base_snapshot_tick": 86,
+  "event_type": "SHADOW_ECONOMY_PRANK_SEEDED",
+  "location": "The_Sanctuary",
+  "actors": [
+    "enclave_06_zara",
+    "enclave_10_isla",
+    "enclave_05_kaio"
+  ],
+  "summary": "Zara discovers Isla mapping resonance inside the Sanctuary and establishes first-contact photophore syntax with an abyssal cephalopod.",
+  "importance": 0.8,
+  "novelty_score": 0.9,
+  "science_vegetable": "Enzymatic luciferin-luciferase oxidation gated by voltage-sensitive ion channels flashing in prime-number sequences and optical polarization modulation.",
+  "state_deltas": {
+    "stress_delta": -0.15
+  },
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "node_a": "enclave_06_zara",
+  "node_b": "enclave_10_isla",
+  "node_c": "enclave_05_kaio",
+  "origin_sol": 22,
+  "maturity_sol": 25,
+  "target_b_missed": true,
+  "active_pov_id": "enclave_06_zara",
+  "prev_next_pov_target": "enclave_06_zara",
+  "next_pov_target": "enclave_10_isla",
+  "active_location": {
+    "macro_silhouette": "Ferro-moss ravines and ironwood groves lit by ultraviolet auroras and oil-slick hex-pedal carapace camouflage. A subterranean aquifer ecosystems where primary producers fix carbon via the oxidation of dissolved ferrous iron.",
+    "sensory_palette": {
+      "sight": "Blue bioluminescence spiraling in total darkness.",
+      "sound": "The dripping of iron-heavy water echoing in an abyssal cavern.",
+      "smell": "Ozone and damp, metallic earth.",
+      "touch": "Cold, iron-heavy water pressing against the environmental suit.",
+      "taste_optional": "Copper tang lingering on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_id": "feature_1",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14,
+        "description": "Bioluminescent photophores flashing in prime-number sequences."
+      },
+      {
+        "feature_id": "feature_2",
+        "system_verb": "CONCEAL",
+        "description": "Oil-slick hex-pedal carapace camouflage."
+      },
+      {
+        "feature_id": "feature_3",
+        "system_verb": "DEFEND",
+        "description": "Voltage-sensitive ion channels gating the enzymatic oxidation."
+      }
+    ]
+  },
+  "narrative_prose": "The cave didn't end; it drowned.\n\nZara stood at the edge of the subterranean lake. The water was black, motionless, and heavy with iron. She had spent the morning mucking out the Sanctuary feed pens, an exhausting, mundane routine that always left her feeling like a blunt instrument. Now, standing on the edge of the abyss, the silence was absolute. She adjusted her grip on the tracking baton, her ISFP attunement picking up the faint bio-magnetic hum of the ecosystem beneath the surface. It was a chemosynthetic iron-sulfur biosphere, thriving in perpetual pitch darkness.\n\nShe waded in. Her suit pressurized against the weight of the deep. Down here, there was no light but what you brought, or what lived. Something brushed her leg. She froze. In the dark, a pattern of lights ignited. Blue dots, spiraling in a mesmerizing circle. A lure. It was a cephalopod-like creature, but adapted for iron-rich subterranean water. It had no shell, just a muscular mantle and arms lined with photophores. It was communicating, utilizing enzymatic luciferin-luciferase oxidation gated by voltage-sensitive ion channels, flashing in prime-number sequences.\n\nZara turned off her headlamp. In the total darkness, the creature bloomed. Waves of color washed over its skin, a complex syntax of optical polarization modulation. She held out a hand, mimicking the pattern with her suit's wrist-lights. Blue-blue-spiral. The creature hesitated. Then, it reached out a tentacle, touching her glove. A connection. \"Hello,\" she whispered in the dark. \"I'm not food.\" Suddenly, the quiet was broken as Isla's holographic mapping drone buzzed past, scanning the cavern walls. Zara sighed, pulling herself from the water. \"Here,\" she said, holding out the data baton to Isla who was standing on the ridge. \"The resonance is stable. Your turn to map the abyss.\""
+}
