@@ -1,0 +1,142 @@
+{
+  "event_id": "lore_s019_t0075_w11_b05_supplementary",
+  "tick_id": 75,
+  "event_type": "POV_SCENE_SEGMENT",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "base_snapshot_tick": 75,
+  "colony_sol": 19,
+  "day_phase": "DUSK_CRAFT",
+  "world_timestamp_iso": "2026-11-12T18:00:00Z",
+  "location": "The Foundry Outskirts",
+  "actors": [
+    "enclave_05_kaio",
+    "enclave_13_ryn"
+  ],
+  "summary": "Kaio explores the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea.",
+  "importance": 5,
+  "novelty_score": 0.8,
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ]
+  },
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "campaign_metadata": {
+    "session_number": 19,
+    "colony_sol": 19,
+    "tick_id": 75,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Investigate ferrofluid shear.",
+      "mid_term_milestone": "Map the magnetic anomaly.",
+      "campaign_arc_climax": "Master the exoplanet's climate."
+    }
+  },
+  "active_location": {
+    "location_id": "foundry_outskirts",
+    "macro_silhouette": "The foundry outskirts span a wide plateau of dark, iron-rich soil, where jagged basalt pillars scrape against the dimming sky. Occasional sparks of static leap between the rocks, illuminating the dense spore fog that rolls in from the valley. At the edge of the plateau, the ferrofluid sea churns, its surface rippling with the telltale signs of Magnetohydrodynamic Kelvin-Helmholtz shear.",
+    "sensory_palette": {
+      "sight_and_color": "Dim crimson twilight cut by electric blue arcs.",
+      "sound": "Low, resonant humming of magnetic fields and the crisp crunch of iron sand.",
+      "smell": "Ozone and metallic tang.",
+      "tactile_temperature": "Biting cold wind mixed with sudden, localized pockets of thermal heat.",
+      "taste_optional": "A metallic tinge on the back of the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetized Basalt Spire",
+        "affordance_description": "A tall spire of basalt that crackles with built-up static charge.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Eddy",
+        "affordance_description": "A swirling pool of liquid iron that reacts violently to magnetic disturbances.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Spore Fog Bank",
+        "affordance_description": "A thick bank of luminescent spores that obscures vision and dampens sound.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_shear",
+      "name_and_role": "Ferrofluid Shear Wave",
+      "motivation_goal": "To equalize magnetic potential across the landscape.",
+      "consistent_method": "Creating cascading waves of localized gravity and magnetic disruption.",
+      "immediate_complication": "Threatens to pull Kaio's metallic equipment into the sea.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The waves will grow in amplitude until they breach the foundry's outer walls."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio's compass is acting up, and he needs to recalibrate it.",
+      "level_2_local": "The shear waves are interfering with the colony's communication grid.",
+      "level_3_campaign_arc": "Understanding the shear is key to predicting long-term weather patterns."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      12,
+      4,
+      18,
+      9,
+      15
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.6,
+    "unresolved_conflict_ratio": 0.3,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.525,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_engine",
+      "model": "v2.0",
+      "temperature": 0.3,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Kaio's equipment is magnetized, complicating his scouting route.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio misinterprets the shear pattern, walking directly into a magnetic sinkhole.",
+        "below_dc_complicated_fail_forward": "Kaio avoids the sinkhole but drops his sextant, which Ryn has to retrieve.",
+        "meets_dc_clean_success": "Kaio charts the shear wave accurately.",
+        "dc_plus_5_or_20_extended_lore": "Kaio discovers a stable magnetic corridor through the ferrofluid sea."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio carefully navigates the surging magnetic tides, finally reaching the safety of the foundry steps. He wipes the glowing spore dust from his goggles and spots Ryn carrying a tray of fresh rations. 'Careful,' Kaio warns, physically handing his crackling, magnetized compass to Ryn. 'The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea is playing havoc with the needles today. It's all yours now.'"
+    }
+  }
+}
