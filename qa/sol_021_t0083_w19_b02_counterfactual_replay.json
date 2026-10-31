@@ -1,0 +1,119 @@
+{
+  "base_snapshot_tick": 83,
+  "context_manifest": {
+    "active_pov_id": "enclave_05_kaio",
+    "next_pov_target": "enclave_13_ryn",
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ]
+  },
+  "campaign_metadata": {
+    "session_number": 19,
+    "colony_sol": 21,
+    "tick_id": 83,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Resolve the magnetohydrodynamic Kelvin-Helmholtz shear.",
+      "mid_term_milestone": "Stabilize the ferrofluid sea operations.",
+      "campaign_arc_climax": "Complete The Sanctuary and ensure Enclave survival."
+    }
+  },
+  "active_location": {
+    "location_id": "loc_ferrofluid_coast",
+    "macro_silhouette": "The jagged coastline of the ferrofluid sea sprawls into the hazy dusk, shimmering with a volatile, iridescent sheen as magnetic tides pull the dense liquid into towering, fractal spikes. Thick, copper-hued clouds hang low, reflecting the erratic flashes of static discharge skipping across the undulating surface.",
+    "sensory_palette": {
+      "sight_and_color": "Iridescent sheen, copper-hued clouds, flashing static.",
+      "sound": "Deep, rumbling hum of magnetic tides punctuated by sharp snaps of static discharge.",
+      "smell": "Ozone and metallic tang.",
+      "tactile_temperature": "Warm, humid air with a distinct prickling of static electricity against the skin.",
+      "taste_optional": "Faint, metallic battery taste on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Fractal Spikes",
+        "affordance_description": "Use the towering magnetic spikes for cover against static discharge.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetic Tides",
+        "affordance_description": "Draw the volatile liquid into a specialized container to harness its energy.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 16
+      },
+      {
+        "feature_name": "Static Pockets",
+        "affordance_description": "Redirect the erratic flashes of static to power nearby devices.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ent_ferrofluid_shear",
+      "name_and_role": "Magnetohydrodynamic Shear",
+      "motivation_goal": "To equalize energy across the volatile sea.",
+      "consistent_method": "Generating erratic static discharges and fractal spikes.",
+      "immediate_complication": "Threatens to overload local equipment.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Static discharges will eventually arc into the main settlement."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio needs to measure the shear to predict the next magnetic storm.",
+      "level_2_local": "Accurate predictions are vital for stabilizing the coast.",
+      "level_3_campaign_arc": "Understanding the sea is essential for The Sanctuary's completion."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      1,
+      5,
+      12,
+      18,
+      20
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.5,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.4,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.6,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "OpenAI",
+      "model": "gpt-4o",
+      "temperature": 0.4,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Failing to measure the shear correctly will result in damaged equipment and lost time, pushing back the schedule.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio misinterprets the data, leading to a dangerous assumption about the sea's volatility.",
+        "below_dc_complicated_fail_forward": "Kaio gets the data but shorts out a crucial sensor in the process.",
+        "meets_dc_clean_success": "Kaio smoothly captures the required measurements.",
+        "dc_plus_5_or_20_extended_lore": "Kaio discovers an underlying pattern in the shear that could lead to more efficient energy harvesting."
+      }
+    },
+    "master_narrator": {
+      "executor": "Claude 3.5 Sonnet",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio wiped the static-laden sweat from his brow, his fingers lingering on the brass dials of his chronometer as he watched the ferrofluid sea writhe. The magnetohydrodynamic Kelvin-Helmholtz shear was tearing across the surface, whipping iridescent, magnetic foam into the copper-tinged air. He couldn't help but marvel at the sheer, untamed power of it all. It was beautiful, in a volatile, terrifying sort of way. As a particularly large spike of fluid lunged toward the shoreline, he deftly stepped behind a protruding brass pylon, the air crackling with ozone as the discharge safely grounded itself. He sighed, tapping the final readings into his log before turning back toward the path leading to the settlement. There, waiting patiently near the edge of the safe zone, was Ryn. Kaio tossed the leather-bound logbook over to her. 'All yours. Just watch the static build-up on the south ridge.'"
+    }
+  }
+}
