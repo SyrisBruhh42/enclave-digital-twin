@@ -1,0 +1,129 @@
+{
+  "event_type": "POV_SCENE_SEGMENT",
+  "event_id": "lore_s018_t0071_w07_b05_supplementary",
+  "tick_id": 71,
+  "colony_sol": 18,
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "calypso_zero_raw_stats": true,
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ]
+  },
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 18,
+    "tick_id": 71,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Navigate the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea without losing the supply crate.",
+      "mid_term_milestone": "Map the shifting currents of the ferrofluid sea.",
+      "campaign_arc_climax": "Integrate the Enclave's natural defenses with the digital twin."
+    }
+  },
+  "active_location": {
+    "location_id": "loc_ferrofluid_sea_ridge",
+    "macro_silhouette": "The basalt ridge overlooking the ferrofluid sea is blasted by shifting magnetic winds that tug at metallic gear. Dark, metallic waves crash below, folding in on themselves in mesmerizing, turbulent Kelvin-Helmholtz shear patterns. The glowing spore-fog illuminates the cresting magnetic peaks in eerie, shifting shades of violet.",
+    "sensory_palette": {
+      "sight_and_color": "Eerie violet spore-glow and pitch-black metallic waves",
+      "sound": "Deep, resonant humming and the crash of heavy, liquid iron",
+      "smell": "Sharp ozone and scorched basalt",
+      "tactile_temperature": "Biting cold wind laden with static electricity",
+      "taste_optional": "Copper and ash on the tongue"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetized Basalt Outcropping",
+        "affordance_description": "A sturdy rock formation that can be used to anchor against the magnetic shear.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Drifting Iron-Wood Crate",
+        "affordance_description": "A lost supply crate caught in a magnetic eddy, waiting to be hooked.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Bioluminescent Spore Pocket",
+        "affordance_description": "A dense cluster of spores that can be disturbed to mask a heat signature.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "env_kelvin_helmholtz_shear",
+      "name_and_role": "Magnetohydrodynamic Shear",
+      "motivation_goal": "Destabilize and swallow anything metallic on the shoreline",
+      "consistent_method": "Generating sudden, localized magnetic vortices",
+      "immediate_complication": "The shear is pulling the iron-wood crate further into the sea",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The vortex expands, dragging shoreline debris into the crushing depths"
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The fluctuating magnetic shear is threatening to pull the supply crate away.",
+      "level_2_local": "The ferrofluid sea's currents are becoming increasingly erratic and hostile to navigation.",
+      "level_3_campaign_arc": "The Enclave's presence is triggering a defensive response from the exoplanet's core."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      5,
+      14,
+      9,
+      18,
+      2
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.85,
+    "motivational_vector_saturation": 0.9,
+    "unresolved_conflict_ratio": 0.75,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.86,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "anthropic",
+      "model": "claude-3-opus",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If Kaio fails to secure the crate, it will be lost to the ferrofluid sea, and the resulting magnetic backlash will damage his gear.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio misreads the magnetic eddy, diving directly into a crushing shear wave.",
+        "below_dc_complicated_fail_forward": "Kaio secures the crate but his compass and grappling hook are heavily magnetized and ruined.",
+        "meets_dc_clean_success": "Kaio deftly hooks the crate and pulls it to the safety of the basalt outcropping.",
+        "dc_plus_5_or_20_extended_lore": "Kaio rescues the crate and discovers a stable magnetic corridor through the shear."
+      }
+    },
+    "master_narrator": {
+      "executor": "anthropic",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "The biting wind whipped Kaio's hair around his goggles as he braced against the magnetized basalt, tracking the iron-wood crate's erratic path. The heavy, dark waves of the ferrofluid sea crashed and folded in beautiful, terrifying Kelvin-Helmholtz shear patterns. 'It's drifting too fast!' Kaio shouted over the resonant hum of the sea, reeling his grappling line back in. He scrambled up the slick rock face, pulling a glowing, spore-dusted marker buoy from his satchel. He shoved the heavy brass buoy into the hands of Ryn, who was hauling himself up the ridge. 'You need to throw this dead-center into the eddy so we can track the submerged currents before we lose the rations!' Ryn gripped the cold brass, eyeing the treacherous vortex below."
+    }
+  }
+}
