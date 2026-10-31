@@ -1,7 +1,9 @@
 {
   "base_snapshot_tick": 87,
   "context_manifest": {
-    "loaded_full_card_ids": ["enclave_10_isla"],
+    "loaded_full_card_ids": [
+      "enclave_10_isla"
+    ],
     "full_cards_loaded_count": 1
   },
   "campaign_metadata": {
@@ -71,7 +73,13 @@
       }
     ],
     "strain_accumulated_upward": 3,
-    "prerolled_hazard_queue": [12, 18, 5, 14, 9]
+    "prerolled_hazard_queue": [
+      12,
+      18,
+      5,
+      14,
+      9
+    ]
   },
   "lpi_metrics": {
     "relational_tension_density": 0.4,
