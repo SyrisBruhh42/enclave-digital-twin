@@ -1,0 +1,143 @@
+{
+  "event_id": "lore_s017_t0066_w02_b05_supplementary",
+  "tick_id": 66,
+  "colony_sol": 17,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-10-25T12:00:00Z",
+  "base_snapshot_tick": 66,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The_Wilds_Ferrofluid_Sea",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_05_kaio"
+  ],
+  "summary": "Hector braves the Magnetohydrodynamic Kelvin-Helmholtz shear to secure the ferrofluid sea observation deck, tossing the telemetry data-core to Kaio in a daring handoff.",
+  "importance": 8,
+  "novelty_score": 7,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ]
+  },
+  "narrative_prose": "The ferrofluid sea churned with an unnatural, violent vitality. Black, fractal-like waves of metallic liquid surged into jagged peaks under the stark light of the twin suns. Overhead, the bifurcated thermal shear tore the low-hanging clouds into violent, ragged ribbons, generating a deafening thrum that felt more like a subterranean heartbeat than wind. Hector grinned into the biting, ozone-laced gale, completely in his element. He practically danced across the vibrating brass grid of the observation deck, timing his movements to the chaotic rhythm of the magnetohydrodynamic Kelvin-Helmholtz shear. The air tasted sharply of hot copper and magnetized dust, and localized waves of blistering heat washed over him intermittently, contrasting with the biting cold. 'Come on, just a little closer!' he yelled, not caring if his comms were picking it up. He slapped his hand against the primary telemetry node, locking it into the socket just as a massive surge of static electricity coiled around the nearby grounding spike. With a fluid, reckless pivot, he wrenched the data-core free. He spun on his heel and launched the dense brass cylinder through the turbulent air straight toward Kaio. 'Catch, scout! Tell the Hub we're cooking with real lightning today!'",
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 17,
+    "tick_id": 66,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Secure telemetry from the ferrofluid sea",
+      "mid_term_milestone": "Master Exoplanet Meteorology",
+      "campaign_arc_climax": "Ensure the long-term survival of the Enclave"
+    }
+  },
+  "active_location": {
+    "location_id": "Ferrofluid_Sea_Shore",
+    "macro_silhouette": "The ferrofluid sea churns with unnatural vitality, its metallic waves forming geometric peaks under the stark light of the twin suns. Black spikes of magnetically charged fluid rise and collapse in a hypnotic rhythm along the crater edge. Overhead, the Bifurcated Thermal Shear tears the low clouds into jagged ribbons, casting erratic shadows across the brass and copper observation deck. The air crackles with visible arcs of static electricity as the localized magnetic pressure builds to a critical tipping point.",
+    "sensory_palette": {
+      "sight_and_color": "Black, fractal-like waves of ferrofluid under stark blue and red light.",
+      "sound": "A heavy, rhythmic thrumming sound like a massive subterranean heartbeat, mixed with the crackle of static discharge.",
+      "smell": "Ozone, hot copper, and the sharp tang of magnetized dust.",
+      "tactile_temperature": "Biting cold wind interlaced with sudden, shocking waves of localized heat from the magnetic shear.",
+      "taste_optional": "A metallic, battery-like tang at the back of the throat."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Resonant Grounding Spike",
+        "affordance_description": "A heavy brass spike that can redirect electrical buildup.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Current Undertow",
+        "affordance_description": "A dense, shifting pool of magnetic liquid that swallows dropped objects.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Copper Mesh Faraday Tarp",
+        "affordance_description": "A partially unrolled tarp that can mask thermal and magnetic signatures.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "kelvin_helmholtz_shear_storm",
+      "name_and_role": "Magnetohydrodynamic Shear Wind (Environmental Hazard)",
+      "motivation_goal": "To aggressively equilibrate temperature and magnetic pressure across the valley.",
+      "consistent_method": "Unleashing sudden, localized arcs of static electricity and tearing at unsecured structures.",
+      "immediate_complication": "The wind shear is generating a resonant frequency that threatens to shatter the observation deck's quartz viewing panes.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "If ignored, the shear will rip the observation deck from its moorings and fling it into the ferrofluid sea."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Secure the observation deck before the shear destroys it.",
+      "level_2_local": "Gather crucial telemetry on the ferrofluid sea's surge patterns.",
+      "level_3_campaign_arc": "Master the chaotic exoplanet meteorology to ensure the Enclave's long-term survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 4,
+    "prerolled_hazard_queue": [
+      12,
+      18,
+      5,
+      14,
+      9
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.7,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.6,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local",
+      "model": "jules-deterministic-engine",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The observation deck is damaged and Hector is thrown back by an electrostatic discharge, straining his gear.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Hector completely misjudges the shear rhythm, absorbing a direct hit that shorts out his suit and destroys the sensor package.",
+        "below_dc_complicated_fail_forward": "Hector secures the deck, but drops the primary telemetry sensor into the ferrofluid sea.",
+        "meets_dc_clean_success": "Hector dances through the static arcs, securing the deck and gathering flawless telemetry.",
+        "dc_plus_5_or_20_extended_lore": "Hector not only secures the deck but recalibrates the grounding spike to harness the shear energy, overcharging the Enclave's capacitor bank."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules-narrative-synthesizer",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector tosses the charged data-core to Kaio, shouting over the roaring shear wind as he leaps back from the sea's edge."
+    }
+  }
+}
