@@ -1,0 +1,119 @@
+{
+  "base_snapshot_tick": 75,
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ]
+  },
+  "campaign_metadata": {
+    "session_number": 11,
+    "colony_sol": 19,
+    "tick_id": 75,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Navigate the Magnetohydrodynamic Kelvin-Helmholtz shear.",
+      "mid_term_milestone": "Secure the structural integrity of The Sanctuary.",
+      "campaign_arc_climax": "Master the exoplanet's aggressive atmospheric phenomena."
+    }
+  },
+  "active_location": {
+    "location_id": "the_sanctuary_ridge",
+    "macro_silhouette": "The exterior ridge of The Sanctuary is a jagged expanse of luminescent basalt, whipping with the chaotic energy of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. Thick spore-fog drifts in bioluminescent ribbons, clinging to the heavy, pulsing air. Kaio's vantage point offers a perilous but vital view of the magnetic shear's incoming trajectory.",
+    "sensory_palette": {
+      "sight_and_color": "blinding arcs of blue-white magnetic plasma",
+      "sound": "deafening roar of atmospheric shear",
+      "smell": "acrid ozone and crystallized spore-dust",
+      "tactile_temperature": "stinging cold mixed with sudden bursts of radiant heat",
+      "taste_optional": "coppery tang of static charge"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Luminescent Basalt Pinnacle",
+        "affordance_description": "Can be climbed to gain a clearer line of sight over the spore-fog.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetic Ground-Fissure",
+        "affordance_description": "Offers temporary shelter from the worst of the shear winds.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Ambient Geode Clusters",
+        "affordance_description": "Can be tapped to bleed off excess charge from the scout equipment.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "kh_shear_wave",
+      "name_and_role": "Kelvin-Helmholtz Shear Wave (Environmental Hazard)",
+      "motivation_goal": "To scour the ridge and equalize the magnetic differential.",
+      "consistent_method": "Ripping across the landscape in unpredictable, surging pulses.",
+      "immediate_complication": "Threatens to overload Kaio's navigational equipment.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "The shear will deafen communications and strip away The Sanctuary's outer ablative plating."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio must map the incoming shear vectors before they blind the sensors.",
+      "level_2_local": "Accurate telemetry is required to brace The Sanctuary against the surge.",
+      "level_3_campaign_arc": "Understanding the ferrofluid sea's weather patterns is essential for long-term survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      14,
+      8,
+      19,
+      3,
+      17
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.3,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.4,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.55,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.3,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If Kaio misjudges the shear's trajectory, the surge will blind his sensors and leave The Sanctuary exposed.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio anticipates a lull that doesn't exist, getting knocked flat and losing his primary sextant.",
+        "below_dc_complicated_fail_forward": "He maps the vectors, but the magnetic backlash shorts out his comms link temporarily.",
+        "meets_dc_clean_success": "Kaio accurately plots the shear, allowing the Enclave to brace just in time.",
+        "dc_plus_5_or_20_extended_lore": "Kaio not only plots the vectors but identifies a rhythmic pattern in the ferrofluid tides that can predict future surges."
+      }
+    },
+    "master_narrator": {
+      "executor": "claude-3-opus",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio braced himself against the luminescent basalt, the deafening roar of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea threatening to tear the breath from his lungs. Blinding arcs of blue-white magnetic plasma illuminated the drifting spore-fog, tracing the chaotic vectors he desperately needed to map. His brass sextant hummed dangerously in his grip, the compass needle spinning uselessly. He didn't need it. He closed his eyes, feeling the piezo-electric hum resonate through his teeth, tracing the unseen currents. With a joyful, slightly manic grin, he keys his comms. 'I've got the trajectory! The main surge is cresting. Bracing for impact, Ryn, it's all yours to lock down the hearth!'"
+    }
+  }
+}
