@@ -1,0 +1,108 @@
+{
+  "base_snapshot_tick": 85,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "campaign_metadata": {
+    "session_number": 21,
+    "colony_sol": 22,
+    "tick_id": 85,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Validate the structural integrity of the colony's magnetic resonance shielding against the ferrofluid sea.",
+      "mid_term_milestone": "Calibrate all exterior outposts to synchronize with the new shear-resistance algorithms.",
+      "campaign_arc_climax": "Complete The First Forge's master resonance grid, achieving permanent sanctuary against chaotic magnetic tides."
+    }
+  },
+  "active_location": {
+    "location_id": "The_First_Forge_Exterior_Vista",
+    "macro_silhouette": "Silas stands upon the ridgeline outside The First Forge, peering down at the churning expanse where the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea tears the horizon into jagged metallic waves. The twin suns cast a fractured, burning light across the heavy atmosphere, illuminating the dense spores that drift like golden embers above the magnetic froth. Great arcs of captured lightning leap from the geode towers below, striving to ground the atmospheric turbulence before it can strip the ridge's structural plating bare. It is a terrifying, beautiful display of raw, chaotic energy that mocks his desire for orderly metrics.",
+    "sensory_palette": {
+      "sight_and_color": "Fractured amber sunlight piercing through swirling violet spore clouds and blindingly bright electrical arcs.",
+      "sound": "A deafening, rhythmic booming as the magnetic shear slaps against the ridge, underscored by the high-pitched whine of overtaxed capacitors.",
+      "smell": "The sharp tang of ozone layered heavily over the metallic scent of ionized iron dust.",
+      "tactile_temperature": "A shivering cold wind that occasionally bursts with sudden, searing localized heat from nearby arc discharges.",
+      "taste_optional": "A coppery film that settles relentlessly on the tongue and back of the throat."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Overloaded Capacitor Bank",
+        "affordance_description": "A row of brass-lined capacitors venting excessive heat, their indicator valves spinning wildly.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Loose Ferro-Resonant Plating",
+        "affordance_description": "A heavy copper shield that has partially detached, vibrating harmonically with the sea below.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Spore-Choked Intake Vent",
+        "affordance_description": "An intake duct meant for cooling the main forge, currently clogged with luminescent mycelial growth.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_sea_shear",
+      "name_and_role": "The Kelvin-Helmholtz Shear (Environmental Hazard)",
+      "motivation_goal": "To relentlessly erode any rigid, non-harmonic structures standing against the magnetic tide.",
+      "consistent_method": "It periodically lashes the ridge with waves of destabilizing magnetic resonance and ionized vapor.",
+      "immediate_complication": "The shear is beginning to resonate specifically with the frequency of Silas's hand-filed brass fittings.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "If ignored, the shear will strip the main heat exhaust vents, causing the forge to critically overheat."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The exterior plating of The First Forge is failing under sudden environmental stress, requiring manual intervention.",
+      "level_2_local": "The ferrofluid sea's unusual shear wave patterns threaten the energy stability of the entire Enclave Crater Valley.",
+      "level_3_campaign_arc": "The struggle between rigid structural engineering and the planet's chaotic magnetic nature must find a synthesis."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 14,
+    "prerolled_hazard_queue": [ 12, 6, 18, 9, 15 ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.7,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Local_Deterministic_Host",
+      "model": "jules_v2_pve_adjudicator",
+      "temperature": 0.4,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If the calibration fails, the shear wave will rip the primary heat exhausts from their housings, causing a critical overload that damages Silas's meticulous handiwork.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Silas completely misreads the wave frequency, reinforcing the wrong plates and triggering a cascading resonance failure that blasts the ridge.",
+        "below_dc_complicated_fail_forward": "The immediate plating holds, but the effort strains Silas's beloved tools and requires him to sacrifice his carefully tempered climbing pitons to lock the vent.",
+        "meets_dc_clean_success": "Silas applies exactly enough counter-torque to the brass fittings to stabilize the resonance, preventing any structural damage.",
+        "dc_plus_5_or_20_extended_lore": "Not only does the ridge hold perfectly, but Silas discovers a new harmonic frequency in the shear that can be harnessed to increase the forge's efficiency."
+      }
+    },
+    "master_narrator": {
+      "executor": "JulesDM_Storyteller",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Silas tightened his grip on the heavy micrometer, grumbling quietly to himself as another deafening surge of the Magnetohydrodynamic Kelvin-Helmholtz shear slammed against the ridge. 'Inefficient,' he muttered, checking the tolerances on the brass capacitor housing. 'Everything on this planet is completely inefficient.' He brushed a layer of oxidized iron dust from his cheek and locked the final vent in place. The resonance dropped to a tolerable thrum, though it still made his knees ache. Satisfied for the moment, he turned away from the churning ferrofluid sea and carefully descended the exterior gantry. Near the main pressure doors, Hector was already waiting, bouncing lightly on his heels with that boundless, reckless energy that always made Silas nervous. Without a word, Silas unclipped the heavy, brass-lined structural diagnostic baton from his belt and pressed it firmly into Hector's waiting hand. 'The tolerances are holding, but barely. Don't go rerouting the polarity just because you think it looks festive,' Silas warned affectionately, clapping a heavy, calloused hand on the younger man's shoulder."
+    }
+  }
+}
