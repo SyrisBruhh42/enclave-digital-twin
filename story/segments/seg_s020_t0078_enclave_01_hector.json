@@ -7,7 +7,10 @@
   "base_snapshot_tick": 78,
   "event_type": "POV_SCENE_SEGMENT",
   "location": "Ferrofluid Sea",
-  "actors": ["enclave_01_hector", "enclave_05_kaio"],
+  "actors": [
+    "enclave_01_hector",
+    "enclave_05_kaio"
+  ],
   "summary": "Hector observes shear forces.",
   "importance": 5,
   "novelty_score": 5,
@@ -17,5 +20,8 @@
   "evidence_refs": [],
   "active_pov_id": "enclave_01_hector",
   "next_pov_target": "enclave_05_kaio",
-  "narrative_prose": "The ferrofluid sea churned with jagged, metallic waves. Here, the magnetohydrodynamic Kelvin-Helmholtz shear ripped across the surface, causing the fluid to form razor-sharp crests. Hector stood by the edge, trying to study the phenomenon while he had to brace and DEFEND against the violent magnetic storms. He watched the ferrofluid ATTRACT nearby loose metal shavings, consuming them into the dark mass before handing the sensor baton to Kaio."
+  "narrative_prose": "The ferrofluid sea churned with jagged, metallic waves. Here, the magnetohydrodynamic Kelvin-Helmholtz shear ripped across the surface, causing the fluid to form razor-sharp crests. Hector stood by the edge, trying to study the phenomenon while he had to brace and DEFEND against the violent magnetic storms. He watched the ferrofluid ATTRACT nearby loose metal shavings, consuming them into the dark mass before handing the sensor baton to Kaio.",
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
+  }
 }
