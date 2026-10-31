@@ -1,0 +1,143 @@
+{
+  "event_id": "lore_s017_t0067_w03_b05",
+  "tick_id": 67,
+  "colony_sol": 17,
+  "day_phase": "DUSK_CRAFT",
+  "world_timestamp_iso": "2050-01-17T18:00:00Z",
+  "base_snapshot_tick": 67,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The Sanctuary - Hydroponics Deck",
+  "actors": [
+    "enclave_05_kaio",
+    "enclave_13_ryn"
+  ],
+  "summary": "Kaio hands off to Ryn while investigating ferrofluid dynamics.",
+  "importance": 5,
+  "novelty_score": 0.8,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ]
+  },
+  "narrative_prose": "The hum of the hydroponics deck was broken only by the sloshing of the ferrofluid sea, its dark peaks rising and falling. Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea created unpredictable wave patterns. Kaio wiped grease from his forehead, holding out the diagnostic baton. \"It's all yours, Ryn.\"",
+  "campaign_metadata": {
+    "session_number": 3,
+    "colony_sol": 17,
+    "tick_id": 67,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Stabilize the ferrofluid dynamics.",
+      "mid_term_milestone": "Repair the main generator.",
+      "campaign_arc_climax": "Survive the long winter."
+    }
+  },
+  "active_location": {
+    "location_id": "sanctuary_hydroponics",
+    "macro_silhouette": "The hydroponics deck is a vast, glass-domed expanse filled with the scent of damp earth and blooming flora. Row upon row of verdant beds stretch towards the horizon, illuminated by harsh, artificial grow lights.",
+    "sensory_palette": {
+      "sight_and_color": "Vibrant greens contrasting with sterile metallic walkways.",
+      "sound": "The gentle hum of water pumps and the rustle of leaves.",
+      "smell": "Damp soil and a sharp, ozone tang.",
+      "tactile_temperature": "Warm and humid, sticking to the skin.",
+      "taste_optional": "A faint, metallic sweetness in the air."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Ferrofluid Control Valve",
+        "affordance_description": "A heavy brass wheel to regulate the magnetic shear flow.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Emergency Overgrowth",
+        "affordance_description": "Thick vines that can be pulled to cover the ventilation grate.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Nutrient Vats",
+        "affordance_description": "Large vats containing dense, algae-based nutrient slurry.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_anomaly",
+      "name_and_role": "The Ferrofluid Sea (Environmental Hazard)",
+      "motivation_goal": "Expand and consume raw magnetic materials.",
+      "consistent_method": "Surging towards the nearest electrical current.",
+      "immediate_complication": "The shear waves are splashing onto the main walkway.",
+      "pressure_index": 5,
+      "uninterrupted_escalation": "If unchecked, it will short out the lighting grid."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The fluid is unstable due to a local magnetic surge.",
+      "level_2_local": "The sector's power relay has been damaged.",
+      "level_3_campaign_arc": "The planetary magnetic field is shifting."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      1,
+      5,
+      8,
+      12,
+      19
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.6,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.55,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "OpenAI",
+      "model": "gpt-4",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The ferrofluid breaches containment, ruining the crops.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "The valve is turned the wrong way, accelerating the shear.",
+        "below_dc_complicated_fail_forward": "The flow slows, but a pipe bursts nearby.",
+        "meets_dc_clean_success": "The shear waves stabilize perfectly.",
+        "dc_plus_5_or_20_extended_lore": "Not only stabilized, but a new harmonic pattern is discovered."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules",
+      "temperature": 0.6,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": false,
+      "agency_handoff_prompt": "What do you do, Ryn?"
+    }
+  }
+}
