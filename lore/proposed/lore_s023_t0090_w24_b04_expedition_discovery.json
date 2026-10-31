@@ -1,0 +1,121 @@
+{
+  "base_snapshot_tick": 86,
+  "campaign_metadata": {
+    "session_number": 23,
+    "colony_sol": 23,
+    "tick_id": 90,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Turn the compost heap without losing the biological logic gate.",
+      "mid_term_milestone": "Stabilize the 72\u00b0C chitin tenderization process.",
+      "campaign_arc_climax": "Unlock full planetary cellular regeneration."
+    }
+  },
+  "active_location": {
+    "location_id": "Genesis_Garden_Compost_Vat",
+    "macro_silhouette": "The Genesis Garden is a subterranean root-cathedral, its perimeter lined by heavily reinforced timber shutters that rattle against the ionization storm hammering outside. Warm hearth-fire light spills from the central hall, catching the copper ankle-grounding wires snaking across the loam. In the center, a steaming, nutrient-dense compost heap exhales a sharp, biological heat into the otherwise cool, damp air.",
+    "sensory_palette": {
+      "sight_and_color": "Sapphire bioluminescence tracing mycelial veins across the dark soil, contrasted by the harsh amber glow of the tempest through the shutters.",
+      "sound": "The rhythmic, deafening drum of thunder outside, underlaid by the soft, wet squelch of decomposing matter.",
+      "smell": "Rich, loamy decay cut sharply by the popcorn-aromatic burst of methional from the fungal vats.",
+      "tactile_temperature": "A stifling, humid 72 degrees Celsius radiating localized from the compost heap, while the ambient air remains cellar-cool.",
+      "taste_optional": "A faint, metallic trace of ozone mixing with savory loam."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Steaming Compost Heap",
+        "affordance_description": "A dense pile of organic matter requiring a pitchfork to turn and oxygenate for optimal microbial action.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Copper Grounding Wires",
+        "affordance_description": "Ankle-high conductive tethers designed to safely channel ambient ionization away from delicate biological experiments.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Gas-Chromatograph Node",
+        "affordance_description": "A delicate sensor array analyzing the precise methional vapor concentrations venting from the vats.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ambient_ionization_storm",
+      "name_and_role": "Ionization Storm (Environmental Hazard)",
+      "motivation_goal": "To saturate the local atmosphere with rogue electrical charges.",
+      "consistent_method": "Pulsing erratic electromagnetic spikes that threaten to fry delicate biological logic gates.",
+      "immediate_complication": "Induces static buildup on the compost pitchfork, risking a sudden discharge into the fungal cultures.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "If ungrounded, the static will cascade through the mycelial network, wiping the biochemical state memory."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Willow needs to manually turn the compost heap to maintain the precise 72\u00b0C enzymatic tenderization.",
+      "level_2_local": "Failing to turn it will crash the delicate methional flavor-pairing and ruin the Maillard reaction.",
+      "level_3_campaign_arc": "The biochemical mastery of this compost is the key to unlocking the planetary fungal Boolean logic gates."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_07_willow",
+        "tactical_role": "DEFENDER"
+      },
+      {
+        "actor_id": "enclave_09_orion",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      12,
+      17,
+      8,
+      14,
+      19
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.9,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.85,
+    "composite_lpi": 0.76,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_deterministic",
+      "model": "rule_engine_v1",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Losing the enzymatic logic state to a static discharge while turning the heap.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Willow accidentally discharges static directly into the core, wiping the memory and burning the batch.",
+        "below_dc_complicated_fail_forward": "The compost temperature drops, slowing the Maillard reaction, but preserving the core logic gates at the cost of time.",
+        "meets_dc_clean_success": "Willow successfully turns the heap, maintaining 72 degrees and shielding the logic gates from the storm.",
+        "dc_plus_5_or_20_extended_lore": "The precise aeration not only protects the logic gates but triggers a cascade of spontaneous cellular regeneration."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules_narrative_engine",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": false,
+      "agency_handoff_prompt": "Under the microscope, the mushroom didn't look like a plant. It looked like a city.\n\nWillow adjusted the focus. The hyphae\u2014the thread-like roots\u2014were pulsing with light. Calcium ions flowing through the cell walls, carrying signals like data packets on a fiber optic cable. She was on the verge of unlocking fungal Boolean logic gates, true cellular regeneration, when a sharp, impatient beep from the chromatograph shattered her concentration.\n\nShe sighed, pushing her safety goggles up into her silver hair. The precision 72\u00b0C enzymatic chitin tenderization process was drifting. To maintain the precise gas-chromatograph methional flavor-pairing\u2014the exact sequence necessary to trigger popcorn-aromatic Maillard reactions during this relentless ionization storm\u2014the compost heap required manual, kinetic intervention.\n\nTranslation: she had to stop performing miracle biochemistry and go turn a steaming pile of rot with a pitchfork.\n\nThunder hammered against the timber shutters, the sheer acoustic force rattling the amber beakers on her bench. Outside, the planet was trying its hardest to fry them with rogue electrical discharge. Inside, Willow was wading through ankle-high copper grounding wires, clutching a remarkably low-tech farming implement.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" a quiet voice noted from the doorway. Orion stood there, watching her stab the steaming mound of loam with entirely too much venom.\n\n\"I'm not complaining, Orion,\" Willow muttered, heaving a massive, humid clod of substrate. A sharp tang of methional bloomed into the cellar-cool air. \"I am aggressively optimizing an enzymatic threshold. There is a difference.\"\n\nThen, the storm spiked. A massive discharge outside sent a shockwave of static through the garden floor. The copper wires hummed violently. Willow's heart hammered. Her Cancer override seized her\u2014a sudden, suffocating terror not for her work, but for the boy standing too close to the ungrounded vat.\n\n\"Don't move!\" she snapped, abandoning the pitchfork and surging forward to grab Orion by the shoulders, her detached analytical demeanor vanishing in an instant. \"The local induction is peaking. If you ground out through that puddle, you'll stop your own heart. Stay exactly where you are.\""
+    }
+  },
+  "context_manifest": {
+    "active_pov_id": "enclave_07_willow",
+    "prev_next_pov_target": "enclave_07_willow",
+    "next_pov_target": "enclave_09_orion",
+    "loaded_full_card_ids": [
+      "enclave_07_willow"
+    ],
+    "full_cards_loaded_count": 1
+  }
+}
