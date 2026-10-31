@@ -1,0 +1,141 @@
+{
+  "event_id": "seg_s021_t0082_enclave_01_hector",
+  "tick_id": 82,
+  "colony_sol": 21,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-10-25T12:00:00Z",
+  "base_snapshot_tick": 82,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The Forge Exterior",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_05_kaio"
+  ],
+  "summary": "Hector observes the sheer and passes the baton to Kaio.",
+  "importance": 5,
+  "novelty_score": 6,
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "full_cards_loaded_count": 1,
+    "relationships_loaded": [
+      "enclave_05_kaio"
+    ]
+  },
+  "campaign_metadata": {
+    "session_number": 21,
+    "colony_sol": 21,
+    "tick_id": 82,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Hector handles the crisis and passes the baton to Kaio",
+      "mid_term_milestone": "Stabilize The Stormbreaker",
+      "campaign_arc_climax": "Complete The First Forge"
+    }
+  },
+  "active_location": {
+    "location_id": "the_forge_exterior",
+    "macro_silhouette": "The exterior vista of The Forge is battered by extreme magnetohydrodynamic weather as it overhangs the roiling ferrofluid sea. Thick, ozone-laced clouds churn overhead in rapid succession, throwing erratic shadows across the reinforced decking. A fierce gale carries the deafening screech of stressed metal and the thrum of atmospheric friction.",
+    "sensory_palette": {
+      "sight_and_color": "Violent arcs of blue corona and dark, heavy metallic waves.",
+      "sound": "Howling wind and the deafening shriek of straining metal.",
+      "smell": "Sharp ozone and heavy metallic tang.",
+      "tactile_temperature": "Bitter cold with occasional flashes of radiant heat from arc flashes.",
+      "taste_optional": "A strong, metallic residue that coats the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Reinforced Barrier",
+        "affordance_description": "Shielding the viewing platform from magnetic surges.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetic Winch",
+        "affordance_description": "Used for retrieving samples from the ferrofluid sea.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Maintenance Tarp",
+        "affordance_description": "Covering sensitive equipment from the elements.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_sea_shear",
+      "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz Shear",
+      "motivation_goal": "Destabilize the magnetic winch moorings.",
+      "consistent_method": "Tearing at the surface tension with magnetic surges.",
+      "immediate_complication": "The winch is violently shaking.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The winch will be ripped from its moorings, halting sample retrieval."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The shear is threatening the winch.",
+      "level_2_local": "The Forge needs the winch operational for the day.",
+      "level_3_campaign_arc": "Sample retrieval is necessary for The First Forge."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      18,
+      5,
+      11,
+      20
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.3,
+    "motivational_vector_saturation": 0.6,
+    "unresolved_conflict_ratio": 0.4,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.7,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_ai",
+      "model": "v2",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The winch breaks free.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Hector thinks the shear is subsiding.",
+        "below_dc_complicated_fail_forward": "Hector secures the winch, but damages a sensor.",
+        "meets_dc_clean_success": "Hector secures the winch cleanly.",
+        "dc_plus_5_or_20_extended_lore": "Hector secures the winch and discovers a new magnetic harmonic."
+      }
+    },
+    "master_narrator": {
+      "executor": "local_ai",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector took the diagnostic pad from Silas and bounded out onto the exposed exterior decking, a wide grin splitting his face despite the howling gale. The roiling ferrofluid sea clashed below, where dark metallic waves surged with intense kinetic energy. The magnetohydrodynamic Kelvin-Helmholtz shear ripped at the surface tension, pulling violent arcs into the sky. Hector loved it; the sharp ozone and the heavy vibration of the deck plates under his insulated boots made him feel alive. But his grin faltered as the reinforced barrier (DEFEND) groaned under a sudden magnetic surge. If the shear worsened, the magnetic winch (ATTRACT) would break its moorings entirely, delaying the Stormbreaker's flux-core shielding by days and failing the squad's objective. He scrambled forward, grabbing the heavy maintenance tarp (CONCEAL) to hastily wrap the primary sensor relay before it shorted out in a burst of blue sparks. He braced against the railing, feeling the mechanical strain through his gloves. 'Hey, Kaio!' he yelled over the screeching wind, turning as the scout emerged onto the battered platform. Hector shoved the diagnostic slate squarely into Kaio's hands. 'Your turn to watch the sea try to eat us!'"
+    }
+  }
+}
