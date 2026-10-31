@@ -1,0 +1,41 @@
+{
+  "event_id": "evt_s018_t0072_reflection",
+  "tick_id": 72,
+  "colony_sol": 18,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-11-11T23:00:00Z",
+  "base_snapshot_tick": 72,
+  "event_type": "NIGHTLY_REFLECTION",
+  "location": "The Nexus",
+  "actors": [
+    "enclave_13_ryn",
+    "enclave_03_silas"
+  ],
+  "summary": "Ryn reflected on the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea while calibrating the thermal flow, eventually handing off the shift to Silas.",
+  "importance": 7.5,
+  "novelty_score": 0.6,
+  "lethality": 0,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {
+    "stress_delta": -0.1
+  },
+  "relationship_deltas": [],
+  "cited_event_ids": [
+    "evt_s018_t0070_expedition_consequence"
+  ],
+  "active_pov_id": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_13_ryn -> Handoff=enclave_03_silas.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
+    "interlocutor_full_cards_loaded": 0,
+    "active_pov_id": "enclave_13_ryn"
+  },
+  "narrative_prose": "The generator room was dim, lit only by the diagnostic screens' sickly green flicker. The low rumble of the turbines vibrated through the metal grating beneath Ryn's boots, filling the air with the sharp scent of ozone and leaving a faint metallic tang of copper on her tongue. Ryn watched the erratic readouts of the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, her jaw set tight as she recalibrated the flow rates to defend the thermal buffer from fracturing. Nearby, a precarious stack of auxiliary cooling coils threatened to consume any loose debris caught in their intake, while the rhythmic pulsing of the primary manifold seemed to attract the stray static charge in the air. Silas stepped from the shadows, the soft hiss of the pneumatic door the only warning. Ryn exhaled, physically pressing the rusted access key into his palm. 'Your shift,' she murmured, the metal cool against her skin.",
+  "calypso_zero_raw_stats": true
+}
