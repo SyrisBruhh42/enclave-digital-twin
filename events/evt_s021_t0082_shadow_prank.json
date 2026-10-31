@@ -1,0 +1,63 @@
+{
+  "event_id": "evt_s021_t0082_shadow_prank",
+  "tick_id": 82,
+  "colony_sol": 21,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-11-14T12:00:00Z",
+  "base_snapshot_tick": 82,
+  "event_type": "SHADOW_ECONOMY_PRANK_SEEDED",
+  "location": "The_Stormbreaker_Spire",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_05_kaio",
+    "enclave_03_silas"
+  ],
+  "summary": "Hector attempts to exploit Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea for a prank, but miscalculates the physical parameters, leading to a fail-forward handover to Kaio.",
+  "importance": 4,
+  "novelty_score": 0.8,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {},
+  "relationship_deltas": [],
+  "evidence_refs": [],
+  "origin_sol": 21,
+  "maturity_sol": 24,
+  "node_a": "enclave_01_hector",
+  "node_b": "enclave_05_kaio",
+  "node_c": "enclave_03_silas",
+  "target_b_missed": true,
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "active_location": {
+    "location_id": "The_Stormbreaker_Spire",
+    "macro_silhouette": "The Stormbreaker Spire thrusts upwards, its copper grounding masts humming with resonant tension. Below, the ferrofluid sea churns, throwing up obsidian spikes that dance to the rhythm of magnetic shears. The raw voltage in the air makes the hairs on your arms stand at attention.",
+    "sensory_palette": {
+      "sight_and_color": "Flashes of actinic blue against the dark, churning ferrofluid sea.",
+      "sound": "The deep, resonant hum of charged capacitors and the staccato crack of ozone discharging.",
+      "smell": "Sharp ozone and scorched copper.",
+      "tactile_temperature": "A sudden, biting chill interspersed with waves of dry, static heat.",
+      "taste_optional": "A metallic tang clinging to the back of the throat."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Resonant Induction Coils",
+        "affordance_description": "Can be aligned to redirect stray magnetic fluxes.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Flux-Core Shielding Panels",
+        "affordance_description": "Can be rapidly deployed to block sudden ferrofluid spikes.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 16
+      },
+      {
+        "feature_name": "Voltage Sink Vents",
+        "affordance_description": "Can draw away and safely ground hazardous excess charge.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "narrative_prose": "The plan was flawless in theory: use the Magnetohydrodynamic Kelvin-Helmholtz shear to levitate Silas's favorite torque wrench just out of reach. Hector grinned as he tuned the induction coils, treating the megavolt corona like a warm shower. But the ferrofluid sea had other ideas. A sudden surge amplified the shear, ripping the wrench into a tight orbit around the primary mast. It wasn't quite a disaster, but the spiraling tool was now threatening the weather telemetry array. 'Oops,' Hector muttered, watching the wrench accelerate. He scrambled down the ladder, tossing his insulated gloves to Kaio, who had just arrived with a fresh supply of pitons. 'Your turn, Scout. Catch!'"
+}
