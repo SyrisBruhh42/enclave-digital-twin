@@ -1,0 +1,138 @@
+{
+  "event_id": "lore_s018_t0071_w07_b04_craft_artifact",
+  "tick_id": 71,
+  "colony_sol": 18,
+  "day_phase": "DUSK_CRAFT",
+  "world_timestamp_iso": "2026-11-11T18:00:00Z",
+  "base_snapshot_tick": 71,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The Basalt Pinnacles near the Ferrofluid Sea",
+  "actors": [
+    "enclave_05_kaio",
+    "enclave_13_ryn"
+  ],
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "prev_next_pov_target": "enclave_05_kaio",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_05_kaio -> Handoff=enclave_13_ryn.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "summary": "Kaio navigates the Kelvin-Helmholtz shear instabilities to extract a magnetic craft artifact, before handing it off to Ryn.",
+  "importance": 8,
+  "novelty_score": 0.8,
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ]
+  },
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 18,
+    "tick_id": 71,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Secure the magnetic craft artifact before the shear completely scrambles the field.",
+      "mid_term_milestone": "Map the ferrofluid sea's resonance patterns.",
+      "campaign_arc_climax": "Build the grand sanctuary using the exoplanet's own energy flows."
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea_coast",
+    "macro_silhouette": "The jagged basalt pinnacles overlook a vast, churning ocean of ferrofluid, where swirling Kelvin-Helmholtz instabilities tear the surface into fractal peaks of liquid metal. The air here vibrates with low-frequency magnetic hums that make teeth ache. Deep within the shear-torn coast, bioluminescent moss struggles to cling to the highly magnetized rocks, casting a pale green glow over the metallic tides.",
+    "sensory_palette": {
+      "sight_and_color": "Fractal liquid metal waves under pale green moss light.",
+      "sound": "Low-frequency, piezo-electric hum of grinding magnetic fields.",
+      "smell": "Ozone and metallic tang.",
+      "tactile_temperature": "Cold, with localized pockets of sudden frictional heat.",
+      "taste_optional": "A sharp, coppery tang on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetized Basalt Spire",
+        "affordance_description": "Can be climbed or used to shield against sudden magnetic bursts.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Eddy",
+        "affordance_description": "Can be harvested for liquid lodestone components.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 16
+      },
+      {
+        "feature_name": "Polarized Moss Patch",
+        "affordance_description": "Can be triggered to release a blinding cloud of glowing spores.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "kelvin_helmholtz_shear",
+      "name_and_role": "Ferrofluid Shear Wave - Environmental Hazard",
+      "motivation_goal": "To equalize the magnetic polarity between the sea and the atmosphere.",
+      "consistent_method": "Generates localized gravity anomalies and magnetic spikes along the coast.",
+      "immediate_complication": "The shear threatens to rip the craft artifact from Kaio's grasp before he can secure it.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Will induce a localized polarity inversion storm, rendering all electronics and ferrous gear useless for hours."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio needs to retrieve the magnetic craft artifact from the chaotic shear zone.",
+      "level_2_local": "The artifact is crucial for calibrating Ryn's latest metabolic engine prototypes before the next temperature drop.",
+      "level_3_campaign_arc": "Mastering the ferrofluid dynamics is key to The Sanctuary's energy independence."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      8,
+      19,
+      3,
+      11
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.6,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet",
+      "temperature": 0.4,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If Kaio fails, the magnetic shear will scramble his sextant's calibration, delaying their mapping efforts and risking a painful magnetic burn.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio misreads the shear lines completely, causing a magnetic feedback loop that temporarily blinds his sextant.",
+        "below_dc_complicated_fail_forward": "Kaio secures the artifact, but the intense shear pulls it out of alignment, requiring Ryn to spend hours re-calibrating it.",
+        "meets_dc_clean_success": "Kaio navigates the waves perfectly, plucking the artifact cleanly from the eddy without disrupting the field.",
+        "dc_plus_5_or_20_extended_lore": "Not only does Kaio secure the artifact flawlessly, but he discovers a hidden harmonic resonance in the shear that could boost the engine's output by 20%."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules_local",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio stood at the edge of the jagged basalt pinnacles, gazing down at the churning ferrofluid sea. The magnetohydrodynamic Kelvin-Helmholtz shear ripped across the surface, turning the metallic waves into fractal peaks that hummed with a low, piezo-electric frequency. He tightened his grip on his brass sextant, his associative mind mapping the eddy currents. With a sudden burst of energy, he scrambled down a magnetized spire, timing his movement perfectly with the shifting shear. Reaching into a stable pocket of the field, his fingers closed around the dense, humming craft artifact. He could feel its resonance echoing through his bones. Scrambling back up, out of breath but grinning wildly, he saw Ryn approaching from the ridge. 'Got it!' Kaio shouted over the roar of the sea, tossing the glowing artifact directly into Ryn's waiting hands."
+    }
+  }
+}
