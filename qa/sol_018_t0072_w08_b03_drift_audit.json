@@ -1,0 +1,141 @@
+{
+  "campaign_metadata": {
+    "session_number": 8,
+    "colony_sol": 18,
+    "tick_id": 72,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Sustain caloric engine under extreme magneto-shear",
+      "mid_term_milestone": "Stabilize The Hearth before the storm apex",
+      "campaign_arc_climax": "Prove culinary warmth transcends strict stoichiometry"
+    }
+  },
+  "active_location": {
+    "location_id": "The_Hearth",
+    "macro_silhouette": "The Hearth is a cacophony of hissing copper and glowing induction coils arrayed in concentric circles. Plumes of spiced steam rise against the vaulted, soot-blackened ceiling, occasionally illuminating frost patterns creeping down the inner walls. The air is dense, heavy with the frantic energy of a kitchen fighting a thermodynamic battle against the encroaching cold.",
+    "sensory_palette": {
+      "sight_and_color": "Flickering amber coils, polished copper glints, creeping hoarfrost on high vents",
+      "sound": "Rhythmic chopping, rolling boils, the sharp bark of Ryn over the roar of extraction fans",
+      "smell": "Charred mire-lentils, sharp metallic tang of ozone, warm yeast",
+      "tactile_temperature": "Stifling radiant heat near the stoves contrasted by sudden icy drafts",
+      "taste_optional": "Rich, umami-laden starch dusted with coarse salt"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Sealed Copper Kettle",
+        "affordance_description": "A massive, pressurized vat simmering a highly-caloric lentil stew",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetically-Levitated Spice Rack",
+        "affordance_description": "Hovering vials of synthesized alien herbs and rare salts",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Thermal Exhaust Vent",
+        "affordance_description": "A wide, venting shaft dumping excess heat into the upper ductwork",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "TOY_MAGNETOSHEAR_FROST",
+      "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz shear",
+      "motivation_goal": "To rapidly sap ambient thermal energy from the colony",
+      "consistent_method": "Inducing localized temperature drops and disrupting induction coils",
+      "immediate_complication": "Flash-freezing the condensation in the galley's exhaust fans",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "Total thermal cascade failure in the dining commons"
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The extreme magnetic shear is threatening the evening meal's critical caloric density.",
+      "level_2_local": "Ryn is pushing herself and the galley systems past safe tolerances to maintain the metabolic ledger.",
+      "level_3_campaign_arc": "Her relentless drive for perfection risks breaking the very sanctuary she seeks to build."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [7, 14, 2, 19, 11]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.65,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.4,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.68,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "LOCAL_JULES",
+      "model": "jules-deterministic-engine",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If Ryn fails, the magnetic shear ruins a critical batch of high-calorie rations, increasing colony fatigue.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Ryn miscalculates the thermal mass; the entire kettle flash-freezes and cracks, wasting days of provisions.",
+        "below_dc_complicated_fail_forward": "The stew is saved, but tastes metallic and slightly scorched; morale dips slightly.",
+        "meets_dc_clean_success": "Ryn perfectly balances the induction fields against the shear, delivering a flawless, warming meal.",
+        "dc_plus_5_or_20_extended_lore": "Ryn discovers a novel way to use the magnetic shear to perfectly temper the iron-wheat bread, unlocking a new culinary technique."
+      }
+    },
+    "master_narrator": {
+      "executor": "JULES_NARRATIVE",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Ryn slams a heavy ladle down on the butcher block, the harsh clack cutting through the low hum of the strained induction coils. The air around her is thick with the scent of roasted mire-lentils, battling the sharp, metallic tang of the encroaching cold. 'The sheer is dropping the ambient by two degrees every minute,' she barks, her eyes locked on the digital readouts of the main kettle. 'If we don't stabilize the induction fields, we're serving ice-sludge to the Forge squad, and I refuse to let that happen.' She reaches out, her hand hovering over a glowing brass manifold, hesitating for just a fraction of a second. She needs someone to anchor the physical lines before she can push the power draw. She spots Silas moving steadily through the steam. 'Silas!' she calls out, thrusting a dense, insulated spanner toward him. 'I need you to lock down the primary intake vents before the frost creeps into the heat exchangers. Do it now, or we lose the whole batch!' She steps back, allowing him to take the spanner and the immediate crisis with it."
+    }
+  },
+  "event_id": "evt_s018_t0072_drift_audit",
+  "tick_id": 72,
+  "colony_sol": 18,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-11-11T20:00:00Z",
+  "base_snapshot_tick": 72,
+  "event_type": "DRIFT_AUDIT",
+  "location": "The_Hearth",
+  "actors": ["enclave_13_ryn", "enclave_03_silas"],
+  "summary": "Ryn combats intense magnetic shear threatening the evening feast, handing off physical control to Silas.",
+  "importance": 7,
+  "novelty_score": 5,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_13_ryn -> Handoff=enclave_03_silas.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": ["enclave_13_ryn"],
+    "relationship_edges_loaded": 1,
+    "lore_cards_loaded": 1
+  },
+  "state_deltas": {
+    "enclave_13_ryn": {
+      "stress": 0.05
+    }
+  },
+  "relationship_deltas": {
+    "enclave_13_ryn": {
+      "enclave_03_silas": 0.02
+    }
+  },
+  "evidence_refs": []
+}
