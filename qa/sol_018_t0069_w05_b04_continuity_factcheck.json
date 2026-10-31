@@ -1,0 +1,127 @@
+{
+  "event_type": "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK",
+  "base_snapshot_tick": 69,
+  "campaign_metadata": {
+    "session_number": 69,
+    "colony_sol": 18,
+    "tick_id": 69,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Resolve magnetic flux anomalies safely.",
+      "mid_term_milestone": "Stabilize The First Forge structural integrity.",
+      "campaign_arc_climax": "Harmonize colony infrastructure with planetary magnetic weather."
+    }
+  },
+  "active_location": {
+    "location_id": "The_First_Forge",
+    "macro_silhouette": "The First Forge stands as a bastion of brass and iron, its heavy blast doors etched with generations of stress tolerances. Inside, the roar of the induction furnace is a constant physical pressure, competing with the ozone snap of raw geode lightning. Workbenches are meticulously arranged with hand-forged tools, yet a fine layer of oxidized dust and crystallized fungus stubbornly clings to the corners, a testament to the unending battle against the exoplanet's intrusive nature.",
+    "sensory_palette": {
+      "sight_and_color": "Searing blue-white flashes of geode arcing against dull, heavy iron.",
+      "sound": "The rhythmic, deafening thrum of the induction furnace and sharp cracks of electrical discharge.",
+      "smell": "Pungent ozone mixed with hot metal and the faint, earthy tang of burning spores.",
+      "tactile_temperature": "Oppressively hot and dry, with the air feeling thick and charged.",
+      "taste_optional": "A metallic tang on the back of the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Heavy Blast Door Panel",
+        "affordance_description": "Can be rapidly sealed to contain erratic magnetic surges or isolate the workspace.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Sympathetic Ore Crucible",
+        "affordance_description": "Can be used to safely absorb and neutralize excess geode lightning.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Copper Busbar Array",
+        "affordance_description": "Can be quickly rewired to divert dangerous electrical currents away from sensitive equipment.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 16
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "magnetohydrodynamic_kelvin_helmholtz_shear",
+      "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz Shear",
+      "motivation_goal": "To induce chaotic vortex patterns and destabilize local magnetic fields.",
+      "consistent_method": "Generating turbulent waves across the ferrofluid sea that propagate through unshielded metals.",
+      "immediate_complication": "Causes unpredictable resonance spikes in The First Forge's sympathetic ore crucible.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "Will eventually cascade into a localized magnetic storm, severely damaging the forge's infrastructure and disrupting colony power."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea is causing dangerous fluctuations in the induction furnace.",
+      "level_2_local": "Silas insists on strict structural empiricism to mitigate the shear, while Hector wants to harness the turbulent energy directly.",
+      "level_3_campaign_arc": "The fundamental tension between cautious, structural engineering and bold, intuitive leaps in adapting to the exoplanet's living magnetic weather."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      },
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      12,
+      18,
+      5,
+      20,
+      8
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.725,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_engine",
+      "model": "deterministic_v2",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If the shielding fails, the magnetohydrodynamic shear will severely damage the busbar and cause minor burns, forcing a lengthy repair process.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Silas completely misjudges the shear frequency, resulting in a violent resonance explosion that damages the forge and causes significant injury.",
+        "below_dc_complicated_fail_forward": "The shielding holds partially, but the busbar is fused and must be replaced, delaying the project and causing minor shocks.",
+        "meets_dc_clean_success": "Silas successfully recalibrates the shielding, safely mitigating the magnetohydrodynamic shear and maintaining the forge's integrity.",
+        "dc_plus_5_or_20_extended_lore": "Silas flawlessly manages the surge, discovering a new way to temper the copper busbar that increases its resistance to Kelvin-Helmholtz shear."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules_narrative_engine",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Silas forcefully shoves the heavy spanner into Hector's hands."
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ]
+  },
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "phase": "DAWN_SHIFT"
+}
