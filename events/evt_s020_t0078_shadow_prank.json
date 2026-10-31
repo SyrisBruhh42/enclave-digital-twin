@@ -1,0 +1,61 @@
+{
+  "event_id": "evt_s020_t0078_shadow_prank",
+  "tick_id": 78,
+  "colony_sol": 20,
+  "event_type": "SHADOW_ECONOMY_PRANK_SEEDED",
+  "world_timestamp_iso": "2026-11-13T12:00:00Z",
+  "location": "The_Stormbreaker_Spire",
+  "summary": "Hector laid a shadow economy prank targeting Jane, using the ferrofluid sea's shear to disguise a false feedback loop, before handing off duty to Kaio.",
+  "importance": 4,
+  "novelty_score": 0.7,
+  "state_deltas": {},
+  "relationship_deltas": [],
+  "evidence_refs": [],
+  "actors": [
+    "enclave_01_hector",
+    "enclave_02_jane",
+    "enclave_05_kaio"
+  ],
+  "active_location": {
+    "location_id": "The_Stormbreaker_Spire",
+    "macro_silhouette": "The high altitude air bites with static tension, biting cold and smelling of ozone. The ferrofluid sea below is a dark, churning mass, its surface sheared by violent magnetohydrodynamic forces. High above the chaos, the spire's platform offers a precarious, breathtaking vantage point.",
+    "sensory_palette": {
+      "sight_and_color": "Flashes of blue corona discharge, churning dark silver sea",
+      "sound": "Howling wind and violent crackles of electricity",
+      "smell": "Ozone and metallic tang",
+      "tactile_temperature": "Biting cold wind and static prickle",
+      "taste_optional": "A sharp, coppery sting on the tongue"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Primary Grounding Mast",
+        "affordance_description": "A thick copper pillar vibrating with residual energy.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Induction Rigging",
+        "affordance_description": "A complex web of cables that can be manipulated to redirect flow.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 16
+      },
+      {
+        "feature_name": "Ferrofluid Surge Breaker",
+        "affordance_description": "A dense baffle designed to dissipate wave impacts.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "narrative_prose": "The magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea howled, a brutal testament to the exoplanet's raw physics. Hector grinned, the static from the storm raising the hair on his arms. He had meticulously rewired the induction rigging, a delicate operation meant to offset the sheer forces below. But this wasn't just maintenance; it was a carefully laid trap. When Jane attempted her next differential reading, the console would instead broadcast a dramatic, highly exaggerated reading of the sea's turbulence, completely harmless but utterly confusing. If his calculations held against the relentless shear, the prank would go off perfectly. If not, the resulting feedback loop might short out the secondary capacitors, a headache Silas would undoubtedly inherit. With a final, satisfying click of his wrench, he locked the mechanism in place. He wiped grease from his forehead and turned, spotting Kaio ascending the ladder. Hector reached out, slapping the physical baton firmly into Kaio's hand, his grin widening.",
+  "origin_sol": 17,
+  "maturity_sol": 20,
+  "base_snapshot_tick": 78,
+  "node_a": "enclave_01_hector",
+  "node_b": "enclave_02_jane",
+  "node_c": "enclave_03_silas",
+  "target_b_missed": true,
+  "active_pov_id": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio"
+}
