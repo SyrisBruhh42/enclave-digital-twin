@@ -1,0 +1,40 @@
+{
+  "dispatch_id": "dispatch_sol_022",
+  "tick_id": 88,
+  "colony_sol": 22,
+  "base_snapshot_tick": 88,
+  "title": "Evening Dispatch Sol 22",
+  "headline": "Evening Dispatch",
+  "anchor_intro": "Dorian did not look at the world; he looked at the wireframe beneath it. Standing before the Living Atlas, he adjusted the focal length of the crystalline projector. Ancient carved stone lanterns beneath the fungal canopy chime softly when the mycelial pulse passes through them. The Enclave is steady tonight, though we continue extracting fossilized piezoelectric signal echoes stored inside ancient precursor chitin-quartz resonator nodes overgrown by deep-crustal hyphae. \n\nThe command center is a pressure cooker tonight, vibrating under the relentless Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea, where the copper bulkheads radiate a biting chill that fogs our breath and the stinging scent of ozone and coppery taste of static cling to the back of the throat. We must shield the primary induction core from resonant overload by recalibrating the dampeners, draw the sheer kinetic friction into our thermal reserves to power the mess hall, and channel the excess charge by deliberately bleeding it into the secondary hydroponics grid. The amber hazard lights paint the room in bruised purple and gold, strobing in time with the deafening, rhythmic groan of the outer hull plates as they struggle to deflect the shear.",
+  "broadcast_script": "Dorian strikes his late husband's brass pitch-pipe, the note clear and piercing against the rumble of the planetary crust. 'Hear ye, nodes of the Enclave! I am projecting a three-dimensional holographic magnetosphere map across thousands of crustal sensors, yet I still must implore Leo to ground every metal soup spoon in the kitchen.' \n\nThe stress spikes, and Dorian's measured archivist persona shatters into pure, reckless audacity. 'Then today is a good day for science!' he declares, eyes wide with the thrill of the variable. 'If you're complaining and no one is laughing, you're complaining wrong.' Dorian hands the heavy physical baton to Jane.",
+  "broadcast_markdown": "# Evening Dispatch\n\nDorian hands the baton to Jane.",
+  "weather_report": "Stable beneath the crust, with mild magnetic turbulence.",
+  "quote_of_the_sol": "Then today is a good day for science!",
+  "newscaster_anchors": [
+    "enclave_15_dorian",
+    "enclave_02_jane"
+  ],
+  "covered_day_phases": [
+    "DAWN_SHIFT",
+    "MIDDAY_EXPEDITION",
+    "DUSK_CRAFT",
+    "THE_FEAST"
+  ],
+  "lead_story": {
+    "headline": "Sol 22 Lead",
+    "summary": "Zara establishes first-contact photophore syntax with an abyssal chemosynthetic cephalopod.",
+    "cited_event_ids": [
+      "evt_s022_t0086_expedition_consequence"
+    ],
+    "actors": [
+      "enclave_06_zara",
+      "enclave_10_isla"
+    ],
+    "location": "The_Sanctuary",
+    "day_phase": "THE_FEAST",
+    "salience_score": 0.95
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.82
+  }
+}
