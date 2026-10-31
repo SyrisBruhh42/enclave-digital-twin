@@ -38,9 +38,11 @@ if str(REPO_ROOT) not in sys.path:
 
 from tools.check_enclave_constitutions import (
     ALLOWED_WORKER_PREFIXES,
+    CANONICAL_16_POV_ROTATION,
     PreDispatchContractVerifier,
     PreDispatchVerificationError,
     check_jules_rolling_24h_budget,
+    get_rashomon_scalpel_pov_pair,
     validate_proposal,
     validate_showrunner_storytelling_contract,
 )
@@ -887,15 +889,20 @@ class JulesEnclaveDispatcher:
             else:
                 peer_stats = _count_peer_factory_sessions_24h(now_dt)
                 dyn_caps = compute_dynamic_290_fleet_caps(now_dt)
-                enclave_cap = int(dyn_caps.get("enclave-digital-twin", 110))
+                base_enclave_cap = int(dyn_caps.get("enclave-digital-twin", 110))
+                effective_fleet_ceiling = int(
+                    dyn_caps.get("effective_autonomous_ceiling_24h", UNIFIED_AUTONOMOUS_CEILING_24H)
+                )
+                # Reclaim idle peer factory slack (e.g. when lfs-trasharcade-factory is idle)
+                # while keeping 10-slot peer wakeup headroom and respecting SCHEDULED_PRODUCTIVE_CAP (225)
+                peer_allocated = max(0, effective_fleet_ceiling - base_enclave_cap)
+                peer_unused_slack = max(0, peer_allocated - int(peer_stats["dispatched_24h"]) - 10)
+                enclave_cap = min(SCHEDULED_PRODUCTIVE_CAP, base_enclave_cap + peer_unused_slack)
                 if dispatched + req > enclave_cap:
                     return (
                         False,
                         f"Law L14 dynamic 290-fleet enclave cap reached: {dispatched} + {req} > {enclave_cap}.",
                     )
-                effective_fleet_ceiling = int(
-                    dyn_caps.get("effective_autonomous_ceiling_24h", UNIFIED_AUTONOMOUS_CEILING_24H)
-                )
             cross_fleet_total = dispatched + peer_stats["dispatched_24h"]
             if cross_fleet_total + req > effective_fleet_ceiling:
                 return (
@@ -924,14 +931,20 @@ class JulesEnclaveDispatcher:
             if task_bucket and task_bucket in CANONICAL_TASK_BUCKETS:
                 consumed = int((state.get("task_buckets_consumed") or {}).get(task_bucket, 0))
                 bucket_cap = CANONICAL_TASK_BUCKETS[task_bucket]
-                if not self.dry_run and task_bucket == "DYNAMIC_LORE_CARD_PROPOSALS":
-                    bucket_cap = max(bucket_cap, 48)
+                if not self.dry_run and task_bucket in ("DYNAMIC_LORE_CARD_PROPOSALS", "POV_RASHOMON_RELAY_SCENES"):
+                    bucket_cap = max(bucket_cap, 64)
                 elif not self.dry_run and task_bucket in (
                     "THE_FEAST_4_SQUAD_CONVERGENCE",
                     "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK",
                     "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+                    "MORNING_INTENTS_16_NODES",
+                    "NIGHTLY_EVIDENCE_CITED_REFLECTIONS",
+                    "SHADOW_ECONOMY_AND_SETUP_PAYOFF_LEDGER",
+                    "COUNTERFACTUAL_PERSONALITY_STUDY_REPLAYS",
+                    "INCHARACTER_PSYCHOMETRIC_DRIFT_AUDITS",
+                    "EVENING_DISPATCH_NEWSCASTER_ROLLUPS_AND_SCRIPT",
                 ):
-                    bucket_cap = max(bucket_cap, 24)
+                    bucket_cap = max(bucket_cap, 36)
                 if consumed + req > bucket_cap:
                     return (
                         False,
@@ -1094,6 +1107,7 @@ class JulesEnclaveDispatcher:
         ts = now_iso or _utc_now_iso()
         effective_wave_idx = int(wave_idx) if wave_idx is not None else ((safe_tick - 1) % 24 + 1)
         use_wave_slot = bool(wave_idx is not None or full_4fleet_wave)
+        active_pov_id, next_pov_target = get_rashomon_scalpel_pov_pair(safe_tick, safe_sol)
 
         wave_specs: list[tuple[str, str, str]] = []
         if phase_idx == 0:  # DAWN_SHIFT
@@ -1107,7 +1121,7 @@ class JulesEnclaveDispatcher:
             wave_specs.append(
                 (
                     "POV_RASHOMON_RELAY_SCENES",
-                    f"story/segments/seg_s{safe_sol:03d}_t{safe_tick:04d}_enclave_03_silas.json",
+                    f"story/segments/seg_s{safe_sol:03d}_t{safe_tick:04d}_{active_pov_id}.json",
                     "Write Dawn Shift Rashomon Relay POV segment with physical baton handoff.",
                 )
             )
@@ -1132,7 +1146,7 @@ class JulesEnclaveDispatcher:
             wave_specs.append(
                 (
                     "POV_RASHOMON_RELAY_SCENES",
-                    f"story/segments/seg_s{safe_sol:03d}_t{safe_tick:04d}_enclave_01_hector.json",
+                    f"story/segments/seg_s{safe_sol:03d}_t{safe_tick:04d}_{active_pov_id}.json",
                     "Write Midday Expedition Rashomon Relay POV segment.",
                 )
             )
@@ -1162,7 +1176,7 @@ class JulesEnclaveDispatcher:
             wave_specs.append(
                 (
                     "POV_RASHOMON_RELAY_SCENES",
-                    f"story/segments/seg_s{safe_sol:03d}_t{safe_tick:04d}_enclave_05_kaio.json",
+                    f"story/segments/seg_s{safe_sol:03d}_t{safe_tick:04d}_{active_pov_id}.json",
                     "Write Dusk Craft Rashomon Relay POV segment.",
                 )
             )
@@ -1242,13 +1256,6 @@ class JulesEnclaveDispatcher:
 
         day_phase_names = ("DAWN_SHIFT", "MIDDAY_EXPEDITION", "DUSK_CRAFT", "THE_FEAST")
         day_phase = day_phase_names[phase_idx]
-        pov_chain = (
-            ("enclave_03_silas", "enclave_01_hector"),
-            ("enclave_01_hector", "enclave_05_kaio"),
-            ("enclave_05_kaio", "enclave_13_ryn"),
-            ("enclave_13_ryn", "enclave_03_silas"),
-        )
-        active_pov_id, next_pov_target = pov_chain[phase_idx]
         local_mgr = None
         recent_lesson_str: str | None = None
         cur_budget = self.load_budget(now_iso=ts)
@@ -2111,7 +2118,7 @@ class JulesEnclaveDispatcher:
             r_attempt = int(retry_item["retry_attempt"])
             phase_idx = (r_tick - 1) % 4
             r_phase = ("DAWN_SHIFT", "MIDDAY_EXPEDITION", "DUSK_CRAFT", "THE_FEAST")[phase_idx]
-            active_pov_id, next_pov_target = pov_chain[phase_idx]
+            active_pov_id, next_pov_target = get_rashomon_scalpel_pov_pair(r_tick, r_sol)
 
             cur_state = self.load_budget(now_iso=ts) if persist else state
             can_retry, _ = self.can_dispatch(cur_state, requested_count=1, is_retry=True, task_bucket=r_bucket)

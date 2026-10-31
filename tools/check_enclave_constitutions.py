@@ -99,6 +99,44 @@ CANONICAL_POV_ROTATION: tuple[str, ...] = (
     "enclave_13_ryn",
 )
 
+CANONICAL_16_POV_ROTATION: tuple[str, ...] = (
+    # Cycle 0 (Forge -> Forge -> Wilds -> Hub)
+    "enclave_03_silas",
+    "enclave_01_hector",
+    "enclave_05_kaio",
+    "enclave_13_ryn",
+    # Cycle 1 (Forge -> Wilds -> Mind -> Hub)
+    "enclave_04_leo",
+    "enclave_06_zara",
+    "enclave_10_isla",
+    "enclave_15_dorian",
+    # Cycle 2 (Forge -> Wilds -> Mind -> Hub)
+    "enclave_02_jane",
+    "enclave_07_willow",
+    "enclave_09_orion",
+    "enclave_14_vex",
+    # Cycle 3 (Wilds -> Mind -> Mind -> Hub)
+    "enclave_08_terra",
+    "enclave_11_kenna",
+    "enclave_12_elias",
+    "enclave_16_elara",
+)
+
+
+def get_rashomon_scalpel_pov_pair(tick_id: int, colony_sol: int | None = None) -> tuple[str, str]:
+    """Return (active_pov_id, next_pov_target) rotating across all 16 canonical characters."""
+    safe_tick = max(1, int(tick_id or 1))
+    if colony_sol is not None and int(colony_sol) >= 1 and safe_tick <= 4:
+        # Allow colony_sol to offset the 4-tick Sol window when tick_id is Sol-relative
+        sol_offset = ((int(colony_sol) - 1) % 4) * 4
+        idx = (sol_offset + ((safe_tick - 1) % 4)) % 16
+    else:
+        idx = (safe_tick - 1) % 16
+    active_pov = CANONICAL_16_POV_ROTATION[idx]
+    next_pov = CANONICAL_16_POV_ROTATION[(idx + 1) % 16]
+    return active_pov, next_pov
+
+
 # Law L03: 16 Canonical MBTI types and 16 character IDs
 CANONICAL_16_MBTI: frozenset[str] = frozenset(
     {
@@ -980,6 +1018,8 @@ def check_baton_handoff_continuity(
                 allowed_povs: set[str] = set()
                 if t_id >= 1:
                     allowed_povs.add(CANONICAL_POV_ROTATION[(t_id - 1) % 4])
+                    allowed_povs.add(CANONICAL_16_POV_ROTATION[(t_id - 1) % 16])
+                    allowed_povs.add(get_rashomon_scalpel_pov_pair(t_id, sol)[0])
                     for pseg in segments_by_tick.get(t_id - 1, []):
                         pt = str(pseg.get("next_pov_target") or "").strip()
                         if pt:

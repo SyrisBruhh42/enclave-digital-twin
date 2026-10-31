@@ -744,6 +744,9 @@
         <a class="btn-brass" href="enclave_city.html" style="text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;">
           🏰 Open 2.5D Voxel Enclave City &amp; Willow AC Sim
         </a>
+        <a class="btn-brass" href="../../dads-book-lore/index.html" style="text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;border-color:var(--cyan-bio);color:var(--cyan-bio);">
+          📚 Open Interactive Atlas Book &amp; 17th-Node Chronicle
+        </a>
         <select id="solSelector" class="btn btn-brass" aria-label="Select Colony Sol Dispatch">
           <option value="7">Sol 007 (Latest)</option>
           <option value="6">Sol 006</option>
@@ -1375,9 +1378,32 @@
       if (data.headline) merged.headline = data.headline;
       if (data.colony_sol) merged.colony_sol = data.colony_sol;
       if (data.anchor_intro) merged.anchor_intro = data.anchor_intro;
-      if (Array.isArray(data.lead_stories) && data.lead_stories.length > 0) merged.lead_stories = data.lead_stories;
+      if (Array.isArray(data.lead_stories) && data.lead_stories.length > 0) {
+        merged.lead_stories = data.lead_stories;
+      } else if (data.lead_story && typeof data.lead_story === "object") {
+        const combinedLeads = [data.lead_story];
+        if (Array.isArray(data.developing_stories)) {
+          data.developing_stories.slice(0, 2).forEach((ds, idx) => {
+            combinedLeads.push({
+              rank: idx + 2,
+              title: ds.title || ds.story_title || ds.headline || `Developing Thread #${idx + 2}`,
+              summary: ds.summary || ds.narrative_summary || "",
+              salience_score: ds.salience_score || (8.8 - idx * 0.4),
+              actors: ds.actors || [],
+              location: ds.location || "The_Enclave",
+              cited_event_ids: ds.cited_event_ids || []
+            });
+          });
+        }
+        merged.lead_stories = combinedLeads;
+      }
       if (Array.isArray(data.developing_stories) && data.developing_stories.length > 0) {
-        merged.developing_stories = data.developing_stories;
+        merged.developing_stories = data.developing_stories.map((ds, idx) => ({
+          pattern_type: ds.pattern_type || `SOL_${merged.colony_sol || 1}_THREAD_${idx + 1}`,
+          story_title: ds.story_title || ds.title || ds.headline || `Thread #${idx + 1}`,
+          narrative_summary: ds.narrative_summary || ds.summary || "",
+          cited_event_ids: ds.cited_event_ids || []
+        }));
       }
       if (data.block_digests && (Array.isArray(data.block_digests) ? data.block_digests.length > 0 : Object.keys(data.block_digests).length > 0)) {
         merged.block_digests = data.block_digests;
@@ -1392,12 +1418,34 @@
           ...merged.magnetosphere_and_weather_report,
           ...data.weather
         };
+      } else if (typeof data.weather_report === "string" && data.weather_report.trim()) {
+        merged.magnetosphere_and_weather_report = {
+          ...merged.magnetosphere_and_weather_report,
+          summary: data.weather_report.trim()
+        };
       }
       if (data.sibling_grid_blind_spot_column && Object.keys(data.sibling_grid_blind_spot_column).length > 0) {
         merged.sibling_grid_blind_spot_column = data.sibling_grid_blind_spot_column;
+      } else if (Array.isArray(data.gossip_and_shadow_column) && data.gossip_and_shadow_column.length > 0) {
+        const g0 = data.gossip_and_shadow_column[0] || {};
+        merged.sibling_grid_blind_spot_column = {
+          ...merged.sibling_grid_blind_spot_column,
+          column_title: g0.title || "The Sibling Grid (3-Sol Delayed Shadow Ledger)",
+          prank_summary: g0.prank_summary || g0.summary || "",
+          blind_spot_commentary: g0.blind_spot_commentary || g0.summary || "",
+          cited_event_ids: g0.cited_event_ids || []
+        };
       }
-      if (data.quote_of_the_sol && (typeof data.quote_of_the_sol === "object" ? Object.keys(data.quote_of_the_sol).length > 0 : false)) {
-        merged.quote_of_the_sol = data.quote_of_the_sol;
+      if (data.quote_of_the_sol) {
+        if (typeof data.quote_of_the_sol === "object" && Object.keys(data.quote_of_the_sol).length > 0) {
+          merged.quote_of_the_sol = data.quote_of_the_sol;
+        } else if (typeof data.quote_of_the_sol === "string" && data.quote_of_the_sol.trim()) {
+          merged.quote_of_the_sol = {
+            speaker_id: "enclave_15_dorian",
+            quote: data.quote_of_the_sol.trim(),
+            cited_event_ids: [ `feast_sol_${String(merged.colony_sol || 1).padStart(3, "0")}` ]
+          };
+        }
       }
       if (Array.isArray(data.events)) {
         const byId = {};

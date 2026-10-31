@@ -460,6 +460,9 @@ class TestEnclaveCrucible(unittest.TestCase):
     def test_13_pokemon_emerald_5_districts_and_6_step_tutorial(self) -> None:
         test_pokemon_emerald_5_districts_and_6_step_tutorial()
 
+    def test_14_16_character_rashomon_scalpel_17th_node_and_atlas_compiler(self) -> None:
+        test_16_character_rashomon_scalpel_17th_node_and_atlas_compiler()
+
 
 def test_pokemon_emerald_5_districts_and_6_step_tutorial() -> None:
     from engine.enclave_city_sim import (
@@ -925,6 +928,105 @@ def test_wp4_predispatch_verifier_constraint_compiler_and_crdt_commutativity() -
     assert abs(s_ab - s_sum) < 1e-12
 
 
+def test_16_character_rashomon_scalpel_17th_node_and_atlas_compiler() -> None:
+    """Verify full 16-character Rashomon Scalpel rotation, 17th-Node Clean-Slate Learner, and Atlas Bundle."""
+    from engine.local_ai_manager import LocalContextAwareManager
+    from engine.reader_character_learner import ReaderCharacterLearner
+    from tools.check_enclave_constitutions import (
+        CANONICAL_16_CHARACTER_IDS,
+        get_rashomon_scalpel_pov_pair,
+    )
+    from tools.compile_enclave_to_atlas import compile_enclave_atlas_bundle
+    from tools.local_enclave_showrunner import run_local_oasis_cycle
+
+    # 1. Verify all 16 characters rotate across 16 ticks (4 Sols) with Dorian & Vex and Elara & Ryn
+    seen_povs: set[str] = set()
+    for tick in range(1, 17):
+        sol = ((tick - 1) // 4) + 1
+        pov, nxt = get_rashomon_scalpel_pov_pair(tick, sol)
+        seen_povs.add(pov)
+        assert pov != nxt
+    assert seen_povs == set(CANONICAL_16_CHARACTER_IDS)
+    assert "enclave_15_dorian" in seen_povs
+    assert "enclave_14_vex" in seen_povs
+    assert "enclave_16_elara" in seen_povs
+    assert "enclave_13_ryn" in seen_povs
+
+    # 2. Verify all 16 exemplars load cleanly and task cards include LOTR x Hollow Knight x Martian + Bourne competence
+    mgr = LocalContextAwareManager(repo_root=REPO_ROOT)
+    for cid in CANONICAL_16_CHARACTER_IDS:
+        bundle = mgr.load_character_exemplar_and_core(cid)
+        assert bundle["character_id"] == cid
+        assert len(bundle["exemplar_opening"]) > 80
+
+    sci = mgr.select_grand_project_science_vegetable(colony_sol=3, tick_id=9, active_pov_id="enclave_01_hector")
+    assert "science_vegetable" in sci and "hollow_knight_atmosphere" in sci
+
+    card = mgr.compile_enclave_5section_task_card(
+        task_bucket="POV_RASHOMON_RELAY_SCENES",
+        colony_sol=3,
+        tick_id=9,
+        day_phase="DAWN_SHIFT",
+        target_path="story/segments/seg_s003_t0009_enclave_01_hector.json",
+        active_pov_id="enclave_01_hector",
+        next_pov_target="enclave_10_isla",
+    )
+    prompt = card["prompt"]
+    assert "Hollow Knight" in prompt
+    assert "The Martian" in prompt
+    assert "NEVER print literal ALL-CAPS system verbs" in prompt
+
+    # 3. Verify 17th-Node 100% Clean-Slate Onboarding + Margin Comment Learning + Offline Ghost-Pilot Evolution
+    with tempfile.TemporaryDirectory() as td:
+        state_file = Path(td) / "node17.json"
+        learner = ReaderCharacterLearner(state_path=state_file, repo_root=REPO_ROOT)
+        clean = learner.load_state()
+        assert clean["initialized"] is False
+        assert clean["onboarding_required"] is True
+        assert clean["identity"]["name"] == ""
+
+        init_state = learner.initialize_player_character(
+            name="Vanguard",
+            title="The Deep-Trench Cartographer",
+            squad_affinity="VANGUARD",
+            cognitive_style="COMPETENCE_TACTICIAN",
+            signature_tool="Brass Resonance Theodolite",
+            initial_question="What lies beneath the obsidian root-vault?",
+        )
+        assert init_state["initialized"] is True
+        assert init_state["identity"]["name"] == "Vanguard"
+
+        comment_state = learner.record_player_interaction(
+            chapter_id="vol1_ch03_enclave_15_dorian",
+            comment_text="Why didn't Dorian check the shear-strain gauge on the obsidian pylon before pressurizing?",
+            focal_character_id="enclave_15_dorian",
+            stance_tag="TACTICAL_HYPOTHESIS",
+            colony_sol=22,
+        )
+        assert len(comment_state["margin_comments"]) == 1
+        assert comment_state["margin_comments"][0]["responder_id"] == "enclave_15_dorian"
+        assert "Vanguard" in comment_state["margin_comments"][0]["character_reply"]
+
+        ghost_state = learner.advance_autonomous_offline_arc(sols_elapsed=2, current_sol=23)
+        assert len(ghost_state["autonomous_offline_log"]) >= 3
+
+        showrunner_res = run_local_oasis_cycle(
+            repo_root=REPO_ROOT,
+            advance_sim_sols=0,
+            evolve_17th_node=False,
+            compile_atlas=False,
+        )
+        assert showrunner_res["ok"] is True
+        assert showrunner_res["constitutional_laws_passed"] == 16
+
+    # 4. Verify Atlas Bundle compilation produces 16 Foundational Modules (Vol I) and >=22 Living Sols (Vol II)
+    atlas_res = compile_enclave_atlas_bundle(repo_root=REPO_ROOT, with_audio=True)
+    assert atlas_res["volume_1_count"] == 16
+    assert atlas_res["volume_2_count"] >= 22
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
+
+
 

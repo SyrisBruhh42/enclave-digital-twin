@@ -380,6 +380,84 @@ class LocalContextAwareManager:
             "ledger": ledger,
         }
 
+    def load_character_exemplar_and_core(self, active_pov_id: str) -> dict[str, Any]:
+        """Load the active POV character's .core.json and gold-standard exemplar from canon/exemplars/modules_16.json."""
+        core_path = self.repo_root / "canon" / "characters" / f"{active_pov_id}.core.json"
+        exemplars_path = self.repo_root / "canon" / "exemplars" / "modules_16.json"
+        core_data: dict[str, Any] = {}
+        exemplar_data: dict[str, Any] = {}
+        if core_path.is_file():
+            try:
+                core_data = json.loads(core_path.read_text(encoding="utf-8"))
+            except Exception:
+                core_data = {}
+        if exemplars_path.is_file():
+            try:
+                ex_root = json.loads(exemplars_path.read_text(encoding="utf-8"))
+                exemplar_data = (ex_root.get("exemplar_modules_by_character") or {}).get(active_pov_id) or {}
+            except Exception:
+                exemplar_data = {}
+        ident = core_data.get("agent_identity") or {}
+        cog = (core_data.get("Immutable_Core") or {}).get("mbti_cognitive_stack") or {}
+        narr = core_data.get("narrative_function_and_arc") or {}
+        enclave_role = core_data.get("enclave_role") or {}
+        return {
+            "character_id": active_pov_id,
+            "character_name": str(ident.get("name") or exemplar_data.get("character_name") or active_pov_id),
+            "role_in_family": str(ident.get("role_in_family") or exemplar_data.get("role") or "Specialist"),
+            "squad": str(ident.get("core_squad") or exemplar_data.get("squad") or "THE_FORGE"),
+            "mbti": str(cog.get("type") or exemplar_data.get("mbti") or "ISTJ"),
+            "dominant_fn": str(cog.get("dominant_hero") or ""),
+            "auxiliary_fn": str(cog.get("auxiliary_parent") or ""),
+            "vex_override": str(exemplar_data.get("vex_override") or ""),
+            "genius_vs_mundane": str(
+                enclave_role.get("genius_vs_mundane_frustration")
+                or exemplar_data.get("genius_vs_mundane_beat")
+                or ""
+            ),
+            "the_lie_believed": str(narr.get("the_lie_believed") or ""),
+            "the_truth_to_learn": str(narr.get("the_truth_to_learn") or ""),
+            "exemplar_title": str(exemplar_data.get("title") or ""),
+            "exemplar_opening": str(exemplar_data.get("exemplar_opening") or ""),
+            "exemplar_dialogue": str(exemplar_data.get("exemplar_dialogue_exchange") or ""),
+        }
+
+    def select_grand_project_science_vegetable(
+        self,
+        colony_sol: int,
+        tick_id: int,
+        active_pov_id: str = "enclave_03_silas",
+    ) -> dict[str, str]:
+        """Select a dynamic hard-science & Hollow-Knight atmosphere card from canon/exemplars/modules_16.json."""
+        exemplars_path = self.repo_root / "canon" / "exemplars" / "modules_16.json"
+        if exemplars_path.is_file():
+            try:
+                ex_root = json.loads(exemplars_path.read_text(encoding="utf-8"))
+                deck = ex_root.get("grand_project_science_deck") or []
+                if isinstance(deck, list) and deck:
+                    matching = [
+                        card for card in deck
+                        if isinstance(card, dict) and active_pov_id in (card.get("lead_characters") or [])
+                    ]
+                    if matching:
+                        chosen = matching[(max(1, int(colony_sol)) + max(1, int(tick_id))) % len(matching)]
+                    else:
+                        chosen = deck[(max(1, int(colony_sol)) * 3 + max(1, int(tick_id))) % len(deck)]
+                    return {
+                        "deck_id": str(chosen.get("deck_id") or "GP01"),
+                        "grand_project_id": str(chosen.get("grand_project_id") or "project_01_living_atlas"),
+                        "science_vegetable": str(chosen.get("science_vegetable") or ""),
+                        "hollow_knight_atmosphere": str(chosen.get("hollow_knight_atmosphere") or ""),
+                    }
+            except Exception:
+                pass
+        return {
+            "deck_id": "GP_FALLBACK",
+            "grand_project_id": "project_02_first_forge",
+            "science_vegetable": "Fe-Co-Cr-Ni-Mn High-Entropy Alloy lattice stabilization against twin-sun galvanic corrosion",
+            "hollow_knight_atmosphere": "Pearlescent Mycena lucentipes bioluminescence pulsing in the damp arboretum twilight.",
+        }
+
     def compile_enclave_5section_task_card(
         self,
         *,
@@ -402,11 +480,17 @@ class LocalContextAwareManager:
         Strictly enforces:
         - Law L02 Single-File Append-Only creation (`target_path` only; zero M/D to `canon/`, `snapshots/`, `ops/`).
         - MCP Directives (`DO NOT call get_workspace on Linear`, `ENV[LINEAR_MCP]: {WORKSPACE_ENUM: NULL}`).
-        - Showrunner DM Contract (`pacing_mode`, `CALYPSO` zero-raw-stat-numbers rule, Mercer 5-sense + 3 interactive
-          features, Mulligan "Toys, Not Plots" & "3 Levels of Why", Murph Two-Fight Short-Rest Cadence).
-        - Declarative EAV failure lessons (`@ENT | @ATTR | @CONF | @TIME | @PROV`).
+        - Master Literary Voice: Lord of the Rings x Hollow Knight x The Martian with Jason Bourne / Jack Reacher
+          Competence Porn, 'Vegetables Covered in Cheese' wit, and strict ban on purple AI-slop clichés or literal
+          ALL-CAPS system verbs inside narrative_prose.
         """
         sympathy = self.evaluate_hardware_sympathy()
+        default_ferrofluid = "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea"
+        deck_card = self.select_grand_project_science_vegetable(colony_sol, tick_id, active_pov_id)
+        if (not science_vegetable or science_vegetable == default_ferrofluid) and (int(colony_sol) > 1 or int(tick_id) > 1):
+            science_vegetable = deck_card["science_vegetable"]
+        char_ctx = self.load_character_exemplar_and_core(active_pov_id)
+
         eav_records: list[str] = []
         if failure_lesson:
             eav_records.append(
@@ -436,14 +520,15 @@ class LocalContextAwareManager:
 
         steward_note = (
             f"Pacing={showrunner_pacing_mode}; Pre-Roll DC={explicit_dc}; "
-            f"Science Vegetable='{science_vegetable}'; Active POV={active_pov_id} -> Handoff={next_pov_target}."
+            f"Science Vegetable='{science_vegetable}'; Active POV={active_pov_id} ({char_ctx['character_name']}, {char_ctx['mbti']}) "
+            f"-> Handoff={next_pov_target}."
         )
         model_used = "deterministic-enclave-5section-v2"
         if use_local_ollama:
             steward_res = self.query_local_ollama(
                 prompt=(
-                    f"Provide a 1-sentence Showrunner sensory & 'Toys, Not Plots' directive for "
-                    f"{task_bucket} on Sol {colony_sol} ({day_phase}, mode={showrunner_pacing_mode}): "
+                    f"Provide a 1-sentence Showrunner 'Vegetables Covered in Cheese' & Competence Porn directive for "
+                    f"{char_ctx['character_name']} ({char_ctx['mbti']}) in {task_bucket} on Sol {colony_sol} ({day_phase}): "
                     f"{science_vegetable}"
                 ),
                 model=SHOWRUNNER_STEWARD_MODEL,
@@ -467,12 +552,12 @@ class LocalContextAwareManager:
             f"- **Law L02 Append-Only Constraint**: Create strictly `1` new file at `{target_path}`.\n"
             f"- **Protected Paths (Zero M/D Allowed)**: `canon/`, `snapshots/`, `relationships/`, `ops/`, `engine/`, `tools/`.\n"
             f"- **Read-Only Context References**: `canon/schemas/world_state_v2.json`, "
-            f"`canon/schemas/jules_dm_campaign_ledger.schema.json`, `canon/characters/{active_pov_id}.core.json`.\n\n"
+            f"`canon/exemplars/modules_16.json`, `canon/characters/{active_pov_id}.core.json`.\n\n"
             f"## 1. Objective\n"
             f"- **Task Bucket**: `{task_bucket}` (Colony Sol `{colony_sol}`, Tick `{tick_id}`, Phase `{day_phase}`)\n"
             f"- **Target Output File**: `{target_path}`\n"
             f"- **Showrunner Pacing Mode**: `{showrunner_pacing_mode}` (Explicit Pre-Roll Check DC: `{explicit_dc}`)\n"
-            f"- **Rashomon Relay Contract (Law L06 & L10)**: Active POV `{active_pov_id}` -> Physical baton handoff to `{next_pov_target}`.\n"
+            f"- **Rashomon Relay Contract (Law L06 & L10)**: Active POV `{active_pov_id}` (`{char_ctx['character_name']}`, `{char_ctx['mbti']}`) -> Physical baton handoff to `{next_pov_target}`.\n"
             f"- **Local Showrunner Steward Note (`{model_used}`)**: {steward_note}\n"
             f"- **Hardware Sympathy Mode**: `{sympathy.get('mode', 'GPU_BURST_SYMPATHETIC')}`"
             f"{retry_banner}\n"
@@ -481,14 +566,12 @@ class LocalContextAwareManager:
             f"- `ENV[LINEAR_MCP]: {{WORKSPACE_ENUM: NULL}}`\n"
             f"- Zero-Raw-Secret & Law L01 Invariant: Never read or emit `~/.secrets/*` or forbidden real-world PII tokens.\n\n"
             f"## 3. Concrete Steps\n"
-            f"1. Read `canon/schemas/world_state_v2.json` and `canon/characters/{active_pov_id}.core.json` in read-only mode.\n"
-            f"2. Apply the AI Dungeon Master Showrunner Rules:\n"
-            f"   - **Mercer Spatial & Sensory Budget**: 2-3 sentences for interior rooms (3-5 for exterior vistas), "
-            f"5-sense palette, and 3 interactive features (`DEFEND | ATTRACT | CONSUME | CONCEAL`).\n"
-            f"   - **Mulligan 'Toys, Not Plots' & '3 Levels of Why'**: Ground specialist friction in `{science_vegetable}` "
-            f"with graduated fail-forward stakes.\n"
-            f"   - **Murph 'Slaying the Slog' & CALYPSO Rule**: Zero pure attrition; NEVER output raw mechanical stat numbers "
-            f"(`AC=`, `HP=`, `DC=`) inside narrative prose.\n"
+            f"1. Read `canon/schemas/world_state_v2.json`, `canon/exemplars/modules_16.json`, and `canon/characters/{active_pov_id}.core.json` in read-only mode.\n"
+            f"2. Apply the Master Literary & Showrunner Rules:\n"
+            f"   - **Tonal Triad (LOTR x Hollow Knight x The Martian)**: Combine deep found-family fellowship, quiet subterranean bioluminescent wonder ({deck_card['hollow_knight_atmosphere']}), and razor-sharp scientific competence.\n"
+            f"   - **Competence Porn & Character Lens**: Write through `{char_ctx['character_name']}`'s exact `{char_ctx['mbti']}` stack (`{char_ctx['dominant_fn']}` / `{char_ctx['auxiliary_fn']}`). Friction: `{char_ctx['genius_vs_mundane']}`. Vex Override under extreme stress: `{char_ctx['vex_override']}`.\n"
+            f"   - **'Vegetables Covered in Cheese' & Gold-Standard Voice**: Ground the scene in `{science_vegetable}` wrapped in dry, affectionate banter (*'If you're complaining and no one is laughing, you're complaining wrong'*). Match the literary cadence of `{char_ctx['character_name']}`'s exemplar (`{char_ctx['exemplar_title']}`): `{char_ctx['exemplar_opening'][:220]}`\n"
+            f"   - **Multi-Paragraph Novel Prose & Anti-Slop Ban**: Write rich, natural multi-paragraph prose (250-500 words for story segments). NEVER write overwrought purple clichés ('weeping bulkheads', 'swallowed battery'). Keep `system_verb` (`DEFEND | ATTRACT | CONSUME | CONCEAL`) strictly inside the `interactive_features` JSON array—NEVER print literal ALL-CAPS system verbs or robotic `'Why? Because...'` transitions inside `narrative_prose` or `dialogue`. NEVER output raw stat numbers (`AC=`, `HP=`, `DC=`) inside prose.\n"
             f"3. Write the single valid JSON artifact to `{target_path}`.\n\n"
             f"## 4. Verification & Pre-Commit Instructions\n"
             f"- Run deterministic Constitutional Gate: `python3 tools/check_enclave_constitutions.py --proposal-file {target_path}`\n"
