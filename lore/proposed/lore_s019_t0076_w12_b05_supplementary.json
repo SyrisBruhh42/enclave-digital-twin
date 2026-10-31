@@ -1,0 +1,142 @@
+{
+  "event_id": "lore_s019_t0076_w12_b05_supplementary",
+  "tick_id": 76,
+  "event_type": "POV_SCENE_SEGMENT",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "base_snapshot_tick": 76,
+  "colony_sol": 19,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-11-12T19:00:00Z",
+  "location": "The Hearth",
+  "actors": [
+    "enclave_13_ryn",
+    "enclave_03_silas"
+  ],
+  "summary": "Ryn wrestles with the caloric impacts of the Magnetohydrodynamic Kelvin-Helmholtz shear.",
+  "importance": 5,
+  "novelty_score": 0.8,
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_13_ryn -> Handoff=enclave_03_silas.",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ]
+  },
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "campaign_metadata": {
+    "session_number": 19,
+    "colony_sol": 19,
+    "tick_id": 76,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Maintain caloric balance during magnetic anomalies.",
+      "mid_term_milestone": "Secure the food supply.",
+      "campaign_arc_climax": "Master the exoplanet's climate."
+    }
+  },
+  "active_location": {
+    "location_id": "the_hearth",
+    "macro_silhouette": "The Hearth is dominated by thirty-gallon steam-jacketed copper kettles that hum with captive geothermal pressure. Heavy brass butcher blocks stand testament to rigorous caloric logistics amidst the chaotic magnetosphere.",
+    "sensory_palette": {
+      "sight_and_color": "Gleaming polished copper against warm, flickering hearth fire.",
+      "sound": "The rhythmic bubbling of dense mire-lentil stew and the sharp crack of a brass ladle.",
+      "smell": "Rich Maillard crusts layered over the faint ozone of the outside storm.",
+      "tactile_temperature": "Radiant, localized heat from the kettles cutting through the chill.",
+      "taste_optional": "Savory depth of braised exoplanet myco-proteins."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Steam-Jacketed Kettles",
+        "affordance_description": "Massive copper pots holding the colony's stew.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Brass Ladle",
+        "affordance_description": "Ryn's tool for serving and enforcing discipline.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Spice Racks",
+        "affordance_description": "Carefully portioned seasonings.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "mhd_shear_disturbance",
+      "name_and_role": "MHD Shear Resonance",
+      "motivation_goal": "To induce localized magnetic fluctuations in metallic objects.",
+      "consistent_method": "Pulsing erratic magnetic fields that interfere with the iron content of The Hearth.",
+      "immediate_complication": "The shear forces the heavy iron pans to vibrate and spill their precious caloric contents.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The vibrations will shatter the delicate fermentation crocks if not grounded."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Ryn must stop the magnetic shear from ruining the mire-lentil stew.",
+      "level_2_local": "The shear threatens the entire evening's caloric intake for the Enclave.",
+      "level_3_campaign_arc": "Adapting to the ferrofluid sea's anomalies is essential for long-term survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "DEFENDER"
+      },
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      7,
+      12,
+      19,
+      5
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.6,
+    "unresolved_conflict_ratio": 0.3,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.525,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_engine",
+      "model": "v2.0",
+      "temperature": 0.3,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If Ryn fails, the magnetic shear will destabilize the thermal core of the stoves, costing the colony precious calories.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Ryn attempts to dampen the shear with a grounded rod but accidentally creates a conductive loop, scorching the soup.",
+        "below_dc_complicated_fail_forward": "Ryn saves the soup but burns her hands on the magnetically heated ladle.",
+        "meets_dc_clean_success": "Ryn successfully recalibrates the steam-jacketed kettles to offset the shear.",
+        "dc_plus_5_or_20_extended_lore": "Ryn completely dampens the magnetic feedback, inventing a new heating technique."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Ryn glared at the vibrating surface of the mire-lentil stew, the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea playing havoc with the very iron in her pots. She slammed her heavy brass ladle against the butcher block, calculating the exact caloric loss if the batch failed. Silas stepped into the galley, shaking off the static charge from the outer foundry. 'The containment tolerances are slipping,' he grumbled, eyeing the shaking kettles. Ryn grabbed a heavily insulated grounding rod and shoved it into Silas's chest. 'Then calibrate them, Engineer, before we all freeze on empty stomachs. It's your turn.'"
+    }
+  }
+}
