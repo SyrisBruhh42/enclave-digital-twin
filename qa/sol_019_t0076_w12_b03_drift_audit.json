@@ -1,0 +1,119 @@
+{
+  "base_snapshot_tick": 76,
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ]
+  },
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 19,
+    "tick_id": 76,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Maintain metabolic equilibrium during the Feast.",
+      "mid_term_milestone": "Stabilize The Hearth against exoplanetary thermal shear.",
+      "campaign_arc_climax": "Prove that The Hub can sustain the Enclave through the deepest winter."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Hearth",
+    "macro_silhouette": "The Hearth is a bastion of warmth, glowing with amber bioluminescence that cuts through heavy steam. Giant copper kettles line the walls, radiating an oppressive convective heat. The butcher block center island stands worn but resolute, stained with the juices of a thousand colony meals.",
+    "sensory_palette": {
+      "sight_and_color": "Amber glow and thick white steam rolling off massive copper vessels.",
+      "sound": "The sharp, rhythmic impact of a brass ladle against a scarred wooden butcher block.",
+      "smell": "Deep Maillard crusts of iron-wheat intertwining with the earthy, savory aroma of mire-lentils.",
+      "tactile_temperature": "Oppressively hot and humid, a sharp contrast to the freezing temperatures outside.",
+      "taste_optional": "A metallic tang of ozone layered over deeply caramelized starches."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Thirty-Gallon Steam-Jacketed Kettle",
+        "affordance_description": "Massive thermal sink providing excellent cover against sudden drafts.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Fresh Iron-Wheat Loaf",
+        "affordance_description": "Nutrient-dense calorie brick instantly restoring metabolic balance.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 10
+      },
+      {
+        "feature_name": "Resonant Spice Rack",
+        "affordance_description": "Aromatic powders that can mask thermal and olfactory signatures.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "magneto_shear_vortex",
+      "name_and_role": "Kelvin-Helmholtz Shear Draft (Thermal Equalizer)",
+      "motivation_goal": "To forcefully equalize the thermal gradient across the Hearth's thresholds.",
+      "consistent_method": "Pulls freezing ferrofluid mist into the warm cooking zones, threatening the metabolic balance.",
+      "immediate_complication": "Ryn's delicate braising temperature drops critically, risking the Feast's integrity.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "Condensing freezing slag onto the food, potentially ruining the colony's caloric intake for the night."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Preserve the thermal integrity of the Feast against the Kelvin-Helmholtz shear.",
+      "level_2_local": "Ensure all 16 nodes achieve metabolic equilibrium despite the plunging exterior temperature.",
+      "level_3_campaign_arc": "Establish The Hub as the unbreakable anchor of Enclave survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "DEFENDER"
+      },
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 0,
+    "prerolled_hazard_queue": [
+      12,
+      18,
+      7,
+      3,
+      19
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.9,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.85,
+    "composite_lpi": 0.76,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Anthropic",
+      "model": "claude-3-5-sonnet",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If failed, the shear vortex ruins the main course, triggering a colony-wide caloric deficit.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "The braise flashes into toxic charcoal.",
+        "below_dc_complicated_fail_forward": "The braise survives but loses nutritional value, requiring double portions.",
+        "meets_dc_clean_success": "The perfect Maillard caramelization curve is achieved.",
+        "dc_plus_5_or_20_extended_lore": "The heat treatment unlocks a new trace-mineral bioavailability in the lentils."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules Engine",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "The oppressive convective heat of the thirty-gallon steam kettles was a welcome defense as Ryn barked metabolic ratios over the din of The Hearth. Outside, a violent magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea threatened to pull freezing mist straight into her delicate mire-lentil braise. She slammed her heavy brass ladle onto the butcher block, calculating the exact Maillard caramelization curve required to keep the colony functioning despite the sudden thermal drop. Catching sight of Silas entering the galley, she scooped up a perfectly crusted iron-wheat loaf and thrust it directly into his hands. 'Eat this before your basal burn rate bottoms out,' she ordered, transferring the momentum of the evening directly into his rigid, calloused grip as he stepped into the light of the Hearth."
+    }
+  }
+}
