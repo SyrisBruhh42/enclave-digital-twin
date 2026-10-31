@@ -1,0 +1,86 @@
+{
+  "event_id": "evt_s019_t0076_feast",
+  "tick_id": 76,
+  "colony_sol": 19,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2087-05-19T20:00:00Z",
+  "base_snapshot_tick": 76,
+  "event_type": "THE_FEAST_CONVERGENCE",
+  "location": "The_Hearth",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_02_jane",
+    "enclave_03_silas",
+    "enclave_04_leo",
+    "enclave_05_kaio",
+    "enclave_06_zara",
+    "enclave_07_willow",
+    "enclave_08_terra",
+    "enclave_09_orion",
+    "enclave_10_isla",
+    "enclave_11_kenna",
+    "enclave_12_elias",
+    "enclave_13_ryn",
+    "enclave_14_vex",
+    "enclave_15_dorian",
+    "enclave_16_elara"
+  ],
+  "summary": "Ryn meticulously manages the grand meal for the entire Enclave, anchoring the crew amidst the barometric chaos of the ferrofluid sea before definitively handing the duty of care to Silas.",
+  "importance": 9.5,
+  "novelty_score": 8.0,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {
+    "enclave_13_ryn": {
+      "stress": -0.28,
+      "agreeableness_state": 0.24,
+      "neuroticism_state": -0.18
+    },
+    "enclave_03_silas": {
+      "stress": -0.2
+    }
+  },
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ]
+  },
+  "narrative_prose": "The Hearth galley thrummed with the ambient hum of the main metabolic engine, its copper-jacketed kettles gleaming under the warm amber glow of sodium-vapor lamps. Ryn rapped her heavy brass ladle sharply on the butcher block, the sharp ring cutting through the chatter as she monitored the simmering vats of braised mire-lentils. The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea had made the barometric pressure wildly unstable, wreaking havoc on the Maillard caramelization curve of the glowing cave-truffles, but she refused to let a single gram of sustenance go to waste. She scowled into the steaming copper pot, adjusting the thermal induction valves to compensate for the atmospheric fluctuations. If the induction regulators failed to stabilize, the entire batch would scorch and cost the colony half a day's caloric yield. Catching sight of Silas lingering near the service hatch, she scooped a generous, mathematically perfect portion of the rich, earthy stew into a heavy ceramic bowl. She thrust it into his hands with a terse command to eat before his core temperature dropped another degree, the physical baton of the meal firmly passing from her domain into his care.",
+  "active_location": {
+    "location_id": "The_Hearth",
+    "macro_silhouette": "The Hearth is a cavernous, copper-lined sanctuary dominating the colony's central core. Steam billows from massive, jacketed kettles, misting the heavy brass butcher blocks scattered across the floor. Warm amber sodium-vapor lamps cast deep, flickering shadows against the industrial bulkheads.",
+    "sensory_palette": {
+      "sight_and_color": "Amber sodium-vapor glow and gleaming polished copper.",
+      "sound": "The rhythmic bubbling of mire-lentils and the sharp ringing of a brass ladle.",
+      "smell": "Rich, earthy braised root vegetables and metallic ozone.",
+      "tactile_temperature": "Oppressively humid and radiantly warm.",
+      "taste_optional": "Savory umami of glowing cave-truffles and salt."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Thirty-Gallon Steam-Jacketed Kettles",
+        "affordance_description": "Massive vats providing radiant heat and bulk sustenance.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Heavy Brass Butcher Block",
+        "affordance_description": "A sturdy work surface that doubles as a tactical barricade.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Aromatic Spice Crocks",
+        "affordance_description": "Jars of potent spices that draw hungry colonists.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 10
+      }
+    ]
+  }
+}
