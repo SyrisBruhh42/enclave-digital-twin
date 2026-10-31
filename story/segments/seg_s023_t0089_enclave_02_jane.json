@@ -1,0 +1,57 @@
+{
+  "event_id": "seg_s023_t0089_enclave_02_jane_001",
+  "tick_id": 89,
+  "colony_sol": 23,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-11-16T06:00:00Z",
+  "base_snapshot_tick": 89,
+  "event_type": "POV_SCENE_SEGMENT",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "science_vegetable": "Femtosecond Laser-Induced Plasma Channels (LIPC) ionizing a conductive step-leader highway at 50 kV/m atmospheric potential gradient into the bedrock capacitor geode.",
+  "active_pov_id": "enclave_02_jane",
+  "next_pov_target": "enclave_07_willow",
+  "prev_next_pov_target": "enclave_02_jane",
+  "location": "Enclave_Crater_Valley_Stormbreaker_Base",
+  "actors": ["enclave_02_jane", "enclave_07_willow"],
+  "summary": "Jane successfully models the planetary storm dynamics but is forced to dig a muddy trench to ground a copper rod alongside Willow.",
+  "importance": 6,
+  "novelty_score": 0.7,
+  "state_deltas": {
+    "hub_caloric_reserves_pct": -0.05
+  },
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "active_location": {
+    "macro_silhouette": "A bruised purple thunderhead pressing down on a screaming copper spire fifty meters above the muddy valley floor.",
+    "sensory_palette": {
+      "sight": "Violet laser light stitching the bruised purple sky to the copper spire, green bioluminescence in the mud.",
+      "sound": "Screaming wind, the squelch of heavy boots in iron-rich muck.",
+      "smell": "Ozone and wet copper.",
+      "touch": "Thick iron-rich mud smearing against skin, the cold sting of the wind.",
+      "taste_optional": "A faint, metallic tang on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Muddy Trench",
+        "system_verb": "DEFEND",
+        "feature_description": "The muddy trench being dug to seat the secondary ground rod before the magnetic shear hits.",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Stormbreaker Spire",
+        "system_verb": "ATTRACT",
+        "feature_description": "The screaming copper spire acting as the anchor point for the femtosecond laser channel."
+      },
+      {
+        "feature_name": "Telemetry Baton",
+        "system_verb": "CONCEAL",
+        "feature_description": "The physical relay baton passed to hand off primary responsibility."
+      }
+    ]
+  },
+  "narrative_prose": "The atmospheric potential gradient hit exactly 50 kilovolts per meter, precisely as Jane had modeled on her hand-cranked brass difference engine. A violet laser needle stitched the bruised purple thunderhead to a screaming copper spire fifty meters above the valley. It was a beautiful proof of concept: Femtosecond Laser-Induced Plasma Channels ionizing a conductive step-leader highway straight into the bedrock capacitor geode. Pure, deterministic physics. And yet.\n\nJane wiped a thick smear of iron-rich mud from her forehead and glared at the shovel in her hands. She could model a planet-wide Lorenz strange attractor in phase space, yet here she was, spending her afternoon digging a muddy trench by hand to ground a copper rod. The indignity of the physical world was astounding.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Willow's voice drifted over from the adjacent trench, accompanied by the squelch of heavy boots in the muck. Willow was expertly packing the soil around a secondary coupling, treating the muddy earth with the same detached, analytical precision she applied to fungal logic gates.\n\n\"I am not complaining,\" Jane muttered, stabbing the shovel into the dirt. \"I am calculating the inefficiency of manual labor versus robotic automation, and the results are depressing.\"\n\n\"The results are you need to dig faster,\" Willow replied calmly. \"The secondary front is moving in, and if this ground rod isn't seated before the magnetic shear hits, your beautiful plasma highway is going to discharge directly into the hub's life support systems.\"\n\nJane paused, a sudden spike of anxiety piercing her annoyance. She hated when Willow was right. But the thought of the colony's oxygen recyclers frying because she couldn't shovel fast enough was a terrifying variable she couldn't ignore.\n\n\"Fine,\" Jane snapped, her Leo Vex Override threatening to surface. She wanted to demand a round of applause for her mathematical foresight, not a shovel. \"But I'm taking the baton. Here. You take the shovel. I need to verify the telemetry on the primary geode array.\"\n\nShe tossed the physical telemetry relay baton to Willow, who caught it with an effortless one-handed grab without looking up from the mud.",
+  "context_manifest": {
+    "loaded_full_card_ids": ["enclave_02_jane"],
+    "full_cards_loaded_count": 1
+  }
+}
