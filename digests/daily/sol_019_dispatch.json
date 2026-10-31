@@ -1,0 +1,40 @@
+{
+  "dispatch_id": "dispatch_sol_019",
+  "tick_id": 76,
+  "colony_sol": 19,
+  "base_snapshot_tick": 76,
+  "title": "Evening Dispatch Sol 19",
+  "headline": "Evening Dispatch",
+  "anchor_intro": "Good evening, Enclave. The command center feels like a submarine caught in a tempest tonight, battered by the invisible, relentless force of the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. The copper bulkheads are weeping with condensation, the amber warning lights strobe in time with the magnetic pulses, and the air itself tastes like a swallowed battery. We must DEFEND the primary induction core from resonant overload, ATTRACT the sheer kinetic friction into our thermal reserves, and CONCEAL our delicate optical arrays behind the heavily leaded blast shutters.",
+  "broadcast_script": "Ryn grips the bronze microphone, her knuckles white, her voice cutting through the oppressive, rhythmic thrum of the magnetic shear pounding against the hull. 'The magnetohydrodynamic Kelvin-Helmholtz shear is treating our hull like a tin can. We're bleeding kinetic heat. We have to fail forward\u2014if the primary induction loops buckle, we slam the excess charge into the mess hall\u2019s thermal capacitors. Why? Because the outer shielding is failing under the stress. Why? Because the ferrofluid sea's resonance has degraded the copper faster than we calculated. Why? Because we diverted our last reserve of pure palladium to the Genesis Garden instead of the Forge.' Ryn physically shoves the heavy brass mic toward Silas. 'Your turn, Silas. Calculate the deficit.'",
+  "broadcast_markdown": "# Evening Dispatch\n\nRyn hands the mic to Silas.",
+  "weather_report": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "quote_of_the_sol": "Calculate the deficit.",
+  "newscaster_anchors": [
+    "enclave_13_ryn",
+    "enclave_03_silas"
+  ],
+  "covered_day_phases": [
+    "DAWN_SHIFT",
+    "MIDDAY_EXPEDITION",
+    "DUSK_CRAFT",
+    "THE_FEAST"
+  ],
+  "lead_story": {
+    "headline": "Sol 19 Lead",
+    "summary": "Hector set up a shadow prank on Silas.",
+    "cited_event_ids": [
+      "evt_s019_t0074_shadow_prank"
+    ],
+    "actors": [
+      "enclave_01_hector",
+      "enclave_03_silas"
+    ],
+    "location": "The_Stormbreaker_Spire",
+    "day_phase": "MIDDAY_EXPEDITION",
+    "salience_score": 0.95
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.72
+  }
+}
