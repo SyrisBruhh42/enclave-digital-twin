@@ -1,0 +1,118 @@
+{
+  "base_snapshot_tick": 73,
+  "campaign_metadata": {
+    "session_number": 9,
+    "colony_sol": 19,
+    "tick_id": 73,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Re-calibrate the magnetic shielding before the shear rips the hull.",
+      "mid_term_milestone": "Secure the First Forge's primary busbar from the ferrofluid sea's influence.",
+      "campaign_arc_climax": "Establish stable habitation on the Exoplanet PvE Sanctuary."
+    }
+  },
+  "active_location": {
+    "location_id": "The_First_Forge",
+    "macro_silhouette": "The First Forge's interior is a masterpiece of hand-forged brass and copper, illuminated by the erratic, pulsing light of captured lightning geodes. The heavy blast doors hum with latent energy, vibrating against the sheer magnetic force of the ferrofluid sea outside. Every surface is coated in a thin layer of metallic dust, bearing testament to decades of meticulous labor and structural empiricism.",
+    "sensory_palette": {
+      "sight_and_color": "Erratic blue geode arcs against polished copper.",
+      "sound": "Deep, rhythmic thrum of magnetic shears against the hull.",
+      "smell": "Ozone, hot brass, and a faint tang of crystallized fungus.",
+      "tactile_temperature": "Oppressively warm, vibrating ambient heat."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Primary Busbar Containment Shield",
+        "affordance_description": "Can be braced to prevent the Kelvin-Helmholtz shear from tearing the circuits.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Latent Lightning Geodes",
+        "affordance_description": "Can be tapped to draw excess ambient charge away from the critical systems.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Ventilation Bellows",
+        "affordance_description": "Must be sealed to prevent ferrofluid mist from entering the forge.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "kelvin_helmholtz_shear",
+      "name_and_role": "Magnetohydrodynamic Shear (Environmental Pressure)",
+      "motivation_goal": "To equalize the magnetic differential by tearing through the First Forge's shielding.",
+      "consistent_method": "Pounding the hull with rhythmic, escalating waves of ferrofluid resonance.",
+      "immediate_complication": "The primary busbar is heating up, risking a catastrophic blowout.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The shear will breach the containment, flooding the forge with magnetized sea mist."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Silas must stabilize the busbar before it blows.",
+      "level_2_local": "The First Forge is the only thing keeping the colony's power grid online.",
+      "level_3_campaign_arc": "Mastering the magnetohydrodynamics is key to surviving the Exoplanet."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      12,
+      18,
+      5,
+      9,
+      14
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.65,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If Silas fails, the busbar blows, plunging the forge into darkness and magnetizing his tools.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Silas misjudges the shear's frequency, turning a spanner into a deadly projectile.",
+        "below_dc_complicated_fail_forward": "The busbar holds, but Silas takes a severe shock, draining his stamina.",
+        "meets_dc_clean_success": "Silas perfectly aligns the shielding, stabilizing the grid.",
+        "dc_plus_5_or_20_extended_lore": "Silas not only stabilizes the grid but discovers a new resonance frequency that boosts efficiency."
+      }
+    },
+    "master_narrator": {
+      "executor": "claude-3-opus",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Silas wrestles the heavy brass lever into place, the deep thrum of the Magnetohydrodynamic Kelvin-Helmholtz shear vibrating through his boots. He wipes a smear of oxidized iron from his brow, his micrometer ticking uselessly against the erratic magnetic flux. 'Inefficient,' he grumbles, glaring at the glowing copper busbar. He turns, spotting Hector near the blast doors. 'Don't just stand there with that reckless grin. Take the primary spanner and hold the containment line.' Silas tosses the heavy, insulated wrench across the room. Hector catches it effortlessly, the weight of the forge's safety now in his hands."
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ]
+  }
+}
