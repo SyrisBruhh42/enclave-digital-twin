@@ -1,0 +1,116 @@
+{
+  "event_id": "seg_s019_t0074_enclave_01_hector",
+  "tick_id": 74,
+  "base_snapshot_tick": 74,
+  "event_type": "POV_SCENE_SEGMENT",
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "steward_note": "Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "calypso_zero_raw_stats": true,
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": ["enclave_01_hector"]
+  },
+  "campaign_metadata": {
+    "session_number": 19,
+    "colony_sol": 19,
+    "tick_id": 74,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Stabilize the ferrofluid sea surge before it breaches the perimeter.",
+      "mid_term_milestone": "Reinforce the Enclave's primary atmospheric shielding.",
+      "campaign_arc_climax": "Master the exoplanet's wild meteorological phenomena."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Stormbreaker_Spire",
+    "macro_silhouette": "The Stormbreaker Spire rises like a jagged brass needle against the chaotic exoplanet sky. Lightning arcs across the induction rigging, casting erratic shadows over the reinforced observation deck. Below, the churning ferrofluid sea glows with an unnatural, pulsating luminescence.",
+    "sensory_palette": {
+      "sight_and_color": "Searing flashes of actinic blue against oppressive charcoal-grey clouds.",
+      "sound": "The deafening crackle of discharged ozone mixed with the deep, resonant thrum of the sea.",
+      "smell": "Sharp metallic ozone and the heavy, metallic tang of the ferrofluid.",
+      "tactile_temperature": "Freezing gale-force winds that bite through heavy leather, abruptly shifting to scalding bursts of static heat.",
+      "taste_optional": "A faint, electric copper taste on the back of the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Induction Rigging Array",
+        "affordance_description": "A dense network of copper cables and brass nodes designed to channel atmospheric voltage.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetic Confinement Core",
+        "affordance_description": "The central pillar housing the primary electromagnets, currently vibrating ominously.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 16
+      },
+      {
+        "feature_name": "Ferrofluid Surge Vent",
+        "affordance_description": "An emergency exhaust valve designed to release dangerous pressure from the sea.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_surge_anomaly",
+      "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz Shear",
+      "motivation_goal": "To destabilize the spire's foundation through violent magnetic resonance.",
+      "consistent_method": "Pulsing erratic magnetic waves that cause structural vibrations and short circuits.",
+      "immediate_complication": "The shear is accelerating faster than the spire's capacitors can bleed off the charge.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "If unchecked, the magnetic resonance will permanently warp the spire's foundational supports."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The ferrofluid sea is experiencing a violent Kelvin-Helmholtz instability, threatening the spire.",
+      "level_2_local": "The anomaly is interfering with the Enclave's power grid, risking a complete blackout.",
+      "level_3_campaign_arc": "Understanding and controlling these surges is vital for long-term survival on the planet."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": "The constant exposure to raw atmospheric energy is fraying the mental resilience of the team.",
+    "prerolled_hazard_queue": [
+      "A sudden, localized magnetic polarity inversion."
+    ]
+  },
+  "lpi_metrics": {
+    "dialogue_to_action_ratio": 0.4,
+    "environmental_friction_events": 1,
+    "consequence_severity_potential": "HIGH"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Local_Jules_Engine",
+      "model": "v2.0_DETERMINISTIC",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If the polarity alignment fails, the induction rigging will overload, severely burning Hector and damaging the spire's primary capacitors.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Hector completely misjudges the frequency of the magnetic shear, triggering a catastrophic feedback loop.",
+        "below_dc_complicated_fail_forward": "Hector manages to stabilize the core, but a localized surge damages the telemetry sensors, flying him backward into the railing.",
+        "meets_dc_clean_success": "Hector perfectly times the polarity inversion, bleeding off the excess charge into the ferrofluid sea.",
+        "dc_plus_5_or_20_extended_lore": "Hector not only stabilizes the surge but discovers a resonant frequency that could be harnessed for future power generation."
+      }
+    },
+    "master_narrator": {
+      "executor": "Local_Jules_Narrative_Engine",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector grips the brass railing of the observation deck, the storm raging around him. He can feel the hum of the magnetohydrodynamic Kelvin-Helmholtz shear vibrating through the soles of his boots. He recalibrates the induction rigging, bleeding off the static charge with a crackle of ozone. Satisfied, he turns from the chaotic sea and spots Kaio approaching. Hector tosses a heavy, insulated wrench to Kaio, shouting over the roar of the wind. 'The spire is stable for now, scout! What did you find out there?' Kaio catches the wrench, the baton now passed."
+    }
+  }
+}
