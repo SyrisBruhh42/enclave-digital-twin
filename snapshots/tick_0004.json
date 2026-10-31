@@ -161,7 +161,7 @@
       "behavioral_directives": [
         "Quietly slides the warmest portion of bread to the nearest exhausted prodigy while pretending to complain about Ryn's seasoning."
       ],
-      "stress": 0.0128,
+      "stress": 0.0118,
       "fatigue": 0.2,
       "sleep_debt_norm": 0.2,
       "kp_exo": 5.35,
@@ -349,7 +349,7 @@
       "behavioral_directives": [
         "Slips custom herbal joint-liniment vials beside Silas's and Leo's plates while claiming she just needed to clear shelf space."
       ],
-      "stress": 0.014,
+      "stress": 0.0129,
       "fatigue": 0.18,
       "sleep_debt_norm": 0.18,
       "kp_exo": 5.35,
@@ -915,7 +915,7 @@
       "behavioral_directives": [
         "Quietly slides the warmest portion of bread to the nearest exhausted prodigy while pretending to complain about Ryn's seasoning."
       ],
-      "stress": 0.0128,
+      "stress": 0.0118,
       "fatigue": 0.2,
       "sleep_debt_norm": 0.2,
       "kp_exo": 5.35,
@@ -1103,7 +1103,7 @@
       "behavioral_directives": [
         "Slips custom herbal joint-liniment vials beside Silas's and Leo's plates while claiming she just needed to clear shelf space."
       ],
-      "stress": 0.014,
+      "stress": 0.0129,
       "fatigue": 0.18,
       "sleep_debt_norm": 0.18,
       "kp_exo": 5.35,
@@ -1551,9 +1551,10 @@
   "applied_event_ids": [
     "evt_refl_enclave_03_silas_s001_t0004_a68b98e1ba",
     "evt_s001_t0004_reflection",
+    "evt_s001_t0004_salvaged_note",
     "evt_s001_t0004_the_feast"
   ],
-  "total_events_through_tick": 11,
+  "total_events_through_tick": 12,
   "recent_segments": [
     {
       "segment_id": "seg_s001_t0001_enclave_03_silas",

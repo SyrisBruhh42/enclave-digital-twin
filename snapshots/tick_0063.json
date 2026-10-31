@@ -1445,7 +1445,7 @@
     }
   },
   "applied_event_ids": [],
-  "total_events_through_tick": 74,
+  "total_events_through_tick": 75,
   "recent_segments": [
     {
       "segment_id": "seg_s012_t0047_enclave_05_kaio",

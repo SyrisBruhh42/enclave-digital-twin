@@ -1429,7 +1429,7 @@
     }
   },
   "applied_event_ids": [],
-  "total_events_through_tick": 19,
+  "total_events_through_tick": 20,
   "recent_segments": [
     {
       "segment_id": "seg_s013_t0051_enclave_05_kaio",

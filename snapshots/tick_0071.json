@@ -1429,7 +1429,7 @@
     }
   },
   "applied_event_ids": [],
-  "total_events_through_tick": 84,
+  "total_events_through_tick": 85,
   "recent_segments": [
     {
       "segment_id": "seg_s015_t0057_enclave_03_silas",

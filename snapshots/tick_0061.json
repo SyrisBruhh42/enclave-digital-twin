@@ -1440,7 +1440,7 @@
     "evt_s016_t0061_morning_intent",
     "evt_s016_t0061_world_consequence"
   ],
-  "total_events_through_tick": 72,
+  "total_events_through_tick": 73,
   "recent_segments": [
     {
       "segment_id": "seg_s012_t0045_enclave_03_silas",

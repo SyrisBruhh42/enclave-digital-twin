@@ -1,0 +1,29 @@
+{
+  "event_id": "evt_s001_t0004_salvaged_note",
+  "tick_id": 4,
+  "colony_sol": 1,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-10-25T18:00:00Z",
+  "base_snapshot_tick": 4,
+  "event_type": "MORNING_INTENT",
+  "location": "The_Hub_Hearth",
+  "actors": [
+    "enclave_07_willow",
+    "enclave_03_silas"
+  ],
+  "summary": "Willow calibrated the acoustic damper beside Silas's bench.",
+  "importance": 6.5,
+  "novelty_score": 0.65,
+  "lethality": 0,
+  "science_vegetable": "Magnetohydrodynamic damper tuning",
+  "state_deltas": {
+    "stress_delta": -0.02
+  },
+  "relationship_deltas": [],
+  "evidence_refs": [
+    "feast_sol_001"
+  ],
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
+  }
+}

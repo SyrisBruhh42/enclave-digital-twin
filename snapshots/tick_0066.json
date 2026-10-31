@@ -1424,7 +1424,7 @@
     "evt_s017_t0066_expedition_consequence",
     "evt_s017_t0066_shadow_prank"
   ],
-  "total_events_through_tick": 79,
+  "total_events_through_tick": 80,
   "recent_segments": [
     {
       "segment_id": "seg_s013_t0050_enclave_01_hector",

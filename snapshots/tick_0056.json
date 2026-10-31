@@ -1567,7 +1567,7 @@
   "applied_event_ids": [
     "evt_s014_t0056_reflection"
   ],
-  "total_events_through_tick": 65,
+  "total_events_through_tick": 66,
   "recent_segments": [
     {
       "segment_id": "seg_s010_t0039_enclave_05_kaio",

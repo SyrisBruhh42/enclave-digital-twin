@@ -1555,7 +1555,7 @@
   "applied_event_ids": [
     "evt_s017_t0068_reflection"
   ],
-  "total_events_through_tick": 80,
+  "total_events_through_tick": 81,
   "recent_segments": [
     {
       "segment_id": "seg_s014_t0053_enclave_03_silas",
