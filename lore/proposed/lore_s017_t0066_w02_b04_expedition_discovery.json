@@ -1,0 +1,147 @@
+{
+  "event_id": "evt_s017_t0066_hector",
+  "tick_id": 66,
+  "colony_sol": 17,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2142-03-17T12:00:00Z",
+  "base_snapshot_tick": 66,
+  "event_type": "EXPEDITION_DISCOVERY",
+  "location": "The_Stormbreaker_Spire",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_05_kaio"
+  ],
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "steward_note": "deterministic-enclave-5section-v2: Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "campaign_metadata": {
+    "session_number": 17,
+    "colony_sol": 17,
+    "tick_id": 66,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Survive the expedition",
+      "mid_term_milestone": "Secure the spire",
+      "campaign_arc_climax": "Master the storm"
+    }
+  },
+  "active_location": {
+    "location_id": "The_Stormbreaker_Spire",
+    "macro_silhouette": "The Stormbreaker Spire thrusts defiantly into the churning sky, a jagged tooth of conductive alloy against the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. Its exterior vista is a dizzying tapestry of arcing plasma and turbulent vapor, the metallic surface pitted by countless coronal mass ejections. From this precarious vantage point, the horizon itself seems to twist and fray, bleeding violet light across the violent atmospheric shear. Every strut hums with the terrifying potential of raw induction.",
+    "sensory_palette": {
+      "sight_and_color": "Blinding violet arcs of plasma",
+      "sound": "Deafening crackle of electrical discharge",
+      "smell": "Sharp ozone and scorched copper",
+      "tactile_temperature": "Scalding heat bursts followed by freezing wind",
+      "taste_optional": "Metallic tang on the tongue"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Primary Induction Vane",
+        "affordance_description": "Can be engaged to redirect the storm's fury",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Plasma Capacitor Bank",
+        "affordance_description": "Can be discharged to consume the excess charge",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 16
+      },
+      {
+        "feature_name": "Magnetic Shield Emitter",
+        "affordance_description": "Can be activated to conceal the squad from the sensors",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "storm_surge",
+      "name_and_role": "Ferrofluid Surge",
+      "motivation_goal": "Overwhelm the spire's grounding systems",
+      "consistent_method": "Relentless surges of magnetic shear",
+      "immediate_complication": "The primary induction vane is jammed",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "The spire will suffer catastrophic structural failure"
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The induction vane must be manually unjammed to prevent a cascading overload.",
+      "level_2_local": "Securing the spire is critical for maintaining the Enclave's power grid during the storm.",
+      "level_3_campaign_arc": "Mastering the storm's volatile energy is the key to completing The Stormbreaker grand project."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 12,
+    "prerolled_hazard_queue": [
+      14,
+      8,
+      19,
+      3,
+      11
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.9,
+    "unresolved_conflict_ratio": 0.7,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.85,
+    "classification": "Explosive but Shallow"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_judge",
+      "model": "rule_based",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The induction vane fuses completely, resulting in a dangerous discharge that damages the spire.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Hector mistakenly believes the vane is clear and triggers a massive feedback loop.",
+        "below_dc_complicated_fail_forward": "The vane is unjammed, but Hector sustains a nasty shock, and the spire's integrity is compromised.",
+        "meets_dc_clean_success": "Hector swiftly clears the blockage, restoring the grounding shunt and stabilizing the spire.",
+        "dc_plus_5_or_20_extended_lore": "Hector not only clears the vane but discovers a novel way to harness the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea to supercharge the capacitors."
+      }
+    },
+    "master_narrator": {
+      "executor": "local_narrator",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector tosses the heavy wrench to Kaio."
+    }
+  },
+  "summary": "Hector manually clears a jammed induction vane amidst a violent magnetic storm, securing the spire before handing off duties to Kaio.",
+  "narrative_prose": "Hector clings to the swaying catwalk, the wind tearing at his insulated tunic. Below him, the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea is a churning maelstrom of violet and black, threatening to swallow the spire whole. He grins fiercely through the ozone-choked air, adrenaline singing in his veins. The primary induction vane is locked tight, its copper teeth fused by the sheer fury of the storm. He doesn't hesitate. Swinging out over the abyss, he wrenches the heavy calibrator into place, muscles straining against the magnetic drag. Sparks shower over his visor as the metal yields with a deafening screech, the sudden release of tension nearly throwing him from his perch. The spire groans in relief, the deadly charge safely redirected into the grounding shunts. Panting, Hector pulls himself back onto solid grating. He spots Kaio bracing against the blast doors below, waiting to secure the lower locks. Hector tosses the heavy torque wrench down to him with a sharp, exultant laugh.",
+  "importance": 8.5,
+  "novelty_score": 0.9,
+  "state_deltas": {
+    "enclave_01_hector": {
+      "stress": -0.1
+    }
+  },
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ]
+  }
+}
