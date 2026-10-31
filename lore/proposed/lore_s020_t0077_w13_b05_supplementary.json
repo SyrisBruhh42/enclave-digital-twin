@@ -1,0 +1,115 @@
+{
+  "base_snapshot_tick": 77,
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ]
+  },
+  "campaign_metadata": {
+    "session_number": 20,
+    "colony_sol": 20,
+    "tick_id": 77,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Resolve the magnetic shear issue",
+      "mid_term_milestone": "Secure the ferrofluid sea",
+      "campaign_arc_climax": "Survive the twin suns alignment"
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea_coast",
+    "macro_silhouette": "The ferrofluid sea churns under the twin suns, its surface alive with jagged magnetic spikes that ripple like black glass. Silas stands on the rusted gantry, feeling the structural groan of the metal beneath his boots. The storm above threatens to tear the installation apart if the shear isn't balanced.",
+    "sensory_palette": {
+      "sight_and_color": "Black reflective waves, flashes of blue geode lightning",
+      "sound": "Deafening metallic grinding, crackle of static",
+      "smell": "Ozone and rusted iron",
+      "tactile_temperature": "Biting cold wind mixed with sudden bursts of radiant heat",
+      "taste_optional": "Metallic tang of ozone"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Rusted Gantry Lever",
+        "affordance_description": "A heavy iron lever that can lock the gantry in place.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetic Conductor Coil",
+        "affordance_description": "A coil that can draw the magnetic shear away from the sea.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 16
+      },
+      {
+        "feature_name": "Emergency Heat Sink",
+        "affordance_description": "A vent that can absorb excess thermal energy.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_wave",
+      "name_and_role": "Ferrofluid Wave - Hazard",
+      "motivation_goal": "To crash against the gantry and corrode the supports",
+      "consistent_method": "Surging with magnetic pulses",
+      "immediate_complication": "The wave is destabilizing Silas's footing",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The wave will completely engulf the lower platform"
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The gantry is about to collapse",
+      "level_2_local": "The ferrofluid sea is unusually volatile",
+      "level_3_campaign_arc": "The exoplanet's magnetosphere is shifting"
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      12,
+      18,
+      9,
+      15
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.6,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.6,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_dm",
+      "model": "gpt-4",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The gantry collapses, causing severe damage.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Silas misjudges the shear and makes it worse.",
+        "below_dc_complicated_fail_forward": "The gantry holds, but Silas loses his tools.",
+        "meets_dc_clean_success": "Silas stabilizes the gantry.",
+        "dc_plus_5_or_20_extended_lore": "Silas stabilizes it perfectly and learns a new pattern."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Silas tightened the final set of brass calipers, feeling the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea shudder through the gantry. The raw magnetic flux threatened to strip the bolts entirely. He locked down the final coil, just as Hector bounded up the platform. 'Inefficient,' Silas muttered, tossing the heavy magnetic spanner to the prodigy in a solid handoff. 'Don't let it redline.'"
+    }
+  }
+}
