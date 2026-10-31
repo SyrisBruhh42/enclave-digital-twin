@@ -1,0 +1,109 @@
+{
+  "base_snapshot_tick": 87,
+  "context_manifest": {
+    "loaded_full_card_ids": ["enclave_10_isla"],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_10_isla",
+    "next_pov_target": "enclave_15_dorian",
+    "prev_next_pov_target": "enclave_10_isla"
+  },
+  "campaign_metadata": {
+    "session_number": 22,
+    "colony_sol": 22,
+    "tick_id": 87,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Encode holographic storm telemetry into quartz while maintaining precision.",
+      "mid_term_milestone": "Perfect the Simulacrum's five-dimensional storage.",
+      "campaign_arc_climax": "Complete the architectural history of the Old World."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Simulacrum",
+    "macro_silhouette": "Orbiting droplets of liquid iron dancing in the dark to a minor-key cello chord. The Simulacrum's central chamber is bathed in the quiet bioluminescence of humming projectors and suspended ferrofluid spires. The air is thick with the scent of ozone and the silent mathematical precision of suspended gravity.",
+    "sensory_palette": {
+      "sight_and_color": "Bioluminescent teal and deep metallic blacks from the ferrofluid.",
+      "sound": "Minor-key cello chord hum of the electromagnetic matrix.",
+      "smell": "Ozone, hot brass, and chamois leather.",
+      "tactile_temperature": "Cool and static-charged.",
+      "taste_optional": "A faint metallic tang of ionized air."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Suspended Ferrofluid Spires",
+        "affordance_description": "Can be disrupted to create a magnetic shield or manipulated to capture telemetry.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Nanostructured Quartz Lattice",
+        "affordance_description": "Can absorb and encode vast amounts of data or draw attention with its bioluminescent flare.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Chamois Leather Polishing Cloth",
+        "affordance_description": "Can be used to conceal delicate optical lenses from abrasive dust.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_01_ferrofluid",
+      "name_and_role": "Ferrofluid Droplet Swarm",
+      "motivation_goal": "To align with the strongest magnetic flux.",
+      "consistent_method": "Migrating towards high-energy nodes in the room.",
+      "immediate_complication": "Threatens to splash onto delicate optical lenses.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Will eventually short-circuit the primary matrix if not contained."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Isla must encode the telemetry before the storm data buffer overflows.",
+      "level_2_local": "The data is crucial for predicting the next atmospheric disruption.",
+      "level_3_campaign_arc": "Ensuring the colony's survival against entropy."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_10_isla",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [ 4, 15, 8, 19, 2 ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.6,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The quartz shatters, losing the telemetry data and damaging the lenses.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Isla miscalculates the harmonic, causing the ferrofluid to violently splash and blind the optical sensors.",
+        "below_dc_complicated_fail_forward": "The data is encoded, but the lenses are scratched, requiring hours of manual polishing.",
+        "meets_dc_clean_success": "The telemetry is perfectly inscribed into the quartz without any spillage.",
+        "dc_plus_5_or_20_extended_lore": "Isla discovers a new resonant frequency that permanently stabilizes the ferrofluid spires."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules_narrative_engine",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Isla didn't trust hard drives. They spun. They failed. They rusted. Crystals were forever. \n\nOrbiting droplets of liquid iron danced in the dark to a minor-key cello chord, suspended in gravity-defying resonant spires. The magneto-acoustic cymatics coupled the polyphonic synthesizer harmonics directly into the electromagnet matrix. She sat in the center of the Simulacrum, encoding terabytes per second of five-dimensional holographic storm telemetry into a sliver of nanostructured quartz. The system hummed with quiet, bioluminescent wonder. \n\nYet, for all the breathtaking complexity of the five-dimensional array, her fingers ached. She held a chamois leather cloth, hand-polishing the delicate optical lenses with agonizing precision. A single speck of dust could refract the femtosecond laser and ruin the entire lattice. Her thumb cramped. It was infuriating to manage such magnificent mathematical perfection, only to be bound by the mundane friction of physical maintenance. \n\nA sudden spike in the acoustic frequency threatened the delicate balance. The ferrofluid spires shivered. The stress clawed at her, and for a terrifying second, the cautious archivist wanted to bet the entire optical lattice on an untested pulse—a wild, Sagittarius gamble. But she clamped down on the impulse, tightening her jaw. \n\n'If you're complaining and no one is laughing, you're complaining wrong,' she muttered to herself, echoing a familiar dry banter. She adjusted the Helmholtz Vernier rings, perfectly realigning the magnetic flux. The data streamed flawlessly into the crystal, safe from entropy. With the task complete, she wrapped the quartz carefully. She turned toward the doorway, extending her cramped hand to pass the newly etched crystal to Dorian, who was already waiting to chronicle the storm's secrets."
+    }
+  }
+}
