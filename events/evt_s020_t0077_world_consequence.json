@@ -1,0 +1,65 @@
+{
+  "event_id": "evt_s020_t0077_world_consequence",
+  "tick_id": 77,
+  "colony_sol": 20,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2084-06-20T06:00:00Z",
+  "base_snapshot_tick": 77,
+  "event_type": "EXPEDITION_DISCOVERY",
+  "location": "The Outer Perimeter Sea",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "summary": "Silas examines the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea and passes the data baton to Hector.",
+  "importance": 8,
+  "novelty_score": 7,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ]
+  },
+  "active_location": {
+    "location_id": "loc_outer_perimeter_sea",
+    "macro_silhouette": "The vast expanse of the ferrofluid sea ripples under the pale dawn light. Plumes of charged mist drift sluggishly across the dark, metallic surface, stirred by invisible magnetic currents. The ambient glow of distant processing stations paints the horizon in muted amber.",
+    "sensory_palette": {
+      "sight_and_color": "Dark, metallic ripples and muted amber horizon glows.",
+      "sound": "A low, huming drone mixed with the sloshing of heavy fluid.",
+      "smell": "Ozone and metallic tang.",
+      "tactile_temperature": "A sharp, static chill that makes hairs stand on end.",
+      "taste_optional": "A faint, coppery bitterness in the air."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Ferrofluid Plume",
+        "affordance_description": "Can be drawn towards a localized magnetic field to obscure line of sight.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetic Current Eddy",
+        "affordance_description": "Can be tapped to generate a small power surge.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Shear Interface Node",
+        "affordance_description": "Can be activated to repel approaching metallic objects.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 16
+      }
+    ]
+  },
+  "narrative_prose": "Silas observed the slow, agonizing churn of the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea. The dark, metallic ripples crashed into each other with heavy, unnatural sluggishness. He grunted, adjusting his collar against the static chill. The shear was growing unstable. If the shear destabilized further, the entire perimeter grid would face a cascading blackout. He needed Hector's help. Turning, he spotted the Stormbreaker approaching. Silas physically handed over the primary diagnostic slate to Hector. 'You need to see this,' Silas said, the baton passing smoothly into Hector's hands."
+}
