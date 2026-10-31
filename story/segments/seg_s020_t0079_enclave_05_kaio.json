@@ -1,0 +1,131 @@
+{
+  "event_id": "evt_s020_t0079_enclave_05_kaio_segment",
+  "tick_id": 79,
+  "colony_sol": 20,
+  "day_phase": "DUSK_CRAFT",
+  "world_timestamp_iso": "2026-10-25T17:00:00Z",
+  "base_snapshot_tick": 79,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The Sanctuary / Enclave Crater Valley",
+  "actors": [
+    "enclave_05_kaio",
+    "enclave_13_ryn"
+  ],
+  "summary": "Kaio navigates the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea to deliver a report/baton to Ryn.",
+  "importance": 7,
+  "novelty_score": 8,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {
+    "stress_delta": 0.05
+  },
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn",
+  "context_manifest": {
+    "base_snapshot_tick": 79,
+    "pov_id": "enclave_05_kaio",
+    "weather": "Resonant_Spore_Fog_Drift",
+    "active_squad": "The Wilds",
+    "jules_ledger_injected": true
+  },
+  "campaign_metadata": {
+    "session_number": 20,
+    "colony_sol": 20,
+    "tick_id": 79,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Navigate the ferrofluid sea shear safely",
+      "mid_term_milestone": "Map the magnetic currents of the valley",
+      "campaign_arc_climax": "Complete The Sanctuary blueprint"
+    }
+  },
+  "active_location": {
+    "location_id": "ferrofluid_sea_shore",
+    "macro_silhouette": "The jagged basalt shore of the ferrofluid sea rises sharply, cutting into the bioluminescent spore-fog drifting from the caldera. Swirling magnetic currents generate a visible Kelvin-Helmholtz shear across the rippling metallic waves. The distant hum of the Forge provides a steady counter-rhythm to the liquid crashing against the rocks.",
+    "sensory_palette": {
+      "sight_and_color": "Swirling metallic blacks, glowing spore blues, and sharp jagged basalt edges.",
+      "sound": "Low frequency hums, crashing heavy liquid, and piezoelectric crackles.",
+      "smell": "Ozone, damp earth, and sharp iron filings.",
+      "tactile_temperature": "Biting cold wind mixed with sudden bursts of localized geothermal heat.",
+      "taste_optional": "A faint metallic tang of static electricity."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetized Basalt Outcropping",
+        "affordance_description": "A sturdy rock formation that can be used to brace against sudden magnetic surges.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Spore Cluster Overhang",
+        "affordance_description": "A dense patch of bioluminescent spores that emits a glowing trail when disturbed.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 10
+      },
+      {
+        "feature_name": "Ferrofluid Eddy",
+        "affordance_description": "A swirling pool of metallic liquid that can temporarily mask heat signatures.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_ferrofluid_surge",
+      "name_and_role": "Ferrofluid Tidal Surge / Hazard",
+      "motivation_goal": "To crash against the shoreline unpredictably based on the moons' alignment.",
+      "consistent_method": "Surging up the basalt rocks when the magnetic shear reaches a critical threshold.",
+      "immediate_complication": "Threatens to sweep away any unsecured equipment or off-balance explorers.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The surges will increase in amplitude until the sheer forces equalize."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio must deliver the mapping data to Ryn before the storm.",
+      "level_2_local": "The ferrofluid sea's currents are shifting, threatening the colony's supply routes.",
+      "level_3_campaign_arc": "Understanding the exoplanet's erratic magnetosphere is key to surviving."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [ 12, 8, 15, 4, 19 ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.6,
+    "unresolved_conflict_ratio": 0.3,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.55,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Losing the crucial survey data in the ferrofluid sea.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio misreads the magnetic lines, leading him straight into a sheer drop.",
+        "below_dc_complicated_fail_forward": "Kaio slips and drops his mapping journal, but manages to snag it before it sinks, soaking the edges.",
+        "meets_dc_clean_success": "Kaio expertly navigates the magnetic ridges, keeping his footing and data secure.",
+        "dc_plus_5_or_20_extended_lore": "Kaio discovers a new harmonic frequency in the ferrofluid waves that perfectly aligns with his survey."
+      }
+    },
+    "master_narrator": {
+      "executor": "anthropic",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio felt the sudden pull of the magnetic shear tugging at the brass rivets on his boots. The ferrofluid sea crashed violently against the basalt shore, a swirling mess of black liquid and blue glowing spores. He steadied himself, eyes tracking the unseen currents. 'Just a little further,' he muttered, gripping the leather-bound survey log tightly. The wind howled, carrying the metallic tang of static. He leapt across a jagged fissure, narrowly avoiding a sudden surge of the heavy metallic liquid. As he reached the relative safety of the Hub's perimeter, he saw Ryn meticulously wiping down a worktable. Panting, Kaio bounded over and slapped the slightly damp journal onto the table. 'The shear is wild today, but I got the readings!' Ryn looked up, raising an eyebrow at the muddy, glowing state of Kaio's boots."
+    }
+  }
+}
