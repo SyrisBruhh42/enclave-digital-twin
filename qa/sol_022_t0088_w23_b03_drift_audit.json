@@ -1,0 +1,131 @@
+{
+  "base_snapshot_tick": 87,
+  "context_manifest": {
+    "active_pov_id": "enclave_15_dorian",
+    "next_pov_target": "enclave_02_jane",
+    "prev_next_pov_target": "enclave_15_dorian",
+    "science_vegetable": "Extracting fossilized piezoelectric signal echoes stored inside ancient precursor chitin-quartz resonator nodes overgrown by deep-crustal hyphae.",
+    "loaded_full_card_ids": [
+      "enclave_15_dorian"
+    ],
+    "full_cards_loaded_count": 1,
+    "memory_retrieval_count": 0,
+    "relationship_dyads_loaded_count": 0,
+    "lore_cards_loaded_count": 0
+  },
+  "campaign_metadata": {
+    "session_number": 23,
+    "colony_sol": 22,
+    "tick_id": 88,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Secure the piezoelectric signal echoes before the resonant spore fog drifts in.",
+      "mid_term_milestone": "Map the multipolar geomagnetic flux topology of Sector 4.",
+      "campaign_arc_climax": "Complete the Living Atlas and harmonize the Enclave with the planet's pulse."
+    }
+  },
+  "active_location": {
+    "location_id": "LOC_CRUSTAL_SENSOR_ARRAY",
+    "macro_silhouette": "A cavernous geodesic hollow formed of fused precursor quartz and iron-laced mycelium. Ancient carved stone lanterns beneath the fungal canopy chime softly when the mycelial pulse passes through them. Shadows dance as bioluminescent hyphae throb with rhythmic emerald light.",
+    "sensory_palette": {
+      "sight_and_color": "Crystalline projection lines humming above ancient basalt, interlaced with pulsing emerald bioluminescence and deep copper shadows.",
+      "sound": "The polyphonic chiming of stone lanterns, the low baritone hum of the projector, and the sharp static crackle of raw data.",
+      "smell": "Ozone from the projector, the loamy scent of ancient hyphae, and the sharp tang of hot copper.",
+      "tactile_temperature": "A subterranean dampness punctuated by sudden spikes of dry, staticky heat near the crystals."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Crystalline Projector Matrix",
+        "affordance_description": "Projects a three-dimensional holographic magnetosphere map across the cavern.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Chitin-Quartz Resonator Node",
+        "affordance_description": "Vibrates with fossilized piezoelectric echoes when tapped with the correct harmonic.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Deep-Crustal Hyphae Tendrils",
+        "affordance_description": "Pulses with bioluminescent energy, reacting to both sound and static charge.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "TOY_PIEZOELECTRIC_ECHO",
+      "name_and_role": "Fossilized Piezoelectric Echo",
+      "motivation_goal": "Release stored acoustic energy when structurally compromised or harmonically matched.",
+      "consistent_method": "Shattering quartz lattice or humming in sympathetic vibration.",
+      "immediate_complication": "Induces localized static buildup that grounds out sensitive electronics.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Static discharges will arc to the nearest conductive surface, threatening the projector."
+    },
+    {
+      "entity_id": "TOY_RESONANT_SPORE_FOG",
+      "name_and_role": "Resonant Spore Fog",
+      "motivation_goal": "Permeate the cavern and coat all surfaces in conductive fungal particulate.",
+      "consistent_method": "Drifting steadily through ventilation shafts and open fissures.",
+      "immediate_complication": "Increases ambient static and obscures line of sight for the projector.",
+      "pressure_index": 5,
+      "uninterrupted_escalation": "Complete sensor blindness and potential electrostatic detonation."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "We need the fossilized echoes to complete the Sector 4 map.",
+      "level_2_local": "The map is required to safely route power for the Feast convergence.",
+      "level_3_campaign_arc": "Understanding the planet's memory is the only way to build a sustainable Enclave."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_15_dorian",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_14_vex",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_04_leo",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [ 4, 18, 7, 12, 1 ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.2,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_inference",
+      "model": "jules-dm-v1",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Static discharge grounds the projector and corrupts the echoes.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Dorian misreads the fossil and triggers a massive static feedback loop.",
+        "below_dc_complicated_fail_forward": "The echo is captured, but the projector's crystalline lens cracks, requiring repair.",
+        "meets_dc_clean_success": "The map resolves perfectly, capturing the piezoelectric topography.",
+        "dc_plus_5_or_20_extended_lore": "Dorian discovers an encoded message in the echo, hinting at precursor syntax."
+      }
+    },
+    "master_narrator": {
+      "executor": "local_llm",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Dorian did not look at the world; he looked at the wireframe beneath it.\n\nStanding before the Living Atlas, he adjusted the focal length of the crystalline projector. The cavern around them hummed, not with the usual mechanical drone of The First Forge, but with something older. Ancient carved stone lanterns beneath the fungal canopy chimed softly when the mycelial pulse passed through them, a polyphonic choir of quartz and memory.\n\n\"Vex,\" Dorian called out, his velvet voice easily carrying over the static crackle. \"If you're complaining and no one is laughing, you're complaining wrong. Adjust the azimuth on node three, please.\"\n\nHe watched the three-dimensional holographic magnetosphere map bloom across thousands of crustal sensors, a breathtaking web of emerald and copper light tracing the fossilized piezoelectric signal echoes stored inside ancient precursor chitin-quartz resonator nodes overgrown by deep-crustal hyphae. It was beautiful, a silent symphony of planetary memory. \n\nThen the static spiked, raising the hair on his arms. A dangerous, familiar hum built in the air.\n\nDorian sighed, pulling his brass pitch-pipe from his velvet coat. He tapped it against the projector housing, not for the sound, but to ground the immediate charge. \"Leo!\" he shouted toward the communications array. \"I need you to ground every metal soup spoon in the kitchen. Now. Or we're going to have very expensive, very explosive popcorn for the Feast!\"\n\nHe felt the familiar pressure of the work, the precise, exacting demands of the archive pressing against the raw chaos of the planet. Under the extreme stress of the creeping static, a spark of audacity flared in his chest—a sudden, measured defiance. *Then today is a good day for science,* he thought, adjusting the lens with a steady hand.\n\n\"Jane,\" Dorian keyed his comms, passing the baton smoothly. \"The map is up, but the static is climbing. What is the storm doing out there?\""
+    }
+  }
+}
