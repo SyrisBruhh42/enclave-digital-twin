@@ -1,0 +1,119 @@
+{
+  "base_snapshot_tick": 81,
+  "campaign_metadata": {
+    "session_number": 14,
+    "colony_sol": 21,
+    "tick_id": 81,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Maintain the containment of the Magnetohydrodynamic Kelvin-Helmholtz shear.",
+      "mid_term_milestone": "Reinforce the First Forge against the ferrofluid sea anomalies.",
+      "campaign_arc_climax": "Master the exoplanet's unpredictable environmental hazards."
+    }
+  },
+  "active_location": {
+    "location_id": "The_First_Forge",
+    "macro_silhouette": "The First Forge hums with the relentless, unpredictable energy of the exoplanet, its copper and brass fittings straining under the intense magnetic fields. Every heavy structural strut vibrates sympathetically with the raw power drawn from the nearby ferrofluid sea, casting long, erratic shadows across the metallic floor.",
+    "sensory_palette": {
+      "sight_and_color": "Erratic flashes of blue static arcing between copper coils.",
+      "sound": "A deep, bone-rattling thrum from the magnetic shear outside.",
+      "smell": "Ozone and hot, oxidized iron.",
+      "tactile_temperature": "Oppressively warm with sudden, localized cold spots.",
+      "taste_optional": "A metallic tang resting heavy on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Heavy Brass Calipers and Adjusters",
+        "affordance_description": "Can be utilized to firmly realign the magnetic baffles under stress.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Resonant Geode Cluster",
+        "affordance_description": "Can be manipulated to safely channel the dangerous magnetic flux away from critical systems.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 16
+      },
+      {
+        "feature_name": "Emergency Flux Dump Vents",
+        "affordance_description": "Can be triggered to quickly vent the dangerous buildup, though it risks losing calibration.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "kelvin_helmholtz_magnetic_shear",
+      "name_and_role": "Magnetohydrodynamic Shear (Environmental Pressure)",
+      "motivation_goal": "To aggressively equalize the extreme magnetic differentials tearing across the forge's hull.",
+      "consistent_method": "Pounding the containment shielding with rhythmic, unpredictable waves of ferrofluid resonance.",
+      "immediate_complication": "The secondary structural struts are beginning to warp, threatening to misalign the primary busbar.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "The sheer magnetic force will buckle the brass struts, causing a cascading failure in the forge's power systems."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Silas needs to prevent the magnetic shear from warping the forge's internal structures.",
+      "level_2_local": "The First Forge provides the essential tools and stability for the rest of the Enclave.",
+      "level_3_campaign_arc": "Harnessing the violent magnetohydrodynamics of the planet is necessary for long-term survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      19,
+      7,
+      11,
+      16
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.5,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.4,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.65,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If the structural realignment fails, the intense magnetic shear will warp the tools and drain critical stamina from the specialists.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "The attempt completely misaligns the baffles, causing a localized surge that wrecks the nearest tools.",
+        "below_dc_complicated_fail_forward": "The structure holds temporarily, but Silas absorbs a harsh static shock, causing extreme fatigue.",
+        "meets_dc_clean_success": "Silas correctly aligns the heavy brass, stabilizing the magnetic fields and securing the forge.",
+        "dc_plus_5_or_20_extended_lore": "Not only is the forge stabilized, but the specific resonance pattern is recorded, making future calibrations significantly easier."
+      }
+    },
+    "master_narrator": {
+      "executor": "claude-3-opus",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Silas tightens his grip on the insulated brass wrench, glaring at the pulsating copper busbar. The Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea batters against the hull, sending a bone-rattling thrum through his boots. 'Inefficient,' he mutters, wrestling a stubborn magnetic baffle into alignment. The air in the forge tastes sharp with ozone and hot iron. Realizing the sheer physical force required to lock the final mechanism in place before the next wave hits, he turns to Hector. 'I need raw momentum, not finesse,' Silas says, tossing the heavy, insulated wrench directly to the younger man. Hector catches the tool with a reckless grin, ready to bring the storm down on the stubborn machinery."
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ]
+  }
+}
