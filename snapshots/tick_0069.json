@@ -1427,20 +1427,6 @@
   "total_events_through_tick": 82,
   "recent_segments": [
     {
-      "segment_id": "seg_s014_t0053_enclave_03_silas",
-      "sol_id": 14,
-      "colony_sol": 14,
-      "tick_id": 53,
-      "active_pov_id": "enclave_03_silas",
-      "next_pov_target": "enclave_01_hector",
-      "location_id": "The_First_Forge",
-      "time_of_day": "DAWN_SHIFT",
-      "day_phase": "DAWN_SHIFT",
-      "title": "Sol 014 \u2022 DAWN_SHIFT (enclave_03_silas)",
-      "opening_excerpt": "Silas reinforces The First Forge against a ferrofluid wave and hands the sonic wrench to Hector.",
-      "excerpt": "Silas reinforces The First Forge against a ferrofluid wave and hands the sonic wrench to Hector."
-    },
-    {
       "segment_id": "seg_s014_t0054_enclave_01_hector",
       "sol_id": 14,
       "colony_sol": 14,
@@ -1593,6 +1579,20 @@
       "title": "Sol 017 \u2022 DUSK_CRAFT (enclave_05_kaio)",
       "opening_excerpt": "Kaio felt the raw power of the storm vibrate through his boots as he gripped the shuddering telemetry baton Hector had tossed him. The Magnetohydrodynamic Kelvin-Helmholtz shear screamed across the ferrofluid sea, tearin",
       "excerpt": "Kaio felt the raw power of the storm vibrate through his boots as he gripped the shuddering telemetry baton Hector had tossed him. The Magnetohydrodynamic Kelvin-Helmholtz shear screamed across the ferrofluid sea, tearin"
+    },
+    {
+      "segment_id": "seg_s018_t0069_enclave_03_silas",
+      "sol_id": 18,
+      "colony_sol": 18,
+      "tick_id": 69,
+      "active_pov_id": "enclave_03_silas",
+      "next_pov_target": "enclave_01_hector",
+      "location_id": "The_First_Forge",
+      "time_of_day": "DAWN_SHIFT",
+      "day_phase": "DAWN_SHIFT",
+      "title": "Sol 018 \u2022 DAWN_SHIFT (enclave_03_silas)",
+      "opening_excerpt": "Silas reinforces the pressure valves against the magnetic shear before tossing the calibration baton to Hector.",
+      "excerpt": "Silas reinforces the pressure valves against the magnetic shear before tossing the calibration baton to Hector."
     }
   ],
   "available_sols": [
