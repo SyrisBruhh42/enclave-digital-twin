@@ -1,0 +1,130 @@
+{
+  "event_id": "evt_s020_t0077_morning_intent",
+  "tick_id": 77,
+  "colony_sol": 20,
+  "day_phase": "DAWN_SHIFT",
+  "event_type": "MORNING_INTENT",
+  "steward_note": "Deterministic-enclave-5section-v2: Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "base_snapshot_tick": 77,
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ]
+  },
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 20,
+      "colony_sol": 20,
+      "tick_id": 77,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": [
+        {
+          "goal_id": "hg_001",
+          "description": "Stabilize ferrofluid sea dynamics",
+          "status": "ACTIVE",
+          "stakes": "The settlement's energy core fluctuates with the sea's turbulent currents."
+        }
+      ]
+    },
+    "active_location": {
+      "location_id": "loc_first_forge",
+      "name": "The First Forge",
+      "macro_silhouette": "The First Forge hums with the underlying rhythm of the ferrofluid sea just beyond its thick, blast-proof walls. Sparks dance off the heavy anvil, illuminated by the harsh, actinic glare of the plasma forge.",
+      "sensory_palette": {
+        "sight": "Actinic blue plasma flares cutting through thick, oily smog.",
+        "sound": "The rhythmic, deafening clang of heavy drop-hammers striking resonant steel.",
+        "smell": "Ozone masking the sharp tang of rendered ferrofluid.",
+        "touch": "Radiant heat baking the skin from ten paces away.",
+        "taste_optional": "A metallic grit that coats the back of the throat."
+      },
+      "interactive_features": [
+        {
+          "feature_id": "feat_01",
+          "description": "The heavy drop-hammer.",
+          "system_verb": "CONSUME",
+          "mechanics": "Consumes raw ore to produce refined billets."
+        },
+        {
+          "feature_id": "feat_02",
+          "description": "The blast-proof viewing port.",
+          "system_verb": "DEFEND",
+          "mechanics": "Protects against accidental plasma discharges."
+        },
+        {
+          "feature_id": "feat_03",
+          "description": "The magnetic cooling rack.",
+          "system_verb": "ATTRACT",
+          "mechanics": "Pulls cooling metal ingots into perfect alignment."
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "toy_id": "toy_01",
+        "description": "A recalcitrant plasma torch.",
+        "pressure_index": 7,
+        "motivation_goal": "Maintain optimal temperature.",
+        "consistent_method": "Sputters and flares unpredictably.",
+        "immediate_complication": "Requires constant manual recalibration.",
+        "uninterrupted_escalation": "Will eventually overheat and explode if ignored."
+      }
+    ],
+    "encounter_matrix": {
+      "active_threats": [],
+      "simulated_ac": 15,
+      "simulated_hp_pool": 100
+    },
+    "lpi_metrics": {
+      "laughs_per_hour": 1.5,
+      "gasps_per_hour": 0.5,
+      "tears_per_hour": 0.0
+    },
+    "dual_agent_contract": {
+      "mulligan_architect": {
+        "plot_nodes_activated": [],
+        "pacing_speed": "SLOW"
+      },
+      "mercer_worldbuilder": {
+        "lore_drops": [],
+        "sensory_focus": "Tactile heat and metallic grit."
+      },
+      "murph_combat_tactician": {
+        "attrition_rate": "NONE",
+        "tactical_gimmicks": []
+      },
+      "aabria_chaos_initiator": {
+        "chaos_injected": "A sudden spike in the ferrofluid sea's magnetic field."
+      },
+      "griffin_emotional_anchor": {
+        "emotional_beat": "Silas's quiet pride in his work."
+      },
+      "master_narrator": {
+        "agency_handoff_prompt": "Silas wiped his brow, the radiant heat of the forge baking his skin as he examined the latest billet. The sheer complexity of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea demanded precision, and he was determined to provide it. If he couldn't stabilize the magnetic alignment, the entire batch of ore would be ruined, a failure he refused to accept. He picked up the cooling metal, turning to find Hector entering the forge. 'Here,' Silas said, tossing the heavy billet to Hector. 'Don't drop it.'"
+      }
+    }
+  },
+  "narrative_prose": "Silas wiped his brow, the radiant heat of the forge baking his skin as he examined the latest billet. The sheer complexity of the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea demanded precision, and he was determined to provide it. If he couldn't stabilize the magnetic alignment, the entire batch of ore would be ruined, a failure he refused to accept. He picked up the cooling metal, turning to find Hector entering the forge. 'Here,' Silas said, tossing the heavy billet to Hector. 'Don't drop it.'",
+  "location": {
+    "location_id": "loc_first_forge",
+    "name": "The First Forge"
+  },
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "summary": "Silas works in the forge, analyzing the ferrofluid sea's dynamics, and hands a newly forged billet to Hector.",
+  "importance": 5,
+  "novelty_score": 3,
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "world_timestamp_iso": "2245-01-20T06:00:00Z"
+}
