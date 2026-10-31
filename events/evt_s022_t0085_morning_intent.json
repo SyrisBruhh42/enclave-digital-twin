@@ -1,0 +1,149 @@
+{
+  "event_id": "evt_s022_t0085_morning_intent",
+  "tick_id": 85,
+  "colony_sol": 22,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-11-15T06:00:00Z",
+  "base_snapshot_tick": 85,
+  "event_type": "MORNING_INTENT",
+  "location": "The_First_Forge",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "summary": "Silas examines the magneto-weather data regarding the incoming ferrofluid sea shear before reluctantly passing the morning watch to Hector.",
+  "importance": 0.8,
+  "novelty_score": 0.6,
+  "state_deltas": {
+    "conscientiousness_state": 0.05,
+    "neuroticism_state": 0.08,
+    "stress_delta": 0.1
+  },
+  "relationship_deltas": {
+    "enclave_03_silas_to_enclave_01_hector": 0.05
+  },
+  "evidence_refs": [],
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 22,
+      "colony_sol": 22,
+      "tick_id": 85,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Prepare the forge for the incoming shear storm.",
+        "mid_term_milestone": "Reinforce the Stormbreaker's flux-core shielding.",
+        "campaign_arc_climax": "Survive the triple moon ferrofluid surge."
+      }
+    },
+    "active_location": {
+      "location_id": "The_First_Forge",
+      "macro_silhouette": "The First Forge hums with a low, resonant vibration that rattles the teeth, its brass and copper conduits bathed in the erratic strobe of captured geode lightning. Pungent metallic smoke hangs heavy in the air, drifting lazily through the cavernous space before being sucked out by massive, churning ventilation fans. Sparks cascade from the central induction crucible, casting long, jittery shadows across the soot-stained walls.",
+      "sensory_palette": {
+        "sight_and_color": "Erratic blue-white strobes of geode lightning against deep, soot-stained shadows and polished brass.",
+        "sound": "Low, bone-rattling resonant hums punctuated by the sharp crackle of arcing electricity and grinding ventilation fans.",
+        "smell": "Ozone, pungent metallic tang, and the dry, dusty scent of heated copper.",
+        "tactile_temperature": "Oppressively warm, with sudden, localized pockets of biting static chill.",
+        "taste_optional": "A faint, coppery tang that coats the tongue from the ionized air."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Overloaded Induction Crucible",
+          "affordance_description": "A massive, sparking vat of molten iron-wheat husks barely contained by its magnetic shielding.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 16
+        },
+        {
+          "feature_name": "Resonant Geode Lightning Capacitor",
+          "affordance_description": "An exposed array of crystal nodes humming with volatile, trapped electrostatic energy.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Soot-Stained Ventilation Duct",
+          "affordance_description": "A dark, cramped exhaust vent leading out of the forge, currently pulling in a thick haze of metallic smoke.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 12
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "ferrofluid_shear_storm",
+        "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz Shear",
+        "motivation_goal": "To violently equalize the magnetic pressure differential across the colony.",
+        "consistent_method": "Inducing sudden, massive surges in local geode capacitors and stripping magnetic shielding.",
+        "immediate_complication": "The First Forge's primary induction crucible is losing its magnetic containment field.",
+        "pressure_index": 7,
+        "uninterrupted_escalation": "The crucible will breach, flooding the forge with molten, magnetized iron-wheat and causing catastrophic electrical failure."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "The induction crucible needs immediate recalibration to handle the incoming ferrofluid shear.",
+        "level_2_local": "The First Forge must remain operational to process the Crystalline Iron-Wheat into shielding.",
+        "level_3_campaign_arc": "The colony's survival depends on mastering the exoplanet's volatile magnetic weather."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_03_silas",
+          "tactical_role": "DEFENDER"
+        },
+        {
+          "actor_id": "enclave_01_hector",
+          "tactical_role": "STRIKER"
+        }
+      ],
+      "strain_accumulated_upward": 2,
+      "prerolled_hazard_queue": [
+        12,
+        8,
+        19,
+        4,
+        15
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.4,
+      "motivational_vector_saturation": 0.6,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.8,
+      "composite_lpi": 0.57,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_llm",
+        "model": "judge-v1",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "If Silas fails to stabilize the crucible's magnetic containment, the resulting feedback loop will surge through the hand-soldered copper busbar, violently bursting the primary geode capacitor and scattering highly magnetized, flesh-searing shrapnel across the forge floor, blinding the sensors for Hector's incoming shift.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Silas misreads the phase shift, causing an immediate blowout that severely damages the forge and injures himself.",
+          "below_dc_complicated_fail_forward": "Silas averts total disaster but the containment field fractures, leaking dangerous levels of ionized gas that makes the next shift extremely hazardous.",
+          "meets_dc_clean_success": "Silas expertly recalibrates the crucible, stabilizing the field just as the shear storm hits, securing the forge.",
+          "dc_plus_5_or_20_extended_lore": "Silas not only stabilizes the field but discovers a harmonic resonance pattern in the shear that perfectly aligns with the iron-wheat lattice, dramatically increasing processing efficiency."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_llm",
+        "temperature": 0.8,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Silas grimaces, the faint coppery taste of ozone sharp on his tongue, and tightens the brass valve on the induction crucible one final, precise quarter-turn. He wipes soot from his brow, his joints aching in time with the low, bone-rattling thrum of the forge, and turns just as Hector bounds through the heavy iron doors. With a weary but affectionate grunt, Silas tosses the heavy spanner to the prodigy. 'The containment field is holding, barely. Don't touch the phase sequencer unless the geode lightning spikes past nominal. Your watch.' Hector catches the spanner effortlessly, a spark of chaotic excitement in his eyes, ready to face the storm."
+      }
+    },
+    "context_manifest": {
+      "loaded_full_card_ids": [
+        "enclave_03_silas"
+      ],
+      "full_cards_loaded_count": 1
+    }
+  }
+}
