@@ -1443,20 +1443,6 @@
   "total_events_through_tick": 87,
   "recent_segments": [
     {
-      "segment_id": "seg_s015_t0057_enclave_03_silas",
-      "sol_id": 15,
-      "colony_sol": 15,
-      "tick_id": 57,
-      "active_pov_id": "enclave_03_silas",
-      "next_pov_target": "enclave_01_hector",
-      "location_id": "The_First_Forge",
-      "time_of_day": "DAWN_SHIFT",
-      "day_phase": "DAWN_SHIFT",
-      "title": "Sol 015 \u2022 DAWN_SHIFT (enclave_03_silas)",
-      "opening_excerpt": "Silas secures the primary grounding mast against the crushing magnetic shear before tossing the heavy copper baton directly into Hector's waiting hand.",
-      "excerpt": "Silas secures the primary grounding mast against the crushing magnetic shear before tossing the heavy copper baton directly into Hector's waiting hand."
-    },
-    {
       "segment_id": "seg_s015_t0058_enclave_01_hector",
       "sol_id": 15,
       "colony_sol": 15,
@@ -1609,6 +1595,20 @@
       "title": "Sol 018 \u2022 DUSK_CRAFT (enclave_05_kaio)",
       "opening_excerpt": "The shoreline of the Ferrofluid Sea was a churning chaos of metallic froth, where the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea created jagged, luminescent waves that crashed against the obsidi",
       "excerpt": "The shoreline of the Ferrofluid Sea was a churning chaos of metallic froth, where the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea created jagged, luminescent waves that crashed against the obsidi"
+    },
+    {
+      "segment_id": "seg_s019_t0073_enclave_03_silas",
+      "sol_id": 19,
+      "colony_sol": 19,
+      "tick_id": 73,
+      "active_pov_id": "enclave_03_silas",
+      "next_pov_target": "enclave_01_hector",
+      "location_id": "loc_first_forge_interior",
+      "time_of_day": "DAWN_SHIFT",
+      "day_phase": "DAWN_SHIFT",
+      "title": "Sol 019 \u2022 DAWN_SHIFT (enclave_03_silas)",
+      "opening_excerpt": "",
+      "excerpt": ""
     }
   ],
   "available_sols": [
