@@ -1,0 +1,112 @@
+{
+  "campaign_metadata": {
+    "session_number": 22,
+    "colony_sol": 22,
+    "tick_id": 87,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Suspend ferrofluid droplets in gravity-defying resonant spires.",
+      "mid_term_milestone": "Complete The Simulacrum's 5D quartz storage matrix.",
+      "campaign_arc_climax": "Achieve total resonance mapping of the Enclave crater."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Simulacrum",
+    "macro_silhouette": "The Simulacrum chamber is a cathedral of precision, dominated by thirty-two brass Helmholtz Vernier rings. A fingernail-sized crystal drinks violet laser light at the heart of the darkened room. Orbiting droplets of liquid iron dance in the dark to a minor-key cello chord, defying gravity within a resonant magnetic field.",
+    "sensory_palette": {
+      "sight_and_color": "Deep violets of laser light cutting through the gloom, pulsing with the rhythmic dance of liquid iron.",
+      "sound": "A minor-key cello chord vibrating the air, underlaid by the high, clean whine of the electromagnet matrix.",
+      "smell": "Ozone from the lasers and the sharp, metallic tang of suspended ferrofluid.",
+      "tactile_temperature": "Cool, dry, and static-charged, raising the fine hairs on bare arms.",
+      "taste_optional": "A faint metallic copper tang on the back of the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Ferrofluid Resonant Spire",
+        "affordance_description": "A gravity-defying column of liquid iron that can be manipulated by acoustic frequencies.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "5D Holographic Quartz Lattice",
+        "affordance_description": "A nanostructured memory crystal holding terabytes of storm telemetry.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 18
+      },
+      {
+        "feature_name": "Electromagnet Matrix Controls",
+        "affordance_description": "Thirty-two brass Helmholtz Vernier rings governing the magnetic containment field.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 16
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "cymatic_ferrofluid_anomaly",
+      "name_and_role": "Resonant Ferrofluid Splatter (The Unruly Liquid)",
+      "motivation_goal": "To escape magnetic containment and splash onto the pristine ceiling.",
+      "consistent_method": "Exploiting microscopic fluctuations in the polyphonic synthesizer harmonics.",
+      "immediate_complication": "A sudden drop in voltage threatens the integrity of the resonant spires.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The ferrofluid will breach containment, ruining the acoustic baffling and staining the ceiling."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Isla must encode 5D holographic storm telemetry into nanostructured quartz.",
+      "level_2_local": "To maintain The Simulacrum's predictive models of the valley's magnetohydrodynamics.",
+      "level_3_campaign_arc": "To ensure the Enclave survives the impending perigee tide."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_10_isla",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_15_dorian",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [7, 12, 19, 4, 15]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.2,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.575,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "jules",
+      "model": "jules-deterministic-engine",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The ferrofluid splashes, ruining the crystal calibration and forcing Isla to start over.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Isla miscalculates the Helmholtz boundary tensors, causing a catastrophic splash.",
+        "below_dc_complicated_fail_forward": "The telemetry encodes, but the ferrofluid containment weakens, requiring constant manual adjustment.",
+        "meets_dc_clean_success": "The 5D quartz matrix stabilizes the resonant spires perfectly.",
+        "dc_plus_5_or_20_extended_lore": "Isla discovers a new harmonic frequency that increases storage density by 40%."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": false,
+      "agency_handoff_prompt": "Isla didn't trust hard drives. They spun. They failed. They rusted. Crystals were forever. \n\nShe adjusted the thirty-second brass Helmholtz Vernier ring, her movements economical and tight. In the center of the darkened Simulacrum chamber, a fingernail-sized quartz lattice drank violet laser light. Around it, suspended entirely by magneto-acoustic cymatics, droplets of liquid iron orbited in a gravity-defying dance, keeping time to a minor-key cello chord played by a polyphonic synthesizer.\n\nShe was encoding terabytes per second of five-dimensional holographic storm telemetry into the nanostructured quartz. It was a staggering feat of computational architecture. Yet, here she was, pausing every four minutes to hand-polish the primary optical lenses with a scrap of chamois leather until her fingers cramped. \n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Isla muttered to herself, snapping the chamois crisp. She checked the acoustic tables. Orion's cymatic intuition was ninety-four percent accurate, which would be infuriating if the remaining six percent didn't require her boundary tensors to keep the ferrofluid from splashing onto the ceiling.\n\nThe synthesizer hit a low, resonant note, and the ferrofluid spires spiked in perfect synchronization. She exhaled, a sharp, controlled breath. The lattice was stable. Now, she just needed to hand off the telemetry logs to Dorian before the chronicler started weaving wild tales about 'iron elementals' in the dark.\n\nShe picked up the brass-bound slate, wiping a microscopic speck of dust from the screen, and stepped out into the humming corridor to find him."
+    }
+  },
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_10_isla"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "base_snapshot_tick": 87
+}
