@@ -1,0 +1,48 @@
+{
+  "event_id": "evt_s021_t0084_reflection",
+  "tick_id": 84,
+  "colony_sol": 21,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-11-14T19:00:00Z",
+  "base_snapshot_tick": 84,
+  "event_type": "NIGHTLY_REFLECTION",
+  "location": "The Hearth",
+  "actors": [
+    "enclave_13_ryn",
+    "enclave_03_silas"
+  ],
+  "summary": "Ryn calculates the caloric toll of the feast, tracking the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea while serving, before passing the ladle to Silas.",
+  "importance": 8,
+  "novelty_score": 7,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {
+    "enclave_13_ryn": {
+      "stress_delta": -0.15,
+      "fatigue_delta": 0.05
+    },
+    "enclave_03_silas": {
+      "stress_delta": -0.05,
+      "fatigue_delta": -0.1
+    }
+  },
+  "relationship_deltas": {
+    "enclave_13_ryn": {
+      "enclave_03_silas": {
+        "trust_delta": 0.05
+      }
+    }
+  },
+  "evidence_refs": [
+    "evt_s021_t0082_expedition_consequence"
+  ],
+  "narrative_prose": "The kitchen was a forge of its own, roaring with the heat of the central hearth where Ryn commanded the culinary brigade. She could see the magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea out the reinforced viewport, the swirling magnetic tides in shades of violet and deep crimson serving as a visual metronome for her reduction sauces. The hissing of the steam-jacketed kettles filled the room, carrying the rich, savory smell of roasted cave-truffles and caramelized onions. She tasted a spoonful of the iron-wheat broth, the umami grounding her focus as the radiating warmth of the stove soaked into her skin. The tension in the valley's crust mirrored the tension in the colony's caloric reserves, a delicate dance of energy where she had to DEFEND the thermal gradient against incoming drafts. She urged the others to CONSUME the hearty stew to restore missing calories, while making sure to CONCEAL the extra emergency rations beneath the workstation for harder times. The stakes were graduated: a slight dip in heat meant tough roots, a major drop meant a failed meal, but a total loss of the hearth's integrity would mean freezing in the dark. She passed the heavy brass ladle, cold to the touch at the handle, to Silas in a firm, physical handoff. 'It's your watch on the grains, Silas. Keep the pressure steady.'",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
+    "full_cards_loaded_count": 1
+  }
+}
