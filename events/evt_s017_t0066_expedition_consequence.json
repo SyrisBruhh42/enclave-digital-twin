@@ -1,0 +1,42 @@
+{
+  "event_id": "evt_s017_t0066_expedition_consequence",
+  "tick_id": 66,
+  "colony_sol": 17,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2042-08-17T12:00:00Z",
+  "base_snapshot_tick": 65,
+  "event_type": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+  "location": "The_Stormbreaker_Spire",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_05_kaio"
+  ],
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "summary": "Hector addresses the magnetic shear with kinetic flair before handing off the task to Kaio.",
+  "importance": 8,
+  "novelty_score": 0.75,
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "state_deltas": {
+    "enclave_01_hector": {
+      "stress_delta": -0.06,
+      "fatigue_delta": 0.05
+    }
+  },
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "narrative_prose": "The ozone gale roared around the Stormbreaker Spire, tearing at Hector's coat as he scaled the highest induction rigging. Below him, the vast expanse of the ferrofluid sea churned, a volatile canvas of Magnetohydrodynamic Kelvin-Helmholtz shear that painted the horizon in violent, shifting metallic waves. He grinned, feeling the bite of the cold wind and the static charge raising the hair on his arms. The tang of scorched copper was sharp and sweet in the air. He secured his grip on the primary grounding shunt, his muscles straining against the immense magnetic pull. To his left, the colossal capacitor bank hummed with pent-up energy, demanding precise calibration; to his right, a secondary containment valve sputtered, threatening a cascade failure if not manually bypassed. In the center, the main induction core glowed a furious blue, requiring a perfectly timed strike with the iron spanner to realign the flux lines. Hector laughed into the gale, reading the tensile strain and wind shear through the immediate physical feedback of the spire. He hammered the core, forcing the anomaly back into sequence, but the ripple effect destabilized the lower ridge. He slid down the access ladder in a shower of sparks, tossing the heavily magnetized spanner to Kaio. 'Your turn to dance with the tide, Scout,' he yelled over the storm.",
+  "steward_note": "deterministic-enclave-5section-v2: Pacing=MULLIGAN_CRISIS; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_01_hector -> Handoff=enclave_05_kaio.",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ]
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.7
+  }
+}
