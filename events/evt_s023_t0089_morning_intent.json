@@ -1,0 +1,141 @@
+{
+  "event_id": "evt_s023_t0089_morning_intent",
+  "tick_id": 89,
+  "colony_sol": 23,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-11-16T00:12:00Z",
+  "base_snapshot_tick": 85,
+  "event_type": "MORNING_INTENT",
+  "location": "The_Stormbreaker",
+  "actors": [
+    "enclave_02_jane",
+    "enclave_07_willow"
+  ],
+  "active_pov_id": "enclave_02_jane",
+  "next_pov_target": "enclave_07_willow",
+  "prev_next_pov_target": "enclave_02_jane",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_02_jane"
+    ]
+  },
+  "summary": "Jane meticulously models a deterministic chaos Lorenz attractor to guide femtosecond Laser-Induced Plasma Channels into the bedrock geode, only to be forced to grab a muddy shovel to complete the physical grounding trench. She hands off a spool of sensor cable to Willow as the morning shift begins.",
+  "importance": 8.0,
+  "novelty_score": 0.85,
+  "science_vegetable": "Femtosecond Laser-Induced Plasma Channels (LIPC) ionizing a conductive step-leader highway at 50 kV/m atmospheric potential gradient into the bedrock capacitor geode.",
+  "state_deltas": {
+    "stress_delta": 0.05
+  },
+  "relationship_deltas": [
+    {
+      "from": "enclave_02_jane",
+      "to": "enclave_07_willow",
+      "bond_delta": 0.01,
+      "trust_delta": 0.01
+    }
+  ],
+  "evidence_refs": [],
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 23,
+      "colony_sol": 23,
+      "tick_id": 89,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Establish morning intents and ground the Stormbreaker capacitor geode.",
+        "mid_term_milestone": "Stabilize the magnetosphere.",
+        "campaign_arc_climax": "Complete the grand projects."
+      }
+    },
+    "active_location": {
+      "location_id": "The_Stormbreaker",
+      "macro_silhouette": "The Stormbreaker tower rises like a screaming copper spire fifty meters above the crater valley, its metallic frame vibrating with residual atmospheric charge. A muddy, half-dug trench scars the soil at its base, leading to the buried capacitor geode. A violet laser needle stitching the bruised purple thunderhead to a screaming copper spire fifty meters above the valley.",
+      "sensory_palette": {
+        "sight_and_color": "Bruised purple clouds, copper glints, and the dark, wet brown of freshly turned earth.",
+        "sound": "The low, resonant hum of the geode and the whistling wind cutting through the spire.",
+        "smell": "Ozone, wet dirt, and the faint tang of ionized air.",
+        "tactile_temperature": "Cold, damp air that makes the muddy shovel handle slip in the hands.",
+        "taste_optional": "The metallic taste of ozone on the back of the tongue."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Muddy Trench",
+          "affordance_description": "Can be used to cover the physical grounding cable from atmospheric shears.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Capacitor Geode",
+          "affordance_description": "Can draw and store gigajoules of energy from the sky.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Copper Spire",
+          "affordance_description": "Can pull ambient static discharge away from the surrounding instruments.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "Atmospheric Potential Gradient",
+        "name_and_role": "50 kV/m step-leader threat",
+        "motivation_goal": "Discharge unpredictably into ungrounded metal.",
+        "consistent_method": "Building static charge across the valley floor.",
+        "immediate_complication": "Makes the muddy trench highly dangerous to dig.",
+        "pressure_index": 7,
+        "uninterrupted_escalation": "A premature lightning strike hits the tower."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Need to finish digging the trench and hand the sensor cable to Willow.",
+        "level_2_local": "Ground the capacitor geode before the storm breaks.",
+        "level_3_campaign_arc": "Harness the planet's atmospheric chaos for The Enclave."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_02_jane",
+          "tactical_role": "LEADER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [ 4, 8, 15, 12, 18 ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.6,
+      "motivational_vector_saturation": 0.6,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.7,
+      "composite_lpi": 0.6,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_ai",
+        "model": "qwen3.5:4b-q4_K_M",
+        "temperature": 0.1,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The trench collapses or the cable handoff is fumbled in the mud.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Trench collapses, cable snaps, and minor shock.",
+          "below_dc_complicated_fail_forward": "Handoff complete but trench needs redigging.",
+          "meets_dc_clean_success": "Flawless handoff and grounding.",
+          "dc_plus_5_or_20_extended_lore": "Flawless handoff with deep insight into Lorenz attractor alignment."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_ai",
+        "temperature": 0.4,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Jane wiped the mud from her cheek, calculating the atmospheric potential gradient in her head. She could model a planet-wide Lorenz strange attractor in phase space, adjusting the femtosecond Laser-Induced Plasma Channels to ionize a conductive step-leader highway at 50 kV/m into the bedrock capacitor geode. Yet, despite her ability to map deterministic chaos across the exoplanet, she was currently knee-deep in a muddy trench, spending her afternoon digging by hand just to ground a copper rod.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Jane muttered to herself, echoing a sentiment she barely believed right now. The wind tore at her clothes, whistling around the copper spire fifty meters above the crater valley. The sky wasn't just grey; it was a bruised purple thunderhead, lit from within by constant sheet lightning. A violet laser needle stitched the clouds to the screaming copper spire above her.\n\n\"It's not random,\" Jane muttered, her eyes darting across the muddy trench. \"It's chaotic. Deterministic chaos. There's a pattern, it just has infinite variables. And right now, one of those variables is this shovel.\"\n\nA sharp spike of frustration pierced her usual detached logic. Her mind, perfectly tuned to solve differential equations, recoiled at the sheer indignity of manual labor. For a terrifying second, her Vex Override threatened to surface—a sudden, dramatic urge to climb out of the trench, drape herself in the grounding wire, and demand that the storm applaud her elegant code.\n\nShe pushed the diva down and focused. The laser channel was primed. The ionization path was set. She just needed to hand off the physical connection. Willow approached through the gloom, looking entirely too comfortable in the damp chill.\n\n\"Here,\" Jane said, thrusting the muddy spool of sensor cable toward the alchemist. \"Don't drop it. The potential gradient is passing 50 kilovolts per meter. If the step-leader connects before this is spliced, you'll be a crispy anecdote.\""
+      }
+    }
+  }
+}
