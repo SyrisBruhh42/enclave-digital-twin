@@ -70,5 +70,8 @@
       "enclave_01_hector"
     ]
   },
-  "narrative_prose": "The magnetohydrodynamic Kelvin-Helmholtz shear tore across the ferrofluid sea, whipping the black waves into razor-sharp geometric crests that defied gravity. Hector grinned into the biting, ozone-thick wind, feeling the inductive heat through the soles of his insulated boots as he balanced on the straining copper scaffolding. The sheer electromagnetic force threatened to rip the telemetry probe right from his grip, the metal casing vibrating violently. 'Kaio!' Hector roared over the low-frequency hum, leaning precariously out over the lethal metallic spume. 'You want the real data? You gotta catch it while it's hot!' With a calculated thrust that ignored the agonizing strain in his shoulders, Hector swung the heavy probe forward, releasing it directly into Kaio's waiting hands before the shear could snap the tether."
+  "narrative_prose": "The magnetohydrodynamic Kelvin-Helmholtz shear tore across the ferrofluid sea, whipping the black waves into razor-sharp geometric crests that defied gravity. Hector grinned into the biting, ozone-thick wind, feeling the inductive heat through the soles of his insulated boots as he balanced on the straining copper scaffolding. The sheer electromagnetic force threatened to rip the telemetry probe right from his grip, the metal casing vibrating violently. 'Kaio!' Hector roared over the low-frequency hum, leaning precariously out over the lethal metallic spume. 'You want the real data? You gotta catch it while it's hot!' With a calculated thrust that ignored the agonizing strain in his shoulders, Hector swung the heavy probe forward, releasing it directly into Kaio's waiting hands before the shear could snap the tether.",
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
+  }
 }

@@ -13,7 +13,9 @@
   "context_manifest": {
     "full_cards_loaded_count": 1,
     "interlocutor_full_cards_loaded": 0,
-    "loaded_full_card_ids": ["enclave_01_hector"]
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ]
   },
   "campaign_metadata": {
     "session_number": 19,
@@ -89,7 +91,8 @@
   "lpi_metrics": {
     "dialogue_to_action_ratio": 0.4,
     "environmental_friction_events": 1,
-    "consequence_severity_potential": "HIGH"
+    "consequence_severity_potential": "HIGH",
+    "composite_lpi": 0.68
   },
   "dual_agent_contract": {
     "judge_tactician": {
@@ -112,5 +115,8 @@
       "prosodic_micro_pauses_enabled": true,
       "agency_handoff_prompt": "Hector grips the brass railing of the observation deck, the storm raging around him. He can feel the hum of the magnetohydrodynamic Kelvin-Helmholtz shear vibrating through the soles of his boots. He recalibrates the induction rigging, bleeding off the static charge with a crackle of ozone. Satisfied, he turns from the chaotic sea and spots Kaio approaching. Hector tosses a heavy, insulated wrench to Kaio, shouting over the roar of the wind. 'The spire is stable for now, scout! What did you find out there?' Kaio catches the wrench, the baton now passed."
     }
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
   }
 }
