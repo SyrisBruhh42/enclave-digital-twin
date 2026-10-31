@@ -1,0 +1,122 @@
+{
+  "base_snapshot_tick": 84,
+  "context_manifest": {
+    "active_pov_id": "enclave_13_ryn",
+    "next_pov_target": "enclave_03_silas",
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
+    "full_cards_loaded_count": 1,
+    "relationships_loaded": [],
+    "world_state_version": "world_state_v2.0.0"
+  },
+  "campaign_metadata": {
+    "session_number": 20,
+    "colony_sol": 21,
+    "tick_id": 84,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Resolve the caloric allocation dispute for the new forge.",
+      "mid_term_milestone": "Establish a stable metabolic baseline before the next severe weather event.",
+      "campaign_arc_climax": "Complete the Grand Project without exhausting the Enclave's thermal reserves."
+    }
+  },
+  "active_location": {
+    "location_id": "the_hearth_galley",
+    "macro_silhouette": "The Hearth is a massive, soot-stained command center of culinary engineering, dominated by thirty-gallon steam-jacketed copper kettles that gleam like polished shields. Brass venting hoods, forged from scrapped turbine housings, roar overhead as they cycle the heavy, spice-laden air outward. Heavy iron butcher blocks bear the scars of a thousand meticulously portioned meals, a testament to relentless thermodynamic survival.",
+    "sensory_palette": {
+      "sight_and_color": "Gleaming copper, matte black iron, and the bright, jarring orange of a precision kitchen timer.",
+      "sound": "The rhythmic, unforgiving rap of a heavy brass ladle against butcher block, cutting through the low rumble of the ventilation fans.",
+      "smell": "Rich, earthy braised mire-lentils wrestling with the sharp, acidic bite of vinegar scouring salt.",
+      "tactile_temperature": "Oppressively hot near the steam kettles, offset by the draft of the heavy steel service doors.",
+      "taste_optional": "The lingering, savory umami of a perfectly balanced broth clinging to the back of the throat."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Thirty-Gallon Steam-Jacketed Kettles",
+        "affordance_description": "Massive copper vats radiating immense thermal energy, currently holding the colony's fragile caloric reserves.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Precision Brass Kitchen Timer",
+        "affordance_description": "A meticulously calibrated timepiece that dictates the exact moment Maillard caramelization peaks.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Heavy Iron Butcher Block",
+        "affordance_description": "A sturdy, unyielding surface perfect for rapping a ladle to demand absolute attention or hiding small culinary transgressions.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "the_ferrofluid_sea_shear",
+      "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+      "motivation_goal": "To destabilize the colony's thermal and magnetic equilibrium through chaotic, unpredictable energy fluctuations.",
+      "consistent_method": "Pulsing erratic magnetic waves that interfere with delicate sensory equipment and precision culinary timers.",
+      "immediate_complication": "The shear wave causes the galley's temperature to spike and plummet, threatening to ruin a critical batch of myco-protein.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "If unchecked, the fluctuating thermals will completely collapse the delicate metabolic engine Ryn maintains, spoiling a week's worth of rations."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Ryn must prevent the Magnetohydrodynamic Kelvin-Helmholtz shear from ruining the night's feast.",
+      "level_2_local": "Maintaining caloric integrity is essential to keep the Forge Squad functional during their grueling shifts.",
+      "level_3_campaign_arc": "Proving that The Hearth is the unshakeable core of the colony, capable of weathering any exoplanetary anomaly."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 12,
+    "prerolled_hazard_queue": [
+      3,
+      8,
+      14,
+      19,
+      2
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.4,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.67,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "aegis_local",
+      "model": "judge_v3",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If Ryn fails, the temperature fluctuations will ruin the myco-protein batch, forcing the colony onto strict emergency rations for the next three days.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Ryn misreads the magnetic interference and adjusts the kettles incorrectly, accelerating the spoilage and causing a minor steam explosion.",
+        "below_dc_complicated_fail_forward": "The batch is saved, but the effort drains the galley's power cells, requiring immediate, grueling manual labor to reset the systems.",
+        "meets_dc_clean_success": "Ryn anticipates the shear wave perfectly, adjusting the thermal loads in real-time to preserve the feast flawlessly.",
+        "dc_plus_5_or_20_extended_lore": "Not only is the feast saved, but Ryn discovers a way to harness the ambient magnetic shear to enhance the Maillard reaction, creating a permanently superior cooking method."
+      }
+    },
+    "master_narrator": {
+      "executor": "aegis_narrator",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Ryn wiped a sheen of sweat from her brow, ignoring the jarring orange pulse of the precision kitchen timer as the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea sent a shudder through the copper kettles. She rapped her heavy brass ladle sharply against the iron butcher block. \"Listen to me very carefully!\" she barked over the roar of the venting hoods, glaring at the fluctuating thermal gauges. \"If that magnetic shear drops the core temperature of this myco-protein batch by even three degrees, half this colony goes on half-rations tomorrow!\" She expertly adjusted a heavy brass valve, wrestling the heat back into alignment before the delicate caloric balance could collapse. The crisis averted for now, she wiped her hands on her apron and grabbed a heavy, steaming thermos of bone-broth. Striding out of the oppressively hot galley, she navigated the dimly lit corridors toward the engineering bay. Finding Silas knee-deep in schematics, she shoved the thermos into his chest. \"Drink,\" she commanded, her voice softening just a fraction. \"You're burning daylight, Silas, and your metabolic ledger is bleeding.\" Silas caught the heavy thermos, the heat bleeding through his thick gloves as he looked up from his work."
+    }
+  }
+}
