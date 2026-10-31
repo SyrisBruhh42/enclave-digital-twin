@@ -1,0 +1,140 @@
+{
+  "event_id": "lore_s018_t0069_w05_b05",
+  "tick_id": 69,
+  "colony_sol": 18,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-10-25T00:00:00Z",
+  "base_snapshot_tick": 69,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The First Forge",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "summary": "Silas hands off to Hector at The First Forge amidst magnetic shear.",
+  "importance": 5,
+  "novelty_score": 0.8,
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ]
+  },
+  "narrative_prose": "Silas adjusted the calipers by another micron, his eyes narrowed as the familiar, irritating hum of Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea vibrated through the floor grates. The First Forge felt heavier this morning, the air thick with latent charge. He checked the containment tolerances three times, his jaw set in a rigid line. \"Inefficient,\" he muttered to the empty air, turning the heavy brass wrench over in his calloused hands. Without looking up, he extended his arm backward, waiting for the inevitable chaotic entry. Hector slid into the workspace a second later, dodging a cascade of sparks. Silas thrust the heavy, hand-soldered copper busbar directly into Hector's chest. \"Hold this steady, and try not to vaporize your eyebrows this time.\"",
+  "campaign_metadata": {
+    "session_number": 3,
+    "colony_sol": 18,
+    "tick_id": 69,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Maintain containment despite the magnetic shear.",
+      "mid_term_milestone": "Stabilize The Stormbreaker prototype.",
+      "campaign_arc_climax": "Master the exoplanet's unpredictable weather patterns."
+    }
+  },
+  "active_location": {
+    "location_id": "the_first_forge",
+    "macro_silhouette": "The First Forge is a cavernous chamber built of hand-forged brass and copper, illuminated by the erratic flashing of captured lightning geodes. Workbenches overflow with meticulously categorized tools and heavy, oxidized iron components.",
+    "sensory_palette": {
+      "sight_and_color": "Oxidized iron and gleaming copper under harsh, jagged electrical flashes.",
+      "sound": "The deep, bone-rattling hum of magnetic shear and the sharp crack of geode discharge.",
+      "smell": "Ozone, hot metal, and the faint, dusty scent of crystallized fungus.",
+      "tactile_temperature": "Stiflingly hot, with sudden, icy drafts from pressure differentials.",
+      "taste_optional": "A metallic tang of copper and static electricity on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Heavy Brass Wrench",
+        "affordance_description": "A massive, perfectly balanced tool capable of shattering a faulty containment seal.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Uncalibrated Copper Busbar",
+        "affordance_description": "A conductive rod humming with latent energy, drawing erratic lightning strikes.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Lead-Lined Tool Cabinet",
+        "affordance_description": "A heavy, reinforced locker large enough to block localized electromagnetic bursts.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "captured_lightning_geode",
+      "name_and_role": "Volatile Power Source (Environmental Hazard)",
+      "motivation_goal": "Discharge excess kinetic energy randomly into the environment.",
+      "consistent_method": "Arcing electricity toward any ungrounded metallic surface.",
+      "immediate_complication": "The geode's erratic discharging interferes with Silas's precise micrometer readings.",
+      "pressure_index": 5,
+      "uninterrupted_escalation": "The geode could overload the main busbar, causing a localized plasma vent."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Silas must secure the containment seals before the magnetic shear causes a breach.",
+      "level_2_local": "Hector needs the stabilized energy output to test his Stormbreaker prototype.",
+      "level_3_campaign_arc": "The Enclave must learn to harness the planet's volatile geology without destroying themselves."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      },
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      2,
+      9,
+      14,
+      17,
+      19
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.7,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "OpenAI",
+      "model": "gpt-4",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The magnetic shear overwhelms the localized shielding, damaging Hector's prototype and injuring a squad member.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Silas's calibrations fail catastrophically, triggering a dangerous plasma vent.",
+        "below_dc_complicated_fail_forward": "The containment holds, but the power surge fries Silas's primary set of calipers.",
+        "meets_dc_clean_success": "The busbar transfers power smoothly, resisting the magnetic shear entirely.",
+        "dc_plus_5_or_20_extended_lore": "Silas intuitively discovers a new resonant frequency that perfectly negates the local magnetic interference."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules",
+      "temperature": 0.6,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": false,
+      "agency_handoff_prompt": "What do you do, Hector?"
+    }
+  }
+}
