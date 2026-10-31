@@ -1,0 +1,120 @@
+{
+  "event_type": "INCHARACTER_PSYCHOMETRIC_DRIFT_AUDITS",
+  "bucket": "INCHARACTER_PSYCHOMETRIC_DRIFT_AUDITS",
+  "phase": "THE_FEAST",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_13_ryn -> Handoff=enclave_03_silas.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 17,
+    "tick_id": 68,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Resolve the caloric allocation dispute surrounding the ferrofluid sea.",
+      "mid_term_milestone": "Stabilize The Hearth's metabolic engine.",
+      "campaign_arc_climax": "Harmonize the competing specialist disciplines before the incoming cold front."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Hearth_Galley",
+    "macro_silhouette": "The central galley gleams with meticulously polished copper kettles and heavy cast-iron stoves, an industrial sanctuary of caloric precision. High arched ceilings trap the rich, savory heat, while intricate brass ductwork distributes the ambient thermal runoff.",
+    "sensory_palette": {
+      "sight_and_color": "Golden firelight dancing off polished copper, contrasting with the dark, heavy iron of the stoves.",
+      "sound": "The rhythmic, heavy bubbling of a massive stockpot and the sharp, rhythmic chopping on a butcher block.",
+      "smell": "Rich, savory aromas of roasting myco-proteins infused with pungent, herbaceous spices.",
+      "tactile_temperature": "Oppressively humid and intensely warm, radiating from the central hearth.",
+      "taste_optional": "A lingering, savory metallic tang of airborne salt and Maillard crusts."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Massive Copper Stockpot",
+        "affordance_description": "Can be utilized to intercept encroaching threats or douse disputes with boiling broth.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Aromatic Spice Rack",
+        "affordance_description": "Can draw attention with the overpowering, pungent scents of alien herbs.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Heavy Iron Oven Doors",
+        "affordance_description": "Can be swung shut to shield delicate ingredients or hide emergency rations.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_shear_instability",
+      "name_and_role": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+      "motivation_goal": "Disrupt thermal regulation and caloric synthesis through chaotic magnetic fluctuations.",
+      "consistent_method": "Inducing unpredictable temperature spikes in the galley's magnetic induction stoves.",
+      "immediate_complication": "The primary broth vat threatens to boil over and scorch a week's worth of nutrients.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "Will eventually cascade into a full galley blackout, halting all food production and plunging The Hearth into freezing darkness."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Ryn must prevent the meal from being ruined by the fluctuating magnetic stoves.",
+      "level_2_local": "Silas's engineering work on the ferrofluid sea is directly impacting The Hearth's power stability.",
+      "level_3_campaign_arc": "The colony must learn to balance the needs of heavy industry against the delicate metabolic requirements of its inhabitants."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      14,
+      8,
+      19,
+      3,
+      11
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.85,
+    "motivational_vector_saturation": 0.9,
+    "unresolved_conflict_ratio": 0.75,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.86,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Local_Deterministic",
+      "model": "Rules_Engine_v2",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If the check fails, the broth scorches, wasting vital calories and escalating tension between Ryn and Silas over power priorities.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Ryn completely misjudges the magnetic flux, causing a localized explosion of boiling broth and a severe argument.",
+        "below_dc_complicated_fail_forward": "The meal is saved, but at the cost of burning out a critical induction coil, meaning tomorrow's rations will be cold.",
+        "meets_dc_clean_success": "Ryn masterfully adjusts the cooking timers to synchronize with the magnetic shear, saving the feast perfectly.",
+        "dc_plus_5_or_20_extended_lore": "Ryn not only saves the feast but discovers a new culinary technique utilizing the magnetic resonance to enhance nutrient absorption."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules_AI",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "With a sharp rap of her ladle against the copper pot, Ryn commands the room's attention, locking eyes with Silas as she hands him the heavy iron serving tray, passing the burden of the next move to him."
+    }
+  }
+}
