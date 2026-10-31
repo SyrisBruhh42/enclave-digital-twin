@@ -1,0 +1,106 @@
+{
+  "base_snapshot_tick": 87,
+  "context_manifest": {
+    "loaded_full_card_ids": ["enclave_10_isla"],
+    "full_cards_loaded_count": 1
+  },
+  "campaign_metadata": {
+    "session_number": 22,
+    "colony_sol": 22,
+    "tick_id": 87,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Encode telemetry into quartz.",
+      "mid_term_milestone": "Stabilize the optical lattice.",
+      "campaign_arc_climax": "Complete the 5D holographic atlas."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Simulacrum",
+    "macro_silhouette": "The Simulacrum chamber is bathed in the bruised violet light of the twin suns, casting razor-sharp double shadows across the brass-framed holographic projectors. A grid of electromagnets hums continuously beneath a central observation deck, causing loose metal shavings to dance along the grooved floor. Above, suspended crystals refract the ambient light into a kaleidoscope of five-dimensional data.",
+    "sensory_palette": {
+      "sight_and_color": "Bruised violet light and glowing quartz lattices.",
+      "sound": "A minor-key cello chord humming from hidden acoustic baffles.",
+      "smell": "Ozone and hot brass.",
+      "tactile_temperature": "Cold drafts interspersed with radiant heat from the projectors.",
+      "taste_optional": "A faint metallic tang of ionized air."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Electromagnet Harmonic Grid",
+        "affordance_description": "Can be modulated to manipulate ferrofluid structures.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Birefringent Quartz Lattices",
+        "affordance_description": "Can bend light to hide sensitive components.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Acoustic Baffling Panels",
+        "affordance_description": "Can be deployed to dampen harmful acoustic resonance.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_droplets",
+      "name_and_role": "Suspended Ferrofluid Droplets",
+      "motivation_goal": "To align with the strongest local magnetic flux.",
+      "consistent_method": "Forming Rosensweig spikes and gravity-defying spires.",
+      "immediate_complication": "They splash and corrode unshielded optical lenses.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Eventually bridging the gap between open circuits and shorting the entire projection array."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The data stream must be encoded before it decays.",
+      "level_2_local": "The storm telemetry is vital for the Enclave's shields.",
+      "level_3_campaign_arc": "The Simulacrum serves as the final archive of their existence."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_10_isla",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 3,
+    "prerolled_hazard_queue": [12, 18, 5, 14, 9]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.65,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "OpenAI",
+      "model": "gpt-4-turbo",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The quartz lattice fractures, corrupting the telemetry.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Isla miscalculates the pulse and shatters the entire crystal bank.",
+        "below_dc_complicated_fail_forward": "The data is saved, but the ferrofluid splashes, ruining her polished lens.",
+        "meets_dc_clean_success": "The optical lattice stabilizes perfectly.",
+        "dc_plus_5_or_20_extended_lore": "She stabilizes the lattice and discovers a hidden harmonic pattern in the storm data."
+      }
+    },
+    "master_narrator": {
+      "executor": "Agent",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Isla didn't trust hard drives. They spun. They failed. They rusted.\nCrystals were forever.\nShe knelt on the grooved brass floor of the Simulacrum, ignoring the cold biting into her knees. In her right hand, a scrap of chamois leather; in her left, a meticulously hand-polished optical lens. She was encoding terabytes per second of five-dimensional holographic storm telemetry into nanostructured quartz. The data stream was a flawless, crystalline cascade of information, capable of outliving the very stars that birthed it. Yet, here she was, rubbing a piece of dead animal skin over a curved piece of glass until her fingers cramped, because the automated polisher had thrown a bearing.\n'If you're complaining and no one is laughing, you're complaining wrong,' she muttered to herself. She wasn't complaining, she assured herself. She was simply quantifying the absurdity of the universe.\nAbove her, the air was alive. Orion had left his synthesizer hooked into the central electromagnet matrix. A minor-key cello chord hummed from the hidden acoustic baffles, and in response, magneto-acoustic cymatics took hold. Orbiting droplets of liquid iron danced in the dark, pulling themselves into gravity-defying resonant spires. The ferrofluid responded perfectly to the polyphonic harmonics, tracing the invisible mathematical architecture of the sound. It was beautiful. It was also dripping dangerously close to her freshly polished lenses.\nThe ambient pressure inside the chamber suddenly dropped, and the iron spires shuddered. A stray magnetic flux from the blue dwarf was penetrating the hull. The telemetry stream on her slate flashed yellow. The optical lattice was destabilizing. If the stream dropped below a critical threshold, the quartz would fracture, taking ten years of data with it.\nIsla felt a cold spike of panic. The safe, cautious archivist within her screamed to abort, to save what she could and shut the system down. But then, the static charge in the air intensified. The Vex Override kicked in, hitting her like a physical blow. The cautious architect vanished. In her place was the Gambler.\n'Let's see what the house limit is,' she muttered. She reached for the primary override switch, bypassing the safety buffers, and bet the entire optical lattice on a single, untested pulse of power to force the data through the interference.\nThe pulse hit. The ferrofluid spires shattered into a million suspended iron spheres, hanging frozen in the air like dark stars. The quartz glowed a blinding, impossible white, and then settled into a steady, infinite hum.\nThe data was safe. Her fingers, however, were still cramping.\nThe heavy brass door behind her groaned open, breaking the silence. Dorian stepped into the room, his eyes immediately drawn not to the breathtaking floating iron, but to the wireframe data projections bleeding onto the floor.\n'The Sector 4 sensor array is reporting a multipolar anomaly,' Dorian said, his voice flat, already dissecting the implications.\nIsla didn't look up from her lens. She simply held out the slate, her hands perfectly steady.\n'Then you'll need the new telemetry,' she said, passing the baton."
+    }
+  }
+}
