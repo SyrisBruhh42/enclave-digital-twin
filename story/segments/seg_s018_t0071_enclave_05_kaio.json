@@ -7,7 +7,10 @@
   "base_snapshot_tick": 71,
   "event_type": "POV_SCENE_SEGMENT",
   "location": "The_Ferrofluid_Sea",
-  "actors": ["enclave_05_kaio", "enclave_13_ryn"],
+  "actors": [
+    "enclave_05_kaio",
+    "enclave_13_ryn"
+  ],
   "summary": "Kaio explores the shoreline of the Ferrofluid Sea.",
   "importance": 5,
   "novelty_score": 0.8,
@@ -23,7 +26,9 @@
   "context_manifest": {
     "full_cards_loaded_count": 1,
     "interlocutor_full_cards_loaded": 0,
-    "loaded_full_card_ids": ["enclave_05_kaio"]
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ]
   },
   "narrative_prose": "The shoreline of the Ferrofluid Sea was a churning chaos of metallic froth, where the Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea created jagged, luminescent waves that crashed against the obsidian cliffs. The air smelled of ozone and rusted iron, a bitter metallic tang that clung to the back of the throat. The deafening roar of the waves masked all other sounds, a constant, rhythmic pounding that resonated deep in the chest. Kaio braced himself against the howling wind, his face numb from the biting cold that radiated from the dark waters. He clambered over a slick, jutting outcropping of rock, his boots finding precarious purchase on the slime-coated surface. A sudden, violent surge of the sea threw him off balance, and he scrambled to grab the slick rock, nearly losing his grip. He managed to pull himself up, his heart pounding in his chest. A jagged spine of the sea rose in an attempt to devour him, a physical manifestation of the sheer force of the storm. He leaned back into a crevice to avoid it, taking deep, shaky breaths. Spotting Ryn waiting for him up ahead, he reached out, clutching the glowing brass compass tightly in his hand, and firmly placed it directly into Ryn's waiting palm, completing the physical baton handoff.",
   "campaign_metadata": {
@@ -97,7 +102,13 @@
       }
     ],
     "strain_accumulated_upward": 2,
-    "prerolled_hazard_queue": [14, 12, 18, 5, 20]
+    "prerolled_hazard_queue": [
+      14,
+      12,
+      18,
+      5,
+      20
+    ]
   },
   "lpi_metrics": {
     "relational_tension_density": 0.5,
