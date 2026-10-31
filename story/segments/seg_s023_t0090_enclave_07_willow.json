@@ -1,0 +1,61 @@
+{
+  "event_id": "seg_s023_t0090_enclave_07_willow",
+  "tick_id": 90,
+  "colony_sol": 23,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-10-31T23:29:53.997542",
+  "base_snapshot_tick": 88,
+  "event_type": "POV_SCENE_SEGMENT",
+  "science_vegetable": "Precision 72\u00b0C enzymatic chitin tenderization and gas-chromatograph methional flavor-pairing to trigger popcorn-aromatic Maillard reactions during an ionization storm.",
+  "active_pov_id": "enclave_07_willow",
+  "next_pov_target": "enclave_09_orion",
+  "prev_next_pov_target": "enclave_07_willow",
+  "location": "The Genesis Garden - Compost Heaps",
+  "actors": [
+    "enclave_07_willow",
+    "enclave_09_orion"
+  ],
+  "summary": "Willow halts her breakthroughs in fungal Boolean logic gates to painstakingly balance the compost heap under an ionization storm, handing off a flask to Orion.",
+  "importance": 7,
+  "novelty_score": 8,
+  "state_deltas": {
+    "enclave_07_willow_stress": 0.1
+  },
+  "relationship_deltas": {
+    "enclave_07_willow_to_enclave_09_orion": 0.1
+  },
+  "evidence_refs": [],
+  "pacing_mode": "MULLIGAN_CRISIS",
+  "active_location": {
+    "location_id": "LOC_GENESIS_GARDEN",
+    "macro_silhouette": "Warm hearth-fire and copper ankle-grounding wires inside the timber hall while thunder hammers the shutters. The ionization storm flashes violently, illuminating heavy timber frames and rows of precision distillation equipment. Every strike hums against the protective ground wires, making the air smell sharply of ozone.",
+    "sensory_palette": {
+      "sight_and_color": "Flashes of blinding white from the storm, deep amber from distillation flasks, and the pulsing bioluminescent green of fungal cultures.",
+      "sound": "The rhythmic, deafening crash of ionization thunder against the reinforced roof, overlaid with the quiet, frantic bubbling of 72\u00b0C enzymatic chitin tenderization.",
+      "smell": "Ozone from the storm, intertwined with popcorn-aromatic Maillard reactions and the earthy tang of turning compost.",
+      "tactile_temperature": "Oppressively hot near the compost pile and the tenderization bath, punctuated by cold, staticky drafts from the storm outside.",
+      "taste_optional": "A faint, lingering metallic tang of ozone and sulfur on the back of the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Fractional Copper Alembic",
+        "affordance_description": "A complex network of copper piping that can be vented to prevent over-pressurization during storm surges.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Methional Gas-Chromatograph",
+        "affordance_description": "Precision sensors that can be calibrated to draw in specific airborne compounds for analysis.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Steaming Compost Heap",
+        "affordance_description": "A massive pile of decomposing organic matter that can be utilized to rapidly break down failed experiments.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "narrative_prose": "Under the microscope, the mushroom didn't look like a plant. It looked like a city. Willow adjusted the focus. The hyphae\u2014the thread-like roots\u2014were pulsing with light. Calcium ions flowing through the cell walls, carrying binary signals. She was on the verge of unlocking fungal Boolean logic gates, a discovery that could revolutionize the enclave's autonomous systems. But a deafening crack of thunder rattled the glass, reminding her of the immediate crisis. The ionization storm was peaking.\n\nShe tore herself away from the eyepiece, muttering something unflattering about the timing of atmospheric phenomena. The real pressing issue was the steaming compost heap in the corner, requiring manual turning. 'If you're complaining and no one is laughing, you're complaining wrong,' she said to the empty room, grabbing the pitchfork. The mundane frustration of it all\u2014pausing cellular regeneration research to shovel dirt\u2014gnawed at her. Yet, she attacked the pile with a detached, analytical precision, measuring the 72\u00b0C enzymatic chitin tenderization and ensuring the gas-chromatograph methional flavor-pairing was balanced perfectly to trigger popcorn-aromatic Maillard reactions even in this chaos.\n\nWarm hearth-fire and copper ankle-grounding wires inside the timber hall while thunder hammers the shutters. Orion appeared in the doorway, soaked and looking slightly frantic. Willow's demeanor instantly shifted. The detached biochemist dissolved, replaced by an overwhelmingly clingy protectiveness. She shoved a flask of chelation tonic into his hands, adjusting his collar to ensure the copper grounding threads were touching his skin. 'Drink this,' she ordered, her tone brooking no argument. 'The storm's kicking up toxic spore precipitation. And don't touch the amber beaker on your way out\u2014it'll strip the calluses right off your thumbs.'"
+}
