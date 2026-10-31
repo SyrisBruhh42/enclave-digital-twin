@@ -1,0 +1,109 @@
+{
+  "event_type": "POV_SCENE_SEGMENT",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "steward_note": "Pacing=MERCER_IMMERSIVE; Pre-Roll DC=14; Science Vegetable='Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea'; Active POV=enclave_03_silas -> Handoff=enclave_01_hector.",
+  "science_vegetable": "Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea",
+  "active_pov_id": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "calypso_zero_raw_stats": true,
+  "event_id": "evt_lore_s017_t0065_w01_b05_supplementary",
+  "tick_id": 65,
+  "colony_sol": 17,
+  "day_phase": "DAWN_SHIFT",
+  "location": "The First Forge",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "summary": "Silas examines the ferrofluid sea, hands off to Hector.",
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 17,
+    "tick_id": 65,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Maintain ferrofluid sea containment",
+      "mid_term_milestone": "Upgrade The First Forge",
+      "long_term_campaign_end": "Secure the Enclave"
+    }
+  },
+  "active_location": {
+    "location_id": "the_first_forge_deck",
+    "sensory_palette": {
+      "sight": "Glittering metallic ripples of the ferrofluid sea catching the dawn light.",
+      "sound": "Low, resonant hum of the magnetohydrodynamic engines.",
+      "smell": "Ozone and hot oil.",
+      "touch": "Vibration of the deck plates underfoot.",
+      "taste_optional": "A faint metallic tang in the air."
+    },
+    "interactive_features": [
+      {
+        "feature_id": "magnetic_containment_field",
+        "system_verb": "DEFEND",
+        "dc_value": 14,
+        "consequence_on_fail": "A sudden shear wave of ferrofluid breaches the primary lip, splashing the deck."
+      },
+      {
+        "feature_id": "brass_control_valves",
+        "system_verb": "ATTRACT",
+        "dc_value": 12,
+        "consequence_on_fail": "The valve sticks, delaying pressure stabilization."
+      },
+      {
+        "feature_id": "overheating_copper_coils",
+        "system_verb": "CONSUME",
+        "dc_value": 15,
+        "consequence_on_fail": "The coils warp slightly, requiring extensive recalibration later."
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "enclave_01_hector",
+      "name_and_role": "Hector, The Stormbreaker Prodigy",
+      "motivation_goal": "Prove his experimental coil designs can handle the shear.",
+      "consistent_method": "Reckless, high-energy adjustments.",
+      "immediate_complication": "His last adjustment spiked the local magnetic field.",
+      "pressure_index": 5,
+      "uninterrupted_escalation": "The coil will draw too much power and overload the grid."
+    }
+  ],
+  "encounter_matrix": {
+    "is_active": false,
+    "enemies": [],
+    "environmental_hazards": []
+  },
+  "lpi_metrics": {
+    "laugh_count": 0,
+    "tears_count": 0,
+    "thought_provoked": 1
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "ruling_style": "STRICT_RAW",
+      "graduated_outcomes": {
+        "critical_success": "Perfect containment, power output increased.",
+        "success": "Containment held, but barely.",
+        "mixed_success": "Containment held, but secondary coils damaged.",
+        "failure": "Containment breach, ferrofluid spill.",
+        "critical_failure": "Catastrophic breach, main power loss."
+      }
+    },
+    "vulnerability_cheerleader": {
+      "encouragement_style": "AFFECTIONATE_RIB",
+      "narrative_reward": "Silas learns to trust Hector's chaotic intuition slightly more."
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
+    "relationship_edges_loaded": [],
+    "lore_entries_loaded": []
+  },
+  "narrative_prose": "Silas braced himself against the brass railing, his boots vibrating with the low, resonant hum of the magnetohydrodynamic engines. Below, the ferrofluid sea caught the dawn light, its surface a chaotic dance of glittering metallic ripples driven by a violent Kelvin-Helmholtz shear. The smell of ozone and hot oil was thick in the air, carrying a faint metallic tang that coated the back of his throat. He reached for the heavy brass control valves, knowing that if the magnetic containment field faltered even a fraction, the resulting wave could breach the primary deck lip. Beside him, Hector grinned, already reaching for the overheating copper coils with reckless enthusiasm. Silas sighed, releasing his grip on the main valve and stepping back, nodding for the prodigy to take the lead."
+}
