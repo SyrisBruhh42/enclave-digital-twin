@@ -1,0 +1,172 @@
+{
+  "prank_id": "prank_sol23_t0090",
+  "entry_id": "prank_sol23_t0090",
+  "event_id": "evt_s023_t0090_shadow_prank",
+  "event_type": "SHADOW_ECONOMY_PRANK_SEEDED",
+  "status": "PENDING",
+  "matured": false,
+  "origin_sol": 23,
+  "maturity_sol": 26,
+  "feast_delay": 3,
+  "lethality": 0,
+  "law_l11_clamped": false,
+  "severity": "PETTY_AFFECTIONATE_INCONVENIENCE",
+  "node_a": "enclave_07_willow",
+  "node_b": "enclave_09_orion",
+  "node_c": "enclave_04_leo",
+  "instigator": "enclave_07_willow",
+  "intended_target": "enclave_09_orion",
+  "collateral_recipient": "enclave_04_leo",
+  "target_b_missed": true,
+  "blamed_node": "enclave_07_willow",
+  "attributed_to": "enclave_07_willow",
+  "prank_description": "Willow slipped a sample of non-lethal, highly pungent popcorn-aromatic methional moss into Orion's cymatic acoustic resonator.",
+  "summary": "enclave_07_willow set up a prank intended for enclave_09_orion, but enclave_09_orion completely missed it, leaving enclave_04_leo mildly inconvenienced.",
+  "blind_spot_attribution": {
+    "instigator_node_a": "enclave_07_willow",
+    "oblivious_target_node_b": "enclave_09_orion",
+    "target_b_missed": true,
+    "inconvenienced_node_c": "enclave_04_leo",
+    "blamed_by_c": "enclave_07_willow",
+    "asymmetric_loop_closed": true
+  },
+  "tick_id": 90,
+  "colony_sol": 23,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-11-16T12:00:00Z",
+  "base_snapshot_tick": 89,
+  "location": "The_Genesis_Garden",
+  "actors": [
+    "enclave_07_willow",
+    "enclave_09_orion",
+    "enclave_04_leo"
+  ],
+  "importance": 4.0,
+  "novelty_score": 0.65,
+  "state_deltas": {
+    "stress_delta": -0.01
+  },
+  "relationship_deltas": [],
+  "evidence_refs": [
+    "evt_s023_t0089_world_consequence"
+  ],
+  "target_path": "events/evt_s023_t0090_shadow_prank.json",
+  "active_pov_id": "enclave_07_willow",
+  "next_pov_target": "enclave_09_orion",
+  "prev_next_pov_target": "enclave_07_willow",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_07_willow"
+    ]
+  },
+  "narrative_prose": "Willow wiped a smear of enzyme-rich humus from her brow, glaring at the sprawling compost heap. She was on the verge of mapping a perfectly elegant fungal Boolean logic gate through cytosolic calcium wave transduction. Instead, she had to stop and physically aerate the steaming organic matter with a pitchfork, a brutally mundane task that made her fingers cramp. Around her, the pearlescent bioluminescence of the Mycena lucentipes cast a soft glow on the damp soil, contrasting with the sharp ozone smell of the impending ionization storm outside. 'If you're complaining and no one is laughing, you're complaining wrong,' she muttered to herself, stabbing the pitchfork into the heap. Her Cancer override flared unbidden—a sudden, suffocating urge to wrap Orion in protective, sterile plastic so the storm's electromagnetic shear couldn't scramble his delicate acoustic arrays. To self-soothe, she employed a bit of gastrophysics: a precision 72°C enzymatic chitin tenderization using a gas-chromatograph to pair methional, producing a scent exactly like roasted popcorn. She carefully tucked the aromatic moss sample into a small brass canister. It was meant to be a sensory puzzle for Orion, slipped into his gear to confuse his cymatic fluid shapes. As she sealed the canister, Orion wandered into the arboretum, looking distracted. 'Here,' she said gruffly, shoving the physical baton and the brass canister against his chest before he could ask questions. 'Don't lose the readings, and don't eat the moss.'",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 23,
+      "colony_sol": 23,
+      "tick_id": 90,
+      "pacing_mode": "MULLIGAN_CRISIS",
+      "consequential_fights_since_short_rest": 1,
+      "horizon_goals": {
+        "immediate_session_goal": "Maintain alignment during the expedition.",
+        "mid_term_milestone": "Map the ferrofluid sea's expanding coastline.",
+        "campaign_arc_climax": "Integrate magnetic shielding with the core systems."
+      }
+    },
+    "active_location": {
+      "location_id": "The_Genesis_Garden",
+      "macro_silhouette": "A sprawling subterranean arboretum where thick, glowing fungal structures wind around brass and copper structural beams.",
+      "sensory_palette": {
+        "sight_and_color": "Soft pearlescent greens and golds pulsing from the fungal blooms against polished copper.",
+        "sound": "The low, steady hum of the Enclave's power grid beneath the quiet dripping of condensation.",
+        "smell": "Rich, damp earth mixed with the sudden, surprising aroma of hot buttered popcorn and sharp ozone.",
+        "tactile_temperature": "Warm and humid, like the inside of a well-tended greenhouse.",
+        "taste_optional": "A faint, earthy sweetness clinging to the back of the throat."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Steaming Compost Heap",
+          "affordance_description": "A dense pile of organic matter that requires intense physical labor to turn.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Fungal Boolean Logic Arrays",
+          "affordance_description": "Delicate, interwoven roots transmitting calcium ions that can be disrupted by careless movement.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Methional Moss Samples",
+          "affordance_description": "Aromatic spores that rapidly mask other scents when exposed to thermal stress.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "toy_methional_moss",
+        "name_and_role": "Popcorn-Aromatic Methional Moss",
+        "motivation_goal": "Trigger confusing olfactory and acoustic responses.",
+        "consistent_method": "Releasing volatile sulfur odorants under thermal stress.",
+        "immediate_complication": "Distracts the intended target with an unexpected food aroma.",
+        "pressure_index": 4,
+        "uninterrupted_escalation": "The scent eventually saturates the ventilation system, making the whole squad hungry."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Willow wants to test Orion's acoustic cymatics with a complex olfactory variable.",
+        "level_2_local": "The storm's atmospheric pressure is perfect for gas-chromatograph flavor pairing.",
+        "level_3_campaign_arc": "Testing cross-disciplinary sensory applications for Enclave morale."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_07_willow",
+          "tactical_role": "SUPPORT"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        14,
+        8,
+        19,
+        3,
+        11
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.4,
+      "motivational_vector_saturation": 0.6,
+      "unresolved_conflict_ratio": 0.3,
+      "temporal_horizon_immediacy": 0.8,
+      "composite_lpi": 0.525,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "Enclave_Core",
+        "model": "Tactical_Arbiter_v1",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The methional moss fails to activate its Maillard reaction, just smelling like rot.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "The moss combusts mildly, ruining Orion's equipment.",
+          "below_dc_complicated_fail_forward": "The moss creates the aroma, but it smells like burnt hair instead of popcorn.",
+          "meets_dc_clean_success": "The moss perfectly mimics buttered popcorn, confusing Orion entirely.",
+          "dc_plus_5_or_20_extended_lore": "The acoustic resonance of the moss unlocks a new cymatic pattern for Orion."
+        }
+      },
+      "master_narrator": {
+        "executor": "Enclave_Narrator",
+        "temperature": 0.7,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Willow securely shoves the baton into Orion's hands, making sure he takes the canister without questioning the aroma."
+      }
+    }
+  },
+  "disallow_overwrite": false
+}
