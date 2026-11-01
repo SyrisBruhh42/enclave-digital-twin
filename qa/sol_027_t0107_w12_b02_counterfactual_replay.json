@@ -1,7 +1,9 @@
 {
   "base_snapshot_tick": 103,
   "context_manifest": {
-    "loaded_full_card_ids": ["enclave_09_orion"],
+    "loaded_full_card_ids": [
+      "enclave_09_orion"
+    ],
     "full_cards_loaded_count": 1,
     "active_pov_id": "enclave_09_orion",
     "next_pov_target": "enclave_14_vex",
@@ -77,13 +79,19 @@
       }
     ],
     "strain_accumulated_upward": 1,
-    "prerolled_hazard_queue": [7, 14, 18, 5, 20]
+    "prerolled_hazard_queue": [
+      7,
+      14,
+      18,
+      5,
+      20
+    ]
   },
   "lpi_metrics": {
     "relational_tension_density": 0.85,
-    "motivational_vector_saturation": 0.90,
-    "unresolved_conflict_ratio": 0.40,
-    "temporal_horizon_immediacy": 0.70,
+    "motivational_vector_saturation": 0.9,
+    "unresolved_conflict_ratio": 0.4,
+    "temporal_horizon_immediacy": 0.7,
     "composite_lpi": 0.71,
     "classification": "Campaign-Ready"
   },
@@ -106,7 +114,7 @@
       "temperature": 0.7,
       "calypso_zero_raw_stats": true,
       "prosodic_micro_pauses_enabled": true,
-      "agency_handoff_prompt": "Orion didn't see a sealant; he saw a dancer. He had taken a beaker of Leo's ferrofluid to the Simulacrum. He placed it over a grid of electromagnets hooked up to his synthesizer. The Simulacrum hummed quietly, its holographic projectors casting slow, crystalline shadows across the hand-forged brass flooring. A fingernail-sized crystal drinking violet laser light sat at the heart of the darkened chamber. It was femtosecond nanostructured birefringent 5D optical storage encoding terabytes of magnetospheric and mycelial telemetry into eternal fused-quartz lattices. \n\nHe played a chord. C-Major. The black fluid leaped, forming a perfect, spiky crown as he sought to attract the right resonance. He shifted to a minor key. The fluid collapsed, turning into a sluggish, rolling boil. It responds to the frequency, Orion thought. It's visualizing the sound. He began to play in earnest—a complex, weaving melody. The fluid danced, splitting into droplets that orbited each other, merging and separating in perfect time with the music. It was a physical manifestation of the Enclave's harmony—individual parts coming together, breaking apart, and finding each other again. He worked to defend the delicate structure from acoustic interference, his fingers flying across the keys.\n\nSuddenly, a memory of dinner surfaced. A perfectly symmetrical potato that Terra had harvested. The sheer, unassuming beauty of it overwhelmed him, a sudden wave of emotion crashing over his focus. His fingers faltered. The fluid shuddered, threatening to conceal the intricate patterns in a muddy slump. His Scorpio override flared, snapping his gentle mediation into a razor-sharp, unsparing directness. 'Hold,' he muttered, his voice a command to the fluid and himself. He forced the emotion down, channeling it into the final note. The fluid froze in a breathtaking, impossible spire, defying gravity. 'If you're complaining and no one is laughing, you're complaining wrong,' he murmured, echoing the familiar family banter as he watched the ferrofluid lock the telemetry into place. He needed to show this to Vex; the astronomer would appreciate the cosmic irony of it all."
+      "agency_handoff_prompt": "Orion didn't see a sealant; he saw a dancer. He had taken a beaker of Leo's ferrofluid to the Simulacrum. He placed it over a grid of electromagnets hooked up to his synthesizer. The Simulacrum hummed quietly, its holographic projectors casting slow, crystalline shadows across the hand-forged brass flooring. A fingernail-sized crystal drinking violet laser light sat at the heart of the darkened chamber. It was femtosecond nanostructured birefringent 5D optical storage encoding terabytes of magnetospheric and mycelial telemetry into eternal fused-quartz lattices. \n\nHe played a chord. C-Major. The black fluid leaped, forming a perfect, spiky crown as he sought to attract the right resonance. He shifted to a minor key. The fluid collapsed, turning into a sluggish, rolling boil. It responds to the frequency, Orion thought. It's visualizing the sound. He began to play in earnest\u2014a complex, weaving melody. The fluid danced, splitting into droplets that orbited each other, merging and separating in perfect time with the music. It was a physical manifestation of the Enclave's harmony\u2014individual parts coming together, breaking apart, and finding each other again. He worked to defend the delicate structure from acoustic interference, his fingers flying across the keys.\n\nSuddenly, a memory of dinner surfaced. A perfectly symmetrical potato that Terra had harvested. The sheer, unassuming beauty of it overwhelmed him, a sudden wave of emotion crashing over his focus. His fingers faltered. The fluid shuddered, threatening to conceal the intricate patterns in a muddy slump. His Scorpio override flared, snapping his gentle mediation into a razor-sharp, unsparing directness. 'Hold,' he muttered, his voice a command to the fluid and himself. He forced the emotion down, channeling it into the final note. The fluid froze in a breathtaking, impossible spire, defying gravity. 'If you're complaining and no one is laughing, you're complaining wrong,' he murmured, echoing the familiar family banter as he watched the ferrofluid lock the telemetry into place. He needed to show this to Vex; the astronomer would appreciate the cosmic irony of it all."
     }
   }
 }
