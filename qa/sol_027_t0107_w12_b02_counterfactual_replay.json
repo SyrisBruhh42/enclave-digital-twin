@@ -1,0 +1,112 @@
+{
+  "base_snapshot_tick": 103,
+  "context_manifest": {
+    "loaded_full_card_ids": ["enclave_09_orion"],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_09_orion",
+    "next_pov_target": "enclave_14_vex",
+    "prev_next_pov_target": "enclave_09_orion"
+  },
+  "campaign_metadata": {
+    "session_number": 300,
+    "colony_sol": 27,
+    "tick_id": 107,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Replay counterfactual tuning of the cymatic ferrofluid spires under DUSK_CRAFT conditions.",
+      "mid_term_milestone": "Stabilize the 5D optical quartz storage against geomagnetic drift.",
+      "campaign_arc_climax": "Safeguard the Simulacrum archives against planetary-scale multipolar anomalies."
+    }
+  },
+  "active_location": {
+    "location_id": "THE_SIMULACRUM",
+    "macro_silhouette": "The Simulacrum hums quietly, its holographic projectors casting slow, crystalline shadows across the hand-forged brass flooring. A fingernail-sized crystal drinking violet laser light sits at the heart of the darkened chamber.",
+    "sensory_palette": {
+      "sight_and_color": "A fingernail-sized crystal drinking violet laser light at the heart of the darkened chamber.",
+      "sound": "The low, resonant hum of electromagnets coupling acoustic frequencies.",
+      "smell": "Ozone from the femtosecond lasers mixed with the sharp scent of hot copper coils.",
+      "tactile_temperature": "A cool, dry chill offset by localized thermal blooms near the projector arrays."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magneto-Acoustic Synthesizer",
+        "affordance_description": "The console where harmonic chords are coupled into the electromagnet matrix.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Cymatic Basin",
+        "affordance_description": "A dark basin where colloidal iron droplets form standing-wave sculptures in response to resonance.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "5D Birefringent Quartz Storage Array",
+        "affordance_description": "The eternal fused-quartz lattices storing telemetry.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "cymatic_harmonic_feedback",
+      "name_and_role": "Ferrofluid Harmonic Spires",
+      "motivation_goal": "To physically manifest the emotional and planetary resonance via standing magnetic waves.",
+      "consistent_method": "Forming levitating magnetohydrodynamic spires when tuned correctly.",
+      "immediate_complication": "Requires micron-precise acoustic tuning or the structure violently collapses into sludge.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The magnetic collapse risks disrupting the nearby 5D optical quartz etching process."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Orion must tune the cymatic spires to translate planetary magnetic telemetry into a stable form.",
+      "level_2_local": "The raw data from the magnetosphere is too dense, requiring harmonic interpretation before it can be stored.",
+      "level_3_campaign_arc": "Permanent recording of Enclave history and planetary mood is essential before the next major solar anomaly."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_09_orion",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_14_vex",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [7, 14, 18, 5, 20]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.85,
+    "motivational_vector_saturation": 0.90,
+    "unresolved_conflict_ratio": 0.40,
+    "temporal_horizon_immediacy": 0.70,
+    "composite_lpi": 0.71,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "LOCAL_DETERMINISTIC_ENGINE",
+      "model": "rule_based_adjudicator",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Failure to hold the cymatic resonance causes the ferrofluid to collapse, corrupting the telemetry and risking damage to the delicate quartz storage.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Orion completely misreads the harmonic resonance; the ferrofluid violently repels the electromagnets.",
+        "below_dc_complicated_fail_forward": "The spires form but are unstable, forcing Orion to constantly adjust, draining emotional focus.",
+        "meets_dc_clean_success": "The ferrofluid spires form a breathtaking, impossible structure, perfectly translating the magnetospheric data.",
+        "dc_plus_5_or_20_extended_lore": "Orion not only stabilizes the spires but uncovers a hidden, underlying rhythm in the planetary magnetic field."
+      }
+    },
+    "master_narrator": {
+      "executor": "JULES_AI_SHOWRUNNER",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Orion didn't see a sealant; he saw a dancer. He had taken a beaker of Leo's ferrofluid to the Simulacrum. He placed it over a grid of electromagnets hooked up to his synthesizer. The Simulacrum hummed quietly, its holographic projectors casting slow, crystalline shadows across the hand-forged brass flooring. A fingernail-sized crystal drinking violet laser light sat at the heart of the darkened chamber. It was femtosecond nanostructured birefringent 5D optical storage encoding terabytes of magnetospheric and mycelial telemetry into eternal fused-quartz lattices. \n\nHe played a chord. C-Major. The black fluid leaped, forming a perfect, spiky crown as he sought to attract the right resonance. He shifted to a minor key. The fluid collapsed, turning into a sluggish, rolling boil. It responds to the frequency, Orion thought. It's visualizing the sound. He began to play in earnest—a complex, weaving melody. The fluid danced, splitting into droplets that orbited each other, merging and separating in perfect time with the music. It was a physical manifestation of the Enclave's harmony—individual parts coming together, breaking apart, and finding each other again. He worked to defend the delicate structure from acoustic interference, his fingers flying across the keys.\n\nSuddenly, a memory of dinner surfaced. A perfectly symmetrical potato that Terra had harvested. The sheer, unassuming beauty of it overwhelmed him, a sudden wave of emotion crashing over his focus. His fingers faltered. The fluid shuddered, threatening to conceal the intricate patterns in a muddy slump. His Scorpio override flared, snapping his gentle mediation into a razor-sharp, unsparing directness. 'Hold,' he muttered, his voice a command to the fluid and himself. He forced the emotion down, channeling it into the final note. The fluid froze in a breathtaking, impossible spire, defying gravity. 'If you're complaining and no one is laughing, you're complaining wrong,' he murmured, echoing the familiar family banter as he watched the ferrofluid lock the telemetry into place. He needed to show this to Vex; the astronomer would appreciate the cosmic irony of it all."
+    }
+  }
+}
