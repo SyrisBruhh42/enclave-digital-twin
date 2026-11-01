@@ -1,0 +1,45 @@
+{
+  "event_id": "sol_027_feast",
+  "tick_id": 108,
+  "colony_sol": 27,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-11-20T18:00:00Z",
+  "base_snapshot_tick": 104,
+  "event_type": "THE_FEAST_CONVERGENCE",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "active_pov_id": "enclave_14_vex",
+  "prev_next_pov_target": "enclave_14_vex",
+  "next_pov_target": "enclave_08_terra",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_02_jane",
+    "enclave_03_silas",
+    "enclave_04_leo",
+    "enclave_05_kaio",
+    "enclave_06_zara",
+    "enclave_07_willow",
+    "enclave_08_terra",
+    "enclave_09_orion",
+    "enclave_10_isla",
+    "enclave_11_kenna",
+    "enclave_12_elias",
+    "enclave_13_ryn",
+    "enclave_14_vex",
+    "enclave_15_dorian",
+    "enclave_16_elara"
+  ],
+  "interactive_features": [
+    {
+      "system_verb": "DEFEND",
+      "associated_check_dc": 14
+    },
+    {
+      "system_verb": "ATTRACT"
+    },
+    {
+      "system_verb": "CONSUME"
+    }
+  ],
+  "narrative_prose": "Vex sat on the roof, legs dangling over the edge. To the east, the Red Giant was rising, a bloated, angry eye that bathed the world in crimson. To the west, the Blue Dwarf was setting, a piercing diamond that cast razor-sharp shadows across the hand-built brass observatory roof. \"Contrast,\" Vex said to the empty air, adjusting the heavy brass astrolabe slung around his neck. \"It's all about contrast.\" The sky was a bruised, violet twilight where the two lights met, a theoretically terrifying display of relativistic magnetohydrodynamic shear. He could see the infrared coronal mass ejections from the Giant colliding with the compressed ultraviolet bow shock of the Dwarf, a celestial wrestling match mapping itself across the magnetosphere. He was supposed to be downstairs, defending the meal prep from Kaio's optimizations and stirring the stew at a strictly mandated 40 RPM, but the physics were too exquisite to ignore.\n\nA sudden, bone-rattling boom echoed from the valley floor as the magnetic flux snapped, drawing his attention downward. \"If that Red Giant sneezes,\" Vex mused, pulling a small, crystalline prism from his pocket to attract a stray beam of ultraviolet light, \"we're toast. If the Blue Dwarf blinks, we freeze.\" He watched the light fracture and scatter, mapping the invisible shear vectors. \"And here we are, sitting in the middle, eating soup and fixing pipes.\" He calculated the tidal perturbations on a scrap of parchment, ignoring the very real, very mundane cold seeping through his boots.\n\nThen, his comms crackled. \"Vex. The temperature in the main hall just dropped three degrees. Are you playing with the thermal louvers again?\" It was Dorian, his voice flat with expected disappointment. The sheer absurdity of the accusation, the mundane intrusion into his cosmic contemplation, struck Vex with a cold panic. He dropped the prism, the universe suddenly shrinking to the size of the sixteen people below. If he had inadvertently vented the heat, the colony would suffer. \"I... I didn't touch them, Dorian,\" he stammered, scrambling to his feet, the celestial mechanics forgotten. He scrambled toward the access hatch, desperate to fix whatever he had broken, to protect the fragile, messy family huddled below, preparing to pass the physical comm unit down to Terra to ensure the subterranean mycelial heaters were functioning."
+}
