@@ -1,0 +1,121 @@
+{
+  "base_snapshot_tick": 99,
+  "context_manifest": {
+    "active_pov_id": "enclave_10_isla",
+    "next_pov_target": "enclave_15_dorian",
+    "prev_next_pov_target": "enclave_10_isla",
+    "loaded_full_card_ids": [
+      "enclave_10_isla"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 26,
+    "tick_id": 103,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Stabilize the ferrofluid matrix inside the Simulacrum.",
+      "mid_term_milestone": "Map the incoming planetary magnetic tear.",
+      "campaign_arc_climax": "Complete the five-dimensional quartz library."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Simulacrum",
+    "macro_silhouette": "Orbiting droplets of liquid iron dancing in the dark to a minor-key cello chord. The Simulacrum's central projector hums, casting bioluminescent shadows across the hand-polished optical quartz lenses.",
+    "sensory_palette": {
+      "sight_and_color": "subterranean bioluminescent wonder and deep purple optical quartz",
+      "sound": "magneto-acoustic cymatics coupling polyphonic synthesizer harmonics",
+      "smell": "sharp ozone and chamois leather",
+      "tactile_temperature": "cold brass and smooth, cramp-inducing quartz",
+      "taste_optional": "metallic tang of suspended ferrofluid"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Electromagnet Matrix",
+        "affordance_description": "can draw floating iron droplets to create a barrier",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Polyphonic Synthesizer",
+        "affordance_description": "can pulse a minor-key cello chord to draw resonance patterns",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Quartz Storage Lattice",
+        "affordance_description": "can swallow terabytes of holographic storm telemetry",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 18
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_spires",
+      "name_and_role": "Gravity-Defying Resonant Spires",
+      "motivation_goal": "seek magnetic equilibrium",
+      "consistent_method": "shifting to polyphonic synthesizer harmonics",
+      "immediate_complication": "splashing onto the optical lenses if the helmholtz tensors fail",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "will permanently etch flawed geometry into the five-dimensional quartz"
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The magnetic flux is destabilizing the cymatics.",
+      "level_2_local": "The Blue Dwarf's solar wind is compressing the magnetosphere.",
+      "level_3_campaign_arc": "The Enclave's structural integrity depends on mapped telemetry."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_10_isla",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_15_dorian",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 4,
+    "prerolled_hazard_queue": [
+      14,
+      18,
+      7,
+      2,
+      19
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.9,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.7,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local",
+      "model": "showrunner-v1",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The ferrofluid splashes, ruining the five-dimensional optical lattice.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Isla completely misaligns the tensor, betting the optical lattice on an untested pulse in a moment of pure gambling.",
+        "below_dc_complicated_fail_forward": "The lens is scratched, requiring more hand-polishing until her fingers cramp, though the data saves.",
+        "meets_dc_clean_success": "The magneto-acoustic cymatics suspend the droplets flawlessly.",
+        "dc_plus_5_or_20_extended_lore": "The droplets form a perfect, eternal structure, impressing Dorian as he enters."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules_v2",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Isla didn't trust hard drives. They spun. They failed. They rusted. Crystals were forever.\n\nShe sat in the center of the Simulacrum, the holographic projector humming around her in the quiet subterranean dark. Orbiting droplets of liquid iron danced in the air, a bioluminescent wonder choreographed to a minor-key cello chord. It was a flawless demonstration of magneto-acoustic cymatics coupling polyphonic synthesizer harmonics into an electromagnet matrix, suspending ferrofluid droplets in gravity-defying resonant spires. Yet, despite encoding terabytes per second of five-dimensional holographic storm telemetry into nanostructured quartz, she still found herself hand-polishing the primary optical lenses with a scrap of chamois leather until her fingers cramped. \n\nA sudden, sharp fluctuation in the local magnetic field tore through the chamber. The minor-key cello chord stuttered into a dissonant shriek, and the ferrofluid spires began to destabilize, threatening to splash their highly corrosive mass across the delicate quartz lattice. Isla's heart hammered. A cautious archivist would initiate a safe shutdown, preserving the hardware at the cost of the incoming data stream. But as the structural integrity alarms blared, her Sagittarius override kicked in. The cautious architect vanished, replaced by a reckless gambler betting the entire optical array on a single, untested pulse of inverted polarity.\n\nShe slammed her hand against the synthesizer, forcing a raw, overpowering chord into the matrix. The droplets froze in mid-air, trembling violently before snapping back into perfect, impossible alignment. She let out a long breath, her hands shaking slightly as she rubbed her cramped fingers against the chamois. \n\n'If you're complaining and no one is laughing, you're complaining wrong,' a voice echoed from the doorway. Dorian stepped into the soft glow, his eyes tracking the stabilized iron droplets with quiet appreciation. He carried his own slate, ready for his shift. \n\n'I wasn't complaining,' Isla replied dryly, standing up and passing him the heavy brass calibration ledger. 'I was simply pointing out the persistent inefficiency of physical reality. The lattice is holding, but the pulse requires constant monitoring.' Dorian took the baton handoff with a nod, stepping into the center of the humming matrix as Isla moved toward the door, leaving him to the quiet company of dancing iron."
+    }
+  }
+}
