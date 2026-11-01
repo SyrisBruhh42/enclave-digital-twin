@@ -1,0 +1,125 @@
+{
+  "base_snapshot_tick": 100,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_15_dorian"
+    ],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_15_dorian",
+    "next_pov_target": "enclave_02_jane",
+    "prev_next_pov_target": "enclave_15_dorian"
+  },
+  "campaign_metadata": {
+    "session_number": 26,
+    "colony_sol": 26,
+    "tick_id": 104,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Ground the feast against anomalous auroral ionization.",
+      "mid_term_milestone": "Stabilize the Living Atlas against solar wind compression.",
+      "campaign_arc_climax": "Master the planet's atmospheric potential for the Stormbreaker."
+    }
+  },
+  "active_location": {
+    "location_id": "loc_04_the_feast",
+    "macro_silhouette": "The central hall of the Enclave, heavy timber beams and copper conduits interwoven overhead. A massive central fire pit casts long, dancing shadows. The air is thick with the scent of roasted tubers and the faint, ozone tang of an incoming magnetic squall.",
+    "sensory_palette": {
+      "sight_and_color": "Bruised violet twilight casting double razor-sharp shadows across the hand-built brass observatory roof.",
+      "sound": "The hiss and pop of the central fire, the clatter of grounded metal spoons, and the low, resonant hum of the captured geode.",
+      "smell": "Roasted tubers layered with the sharp, metallic tang of ozone and heated copper.",
+      "tactile_temperature": "A deep, radiant warmth radiating from the hearth, battling the chill of the drafts that smell of an approaching storm.",
+      "taste_optional": "The dense, popcorn-like flavor of Ryn's chitinous stew tinged with an electric bite in the air."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Grounded Soup Spoons",
+        "affordance_description": "Copper wire attached to utensils to prevent static discharge from ionized air while eating.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Living Atlas Hologram",
+        "affordance_description": "A shimmering three-dimensional projection of the planet's magnetosphere hovering in the corner.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Simmering Chitin Stew",
+        "affordance_description": "A dense, high-calorie meal engineered to mimic popcorn aromatics during thermal stress.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_01_magnetic_squall",
+      "name_and_role": "Relativistic Magnetic Squall",
+      "motivation_goal": "Compress the planet's magnetosphere and induce auroral ionization at ground level.",
+      "consistent_method": "Emitting sudden bursts of high-UV and long-wave infrared radiation that scramble sensors.",
+      "immediate_complication": "Ionizing the atmosphere enough that even eating dinner becomes an electrocution hazard.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "If unchecked, the static charge will arc across the dining table and ignite the stew."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The Enclave must eat and decompress without being electrocuted.",
+      "level_2_local": "The Red Giant and Blue Dwarf are creating a localized magnetic tear.",
+      "level_3_campaign_arc": "Mastering the planet's volatile physics is the only way to build a permanent home."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_15_dorian",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_02_jane",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_04_leo",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      12,
+      8,
+      18,
+      4,
+      15
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.7,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.4,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.7,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Local Host",
+      "model": "Deterministic Physics Engine",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "A nasty static shock that ruins the meal and drops morale.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Dorian misreads the flux; the spoons act as antennas instead of grounds.",
+        "below_dc_complicated_fail_forward": "The meal is eaten, but everyone gets a mild shock and the soup tastes like aluminum.",
+        "meets_dc_clean_success": "The meal is safe, and the magnetic map stabilizes enough to see the squall passing.",
+        "dc_plus_5_or_20_extended_lore": "Dorian uses the static charge to perfectly tune the Living Atlas, revealing a hidden fault line."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules Narrative Subsystem",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Dorian did not look at the world; he looked at the wireframe beneath it. Standing before the Living Atlas, he adjusted the focal length of the crystalline projector. The central hall of the Enclave hummed with captured energy, the deep found-family fellowship buzzing over the hiss of the hearth, but Dorian’s attention was fixed on a three-dimensional holographic magnetosphere map projected across thousands of crustal sensors. Bruised violet twilight cast double razor-sharp shadows across the hand-built brass observatory roof above him.\n\nHe watched the interplay of light and data with the cold, measured precision of his intellect, analyzing the relativistic magnetohydrodynamic shear between the Red Giant's infrared coronal mass ejections and the Blue Dwarf's compressed ultraviolet bow shock. It was a beautiful, terrifying mathematics. The local magnetic field was tearing, auroral ionization plunging down to bedrock. The air tasted sharply of ozone.\n\nLeo approached, carrying a tray of Ryn’s steaming chitinous stew. \"Dorian. Eat. The map won’t vanish if you blink.\"\n\nDorian turned from the shimmering hologram to the heavy timber table where the Enclave gathered for The Feast. He adjusted his spectacles, his gaze drifting from the stew to the polished metal utensils. \"The atmospheric ionization is nearing critical density, Leo,\" Dorian said, his tone perfectly flat. \"If the magnetosphere buckles further, the static charge will turn every untethered conductor into a miniature lightning rod. I need you to ground every metal soup spoon in the kitchen.\"\n\nLeo paused, a dry chuckle rumbling in his chest. \"You want me to wire the silverware to the floorboards so we can eat stew.\"\n\n\"Precisely,\" Dorian replied. The sheer absurdity of the request grated against his rigorous nature, an exhausting mundane friction. He could model five-dimensional storm telemetry, yet survival required hand-tying copper wire to their spoons so they wouldn't attract a deadly arc. The stress knotted in his shoulders. For a wild, fleeting moment, his Aries Vex Override surged, a thrilling, reckless audacity cutting through his archivist caution. \"Or,\" Dorian said, his voice dropping to a theatrical whisper, \"we simply consume it as is. Then today is a good day for science. Let us discover the exact galvanic potential required to ruin Ryn's broth.\"\n\nJane, already seated and meticulously parsing her own data slate, didn't even look up. \"If you're complaining and no one is laughing, you're complaining wrong, Dorian. And if you let the atmospheric charge fry this meal, I will personally recalibrate the atmospheric sensors to ignore you.\"\n\nDorian smiled, the tension bleeding away into the familiar, affectionate banter. This was the true anchor. Not the copper wire or the heavy timber, but the razor-sharp competence that surrounded him. The room was a sanctuary, warm and alive. He picked up a freshly grounded spoon, the braided wire trailing down to the floor, and looked at Jane, ready to pass the baton of their collective survival into her exceedingly capable hands."
+    }
+  }
+}
