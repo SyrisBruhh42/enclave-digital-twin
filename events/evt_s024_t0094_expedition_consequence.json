@@ -1,0 +1,64 @@
+{
+  "event_id": "evt_s024_t0094_expedition_consequence",
+  "tick_id": 94,
+  "colony_sol": 24,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-11-17T12:00:00Z",
+  "base_snapshot_tick": 90,
+  "event_type": "EXPEDITION_DISCOVERY",
+  "location": "The_Lyceum_of_the_Mind",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_11_kenna",
+    "enclave_12_elias"
+  ],
+  "summary": "Kenna coaxes Silas off his hands and knees at 0300 hours with a promise of zero dust, handing him over to Elias at the Lyceum.",
+  "importance": 8,
+  "novelty_score": 7,
+  "science_vegetable": "Decoupling pineal melatonin suppression and serotonin receptor static caused by post-storm Schumann resonance anomalies using psychoactive Lyceum bryophytes and zero-dust flotation.",
+  "state_deltas": {},
+  "relationship_deltas": [],
+  "evidence_refs": [],
+  "active_location": {
+    "location_id": "The_Lyceum_of_the_Mind",
+    "macro_silhouette": "A copper-shielded acoustic chamber softly illuminated by psychoactive bryophytes, centering on a zero-buoyancy sensory attenuation tank.",
+    "sensory_palette": {
+      "sight_and_color": "Soft, emerald luminescence from psychoactive moss reflecting off polished copper paneling.",
+      "sound": "Absolute acoustic silence, occasionally broken by the gentle hum of the grounding arrays.",
+      "smell": "The clean, sterile scent of filtered water mixed with a faint herbal aroma from the bryophytes.",
+      "tactile_temperature": "Ambient temperature perfectly matching skin warmth, removing the sensation of air touching skin.",
+      "taste_optional": "The faint, lingering trace of chamomile and valerian tea."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Sensory Attenuation Tank",
+        "affordance_description": "Can be entered to achieve zero-buoyancy and absolute acoustic isolation.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Copper Shielding Arrays",
+        "affordance_description": "Can block external electromagnetic static and Schumann resonance anomalies.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Psychoactive Bryophyte Cultivations",
+        "affordance_description": "Can decouple serotonin receptor static and restore neural equilibrium.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "active_pov_id": "enclave_11_kenna",
+  "prev_next_pov_target": "enclave_11_kenna",
+  "next_pov_target": "enclave_12_elias",
+  "pacing_mode": "MULLIGAN_CRISIS",
+  "narrative_prose": "The storm had passed, but the static remained. It clung to the Enclave like a second skin.\n\nKenna walked the halls of the sleeping quarters, checking the bio-monitors. It was 0300 hours, yet half the family was awake. The air pressure had dropped too quickly, and the magnetic residue was playing havoc with everyone's circadian rhythms. She could feel the static herself, a persistent vibration that made her serotonin receptors misfire, demanding she maintain the psychological equilibrium of sixteen polymaths while her own neurology drifted.\n\nFurther down the hall, she found Silas on his hands and knees, scrubbing the floor.\n\n\"Silas,\" she said gently.\n\n\"It's not clean,\" Silas muttered, scrubbing the same spot of pristine metal. \"The dust. I can feel the dust.\"\n\nKenna checked his chart. The stress of the planetary Schumann resonance anomalies had triggered his psychological inversion. He wasn't the pragmatic engineer right now; he was a slave to order. For a terrifying second, her own Aquarius override threatened to engage\u2014a clinical detachment that analyzed his erratic alpha-theta oscillations as mere data points\u2014but she forced the warmth back into her voice.\n\n\"Silas,\" Kenna said, using her 'Therapist Voice'\u2014a tone calibrated to induce alpha brain waves. \"The floor is structurally sound. The dust is negligible. You need REM sleep to process the day's trauma.\"\n\n\"Trauma?\" Silas laughed, a brittle sound. \"I just want it to be clean.\"\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Kenna noted dryly, offering a small, grounded smile. \"Come to the Lyceum. Elias has the sensory attenuation tank ready. We've introduced psychoactive Lyceum bryophytes to the air intake. They will decouple the pineal melatonin suppression and serotonin receptor static. Zero gravity. Zero dust. Just you and the void.\"\n\nSilas paused, the brush hovering over the metal. \"Zero dust?\"\n\n\"Absolute zero.\"\n\nHe stood up, looking small and tired. As Kenna guided him down the corridor, the heavy oak doors of the Lyceum opened. Elias stood waiting, a quiet anchor in the dim light, ready to take the handoff and guide Silas into the dark.",
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_11_kenna"
+    ],
+    "full_cards_loaded_count": 1
+  }
+}
