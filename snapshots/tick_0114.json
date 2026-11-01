@@ -1443,20 +1443,6 @@
   "total_events_through_tick": 140,
   "recent_segments": [
     {
-      "segment_id": "seg_s025_t0098_enclave_01_hector",
-      "sol_id": 25,
-      "colony_sol": 25,
-      "tick_id": 98,
-      "active_pov_id": "enclave_01_hector",
-      "next_pov_target": "enclave_05_kaio",
-      "location_id": "The Stormbreaker Spire",
-      "time_of_day": "MIDDAY_EXPEDITION",
-      "day_phase": "MIDDAY_EXPEDITION",
-      "title": "Sol 025 \u2022 MIDDAY_EXPEDITION (enclave_01_hector)",
-      "opening_excerpt": "\"Jane, your differential equation says the upper capacitor bank will arc in ninety seconds, which is fantastic news because I only need forty-five to clip the shunt cable\u2014hold my cider and watch the dielectric gauge!\" He",
-      "excerpt": "\"Jane, your differential equation says the upper capacitor bank will arc in ninety seconds, which is fantastic news because I only need forty-five to clip the shunt cable\u2014hold my cider and watch the dielectric gauge!\" He"
-    },
-    {
       "segment_id": "seg_s025_t0099_enclave_05_kaio",
       "sol_id": 25,
       "colony_sol": 25,
@@ -1609,6 +1595,20 @@
       "title": "Sol 029 \u2022 DAWN_SHIFT (enclave_03_silas)",
       "opening_excerpt": "For a man who could persuade impossible metals to sing, the ordinary, stubborn silence of rust was a particular insult. Silas knelt in the damp twilight of the arboretum, watching a slow, rhythmic drip from the main irri",
       "excerpt": "For a man who could persuade impossible metals to sing, the ordinary, stubborn silence of rust was a particular insult. Silas knelt in the damp twilight of the arboretum, watching a slow, rhythmic drip from the main irri"
+    },
+    {
+      "segment_id": "seg_s029_t0114_enclave_01_hector",
+      "sol_id": 29,
+      "colony_sol": 29,
+      "tick_id": 114,
+      "active_pov_id": "enclave_01_hector",
+      "next_pov_target": "enclave_05_kaio",
+      "location_id": "The Stormbreaker Spire / The Bunker",
+      "time_of_day": "MIDDAY_EXPEDITION",
+      "day_phase": "MIDDAY_EXPEDITION",
+      "title": "Sol 029 \u2022 MIDDAY_EXPEDITION (enclave_01_hector)",
+      "opening_excerpt": "\"It's not just a storm,\" Hector yelled over the wind. \"It's a battery! A big, angry, floating battery!\"\n\nHe was strapped to the top of the Stormbreaker tower, fifty meters above the Enclave. The wind tore at his goggles,",
+      "excerpt": "\"It's not just a storm,\" Hector yelled over the wind. \"It's a battery! A big, angry, floating battery!\"\n\nHe was strapped to the top of the Stormbreaker tower, fifty meters above the Enclave. The wind tore at his goggles,"
     }
   ],
   "available_sols": [
