@@ -1,0 +1,48 @@
+{
+  "event_id": "evt_s028_t0110_expedition_consequence",
+  "tick_id": 110,
+  "colony_sol": 28,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "event_type": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+  "active_pov_id": "enclave_11_kenna",
+  "next_pov_target": "enclave_12_elias",
+  "prev_next_pov_target": "enclave_11_kenna",
+  "actors": [
+    "enclave_11_kenna",
+    "enclave_03_silas",
+    "enclave_12_elias"
+  ],
+  "active_location": {
+    "zone_id": "LOC_LYCEUM_OF_THE_MIND",
+    "sensory_palette": {
+      "sight_and_color": "quiet 0300-hour lantern patrols through humming corridors",
+      "sound": "static clinging like a second skin",
+      "smell": "sterile tang of ozone mixed with earthy psychoactive lyceum bryophytes",
+      "tactile_temperature": "cool rigid metal of the deck plates",
+      "taste_optional": "faint metallic tang of scrambled serotonin receptors"
+    },
+    "interactive_features": [
+      {
+        "feature_id": "IF_01",
+        "description": "flotation tank matrix",
+        "system_verb": "ATTRACT"
+      },
+      {
+        "feature_id": "IF_02",
+        "description": "psychoactive lyceum bryophyte suspension",
+        "system_verb": "CONSUME"
+      },
+      {
+        "feature_id": "IF_03",
+        "description": "copper-shielded acoustic chamber doors",
+        "system_verb": "DEFEND"
+      }
+    ]
+  },
+  "pacing_mode": "MULLIGAN_CRISIS",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "science_vegetable": "Decoupling pineal melatonin suppression and serotonin receptor static caused by post-storm Schumann resonance anomalies using psychoactive Lyceum bryophytes and zero-dust flotation.",
+  "pre_roll_check_dc": 14,
+  "base_snapshot_tick": 110,
+  "narrative_prose": "Kenna walked the halls of the sleeping quarters, checking the bio-monitors. It was 0300 hours, yet half the family was awake. The storm had passed, but the static remained. It clung to the Enclave like a second skin. She rubbed her temples, trying to map the erratic limbic signatures bleeding through the telemetry. Decoupling pineal melatonin suppression and serotonin receptor static caused by post-storm Schumann resonance anomalies using psychoactive Lyceum bryophytes and zero-dust flotation. It was a precise, delicate calibration. \n\nShe turned the corner into the main thoroughfare. Silas was on his hands and knees. He was scrubbing a spotless deck plate with a wire brush, the rhythmic rasp echoing through the humming corridors.\n\n\"It's the particulates,\" Silas muttered, his movements jerky and obsessive. \"The static attracts the particulates. It ruins the alloy bonding.\"\n\nKenna recognized the signs. His Vex Override was locking him into a paralyzing loop of order. He wasn't building; he was breaking himself against an invisible standard. She needed him to step back, to let the tension go. But appealing to his logic would only tighten the knot.\n\n\"Silas,\" Kenna said, modulating her voice to a low, melodic hum. She knelt beside him, placing a gentle hand over his wrist to halt the frantic scrubbing. \"The deck is structurally secure. But I have a problem in the Lyceum. The acoustic chamber doors won't seal properly. The ambient static is interfering with the copper shielding.\"\n\nSilas blinked, his hand loosening on the brush. The promise of a mechanical puzzle momentarily overrode his fixation on the dust. He looked up, his face tight and exhausted.\n\n\"The shielding?\" he asked, his voice rough. \n\n\"Yes,\" Kenna lied smoothly. \"And Elias is preparing the flotation matrix. He needs you to check the fluid dynamics of the bryophyte suspension. We can't have any particulates in the tank. We need it to be zero dust.\"\n\nThe mention of absolute cleanliness finally broke the spell. Silas let out a long, ragged breath, the tension leaving his shoulders in a sudden wave. \n\n\"Zero dust,\" he repeated, standing up slowly. \n\n\"I'll take you there,\" Kenna said, guiding him down the corridor. As they walked, she tapped her earpiece, sending a quiet ping to Elias. He would know what to do when they arrived."
+}
