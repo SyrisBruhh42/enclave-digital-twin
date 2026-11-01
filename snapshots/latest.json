@@ -47,10 +47,10 @@
       "day_phase": "DAWN_SHIFT",
       "trait_states": {
         "openness": 0.462,
-        "conscientiousness": 0.2176,
+        "conscientiousness": 0.2769,
         "extraversion": 0.8823,
         "agreeableness": 0.5919,
-        "neuroticism": 0.3678,
+        "neuroticism": 0.5046,
         "hexaco_honesty_humility": 0.5968
       },
       "z_scores": {
@@ -63,7 +63,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.2932,
+      "stress": 0.4602,
       "fatigue": 0.0723,
       "sleep_debt_norm": 0.0723,
       "kp_exo": 4.96,
@@ -72,14 +72,14 @@
       "polarity_inversion_hazard_p": 0.0,
       "openness": 0.462,
       "openness_state": 0.462,
-      "conscientiousness": 0.2176,
-      "conscientiousness_state": 0.2176,
+      "conscientiousness": 0.2769,
+      "conscientiousness_state": 0.2769,
       "extraversion": 0.8823,
       "extraversion_state": 0.8823,
       "agreeableness": 0.5919,
       "agreeableness_state": 0.5919,
-      "neuroticism": 0.3678,
-      "neuroticism_state": 0.3678,
+      "neuroticism": 0.5046,
+      "neuroticism_state": 0.5046,
       "hexaco_honesty_humility": 0.5968,
       "hexaco_honesty_humility_state": 0.5968,
       "morale": 0.5
@@ -140,7 +140,7 @@
         "conscientiousness": 1.0,
         "extraversion": 0.106,
         "agreeableness": 0.2521,
-        "neuroticism": 0.5371,
+        "neuroticism": 0.6701,
         "hexaco_honesty_humility": 0.9363
       },
       "z_scores": {
@@ -153,7 +153,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.2932,
+      "stress": 0.4602,
       "fatigue": 0.0723,
       "sleep_debt_norm": 0.0723,
       "kp_exo": 4.96,
@@ -168,8 +168,8 @@
       "extraversion_state": 0.106,
       "agreeableness": 0.2521,
       "agreeableness_state": 0.2521,
-      "neuroticism": 0.5371,
-      "neuroticism_state": 0.5371,
+      "neuroticism": 0.6701,
+      "neuroticism_state": 0.6701,
       "hexaco_honesty_humility": 0.9363,
       "hexaco_honesty_humility_state": 0.9363,
       "morale": 0.5
@@ -745,10 +745,10 @@
       "day_phase": "DAWN_SHIFT",
       "trait_states": {
         "openness": 0.462,
-        "conscientiousness": 0.2176,
+        "conscientiousness": 0.2769,
         "extraversion": 0.8823,
         "agreeableness": 0.5919,
-        "neuroticism": 0.3678,
+        "neuroticism": 0.5046,
         "hexaco_honesty_humility": 0.5968
       },
       "z_scores": {
@@ -761,7 +761,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.2932,
+      "stress": 0.4602,
       "fatigue": 0.0723,
       "sleep_debt_norm": 0.0723,
       "kp_exo": 4.96,
@@ -770,14 +770,14 @@
       "polarity_inversion_hazard_p": 0.0,
       "openness": 0.462,
       "openness_state": 0.462,
-      "conscientiousness": 0.2176,
-      "conscientiousness_state": 0.2176,
+      "conscientiousness": 0.2769,
+      "conscientiousness_state": 0.2769,
       "extraversion": 0.8823,
       "extraversion_state": 0.8823,
       "agreeableness": 0.5919,
       "agreeableness_state": 0.5919,
-      "neuroticism": 0.3678,
-      "neuroticism_state": 0.3678,
+      "neuroticism": 0.5046,
+      "neuroticism_state": 0.5046,
       "hexaco_honesty_humility": 0.5968,
       "hexaco_honesty_humility_state": 0.5968,
       "morale": 0.5
@@ -838,7 +838,7 @@
         "conscientiousness": 1.0,
         "extraversion": 0.106,
         "agreeableness": 0.2521,
-        "neuroticism": 0.5371,
+        "neuroticism": 0.6701,
         "hexaco_honesty_humility": 0.9363
       },
       "z_scores": {
@@ -851,7 +851,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.2932,
+      "stress": 0.4602,
       "fatigue": 0.0723,
       "sleep_debt_norm": 0.0723,
       "kp_exo": 4.96,
@@ -866,8 +866,8 @@
       "extraversion_state": 0.106,
       "agreeableness": 0.2521,
       "agreeableness_state": 0.2521,
-      "neuroticism": 0.5371,
-      "neuroticism_state": 0.5371,
+      "neuroticism": 0.6701,
+      "neuroticism_state": 0.6701,
       "hexaco_honesty_humility": 0.9363,
       "hexaco_honesty_humility_state": 0.9363,
       "morale": 0.5
@@ -1437,24 +1437,11 @@
     }
   },
   "applied_event_ids": [
+    "evt_s029_t0113_morning_intent",
     "evt_s029_t0113_world_consequence"
   ],
-  "total_events_through_tick": 137,
+  "total_events_through_tick": 138,
   "recent_segments": [
-    {
-      "segment_id": "seg_s025_t0097_enclave_03_silas",
-      "sol_id": 25,
-      "colony_sol": 25,
-      "tick_id": 97,
-      "active_pov_id": "enclave_03_silas",
-      "next_pov_target": "enclave_01_hector",
-      "location_id": "The Arboretum",
-      "time_of_day": "DAWN_SHIFT",
-      "day_phase": "DAWN_SHIFT",
-      "title": "Sol 025 \u2022 DAWN_SHIFT (enclave_03_silas)",
-      "opening_excerpt": "For a man who could persuade impossible metals to sing, the ordinary, stubborn silence of rust was a particular insult. There it was, on a length of pipe he himself had hammered into being, a faint, cancerous blush of ox",
-      "excerpt": "For a man who could persuade impossible metals to sing, the ordinary, stubborn silence of rust was a particular insult. There it was, on a length of pipe he himself had hammered into being, a faint, cancerous blush of ox"
-    },
     {
       "segment_id": "seg_s025_t0098_enclave_01_hector",
       "sol_id": 25,
@@ -1608,6 +1595,20 @@
       "title": "Sol 028 \u2022 DUSK_CRAFT (enclave_12_elias)",
       "opening_excerpt": "The table was silent. Not the good, tired silence of a job well done. The sharp, brittle silence of sixteen people who had been breathing the same recycled air for too long.\n\nElias sat at the far end of the long timber t",
       "excerpt": "The table was silent. Not the good, tired silence of a job well done. The sharp, brittle silence of sixteen people who had been breathing the same recycled air for too long.\n\nElias sat at the far end of the long timber t"
+    },
+    {
+      "segment_id": "seg_s029_t0113_enclave_03_silas",
+      "sol_id": 29,
+      "colony_sol": 29,
+      "tick_id": 113,
+      "active_pov_id": "enclave_03_silas",
+      "next_pov_target": "enclave_01_hector",
+      "location_id": "The_Hub_Hearth",
+      "time_of_day": "DAWN_SHIFT",
+      "day_phase": "DAWN_SHIFT",
+      "title": "Sol 029 \u2022 DAWN_SHIFT (enclave_03_silas)",
+      "opening_excerpt": "For a man who could persuade impossible metals to sing, the ordinary, stubborn silence of rust was a particular insult. Silas knelt in the damp twilight of the arboretum, watching a slow, rhythmic drip from the main irri",
+      "excerpt": "For a man who could persuade impossible metals to sing, the ordinary, stubborn silence of rust was a particular insult. Silas knelt in the damp twilight of the arboretum, watching a slow, rhythmic drip from the main irri"
     }
   ],
   "available_sols": [
