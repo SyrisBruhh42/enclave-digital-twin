@@ -7,7 +7,11 @@
   "importance": "LOW",
   "novelty_score": 0.65,
   "summary": "Decoupling pineal melatonin suppression and serotonin receptor static caused by post-storm Schumann resonance anomalies using psychoactive Lyceum bryophytes and zero-dust flotation.",
-  "actors": ["enclave_11_kenna", "enclave_12_elias", "enclave_03_silas"],
+  "actors": [
+    "enclave_11_kenna",
+    "enclave_12_elias",
+    "enclave_03_silas"
+  ],
   "location": "The Lyceum of the Mind",
   "evidence_refs": [],
   "state_deltas": {
@@ -29,7 +33,7 @@
   "next_pov_target": "enclave_12_elias",
   "prev_next_pov_target": "enclave_11_kenna",
   "pacing_mode": "MULLIGAN_CRISIS",
-  "narrative_prose": "The storm had passed, but the static remained. It clung to the Enclave like a second skin.\n\nKenna walked the halls of the sleeping quarters, checking the bio-monitors. It was 0300 hours, yet half the family was awake. The air pressure had dropped too quickly, and the magnetic residue from the recent geomagnetic shear was playing havoc with everyone's circadian rhythms. The Schumann resonance anomalies had severely scrambled the local atmosphere, leaving the colony's pineal melatonin suppression out of sync. She needed to re-synchronize them using the psychoactive Lyceum bryophytes and the zero-dust flotation tanks before exhaustion compromised their critical functions.\n\nYet, even amidst the intricate decoupling of serotonin receptor static, the mundane realities of the Enclave persisted. She found Silas in the corridor on his hands and knees, relentlessly scrubbing the floor. The stress of the storm and the magnetic disruption had triggered a psychological inversion. He wasn't the pragmatic engineer right now; he was completely obsessed with ritual order, staring at an invisible speck of dirt. \"Silas,\" Kenna said softly, using her carefully calibrated tone to induce alpha brain waves. \"The floor is structurally sound. The dust is negligible. You need REM sleep to process the day's trauma.\"\n\nHe didn't stop scrubbing. For a fraction of a second, as she watched the master metallurgist desperately seeking control over the uncontrollable, a cold, hyper-clinical detachment washed over her. She saw his erratic movements not as distress, but as raw neurological telemetry—a 0.4-hertz limbic stress tremor that she could simply chart and file away. She blinked, forcing the warmth back into her voice. \"Silas, darling, when you furiously polish a perfectly clean bulkhead at 0300, everyone knows it just means the static is loud today. Come to the Lyceum. Elias has the sensory deprivation tank ready. Zero gravity. Absolute zero dust. Just you and the void.\"\n\nSilas paused, his shoulders dropping slightly as the tension broke. \"Zero dust?\"\n\n\"Absolute zero,\" Kenna promised.\n\nShe passed the baton to Elias at the Lyceum doors, checking the filtration matrix to ensure the bryophytes were circulating properly through the copper-shielded chamber. They worked together, silently threading the needle between high-level neuro-somatics and the gentle art of telling a stubborn engineer to stop scrubbing. 'If you're complaining and no one is laughing, you're complaining wrong,' she noted dryly as Silas finally relinquished his brush.",
+  "narrative_prose": "The storm had passed, but the static remained. It clung to the Enclave like a second skin.\n\nKenna walked the halls of the sleeping quarters, checking the bio-monitors. It was 0300 hours, yet half the family was awake. The air pressure had dropped too quickly, and the magnetic residue from the recent geomagnetic shear was playing havoc with everyone's circadian rhythms. The Schumann resonance anomalies had severely scrambled the local atmosphere, leaving the colony's pineal melatonin suppression out of sync. She needed to re-synchronize them using the psychoactive Lyceum bryophytes and the zero-dust flotation tanks before exhaustion compromised their critical functions.\n\nYet, even amidst the intricate decoupling of serotonin receptor static, the mundane realities of the Enclave persisted. She found Silas in the corridor on his hands and knees, relentlessly scrubbing the floor. The stress of the storm and the magnetic disruption had triggered a psychological inversion. He wasn't the pragmatic engineer right now; he was completely obsessed with ritual order, staring at an invisible speck of dirt. \"Silas,\" Kenna said softly, using her carefully calibrated tone to induce alpha brain waves. \"The floor is structurally sound. The dust is negligible. You need REM sleep to process the day's trauma.\"\n\nHe didn't stop scrubbing. For a fraction of a second, as she watched the master metallurgist desperately seeking control over the uncontrollable, a cold, hyper-clinical detachment washed over her. She saw his erratic movements not as distress, but as raw neurological telemetry\u2014a 0.4-hertz limbic stress tremor that she could simply chart and file away. She blinked, forcing the warmth back into her voice. \"Silas, darling, when you furiously polish a perfectly clean bulkhead at 0300, everyone knows it just means the static is loud today. Come to the Lyceum. Elias has the sensory deprivation tank ready. Zero gravity. Absolute zero dust. Just you and the void.\"\n\nSilas paused, his shoulders dropping slightly as the tension broke. \"Zero dust?\"\n\n\"Absolute zero,\" Kenna promised.\n\nShe passed the baton to Elias at the Lyceum doors, checking the filtration matrix to ensure the bryophytes were circulating properly through the copper-shielded chamber. They worked together, silently threading the needle between high-level neuro-somatics and the gentle art of telling a stubborn engineer to stop scrubbing. 'If you're complaining and no one is laughing, you're complaining wrong,' she noted dryly as Silas finally relinquished his brush.",
   "active_location": {
     "macro_silhouette": "The Lyceum of the Mind, a quiet, copper-shielded sanctuary where acoustic dampening meets glowing sensory tanks.",
     "sensory_palette": {
@@ -59,7 +63,12 @@
     ]
   },
   "context_manifest": {
-    "loaded_full_card_ids": ["enclave_11_kenna"],
+    "loaded_full_card_ids": [
+      "enclave_11_kenna"
+    ],
     "full_cards_loaded_count": 1
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
   }
 }
