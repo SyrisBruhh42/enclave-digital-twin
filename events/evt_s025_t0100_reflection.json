@@ -1,0 +1,143 @@
+{
+  "event_id": "evt_s025_t0100_reflection",
+  "tick_id": 100,
+  "colony_sol": 25,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-11-18T20:00:00Z",
+  "base_snapshot_tick": 98,
+  "event_type": "NIGHTLY_REFLECTION",
+  "location": "The Hub / The Hearth",
+  "actors": [
+    "enclave_13_ryn",
+    "enclave_04_leo"
+  ],
+  "active_pov_id": "enclave_13_ryn",
+  "next_pov_target": "enclave_04_leo",
+  "prev_next_pov_target": "enclave_13_ryn",
+  "science_vegetable": "Precision 72\u00b0C enzymatic chitin tenderization and gas-chromatograph methional flavor-pairing to trigger popcorn-aromatic Maillard reactions during an ionization storm.",
+  "summary": "Ryn executes a logistical campaign against hunger by running a gas-chromatograph Maillard reaction campaign to make chitinous subterranean fungi taste like buttered popcorn while grounding every soup spoon with copper wire during an ionization storm, handing off the baton to Leo.",
+  "importance": 7.5,
+  "novelty_score": 6.8,
+  "state_deltas": {
+    "stress_delta": -0.26
+  },
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "cited_event_ids": [
+    "evt_s025_t0098_expedition_consequence"
+  ],
+  "narrative_prose": "Ryn did not cook; she executed a logistical campaign against hunger. The kitchen was a zone of military precision. Knives were aligned by blade length. Spices were organized by Scoville unit. The stew bubbling in the massive cauldron was not a guess; it was a calculated equation of caloric density and morale boosting. She was working with the strange non-flashing mushroom Kaio had brought back. The cellular structure was dense, requiring a precise julienne to break down the chitinous cell walls.\n\nShe paired it with the tubers Terra had harvested. According to the gas chromatograph, both shared high levels of methional, which meant they should\u2014theoretically\u2014pair perfectly. \"Stirring velocity is inconsistent,\" she barked at Dorian, who was leisurely swirling a ladle through the pot. \"It's a stew, not a weather system. Stir clockwise. 40 RPM. And don't touch the temperature dial. The enzymatic breakdown of the collagen requires a precise 72 degrees Celsius.\"\n\nAs they ate, the storm outside broke. Thunder hammered the roof, a sound like the sky cracking open, the wind a banshee wail rattling the reinforced shutters. Inside, the air smelled of roasted tubers and savory loam. \"It smells...\" Leo sniffed the air, his eyes widening. \"Like... popcorn?\"\n\n\"Maillard reaction,\" Ryn said, taking her seat. \"The mushroom proteins simulate the aroma of heated corn when exposed to thermal stress. Eat.\" The table fell silent. It wasn't loud. It was warm. The quiet bioluminescent wonder of the room settled over them, warm hearth-fire pushing back the storm while thunder hammered the shutters. She had grounded every single soup spoon with a copper wire leading to the floor grates. \"If you're complaining and no one is laughing, you're complaining wrong,\" she reminded them, watching Leo chew. She gave him a short nod, a silent handoff of command for the night.",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 25,
+      "colony_sol": 25,
+      "tick_id": 100,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Reconcile daily thermodynamic deficit through communal ingestion.",
+        "mid_term_milestone": "Stabilize the Hub's caloric reserves under variable barometric pressure.",
+        "campaign_arc_climax": "Integrate the metabolic engine with the Enclave's core atmospheric controls."
+      }
+    },
+    "active_location": {
+      "location_id": "The_Hub_Hearth",
+      "macro_silhouette": "The dense warmth of the hearth presses outward against the chilling draft of the valley floor, the copper kettles glowing a deep umber in the low light. Plumes of spiced steam catch the erratic flickers of the ferrofluid manifold's ambient glow. It is a tight, secure sanctuary of boiling stock and scrubbed metal, anchoring the chaotic sprawl of the settlement.",
+      "sensory_palette": {
+        "sight_and_color": "Deep umber, polished copper reflections, warm amber glow",
+        "sound": "Low simmer of heavy stockpots, rhythmic scrape of wire brushes",
+        "smell": "Rich iron-wheat crusts and sharp salt-vinegar polish",
+        "tactile_temperature": "Oppressive radiant heat cutting through harsh structural cold",
+        "taste_optional": "Lingering roasted myco-protein and mineral tang"
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Thirty-Gallon Steam-Jacketed Kettle",
+          "affordance_description": "Massive copper vat retaining immense latent heat, capable of sheltering vital reagents.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Ferrofluid Manifold Tap",
+          "affordance_description": "A structural exhaust vent channeling excess thermal energy from the sea.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 18
+        },
+        {
+          "feature_name": "Iron-Wheat Starter Crock",
+          "affordance_description": "A fragile biological culture demanding constant thermal tending.",
+          "system_verb": "CONSUME",
+          "associated_check_dc": 12
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "toy_ferrofluid_resonance",
+        "name_and_role": "Magnetohydrodynamic Waves",
+        "motivation_goal": "To induce structural shearing along rigid architectures.",
+        "consistent_method": "Pulsing erratic thermal spikes through the Hub's base plating.",
+        "immediate_complication": "Threatens to boil over the delicate stock if temperatures fluctuate.",
+        "pressure_index": 7,
+        "uninterrupted_escalation": "Eventual fracture of the hearth's thermal shielding."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Ryn needs to clean the galley and recount the caloric burn.",
+        "level_2_local": "The shear forces from the ferrofluid sea are destabilizing the cooking apparatus.",
+        "level_3_campaign_arc": "Mastering thermodynamic equilibrium is essential for the Enclave's survival."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_13_ryn",
+          "tactical_role": "DEFENDER"
+        }
+      ],
+      "strain_accumulated_upward": 2,
+      "prerolled_hazard_queue": [
+        14,
+        8,
+        19,
+        4,
+        12
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.2,
+      "motivational_vector_saturation": 0.8,
+      "unresolved_conflict_ratio": 0.4,
+      "temporal_horizon_immediacy": 0.6,
+      "composite_lpi": 0.5,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "Enclave_Core",
+        "model": "Tactical_Arbiter_v1",
+        "temperature": 0.2,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "If the thermal buffer fails, the week's myco-protein harvest is lost to carbonization.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Ryn misreads the pressure gauge entirely, accelerating the boil.",
+          "below_dc_complicated_fail_forward": "The stock is saved, but the kettle's pressure valve warps, requiring mundane maintenance.",
+          "meets_dc_clean_success": "Ryn perfectly syncs the rolling boil with the environmental shear waves.",
+          "dc_plus_5_or_20_extended_lore": "Ryn discovers a resonant frequency in the copper that entirely dampens the shear."
+        }
+      },
+      "master_narrator": {
+        "executor": "Enclave_Narrator",
+        "temperature": 0.7,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "With the galley finally quiet, Ryn wipes her brow and considers Silas's quiet observation."
+      }
+    }
+  },
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_13_ryn"
+    ],
+    "full_cards_loaded_count": 1
+  }
+}
