@@ -91,8 +91,8 @@
   "lpi_metrics": {
     "relational_tension_density": 0.85,
     "motivational_vector_saturation": 0.75,
-    "unresolved_conflict_ratio": 0.90,
-    "temporal_horizon_immediacy": 0.80,
+    "unresolved_conflict_ratio": 0.9,
+    "temporal_horizon_immediacy": 0.8,
     "composite_lpi": 0.82,
     "classification": "Campaign-Ready"
   },
