@@ -1437,9 +1437,10 @@
     }
   },
   "applied_event_ids": [
-    "evt_s027_t0105_morning_intent"
+    "evt_s027_t0105_morning_intent",
+    "evt_s027_t0105_world_consequence"
   ],
-  "total_events_through_tick": 127,
+  "total_events_through_tick": 128,
   "recent_segments": [
     {
       "segment_id": "seg_s023_t0090_enclave_07_willow",

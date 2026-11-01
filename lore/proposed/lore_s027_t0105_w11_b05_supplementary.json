@@ -80,7 +80,13 @@
       }
     ],
     "strain_accumulated_upward": 10,
-    "prerolled_hazard_queue": [12, 14, 18, 5, 20]
+    "prerolled_hazard_queue": [
+      12,
+      14,
+      18,
+      5,
+      20
+    ]
   },
   "lpi_metrics": {
     "relational_tension_density": 0.8,
@@ -109,7 +115,7 @@
       "temperature": 0.8,
       "calypso_zero_raw_stats": true,
       "prosodic_micro_pauses_enabled": true,
-      "agency_handoff_prompt": "Jane wiped a streak of wet earth from her cheek, glaring at the muddy trench she was forced to dig by hand. It was utterly ridiculous. She could model a planet-wide Lorenz strange attractor in phase space, predicting the exact millisecond the femtosecond laser-induced plasma channels would ionize a conductive step-leader highway at 50 kV/m atmospheric potential gradient into the bedrock capacitor geode. Yet here she was, up to her knees in muck, wrestling a copper rod into the ground because the physical world stubbornly refused to self-assemble.\n\n\"It's random,\" Hector had said, pacing behind her chair earlier. \"You can't code random.\"\n\n\"It's not random,\" Jane muttered now, her eyes darting across the dark sky. \"It's chaotic. Deterministic chaos. There's a pattern, it just has infinite variables.\"\n\nA violet laser needle stitched the bruised purple thunderhead to a screaming copper spire fifty meters above the valley, illuminating her disgruntled frown. The Diva in her bristled—why wasn't anyone appreciating the elegant Navier-Stokes boundary approximations she had written for this very moment? Instead, she was just the trench digger. Her brass Jacquard cards had flawlessly predicted this bifurcated thermal shear, but the sheer indignity of hauling physical grounding equipment in the rain was testing her limits.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Willow's voice drifted through the static of the comms. The tone was perfectly deadpan, cutting through the ambient hum of the storm.\n\nJane sighed, adjusting her grip on the rod. \"I'm not complaining, I'm just mathematically offended by the inefficiency of manual labor. And the fact that my genius is currently being used to shovel dirt.\" She secured the grounding clamp, watching the plasma channel stabilize, a beautiful, terrifying geometry. The energy grounded successfully into the bedrock, bypassing the fragile equipment. Handing the physical baton over to Willow, who had just approached with her alchemical gear ready, Jane stepped back, waiting for the real work to begin."
+      "agency_handoff_prompt": "Jane wiped a streak of wet earth from her cheek, glaring at the muddy trench she was forced to dig by hand. It was utterly ridiculous. She could model a planet-wide Lorenz strange attractor in phase space, predicting the exact millisecond the femtosecond laser-induced plasma channels would ionize a conductive step-leader highway at 50 kV/m atmospheric potential gradient into the bedrock capacitor geode. Yet here she was, up to her knees in muck, wrestling a copper rod into the ground because the physical world stubbornly refused to self-assemble.\n\n\"It's random,\" Hector had said, pacing behind her chair earlier. \"You can't code random.\"\n\n\"It's not random,\" Jane muttered now, her eyes darting across the dark sky. \"It's chaotic. Deterministic chaos. There's a pattern, it just has infinite variables.\"\n\nA violet laser needle stitched the bruised purple thunderhead to a screaming copper spire fifty meters above the valley, illuminating her disgruntled frown. The Diva in her bristled\u2014why wasn't anyone appreciating the elegant Navier-Stokes boundary approximations she had written for this very moment? Instead, she was just the trench digger. Her brass Jacquard cards had flawlessly predicted this bifurcated thermal shear, but the sheer indignity of hauling physical grounding equipment in the rain was testing her limits.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Willow's voice drifted through the static of the comms. The tone was perfectly deadpan, cutting through the ambient hum of the storm.\n\nJane sighed, adjusting her grip on the rod. \"I'm not complaining, I'm just mathematically offended by the inefficiency of manual labor. And the fact that my genius is currently being used to shovel dirt.\" She secured the grounding clamp, watching the plasma channel stabilize, a beautiful, terrifying geometry. The energy grounded successfully into the bedrock, bypassing the fragile equipment. Handing the physical baton over to Willow, who had just approached with her alchemical gear ready, Jane stepped back, waiting for the real work to begin."
     }
   }
 }
