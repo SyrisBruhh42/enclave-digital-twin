@@ -1,0 +1,116 @@
+{
+  "base_snapshot_tick": 111,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_12_elias"
+    ],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_12_elias",
+    "next_pov_target": "enclave_16_elara",
+    "prev_next_pov_target": "enclave_12_elias"
+  },
+  "campaign_metadata": {
+    "session_number": 28,
+    "colony_sol": 28,
+    "tick_id": 111,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Survive dinner without a mutiny.",
+      "mid_term_milestone": "Mitigate Third-Quarter phenomenon.",
+      "campaign_arc_climax": "Cultivate resilient root-matrices for the crater."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Hearth",
+    "macro_silhouette": "The Feast is the beating heart of the colony. The Stormbreaker hums beneath the floorboards, radiating captured energy while sixteen mugs sit around the timber hall.",
+    "sensory_palette": {
+      "sight_and_color": "warm circle of firelight",
+      "sound": "clinking spoons and rising overlapping arguments",
+      "smell": "roasted tubers, savory loam, and ozone",
+      "tactile_temperature": "warm ambient heat from the central fire"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Shared Dinner Table",
+        "affordance_description": "The central focal point of all social dynamics and arguments.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Algae-Strained Soup Stock",
+        "affordance_description": "The focal point of the current mutiny.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Captured Geode",
+        "affordance_description": "Humming beneath the floorboards, providing ambient warmth.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_01_soup_stock",
+      "name_and_role": "The Soup Stock",
+      "motivation_goal": "To feed the colony while providing a locus for tension.",
+      "consistent_method": "Tasting vaguely of algae and a clean sock.",
+      "immediate_complication": "Causes the table to erupt into a near-mutiny.",
+      "pressure_index": 5,
+      "uninterrupted_escalation": "The arguments escalate until a pressure valve is released."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The group needs to eat dinner without killing each other.",
+      "level_2_local": "The Third-Quarter isolation micro-stressors are culminating in absurd arguments.",
+      "level_3_campaign_arc": "The colony's long-term survival relies on preserving the linguistic and epistemic memory of the sixteen so nothing true is lost."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_12_elias",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      18,
+      5,
+      20,
+      11
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.7,
+    "composite_lpi": 0.7,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Ollama",
+      "model": "llama3",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The table mutinies, fracturing the colony's fragile social bonds.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Elias misjudges the tension and says something that makes the argument worse.",
+        "below_dc_complicated_fail_forward": "The argument diffuses, but resentment simmers beneath the surface.",
+        "meets_dc_clean_success": "The absurd tension is broken, restoring the group's oxytocin vagal buffering.",
+        "dc_plus_5_or_20_extended_lore": "The group bonds over the absurdity, forming a new inside joke that lasts for weeks."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "The table was silent. Not the good, tired silence of a job well done. The sharp, brittle silence of sixteen people who had been breathing the same recycled air for too long. Sixteen mugs rested motionless in the warm circle of firelight while the captured geode hummed beneath the floorboards. Elias watched them carefully. He observed the textbook cascade of an isolated group under stress: mitigating Isolated-Confined-Extreme (ICE) Third-Quarter cortisol cascades and autonomic hypervigilance through structured communal roast rituals and oxytocin vagal buffering. His duty was to archive the linguistic and epistemic memory of the sixteen so nothing true is lost. But currently, he was just trying to ensure they survived dinner.\n\nThe silence shattered as Ryn slammed a ladle down. Arguments overlapped instantly—engineering versus biology, safety versus discovery. Elias monitored the Third-Quarter isolation micro-stressors across sixteen polymaths, only to watch the entire table nearly mutiny because Kaio filtered soup stock through a sock. \n\nA sudden, cold weight settled in Elias's chest. His jaw clamped tight. The urge to withdraw into immovable, deadpan stubbornness clawed at his usual contemplative patience. He crossed his arms. The heavy wool of his sweater settled solidly against his ribs. He sat back in his chair, digging his heels into the wooden floorboards, refusing to yield to the chaotic noise.\n\nTherefore, he lowered his arms slowly to his lap. Escalating the standoff meant abandoning the fragile fellowship. He picked up his slate instead, noting the exact friction coefficient of the room. \n\n\"If you're complaining and no one is laughing,\" Elias said, his voice quiet but carrying perfectly over the din, \"you're complaining wrong.\"\n\nElara looked over from the other side of the table. \"What did you say?\"\n\n\"I said,\" Elias replied, his eyes twinkling, \"that we brought eight centuries of differential calculus across the stars, yet here we sit arguing whether a magnetotropic turnip filtered through a sock belongs to metallurgy or theology. Personally, I vote we butter it first.\""
+    }
+  }
+}
