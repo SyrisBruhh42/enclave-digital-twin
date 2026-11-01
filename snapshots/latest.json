@@ -1427,20 +1427,6 @@
   "total_events_through_tick": 120,
   "recent_segments": [
     {
-      "segment_id": "seg_s021_t0082_enclave_01_hector",
-      "sol_id": 21,
-      "colony_sol": 21,
-      "tick_id": 82,
-      "active_pov_id": "enclave_01_hector",
-      "next_pov_target": "enclave_05_kaio",
-      "location_id": "the_forge_exterior",
-      "time_of_day": "MIDDAY_EXPEDITION",
-      "day_phase": "MIDDAY_EXPEDITION",
-      "title": "Sol 021 \u2022 MIDDAY_EXPEDITION (enclave_01_hector)",
-      "opening_excerpt": "Hector observes the sheer and passes the baton to Kaio.",
-      "excerpt": "Hector observes the sheer and passes the baton to Kaio."
-    },
-    {
       "segment_id": "seg_s021_t0083_enclave_05_kaio",
       "sol_id": 21,
       "colony_sol": 21,
@@ -1593,6 +1579,20 @@
       "title": "Sol 025 \u2022 DAWN_SHIFT (enclave_03_silas)",
       "opening_excerpt": "For a man who could persuade impossible metals to sing, the ordinary, stubborn silence of rust was a particular insult. There it was, on a length of pipe he himself had hammered into being, a faint, cancerous blush of ox",
       "excerpt": "For a man who could persuade impossible metals to sing, the ordinary, stubborn silence of rust was a particular insult. There it was, on a length of pipe he himself had hammered into being, a faint, cancerous blush of ox"
+    },
+    {
+      "segment_id": "seg_s025_t0098_enclave_01_hector",
+      "sol_id": 25,
+      "colony_sol": 25,
+      "tick_id": 98,
+      "active_pov_id": "enclave_01_hector",
+      "next_pov_target": "enclave_05_kaio",
+      "location_id": "The Stormbreaker Spire",
+      "time_of_day": "MIDDAY_EXPEDITION",
+      "day_phase": "MIDDAY_EXPEDITION",
+      "title": "Sol 025 \u2022 MIDDAY_EXPEDITION (enclave_01_hector)",
+      "opening_excerpt": "\"Jane, your differential equation says the upper capacitor bank will arc in ninety seconds, which is fantastic news because I only need forty-five to clip the shunt cable\u2014hold my cider and watch the dielectric gauge!\" He",
+      "excerpt": "\"Jane, your differential equation says the upper capacitor bank will arc in ninety seconds, which is fantastic news because I only need forty-five to clip the shunt cable\u2014hold my cider and watch the dielectric gauge!\" He"
     }
   ],
   "available_sols": [
