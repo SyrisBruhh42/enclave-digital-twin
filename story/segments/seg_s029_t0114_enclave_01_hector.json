@@ -1,0 +1,33 @@
+{
+  "segment_id": "seg_s029_t0114_enclave_01_hector",
+  "tick_id": 114,
+  "colony_sol": 29,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-10-25T00:00:00Z",
+  "base_snapshot_tick": 114,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The Stormbreaker Spire / The Bunker",
+  "actors": ["enclave_01_hector", "enclave_05_kaio"],
+  "active_pov_id": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "prev_next_pov_target": "enclave_01_hector",
+  "pacing_mode": "MULLIGAN_CRISIS",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "pre_roll_dc": 14,
+  "science_vegetable": "Real-time Lorenz strange-attractor bifurcation targeting that fires millisecond pre-strike ionization pulses to lock chaotic lightning onto collector rods at 98% efficiency.",
+  "summary": "Hector defends the Stormbreaker tower, managing the lightning.",
+  "importance": 0.8,
+  "novelty_score": 0.7,
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "interactive_features": [
+    {
+      "feature_name": "Lightning Spire",
+      "affordance_description": "A copper spire fifty meters above the valley that captures gigajoules of energy.",
+      "system_verb": "DEFEND",
+      "associated_check_dc": 14
+    }
+  ],
+  "text": "\"It's not just a storm,\" Hector yelled over the wind. \"It's a battery! A big, angry, floating battery!\"\n\nHe was strapped to the top of the Stormbreaker tower, fifty meters above the Enclave. The wind tore at his goggles, screaming like a jet engine. Below him, the subterranean bunker hummed with quiet wonder, where emerald phase-space butterfly wings rotated across brass-framed CRT monitors, tracking the atmospheric potential gradient climbing past fifty kilovolts per meter.\n\n\"Targeting solution is locked,\" Jane's voice buzzed in his ear, flat and precise against the gale. \"Firing the femtosecond laser... now. And stop complaining about the cold up there. If you're complaining and no one is laughing, you're complaining wrong.\"\n\nA beam of intense, violet light shot from the tower, piercing the bruised, violent purple cloud layer. It was designed to ionize the air, creating a conductive path of plasma. Jane's real-time Lorenz strange-attractor bifurcation targeting fired millisecond pre-strike ionization pulses, drawing a highway for the electricity to follow to lock chaotic lightning onto collector rods at ninety-eight percent efficiency.\n\nFor a heartbeat, nothing happened. The world held its breath.\n\nThen, the sky connected.\n\nA blinding, solid pillar of white fire slammed down the laser channel. The sound wasn't a boom; it was a physical blow that knocked the wind out of Hector's lungs. The tower vibrated, the massive copper conductors screaming as they channeled gigajoules of energy down into the containment geode buried in the bedrock. Hector gripped the rigging, his teeth vibrating in his skull. This was the rush. Harnessing a titan and putting it in a box.\n\nSuddenly, he stared at the coupling mechanism. His pulse spiked. The heavy brass connector was exactly zero point five degrees off vertical.\n\n\"The coupling is crooked,\" Hector shouted, his hands freezing on the harness release. \"The inductance will be asymmetrical. I have to align it!\"\n\nBefore he could unclip his carabiner to reach the crooked cable, a boot slammed onto the metal grating beside him. Kaio had scrambled up the access ladder, his eyes wide and fixed not on the storm, but on the encroaching perimeter."
+}
