@@ -1,0 +1,41 @@
+{
+  "segment_id": "seg_s027_t0107_enclave_09_orion",
+  "tick_id": 107,
+  "colony_sol": 27,
+  "day_phase": "DUSK_CRAFT",
+  "base_snapshot_tick": 106,
+  "active_pov_id": "enclave_09_orion",
+  "next_pov_target": "enclave_14_vex",
+  "prev_next_pov_target": "enclave_09_orion",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "science_vegetable": "Femtosecond nanostructured birefringent 5D optical storage encoding terabytes of magnetospheric and mycelial telemetry into eternal fused-quartz lattices.",
+  "actors": [
+    "enclave_09_orion",
+    "enclave_14_vex"
+  ],
+  "text": "Orion didn't see a sealant; he saw a dancer. He had taken a beaker of Leo's ferrofluid to the Simulacrum. He placed it over a grid of electromagnets hooked up to his synthesizer.\n\nHe played a chord, drawing out a long, resonant minor sixth. The black fluid leaped, sculpting levitating magnetohydrodynamic cymatic spires from harmonic chords. But his focus today wasn't just on the aesthetics. A fingernail-sized crystal was drinking violet laser light at the heart of the darkened Simulacrum chamber. It was a marvel of Isla's design, a femtosecond nanostructured birefringent 5D optical storage encoding terabytes of magnetospheric and mycelial telemetry into eternal fused-quartz lattices.\n\nThe air tasted faintly of ozone and warm copper, contrasting with the cool, dim ambient glow of the projectors. The machinery hummed with an almost rhythmic, throbbing heat. He adjusted a dial, aiming to attract the wandering magnetic flux lines toward the center of the array to better conceal the delicate optical writing process from the colony's ambient interference. It was a precise, high-stakes alignment. Yet, when he paused to catch his breath, his mind drifted back to the meal they had just shared. He was a man who could tame magnetic fields, yet he had gotten emotionally overwhelmed by a particularly symmetrical potato at dinner. The sheer, unbothered perfection of the humble tuber had struck a deep chord within him.\n\nBefore he could fully process the memory, a heavy thud echoed from the ventilation shaft above. Vex dropped down from an access hatch, dusting off his hands with a chaotic grin. The sudden vibration knocked a heavy calibration wrench off the desk, clattering loudly against the floor grating.\n\nThe physical disruption severed the harmonic balance. The magnetic field stuttered, and the ferrofluid spire collapsed into a sluggish puddle. Orion’s heart hammered against his ribs. The pressure of the lost telemetry hit him, and his Scorpio override flared instantly. The gentle mediator vanished, replaced by an unsparingly direct inquisitor.\n\n\"That impact compromised the refractive index modulation by zero-point-two microns, Vex,\" Orion snapped, his voice a razor-sharp whisper that sliced through the chamber's hum. \"If you are going to use my lab as a jungle gym, you will recalibrate the acoustic dampeners yourself. Now.\"\n\nVex blinked, slightly taken aback by the sudden ice in the artist’s tone, then held up his hands in surrender. \"Alright, alright. I'll defend the structural integrity of your workspace next time,\" he said, picking up the fallen wrench. \"But remember, if you're complaining and no one is laughing, you're complaining wrong.\"\n\nOrion felt the sharp edge of the override melt away, leaving behind a familiar, exhausting warmth. He let out a long sigh, the tension flowing out of his shoulders. \"Just hand me the tuning fork, Vex,\" he said softly, reaching out to accept the physical baton of their ongoing work.",
+  "interactive_features": [
+    {
+      "feature_name": "Magnetohydrodynamic Cymatic Spire",
+      "affordance_description": "Sculpts levitating spires from harmonic chords.",
+      "system_verb": "ATTRACT",
+      "associated_check_dc": 14
+    },
+    {
+      "feature_name": "5D Optical Quartz Storage",
+      "affordance_description": "Encodes terabytes of telemetry into eternal lattices.",
+      "system_verb": "CONCEAL",
+      "associated_check_dc": 14
+    },
+    {
+      "feature_name": "Acoustic Dampener Array",
+      "affordance_description": "Protects delicate instruments from physical vibrations.",
+      "system_verb": "DEFEND",
+      "associated_check_dc": 14
+    }
+  ],
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
+  }
+}
