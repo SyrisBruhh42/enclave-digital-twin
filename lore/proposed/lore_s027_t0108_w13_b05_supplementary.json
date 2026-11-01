@@ -1,0 +1,121 @@
+{
+  "base_snapshot_tick": 104,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_14_vex"
+    ],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_14_vex",
+    "next_pov_target": "enclave_08_terra",
+    "prev_next_pov_target": "enclave_14_vex"
+  },
+  "campaign_metadata": {
+    "session_number": 27,
+    "colony_sol": 27,
+    "tick_id": 108,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Resolve the relativistic magnetohydrodynamic shear before it fractures the Enclave.",
+      "mid_term_milestone": "Stabilize the binary-star magnetic reconnection arcs.",
+      "campaign_arc_climax": "Ensure the Enclave's survival against the binary opposing magnetospheres."
+    }
+  },
+  "active_location": {
+    "location_id": "observatory_roof",
+    "macro_silhouette": "The hand-built brass observatory roof sits exposed under a bruised violet twilight, casting double razor-sharp shadows from the binary suns. The air crackles with static discharge and smells of ozone. The structural struts hum under the immense magnetic strain.",
+    "sensory_palette": {
+      "sight_and_color": "Bruised violet twilight, crimson flares, and piercing diamond-blue rays.",
+      "sound": "The low, resonant hum of brass struts vibrating under magnetic tension and distant thunder.",
+      "smell": "Sharp ozone and the tang of heated copper.",
+      "tactile_temperature": "A biting, statically-charged chill contrasting with bursts of raw thermal radiation.",
+      "taste_optional": "A faint metallic tang in the back of the throat."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Brass Astrolabe Dome",
+        "affordance_description": "Can be rotated to shield from the coronal mass ejections or focus the ultraviolet bow shock.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetic Resonance Struts",
+        "affordance_description": "Conductive pathways that can be aligned to pull stray ionization away from the living quarters.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Dampener Vat",
+        "affordance_description": "Absorbs excess magnetic energy when properly calibrated to the current field frequency.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "red_giant_cme",
+      "name_and_role": "Red Giant Coronal Mass Ejection",
+      "motivation_goal": "To flood the magnetosphere with long-wave infrared radiation.",
+      "consistent_method": "Periodic, massive waves of charged particles crashing against the Enclave's shields.",
+      "immediate_complication": "Induces chaotic eddy currents that threaten to melt the observatory's structural supports.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "Will eventually breach the shields, causing catastrophic thermal damage if not diverted."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The magnetic shear is threatening the physical integrity of the observatory roof.",
+      "level_2_local": "The storm's radiation could fry the Enclave's primary communication and mapping nodes.",
+      "level_3_campaign_arc": "Mastering the binary-star tidal forces is essential for the long-term survival of the Sanctuary."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_14_vex",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_08_terra",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      12,
+      18,
+      4,
+      15,
+      9
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.7,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.6,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "OpenAI",
+      "model": "gpt-4",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The magnetic shear will fracture the brass roof, exposing the Hub to hard radiation.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Vex miscalculates the shear, directing a solar flare straight into the astrolabe dome.",
+        "below_dc_complicated_fail_forward": "The roof survives, but a power surge fries Vex's primary monitoring console.",
+        "meets_dc_clean_success": "Vex successfully calculates and compensates for the magnetic shear, stabilizing the observatory.",
+        "dc_plus_5_or_20_extended_lore": "Vex perfectly aligns the dampeners, not only saving the roof but discovering a new harmonic frequency to improve the shield."
+      }
+    },
+    "master_narrator": {
+      "executor": "Claude",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Vex sat on the hand-built brass observatory roof, his boots dangling over the edge as he watched the sky tear itself apart. To the east, the Red Giant was rising, a bloated, angry eye that bathed the world in crimson. To the west, the Blue Dwarf was setting, a piercing diamond casting double razor-sharp shadows across the bruised violet twilight. He studied the relativistic magnetohydrodynamic shear between the Red Giant's infrared coronal mass ejections and the Blue Dwarf's compressed ultraviolet bow shock. It was a spectacular nightmare. He calculated the tides, measuring the exact limits of the structure's tolerance.\n\nHis goal was simple: map the auroral flux lines and stabilize the primary sensors. He adjusted his astrolabe, anticipating a clean reading. But the shear suddenly spiked, drifting a fraction of a degree off the predictive model. The dome's ferrofluid dampeners saturated instantly, failing to consume the excess kinetic energy. A sharp, high-frequency vibration shuddered through the magnetic resonance struts. The system could not defend against the sudden surge, locking him out of the primary array. A flat rejection.\n\nHe froze. His heart hammered a sudden, frantic rhythm against his ribs. He gripped the edge of the roof, the cold metal grounding his panic. The Cancer override whispered to him—a fierce, sentimental terror that the shield would fail, exposing his found family below to the dark between the stars. He had to either initiate a hard reboot, risking a total blackout, or physically recalibrate the external emitters in the middle of the storm. Both were terrible options. Therefore, he chose the physical risk, standing up to manually align the emitters, trusting his chaotic instincts to attract the ionization away from the living quarters.\n\nHe tapped a sequence into the manual release valve. The strut hissed, snapping into its new configuration. \"Contrast,\" Vex grinned to himself, his playful demeanor returning as he held up the astrolabe against the chaotic auroras. \"It is all about contrast. If that Red Giant sneezes, we are toast. If the Blue Dwarf blinks, we freeze. And here we are, sitting in the middle, complaining about stirring stew at forty rotations per minute.\" He clipped his slate to his belt, ready to climb down and hand off the watch to Terra, eager to hear her subterranean botanical translation of his celestial fireworks."
+    }
+  }
+}
