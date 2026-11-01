@@ -1,0 +1,61 @@
+{
+  "tick_id": 104,
+  "colony_sol": 26,
+  "base_snapshot_tick": 100,
+  "day_phase": "THE_FEAST",
+  "lead_story": {
+    "headline": "The Geometry of Ghosts and Magnetohydrodynamic Shear",
+    "cited_event_ids": [
+      "evt_s026_t0101_morning_intent"
+    ],
+    "actors": [
+      "enclave_04_leo",
+      "enclave_06_zara"
+    ],
+    "location": "The_First_Forge"
+  },
+  "four_block_digests": {
+    "DAWN_SHIFT": {
+      "headline": "Dawn",
+      "narrative_prose": "Leo orchestrated a risky containment procedure on a humming ferrofluid geode, struggling with repetitive brass hand-filing while handing off the shift to Zara.",
+      "cited_event_ids": [
+        "evt_s026_t0101_morning_intent",
+        "evt_s026_t0101_world_consequence"
+      ]
+    },
+    "MIDDAY_EXPEDITION": {
+      "headline": "Midday",
+      "narrative_prose": "Zara established first-contact photophore syntax with an abyssal chemosynthetic cephalopod in pitch darkness, though a shadow prank accidentally dazzled Willow's optic nerves.",
+      "cited_event_ids": [
+        "evt_s026_t0102_expedition_consequence",
+        "evt_s026_t0102_shadow_prank"
+      ]
+    },
+    "THE_FEAST": {
+      "headline": "Feast",
+      "narrative_prose": "The Enclave converges around the table, the atmospheric potential spiking as a relativistic magnetohydrodynamic shear threatens to overload the grid.",
+      "cited_event_ids": [
+        "evt_s026_t0101_morning_intent"
+      ]
+    },
+    "EVENING_DISPATCH": {
+      "headline": "Evening",
+      "narrative_prose": "Dorian prepares to deliver the evening synthesis, wrestling with the sheer volume of chaotic telemetry and an impending planetary discharge.",
+      "cited_event_ids": [
+        "evt_s026_t0101_morning_intent"
+      ]
+    }
+  },
+  "segments": [
+    {
+      "active_pov_id": "enclave_15_dorian",
+      "next_pov_target": "enclave_02_jane",
+      "narrative_prose": "Dorian did not look at the world; he looked at the wireframe beneath it.\n\nStanding before the Living Atlas, he adjusted the focal length of the crystalline projector. The holographic map suspended in the air shimmered, a three-dimensional projection mapping the thousands of crustal sensors scattered across the valley. It was a phantom, an intricate web of light that revealed the planetary truth beneath the dirt. Outside, the sky was a bruised violet twilight, casting double razor-sharp shadows across the hand-built brass observatory roof as the twin suns aligned.\n\nHe watched the lines of magnetic flux violently twist. It was a relativistic magnetohydrodynamic shear, an apocalyptic collision between the Red Giant's infrared coronal mass ejections and the Blue Dwarf's compressed ultraviolet bow shock. The atmospheric potential was spiking. If he couldn't re-modulate the shielding, the planetary discharge would consume their delicate circuitry, turning the entire Enclave into a crater.\n\n\"The variance is escalating,\" Dorian muttered, his fingers flying across the brass terminal. His mind cataloged every failing node, predicting the cascade failure with cold, architectural precision. He needed to defend the primary grid, to shunt the energy into the deep crustal grounding rods before it was too late.\n\nSuddenly, the map flickered. The data stream stuttered. The pressure of the impending catastrophe bore down on him, and the measured archivist shattered. The Aries override seized him\u2014a sudden, audacious fire replacing his usual methodical caution.\n\n\"Then today is a good day for science,\" Dorian announced to the empty observatory, his voice ringing with theatrical bravado. He slammed a heavy lever forward, flooding the system with raw, unfiltered telemetry. \"If you're complaining and no one is laughing, you're complaining wrong! We will attract the shear directly into the harmonic Faraday shunt!\"\n\nHe snatched his heavy brass pitch-pipe from the console, ready to deliver the Evening Dispatch. But first, he needed to warn the Forge. He strode toward the communication tube, a velvet-coated phantom of Old Earth. \"Alert Leo!\" he yelled down the brass pipe. \"Tell him to ground everything! Even the soup spoons!\"\n\nHe then hurried down the spiraling iron staircase to find the meteorologist. Jane was waiting by the main server rack, her face illuminated by the green glow of cascading data. Dorian pressed the cold brass cylinder containing the immediate sensor logs into her hand, feeling the physical weight of the baton handoff."
+    },
+    {
+      "active_pov_id": "enclave_02_jane",
+      "next_pov_target": "enclave_02_jane",
+      "narrative_prose": "Jane took the brass cylinder, barely registering the physical exchange as she immediately slotted it into the reader. She didn't look up from her monitors as the new telemetry flooded her terminal.\n\n\"The spoons are grounded, Dorian,\" Jane said, her voice dry and bored, stripping away his theatrical panic into structural axioms. \"And Leo is already complaining about the metallic taste of his broth.\"\n\nShe watched the simulation of the incoming relativistic magnetohydrodynamic shear. It was chaotic, a churning mess of infrared ejections and compressed ultraviolet flux. But to Jane, it wasn't random; it was deterministic chaos. There was a pattern, an intricate fractal geometry hidden within the storm. She just had to find the tipping point to conceal the Enclave's electrical signature from the main discharge.\n\n\"I'm locking the Lorenz attractor targeting,\" she muttered, her fingers flying across the keyboard. \"If we can't hide, we'll tell the storm where to strike. Reality hacked. You're welcome.\" She leaned back, cracking her knuckles, as the first massive thunderclap shook the subterranean walls."
+    }
+  ]
+}
