@@ -1,0 +1,120 @@
+{
+  "base_snapshot_tick": 102,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_07_willow"
+    ],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_07_willow",
+    "next_pov_target": "enclave_09_orion",
+    "prev_next_pov_target": "enclave_07_willow"
+  },
+  "campaign_metadata": {
+    "session_number": 27,
+    "colony_sol": 27,
+    "tick_id": 106,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Unlock fungal Boolean logic gates and cellular regeneration.",
+      "mid_term_milestone": "Map the planetary mycelial supercomputer.",
+      "campaign_arc_climax": "Synthesize the Genesis Garden cure."
+    }
+  },
+  "active_location": {
+    "location_id": "The Genesis Garden - Compost Heap",
+    "macro_silhouette": "A steaming compost heap in the damp arboretum twilight. Glowing microscopic hyphal cities route sapphire calcium packets around a drop of amber resin.",
+    "sensory_palette": {
+      "sight_and_color": "Sapphire calcium packets, amber resin, and steaming dark compost.",
+      "sound": "The wet slop of turning compost and the soft hum of fungal action potentials.",
+      "smell": "Rich loam, pine resin, and a sharp tang of ozone.",
+      "tactile_temperature": "Warm, humid air against a cool, damp earth."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Steaming Compost Heap",
+        "affordance_description": "Requires turning with a pitchfork.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Hyphal Anastomoses",
+        "affordance_description": "Can be bridged with pepper-scented epoxy-sap.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Fungal Logic Gates",
+        "affordance_description": "Can process Boolean AND/OR/NOT logic.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "mycelial_logic_gate",
+      "name_and_role": "Mycelial Logic Gate",
+      "motivation_goal": "Route cytosolic Ca2+ waves.",
+      "consistent_method": "Transduces physical Boolean logic across hyphal anastomoses.",
+      "immediate_complication": "Requires constant organic nutrients from the compost heap to maintain computational integrity.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "Will crash the planetary fungal network if the logic gates starve."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Turn the steaming compost heap.",
+      "level_2_local": "Feed the mycelial network's logic gates.",
+      "level_3_campaign_arc": "Unlock planetary biological computing."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_07_willow",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_09_orion",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 15,
+    "prerolled_hazard_queue": [
+      18,
+      12,
+      7,
+      15,
+      20
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.85,
+    "motivational_vector_saturation": 0.75,
+    "unresolved_conflict_ratio": 0.6,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.7875,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_llm",
+      "model": "jules_v2",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The compost heap cools, disrupting the mycelial logic gates.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Willow over-turns the compost, suffocating the hyphae and causing a logic crash.",
+        "below_dc_complicated_fail_forward": "The compost is turned, but the temperature spikes, causing a temporary glitch in the network.",
+        "meets_dc_clean_success": "The compost is perfectly aerated, feeding the network flawlessly.",
+        "dc_plus_5_or_20_extended_lore": "Willow discovers a new prime-number syntax in the calcium waves."
+      }
+    },
+    "master_narrator": {
+      "executor": "local_llm",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Under the microscope, the mushroom didn't look like a plant. It looked like a city.\n\nWillow adjusted the focus. The hyphae\u2014the thread-like roots\u2014were pulsing with light. Calcium ions flowing through the cell walls, carrying cytosolic Ca2+ wave transduction implementing physical Boolean AND/OR/NOT logic gates across hyphal anastomoses when bridged with pepper-scented epoxy-sap. She was on the verge of unlocking cellular regeneration, a breakthrough that could reshape the Enclave's survival. Her ISTP mind raced, cataloging the organometallic enzymes with a detached, clinical thrill. She reached for the amber beaker, the chelated ferro-mycelial solvent poised to finalize the circuit.\n\nThen, the automated environmental alarm chimed. A dull, flat tone that meant only one thing: the compost heap in Sector B had dropped below critical thermal threshold. The nutrient base for her biological supercomputer was dying.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Willow muttered to the empty lab, the dry banter an instinctive shield against the crushing absurdity of her situation. Here she was, reverse-engineering a planetary motherboard, and she had to stop to shovel shit.\n\nShe grabbed the pitchfork from the corner, her silver hair escaping its loose tie. The greenhouse was stifling, the air thick with rich loam and pine resin. She plunged the tines into the steaming dark mass, hauling the heavy, wet slop over to aerate it. Her joints ached, a sharp contrast to the delicate precision required for her microscopy. The frustration was a physical weight\u2014Genius chained to the Mundane.\n\n\"Don't die on me now,\" she grunted, turning another heap. The glowing microscopic hyphal cities were depending on this thermal energy to route their sapphire calcium packets around a drop of amber resin. Without it, the network would collapse. The physical labor was mindless, giving her Cancer Vex Override a dangerous opening. Her usual detached analytical distance wavered, replaced by a sudden, fierce protectiveness. What if Orion accidentally walked through the wrong sector and trampled the fragile root-nodes? She needed to warn him immediately. It wasn't just a garden; it was their lifeline, and she was the only one standing between it and entropy. She dropped the pitchfork, the compost finally steaming with renewed life, and wiped the sweat from her brow, ready to hand off the burden to Orion."
+    }
+  }
+}
