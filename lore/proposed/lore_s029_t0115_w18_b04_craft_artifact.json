@@ -1,0 +1,116 @@
+{
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "campaign_metadata": {
+    "session_number": 29,
+    "colony_sol": 29,
+    "tick_id": 115,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Decode the planetary magnetosphere before the twin-sun cycle strips the grid.",
+      "mid_term_milestone": "Map the subterranean resonance corridors.",
+      "campaign_arc_climax": "Complete The Sanctuary and stabilize Enclave survival."
+    }
+  },
+  "active_location": {
+    "location_id": "ironwood_magnetic_jungle",
+    "macro_silhouette": "The forest floor is a riot of ferro-moss and silicon-based vines under an auroral canopy. Ultraviolet light bleeds down through shifting magnetic anomalies, casting long, bruised shadows. Magnetic currents hum through the roots, vibrating up through boots and bones.",
+    "sensory_palette": {
+      "sight_and_color": "Ultraviolet auroras, oil-slick iridescence, staccato blue-green prime-number flashes.",
+      "sound": "Kinetic crunching of boots on metallic bark, the high-pitched ozone whine of the magnetosphere.",
+      "smell": "Ozone, crushed ferro-moss, and sharp metallic sap.",
+      "tactile_temperature": "Cool, damp air with a tingling static charge."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Voltage-Sensitive Luciferin Fungal Cluster",
+        "affordance_description": "A geode-like cluster of fungi whose enzymatic oxidation is gated by ion channels, flashing in prime numbers.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Hex-Pedal Predator Carapace",
+        "affordance_description": "Oil-slick carapace of a camouflaged subterranean hunter attempting to blend with the ferro-moss.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 16
+      },
+      {
+        "feature_name": "Magnetic Ironwood Root Matrix",
+        "affordance_description": "A dense tangle of silicon vines and magnetic roots providing rapid, albeit hazardous, vertical traversal.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "hex_pedal_stalker",
+      "name_and_role": "Hex-Pedal Stalker (Ambush Predator)",
+      "motivation_goal": "Neutralize the loud, fast-moving scout before it scares away native prey.",
+      "consistent_method": "Uses oil-slick camouflage and magnetic sensitivity to close distance silently.",
+      "immediate_complication": "Blocks the direct path back to the Enclave while the sun cycle threatens the data.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Will strike the weakest or most exposed target if left unchecked for two turns."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Retrieve the prime-number flashing luciferin sequence before magnetic interference corrupts it.",
+      "level_2_local": "Understand the logic-gate biology of the planetary ecosystem.",
+      "level_3_campaign_arc": "Integrate biological computing into the Enclave's survival infrastructure."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      4,
+      12,
+      19,
+      7,
+      15
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.85,
+    "motivational_vector_saturation": 0.90,
+    "unresolved_conflict_ratio": 0.60,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.825,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_inference",
+      "model": "deterministic_host",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The magnetic interference from the Blue Dwarf wipes the bio-data sequence, losing the logic-gate syntax forever.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "You misinterpret the flash sequence as a countdown and discard the specimen in a panic.",
+        "below_dc_complicated_fail_forward": "You secure the sample but your frantic ricocheting alerts the predator, forcing a costly retreat.",
+        "meets_dc_clean_success": "You recognize the prime-number syntax and optimize the variable, using the fungi to dazzle the predator.",
+        "dc_plus_5_or_20_extended_lore": "You perfectly synchronize with the pulse, mapping the syntax onto the local root network to unlock a hidden fast-travel corridor."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules_dm_engine",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": false,
+      "agency_handoff_prompt": "Kaio didn't walk through the magnetic jungle; he ricocheted. The forest floor was a riot of ferro-moss and silicon-based vines, and Kaio moved over it with the kinetic enthusiasm of a particle in a collider. He clutched a sealed canister against his chest, sprinting ahead of the shifting shadows. Inside the glass, a geode-like fungal cluster pulsed with a sharp, staccato sequence of flashes. Blue-blue-green. Pause. Red. It wasn't passive foxfire. It was an enzymatic luciferin-luciferase oxidation gated by voltage-sensitive ion channels, flashing in prime-number sequences.\n\nHe had to decode the planetary magnetosphere before the twin-sun cycle stripped the grid. The ultraviolet auroras overhead were already bleeding down through the canopy, the magnetic flux threatening to wipe the delicate bio-data inside his canister. He vaulted a massive ironwood root, his boots skidding on the damp metallic bark, racing the shifting light. The path ahead seemed clear, a direct corridor back to the Sanctuary.\n\nA massive, hex-pedal predator detached itself from the gloom, its oil-slick carapace perfectly camouflaged against the ferro-moss. It dropped into his path, mandibles clicking, cutting off his escape route.\n\nBut Kaio did not stop. His frantic momentum faltered for a fraction of a second. His breath caught in his throat. The chaotic spray of his usual thoughts snapped into a diamond-hard, ice-cold tactical grid. The Capricorn override engaged. He dropped his shoulder, evaluating the creature's ocular cavities and the pulsing specimen in his arms. He could try to outrun the beast, risking a strike to his unprotected back, or he could use the canister, potentially damaging the very data he had risked his life to collect.\n\nHe triggered the canister's optical polarization modulation ring to zero. The fungal specimen flared, unleashing a blinding, strobing pulse of white light directly into the predator's sensitive eyes. The creature recoiled, thrashing blindly into the underbrush as the lumens overwhelmed its optical receptors.\n\nTherefore, Kaio bypassed the beast entirely, scrambling up the rocky incline toward the safety of the Enclave's heavy blast doors. He burst into the main corridor, his lungs burning, the cold tactical focus shattering back into his usual scattered exuberance. He spotted a figure down the hall, holding a large metal spoon and a very damp piece of fabric.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Kaio gasped, leaning against the bulkhead. \"Look at this syntax! It modulates its own output!\"\n\nRyn stood before the kitchen entrance, dripping with algae-sludge. She squeezed the dirty water from a clean sock into a bucket.\n\n\"You enhanced the water filter again,\" Ryn stated, her voice tight with restraint. \"I am straining our soup stock through hosiery, Kaio.\"\n\n\"It optimizes the trace minerals,\" Kaio offered, holding up the glowing canister. \"And I brought you a lamp.\""
+    }
+  },
+  "base_snapshot_tick": 115,
+  "pre_roll_dc": 14,
+  "active_pov_id": "enclave_05_kaio",
+  "next_pov_target": "enclave_13_ryn"
+}
