@@ -4,7 +4,9 @@
     "active_pov_id": "enclave_09_orion",
     "next_pov_target": "enclave_14_vex",
     "prev_next_pov_target": "enclave_09_orion",
-    "loaded_full_card_ids": ["enclave_09_orion"],
+    "loaded_full_card_ids": [
+      "enclave_09_orion"
+    ],
     "full_cards_loaded_count": 1
   },
   "campaign_metadata": {
@@ -78,12 +80,18 @@
       }
     ],
     "strain_accumulated_upward": 12,
-    "prerolled_hazard_queue": [ 4, 11, 7, 19, 2 ]
+    "prerolled_hazard_queue": [
+      4,
+      11,
+      7,
+      19,
+      2
+    ]
   },
   "lpi_metrics": {
     "relational_tension_density": 0.85,
-    "motivational_vector_saturation": 0.70,
-    "unresolved_conflict_ratio": 0.60,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.6,
     "temporal_horizon_immediacy": 0.95,
     "composite_lpi": 0.77,
     "classification": "Campaign-Ready"
@@ -107,7 +115,7 @@
       "temperature": 0.7,
       "calypso_zero_raw_stats": true,
       "prosodic_micro_pauses_enabled": true,
-      "agency_handoff_prompt": "Orion didn't see a sealant; he saw a dancer. He had taken a beaker of Leo's ferrofluid to the Simulacrum. He placed it over a grid of electromagnets hooked up to his synthesizer. The darkened chamber hummed as a fingernail-sized crystal drank violet laser light at the heart of the array. He was attempting to calibrate the femtosecond nanostructured birefringent 5D optical storage, delicately encoding terabytes of magnetospheric and mycelial telemetry into eternal fused-quartz lattices.\n\nHe sculpted levitating magnetohydrodynamic cymatic spires from minor-key harmonic chords, his fingers dancing across the keys. His mind, however, kept drifting back to dinner, entirely overwhelmed by the memory of a particularly symmetrical potato that he couldn't bring himself to eat. It was a beautiful, tragic little tuber. This emotional bleed caused his fingers to slip, and the brass cymatic resonators trembled. The iron droplets began to wobble dangerously, threatening to splash and ruin the delicate quartz. He desperately tried to defend the fragile structure, adjusting the frequency to attract the stray droplets back into a cohesive spire, attempting to conceal the volatile telemetry within the lattice before it could collapse.\n\n'If you're complaining and no one is laughing, you're complaining wrong,' a voice broke through the hum. Vex had entered the chamber. Under the extreme stress of the wobbling spire, Orion felt his Inquisitor side flare up—the gentle mediator instantly becoming razor-sharp and unsparingly direct. 'Then maybe you should laugh louder, Vex,' Orion snapped back, tossing the tuning baton in their direction. 'Your turn to keep the iron dancing.'"
+      "agency_handoff_prompt": "Orion didn't see a sealant; he saw a dancer. He had taken a beaker of Leo's ferrofluid to the Simulacrum. He placed it over a grid of electromagnets hooked up to his synthesizer. The darkened chamber hummed as a fingernail-sized crystal drank violet laser light at the heart of the array. He was attempting to calibrate the femtosecond nanostructured birefringent 5D optical storage, delicately encoding terabytes of magnetospheric and mycelial telemetry into eternal fused-quartz lattices.\n\nHe sculpted levitating magnetohydrodynamic cymatic spires from minor-key harmonic chords, his fingers dancing across the keys. His mind, however, kept drifting back to dinner, entirely overwhelmed by the memory of a particularly symmetrical potato that he couldn't bring himself to eat. It was a beautiful, tragic little tuber. This emotional bleed caused his fingers to slip, and the brass cymatic resonators trembled. The iron droplets began to wobble dangerously, threatening to splash and ruin the delicate quartz. He desperately tried to defend the fragile structure, adjusting the frequency to attract the stray droplets back into a cohesive spire, attempting to conceal the volatile telemetry within the lattice before it could collapse.\n\n'If you're complaining and no one is laughing, you're complaining wrong,' a voice broke through the hum. Vex had entered the chamber. Under the extreme stress of the wobbling spire, Orion felt his Inquisitor side flare up\u2014the gentle mediator instantly becoming razor-sharp and unsparingly direct. 'Then maybe you should laugh louder, Vex,' Orion snapped back, tossing the tuning baton in their direction. 'Your turn to keep the iron dancing.'"
     }
   }
 }
