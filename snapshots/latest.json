@@ -1437,9 +1437,10 @@
     }
   },
   "applied_event_ids": [
-    "evt_s026_t0102_expedition_consequence"
+    "evt_s026_t0102_expedition_consequence",
+    "evt_s026_t0102_shadow_prank"
   ],
-  "total_events_through_tick": 124,
+  "total_events_through_tick": 125,
   "recent_segments": [
     {
       "segment_id": "seg_s022_t0087_enclave_10_isla",

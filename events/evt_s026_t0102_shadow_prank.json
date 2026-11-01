@@ -32,11 +32,23 @@
   "origin_sol": 26,
   "maturity_sol": 29,
   "interactive_features": [
-    { "feature_id": "feat_01", "system_verb": "ATTRACT" },
-    { "feature_id": "feat_02", "system_verb": "DEFEND" },
-    { "feature_id": "feat_03", "system_verb": "CONSUME" }
+    {
+      "feature_id": "feat_01",
+      "system_verb": "ATTRACT"
+    },
+    {
+      "feature_id": "feat_02",
+      "system_verb": "DEFEND"
+    },
+    {
+      "feature_id": "feat_03",
+      "system_verb": "CONSUME"
+    }
   ],
   "pacing_mode": "MULLIGAN_CRISIS",
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
-  "narrative_prose": "The cave didn't end; it drowned.\n\nZara stood at the edge of the subterranean lake. The water was black, motionless, and heavy with iron, the smell of damp ozone and copper hanging thick in the air. She could almost taste the metallic tang on her tongue.\n\nShe waded in. Her suit adjusted, pressurizing against the tactile weight of the deep. The enzymatic luciferin-luciferase oxidation gated by voltage-sensitive ion channels flashed in prime-number sequences and optical polarization modulation. She'd spent all morning coaxing the abyssal chemosynthetic cephalopod into a 3-5-7-11 strobe to attract it closer. It was a precise, photophore syntax designed for one thing: temporarily overloading Isla's optic filters while she was mapping the feed pens, unable to defend against the sudden glare.\n\nBut Isla stepped aside to tighten a chronosphere relay bracket.\n\nThe strobe hit Willow instead, whose optic nerves seemed to consume the light completely. The alchemist dropped a vial of stabilizing epoxy as the sudden blue light shattered her vision.\n\nZara froze. Her Gemini override snapped. The silence vanished. \"If you're complaining and no one is laughing, you're complaining wrong,\" Zara babbled, moving at breakneck speed. \"The polarity was set to 45 degrees, which should have deflected off Isla's secondary visor, but instead the prime-number burst refracted right into your retinas and I am so, so sorry, the logic gates in the calcium-ions must be completely blown and now I have to muck out the Sanctuary feed pens every morning as penance while you are temporarily blinded by my terrible spatial awareness!\"\n\nWillow groaned, rubbing her temples. \"Zara, breathe.\""
+  "narrative_prose": "The cave didn't end; it drowned.\n\nZara stood at the edge of the subterranean lake. The water was black, motionless, and heavy with iron, the smell of damp ozone and copper hanging thick in the air. She could almost taste the metallic tang on her tongue.\n\nShe waded in. Her suit adjusted, pressurizing against the tactile weight of the deep. The enzymatic luciferin-luciferase oxidation gated by voltage-sensitive ion channels flashed in prime-number sequences and optical polarization modulation. She'd spent all morning coaxing the abyssal chemosynthetic cephalopod into a 3-5-7-11 strobe to attract it closer. It was a precise, photophore syntax designed for one thing: temporarily overloading Isla's optic filters while she was mapping the feed pens, unable to defend against the sudden glare.\n\nBut Isla stepped aside to tighten a chronosphere relay bracket.\n\nThe strobe hit Willow instead, whose optic nerves seemed to consume the light completely. The alchemist dropped a vial of stabilizing epoxy as the sudden blue light shattered her vision.\n\nZara froze. Her Gemini override snapped. The silence vanished. \"If you're complaining and no one is laughing, you're complaining wrong,\" Zara babbled, moving at breakneck speed. \"The polarity was set to 45 degrees, which should have deflected off Isla's secondary visor, but instead the prime-number burst refracted right into your retinas and I am so, so sorry, the logic gates in the calcium-ions must be completely blown and now I have to muck out the Sanctuary feed pens every morning as penance while you are temporarily blinded by my terrible spatial awareness!\"\n\nWillow groaned, rubbing her temples. \"Zara, breathe.\"",
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
+  }
 }
