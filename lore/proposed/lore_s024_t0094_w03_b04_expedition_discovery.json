@@ -1,0 +1,120 @@
+{
+  "base_snapshot_tick": 90,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_11_kenna"
+    ],
+    "active_pov_id": "enclave_11_kenna",
+    "next_pov_target": "enclave_12_elias",
+    "prev_next_pov_target": "enclave_12_elias"
+  },
+  "campaign_metadata": {
+    "session_number": 24,
+    "colony_sol": 24,
+    "tick_id": 94,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Decouple pineal melatonin suppression.",
+      "mid_term_milestone": "Restore circadian rhythms for the Enclave.",
+      "campaign_arc_climax": "Survive the exoplanetary Schumann resonance anomalies."
+    }
+  },
+  "active_location": {
+    "location_id": "LOC_03_LYCEUM_MIND",
+    "macro_silhouette": "The Lyceum of the Mind stands quiet at 0300 hours, its copper-shielded walls vibrating slightly under the residual Schumann resonance. Bioluminescent bryophytes cast a dim emerald glow across the meditation chambers, creating pockets of safe, zero-dust flotation zones.",
+    "sensory_palette": {
+      "sight_and_color": "Dim emerald glow from psychoactive Lyceum bryophytes and brass-framed instruments.",
+      "sound": "A low, barely perceptible 0.4-hertz limbic stress tremor and the ambient hum of dielectric insulation.",
+      "smell": "Dried aromatic heather and the ozone tang of a recent magnetic storm.",
+      "tactile_temperature": "Cool, static-charged air that clings like a second skin.",
+      "taste_optional": "A metallic tinge of adrenaline and chamomile."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Zero-Dust Flotation Bolster",
+        "affordance_description": "A velvet bolster stuffed with dried aromatic heather, used to anchor wandering colonists.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Bio-Monitor Telemetry Console",
+        "affordance_description": "A brass-framed CRT monitor displaying the circadian static of the Enclave.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Psychoactive Lyceum Bryophytes",
+        "affordance_description": "Luminescent moss used to decouple pineal melatonin suppression.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "TOY_01_SCHUMANN_STATIC",
+      "name_and_role": "Post-Storm Schumann Resonance Anomalies",
+      "motivation_goal": "Scramble pineal circadian rhythms across the Enclave.",
+      "consistent_method": "Emitting low-frequency electromagnetic pulses that induce insomnia.",
+      "immediate_complication": "Silas is on his hands and knees at 0300 hours, panicked by the static.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Complete autonomic hypervigilance and widespread polarity inversion if left unchecked."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Silas is suffering from severe sleep debt and static-induced paranoia.",
+      "level_2_local": "The recent magnetic storm has saturated the Enclave's shielding, disrupting circadian rhythms.",
+      "level_3_campaign_arc": "The exoplanet's natural resonance is inherently hostile to human neurobiology, requiring constant adaptation."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_11_kenna",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "SQUISHY_DEBUFFER"
+      }
+    ],
+    "strain_accumulated_upward": 14,
+    "prerolled_hazard_queue": [
+      3,
+      7,
+      12,
+      18,
+      5
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.85,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.6,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.76,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4-turbo",
+      "temperature": 0.3,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Kenna succumbs to Vex Override, detaching emotionally and failing to soothe Silas.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kenna completely misreads the telemetry, prescribing a stimulant instead of a depressant.",
+        "below_dc_complicated_fail_forward": "Kenna manages to calm Silas, but exhausts her own empathy, taking a stress penalty.",
+        "meets_dc_clean_success": "Kenna successfully uses the bryophytes and zero-dust promise to ground Silas.",
+        "dc_plus_5_or_20_extended_lore": "Kenna not only grounds Silas but discovers a new harmonic frequency that permanently shields the Lyceum."
+      }
+    },
+    "master_narrator": {
+      "executor": "claude-3-opus",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "The storm had passed, but the static remained. It clung to the Enclave like a second skin. Kenna walked the halls of the sleeping quarters, checking the bio-monitors. It was 0300 hours, yet half the family was awake.\n\nShe found Silas on his hands and knees near the Lyceum's entrance, inspecting a completely imaginary fissure in the floorboards. The post-storm Schumann resonance anomalies were playing havoc with his pineal melatonin, decoupling his circadian rhythm and replacing it with pure, vibrating static.\n\n\"Silas, darling,\" Kenna said, her voice melodic and inviting, cutting through the 0.4-hertz limbic stress tremor in the room. \"When you're inspecting the deck plating for micro-fractures at this hour, everyone knows the translation is 'the static is too loud and I can't sleep.'\"\n\nSilas muttered something unintelligible about dielectric insulation thickness. Kenna sighed, feeling the weight of the sixteen resting on her shoulders, the ever-present threat of her own emotional overload\u2014the Aquarius detachment\u2014looming at the edges of her fatigue.\n\n\"Come on,\" she urged gently, gesturing toward the dim emerald glow of the psychoactive Lyceum bryophytes. \"I promise you, the meditation bolsters are zero-dust. Let's get your serotonin receptors back online.\" She reached out, ready to guide him, knowing that tomorrow she'd have to hand this delicate balance over to Elias."
+    }
+  }
+}
