@@ -1,0 +1,115 @@
+{
+  "campaign_metadata": {
+    "session_number": 23,
+    "colony_sol": 23,
+    "tick_id": 91,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Encode magnetospheric and mycelial telemetry into fused-quartz lattices.",
+      "mid_term_milestone": "Stabilize the 5D optical quartz storage against harmonic vibration.",
+      "campaign_arc_climax": "Complete the Simulacrum network and achieve perfect data resonance."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Simulacrum",
+    "macro_silhouette": "A fingernail-sized crystal drinking violet laser light at the heart of the darkened Simulacrum chamber. Shadowy spires of cymatic ferrofluid levitate nearby in silent reverence.",
+    "sensory_palette": {
+      "sight_and_color": "Deep violet laser refraction, floating iron sculptures in a dark chamber.",
+      "sound": "Acoustic synthesizer harmonics and the subtle hum of electromagnets.",
+      "smell": "Ozone from the laser array and a faint tang of copper.",
+      "tactile_temperature": "Cool ambient air with points of intense thermal focus near the laser emitters.",
+      "taste_optional": "A metallic tinge resembling chicory coffee."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "5D Optical Quartz Lattice",
+        "affordance_description": "Can be etched with femtosecond laser pulses to encode data.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Cymatic Ferrofluid Basin",
+        "affordance_description": "Can levitate and shift shapes based on acoustic frequencies.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Laser Emitting Array",
+        "affordance_description": "Projects focused femtosecond pulses to etch the quartz.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "cymatic_ferrofluid_spire",
+      "name_and_role": "Ferrofluid Spire - Acoustic Resonator",
+      "motivation_goal": "To visualize the emotional and acoustic frequency of the room.",
+      "consistent_method": "Shifts its physical structure in response to harmonic changes.",
+      "immediate_complication": "Requires precise tuning to avoid chaotic structural collapse.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Will lose structural integrity and splatter if the frequencies become dissonant."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Orion needs to encode telemetry into the quartz lattice.",
+      "level_2_local": "The data is essential to map the local magnetosphere and mycelial networks.",
+      "level_3_campaign_arc": "The Simulacrum requires stable, eternal memory storage for the Enclave's survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_09_orion",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_14_vex",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [ 14, 18, 9, 22, 11 ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.3,
+    "temporal_horizon_immediacy": 0.6,
+    "composite_lpi": 0.525,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Local Python Deterministic Tick Engine",
+      "model": "Seeded SHA-256 PRNG",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The quartz lattice shatters, destroying the encoded telemetry and forcing a restart of the data capture process.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Orion tunes the synthesizer to the wrong harmonic, causing the ferrofluid to violently destabilize and shatter the quartz.",
+        "below_dc_complicated_fail_forward": "The data is encoded, but the lattice structure is flawed, requiring manual error correction and slowing future access.",
+        "meets_dc_clean_success": "The 5D optical quartz storage perfectly captures the terabytes of telemetry in eternal fused-quartz lattices.",
+        "dc_plus_5_or_20_extended_lore": "The encoded telemetry resonates perfectly, unlocking a deeper understanding of the mycelial network's structural harmonics."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules DM",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Orion didn't see a storage medium; he saw an eternal dancer. He had taken a beaker of Leo's ferrofluid to the Simulacrum. He placed it over a grid of electromagnets hooked up to his synthesizer.\n\nHe struck a C-minor chord. The black fluid leaped, forming a perfect, sloped spire. The standing acoustic waves manifested as a three-dimensional magnetic sculpture. It responded to the frequency, settling into a fluid rhythm as he adjusted the amplitude on his console.\n\nBefore him, a fingernail-sized crystal was drinking violet laser light at the heart of the darkened chamber. It was a femtosecond nanostructured birefringent 5D optical storage, meticulously engineered to encode terabytes of magnetospheric and mycelial telemetry into eternal fused-quartz lattices. To Orion, it felt profound. Hard drives could rust or fail, but this crystal would outlive the stars, securing the Enclave's memory against entropy.\n\nHe tweaked the copper coil's frequency to precisely 432 hertz, feeling the heavy burden of their survival lighten just a fraction as the fluid steadied into beautiful, cathedral-like arches. His INFP instinct, always attuned to the emotional undertone, read the colony's stress in the vibrations. Yesterday, he had been nearly brought to tears by the quiet symmetry of a potato Ryn served for dinner. Today, he was sculpting magnetic fields to save them all.\n\nThe heavy door hissed open, admitting Vex. The astronomer leaned against the doorframe, twirling a data stylus.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Vex offered dryly, glancing at the floating ferrofluid.\n\n\"I wasn't complaining,\" Orion said, offering a small smile. \"Just tuning the resonance.\"\n\n\"Right. Well, I need that telemetry slate. The red giant's magnetic shear isn't going to map itself, and the universe decided to make it our problem today.\"\n\nOrion unhooked the slate, passing the baton."
+    }
+  },
+  "base_snapshot_tick": 88,
+  "context_manifest": {
+    "active_pov_id": "enclave_09_orion",
+    "next_pov_target": "enclave_14_vex",
+    "prev_next_pov_target": "enclave_14_vex",
+    "loaded_full_card_ids": [
+      "enclave_09_orion"
+    ],
+    "full_cards_loaded_count": 1
+  }
+}
