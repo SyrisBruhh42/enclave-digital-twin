@@ -1,0 +1,47 @@
+{
+  "event_id": "event_sol_028_t0112_drift_audit_elara",
+  "tick_id": 112,
+  "colony_sol": 28,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-11-21T18:00:00Z",
+  "base_snapshot_tick": 112,
+  "event_type": "DRIFT_AUDIT",
+  "location": "The Main Bus",
+  "actors": [
+    "enclave_16_elara",
+    "enclave_03_silas",
+    "enclave_08_terra"
+  ],
+  "summary": "Elara forces Silas to sit down and eat soup via an ankle wire, tracking stress levels across the group.",
+  "science_vegetable": "Mitigating Isolated-Confined-Extreme (ICE) Third-Quarter cortisol cascades and autonomic hypervigilance through structured communal roast rituals and oxytocin vagal buffering.",
+  "state_deltas": {
+    "group_cortisol_avg": -0.2
+  },
+  "relationship_deltas": {
+    "enclave_16_elara": {
+      "enclave_03_silas": 2
+    }
+  },
+  "evidence_refs": [],
+  "active_pov_id": "enclave_16_elara",
+  "prev_next_pov_target": "enclave_16_elara",
+  "next_pov_target": "enclave_03_silas",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "pre_roll_dc": 14,
+  "interactive_features": [
+    {
+      "system_verb": "DEFEND",
+      "feature_name": "Anchor Tether"
+    },
+    {
+      "system_verb": "ATTRACT",
+      "feature_name": "Thermal Flask"
+    },
+    {
+      "system_verb": "CONSUME",
+      "feature_name": "Maillard-infused tuber stew"
+    }
+  ],
+  "text": "The Feast that night was different. It wasn't loud. It was warm. The Stormbreaker hummed with captured energy. The Living Atlas glowed with a stable map. The Mycelial network pulsed with a gentle, rhythmic green.\n\nElara pulled the grounding wire taut against Silas's ankle, locking the Carabiner before he could invent an excuse to check the Phase-3 manifold. He glared down at his boot. \"I am perfectly insulated,\" he muttered, holding a datapad that tracked a micro-fracture in Sector Four's kinetic baffle. She ignored the protest, sliding a bowl of steaming maillard-infused tuber stew in front of him. The thermal output of the soup alone was a calculated offset against the 14-degree ambient drop outside the crater walls.\n\n\"Eat the soup, Silas,\" she instructed, adjusting the pulse-ox sensor on his wrist. \"Your cortisol baseline is spiking into autonomic hypervigilance. If you're complaining and no one is laughing, you're complaining wrong.\" \n\nHe scowled at the spoon. \"The caloric density is inefficient. A nutrient paste would suffice.\" \n\n\"The paste doesn't trigger oxytocin vagal buffering. The mechanical act of communal chewing does.\" She tapped the datapad out of his grip. \"You are tracking micro-fractures; I am tracking sixteen stubborn geniuses in an Isolated-Confined-Extreme environment. Third-Quarter syndrome is real. Now consume the stew before I engage the anchor tether.\" \n\nSilas picked up the spoon, a muscle feathering in his jaw. Across the fire, a burst of laughter erupted from The Wilds squad as Terra demonstrated a galvanic corrosion failure with a toasted mushroom. Elara watched the tension bleed from Silas's shoulders as the warmth of the fire\u2014and the meticulously engineered social friction\u2014did its work, passing him the thermal flask."
+}
