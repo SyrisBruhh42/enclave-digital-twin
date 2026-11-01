@@ -1,0 +1,117 @@
+{
+  "base_snapshot_tick": 95,
+  "context_manifest": {
+    "active_pov_id": "enclave_16_elara",
+    "next_pov_target": "enclave_03_silas",
+    "prev_next_pov_target": "enclave_03_silas"
+  },
+  "campaign_metadata": {
+    "session_number": 24,
+    "colony_sol": 24,
+    "tick_id": 96,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Mitigating Isolated-Confined-Extreme (ICE) Third-Quarter cortisol cascades and autonomic hypervigilance.",
+      "mid_term_milestone": "Survive the third quarter ICE cortisol cascades.",
+      "campaign_arc_climax": "Maintain metabolic engine and hub integrity."
+    }
+  },
+  "active_location": {
+    "location_id": "hub_mess_hall",
+    "macro_silhouette": "Sixteen mugs raised in the warm circle of firelight while the captured geode hums beneath the floorboards. The Stormbreaker hummed with captured energy. The Living Atlas glowed with a stable map.",
+    "sensory_palette": {
+      "sight_and_color": "Warm circle of firelight, bioluminescent green.",
+      "sound": "Humming of the captured geode and low, warm banter.",
+      "smell": "Steam rising from roasted vegetables covered in cheese and magnesium-rich soup.",
+      "tactile_temperature": "Warmth radiating from the firelight against the cold floorboards.",
+      "taste_optional": "Rich, cheesy roast vegetables and hearty broth."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Grounded Ankle Wire",
+        "affordance_description": "Silas's grounded ankle wire keeping him physically tethered and safe from electrostatic build-up while he eats.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnesium Broth Bowl",
+        "affordance_description": "A steaming bowl of nutrient-dense soup intended to calm the autonomic hypervigilance.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 10
+      },
+      {
+        "feature_name": "Warm Firelight Circle",
+        "affordance_description": "The gathering point in the mess hall that fosters deep fellowship and connection among the sixteen.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "silas_stubbornness",
+      "name_and_role": "Silas, the stubborn genius",
+      "motivation_goal": "To continue working and avoid unnecessary rest.",
+      "consistent_method": "Ignoring physical discomfort to hyper-fixate on the forge.",
+      "immediate_complication": "Requires forced dietary intake and grounding to prevent a crash.",
+      "pressure_index": 4,
+      "uninterrupted_escalation": "Will eventually collapse from sensory overload and fatigue if left unchecked."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Ensure Silas actually eats his soup with a grounded ankle wire.",
+      "level_2_local": "Mitigate ICE Third-Quarter cortisol cascades through communal roast rituals.",
+      "level_3_campaign_arc": "Sustain the physical and psychological well-being of the sixteen."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_16_elara",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 0,
+    "prerolled_hazard_queue": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.5,
+    "motivational_vector_saturation": 0.6,
+    "unresolved_conflict_ratio": 0.3,
+    "temporal_horizon_immediacy": 0.7,
+    "composite_lpi": 0.525,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Silas refuses to eat, risking severe cortisol cascade and physical exhaustion.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Elara pushes too hard, causing Silas to storm out of the mess hall.",
+        "below_dc_complicated_fail_forward": "Silas eats, but complains the whole time, raising the room's tension slightly.",
+        "meets_dc_clean_success": "Silas begrudgingly accepts the food and the grounding wire, visibly relaxing.",
+        "dc_plus_5_or_20_extended_lore": "Silas not only eats but offers a rare, genuine smile, deeply bonding the group."
+      }
+    },
+    "master_narrator": {
+      "executor": "claude",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": false,
+      "agency_handoff_prompt": "The Feast that night was different. It wasn't loud. It was warm.\n\nThe Stormbreaker hummed with captured energy. The Living Atlas glowed with a stable map. The Mycelial network pulsed with a gentle, rhythmic green. Sixteen mugs were raised in the warm circle of firelight while the captured geode hummed beneath the floorboards.\n\nElara scanned the room, her gaze sharp, tracking micro-cortisol baselines and radiation dosimetry for sixteen stubborn geniuses. Her focus rested on Silas. If you're complaining and no one is laughing, you're complaining wrong, she thought, watching him fidget. She was determined to mitigate their Isolated-Confined-Extreme Third-Quarter cortisol cascades and autonomic hypervigilance through this structured communal roast ritual and some oxytocin vagal buffering.\n\nShe approached him, a steaming bowl of roasted vegetables covered in cheese in one hand. Silas, she said, her voice a warm but uncompromising command, sit down and eat your soup. And keep that grounded ankle wire attached. I don't care if you're eighty-two years old and invented the induction baffle; your blood pressure is high and your fingers are stiff.\n\nHe glared at her, but the warmth of the firelight and the undeniable logic of her clinical matriarch presence softened his resistance. He took the bowl. Under extreme stress, Elara could become the ruthless, unblinking triage commander, but tonight, she was the anchor.\n\nAs Silas took a bite, he offered a genuine, rare smile. To the rust, he murmured softly.\n\nElara nodded, feeling the room's tension collectively exhale. Healing was a shared practice, and tonight, in the quiet bioluminescent wonder of the cavern, they weren't just surviving. They were thriving."
+    }
+  }
+}
