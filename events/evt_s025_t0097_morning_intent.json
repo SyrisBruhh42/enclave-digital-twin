@@ -1,0 +1,107 @@
+{
+  "event_id": "evt_s025_t0097_morning_intent",
+  "tick_id": 97,
+  "colony_sol": 25,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-11-18T06:00:00Z",
+  "base_snapshot_tick": 93,
+  "event_type": "MORNING_INTENT",
+  "location": "The Genesis Garden",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "summary": "Silas battles galvanic corrosion on a high-entropy alloy pipe caused by twin-sun eddy currents before Hector arrives.",
+  "importance": 0.7,
+  "novelty_score": 0.8,
+  "science_vegetable": "Fe-Co-Cr-Ni-Mn High-Entropy Alloy lattice stabilization against galvanic corrosion induced by twin-sun eddy currents and copper flange couplings.",
+  "state_deltas": {
+    "stress": 0.1
+  },
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "active_pov_id": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_03_silas"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "narrative_prose": "For a man who could persuade impossible metals to sing, the ordinary, stubborn silence of rust was a particular insult. There it was, on a length of pipe he himself had hammered into being, a faint, cancerous blush of oxidization that had conspired with the water it carried to stage a tiny, tireless rebellion.\n\nOne drop, at a time.\n\nSilas knelt on the dark, rich soil of the arboretum, the air around him cool and sweet. All about him, the family's cultivated fungi cast a soft, pearlescent glow, a functional twilight by which one could read, or work, or simply watch a problem grow. The Mycena lucentipes clustered at the base of the irrigation line, their green bioluminescence pulsing in a rhythm that seemed almost mocking to his tired eyes. To anyone else, this was a garden. To Silas, it was a humidity chamber designed specifically to destroy his work.\n\nHe ran a thumb over the pipe. It was a Fe-Co-Cr-Ni-Mn high-entropy alloy, designed for extreme tensile strength and thermal stability. It should have been impervious. But the planet's atmosphere was rich in corrosive ions, and the magnetic flux of the twin suns induced micro-currents in the metal, accelerating the galvanic reaction at a molecular level. The lattice structure was compromised.\n\nHe let out a sigh, a small cloud in the glowing air. There were other solutions. Less elegant, less permanent. With the practiced movement of someone who had chosen practicality over perfection many times before, he picked up a heavy wrench. He did not fit it to the joint. He simply raised it, measured the distance, and gave the pipe a firm, resonant whack.\n\nClang.\n\nThe dripping paused.\n\nSilas waited, holding his breath. A moment of silence. Then, with a renewed and almost cheerful impertinence, the drop began to form again. He hated it, with the quiet, simmering hatred one reserves for a problem that is both simple and, for the moment, entirely unbeatable. He could calculate the relativistic lattice shear of exotic core-metal in his head, yet here he was, outmatched by a single stubborn drip on a greenhouse irrigation pipe.\n\n\"If you're going to hit it, hit it with some actual kinetic force,\" Hector's voice boomed through the quiet twilight. The young prodigy swaggered into the arboretum, vibrating with excess energy. \"A tap like that is just insulting its structural integrity.\"\n\n\"I was applying a kinetic shock to reseat the oxidized particulates,\" Silas muttered, not looking up. He wiped his hands on his trousers. \"And if you're complaining and no one is laughing, you're complaining wrong.\"",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 25,
+      "colony_sol": 25,
+      "tick_id": 97,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Resolve the galvanic corrosion leak without a full system forge-shutdown.",
+        "mid_term_milestone": "Stabilize the resonant frequency of the new shield generator plating.",
+        "grand_campaign_finale": "Establish a permanent, harmonious dialogue with the planet's biosphere."
+      }
+    },
+    "active_location": {
+      "macro_silhouette": "A subterranean arboretum illuminated by the bioluminescence of Mycena lucentipes.",
+      "sensory_palette": {
+        "sight_and_color": "Pearlescent green bioluminescence pulsing in the damp arboretum twilight.",
+        "sound": "The rhythmic, mocking drip of water and the sharp clang of a wrench on metal.",
+        "smell": "Cool, sweet air mingling with the metallic tang of oxidized iron and copper.",
+        "tactile_temperature": "The cool, damp chill of the arboretum soil against the knees.",
+        "taste_optional": "A faint trace of metallic dust in the humid air."
+      },
+      "interactive_features": [
+        {
+          "system_verb": "DEFEND",
+          "description": "Attempt to reseat the oxidized particulates and stop the leak with a wrench tap.",
+          "associated_check_dc": 14
+        },
+        {
+          "system_verb": "ATTRACT",
+          "description": "Draw Hector into a technical debate on tensile strength and galvanic currents."
+        },
+        {
+          "system_verb": "CONCEAL",
+          "description": "Hide the frustration of being beaten by a simple pipe leak."
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "pressure_index": 5,
+        "motivation_goal": "Silas wants to halt the galvanic corrosion without admitting defeat to mundane physics.",
+        "consistent_method": "Applying kinetic shock and relying on empirical measurements.",
+        "immediate_complication": "The twin-sun magnetic flux continuously induces micro-currents that accelerate the decay.",
+        "uninterrupted_escalation": "Without a proper hermetic seal, the pipe will burst and flood the bioluminescent crops."
+      }
+    ],
+    "encounter_matrix": {
+      "hostile_threats": [],
+      "neutral_bystanders": [],
+      "allied_support": [
+        "enclave_01_hector"
+      ]
+    },
+    "lpi_metrics": {
+      "lethality_probability": 0.05,
+      "player_agency_index": 0.9,
+      "narrative_momentum": 0.8,
+      "composite_lpi": 0.68
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "tactical_state_mutations": [],
+        "explicit_pre_roll_dc": 14
+      },
+      "master_narrator": {
+        "agency_handoff_prompt": "Hector enters the arboretum and critiques Silas's percussive maintenance."
+      }
+    }
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
+  }
+}
