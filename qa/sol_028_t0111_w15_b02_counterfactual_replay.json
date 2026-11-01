@@ -1,0 +1,116 @@
+{
+  "base_snapshot_tick": 111,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_12_elias"
+    ],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_12_elias",
+    "prev_next_pov_target": "enclave_12_elias",
+    "next_pov_target": "enclave_16_elara"
+  },
+  "campaign_metadata": {
+    "session_number": 28,
+    "colony_sol": 28,
+    "tick_id": 111,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Mitigate Third-Quarter isolation micro-stressors across sixteen polymaths.",
+      "mid_term_milestone": "Stabilize emotional regulation within the group.",
+      "campaign_arc_climax": "Prevent mutiny over kitchen rationing."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Hearth_Main_Hall",
+    "macro_silhouette": "A massive subterranean hall built from dark ironwood and brushed brass, illuminated by the warm, flickering glow of the central hearth fire and the hum of the captured geode beneath the floorboards. Long timber tables stretch across the space, lined with sixteen chairs that have seen too many days of recycled air. The air is thick with the savory scent of roasted tubers and tension.",
+    "sensory_palette": {
+      "sight_and_color": "Flickering amber firelight reflecting off brushed brass and deep shadows.",
+      "sound": "The low resonant hum of the geode beneath the floorboards, punctuated by the clatter of spoons and sharp, brittle silence.",
+      "smell": "Rich roasted tubers, metallic tang of ozone, and faint notes of tension.",
+      "tactile_temperature": "Warm near the hearth, with a creeping chill near the reinforced bulkheads."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "The Hearth Fire",
+        "affordance_description": "Provides warmth and a central focal point for gathering.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Communal Dining Table",
+        "affordance_description": "A long wooden table meant for sixteen, currently acting as a trench line.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Soup Cauldron",
+        "affordance_description": "Contains Ryn's latest concoction, recently filtered through a sock.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_01_kaio",
+      "name_and_role": "Kaio, The Scout",
+      "motivation_goal": "To optimize the water filtration system.",
+      "consistent_method": "Jury-rigging equipment with whatever is available, like a sock.",
+      "immediate_complication": "Introduces algae-sludge into the soup stock.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Will eventually cause a full mutiny at the dinner table."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Tension over Kaio filtering soup stock through a sock.",
+      "level_2_local": "Third-Quarter isolation micro-stressors compounding.",
+      "level_3_campaign_arc": "Maintaining group cohesion in an isolated, extreme environment."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_12_elias",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 15,
+    "prerolled_hazard_queue": [
+      14,
+      18,
+      7,
+      2,
+      19
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.85,
+    "motivational_vector_saturation": 0.70,
+    "unresolved_conflict_ratio": 0.60,
+    "temporal_horizon_immediacy": 0.80,
+    "composite_lpi": 0.73,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.4,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The group fractures into bitter arguments, destroying the vagal buffering of the feast.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Elias misreads the room and offers a platitude that only enrages them further.",
+        "below_dc_complicated_fail_forward": "The tension breaks, but Silas retreats to the Forge without eating.",
+        "meets_dc_clean_success": "The group successfully laughs off the sock incident, resetting cortisol levels.",
+        "dc_plus_5_or_20_extended_lore": "Not only does the group recover, but they establish a new ritual inside joke that strengthens their bond."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules_dm_local",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "The table was silent. Not the good, tired silence of a job well done. The sharp, brittle silence of sixteen people who had been breathing the same recycled air for too long.\n\nElias sat at the end of the long timber board, his hands folded over a leather-bound notebook. His task was to archive the linguistic and epistemic memory of the sixteen so nothing true is lost, carefully tracking the fragile social ecosystem of their found-family fellowship. But tonight, the ecosystem was collapsing. The Third-Quarter isolation micro-stressors had accumulated past the breaking point, compounding into a near mutiny simply because Kaio filtered the dinner's soup stock through a sock.\n\nKaio defended his engineering marvel with wide-eyed sincerity, waving the offending garment like a banner. A vein pulsed visibly in Ryn's temple. Elias watched the micro-expressions ripple across the room—the clamped jaws, the rigid spines, the elevated heart rates. Mitigating Isolated-Confined-Extreme (ICE) Third-Quarter cortisol cascades and autonomic hypervigilance required structured communal roast rituals and oxytocin vagal buffering. Instead, they had a sock in the broth.\n\nRyn slammed a ladle against the cast-iron pot. The metallic ring severed the argument, bouncing off the brushed brass and ironwood bulkheads. Elias flinched, the sudden sharp noise jarring his spine. He leaned back, his shoulders squaring as his Taurus override engaged. The quiet observer dug his heels in with immovable, deadpan stubbornness. He pushed his chair back a single inch, scraping the floorboards to draw focus.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Elias said, his voice flat, completely devoid of inflection.\n\nSilence rushed back in. Sixteen pairs of eyes snapped toward him.\n\n\"It was a clean sock,\" Kaio offered weakly.\n\nElias stared straight ahead, his expression carved from stone. \"A clean sock in a mycelial reduction broth implies a radical approach to textile-integrated gastronomy. It is a bold paradigm shift.\"\n\nVex choked on a mouthful of water. A small, involuntary snort escaped Zara. The brittle tension fractured. Elias held his ground, maintaining his stoic expression as the absurdity of the situation washed over the crew. The cortisol cascades halted, replaced by the vagal buffering of shared, reluctant amusement.\n\nSixteen mugs raised in the warm circle of firelight while the captured geode hums beneath the floorboards. The crisis had passed. Therefore, Elias turned his gaze toward the end of the table, offering a small, imperceptible nod.\n\nElara stood up, collecting the empty bowls. \"Right,\" she announced, \"next time, use a sieve. Who wants seconds?\""
+    }
+  }
+}
