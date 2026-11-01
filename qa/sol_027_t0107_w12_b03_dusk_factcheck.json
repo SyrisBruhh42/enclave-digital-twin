@@ -1,0 +1,108 @@
+{
+  "base_snapshot_tick": 105,
+  "context_manifest": {
+    "loaded_full_card_ids": ["enclave_09_orion"],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_09_orion",
+    "next_pov_target": "enclave_14_vex",
+    "prev_next_pov_target": "enclave_09_orion"
+  },
+  "campaign_metadata": {
+    "session_number": 3347507011232610354,
+    "colony_sol": 27,
+    "tick_id": 107,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Validate chronological handoffs and continuity of operations for Dusk Crafting.",
+      "mid_term_milestone": "Secure resources against the upcoming geomagnetic anomaly.",
+      "campaign_arc_climax": "Complete the Grand Projects without sacrificing the Enclave's humanity."
+    }
+  },
+  "active_location": {
+    "location_id": "LOC_THE_SIMULACRUM",
+    "macro_silhouette": "A darkened chamber carved from bedrock, lit only by the hum of the holographic projector and the impossible geometry of hovering colloidal iron. The air tastes faintly of copper and charged quartz, heavy with the focused silence of acoustic synthesis.",
+    "sensory_palette": {
+      "sight_and_color": "A fingernail-sized crystal drinking violet laser light at the heart of the darkened Simulacrum chamber.",
+      "sound": "The hum of the projector and harmonic tuning forks resonating against stone.",
+      "smell": "Charged quartz and metallic ferrofluid.",
+      "tactile_temperature": "Cool, static-charged air that raises hair on bare arms."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Ferrofluid Basin",
+        "affordance_description": "A vessel of suspended iron particles reacting to acoustic and magnetic fields.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Electromagnet Grid",
+        "affordance_description": "The base matrix that translates frequency into physical force.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Synthesizer Console",
+        "affordance_description": "The interface used to input chords and sculpt the resulting magnetic terrain.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "TOY_COLLOIDAL_SPIRE",
+      "name_and_role": "Levitating Magnetohydrodynamic Cymatic Spire",
+      "motivation_goal": "To perfectly reflect the input acoustic frequencies as physical geometry.",
+      "consistent_method": "Forming sharp crowns of thorns on minor chords and smooth undulating waves on major chords.",
+      "immediate_complication": "Requires constant fine-tuning to prevent the spire from collapsing back into a sluggish boil.",
+      "pressure_index": 4,
+      "uninterrupted_escalation": "If the harmonic frequency drifts, the fluid will splatter across the chamber."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Orion is sculpting visual poetry from industrial materials.",
+      "level_2_local": "He is attempting to anchor the colony's emotional resonance into something tangible.",
+      "level_3_campaign_arc": "Proving that their existence here is more than just survival, but creation."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_09_orion",
+        "tactical_role": "SQUISHY_DEBUFFER"
+      }
+    ],
+    "strain_accumulated_upward": 0,
+    "prerolled_hazard_queue": [7, 12, 4, 18, 9]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.6,
+    "unresolved_conflict_ratio": 0.3,
+    "temporal_horizon_immediacy": 0.5,
+    "composite_lpi": 0.45,
+    "classification": "Rich Lore, Flat Play"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Aegis_Judge",
+      "model": "v4_strict",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The delicate balance of the fluid fails, turning art back into mere industrial sludge.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Orion completely misjudges the required frequency, causing the fluid to erupt unpredictably.",
+        "below_dc_complicated_fail_forward": "The spire forms, but with asymmetrical, jarring spikes that do not reflect his intended vision.",
+        "meets_dc_clean_success": "The fluid freezes in a breathtaking, impossible spire, defying gravity.",
+        "dc_plus_5_or_20_extended_lore": "Not only does the spire hold, it resonates sympathetically, acting as a minor harmonic shunt for stray magnetic fields."
+      }
+    },
+    "master_narrator": {
+      "executor": "Orion_INFP_Lens",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": false,
+      "agency_handoff_prompt": "Orion didn't see a sealant; he saw a dancer. He had taken a beaker of Leo's ferrofluid to the Simulacrum. He placed it over a grid of electromagnets hooked up to his synthesizer. He played a chord, C-Major, and the black fluid leaped, forming a perfect, spiky crown. He shifted to a minor key. The fluid collapsed, turning into a sluggish, rolling boil. It responded to the frequency. It was visualizing the sound.\n\nHe began to play in earnest—a complex, weaving melody. The fluid danced, splitting into droplets that orbited each other, merging and separating in perfect time with the music. It was a physical manifestation of the Enclave's harmony—individual parts coming together, breaking apart, and finding each other again. He hit the final note. The fluid froze in a breathtaking, impossible spire, defying gravity.\n\n'It's us,' Orion said, stepping back from the console, his hands still hovering over the keys as if afraid to break the spell. 'Messy, sharp, and magnetic.' He was sculpting levitating magnetohydrodynamic cymatic spires from harmonic chords, yet he knew, with sudden, painful clarity, that he would probably get emotionally overwhelmed by a particularly symmetrical potato at dinner tonight. The contrast between his absolute control here and his vulnerability out there was staggering.\n\n'If you're complaining and no one is laughing, you're complaining wrong,' Vex remarked from the doorway, leaning against the cold bedrock frame. Orion glanced back over his shoulder. He checked the datastream flowing into the nearby terminal. Isla's work. Femtosecond nanostructured birefringent 5D optical storage encoding terabytes of magnetospheric and mycelial telemetry into eternal fused-quartz lattices. A fingernail-sized crystal drinking violet laser light at the heart of the darkened Simulacrum chamber. His art was temporary, held aloft by electricity and sound. Hers was forever. He packed up his synthesizer, preparing to find Vex. The astronomer would appreciate the delicate, fragile geometry of what he had just built."
+    }
+  }
+}
