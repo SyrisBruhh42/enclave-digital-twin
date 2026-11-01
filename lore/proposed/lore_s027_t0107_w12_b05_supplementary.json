@@ -1,0 +1,113 @@
+{
+  "base_snapshot_tick": 103,
+  "context_manifest": {
+    "loaded_full_card_ids": ["enclave_09_orion"],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_09_orion",
+    "next_pov_target": "enclave_14_vex",
+    "prev_next_pov_target": "enclave_14_vex"
+  },
+  "campaign_metadata": {
+    "session_number": 27,
+    "colony_sol": 27,
+    "tick_id": 107,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Encode magnetospheric telemetry before the crystal lattice depolarizes.",
+      "mid_term_milestone": "Stabilize the 5D optical quartz storage arrays for the Simulacrum.",
+      "campaign_arc_climax": "Complete the eternal archive of the Enclave's collective memory before the twin suns reach periapsis."
+    }
+  },
+  "active_location": {
+    "location_id": "SIMULACRUM_CORE_CHAMBER",
+    "macro_silhouette": "A darkened, resonant chamber buried beneath the Enclave's crust, lined with acoustic dampening baffles and intricate brass wiring. In the center, a perfectly smooth basin of black ferrofluid sits above a grid of electromagnets, reflecting the violet pulse of a femtosecond laser overhead.",
+    "sensory_palette": {
+      "sight_and_color": "A fingernail-sized crystal drinking violet laser light at the heart of the darkened Simulacrum chamber.",
+      "sound": "The low, thrumming hum of electromagnets interspersed with the sharp, crystalline snap of the laser etching nanogratings.",
+      "smell": "Ozone from the ionized air mixed with the sharp, earthy tang of the ferrofluid's carrier oil.",
+      "tactile_temperature": "A dry, static-charged chill that raises the hairs on bare arms.",
+      "taste_optional": "A faint metallic tang of copper on the back of the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetohydrodynamic Basin",
+        "affordance_description": "The central basin filled with colloidal ferrofluid can be acoustically manipulated to model magnetic fields.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "5D Optical Etching Laser",
+        "affordance_description": "The femtosecond laser array that must be carefully calibrated to encode telemetry into the quartz.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Acoustic Dampening Baffles",
+        "affordance_description": "Brass-framed acoustic baffles that can be adjusted to shift the resonant frequencies of the chamber.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "STUBBORN_QUARTZ_LATTICE",
+      "name_and_role": "The Birefringent Crystal",
+      "motivation_goal": "To resist structural changes from the femtosecond laser unless the frequencies perfectly align with its natural resonance.",
+      "consistent_method": "Scattering the laser light into useless prismatic flares that threaten to overheat the emitter.",
+      "immediate_complication": "The crystal begins to resonate out of phase, creating a high-pitched whine that disrupts Orion's acoustic tuning.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "The out-of-phase resonance will shatter the quartz, destroying hours of meticulously recorded telemetry."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Orion must encode the delicate mycelial and magnetospheric telemetry into the quartz before the data decays.",
+      "level_2_local": "The Simulacrum requires a stable, eternal memory matrix to preserve the colony's history against the chaotic environment.",
+      "level_3_campaign_arc": "The Enclave's ultimate survival depends on leaving a permanent record that outlasts the volatile twin suns."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_09_orion",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_14_vex",
+        "tactical_role": "SQUISHY_DEBUFFER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [7, 12, 19, 4, 15]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.85,
+    "motivational_vector_saturation": 0.90,
+    "unresolved_conflict_ratio": 0.70,
+    "temporal_horizon_immediacy": 0.80,
+    "composite_lpi": 0.82,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Local_Deterministic_Enclave_Engine",
+      "model": "Ruleset_V2",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If the resonance check fails, the 5D optical quartz storage fractures, losing critical telemetry and triggering Orion's Vex Override.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Orion's acoustic tuning is perfectly wrong; the quartz shatters violently, and the feedback loop temporarily deafens him.",
+        "below_dc_complicated_fail_forward": "The quartz holds, but the telemetry is encoded with errors. Orion becomes overwhelmed by the discordant frequencies.",
+        "meets_dc_clean_success": "The cymatic spires align perfectly. The telemetry is encoded into the eternal fused-quartz lattice, and the laser powers down safely.",
+        "dc_plus_5_or_20_extended_lore": "Not only is the data encoded perfectly, but the resulting cymatic sculpture reveals a hidden harmonic pattern in the magnetosphere, providing vital data for Dorian's Living Atlas."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules_DM_Agent",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Orion stood in the center of the darkened Simulacrum chamber, a fingernail-sized crystal drinking violet laser light at the heart of the room. It was supposed to be a simple transfer: femtosecond nanostructured birefringent 5D optical storage encoding terabytes of magnetospheric and mycelial telemetry into eternal fused-quartz lattices. But the crystal was being stubborn.\n\nHe had taken a beaker of Leo's ferrofluid to the Simulacrum. He placed it over a grid of electromagnets hooked up to his synthesizer. Orion didn't see a sealant; he saw a dancer. He played a complex, weaving melody on his synthesizer, trying to coax the ferrofluid into the exact harmonic shape of the incoming telemetry. The black liquid leaped, sculpting levitating magnetohydrodynamic cymatic spires from harmonic chords. It was beautiful, messy, and sharp. \n\nYet, even as he manipulated the raw forces of physics with intuitive grace, a knot of anxiety tightened in his chest. Earlier at dinner, a perfectly symmetrical potato had nearly brought him to tears. The fragility of things, the desperate need to preserve them against the encroaching chaos, weighed heavily on him. The irony wasn't lost on him: he was building an eternal archive, yet he felt like he was held together by wire and hope. \n\n'Your minor seventh is a little flat, Orion,' Vex's voice drifted down from the gantry, dripping with characteristic dry amusement. 'And if you're complaining and no one is laughing, you're complaining wrong. The Blue Dwarf is flaring, and if we don't get this data locked in, we'll have to start mapping the mycelial network all over again from scratch.'\n\nOrion's fingers paused on the keys. The stress of the impending data loss, combined with Vex's casual interruption, threatened to tip him over the edge. His Scorpio Vex Override flared—the gentle mediator snapping into a razor-sharp, unsparing critic. \n\n'It's not the seventh, Vex,' Orion snapped back, his voice surprisingly cold. 'It's the birefringence of the quartz. It's resisting the phase shift. If you want to help, come down here and adjust the acoustic dampening baffles instead of offering astrological commentary.' He took a breath, forcing himself to focus. 'We need to align the physical resonance with the laser's pulse rate. Watch the ferrofluid. Tell me when the central spire stabilizes.' He resumed playing, the notes sharper, more decisive, pouring his raw, unvarnished intensity into the keys, waiting for Vex to respond to his blunt directive."
+    }
+  }
+}
