@@ -1,0 +1,73 @@
+{
+  "event_id": "sol_024_feast",
+  "tick_id": 96,
+  "colony_sol": 24,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-11-17T18:00:00Z",
+  "base_snapshot_tick": 92,
+  "event_type": "THE_FEAST_CONVERGENCE",
+  "active_pov_id": "enclave_16_elara",
+  "prev_next_pov_target": "enclave_16_elara",
+  "next_pov_target": "enclave_03_silas",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "location": "The Main Hall",
+  "active_location": {
+    "location_id": "hub_main_hall",
+    "macro_silhouette": "Sixteen mugs raised in the warm circle of firelight while the captured geode hums beneath the floorboards.",
+    "sensory_palette": {
+      "sight_and_color": "Gentle rhythmic green pulses of the Mycelial network against deep bronze reflections.",
+      "sound": "The hum of captured energy and a low, comforting murmur of tired but brilliant voices.",
+      "smell": "Steam-sterilized linens, roasted squash, and the sharp tang of hot copper wiring.",
+      "tactile_temperature": "Suffocating warmth of the firelight contrasting with the biting cold draft near the airlock.",
+      "taste_optional": "Rich, salty electrolyte broth and savory vegetable roast."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Grounded copper ankle wire",
+        "affordance_description": "To protect against ambient electrical discharges.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Warm bowl of roasted vegetables",
+        "affordance_description": "Mitigating isolated-confined-extreme cortisol cascades.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 10
+      },
+      {
+        "feature_name": "The warm firelight circle",
+        "affordance_description": "Drawing the crew together.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "actors": [
+    "enclave_01_hector",
+    "enclave_02_jane",
+    "enclave_03_silas",
+    "enclave_04_leo",
+    "enclave_05_kaio",
+    "enclave_06_zara",
+    "enclave_07_willow",
+    "enclave_08_terra",
+    "enclave_09_orion",
+    "enclave_10_isla",
+    "enclave_11_kenna",
+    "enclave_12_elias",
+    "enclave_13_ryn",
+    "enclave_14_vex",
+    "enclave_15_dorian",
+    "enclave_16_elara"
+  ],
+  "summary": "Elara enforces communal roast rituals to buffer the crew's cortisol levels, tracking radiation dosimetry while playfully making sure Silas eats his soup with grounded ankle wires.",
+  "importance": 0.8,
+  "novelty_score": 0.7,
+  "science_vegetable": "Mitigating Isolated-Confined-Extreme (ICE) Third-Quarter cortisol cascades and autonomic hypervigilance through structured communal roast rituals and oxytocin vagal buffering.",
+  "state_deltas": {
+    "stress": -0.25
+  },
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "narrative_prose": "The Feast that night was different. It wasn't loud. It was warm. The Stormbreaker hummed with captured energy. The Living Atlas glowed with a stable map. The Mycelial network pulsed with a gentle, rhythmic green. Sixteen mugs raised in the warm circle of firelight while the captured geode hummed beneath the floorboards. Elara sat at the head of the Hub bench, scanning the room like a battlefield surgeon conducting an unblinking triage. They were alive, but surviving wasn't enough. They needed oxytocin vagal buffering\u2014a physiological necessity in an environment constantly trying to kill them. Mitigating isolated-confined-extreme third-quarter cortisol cascades and autonomic hypervigilance through structured communal roast rituals was not a luxury; it was her grand project.\n\nShe watched Silas out of the corner of her eye. The brilliant metallurgist was staring blankly at a smudge on his tunic, entirely ignoring the nutrient-dense squash soup steaming in front of him. His copper grounding wire was dangling perilously close to slipping off his ankle. \"I don't care if you're eighty-two years old and invented the induction baffle, Silas,\" Elara said, her voice a brisk, authoritative clip that nonetheless carried deep affection. \"Your blood pressure is one hundred forty-eight over ninety-two, your fingers are stiff from cold-forging, and you are going to eat that soup. And fix your ground wire, unless you want to become the colony's first human lightning rod. Defend yourself against the static, for heaven's sake.\"\n\n\"It's uncomfortable,\" Silas mumbled, though he obediently adjusted the wire and picked up his spoon.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" she shot back instantly, pressing a warm cup of magnesium tea into Hector's tired hand as he passed by. \"Drink this. The flare activity today spiked everyone's dosimetry readings. We're all running on borrowed reserves.\"\n\nShe looked around the table. They were exhausted. But they were together. The ritual was working. The shared warmth, the forced slow-down\u2014it was pulling them back from the edge. She noticed Ryn nodding approvingly at the exact distribution of the electrolyte broth. Elara smiled softly. She had logged the micro-cortisol baselines for all sixteen of them, and for the first time today, the metrics were stabilizing. The shelter wasn't just metal; it was this exact moment. She tapped the side of her mug with her brass stethoscope, drawing their attention. \"Silas, since you're finally eating, tell us about the new alloy. But keep it under three minutes, or I'm checking your pupils.\" The baton was passed."
+}
