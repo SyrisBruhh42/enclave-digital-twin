@@ -1,0 +1,29 @@
+{
+  "event_id": "evt_s029_t0113_world_consequence",
+  "tick_id": 113,
+  "colony_sol": 29,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-11-22T06:00:00Z",
+  "base_snapshot_tick": 113,
+  "event_type": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+  "pre_roll_dc": 14,
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_03_silas",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "science_vegetable": "Fe-Co-Cr-Ni-Mn High-Entropy Alloy lattice stabilization against galvanic corrosion induced by twin-sun eddy currents and copper flange couplings.",
+  "location": "The Arboretum",
+  "actors": ["enclave_03_silas", "enclave_01_hector"],
+  "summary": "Silas battles thermodynamic decay as a high-entropy alloy pipe succumbs to galvanic corrosion, only to find the meticulous perfection interrupted by Hector's sudden kinetic arrival.",
+  "importance": 7,
+  "novelty_score": 6,
+  "state_deltas": {
+    "stress_delta": 0.1,
+    "fatigue_delta": 0.05
+  },
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "interactive_features": ["DEFEND", "ATTRACT", "CONSUME"],
+  "text": "For a man who could persuade impossible metals to sing, the ordinary, stubborn silence of rust was a particular insult. There it was, on a length of pipe he himself had hammered into being, a faint, cancerous blush of oxidization that had conspired with the water it carried to stage a tiny, tireless rebellion.\n\nOne drop, at a time.\n\nSilas knelt on the dark, rich soil of the arboretum, the air around him cool and sweet. All about him, the family's cultivated fungi cast a soft, pearlescent glow, a functional twilight by which one could read, or work, or simply watch a problem grow. The Mycena lucentipes clustered at the base of the irrigation line, their green bioluminescence pulsing in a rhythm that seemed almost mocking to his tired eyes. He ran a thumb over the pipe. It was a Fe-Co-Cr-Ni-Mn high-entropy alloy, designed for extreme tensile strength and thermal stability. It should have been impervious. But the planet's atmosphere was rich in corrosive ions, and the magnetic flux of the twin suns induced micro-currents in the metal, accelerating the galvanic reaction at a molecular level. The copper flange coupling was eating the iron lattice. He hated it, with the quiet, simmering hatred one reserves for a problem that is both simple and, for the moment, entirely unbeatable.\n\nHe let out a sigh, a small cloud in the glowing air. There were other solutions. Less elegant, less permanent. With the practiced movement of someone who had chosen practicality over perfection many times before, he picked up a heavy wrench. He did not fit it to the joint. He simply raised it, measured the distance, and gave the pipe a firm, resonant whack.\n\nClang.\n\nThe dripping paused.\n\nSilas waited, holding his breath. A moment of silence. Then, with a renewed and almost cheerful impertinence, the drop began to form again.\n\nA heavy boot struck the metallic grating above, rattling the delicate pearlescent spores. Hector stood at the arboretum entrance, grinning like a man who had just successfully wrestled a tornado.\n\n\"You're hitting it wrong,\" Hector said."
+}
