@@ -1,0 +1,120 @@
+{
+  "campaign_metadata": {
+    "session_number": 3,
+    "colony_sol": 26,
+    "tick_id": 103,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Validate The Simulacrum's acoustic-magnetic resonance against actual storm telemetry.",
+      "mid_term_milestone": "Complete The Simulacrum and sync it with the planetary mycelial grid.",
+      "campaign_arc_climax": "Survive the multi-year geomagnetic reversal event using the 16 nodes' grand projects."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Simulacrum",
+    "macro_silhouette": "A subterranean chamber shaped like an inverse geode, its walls lined with precision-cut brass Helmholtz coils. At the center sits a vast basin of black ferrofluid, currently suspended in the air in delicate, gravity-defying spires by an invisible electromagnetic web.",
+    "sensory_palette": {
+      "sight_and_color": "orbiting droplets of liquid iron dancing in the dark, bathed in violet laser light and the green bioluminescence of creeping mold.",
+      "sound": "a minor-key cello chord vibrating up through the floorboards, counterpointed by the dry scrape of chamois leather on optical glass.",
+      "smell": "ozone, hot copper, and the sharp, clinical scent of polishing compound.",
+      "tactile_temperature": "a static charge that raises the fine hairs on bare arms, making the air feel thick and electric."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Ferrofluid Acoustic-Magnetic Modulator",
+        "affordance_description": "The central matrix controlling the resonant frequencies suspending the iron droplets.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Optical Quartz Library Array",
+        "affordance_description": "A rack of raw, unpolished quartz lenses waiting to be integrated into the 5D storage lattice.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Helmholtz Coil Calibration Dials",
+        "affordance_description": "Banks of analog dials for micro-adjusting the magnetic flux topology.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "cymatic_ferrofluid_spires",
+      "name_and_role": "Magneto-Acoustic Ferrofluid Spires",
+      "motivation_goal": "To physically manifest the harmonic frequencies of the Enclave's neuro-acoustic state.",
+      "consistent_method": "Forming complex, Rosensweig-instability-driven geometries in response to synthesizer input.",
+      "immediate_complication": "The spires are vibrating with sympathetic resonance from an external storm, threatening to collapse and splash the chamber.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The fluid structure loses cohesion, dropping half a ton of magnetized sludge onto the precision optical equipment."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Isla must hand-polish the optical lenses to exact tolerances so they can record the 5D telemetry without scattering.",
+      "level_2_local": "The magneto-acoustic cymatics coupling is inherently unstable during the twilight pressure drop.",
+      "level_3_campaign_arc": "The Simulacrum must accurately map the chaotic interference of the binary suns to prevent a colony-wide failure."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_10_isla",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_15_dorian",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      12,
+      18,
+      7,
+      15,
+      9
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.7,
+    "motivational_vector_saturation": 0.85,
+    "unresolved_conflict_ratio": 0.4,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.71,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If the lens is not polished to exact nanometer tolerances, the five-dimensional holographic storm telemetry will scatter, causing a corrupted data write and splashing the ferrofluid.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Isla believes the polish is perfect, but a micro-scratch causes a harmonic feedback loop that shatters the quartz.",
+        "below_dc_complicated_fail_forward": "The polish is adequate but slow. The telemetry encodes, but Isla's fingers cramp severely, imposing a mechanical penalty on her next action.",
+        "meets_dc_clean_success": "The lens is flawless. The magneto-acoustic cymatics perfectly couple the polyphonic synthesizer harmonics into the electromagnet matrix, suspending the ferrofluid droplets in gravity-defying resonant spires.",
+        "dc_plus_5_or_20_extended_lore": "Isla discovers a novel birefringence pattern in the quartz, increasing the 5D storage capacity by 300% and stabilizing the ferrofluid effortlessly."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules_dm",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Isla didn't trust hard drives. They spun. They failed. They rusted. Crystals were forever.\n\nShe sat cross-legged on the cold brass grating of The Simulacrum, ignoring the ache in her lower back. Above her, orbiting droplets of liquid iron danced in the dark, suspended by an invisible electromagnetic web. The room smelled of ozone and the sharp, clinical scent of the polishing compound smeared across her chamois leather. She rubbed the small disk of fused quartz in her hands, over and over, trying to ignore the cramping in her fingers. She was encoding terabytes per second of five-dimensional holographic storm telemetry into the nanostructured crystal lattice, mapping the magneto-acoustic cymatics coupling polyphonic synthesizer harmonics into the electromagnet matrix. It was brilliant. It was eternal. And it required her to hand-polish the optics like a medieval glassblower until her knuckles ground together.\n\n'If you're complaining and no one is laughing, you're complaining wrong,' she muttered to herself, echoing Ryn, as she squinted at the lens under the violet laser light. A single micro-scratch would scatter the telemetry. The ferrofluid spires above her trembled, vibrating in sympathy with a low, minor-key cello chord that seemed to emanate from the bedrock itself. The twilight pressure drop was playing havoc with the local magnetic topology. If she didn't lock the 5D write-stream soon, the instability would collapse the spires and drop half a ton of liquid iron onto her carefully arranged tensors. She needed the physical map. She needed to know what the Blue Dwarf was doing to the upper atmosphere.\n\nShe set the polished quartz into the optical array, locking the brass calipers with a satisfying, heavy click. 'Write-stream initiated,' she said to the empty room. The crystal flared, drinking the violet light, solidifying the chaotic math into physical architecture. The fluid above her smoothed out, the spikes retreating into elegant, gravity-defying arches. Isla exhaled, wiping her hands on her trousers. She picked up the heavy data-slate containing the initial structural map. 'Dorian,' she keyed her comms, her voice crisp and axiomatic. 'The telemetry is locked. I'm bringing the wireframe to the Hub. We have a problem in Sector 4.' She gathered the slate and headed for the door, ready to hand off the burden of the sky to the only person who understood the geometry of ghosts as well as she did."
+    }
+  },
+  "base_snapshot_tick": 100,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_10_isla"
+    ],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_10_isla",
+    "next_pov_target": "enclave_15_dorian",
+    "prev_next_pov_target": "enclave_10_isla"
+  }
+}
