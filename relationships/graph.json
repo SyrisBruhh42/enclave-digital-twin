@@ -1771,13 +1771,16 @@
       "squad_a": "The Wilds",
       "squad_b": "The Hub",
       "relationship_type": "Mentor_Mentee",
-      "bond_strength": 0.87,
-      "trust": 0.91,
+      "bond_strength": 0.92,
+      "trust": 0.96,
       "affection": 0.89,
       "intellectual_friction": 0.41,
       "how_a_sees_b": "Watches over Vex's work on The Living Atlas & Mycelial Concordance with fond cross-squad mentorship, offering The Wilds insights whenever Vex asks.",
       "how_b_sees_a": "Appreciates Terra's generous cross-disciplinary advice and loves hearing Terra's stories of Old Earth during Evening Dispatch.",
-      "shared_history_hook": "Collaborated across The Wilds and The Hub during last winter's spore-fog lock-in to cross-calibrate The Genesis Garden with The Living Atlas & Mycelial Concordance."
+      "shared_history_hook": "Collaborated across The Wilds and The Hub during last winter's spore-fog lock-in to cross-calibrate The Genesis Garden with The Living Atlas & Mycelial Concordance.",
+      "evidence_refs": [
+        "evt_s023_t0092_reflection"
+      ]
     },
     {
       "pair_id": "enclave_08_terra__enclave_15_dorian",
@@ -6586,6 +6589,6 @@
       }
     }
   },
-  "updated_at_tick": 91,
-  "applied_event_count": 110
+  "updated_at_tick": 92,
+  "applied_event_count": 111
 }
