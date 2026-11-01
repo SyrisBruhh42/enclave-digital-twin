@@ -463,6 +463,9 @@ class TestEnclaveCrucible(unittest.TestCase):
     def test_14_16_character_rashomon_scalpel_17th_node_and_atlas_compiler(self) -> None:
         test_16_character_rashomon_scalpel_17th_node_and_atlas_compiler()
 
+    def test_15_cross_medium_narrative_and_computational_prose_calibration(self) -> None:
+        test_cross_medium_narrative_and_computational_prose_calibration()
+
 
 def test_pokemon_emerald_5_districts_and_6_step_tutorial() -> None:
     from engine.enclave_city_sim import (
@@ -1025,8 +1028,209 @@ def test_16_character_rashomon_scalpel_17th_node_and_atlas_compiler() -> None:
     assert atlas_res["volume_2_count"] >= 22
 
 
+def test_cross_medium_narrative_and_computational_prose_calibration() -> None:
+    """Verify the 6-Pillar Cross-Medium Narrative Architecture & Computational Prose Calibration Engine."""
+    from engine.local_ai_manager import LocalContextAwareManager
+    from engine.narrative_calibration_engine import (
+        CHARACTER_SPINES,
+        DiscoveryNode,
+        EmergentTopologyEngine,
+        FactionPowerMatrixEntry,
+        MametDramaticCompressionGate,
+        OralityAndAudioCalibrationEngine,
+        PlantedClueNode,
+        SceneBeat,
+        SceneSequelPropulsionEngine,
+        SequelBeat,
+        TemporalInformationAsymmetryEngine,
+        run_three_pass_de_ai_calibration,
+        score_stop_slop_5d,
+    )
+
+    # 1. Verify all 16 character spines exist (including Dorian & Vex and Elara & Ryn)
+    assert set(CHARACTER_SPINES.keys()) == set(CANONICAL_16_CHARACTER_IDS)
+
+    # 2. Verify Swain Scene/Sequel + Parker-Stone But/Therefore + Stanton '2 + 2' + Micro MRU
+    scene = SceneBeat(
+        scene_id="sc_s028_t01",
+        pov_character_id="enclave_15_dorian",
+        goal="Anchor the obsidian vault compression ring before the twin-sun thermal tide peaks.",
+        conflict="A hairline shear in the basalt footing threatens to buckle the primary tie-rod.",
+        disaster_type="YES_BUT",
+        disaster_outcome="The compression ring locks into place, but Vex's contraband bypass conduit ruptures the secondary coolant seal.",
+        stanton_clue_a="A faint smell of ozonated copper lingered near the unsealed junction box.",
+        stanton_clue_b="Three brass lock-washers from Vex's workbench sat on the warm manifold.",
+        withheld_inference_4="Vex tapped the vault manifold to power the hidden shadow-market relay.",
+        act_number=2,
+    )
+    sequel = SequelBeat(
+        sequel_id="sq_s028_t01",
+        pov_character_id="enclave_15_dorian",
+        visceral_reaction="Steam stung Dorian's knuckles as his grip tightened on the torque wrench.",
+        dilemma_option_a_cost="Vent the main manifold and lose twelve hours of vault pressurization.",
+        dilemma_option_b_cost="Cross-couple Vex's uncertified splice directly into the load-bearing ring.",
+        decision_therefore_goal="Cross-couple the rogue splice and haul Vex onto the catwalk to balance the phase load.",
+    )
+    prop_res = SceneSequelPropulsionEngine.validate_scene_sequel_pair(
+        scene, sequel, connector_history=["BUT", "THEREFORE", "BUT"]
+    )
+    assert prop_res["valid"] is True
+    assert prop_res["macro_bridge_scene_to_sequel"] == "BUT"
+    assert prop_res["macro_bridge_sequel_to_next_scene"] == "THEREFORE"
+
+    mru_res = SceneSequelPropulsionEngine.validate_mru_paragraph(
+        stimulus="The Bourdon pressure gauge spiked past forty megapascals with a metallic ping.",
+        visceral_reflex="Cold sweat prickled across Dorian's collarbones.",
+        physical_action="He slammed the bronze bypass lever down to the second detent.",
+        speech_or_thought='"Hold the manifold steady, Vex."',
+    )
+    assert mru_res["valid"] is True
+
+    # 3. Verify David Mamet's 3-Question Litmus Gate, Danger Signals & Silent Movie Constraint
+    mamet_ok = MametDramaticCompressionGate.evaluate_scene_unit(
+        active_characters=["enclave_15_dorian", "enclave_14_vex"],
+        who_wants_what="Dorian wants Vex to torque the secondary relief valve before the seal blows.",
+        what_happens_if_denied="Superheated brine floods the lower arboretum root-vault.",
+        why_now="The manifold pressure relief timer has ninety seconds remaining.",
+        scene_logline="Dorian and Vex race to cross-couple a ruptured coolant manifold under load.",
+        physical_actions_observed=[
+            "Dorian wedges the phosphor-bronze crowbar beneath the jammed flange.",
+            "Vex crimps the braided silver grounding strap across the live terminal.",
+        ],
+        dialogue_lines=['"Hand me the seven-millimeter socket before the gasket shears."'],
+    )
+    assert mamet_ok["passed"] is True
+
+    mamet_bad = MametDramaticCompressionGate.evaluate_scene_unit(
+        active_characters=["enclave_15_dorian", "enclave_14_vex"],
+        who_wants_what="Talk",
+        what_happens_if_denied="Nothing",
+        why_now="Now",
+        scene_logline="Dorian and Vex discuss what Silas did yesterday.",
+        physical_actions_observed=["Sit"],
+        dialogue_lines=['"As you both know, Silas built this forge three years ago."'],
+        third_party_subject_id="enclave_03_silas",
+    )
+    assert mamet_bad["passed"] is False
+    assert len(mamet_bad["danger_signals"]) == 3
+
+    # 4. Verify Hitchcock Suspense & Knox/Christie Fair-Play Camouflage
+    bomb = TemporalInformationAsymmetryEngine.build_hitchcock_bomb_ledger(
+        threat_id="threat_prank_fuse_01",
+        physical_mechanism="A 3-turn fermented spore timer ticking inside the Hearth spice rack.",
+        countdown_ticks_remaining=3,
+        mundane_foreground_activity="Ryn ladles warm root-stew while Augusta audits the salt ledger.",
+        audience_informed=True,
+        characters_informed=False,
+    )
+    assert bomb["mode"] == "HITCHCOCK_SUSPENSE"
+    assert bomb["dramatic_irony_active"] is True
+
+    fair_play = TemporalInformationAsymmetryEngine.verify_knox_christie_fair_play(
+        [
+            PlantedClueNode(
+                clue_id="clue_01",
+                revelation_id="rev_vault_harmonic",
+                sensory_object="A cracked bismuth tuning fork wedged behind the tea tin",
+                anchor_scene_id="vol1_ch07_enclave_13_ryn",
+                camouflage_tactic="BURY_IN_TEXTURE",
+                immediate_mundane_reading="Kitchen clutter on Ryn's prep shelf.",
+                retroactive_reframed_meaning="Exact 432 Hz acoustic key required to unseal the Ediacaran sluice.",
+            )
+        ]
+    )
+    assert fair_play["valid"] is True
+
+    # 5. Verify Orality (Glass / Abumrad / Carlin) & Emergent Topology (Alexander Inverted 3-Clue Rule)
+    oral = OralityAndAudioCalibrationEngine.compose_calibrated_acoustic_script(
+        chapter_id="vol1_ch14_enclave_16_elara",
+        lead_specialist_name="Elara",
+        co_specialist_name="Ryn",
+        anecdote_with_bait="Elara scraped the bioluminescent lichen from the basalt core.",
+        abumrad_gut_churn_doubt="Half of the chromatograph looked like terrestrial moss; the other half defied every amino table.",
+        carlin_conflicting_source_a="Zara's spore survey classifies the mat as dormant.",
+        carlin_conflicting_source_b="Kaio's magnetometer shows the mat pulsing in phase with the twin-sun aurora.",
+        visceral_extreme_prompt="Picture standing ankle-deep in glowing subterranean water when the whole cavern inhales.",
+        moment_of_reflection="Adaptation begins the second we stop demanding the planet speak terrestrial Latin.",
+    )
+    assert oral["gut_churn_index"] == 0.47
+    assert len(oral["blocks"]) == 4
+
+    topo_res = EmergentTopologyEngine.validate_inverted_three_clue_rule(
+        [
+            DiscoveryNode(
+                node_id="node_ediacaran_sluice",
+                title="The Subterranean Ediacaran Sluice Gate",
+                incoming_clue_vectors=[
+                    {"source": "Isla's lidar trench scan", "modality": "Geodesy"},
+                    {"source": "Zara's root-turgor gradient", "modality": "Mycology"},
+                    {"source": "Silas's slag-quench isotopic trace", "modality": "Metallurgy"},
+                ],
+            )
+        ]
+    )
+    assert topo_res["valid"] is True
+
+    toolbox = EmergentTopologyEngine.build_situation_toolbox(
+        situation_id="sit_sector4_brine_surge",
+        initial_state="High-pressure geothermal brine is rising 4 cm per minute in Sector 4.",
+        factions=[
+            FactionPowerMatrixEntry(
+                faction_id="fac_forge_purists",
+                identity="Silas & Dorian Structural Wing",
+                acute_desire="Seal the bulkhead permanently with high-entropy alloy plates",
+                method="Heavy mechanical lock-down",
+                two_adjective_personality=("unyielding", "methodical"),
+                resource_or_power="Primary arc-welding bus and crane gantry",
+            )
+        ],
+        environmental_rules=["Brine conductivity shorts unshielded solenoids above 60 C."],
+        chandler_door_kick_trigger="If specialists debate for >2 turns, the secondary sight-glass fractures.",
+        mulligan_pre_roll_dc=15,
+        focal_character_id="enclave_03_silas",
+    )
+    assert toolbox["prep_philosophy"] == "PREP_SITUATIONS_NOT_PLOTS"
+
+    # 6. Verify 3-Pass De-AI Calibration & 5-D Stop-Slop Scorer (>= 35/50)
+    raw_sloppy = (
+        "Silas realized that the pressure was rising in the realm of the forge, a rich tapestry of "
+        "unwavering resilience, a stark reminder of their struggle. Why? Because he felt nervous and "
+        "shivers down his spine as he delved into the cacophony. It was a reminder that hope endures. "
+        "Pure silence. Nothing more."
+    )
+    cal = run_three_pass_de_ai_calibration(raw_sloppy)
+    cleaned = cal["calibrated_text"]
+    assert "tapestry" not in cleaned.lower()
+    assert "delved" not in cleaned.lower()
+    assert "why? because" not in cleaned.lower()
+    assert "pure silence. nothing more." not in cleaned.lower()
+
+    gold_prose = (
+        "Silas wedged the seven-millimeter feeler gauge between the phosphor-bronze louver and the basalt casing. "
+        "The needle held steady at forty-two megapascals. Across the catwalk, Vex flicked a brass lock-washer into "
+        "her palm, grinning as the secondary turbine settled into a clean, low-frequency hum."
+    )
+    gold_score = score_stop_slop_5d(gold_prose)
+    assert gold_score["passed"] is True
+    assert gold_score["total_score"] >= 35
+
+    mgr = LocalContextAwareManager(repo_root=REPO_ROOT)
+    audit = mgr.run_judge_and_tactician_audit(
+        colony_sol=27,
+        day_phase="MIDDAY_EXPEDITION",
+        pacing_state="RISING_COMPETENCE",
+        scene_archetype="PRECISION_ENGINEERING",
+        science_vegetable="Fe-Co-Cr-Ni-Mn High-Entropy Alloy lattice stabilization",
+        tension_score=0.62,
+        candidate_prose=gold_prose,
+    )
+    assert audit["passed"] is True
+    assert audit["stop_slop_audit"]["total_score"] >= 35
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
+
 
 
 

@@ -23,6 +23,11 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
+from engine.narrative_calibration_engine import (
+    OralityAndAudioCalibrationEngine,
+    run_three_pass_de_ai_calibration,
+    score_stop_slop_5d,
+)
 from engine.reader_character_learner import (
     CHARACTER_DISPLAY_NAMES,
     create_clean_slate_17th_node,
@@ -40,12 +45,13 @@ def _utc_now_iso() -> str:
 
 
 def clean_simulated_prose(raw_text: str) -> str:
-    """Clean legacy mechanical rubric keywords from simulated Sol segments so they read like natural fiction."""
+    """Clean legacy mechanical rubric keywords and apply 3-Pass De-AI calibration to simulated Sol segments."""
     text = str(raw_text or "").strip()
     if not text:
         return ""
     for pat, repl in LEGACY_RUBRIC_LEAK_PATTERNS:
         text = pat.sub(repl, text)
+    text = run_three_pass_de_ai_calibration(text)["calibrated_text"]
     text = re.sub(r"\s{2,}", " ", text)
     return text.strip()
 
@@ -179,6 +185,18 @@ def compile_volume_one_foundation(repo_root: Path) -> list[dict[str, Any]]:
             sci_terms=sci_concepts,
         )
         word_timings = build_word_timings(enriched_paras)
+        stop_slop = score_stop_slop_5d(" ".join(enriched_paras[:3]))
+        oral_script = OralityAndAudioCalibrationEngine.compose_calibrated_acoustic_script(
+            chapter_id=f"vol1_ch{ch_num:02d}_{cid}",
+            lead_specialist_name=cname,
+            co_specialist_name="Ryn" if cname != "Ryn" else "Elara",
+            anecdote_with_bait=enriched_paras[0] if enriched_paras else title,
+            abumrad_gut_churn_doubt=mundane_beat or f"{cname} paused over the instrument housing, 47% uncertain whether the tolerance would hold.",
+            carlin_conflicting_source_a=f"{cname}'s field log records stable harmonic lock.",
+            carlin_conflicting_source_b="Elias's trench seismograph registers a three-millimeter basalt shear.",
+            visceral_extreme_prompt=f"Imagine standing at the rim of {squad.replace('_', ' ').title()} when the twin-sun flare hits the louver.",
+            moment_of_reflection=psych_rat or "Competence is what remains when the textbook runs out of margin.",
+        )
 
         chapters.append(
             {
@@ -200,6 +218,8 @@ def compile_volume_one_foundation(repo_root: Path) -> list[dict[str, Any]]:
                 "svg_blueprint": svg_plate,
                 "paragraphs": enriched_paras,
                 "word_timings": word_timings,
+                "stop_slop_audit": stop_slop,
+                "oral_acoustic_script": oral_script,
                 "estimated_duration_sec": word_timings[-1]["end"] if word_timings else 60.0,
             }
         )
@@ -325,6 +345,18 @@ def compile_volume_two_living_chronicle(repo_root: Path) -> list[dict[str, Any]]
             sci_terms=sci_concepts,
         )
         word_timings = build_word_timings(paragraphs)
+        stop_slop = score_stop_slop_5d(" ".join(paragraphs[:4]))
+        oral_script = OralityAndAudioCalibrationEngine.compose_calibrated_acoustic_script(
+            chapter_id=f"vol2_sol_{sol:03d}",
+            lead_specialist_name=focal_name,
+            co_specialist_name="Ryn",
+            anecdote_with_bait=paragraphs[0] if paragraphs else headline,
+            abumrad_gut_churn_doubt=f"During Sol {sol:03d}, {focal_name} and Ryn debated the margin tolerance before the Feast bell rang.",
+            carlin_conflicting_source_a=f"Morning shift telemetry logged by {focal_name}.",
+            carlin_conflicting_source_b=str(feast.get("culinary_science_notes") or "Evening Hearth synthesis across all sixteen specialists."),
+            visceral_extreme_prompt=f"Step onto the basalt catwalk on Sol {sol:03d} as the pressure relief louver vents.",
+            moment_of_reflection="The Rashomon baton passes cleanly because no single specialist holds the entire map alone.",
+        )
         sol_chapters.append(
             {
                 "chapter_id": f"vol2_sol_{sol:03d}",
@@ -346,6 +378,8 @@ def compile_volume_two_living_chronicle(repo_root: Path) -> list[dict[str, Any]]
                 "svg_blueprint": svg_plate,
                 "paragraphs": paragraphs,
                 "word_timings": word_timings,
+                "stop_slop_audit": stop_slop,
+                "oral_acoustic_script": oral_script,
                 "estimated_duration_sec": word_timings[-1]["end"] if word_timings else 60.0,
             }
         )

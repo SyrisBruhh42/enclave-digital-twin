@@ -27,5 +27,8 @@
   ],
   "event_type": "INCHARACTER_PSYCHOMETRIC_DRIFT_AUDITS",
   "associated_check_dc": 14,
-  "pre_roll_check_dc": 14
+  "pre_roll_check_dc": 14,
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
+  }
 }

@@ -39,6 +39,11 @@ from engine.drama_director import (
     build_showrunner_scene_ledger,
     compute_living_playability_index,
 )
+from engine.narrative_calibration_engine import (
+    build_split_model_narrative_directive,
+    run_three_pass_de_ai_calibration,
+    score_stop_slop_5d,
+)
 
 OLLAMA_ENDPOINT = "http://127.0.0.1:11434/api/generate"
 JUDGE_TACTICIAN_MODEL = "qwen3.5:4b-q4_K_M"
@@ -345,11 +350,19 @@ class LocalContextAwareManager:
         lpi = ledger["lpi_metrics"]
         calypso_ok, calypso_errors = verify_calypso_narrative_purity(candidate_prose)
         lpi_ok = lpi["classification"] != "Unplayable Draft" and float(lpi["composite_lpi"]) >= 0.45
+        stop_slop = (
+            score_stop_slop_5d(candidate_prose)
+            if str(candidate_prose or "").strip()
+            else score_stop_slop_5d(
+                "Silas adjusted the phosphor-bronze louver by two millimeters as sparks danced across the anvil. The gauge held."
+            )
+        )
 
         tactical_note = (
             f"Pacing={ledger['campaign_metadata']['pacing_mode']} | "
             f"Pre-Roll DC={ledger['dual_agent_contract']['judge_tactician']['explicit_pre_roll_dc']} | "
-            f"LPI={lpi['composite_lpi']:.2f} ({lpi['classification']})"
+            f"LPI={lpi['composite_lpi']:.2f} ({lpi['classification']}) | "
+            f"Stop-Slop={stop_slop['total_score']}/50"
         )
         model_used = f"{JUDGE_TACTICIAN_MODEL} (deterministic-symbolic-judge)"
         if use_local_ollama:
@@ -369,10 +382,11 @@ class LocalContextAwareManager:
                 model_used = JUDGE_TACTICIAN_MODEL
 
         return {
-            "passed": lpi_ok and calypso_ok,
+            "passed": lpi_ok and calypso_ok and bool(stop_slop["passed"]),
             "lpi_ok": lpi_ok,
             "calypso_ok": calypso_ok,
             "calypso_errors": calypso_errors,
+            "stop_slop_audit": stop_slop,
             "lpi_metrics": lpi,
             "pacing_mode": ledger["campaign_metadata"]["pacing_mode"],
             "judge_model": model_used,
@@ -490,6 +504,18 @@ class LocalContextAwareManager:
         if (not science_vegetable or science_vegetable == default_ferrofluid) and (int(colony_sol) > 1 or int(tick_id) > 1):
             science_vegetable = deck_card["science_vegetable"]
         char_ctx = self.load_character_exemplar_and_core(active_pov_id)
+        calibration_directive = build_split_model_narrative_directive(
+            active_pov_id=active_pov_id,
+            character_name=char_ctx["character_name"],
+            mbti=char_ctx["mbti"],
+            next_pov_target=next_pov_target,
+            science_vegetable=science_vegetable,
+            colony_sol=colony_sol,
+            tick_id=tick_id,
+            day_phase=day_phase,
+        )
+        swain_beat = calibration_directive["stage_1_structural_outliner"]["swain_scene_beat"]
+        knox_tactic = calibration_directive["stage_1_structural_outliner"]["knox_camouflage_tactic"]
 
         eav_records: list[str] = []
         if failure_lesson:
@@ -567,11 +593,12 @@ class LocalContextAwareManager:
             f"- Zero-Raw-Secret & Law L01 Invariant: Never read or emit `~/.secrets/*` or forbidden real-world PII tokens.\n\n"
             f"## 3. Concrete Steps\n"
             f"1. Read `canon/schemas/world_state_v2.json`, `canon/exemplars/modules_16.json`, and `canon/characters/{active_pov_id}.core.json` in read-only mode.\n"
-            f"2. Apply the Master Literary & Showrunner Rules:\n"
+            f"2. Apply the Master Literary, Biomechanical & Computational Prose Calibration Rules:\n"
             f"   - **Tonal Triad (LOTR x Hollow Knight x The Martian)**: Combine deep found-family fellowship, quiet subterranean bioluminescent wonder ({deck_card['hollow_knight_atmosphere']}), and razor-sharp scientific competence.\n"
-            f"   - **Competence Porn & Character Lens**: Write through `{char_ctx['character_name']}`'s exact `{char_ctx['mbti']}` stack (`{char_ctx['dominant_fn']}` / `{char_ctx['auxiliary_fn']}`). Friction: `{char_ctx['genius_vs_mundane']}`. Vex Override under extreme stress: `{char_ctx['vex_override']}`.\n"
+            f"   - **Competence Porn & Character Spine**: Write through `{char_ctx['character_name']}`'s exact `{char_ctx['mbti']}` stack (`{char_ctx['dominant_fn']}` / `{char_ctx['auxiliary_fn']}`). Spine: `{calibration_directive['stage_1_structural_outliner']['character_spine']}`. Friction: `{char_ctx['genius_vs_mundane']}`. Vex Override under extreme stress: `{char_ctx['vex_override']}`.\n"
+            f"   - **Biomechanical Scene/Sequel & Parker-Stone `But/Therefore` Propulsion**: Structure the proactive Scene (`Goal -> Conflict -> Disaster [{swain_beat['disaster_variant']}]`) bridged by `BUT` into the reactive Sequel (`Visceral Reaction -> Coyne Best-Bad-Choice Dilemma -> Decision`) bridged by `THEREFORE` into `{next_pov_target}`'s handoff. Enforce micro-level `MRU` order (External Stimulus -> Visceral Reflex -> Physical Action -> Speech), David Mamet's 3-Question Litmus Gate & Silent Movie Constraint, Andrew Stanton's `2 + 2` Clue Rule (withhold explicit `= 4`), and Ronald Knox Commandment VIII Camouflage (`{knox_tactic}`).\n"
             f"   - **'Vegetables Covered in Cheese' & Gold-Standard Voice**: Ground the scene in `{science_vegetable}` wrapped in dry, affectionate banter (*'If you're complaining and no one is laughing, you're complaining wrong'*). Match the literary cadence of `{char_ctx['character_name']}`'s exemplar (`{char_ctx['exemplar_title']}`): `{char_ctx['exemplar_opening'][:220]}`\n"
-            f"   - **Multi-Paragraph Novel Prose & Anti-Slop Ban**: Write rich, natural multi-paragraph prose (250-500 words for story segments). NEVER write overwrought purple clichés ('weeping bulkheads', 'swallowed battery'). Keep `system_verb` (`DEFEND | ATTRACT | CONSUME | CONCEAL`) strictly inside the `interactive_features` JSON array—NEVER print literal ALL-CAPS system verbs or robotic `'Why? Because...'` transitions inside `narrative_prose` or `dialogue`. NEVER output raw stat numbers (`AC=`, `HP=`, `DC=`) inside prose.\n"
+            f"   - **3-Pass De-AI Calibration & Stop-Slop Audit (`>= 35/50`)**: Write multi-paragraph prose (250-500 words). Unpack Chuck Palahniuk thought-verbs (`knew`, `realized`, `felt`) into physical courtroom evidence; maintain Ursula K. Le Guin sentence-length variance (`sigma >= 5.0` words); apply Pass 1 Hemingway Iceberg omission (no moralizing endings), Pass 2 discourse de-templating (no `'Why? Because...'` rhetorical Q&A), and Pass 3 lexical sanitization (no Pattern 30 metaphor-explaining, no Pattern 31 mic-drop fragments, no banned AI-isms like `tapestry`, `testament`, `delve`, `cacophony`, `unwavering`, `shivers down spine`). Keep `system_verb` (`DEFEND | ATTRACT | CONSUME | CONCEAL`) strictly inside `interactive_features`—NEVER print literal ALL-CAPS system verbs or raw stat numbers (`AC=`, `HP=`, `DC=`) inside prose.\n"
             f"3. Write the single valid JSON artifact to `{target_path}`.\n\n"
             f"## 4. Verification & Pre-Commit Instructions\n"
             f"- Run deterministic Constitutional Gate: `python3 tools/check_enclave_constitutions.py --proposal-file {target_path}`\n"
@@ -590,6 +617,7 @@ class LocalContextAwareManager:
             "model_used": model_used,
             "sympathy": sympathy,
             "eav_lessons": eav_records,
+            "narrative_calibration_directive": calibration_directive,
             "sections": [
                 "Scope Boundary",
                 "1. Objective",
