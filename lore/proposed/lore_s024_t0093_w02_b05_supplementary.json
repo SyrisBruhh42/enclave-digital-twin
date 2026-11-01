@@ -1,0 +1,117 @@
+{
+  "base_snapshot_tick": 89,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_08_terra"
+    ],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_08_terra",
+    "next_pov_target": "enclave_11_kenna",
+    "prev_next_pov_target": "enclave_08_terra"
+  },
+  "campaign_metadata": {
+    "session_number": 24,
+    "colony_sol": 24,
+    "tick_id": 93,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Decipher action-potential spike trains in the fungal network.",
+      "mid_term_milestone": "Stabilize valley-wide mycorrhizal supercomputer.",
+      "campaign_arc_climax": "Integrate Enclave biosphere with native ecology."
+    }
+  },
+  "active_location": {
+    "location_id": "LOC_GENESIS_GARDEN_ROOT_CATHEDRAL",
+    "macro_silhouette": "Subterranean root-cathedrals rippling with emerald and gold bioluminescent waves in total acoustic silence. The vast underground network stretches for miles, an intricate web of glowing fibers weaving through the dark earth. Gentle pulses of light trace the flow of nutrients and data across the cavernous expanse.",
+    "sensory_palette": {
+      "sight_and_color": "emerald and gold bioluminescent waves, blue-blue-green sequences",
+      "sound": "total acoustic silence",
+      "smell": "crushed basalt gravel, damp earth",
+      "tactile_temperature": "cold damp soil, heavy basalt gravel",
+      "taste_optional": "metallic tang of atmospheric ion trails"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Mycorrhizal Data Tap",
+        "affordance_description": "A copper-coiled interface piercing a massive taproot to decode fungal syntax.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Basalt Gravel Buckets",
+        "affordance_description": "Heavy buckets of crushed basalt used to manually balance greenhouse soil pH.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Bioluminescent Nodes",
+        "affordance_description": "Glowing fungal nodes that pulse with action-potential spike trains.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "TOY_FUNGAL_NETWORK",
+      "name_and_role": "Valley-wide Mycorrhizal Supercomputer",
+      "motivation_goal": "Transmit planetary ecological status to the Enclave.",
+      "consistent_method": "Pulsing action-potential spike trains in blue-blue-green sequences.",
+      "immediate_complication": "Requires constant soil pH balancing with crushed basalt.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The signal syntax becomes increasingly chaotic, risking data cascade."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Terra must decode the 'Flowing' verb sequence.",
+      "level_2_local": "The Genesis Garden relies on the planetary network.",
+      "level_3_campaign_arc": "Symbiosis with the native intelligence is necessary for survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_08_terra",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 14,
+    "prerolled_hazard_queue": [
+      4,
+      12,
+      18,
+      9,
+      2
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.7,
+    "composite_lpi": 0.6,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_engine",
+      "model": "deterministic-enclave-5section-v2",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The signal syntax is lost in static.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Terra misinterprets 'Flowing' as a threat.",
+        "below_dc_complicated_fail_forward": "The signal is recorded but Terra is exhausted.",
+        "meets_dc_clean_success": "Terra translates the spike trains and balances the soil.",
+        "dc_plus_5_or_20_extended_lore": "Terra discovers a new source-sink phosphorus routing pathway."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules_narrative_core",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "\"It's not a noun,\" Terra said, staring at the data stream. \"It's a verb.\"\n\nWillow looked over her shoulder, wiping her grease-stained hands on a frayed rag. \"What is?\"\n\n\"The signal. The blue-blue-green sequence. It doesn't mean 'Water'. It means 'Flowing'. It's an instruction.\" Terra gently adjusted the copper-coil interface piercing the massive taproot. \"We are deciphering action-potential spike trains and source-sink phosphorus routing verbs\u2014'Flowing', 'Listen', 'We Hear'\u2014across the valley-wide mycorrhizal supercomputer.\"\n\nBeneath them, the subterranean root-cathedrals rippled with emerald and gold bioluminescent waves in total acoustic silence. The sheer scale of the planetary fungal intelligence was breathtaking, a quiet testament to the enduring life of the exoplanet. The vast underground network stretched for miles, an intricate web of glowing fibers weaving through the dark earth. Gentle pulses of light traced the flow of nutrients and data across the cavernous expanse, a living ledger of the world's deep memory.\n\nYet, for all the profound scientific implications stretching across the valley, the immediate reality remained stubbornly mundane. Terra sighed, her shoulders aching from the cold damp of the soil. She decoded planetary fungal syntax across miles of forest root-nodes, and yet she still had to haul heavy buckets of crushed basalt gravel by hand to balance the greenhouse soil pH.\n\nThe friction of the task grated against her patience. The brawler within her, an uncharacteristic surge of kinetic frustration, demanded blunt, immediate action\u2014to kick over the heavy buckets, abandon the delicate soil chemistry, and shatter the quiet calm of the cavern. The extreme stress of confinement and endless manual labor pushed against her usual gentle rhythm.\n\nBut the moment passed, grounded by the steady necessity of her work and the quiet fellowship of her squad. \"If you're complaining and no one is laughing, you're complaining wrong,\" Terra murmured with dry, affectionate banter, hefting the first bucket of gravel. She poured the basalt carefully, ensuring the pH would hold steady for the seedlings above. The mundane labor anchored the grand scientific discovery, binding the Enclave to the soil they sought to understand. As the phosphorus routing stabilized and the glowing sequence shifted to a steady amber, Terra recorded the vital environmental logs, preparing the psychological and botanical implications for Kenna's upcoming review."
+    }
+  }
+}
