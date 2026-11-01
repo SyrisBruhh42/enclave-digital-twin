@@ -1,0 +1,112 @@
+{
+  "base_snapshot_tick": 98,
+  "context_manifest": {
+    "active_pov_id": "enclave_04_leo",
+    "next_pov_target": "enclave_06_zara",
+    "prev_next_pov_target": "enclave_06_zara",
+    "loaded_full_card_ids": ["enclave_04_leo"],
+    "full_cards_loaded_count": 1
+  },
+  "campaign_metadata": {
+    "session_number": 8,
+    "colony_sol": 26,
+    "tick_id": 101,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Stabilize the expanding geode using a ferrofluid collar.",
+      "mid_term_milestone": "Secure the First Forge's power grid.",
+      "campaign_arc_climax": "Master planetary resonance for the Enclave."
+    }
+  },
+  "active_location": {
+    "location_id": "the_first_forge_bedrock_foundry",
+    "macro_silhouette": "A subterranean cathedral of brass, copper, and raw stone, illuminated by the pulsing glow of captured lightning. Ironwood beams support the vault, their shadows cast long by the restless energy of the containment geodes. Workbenches overflow with meticulously categorized tools and half-finished symphonies of metal.",
+    "sensory_palette": {
+      "sight_and_color": "The blinding azure flare of ionized plasma reflecting off polished brass tools.",
+      "sound": "A low, bone-rattling resonant vibration from the geodes, punctuated by the rhythmic scrape of a metal file.",
+      "smell": "Ozone, hot oil, and the sharp tang of freshly filed brass.",
+      "tactile_temperature": "The oppressive, localized heat of a contained thermal expansion, contrasted with the cold iron of the foundry floor."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Thermally Expanding Geode",
+        "affordance_description": "A volatile crystal lattice threatening to breach its seal.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetorheological Ferrofluid Vat",
+        "affordance_description": "A suspension of nanoscale iron particles that solidifies under magnetic flux.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Brass Machine Screws",
+        "affordance_description": "Endless identical fasteners requiring tedious, manual filing.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "rosensweig_instability",
+      "name_and_role": "Ferrofluid Spike Phenomenon",
+      "motivation_goal": "To spontaneously form hexagonal corrugations when the magnetic field exceeds a threshold.",
+      "consistent_method": "Erupting in rigid, thorny crowns that compromise fluid dynamics.",
+      "immediate_complication": "Hardening prematurely before the geode can finish its thermal expansion cycle.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "The rigid seal fractures under expansion, venting gigajoules of plasma."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The geode's seal must hold against intense internal pressure.",
+      "level_2_local": "The First Forge requires a stable energy source.",
+      "level_3_campaign_arc": "Harnessing planetary anomalies is essential for survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_04_leo",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_06_zara",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [12, 5, 18, 9, 14]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.6,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The rigid ferrofluid seal fractures under thermal expansion, venting plasma.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Leo incorrectly assumes the magnetic field is too weak.",
+        "below_dc_complicated_fail_forward": "The seal holds, but damages sensitive brass instrumentation.",
+        "meets_dc_clean_success": "The fluid's viscosity modulates perfectly.",
+        "dc_plus_5_or_20_extended_lore": "Leo perfectly tunes the frequency, optimizing energy output."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules_dm_core",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "The geode was humming. It was a low, resonant vibration that rattled Leo's teeth.\n\n\"It's expanding,\" Silas said, looking at the thermal readouts. \"If it expands another millimeter, the seal will breach.\"\n\n\"Then we need a seal that breathes,\" Leo said. He kept his voice steady as he stepped over to the primary workbench. A black mirror of liquid iron erupting into crowns of magnetic thorns inside the deep bedrock foundry\u2014that was his aim. Non-Newtonian magnetorheological ferrofluid collar modulation suppressing Rosensweig spike instability around a thermally expanding dielectric containment geode. It sounded like poetry when Silas read it from the blueprints, but in practice, it was a beast fighting its cage.\n\nLeo knew exactly how to design a fully automated fabrication foundry. He could map the pneumatic tolerances in his sleep, calculate the exact tensile shear of the high-entropy alloys without a slate. Yet here he was, forced to spend three hours hand-filing his thousandth identical brass machine screw. The irony was not lost on him. He picked up his file and went back to work on the tiny brass piece. Scrape. Scrape. He held the screw up to the light, comparing the threads to the master schematic. They were nearly flawless. But nearly was a dangerous word in the Forge. His mind raced. Should he file the first one down more, or adjust the calibration on the housing entirely? Two equally elegant mechanical tolerances, each with cascading implications for the magnetic field geometry. The decisive commander froze, caught in a sudden, paralyzing loop of indecisive weight.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Zara's voice cut through his thoughts, her soft footfalls barely making a sound on the iron grate.\n\nLeo blinked, the spell of indecision shattering. He set the file down on the workbench with a heavy sigh, running a calloused hand over his face. He glanced over to see Zara standing in the dim light of the foundry. She was carrying a satchel that smelled faintly of the deep aquifer, completely unbothered by the humming geode behind him. \"I wasn't complaining out loud, Zara,\" he said.\n\n\"Your posture was complaining,\" she said, tilting her head. \"You look like you're trying to debate a piece of metal into submission.\"\n\n\"It's not listening,\" Leo chuckled, a low, easy sound. He gestured at the vat of dancing black spikes next to the geode. \"I'm trying to build a collar for this crystal, but if I don't get the frequency right, the whole thing shatters. And these screws are mocking me.\"\n\nZara stepped closer, her eyes locked on the rhythmic, spiky dance of the ferrofluid. \"Looks like it's trying to talk to you. The things in the dark usually do, if you know how to listen.\""
+    }
+  }
+}
