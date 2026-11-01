@@ -1,7 +1,9 @@
 {
   "base_snapshot_tick": 105,
   "context_manifest": {
-    "loaded_full_card_ids": ["enclave_09_orion"],
+    "loaded_full_card_ids": [
+      "enclave_09_orion"
+    ],
     "full_cards_loaded_count": 1,
     "active_pov_id": "enclave_09_orion",
     "next_pov_target": "enclave_14_vex",
@@ -73,7 +75,13 @@
       }
     ],
     "strain_accumulated_upward": 0,
-    "prerolled_hazard_queue": [7, 12, 4, 18, 9]
+    "prerolled_hazard_queue": [
+      7,
+      12,
+      4,
+      18,
+      9
+    ]
   },
   "lpi_metrics": {
     "relational_tension_density": 0.4,
@@ -102,7 +110,7 @@
       "temperature": 0.7,
       "calypso_zero_raw_stats": true,
       "prosodic_micro_pauses_enabled": false,
-      "agency_handoff_prompt": "Orion didn't see a sealant; he saw a dancer. He had taken a beaker of Leo's ferrofluid to the Simulacrum. He placed it over a grid of electromagnets hooked up to his synthesizer. He played a chord, C-Major, and the black fluid leaped, forming a perfect, spiky crown. He shifted to a minor key. The fluid collapsed, turning into a sluggish, rolling boil. It responded to the frequency. It was visualizing the sound.\n\nHe began to play in earnest—a complex, weaving melody. The fluid danced, splitting into droplets that orbited each other, merging and separating in perfect time with the music. It was a physical manifestation of the Enclave's harmony—individual parts coming together, breaking apart, and finding each other again. He hit the final note. The fluid froze in a breathtaking, impossible spire, defying gravity.\n\n'It's us,' Orion said, stepping back from the console, his hands still hovering over the keys as if afraid to break the spell. 'Messy, sharp, and magnetic.' He was sculpting levitating magnetohydrodynamic cymatic spires from harmonic chords, yet he knew, with sudden, painful clarity, that he would probably get emotionally overwhelmed by a particularly symmetrical potato at dinner tonight. The contrast between his absolute control here and his vulnerability out there was staggering.\n\n'If you're complaining and no one is laughing, you're complaining wrong,' Vex remarked from the doorway, leaning against the cold bedrock frame. Orion glanced back over his shoulder. He checked the datastream flowing into the nearby terminal. Isla's work. Femtosecond nanostructured birefringent 5D optical storage encoding terabytes of magnetospheric and mycelial telemetry into eternal fused-quartz lattices. A fingernail-sized crystal drinking violet laser light at the heart of the darkened Simulacrum chamber. His art was temporary, held aloft by electricity and sound. Hers was forever. He packed up his synthesizer, preparing to find Vex. The astronomer would appreciate the delicate, fragile geometry of what he had just built."
+      "agency_handoff_prompt": "Orion didn't see a sealant; he saw a dancer. He had taken a beaker of Leo's ferrofluid to the Simulacrum. He placed it over a grid of electromagnets hooked up to his synthesizer. He played a chord, C-Major, and the black fluid leaped, forming a perfect, spiky crown. He shifted to a minor key. The fluid collapsed, turning into a sluggish, rolling boil. It responded to the frequency. It was visualizing the sound.\n\nHe began to play in earnest\u2014a complex, weaving melody. The fluid danced, splitting into droplets that orbited each other, merging and separating in perfect time with the music. It was a physical manifestation of the Enclave's harmony\u2014individual parts coming together, breaking apart, and finding each other again. He hit the final note. The fluid froze in a breathtaking, impossible spire, defying gravity.\n\n'It's us,' Orion said, stepping back from the console, his hands still hovering over the keys as if afraid to break the spell. 'Messy, sharp, and magnetic.' He was sculpting levitating magnetohydrodynamic cymatic spires from harmonic chords, yet he knew, with sudden, painful clarity, that he would probably get emotionally overwhelmed by a particularly symmetrical potato at dinner tonight. The contrast between his absolute control here and his vulnerability out there was staggering.\n\n'If you're complaining and no one is laughing, you're complaining wrong,' Vex remarked from the doorway, leaning against the cold bedrock frame. Orion glanced back over his shoulder. He checked the datastream flowing into the nearby terminal. Isla's work. Femtosecond nanostructured birefringent 5D optical storage encoding terabytes of magnetospheric and mycelial telemetry into eternal fused-quartz lattices. A fingernail-sized crystal drinking violet laser light at the heart of the darkened Simulacrum chamber. His art was temporary, held aloft by electricity and sound. Hers was forever. He packed up his synthesizer, preparing to find Vex. The astronomer would appreciate the delicate, fragile geometry of what he had just built."
     }
   }
 }
