@@ -76,13 +76,19 @@
       }
     ],
     "strain_accumulated_upward": 2,
-    "prerolled_hazard_queue": [4, 15, 19, 8, 11]
+    "prerolled_hazard_queue": [
+      4,
+      15,
+      19,
+      8,
+      11
+    ]
   },
   "lpi_metrics": {
     "relational_tension_density": 0.85,
-    "motivational_vector_saturation": 0.90,
-    "unresolved_conflict_ratio": 0.70,
-    "temporal_horizon_immediacy": 0.80,
+    "motivational_vector_saturation": 0.9,
+    "unresolved_conflict_ratio": 0.7,
+    "temporal_horizon_immediacy": 0.8,
     "composite_lpi": 0.82,
     "classification": "Campaign-Ready"
   },
@@ -105,7 +111,7 @@
       "temperature": 0.8,
       "calypso_zero_raw_stats": true,
       "prosodic_micro_pauses_enabled": true,
-      "agency_handoff_prompt": "Vex sat on the roof, legs dangling over the edge. To the east, the Red Giant was rising, a bloated, angry eye that bathed the world in crimson. To the west, the Blue Dwarf was setting, a piercing diamond that cast double razor-sharp shadows across the hand-built brass observatory roof.\n\nThe bruised violet twilight above him was tearing itself apart. The relativistic magnetohydrodynamic shear between the Red Giant's infrared coronal mass ejections and the Blue Dwarf's compressed ultraviolet bow shock was beautiful, if you didn't think about the radiation. He tapped a brass slide rule against his knee, tracking the invisible tides. He could calculate the exact moment the magnetic flux would try to fry the Hub's circuits, though a part of him—the part that always surfaced when the stress spiked and his Cancer override kicked in—just wanted to make sure everyone inside was safe and eating Ryn's stew. He was fiercely guarding the family's emotional core, even if he masked it with a smirk.\n\n\"If that Red Giant sneezes,\" Vex muttered to himself, \"we're toast. If the Blue Dwarf blinks, we freeze. And here we are, sitting in the middle, eating soup and fixing pipes.\"\n\nHe watched a particularly violent pulse of infrared radiation arc toward the Enclave, calculating the relativistic magnetohydrodynamic tides between a Red Giant and a Blue Dwarf while dangling his boots off the roof and complaining about stirring stew at 40 RPM. He needed to subtly weave the verbs to defend the delicate sensor array, attract the right ultraviolet telemetry, and conceal the core nodes before the next surge hit. He turned his gaze toward the hatch, knowing Terra was on her way up. 'If you're complaining and no one is laughing, you're complaining wrong,' he thought, waiting for her to emerge."
+      "agency_handoff_prompt": "Vex sat on the roof, legs dangling over the edge. To the east, the Red Giant was rising, a bloated, angry eye that bathed the world in crimson. To the west, the Blue Dwarf was setting, a piercing diamond that cast double razor-sharp shadows across the hand-built brass observatory roof.\n\nThe bruised violet twilight above him was tearing itself apart. The relativistic magnetohydrodynamic shear between the Red Giant's infrared coronal mass ejections and the Blue Dwarf's compressed ultraviolet bow shock was beautiful, if you didn't think about the radiation. He tapped a brass slide rule against his knee, tracking the invisible tides. He could calculate the exact moment the magnetic flux would try to fry the Hub's circuits, though a part of him\u2014the part that always surfaced when the stress spiked and his Cancer override kicked in\u2014just wanted to make sure everyone inside was safe and eating Ryn's stew. He was fiercely guarding the family's emotional core, even if he masked it with a smirk.\n\n\"If that Red Giant sneezes,\" Vex muttered to himself, \"we're toast. If the Blue Dwarf blinks, we freeze. And here we are, sitting in the middle, eating soup and fixing pipes.\"\n\nHe watched a particularly violent pulse of infrared radiation arc toward the Enclave, calculating the relativistic magnetohydrodynamic tides between a Red Giant and a Blue Dwarf while dangling his boots off the roof and complaining about stirring stew at 40 RPM. He needed to subtly weave the verbs to defend the delicate sensor array, attract the right ultraviolet telemetry, and conceal the core nodes before the next surge hit. He turned his gaze toward the hatch, knowing Terra was on her way up. 'If you're complaining and no one is laughing, you're complaining wrong,' he thought, waiting for her to emerge."
     }
   }
 }
