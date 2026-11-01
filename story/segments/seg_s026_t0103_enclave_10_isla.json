@@ -1,0 +1,48 @@
+{
+  "segment_id": "seg_s026_t0103_enclave_10_isla",
+  "event_id": "seg_s026_t0103_enclave_10_isla",
+  "event_type": "POV_SCENE_SEGMENT",
+  "tick_id": 103,
+  "colony_sol": 26,
+  "day_phase": "DUSK_CRAFT",
+  "world_timestamp_iso": "2026-11-19T18:00:00Z",
+  "base_snapshot_tick": 99,
+  "active_pov_id": "enclave_10_isla",
+  "next_pov_target": "enclave_15_dorian",
+  "prev_next_pov_target": "enclave_10_isla",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "location": "The_Simulacrum",
+  "actors": [
+    "enclave_10_isla",
+    "enclave_15_dorian"
+  ],
+  "summary": "Isla translates subterranean telemetry into the eternal quartz lattice, battling mundane frustration and a momentary, reckless override before passing the data to Dorian.",
+  "importance": 0.8,
+  "novelty_score": 0.7,
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "science_vegetable": "Magneto-acoustic cymatics coupling polyphonic synthesizer harmonics into an electromagnet matrix to suspend ferrofluid droplets in gravity-defying resonant spires.",
+  "text": "Isla didn't trust hard drives. They spun. They failed. They rusted.\n\nCrystals were forever.\n\nShe sat in the center of the Simulacrum, the damp brass slate Zara had retrieved resting beside a beaker of black ferrofluid. The air in the chamber was heavy with the smell of ozone and the quiet, persistent hum of the electromagnetic grid. Above the grid, orbiting droplets of liquid iron danced in the dark, responding to the slow, mournful resonance of a minor-key cello chord played through the acoustic transducers. It was a flawless demonstration of magneto-acoustic cymatics, coupling polyphonic synthesizer harmonics into an electromagnet matrix to suspend ferrofluid droplets in gravity-defying resonant spires.\n\nIt was breathtaking, yet Isla's attention was fractured. She was simultaneously encoding terabytes per second of five-dimensional holographic storm telemetry into nanostructured quartz—capturing the abyssal syntax—yet her current physical reality demanded she hand-polish the projector's secondary optical lenses with a piece of chamois leather until her fingers cramped. The dull ache radiating up her wrist was infuriating.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Dorian's dry voice drifted from the archway. He stood in the dim light, watching the iron droplets orbit each other.\n\n\"I am not complaining,\" Isla replied, not looking up from the lens. Her voice was crisp, axiomatically structured. \"I am merely observing the friction between designing a topological state-space architecture and the fact that a smudge of oil on this glass will cause a 0.04 percent refraction error in the telemetry.\"\n\nShe rubbed the lens harder. The cramp intensified, and a sudden, sharp spike of stress hit her. The data stream was accelerating; the cephalopod's syntax was infinitely more complex than anticipated. The pressure triggered a reckless impulse, her Sagittarius override stripping away her usual cautious, methodical archiving. Instead of carefully staging the data transfer, she decided to bet the entire optical lattice on an untested pulse.\n\n\"I'm bypassing the buffer,\" Isla announced, her hands flying over the interface.\n\n\"That's a significant risk,\" Dorian cautioned, stepping closer. \"The lattice could shatter.\"\n\n\"Calculated risk,\" Isla shot back. \"The cymatic resonance will stabilize the thermal expansion if I align the pulse with the cello’s downbeat.\"\n\nShe initiated the transfer. The quartz flared blindingly violet, drinking the entirety of the telemetry in one ferocious gulp. The ferrofluid spires shuddered, spiked dangerously, and then settled back into their elegant, floating dance.\n\nIsla exhaled, the tension bleeding out of her shoulders. She wiped a smudge off the brass slate with the chamois and held it out. \"The syntax is encoded. The crystals hold it now.\" She offered the physical baton to Dorian. \"Take this to the Living Atlas. We have a subterranean dictionary to write.\"",
+  "interactive_features": [
+    {
+      "feature_name": "Secondary Optical Lenses",
+      "affordance_description": "Hand-polishing precision optical lenses with chamois leather.",
+      "system_verb": "DEFEND",
+      "associated_check_dc": 14
+    },
+    {
+      "feature_name": "Magneto-acoustic Spire",
+      "affordance_description": "Orbiting droplets of liquid iron dancing in the dark to a minor-key cello chord.",
+      "system_verb": "ATTRACT",
+      "associated_check_dc": 14
+    },
+    {
+      "feature_name": "Quartz Lattice",
+      "affordance_description": "Nanostructured quartz encoding terabytes of five-dimensional holographic storm telemetry.",
+      "system_verb": "CONSUME",
+      "associated_check_dc": 14
+    }
+  ]
+}
