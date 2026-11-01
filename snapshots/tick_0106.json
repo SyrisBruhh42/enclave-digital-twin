@@ -1421,24 +1421,11 @@
     }
   },
   "applied_event_ids": [
-    "evt_s027_t0106_expedition_consequence"
+    "evt_s027_t0106_expedition_consequence",
+    "evt_s027_t0106_shadow_prank"
   ],
-  "total_events_through_tick": 129,
+  "total_events_through_tick": 130,
   "recent_segments": [
-    {
-      "segment_id": "seg_s023_t0090_enclave_07_willow",
-      "sol_id": 23,
-      "colony_sol": 23,
-      "tick_id": 90,
-      "active_pov_id": "enclave_07_willow",
-      "next_pov_target": "enclave_09_orion",
-      "location_id": "LOC_GENESIS_GARDEN",
-      "time_of_day": "MIDDAY_EXPEDITION",
-      "day_phase": "MIDDAY_EXPEDITION",
-      "title": "Sol 023 \u2022 MIDDAY_EXPEDITION (enclave_07_willow)",
-      "opening_excerpt": "Under the microscope, the mushroom didn't look like a plant. It looked like a city. Willow adjusted the focus. The hyphae\u2014the thread-like roots\u2014were pulsing with light. Calcium ions flowing through the cell walls, carryi",
-      "excerpt": "Under the microscope, the mushroom didn't look like a plant. It looked like a city. Willow adjusted the focus. The hyphae\u2014the thread-like roots\u2014were pulsing with light. Calcium ions flowing through the cell walls, carryi"
-    },
     {
       "segment_id": "seg_s023_t0091_enclave_09_orion",
       "sol_id": 23,
@@ -1592,6 +1579,20 @@
       "title": "Sol 027 \u2022 DAWN_SHIFT (enclave_02_jane)",
       "opening_excerpt": "The wind outside was a banshee, tearing at the reinforced shutters of the Stormbreaker bunker. Jane sat before the brass difference engine, her eyes fixed on the emerald phase-space butterfly wings rotating across the CR",
       "excerpt": "The wind outside was a banshee, tearing at the reinforced shutters of the Stormbreaker bunker. Jane sat before the brass difference engine, her eyes fixed on the emerald phase-space butterfly wings rotating across the CR"
+    },
+    {
+      "segment_id": "seg_s027_t0106_enclave_07_willow",
+      "sol_id": 27,
+      "colony_sol": 27,
+      "tick_id": 106,
+      "active_pov_id": "enclave_07_willow",
+      "next_pov_target": "enclave_09_orion",
+      "location_id": "The_Hub_Hearth",
+      "time_of_day": "MIDDAY_EXPEDITION",
+      "day_phase": "MIDDAY_EXPEDITION",
+      "title": "Sol 027 \u2022 MIDDAY_EXPEDITION (enclave_07_willow)",
+      "opening_excerpt": "Under the microscope, the mushroom didn't look like a plant. It looked like a city.\n\nWillow adjusted the focus. The hyphae\u2014the thread-like roots\u2014were pulsing with an emerald, bioluminescent glow. Calcium ions flowing thr",
+      "excerpt": "Under the microscope, the mushroom didn't look like a plant. It looked like a city.\n\nWillow adjusted the focus. The hyphae\u2014the thread-like roots\u2014were pulsing with an emerald, bioluminescent glow. Calcium ions flowing thr"
     }
   ],
   "available_sols": [
