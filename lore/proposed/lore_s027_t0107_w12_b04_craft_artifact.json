@@ -1,0 +1,120 @@
+{
+  "base_snapshot_tick": 103,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_09_orion"
+    ],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_09_orion",
+    "next_pov_target": "enclave_14_vex",
+    "prev_next_pov_target": "enclave_09_orion"
+  },
+  "campaign_metadata": {
+    "session_number": 27,
+    "colony_sol": 27,
+    "tick_id": 107,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Encode magnetospheric and mycelial telemetry into fused-quartz lattices.",
+      "mid_term_milestone": "Complete the 5D optical storage array for the Simulacrum.",
+      "campaign_arc_climax": "Safeguard the Enclave's collected knowledge against the upcoming geomagnetic shear."
+    }
+  },
+  "active_location": {
+    "location_id": "The Simulacrum - Optical Core",
+    "macro_silhouette": "A darkened chamber humming with power. A fingernail-sized crystal drinking violet laser light at the heart of the darkened Simulacrum chamber.",
+    "sensory_palette": {
+      "sight_and_color": "Piercing violet laser light, translucent fused-quartz, and deep ambient shadows.",
+      "sound": "The high-pitched whine of femtosecond lasers and the low thrum of the electromagnets.",
+      "smell": "Ozone from the lasers and the metallic tang of ferrofluid.",
+      "tactile_temperature": "Cool, dry air with localized heat radiating from the optical array."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Fused-Quartz Lattice",
+        "affordance_description": "Can store 5D optical data.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Femtosecond Laser Emitter",
+        "affordance_description": "Used to etch data into the quartz.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Magnetohydrodynamic Cymatic Spire",
+        "affordance_description": "Can be shaped by acoustic frequencies.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "femto_laser_array",
+      "name_and_role": "Femtosecond Laser Array",
+      "motivation_goal": "Etch high-density telemetry data.",
+      "consistent_method": "Fires ultra-short pulses to alter the refractive index of quartz.",
+      "immediate_complication": "Requires absolute acoustic and magnetic stability to prevent data corruption.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Will shatter the quartz lattice if alignment drifts."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Sculpt the cymatic spire to stabilize the magnetic field.",
+      "level_2_local": "Ensure the 5D optical storage correctly encodes the telemetry.",
+      "level_3_campaign_arc": "Build the Enclave's permanent data repository."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_09_orion",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_14_vex",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 10,
+    "prerolled_hazard_queue": [
+      14,
+      9,
+      17,
+      12,
+      19
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.75,
+    "motivational_vector_saturation": 0.85,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.725,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_llm",
+      "model": "jules_v2",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The laser misaligns, corrupting the 5D data and shattering the quartz.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Orion plays the wrong chord, causing the ferrofluid spire to collapse and the laser to shatter the crystal.",
+        "below_dc_complicated_fail_forward": "The data is encoded, but the acoustic resonance causes micro-fractures in the quartz.",
+        "meets_dc_clean_success": "The telemetry is perfectly etched into the eternal lattice.",
+        "dc_plus_5_or_20_extended_lore": "Orion's harmony reveals a hidden pattern in the mycelial data stream."
+      }
+    },
+    "master_narrator": {
+      "executor": "local_llm",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Orion didn't see a sealant; he saw a dancer.\n\nHe had taken a beaker of Leo's ferrofluid to the Simulacrum. He placed it over a grid of electromagnets hooked up to his synthesizer. The darkened chamber was quiet, save for the hum of power. At the center of it all was a fingernail-sized crystal drinking violet laser light—femtosecond nanostructured birefringent 5D optical storage encoding terabytes of magnetospheric and mycelial telemetry into eternal fused-quartz lattices. It was a masterpiece of permanence, a bulwark against the entropy of the planet.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Orion whispered, a wry echo of Leo's pragmatism, as he adjusted the oscillators. He struck a minor seventh on the keys. The black ferrofluid leaped, forming a levitating magnetohydrodynamic cymatic spire from the harmonic chords. The shape was intricate, a perfect physical manifestation of the magnetic field required to stabilize the quartz etching process. He was sculpting the very environment the laser needed to operate.\n\nYet, even as he achieved a micron-perfect standing wave, his mind drifted to the evening meal. Ryn had served roasted tubers, and one particular potato had been so geometrically flawless, so tragically beautiful in its temporary existence, that Orion had almost wept before eating it. The emotional contrast was dizzying. He was preserving terabytes of planetary data for eternity, but he couldn't save a potato from being lunch. His Fi-dominant core ached with the absurdity of it.\n\nThe laser whined, a high-pitched spike that made his teeth ache. The telemetry feed from the Blue Dwarf was erratic, and the laser was struggling to encode the shifting magnetospheric data. The ferrofluid spire shivered. His Scorpio Vex Override flared instantly, an icy grip on his normally fluid empathy. The gentle mediator vanished.\n\n\"The telemetry is garbage!\" Orion snapped, his voice sharp and unsparing, echoing in the chamber. He didn't turn around, but he knew Vex was in the comms channel. \"The Red Giant's coronal mass ejection is creating a relativistic shear, and you're feeding me unfiltered noise! I need clean data, Vex, or this crystal shatters and takes the Simulacrum with it!\" He hammered a harsh, dissonant chord, forcing the ferrofluid into a rigid, defensive block to shield the quartz, waiting for Vex to respond with better numbers."
+    }
+  }
+}
