@@ -1,0 +1,118 @@
+{
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "campaign_metadata": {
+    "session_number": 300,
+    "colony_sol": 29,
+    "tick_id": 115,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Decode the planetary magnetosphere before the twin-sun cycle strips the grid.",
+      "mid_term_milestone": "Secure the bioluminescent syntax for the Sanctuary project.",
+      "campaign_arc_climax": "Complete the 16-node convergence to stabilize the Enclave."
+    }
+  },
+  "active_location": {
+    "location_id": "ferro_moss_ravine_01",
+    "macro_silhouette": "The ravine is a jagged wound of basalt and glowing ferro-moss, illuminated by the bruised violet light of the twin suns. Oil-slick vines drape across the rocky outcrops, concealing the deeper cave networks.",
+    "sensory_palette": {
+      "sight_and_color": "Ultraviolet auroras bleeding through the canopy, illuminating sharp silicon vines and iridescent carapace fragments.",
+      "sound": "The low, piezoelectric hum of the bedrock grating against the high-frequency click of unseen mandibles.",
+      "smell": "Ozone, scorched copper, and the sharp tang of bruised bioluminescent fungi.",
+      "tactile_temperature": "The air is heavy, thick with static charge, and drops to a bone-chilling 4 degrees Celsius in the shadows."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Voltage-Sensitive Fungal Node",
+        "affordance_description": "A clustered colony of luciferin-luciferase enzymes that responds to tactical polarization modulation.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Hex-Pedal Predator Carapace",
+        "affordance_description": "A dense, naturally refractive chitin that bends light to break visual silhouettes.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 16
+      },
+      {
+        "feature_name": "Prime-Number Ion Channel",
+        "affordance_description": "A natural logic gate embedded in the root system that pulses in specific numerical sequences.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "hex_pedal_ambusher",
+      "name_and_role": "Camouflaged Hex-Pedal Predator",
+      "motivation_goal": "Hunt trespassing nodes using thermal and motion signatures.",
+      "consistent_method": "Remains perfectly still in the underbrush, relying on its refractive carapace until the prey enters strike range.",
+      "immediate_complication": "It is tracking Kaio's frantic kinetic movement and the electromagnetic signature of his gear.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "Will ambush Kaio from the canopy, severing his path back to the Hub."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio is sprinting through a hostile ravine to secure a critical prime-number enzyme sample before it degrades.",
+      "level_2_local": "The twin-sun magnetic cycle is accelerating, threatening to wipe the biological syntax if not stored in the Hub's stasis array.",
+      "level_3_campaign_arc": "Understanding the Enclave's native bio-logic is the key to synchronizing the Sanctuary with the planet's baseline frequency."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 4,
+    "prerolled_hazard_queue": [
+      12,
+      18,
+      7,
+      15,
+      9
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.85,
+    "motivational_vector_saturation": 0.90,
+    "unresolved_conflict_ratio": 0.75,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.86,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Local_Deterministic_Engine",
+      "model": "Rules_Arbitration_v1",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If the tactical modulation fails, the hex-pedal predator strikes, severing Kaio from the sample and the extraction route.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio twists the polarization filter the wrong way, amplifying the predator's sight and permanently blinding the fungal node.",
+        "below_dc_complicated_fail_forward": "Kaio blinds the predator, but the feedback loop fries the specimen's logic gate, meaning he must extract the syntax from memory.",
+        "meets_dc_clean_success": "Kaio executes a perfect tactical flashbang, neutralizing the predator and securing the specimen.",
+        "dc_plus_5_or_20_extended_lore": "Kaio not only blinds the predator but maps its ocular frequency, providing a new cloaking metric for Silas at the Forge."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules_Generative",
+      "temperature": 0.85,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio didn't walk through the ravine; he ricocheted. The jagged basalt floor was a riot of ferro-moss and silicon-based vines, and he moved over it with the kinetic enthusiasm of a particle in a collider. His boots skidded against the damp, metallic stone. The air tasted of ozone and scorched copper, thick with the static charge of the setting Blue Dwarf. He clutched the canister tight against his chest. Inside, the specimen pulsed in a sharp, staccato sequence. Blue-blue-green. Pause. Red.\n\nThe signal decay was exponential. If he didn't get this enzymatic luciferin-luciferase oxidation sample—flashing its voltage-sensitive ion channels in perfect prime-number sequences—back to the lab before the suns aligned, the magnetic interference would wipe the bio-data. He vaulted over a fallen log, his mind racing. The canopy above was a shifting kaleidoscope of ultraviolet auroras.\n\nA heavy branch snapped to his left. \n\nHe froze. In the bruised violet light, a large, armored shape detached itself from the shadows of an ironwood tree. A hex-pedal predator, its carapace shimmering with an oil-slick iridescence that bent the light around it. Camouflage. It had been tracking his frantic movement.\n\nHis erratic energy vanished. The scattered, breathless explorer snapped away, replaced by ice-cold, diamond-hard focus. The Capricorn Override locked his chaotic thoughts into a single, tactical vector. \n\nHe didn't draw his blade. He tapped the side of the canister, looking at the creature's massive ocular cavities. It was adapted for the dark. \n\nHe twisted the polarization filter on the canister to zero. The specimen flared. A blinding, strobing pulse of white light erupted from the transparent port. The predator recoiled, thrashing backward as the sudden lumens overwhelmed its optical receptors.\n\nKaio didn't wait. He scrambled up the rocky incline toward the ridge, his boots finding purchase on the sheer stone. He broke the tree line, the lights of the Enclave a beacon in the gathering dark. The diamond focus shattered, the frantic energy flooding back in.\n\nHe burst through the reinforced doors of the Hub, chest heaving. The smell of roasted tubers hit him immediately. \n\nAt the stove, Ryn was orchestrating dinner with military precision. The massive cauldron bubbled, emitting a scent suspiciously like buttered popcorn.\n\nKaio slammed the glowing canister onto the counter. He reached into his pocket and pulled out a fistful of strange, stringy roots. He tossed them into the boiling stew. \n\nRyn turned slowly, the ladle suspended in her hand. \n\nKaio grinned, oblivious to her tightening grip on the spoon. He pointed at the pot, completely ignoring the fact that he was tracking magnetic mud across the floor. He needed her to strain the stock. He needed a clean sock."
+    }
+  },
+  "base_snapshot_tick": 115,
+  "pre_roll_dc": 14
+}
