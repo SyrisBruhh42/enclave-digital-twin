@@ -1,0 +1,120 @@
+{
+  "base_snapshot_tick": 94,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "active_pov_id": "enclave_01_hector",
+    "next_pov_target": "enclave_05_kaio",
+    "prev_next_pov_target": "enclave_05_kaio"
+  },
+  "campaign_metadata": {
+    "session_number": 25,
+    "colony_sol": 25,
+    "tick_id": 98,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Lock the chaotic lightning onto the collector rods.",
+      "mid_term_milestone": "Stabilize the Enclave's power grid.",
+      "campaign_arc_climax": "Master the exoplanet's wild magnetosphere."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Stormbreaker_Spire",
+    "macro_silhouette": "The Stormbreaker tower pierced the violent purple sky, a copper needle threading the exoplanet's electric wrath. Below, the Enclave hummed, a fragile sanctuary against the storm.",
+    "sensory_palette": {
+      "sight_and_color": "Blinding violet arcs flashing across blackened copper rigging.",
+      "sound": "Deafening thunderclaps masking the shriek of wind tearing at the safety harnesses.",
+      "smell": "Sharp ozone and scorched brass.",
+      "tactile_temperature": "Freezing sleet driven sideways like needles against exposed skin.",
+      "taste_optional": "The metallic tang of static electricity."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetohydrodynamic Grounding Shunt",
+        "affordance_description": "Can be calibrated to channel excess voltage safely into the bedrock.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Lorenz strange-attractor bifurcation targeting system",
+        "affordance_description": "Can be aligned to fire pre-strike ionization pulses, capturing gigajoule lightning strikes.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 16
+      },
+      {
+        "feature_name": "Dielectric Capacitor Banks",
+        "affordance_description": "Absorbs and stores the harvested energy, glowing with contained plasma.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "The_Ion_Storm",
+      "name_and_role": "Chaotic Magnetospheric Superstorm",
+      "motivation_goal": "Overload and shatter the Enclave's fragile grid.",
+      "consistent_method": "Unpredictable gigajoule strikes and multi-tesla shear forces.",
+      "immediate_complication": "A sudden half-degree asymmetrical shift in the primary collector rod coupling.",
+      "pressure_index": 9,
+      "uninterrupted_escalation": "The upper capacitor bank will arc, blowing out the shunt cable and plunging the hub into darkness."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The primary collector rod is misaligned and requires immediate physical intervention.",
+      "level_2_local": "The Enclave desperately needs this storm's energy to recharge depleted reserves.",
+      "level_3_campaign_arc": "Harnessing the magnetosphere is key to long-term survival and the Stormbreaker's grand project."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      7,
+      12,
+      19,
+      4,
+      15
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.9,
+    "unresolved_conflict_ratio": 0.7,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.85,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Aegis_Internal",
+      "model": "Tactical_V4",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The shunt cable arcs and vaporizes, destroying the capacitor and risking Hector's life.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Hector misjudges the shear force, slipping and dropping his torque wrench into the abyss while the capacitor shorts.",
+        "below_dc_complicated_fail_forward": "He forces the coupling, but the asymmetrical strain cracks the dielectric casing, requiring immediate secondary repairs.",
+        "meets_dc_clean_success": "He perfectly aligns the half-degree coupling just as the millisecond pre-strike ionization pulse fires, capturing the strike cleanly.",
+        "dc_plus_5_or_20_extended_lore": "Hector locks the rod and intuitively recalibrates the shunt mid-strike, discovering a harmonic resonance that doubles the storage efficiency."
+      }
+    },
+    "master_narrator": {
+      "executor": "Showrunner_Core",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Hector swung out over fifty meters of nothing but screaming wind and sleet, his carabiner snapping against the brass rigging. \"It's not just a storm!\" he yelled over the deafening gale, grinning like a madman. \"It's a battery! A big, angry, floating battery!\"\n\nHe hammered his boots against the slick copper of the Stormbreaker tower. The real-time Lorenz strange-attractor bifurcation targeting system hummed against his chest rig, counting down to fire its millisecond pre-strike ionization pulses. They needed to lock chaotic lightning onto the collector rods at ninety-eight percent efficiency, or the whole array would fry. Below him, in the depths of the bunker, he imagined emerald phase-space butterfly wings rotating across brass-framed CRT monitors, tracking his madness.\n\nBut the readout blinked a warning. A half-degree asymmetrical cable coupling. That was all it took. \n\nSuddenly, the adrenaline froze in his veins. The gigajoule strikes didn't bother him, but that single, misaligned rivet? Virgo perfectionism clawed at his chest. He hung there, staring at the microscopic imperfection, paralyzing over it while the sky boiled above him.\n\n\"Hector!\" Kaio's voice crackled over the comms, cutting through the static and the fear. \"If you're complaining and no one is laughing, you're complaining wrong! Get off the spire and let me tag in!\"\n\nHector blinked, the spell breaking. He laughed, a short, sharp bark against the thunder. He couldn't let Kaio take the hit. He adjusted the coupling, feeling the heavy, satisfying click as it locked. The ionization pulse fired. The world turned blinding, violent violet as they captured the sky."
+    }
+  }
+}
