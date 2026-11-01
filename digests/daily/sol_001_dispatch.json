@@ -1,8 +1,8 @@
 {
   "dispatch_id": "dispatch_sol_001",
   "colony_sol": 1,
-  "headline": "SOL 1 EVENING DISPATCH: The Schrodinger Harvest Accord: Three Squads, One Batch (Kp_exo 5.3)",
-  "anchor_intro": "[VEX]: Good evening, Enclave! Live from the crystal-slate transmitter above Ryn's hearth at the close of Sol 1's Feast\u2014the binary suns have dipped, Kp_exo is humming at 5.3, and nobody vaporized their eyebrows today! [DORIAN]: And a warm hearthside greeting from your Living Chronicler. Tonight's scroll gives equal measure to Dawn's first hammer-strike, Midday's ridge expedition, Dusk's fine craft, and our communal Feast.",
+  "headline": "SOL 1 EVENING DISPATCH: The Schrodinger Harvest Accord: Three Squads, One Batch (Kp_exo 6.2)",
+  "anchor_intro": "[VEX]: Good evening, Enclave! Live from the crystal-slate transmitter above Ryn's hearth at the close of Sol 1's Feast\u2014the binary suns have dipped, Kp_exo is humming at 6.2, and nobody vaporized their eyebrows today! [DORIAN]: And a warm hearthside greeting from your Living Chronicler. Tonight's scroll gives equal measure to Dawn's first hammer-strike, Midday's ridge expedition, Dusk's fine craft, and our communal Feast.",
   "lead_stories": [
     {
       "story_id": "story_schrodinger_harvest_standoff_ca7a79c65b",
@@ -229,17 +229,17 @@
   },
   "magnetosphere_and_weather_report": {
     "colony_sol": 1,
-    "kp_exo": 5.35,
-    "active_biome_cell": "Shattered_Magnetite_Steppe",
-    "micro_climate_regime": "Ferrofluid_Tidal_Squall",
-    "valley_floor_temp_c": 11.8,
-    "ridge_crest_temp_c": -7.5,
-    "thermal_shear_delta_c": 19.3,
-    "barometric_pressure_hpa": 1013.3,
-    "spore_luminescence_density": 0.609,
-    "geode_charge_capacity_pct": 61.4,
-    "active_environmental_hazard": "Ferrofluid_Riptide_Surge",
-    "vex_commentary": "Vex here at the brass astrolabe: binary-star magnetic shear is sitting at Kp_exo 5.35 under a Ferrofluid Tidal Squall regime. Valley floor is a balmy 11.8\u00b0C while the ridge crest is -7.5\u00b0C (\u0394T=19.3\u00b0C). Lightning geodes are at 61.4% capacity and spore luminescence is 0.61\u2014keep your copper earthing braids clipped if you're crossing Shattered Magnetite Steppe!"
+    "kp_exo": 6.21,
+    "active_biome_cell": "Ferrofluid_Tidal_Basin",
+    "micro_climate_regime": "Bifurcated_Thermal_Shear",
+    "valley_floor_temp_c": 15.7,
+    "ridge_crest_temp_c": -10.2,
+    "thermal_shear_delta_c": 25.9,
+    "barometric_pressure_hpa": 1004.5,
+    "spore_luminescence_density": 0.594,
+    "geode_charge_capacity_pct": 72.6,
+    "active_environmental_hazard": "Resonant_Spore_Fog_Drift",
+    "vex_commentary": "Vex here at the brass astrolabe: binary-star magnetic shear is sitting at Kp_exo 6.21 under a Bifurcated Thermal Shear regime. Valley floor is a balmy 15.7\u00b0C while the ridge crest is -10.2\u00b0C (\u0394T=25.9\u00b0C). Lightning geodes are at 72.6% capacity and spore luminescence is 0.59\u2014keep your copper earthing braids clipped if you're crossing Ferrofluid Tidal Basin!"
   },
   "sibling_grid_blind_spot_column": {
     "column_title": "The Sibling Grid: Main Character Blind Spot Ledger",
@@ -274,7 +274,7 @@
     "cited_event_ids": [
       "evt_s001_t0004_the_feast"
     ],
-    "quote": "\"Inefficient or not, when the magnetosphere hits Kp 5.3 and the copper coils sing in harmonic thirds, you trust your partner's spanner\u2014and save the debate for Ryn's soup course.\"",
+    "quote": "\"Inefficient or not, when the magnetosphere hits Kp 6.2 and the copper coils sing in harmonic thirds, you trust your partner's spanner\u2014and save the debate for Ryn's soup course.\"",
     "context": "All 16 members of The Enclave gathered around Ryn and Elara's hearth on Sol 1 to break warm iron-wheat bread, debate magnetohydrodynamic kelvin-helmholtz shear across the ferrofluid sea, and release the day's magnetospheric tension."
   },
   "read_full_scene_links": [
@@ -377,7 +377,7 @@
       "href": "#scene-evt_refl_enclave_03_silas_s001_t0004_a68b98e1ba"
     }
   ],
-  "broadcast_markdown": "# SOL 1 EVENING DISPATCH: The Schrodinger Harvest Accord: Three Squads, One Batch (Kp_exo 5.3)\n**Broadcast ID**: `dispatch_sol_001` | **Anchors**: Vex (The Astronomer) & Dorian (The Living Chronicler)\n\n> [VEX]: Good evening, Enclave! Live from the crystal-slate transmitter above Ryn's hearth at the close of Sol 1's Feast\u2014the binary suns have dipped, Kp_exo is humming at 5.3, and nobody vaporized their eyebrows today! [DORIAN]: And a warm hearthside greeting from your Living Chronicler. Tonight's scroll gives equal measure to Dawn's first hammer-strike, Midday's ridge expedition, Dusk's fine craft, and our communal Feast.\n\n## I. Top Lead Stories (Salience-Ranked)\n### 1. The Schrodinger Harvest Accord: Three Squads, One Batch (SCHRODINGER_HARVEST_STANDOFF \u2014 Salience 75.9)\n- **Location**: `The_Hub_Hearth / The_First_Forge` | **Actors**: enclave_01_hector, enclave_02_jane, enclave_03_silas, enclave_04_leo, enclave_05_kaio, enclave_06_zara, enclave_07_willow, enclave_08_terra, enclave_09_orion, enclave_10_isla, enclave_11_kenna, enclave_12_elias, enclave_13_ryn, enclave_14_vex, enclave_15_dorian, enclave_16_elara\n- **Science Vegetable**: *Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea*\n- **Summary**: A three-way specialist resource standoff (All 16 members of The Enclave gathered around Ryn and Elara's hearth on Sol 1 to break warm iron-wheat bread, debate magnetohydrodynamic kelvin-helmholtz shear across the ferrofluid sea, and release the day's magnetospheric tension.) was resolved via Diplomacy of Competence and Hub adjudication ([DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands.). `[evt_s001_t0004_the_feast]`, `[evt_s001_t0001_dawn_shift]` [Read Full Rashomon Scene](#scene-evt_s001_t0004_the_feast)\n\n### 2. Magnetospheric Shear Contained: Silas & Hector & Kaio Hold the Line (MAGNETIC_CRISIS_RESCUE \u2014 Salience 54.5)\n- **Location**: `The_First_Forge / Basalt_Spire_Ridge` | **Actors**: enclave_03_silas, enclave_01_hector, enclave_05_kaio\n- **Science Vegetable**: *Capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers*\n- **Summary**: Under elevated geomagnetic shear (Kp_exo=6.6), Anchor-and-Prodigy teamwork stabilized the hazard ([DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands.). `[evt_s001_t0001_dawn_shift]`, `[evt_s001_t0002_midday_expedition]` [Read Full Rashomon Scene](#scene-evt_s001_t0001_dawn_shift)\n\n### 3. Friction to Breakthrough: Hector & Silas & Ryn (RIVALRY_TO_BREAKTHROUGH \u2014 Salience 54.5)\n- **Location**: `The_First_Forge / The_Simulacrum` | **Actors**: enclave_01_hector, enclave_03_silas, enclave_13_ryn, enclave_05_kaio, enclave_09_orion\n- **Science Vegetable**: *Relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron*\n- **Summary**: What began as a sharp methodological clash (enclave_01_hector rigged a harmless prank for enclave_03_silas (Replaced the brass pressure-gauge bezel with an engraved 'Inefficient' dial plate); enclave_03_silas completely missed it, leaving enclave_13_ryn mildly inconvenienced and grumbling at enclave_01_hector.) crystallized into a shared empirical breakthrough ([DUSK_CRAFT at The_Simulacrum] Kaio calibrated the hand-forged brass instrumentation against polyvagal neuro-somatic thermal regulation under bifurcated crater micro-climates, then passed the warm copper calibration baton directly into Orion's hands.). `[evt_s001_t0002_shadow_prank]`, `[evt_s001_t0003_dusk_craft]` [Read Full Rashomon Scene](#scene-evt_s001_t0002_shadow_prank)\n\n## II. Equal-Coverage 4-Phase Block Digests (Wu et al. Anti-Recency Rollup)\n- **DAWN_SHIFT** *(Share: 25%)*: [DAWN_SHIFT] (1 events logged across The_First_Forge): [DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands. `[evt_s001_t0001_dawn_shift]`\n- **MIDDAY_EXPEDITION** *(Share: 25%)*: [MIDDAY_EXPEDITION] (2 events logged across Basalt_Spire_Ridge, The_First_Forge): [MIDDAY_EXPEDITION at Basalt_Spire_Ridge] Hector calibrated the hand-forged brass instrumentation against relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron, then passed the warm copper calibration baton directly into Kaio's hands. enclave_01_hector rigged a harmless prank for enclave_03_silas (Replaced the brass pressure-gauge bezel with an engraved 'Inefficient' dial plate); enclave_03_silas completely missed it, leaving enclave_13_ryn mildly inconvenienced and grumbling at enclave_01_hector. `[evt_s001_t0002_midday_expedition]`, `[evt_s001_t0002_shadow_prank]`\n- **DUSK_CRAFT** *(Share: 25%)*: [DUSK_CRAFT] (1 events logged across The_Simulacrum): [DUSK_CRAFT at The_Simulacrum] Kaio calibrated the hand-forged brass instrumentation against polyvagal neuro-somatic thermal regulation under bifurcated crater micro-climates, then passed the warm copper calibration baton directly into Orion's hands. `[evt_s001_t0003_dusk_craft]`\n- **THE_FEAST** *(Share: 25%)*: [THE_FEAST] (2 events logged across The_Hub_Hearth, Enclave_Quarters): All 16 members of The Enclave gathered around Ryn and Elara's hearth on Sol 1 to break warm iron-wheat bread, debate magnetohydrodynamic kelvin-helmholtz shear across the ferrofluid sea, and release the day's magnetospheric tension. Silas reflected on Sol 1 that Hector's high-spire rigging and Kaio's field surveys complemented The First Forge's containment tolerances. `[evt_s001_t0004_the_feast]`, `[evt_refl_enclave_03_silas_s001_t0004_a68b98e1ba]`\n\n## III. Developing Stories & Foreshadowed Setups\n- **High-Theory Calibration Awaiting Physical Bench Test**: Theoretical calculation on 'Capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers' is underway ([DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands.), pending manual brass-and-copper assembly. `[evt_s001_t0001_dawn_shift]`\n- **Dormant Caper on the Sibling Grid (3-Feast Fuse Lit)**: A non-lethal workshop prank has been quietly rigged (enclave_01_hector rigged a harmless prank for enclave_03_silas (Replaced the brass pressure-gauge bezel with an engraved 'Inefficient' dial plate); enclave_03_silas completely missed it, leaving enclave_13_ryn mildly inconvenienced and grumbling at enclave_01_hector.); scheduled to mature after the 3-Feast delay. `[evt_s001_t0002_shadow_prank]`\n\n## IV. Twin-Sun Magnetosphere & Exoplanet Weather Report\n- Vex here at the brass astrolabe: binary-star magnetic shear is sitting at Kp_exo 5.35 under a Ferrofluid Tidal Squall regime. Valley floor is a balmy 11.8\u00b0C while the ridge crest is -7.5\u00b0C (\u0394T=19.3\u00b0C). Lightning geodes are at 61.4% capacity and spore luminescence is 0.61\u2014keep your copper earthing braids clipped if you're crossing Shattered Magnetite Steppe!\n\n## V. The Sibling Grid: Main Character Blind Spot Column\n- Omniscient Blind-Spot Ledger: Hector (enclave_01_hector) rigged a harmless caper aimed at Silas (enclave_03_silas) \u2014 'Replaced the brass pressure-gauge bezel with an engraved 'Inefficient' dial plate'. True to Law L12, Silas walked right past it obliviously, leaving Ryn (enclave_13_ryn) mildly inconvenienced and shaking a ladle at Hector. `[evt_s001_t0002_shadow_prank]`\n\n## VI. Quote of the Sol\n> \"Inefficient or not, when the magnetosphere hits Kp 5.3 and the copper coils sing in harmonic thirds, you trust your partner's spanner\u2014and save the debate for Ryn's soup course.\" \u2014 **Hector** (`[evt_s001_t0004_the_feast]`)",
+  "broadcast_markdown": "# SOL 1 EVENING DISPATCH: The Schrodinger Harvest Accord: Three Squads, One Batch (Kp_exo 6.2)\n**Broadcast ID**: `dispatch_sol_001` | **Anchors**: Vex (The Astronomer) & Dorian (The Living Chronicler)\n\n> [VEX]: Good evening, Enclave! Live from the crystal-slate transmitter above Ryn's hearth at the close of Sol 1's Feast\u2014the binary suns have dipped, Kp_exo is humming at 6.2, and nobody vaporized their eyebrows today! [DORIAN]: And a warm hearthside greeting from your Living Chronicler. Tonight's scroll gives equal measure to Dawn's first hammer-strike, Midday's ridge expedition, Dusk's fine craft, and our communal Feast.\n\n## I. Top Lead Stories (Salience-Ranked)\n### 1. The Schrodinger Harvest Accord: Three Squads, One Batch (SCHRODINGER_HARVEST_STANDOFF \u2014 Salience 75.9)\n- **Location**: `The_Hub_Hearth / The_First_Forge` | **Actors**: enclave_01_hector, enclave_02_jane, enclave_03_silas, enclave_04_leo, enclave_05_kaio, enclave_06_zara, enclave_07_willow, enclave_08_terra, enclave_09_orion, enclave_10_isla, enclave_11_kenna, enclave_12_elias, enclave_13_ryn, enclave_14_vex, enclave_15_dorian, enclave_16_elara\n- **Science Vegetable**: *Magnetohydrodynamic Kelvin-Helmholtz shear across the ferrofluid sea*\n- **Summary**: A three-way specialist resource standoff (All 16 members of The Enclave gathered around Ryn and Elara's hearth on Sol 1 to break warm iron-wheat bread, debate magnetohydrodynamic kelvin-helmholtz shear across the ferrofluid sea, and release the day's magnetospheric tension.) was resolved via Diplomacy of Competence and Hub adjudication ([DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands.). `[evt_s001_t0004_the_feast]`, `[evt_s001_t0001_dawn_shift]` [Read Full Rashomon Scene](#scene-evt_s001_t0004_the_feast)\n\n### 2. Magnetospheric Shear Contained: Silas & Hector & Kaio Hold the Line (MAGNETIC_CRISIS_RESCUE \u2014 Salience 54.5)\n- **Location**: `The_First_Forge / Basalt_Spire_Ridge` | **Actors**: enclave_03_silas, enclave_01_hector, enclave_05_kaio\n- **Science Vegetable**: *Capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers*\n- **Summary**: Under elevated geomagnetic shear (Kp_exo=6.6), Anchor-and-Prodigy teamwork stabilized the hazard ([DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands.). `[evt_s001_t0001_dawn_shift]`, `[evt_s001_t0002_midday_expedition]` [Read Full Rashomon Scene](#scene-evt_s001_t0001_dawn_shift)\n\n### 3. Friction to Breakthrough: Hector & Silas & Ryn (RIVALRY_TO_BREAKTHROUGH \u2014 Salience 54.5)\n- **Location**: `The_First_Forge / The_Simulacrum` | **Actors**: enclave_01_hector, enclave_03_silas, enclave_13_ryn, enclave_05_kaio, enclave_09_orion\n- **Science Vegetable**: *Relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron*\n- **Summary**: What began as a sharp methodological clash (enclave_01_hector rigged a harmless prank for enclave_03_silas (Replaced the brass pressure-gauge bezel with an engraved 'Inefficient' dial plate); enclave_03_silas completely missed it, leaving enclave_13_ryn mildly inconvenienced and grumbling at enclave_01_hector.) crystallized into a shared empirical breakthrough ([DUSK_CRAFT at The_Simulacrum] Kaio calibrated the hand-forged brass instrumentation against polyvagal neuro-somatic thermal regulation under bifurcated crater micro-climates, then passed the warm copper calibration baton directly into Orion's hands.). `[evt_s001_t0002_shadow_prank]`, `[evt_s001_t0003_dusk_craft]` [Read Full Rashomon Scene](#scene-evt_s001_t0002_shadow_prank)\n\n## II. Equal-Coverage 4-Phase Block Digests (Wu et al. Anti-Recency Rollup)\n- **DAWN_SHIFT** *(Share: 25%)*: [DAWN_SHIFT] (1 events logged across The_First_Forge): [DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands. `[evt_s001_t0001_dawn_shift]`\n- **MIDDAY_EXPEDITION** *(Share: 25%)*: [MIDDAY_EXPEDITION] (2 events logged across Basalt_Spire_Ridge, The_First_Forge): [MIDDAY_EXPEDITION at Basalt_Spire_Ridge] Hector calibrated the hand-forged brass instrumentation against relativistic bcc-to-hcp lattice phase transition in sympathetic core-iron, then passed the warm copper calibration baton directly into Kaio's hands. enclave_01_hector rigged a harmless prank for enclave_03_silas (Replaced the brass pressure-gauge bezel with an engraved 'Inefficient' dial plate); enclave_03_silas completely missed it, leaving enclave_13_ryn mildly inconvenienced and grumbling at enclave_01_hector. `[evt_s001_t0002_midday_expedition]`, `[evt_s001_t0002_shadow_prank]`\n- **DUSK_CRAFT** *(Share: 25%)*: [DUSK_CRAFT] (1 events logged across The_Simulacrum): [DUSK_CRAFT at The_Simulacrum] Kaio calibrated the hand-forged brass instrumentation against polyvagal neuro-somatic thermal regulation under bifurcated crater micro-climates, then passed the warm copper calibration baton directly into Orion's hands. `[evt_s001_t0003_dusk_craft]`\n- **THE_FEAST** *(Share: 25%)*: [THE_FEAST] (2 events logged across The_Hub_Hearth, Enclave_Quarters): All 16 members of The Enclave gathered around Ryn and Elara's hearth on Sol 1 to break warm iron-wheat bread, debate magnetohydrodynamic kelvin-helmholtz shear across the ferrofluid sea, and release the day's magnetospheric tension. Silas reflected on Sol 1 that Hector's high-spire rigging and Kaio's field surveys complemented The First Forge's containment tolerances. `[evt_s001_t0004_the_feast]`, `[evt_refl_enclave_03_silas_s001_t0004_a68b98e1ba]`\n\n## III. Developing Stories & Foreshadowed Setups\n- **High-Theory Calibration Awaiting Physical Bench Test**: Theoretical calculation on 'Capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers' is underway ([DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands.), pending manual brass-and-copper assembly. `[evt_s001_t0001_dawn_shift]`\n- **Dormant Caper on the Sibling Grid (3-Feast Fuse Lit)**: A non-lethal workshop prank has been quietly rigged (enclave_01_hector rigged a harmless prank for enclave_03_silas (Replaced the brass pressure-gauge bezel with an engraved 'Inefficient' dial plate); enclave_03_silas completely missed it, leaving enclave_13_ryn mildly inconvenienced and grumbling at enclave_01_hector.); scheduled to mature after the 3-Feast delay. `[evt_s001_t0002_shadow_prank]`\n\n## IV. Twin-Sun Magnetosphere & Exoplanet Weather Report\n- Vex here at the brass astrolabe: binary-star magnetic shear is sitting at Kp_exo 6.21 under a Bifurcated Thermal Shear regime. Valley floor is a balmy 15.7\u00b0C while the ridge crest is -10.2\u00b0C (\u0394T=25.9\u00b0C). Lightning geodes are at 72.6% capacity and spore luminescence is 0.59\u2014keep your copper earthing braids clipped if you're crossing Ferrofluid Tidal Basin!\n\n## V. The Sibling Grid: Main Character Blind Spot Column\n- Omniscient Blind-Spot Ledger: Hector (enclave_01_hector) rigged a harmless caper aimed at Silas (enclave_03_silas) \u2014 'Replaced the brass pressure-gauge bezel with an engraved 'Inefficient' dial plate'. True to Law L12, Silas walked right past it obliviously, leaving Ryn (enclave_13_ryn) mildly inconvenienced and shaking a ladle at Hector. `[evt_s001_t0002_shadow_prank]`\n\n## VI. Quote of the Sol\n> \"Inefficient or not, when the magnetosphere hits Kp 6.2 and the copper coils sing in harmonic thirds, you trust your partner's spanner\u2014and save the debate for Ryn's soup course.\" \u2014 **Hector** (`[evt_s001_t0004_the_feast]`)",
   "title": "The Enclave Evening Dispatch \u2014 Sol 1",
   "newscaster_anchors": [
     "enclave_15_dorian",
@@ -528,37 +528,37 @@
     "tick_id": 4,
     "colony_sol": 1,
     "day_phase": "THE_FEAST",
-    "active_biome_cell": "Shattered_Magnetite_Steppe",
-    "micro_climate_regime": "Ferrofluid_Tidal_Squall",
-    "valley_floor_temp_c": 11.8,
-    "ridge_crest_temp_c": -7.5,
-    "barometric_pressure_hpa": 1013.3,
-    "spore_luminescence_density": 0.609,
-    "geode_charge_capacity_pct": 61.4,
-    "weather_severity": 0.641,
-    "kp_exo": 5.35,
+    "active_biome_cell": "Ferrofluid_Tidal_Basin",
+    "micro_climate_regime": "Bifurcated_Thermal_Shear",
+    "valley_floor_temp_c": 15.7,
+    "ridge_crest_temp_c": -10.2,
+    "barometric_pressure_hpa": 1004.5,
+    "spore_luminescence_density": 0.594,
+    "geode_charge_capacity_pct": 72.6,
+    "weather_severity": 0.539,
+    "kp_exo": 6.21,
     "magnetosphere": {
-      "kp_exo": 5.35
+      "kp_exo": 6.21
     },
-    "active_environmental_hazard": "Ferrofluid_Riptide_Surge"
+    "active_environmental_hazard": "Resonant_Spore_Fog_Drift"
   },
   "weather_report": {
     "tick_id": 4,
     "colony_sol": 1,
     "day_phase": "THE_FEAST",
-    "active_biome_cell": "Shattered_Magnetite_Steppe",
-    "micro_climate_regime": "Ferrofluid_Tidal_Squall",
-    "valley_floor_temp_c": 11.8,
-    "ridge_crest_temp_c": -7.5,
-    "barometric_pressure_hpa": 1013.3,
-    "spore_luminescence_density": 0.609,
-    "geode_charge_capacity_pct": 61.4,
-    "weather_severity": 0.641,
-    "kp_exo": 5.35,
+    "active_biome_cell": "Ferrofluid_Tidal_Basin",
+    "micro_climate_regime": "Bifurcated_Thermal_Shear",
+    "valley_floor_temp_c": 15.7,
+    "ridge_crest_temp_c": -10.2,
+    "barometric_pressure_hpa": 1004.5,
+    "spore_luminescence_density": 0.594,
+    "geode_charge_capacity_pct": 72.6,
+    "weather_severity": 0.539,
+    "kp_exo": 6.21,
     "magnetosphere": {
-      "kp_exo": 5.35
+      "kp_exo": 6.21
     },
-    "active_environmental_hazard": "Ferrofluid_Riptide_Surge"
+    "active_environmental_hazard": "Resonant_Spore_Fog_Drift"
   },
   "covered_day_phases": [
     "DAWN_SHIFT",
@@ -574,7 +574,7 @@
     "evt_s001_t0003_dusk_craft",
     "evt_s001_t0004_the_feast"
   ],
-  "broadcast_script": "Good evening, Enclave! Dorian and Vex reporting from The Hub on Sol 1. Tonight's lead: [DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands. Weather almanac: Kp=5.35 under Ferrofluid_Tidal_Squall. All sixteen seats are warm around Ryn's hearth\u2014rest well!",
+  "broadcast_script": "Good evening, Enclave! Dorian and Vex reporting from The Hub on Sol 1. Tonight's lead: [DAWN_SHIFT at The_First_Forge] Silas calibrated the hand-forged brass instrumentation against capacitive dielectric breakdown tolerances in hand-blown lightning geode condensers, then passed the warm copper calibration baton directly into Hector's hands. Weather almanac: Kp=6.21 under Bifurcated_Thermal_Shear. All sixteen seats are warm around Ryn's hearth\u2014rest well!",
   "base_snapshot_tick": 4,
   "tick_id": 4,
   "target_path": "digests/daily/sol_001_dispatch.json"
