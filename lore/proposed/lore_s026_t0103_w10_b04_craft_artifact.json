@@ -1,7 +1,9 @@
 {
   "base_snapshot_tick": 100,
   "context_manifest": {
-    "loaded_full_card_ids": ["enclave_10_isla"],
+    "loaded_full_card_ids": [
+      "enclave_10_isla"
+    ],
     "full_cards_loaded_count": 1,
     "active_pov_id": "enclave_10_isla",
     "prev_next_pov_target": "enclave_10_isla",
@@ -74,14 +76,20 @@
       }
     ],
     "strain_accumulated_upward": 4,
-    "prerolled_hazard_queue": [ 14, 8, 19, 3, 12 ]
+    "prerolled_hazard_queue": [
+      14,
+      8,
+      19,
+      3,
+      12
+    ]
   },
   "lpi_metrics": {
     "relational_tension_density": 0.65,
     "motivational_vector_saturation": 0.85,
-    "unresolved_conflict_ratio": 0.40,
-    "temporal_horizon_immediacy": 0.90,
-    "composite_lpi": 0.70,
+    "unresolved_conflict_ratio": 0.4,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.7,
     "classification": "Campaign-Ready"
   },
   "dual_agent_contract": {
@@ -103,7 +111,7 @@
       "temperature": 0.7,
       "calypso_zero_raw_stats": true,
       "prosodic_micro_pauses_enabled": true,
-      "agency_handoff_prompt": "Isla didn't trust hard drives. They spun. They failed. They rusted.\n\nCrystals were forever.\n\nShe sat in the center of the Simulacrum, the air humming with polyphonic synthesizer harmonics. Below the main projector, orbiting droplets of liquid iron danced in the dark to a minor-key cello chord. Orion's magneto-acoustic cymatics were coupling perfectly into the electromagnet matrix, suspending the ferrofluid in gravity-defying resonant spires. It was breathtakingly beautiful, and it was entirely in her way.\n\nShe was currently encoding terabytes per second of five-dimensional holographic storm telemetry into nanostructured quartz. The system was flawlessly designed, an elegant architectural triumph. Yet, here she was, hand-polishing the primary optical lenses with a scrap of chamois leather until her fingers cramped, because the planet's atmospheric static kept leaving micro-abrasions on the glass. The sheer indignity of it.\n\n'If you're complaining and no one is laughing, you're complaining wrong,' she muttered to herself, echoing Dorian's dry wit. The telemetry stream flared. The pressure was mounting. A 0.4 deviation in the magnetic flux threatened the alignment. Her Sagittarius Vex Override—the reckless gambler buried deep inside the cautious archivist—flared to life. She could wait for the flux to stabilize, or she could bet the entire optical lattice on a single, untested femtosecond pulse.\n\nShe narrowed her eyes, adjusted the chamois one last time, and hit the initiator. The crystal drank the violet light. The data held. She breathed out a long, ragged sigh, wrapping up her final diagnostic before physically passing the calibration baton down to the historian, Dorian."
+      "agency_handoff_prompt": "Isla didn't trust hard drives. They spun. They failed. They rusted.\n\nCrystals were forever.\n\nShe sat in the center of the Simulacrum, the air humming with polyphonic synthesizer harmonics. Below the main projector, orbiting droplets of liquid iron danced in the dark to a minor-key cello chord. Orion's magneto-acoustic cymatics were coupling perfectly into the electromagnet matrix, suspending the ferrofluid in gravity-defying resonant spires. It was breathtakingly beautiful, and it was entirely in her way.\n\nShe was currently encoding terabytes per second of five-dimensional holographic storm telemetry into nanostructured quartz. The system was flawlessly designed, an elegant architectural triumph. Yet, here she was, hand-polishing the primary optical lenses with a scrap of chamois leather until her fingers cramped, because the planet's atmospheric static kept leaving micro-abrasions on the glass. The sheer indignity of it.\n\n'If you're complaining and no one is laughing, you're complaining wrong,' she muttered to herself, echoing Dorian's dry wit. The telemetry stream flared. The pressure was mounting. A 0.4 deviation in the magnetic flux threatened the alignment. Her Sagittarius Vex Override\u2014the reckless gambler buried deep inside the cautious archivist\u2014flared to life. She could wait for the flux to stabilize, or she could bet the entire optical lattice on a single, untested femtosecond pulse.\n\nShe narrowed her eyes, adjusted the chamois one last time, and hit the initiator. The crystal drank the violet light. The data held. She breathed out a long, ragged sigh, wrapping up her final diagnostic before physically passing the calibration baton down to the historian, Dorian."
     }
   }
 }
