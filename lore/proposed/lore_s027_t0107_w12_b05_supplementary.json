@@ -1,7 +1,9 @@
 {
   "base_snapshot_tick": 103,
   "context_manifest": {
-    "loaded_full_card_ids": ["enclave_09_orion"],
+    "loaded_full_card_ids": [
+      "enclave_09_orion"
+    ],
     "full_cards_loaded_count": 1,
     "active_pov_id": "enclave_09_orion",
     "next_pov_target": "enclave_14_vex",
@@ -78,13 +80,19 @@
       }
     ],
     "strain_accumulated_upward": 1,
-    "prerolled_hazard_queue": [7, 12, 19, 4, 15]
+    "prerolled_hazard_queue": [
+      7,
+      12,
+      19,
+      4,
+      15
+    ]
   },
   "lpi_metrics": {
     "relational_tension_density": 0.85,
-    "motivational_vector_saturation": 0.90,
-    "unresolved_conflict_ratio": 0.70,
-    "temporal_horizon_immediacy": 0.80,
+    "motivational_vector_saturation": 0.9,
+    "unresolved_conflict_ratio": 0.7,
+    "temporal_horizon_immediacy": 0.8,
     "composite_lpi": 0.82,
     "classification": "Campaign-Ready"
   },
@@ -107,7 +115,7 @@
       "temperature": 0.7,
       "calypso_zero_raw_stats": true,
       "prosodic_micro_pauses_enabled": true,
-      "agency_handoff_prompt": "Orion stood in the center of the darkened Simulacrum chamber, a fingernail-sized crystal drinking violet laser light at the heart of the room. It was supposed to be a simple transfer: femtosecond nanostructured birefringent 5D optical storage encoding terabytes of magnetospheric and mycelial telemetry into eternal fused-quartz lattices. But the crystal was being stubborn.\n\nHe had taken a beaker of Leo's ferrofluid to the Simulacrum. He placed it over a grid of electromagnets hooked up to his synthesizer. Orion didn't see a sealant; he saw a dancer. He played a complex, weaving melody on his synthesizer, trying to coax the ferrofluid into the exact harmonic shape of the incoming telemetry. The black liquid leaped, sculpting levitating magnetohydrodynamic cymatic spires from harmonic chords. It was beautiful, messy, and sharp. \n\nYet, even as he manipulated the raw forces of physics with intuitive grace, a knot of anxiety tightened in his chest. Earlier at dinner, a perfectly symmetrical potato had nearly brought him to tears. The fragility of things, the desperate need to preserve them against the encroaching chaos, weighed heavily on him. The irony wasn't lost on him: he was building an eternal archive, yet he felt like he was held together by wire and hope. \n\n'Your minor seventh is a little flat, Orion,' Vex's voice drifted down from the gantry, dripping with characteristic dry amusement. 'And if you're complaining and no one is laughing, you're complaining wrong. The Blue Dwarf is flaring, and if we don't get this data locked in, we'll have to start mapping the mycelial network all over again from scratch.'\n\nOrion's fingers paused on the keys. The stress of the impending data loss, combined with Vex's casual interruption, threatened to tip him over the edge. His Scorpio Vex Override flared—the gentle mediator snapping into a razor-sharp, unsparing critic. \n\n'It's not the seventh, Vex,' Orion snapped back, his voice surprisingly cold. 'It's the birefringence of the quartz. It's resisting the phase shift. If you want to help, come down here and adjust the acoustic dampening baffles instead of offering astrological commentary.' He took a breath, forcing himself to focus. 'We need to align the physical resonance with the laser's pulse rate. Watch the ferrofluid. Tell me when the central spire stabilizes.' He resumed playing, the notes sharper, more decisive, pouring his raw, unvarnished intensity into the keys, waiting for Vex to respond to his blunt directive."
+      "agency_handoff_prompt": "Orion stood in the center of the darkened Simulacrum chamber, a fingernail-sized crystal drinking violet laser light at the heart of the room. It was supposed to be a simple transfer: femtosecond nanostructured birefringent 5D optical storage encoding terabytes of magnetospheric and mycelial telemetry into eternal fused-quartz lattices. But the crystal was being stubborn.\n\nHe had taken a beaker of Leo's ferrofluid to the Simulacrum. He placed it over a grid of electromagnets hooked up to his synthesizer. Orion didn't see a sealant; he saw a dancer. He played a complex, weaving melody on his synthesizer, trying to coax the ferrofluid into the exact harmonic shape of the incoming telemetry. The black liquid leaped, sculpting levitating magnetohydrodynamic cymatic spires from harmonic chords. It was beautiful, messy, and sharp. \n\nYet, even as he manipulated the raw forces of physics with intuitive grace, a knot of anxiety tightened in his chest. Earlier at dinner, a perfectly symmetrical potato had nearly brought him to tears. The fragility of things, the desperate need to preserve them against the encroaching chaos, weighed heavily on him. The irony wasn't lost on him: he was building an eternal archive, yet he felt like he was held together by wire and hope. \n\n'Your minor seventh is a little flat, Orion,' Vex's voice drifted down from the gantry, dripping with characteristic dry amusement. 'And if you're complaining and no one is laughing, you're complaining wrong. The Blue Dwarf is flaring, and if we don't get this data locked in, we'll have to start mapping the mycelial network all over again from scratch.'\n\nOrion's fingers paused on the keys. The stress of the impending data loss, combined with Vex's casual interruption, threatened to tip him over the edge. His Scorpio Vex Override flared\u2014the gentle mediator snapping into a razor-sharp, unsparing critic. \n\n'It's not the seventh, Vex,' Orion snapped back, his voice surprisingly cold. 'It's the birefringence of the quartz. It's resisting the phase shift. If you want to help, come down here and adjust the acoustic dampening baffles instead of offering astrological commentary.' He took a breath, forcing himself to focus. 'We need to align the physical resonance with the laser's pulse rate. Watch the ferrofluid. Tell me when the central spire stabilizes.' He resumed playing, the notes sharper, more decisive, pouring his raw, unvarnished intensity into the keys, waiting for Vex to respond to his blunt directive."
     }
   }
 }
