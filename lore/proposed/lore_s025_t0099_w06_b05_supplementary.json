@@ -1,0 +1,120 @@
+{
+  "base_snapshot_tick": 95,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ],
+    "active_pov_id": "enclave_05_kaio",
+    "next_pov_target": "enclave_13_ryn",
+    "prev_next_pov_target": "enclave_13_ryn"
+  },
+  "campaign_metadata": {
+    "session_number": 25,
+    "colony_sol": 25,
+    "tick_id": 99,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Optimize the water filter with glowing prime-number cascades.",
+      "mid_term_milestone": "Map the magnetic jungle's luminescent flora.",
+      "campaign_arc_climax": "Master the exoplanet's wild magnetosphere."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Galley_and_Jungle_Fringe",
+    "macro_silhouette": "The dense magnetic jungle transitions abruptly into the utilitarian warmth of the Enclave galley. Ferro-moss ravines and ironwood groves lit by ultraviolet auroras and oil-slick hex-pedal carapace camouflage bleed into the sterile gleam of brushed steel and humming water filtration units.",
+    "sensory_palette": {
+      "sight_and_color": "Ultraviolet auroras bleeding into the warm, yellow glow of the galley lights.",
+      "sound": "The chaotic rustle of silicon-based vines and the steady drip of the water filter.",
+      "smell": "Ozone from the magnetic jungle mixed with the rich, savory scent of Ryn's soup stock.",
+      "tactile_temperature": "The humid, charged air of the jungle yielding to the dry, conditioned atmosphere of the galley.",
+      "taste_optional": "The metallic tang of static electricity fading into the promised warmth of broth."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetic Jungle Canopy",
+        "affordance_description": "Can be navigated by reading the piezo-electric hum in one's teeth.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Galley Water Filter",
+        "affordance_description": "Can be 'enhanced' with bioluminescent enzymatic catalysts.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Simmering Soup Stock",
+        "affordance_description": "Requires straining, ideally not through a clean sock.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "The_Kitchen_Filter",
+      "name_and_role": "Utilitarian Water Purification Unit",
+      "motivation_goal": "Provide clean drinking water.",
+      "consistent_method": "Reverse osmosis and activated carbon filtration.",
+      "immediate_complication": "Kaio's attempt to introduce prime-number luciferin flashes.",
+      "pressure_index": 4,
+      "uninterrupted_escalation": "The filter will glow blindingly bright and spit glowing, ionized water across the galley."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio wants to make the water filter glow in prime numbers.",
+      "level_2_local": "The Enclave needs clean water, not a bioluminescent light show.",
+      "level_3_campaign_arc": "Balancing scientific wonder with practical survival is an ongoing struggle."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      5,
+      14,
+      8,
+      19,
+      2
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.7,
+    "composite_lpi": 0.65,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Aegis_Internal",
+      "model": "Tactical_V4",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The water filter overloads, spraying glowing, ionized water everywhere and ruining the soup stock.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio miscalculates the polarization modulation, causing the filter to emit a continuous, blinding strobe that gives everyone a headache.",
+        "below_dc_complicated_fail_forward": "The filter glows beautifully in prime numbers, but it also imparts a strong taste of ozone to the water, requiring Ryn to mask it with extra spices.",
+        "meets_dc_clean_success": "Kaio perfectly integrates the enzymatic luciferin-luciferase oxidation, creating a mesmerizing, harmless light display that purifies the water.",
+        "dc_plus_5_or_20_extended_lore": "Kaio's enhancement not only purifies the water but also creates a harmonic resonance that repels magnetic pests from the galley."
+      }
+    },
+    "master_narrator": {
+      "executor": "Showrunner_Core",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Kaio didn't walk through the jungle; he ricocheted. The forest floor was a riot of ferro-moss and silicon-based vines, and Kaio moved over it with the kinetic enthusiasm of a particle in a collider. He had recognized the prime-number luciferin flashes at a dead sprint, the enzymatic luciferin-luciferase oxidation gated by voltage-sensitive ion channels creating a mesmerizing, rhythmic glow through the magnetic jungle. The optical polarization modulation was brilliant, a natural symphony of light and chemistry.\n\nHe burst into the galley, his pockets overflowing with glowing samples, the humid, charged air of the jungle trailing behind him like a cape. Ryn was at the stove, carefully stirring a pot of simmering soup stock. The sterile gleam of brushed steel and humming water filtration units stood in stark contrast to Kaio's chaotic energy.\n\n\"Ryn! Look at this!\" Kaio exclaimed, dumping a handful of glowing flora onto the counter. \"If we integrate these into the water filter, we can get it to flash in prime-number sequences!\"\n\nRyn sighed, not looking away from the pot. \"Kaio, the water filter is for filtering water, not hosting a light show. And where is the strainer?\"\n\nKaio paused, his dominant Ne momentarily short-circuiting as his inferior Si struggled to recall where he had left the strainer. \"Uh, about that...\" he muttered, eyeing his clean, wool socks. The stress of the expedition, the schedule delays, and the unfiled maps suddenly pressed down on him. A subtle shift occurred. The chaotic explorer snapped into ice-cold, ruthless tactical command. He grabbed a clean sock from his pack, his movements suddenly precise and unyielding. \"We'll strain it through this. It's efficient, sterile, and immediately available. Now, back to the filter. The optical polarization modulation...\" Ryn just stared as Kaio forcefully poured the stock through the wool, the CEO taking charge."
+    }
+  }
+}
