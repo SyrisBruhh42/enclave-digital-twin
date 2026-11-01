@@ -1,0 +1,114 @@
+{
+  "campaign_metadata": {
+    "session_number": 17,
+    "colony_sol": 29,
+    "tick_id": 114,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Lock the chaotic lightning onto collector rods using Lorenz strange-attractor bifurcation.",
+      "mid_term_milestone": "Stabilize The Stormbreaker's primary capacitor matrix.",
+      "campaign_arc_climax": "Prove The Enclave can harness the planet's most violent atmospheric anomalies without fracturing the fellowship."
+    }
+  },
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "active_location": {
+    "location_id": "LOC_STORMBREAKER_SPIRE",
+    "macro_silhouette": "A copper-wound spire jutting fifty meters into a churning violet storm cell. Arcs of chaotic plasma whip across the primary induction vanes. The entire platform vibrates with the sub-bass hum of millions of volts seeking ground.",
+    "sensory_palette": {
+      "sight_and_color": "Blinding flashes of white-blue ozone against bruised purple clouds.",
+      "sound": "The deafening crack of thunder overlapping the high-pitched scream of overloaded capacitors.",
+      "smell": "Sharp, acrid ozone mixing with melting insulation and cold rain.",
+      "tactile_temperature": "Freezing gale-force winds contrasting with the blistering radiant heat of near-miss lightning strikes."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Primary Collector Array",
+        "affordance_description": "Massive copper vanes that need physical realignment to match the storm's chaotic polarity.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Bifurcation Control Shunt",
+        "affordance_description": "A fragile ceramic and gold coupling regulating the pre-strike ionization pulses.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Emergency Grounding Trench",
+        "affordance_description": "A deep bedrock fissure filled with conductive ferro-sand to bleed off catastrophic overloads.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "TOY_LORENZ_STORM",
+      "name_and_role": "Chaotic Magnetospheric Cell (Environmental Hazard)",
+      "motivation_goal": "Discharge gigajoules of accumulated potential energy through the path of least resistance.",
+      "consistent_method": "Rapid, unpredictable shifts in polarity and strike location.",
+      "immediate_complication": "A sudden half-degree shift in wind shear threatens to misalign the pre-strike ionization pulses.",
+      "pressure_index": 9,
+      "uninterrupted_escalation": "The storm will bypass the collector rods entirely and strike the Enclave's main habitat dome."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The bifurcation shunt coupling is misaligned by a half-degree, preventing the laser lock.",
+      "level_2_local": "The Stormbreaker needs this specific storm's energy signature to power the lower habitat levels for the coming winter.",
+      "level_3_campaign_arc": "Hector must learn that true mastery of the storm requires precision and patience, not just fearless kinetic reaction."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 14,
+    "prerolled_hazard_queue": [
+      12,
+      4,
+      19,
+      7,
+      15
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.85,
+    "motivational_vector_saturation": 0.9,
+    "unresolved_conflict_ratio": 0.75,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.86,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Anthropic",
+      "model": "claude-3-opus-20240229",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The ionization pulse misses, dropping the lock. The resulting feedback arc blows the primary capacitor, plunging the Enclave into darkness and injuring Hector.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Hector misreads the atmospheric tension. He adjusts the coupling the wrong way, deliberately pulling a massive strike directly into the control shunt, fusing it permanently.",
+        "below_dc_complicated_fail_forward": "The lock holds, but barely. The energy spikes, blowing out several secondary relays. Hector takes a brutal shock, and the system requires extensive downtime for repairs.",
+        "meets_dc_clean_success": "Hector perfectly aligns the coupling. The millisecond pre-strike pulses lock on, channeling the storm's fury flawlessly into the collector rods at 98 percent efficiency.",
+        "dc_plus_5_or_20_extended_lore": "Not only does the lock hold, but the precision calibration reveals a deeper harmonic in the storm's chaotic attractor, providing data that could double future collection efficiency."
+      }
+    },
+    "master_narrator": {
+      "executor": "Claude-3-Opus",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Fifty meters above the valley floor, the storm tasted like copper pennies and impending violence. The air pressure dropped so fast Hector's ears popped twice. He grinned, tightening his grip on the soaked rungs of the Stormbreaker spire. \"Jane, your differential equation says the upper capacitor bank will arc in ninety seconds, which is fantastic news because I only need forty-five to clip the shunt cable!\"\n\nA wall of freezing rain slapped him across the face, but he just leaned into the gale. Below him, the Enclave was a distant scatter of warm amber lights, counting on the gigajoules roaring in the bruised purple clouds above.\n\nHe reached the bifurcation control shunt, pulling the heavy brass diagnostic monocle down over his right eye. The CRT monitor flickered, rendering emerald phase-space butterfly wings—real-time Lorenz strange-attractor targeting. The millisecond pre-strike ionization pulses were trying to lock onto the chaotic lightning, aiming for a ninety-eight percent efficiency capture into the collector rods.\n\nBut the readout stuttered. A red warning slashed across the glass. The heavy copper coupling connecting the laser emitter to the tracking mount was asymmetrical. Misaligned. By exactly half a degree.\n\nThe grin vanished from his face. His knuckles went white on the wrench.\n\nHe could hand-splice a live plasma conduit while dangling upside down over a fifty-meter drop, but this? This required millimeter-perfect calibration. This required stopping. The wind howled, a physical force trying to tear him from the ladder, and for a terrifying second, paralysis seized his chest. The perfectionist inside him screamed that the entire array was compromised, that fixing it required bringing the whole tower down and starting over from a clean slate.\n\nLightning spider-webbed across the clouds, casting harsh shadows over his rigid features. He took a ragged breath. The storm wasn't going to wait for a clean slate. He slammed the wrench into his belt, grabbed the heavy coupling with both bare hands, and braced his boots against the slick metal of the spire. He forced his breathing to slow, ignoring the frantic urgency of the thunder, and began to twist the heavy brass housing, millimeter by agonizing millimeter, hunting for that perfect half-degree alignment.\n\nFar below, stepping out of the dense ferro-moss treeline, Kaio paused, tipping their head back as the sky shattered into blinding white above the Spire."
+    }
+  },
+  "pre_roll_dc": 14,
+  "base_snapshot_tick": 114
+}
