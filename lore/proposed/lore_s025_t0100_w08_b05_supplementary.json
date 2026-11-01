@@ -1,0 +1,119 @@
+{
+  "campaign_metadata": {
+    "session_number": 25,
+    "colony_sol": 25,
+    "tick_id": 100,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Prepare the Feast using precise Maillard reaction pairing while under the pressure of a localized ionization storm.",
+      "mid_term_milestone": "Stabilize the Hub's metabolic output for the changing season without relying entirely on rationing.",
+      "campaign_arc_climax": "Prove that human warmth and rigorous culinary physics can outlast the harshest planetary conditions."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Hearth",
+    "macro_silhouette": "The timber-framed heart of The Hub. Copper grounding wires snake from the rafters down to the bedrock to safely channel any residual static from the storm outside. A massive steam-jacketed cauldron bubbles at the center.",
+    "sensory_palette": {
+      "sight_and_color": "Warm hearth-fire casting long, dancing shadows, offset by the bright, clinical gleam of aligned steel knives.",
+      "sound": "The rhythmic bubbling of the stockpot, the sharp chop of a cleaver, and the muffled thunder of the ionization storm battering the heavy wooden shutters.",
+      "smell": "The comforting, buttery popcorn aroma of methional-rich tubers paired with roasted subterranean fungi.",
+      "tactile_temperature": "A cozy, localized 22 degrees Celsius radiating from the stove, a sharp contrast to the freezing draft that occasionally slips under the door."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Grounded Copper Spoons",
+        "affordance_description": "Cutlery connected to thin copper wires trailing to the floor to prevent electrostatic shocks during meals.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Steam-Jacketed Cauldron",
+        "affordance_description": "A massive, bubbling pot of stew, meticulously maintained at exactly 72 degrees Celsius.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Aligned Spice Rack",
+        "affordance_description": "A precise array of dried mosses and salts, arranged by chemical pungency and origin.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ionization_storm_surge",
+      "name_and_role": "Ionization Storm (Environmental Hazard)",
+      "motivation_goal": "To violently discharge built-up atmospheric potential energy.",
+      "consistent_method": "Rattles the timber hall and seeks any ungrounded metallic conductor.",
+      "immediate_complication": "Causes the overhead lights to flicker and metallic soup spoons to carry a latent static charge.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Will induce localized galvanic shocks and disrupt delicate enzymatic cooking processes."
+    },
+    {
+      "entity_id": "chitinous_fungi_batch",
+      "name_and_role": "Stubborn Subterranean Fungi (Culinary Challenge)",
+      "motivation_goal": "To resist being broken down and digested.",
+      "consistent_method": "Maintains structural integrity through a tough, chitinous cell wall.",
+      "immediate_complication": "Requires precise 72-degree thermal stress to properly execute the Maillard reaction without turning to rubber.",
+      "pressure_index": 5,
+      "uninterrupted_escalation": "Will result in an inedible, rubbery stew that drops colony morale by a full bracket."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The Enclave is hungry, and the storm outside makes foraging impossible.",
+      "level_2_local": "Ryn must synthesize a morale-boosting Feast using only tough local fungi and tubers.",
+      "level_3_campaign_arc": "The survival of the colony depends as much on shared, comforting ritual as it does on force fields."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_04_leo",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 14,
+    "prerolled_hazard_queue": [4, 9, 15, 2, 11]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.65,
+    "motivational_vector_saturation": 0.85,
+    "unresolved_conflict_ratio": 0.40,
+    "temporal_horizon_immediacy": 0.90,
+    "composite_lpi": 0.70,
+    "classification": "Campaign-Ready"
+  },
+  "context_manifest": {
+    "active_pov_id": "enclave_13_ryn",
+    "next_pov_target": "enclave_04_leo",
+    "prev_next_pov_target": "enclave_04_leo",
+    "base_snapshot_tick": 96
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "ANTHROPIC",
+      "model": "claude-3-opus-20240229",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The Maillard reaction fails, leaving the fungi tough and flavorless, leading to a grim, metallic-tasting meal that lowers colony morale.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Ryn accidentally drops the grounding wire, sending a severe static shock through the kettle that ruins the enzymatic breakdown entirely.",
+        "below_dc_complicated_fail_forward": "The fungi tenderize, but the methional pairing is off, resulting in a soup that tastes slightly of sulfur rather than popcorn.",
+        "meets_dc_clean_success": "The 72-degree thermal stress perfectly triggers the Maillard reaction, flooding the hall with the comforting scent of buttered popcorn.",
+        "dc_plus_5_or_20_extended_lore": "Not only is the stew a masterpiece of gastrophysics, but the specific grounding array Ryn devises inspires a new protective circuit for the Forge."
+      }
+    },
+    "master_narrator": {
+      "executor": "claude-3-opus-20240229",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Ryn did not cook; she executed a logistical campaign against hunger. The kitchen was a zone of military precision. Knives were aligned by blade length. Spices were organized by Scoville unit.\n\nThe massive timber hall of The Hearth was currently a fortress against the ionization storm raging outside. Thunder hammered the reinforced wooden shutters, rattling the iron pots hanging from the ceiling. Ryn ignored it, her focus entirely on the steam-jacketed cauldron in front of her. The chronometer ticked down. It was almost time.\n\nShe adjusted the thermal dial a fraction of a millimeter. The enzymatic breakdown of the chitinous fungi required a precise 72 degrees Celsius. Any hotter, and the cellular walls would seize into rubber. Any cooler, and the tough subterranean stalks would remain completely indigestible. She picked up a heavy brass ladle, scraping the bottom of the pot in a slow, clockwise motion. Forty revolutions per minute. Consistency was the only bulwark against entropy.\n\n\"The tubers are prepped,\" she called out to the empty kitchen, more out of habit than necessity. She had already cross-referenced their chemical makeup on the gas chromatograph. High levels of methional. When paired with the specific amino acids of the fungi under thermal stress, it would trigger a non-enzymatic browning—a Maillard reaction. In less sterile terms: it would make alien mud-stalks taste exactly like roasted buttered popcorn.\n\nSuddenly, the lights overhead flickered violently, casting erratic, harsh shadows across the aligned cutting boards. A sharp, stinging static charge leapt from the ladle to Ryn's wrist. She winced, but didn't drop the brass.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" she muttered to herself, echoing a familiar refrain. The storm was increasing the atmospheric potential gradient, turning every metallic surface in the Enclave into a latent conductor.\n\nRyn moved swiftly to a spool of thin copper wire mounted on the wall. She clipped one end to the handle of the ladle, unspooling the rest and securing it to the heavy iron grounding rod driven deep into the bedrock floor beneath the stove. She repeated the process for the large serving tureen, and finally, for a bundle of metal soup spoons.\n\n\"Better metallic than dead,\" she grunted, tossing a handful of dried salt-moss into the cauldron.\n\nThe heavy oak door to the kitchen swung open, admitting a gust of freezing, ozone-scented air and a tall, broad-shouldered figure. Leo stepped in, shaking the damp from his thick coat. He carried a bundle of newly filed brass fittings, his face weary but relaxed. He looked from Ryn, to the bubbling cauldron, and finally to the tangled web of copper wire currently tying the cutlery to the floorboards.\n\n\"I see we're expecting a lively dinner service,\" Leo rumbled, his low voice a steady anchor against the howling wind outside.\n\nRyn didn't look up from her stirring. \"The air is spicy today. The spoons are grounded. Grab a bowl, Leo, and don't trip over the wire. We have popcorn.\""
+    }
+  }
+}
