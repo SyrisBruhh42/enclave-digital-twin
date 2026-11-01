@@ -1,0 +1,117 @@
+{
+  "base_snapshot_tick": 88,
+  "context_manifest": {
+    "active_pov_id": "enclave_14_vex",
+    "prev_next_pov_target": "enclave_14_vex",
+    "next_pov_target": "enclave_08_terra",
+    "loaded_full_card_ids": [
+      "enclave_14_vex"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 23,
+    "tick_id": 92,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Audit the psychometric drift of Vex under relativistic magnetohydrodynamic shear.",
+      "mid_term_milestone": "Stabilize the observatory sensor readings without suffering a polarity inversion.",
+      "campaign_arc_climax": "Complete the Living Atlas before the binary suns cause irreversible magnetic damage."
+    }
+  },
+  "active_location": {
+    "location_id": "The Observatory Roof",
+    "macro_silhouette": "The hand-built brass observatory roof sits beneath a bruised violet twilight, casting double razor-sharp shadows. The sky is torn between a bloated, angry Red Giant and a piercing diamond Blue Dwarf.",
+    "sensory_palette": {
+      "sight_and_color": "Bruised violet twilight and razor-sharp double shadows.",
+      "sound": "The high-pitched hum of charged air and the rhythmic creak of the astrolabe dome.",
+      "smell": "Ozone, hot brass, and a faint hint of roasted tubers drifting up from the kitchen.",
+      "tactile_temperature": "A sharp contrast between the radiant heat of the brass and the freezing wind.",
+      "taste_optional": "A metallic tang of ionized air on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "The Brass Astrolabe",
+        "affordance_description": "Can be calibrated to attract the clearest signal of magnetic reconnection arcs.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Reinforced Shutters",
+        "affordance_description": "Can be closed to conceal the fragile optics from the incoming ultraviolet blast.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Thermal Dampeners",
+        "affordance_description": "Can be engaged to defend the observatory's structural integrity from the thermal tide.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "red_giant_cme",
+      "name_and_role": "Red Giant Coronal Mass Ejection",
+      "motivation_goal": "To bombard the Enclave with long-wave infrared radiation.",
+      "consistent_method": "Generating massive, rolling waves of heat that warp the atmosphere.",
+      "immediate_complication": "The resulting thermal shear is misaligning the observatory's precision instruments.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "If left unchecked, the heat will permanently warp the brass dome and destroy the optical lenses."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The observatory must be recalibrated before the binary stars reach syzygy.",
+      "level_2_local": "Accurate telemetry is required to predict the next wave of atmospheric ionization.",
+      "level_3_campaign_arc": "Understanding the celestial mechanics is vital for the Enclave's long-term survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_14_vex",
+        "tactical_role": "SQUISHY_DEBUFFER"
+      }
+    ],
+    "strain_accumulated_upward": 12,
+    "prerolled_hazard_queue": [
+      4,
+      15,
+      8,
+      19,
+      2
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.6,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.675,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Jules",
+      "model": "deterministic-enclave-5section-v2",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Failing the DC 14 check results in a temporary but severe miscalculation of the magnetic tide, leading to mild radiation sickness or a damaged sensor.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Vex completely misinterprets the data, believing the stars are moving apart when they are colliding.",
+        "below_dc_complicated_fail_forward": "Vex gets the data, but his tools fuse to the brass astrolabe from the heat.",
+        "meets_dc_clean_success": "Vex flawlessly recalibrates the sensors while maintaining his irreverent banter.",
+        "dc_plus_5_or_20_extended_lore": "Vex not only recalibrates the sensors but uncovers a hidden harmonic resonance pattern in the magnetic shear."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Vex sat on the roof, legs dangling over the edge. To the east, the Red Giant was rising, a bloated, angry eye that bathed the world in crimson. To the west, the Blue Dwarf was setting, a piercing diamond that cast razor-sharp double shadows across the hand-built brass observatory roof.\n\n\"Contrast,\" Vex said to the empty air, adjusting a specialized wrench from his belt. \"It's all about contrast.\"\n\nThe sky was a bruised, violent purple where the two lights met. It was scientifically improbable, visually stunning, and theoretically terrifying. He watched the atmospheric distortion, calculating the relativistic magnetohydrodynamic tides between the Red Giant's infrared coronal mass ejections and the Blue Dwarf's compressed ultraviolet bow shock. The thermal shear was incredible, trying to warp the brass astrolabe even as he recalibrated its azimuthal lock to attract the clearest signal of magnetic reconnection arcs.\n\n\"If that Red Giant sneezes,\" Vex mused, turning a stiff dial as the ionized air left a metallic tang on his tongue, \"we're toast. If the Blue Dwarf blinks, we freeze. And here we are, sitting in the middle, eating soup and fixing pipes.\"\n\nHe could smell the faint hint of roasted tubers drifting up from the kitchen, a stark reminder of Ryn demanding he stir the stew at exactly 40 RPM earlier. He held up a hand, framing the two suns between his fingers, blocking out the glare.\n\n\"Perfect composition,\" he grinned. \"The universe really outdid itself with the lighting engine today.\"\n\nFor a moment, the bravado slipped. The sheer scale of the celestial mechanics above them was overwhelming, a crushing weight that made him want to fiercely defend the small, fragile warmth of his family below. He forced the sentiment down, returning to the mechanics. He secured the final locking mechanism to conceal the fragile optics from the incoming ultraviolet blast. It was time to hand off the telemetry data to Terra before he became entirely too maudlin."
+    }
+  }
+}
