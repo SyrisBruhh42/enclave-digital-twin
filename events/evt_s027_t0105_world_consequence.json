@@ -1,0 +1,73 @@
+{
+  "event_id": "evt_s027_t0105_world_consequence",
+  "tick_id": 105,
+  "colony_sol": 27,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2087-01-27T06:00:00Z",
+  "base_snapshot_tick": 101,
+  "event_type": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+  "location": "The Stormbreaker",
+  "actors": [
+    "enclave_02_jane",
+    "enclave_07_willow",
+    "enclave_01_hector"
+  ],
+  "summary": "Jane models a planet-wide Lorenz strange attractor but struggles with the mundane reality of manually digging a trench to ground a copper rod, leading to a diva-like outburst under stress.",
+  "importance": 0.8,
+  "novelty_score": 0.85,
+  "science_vegetable": "Femtosecond Laser-Induced Plasma Channels (LIPC) ionizing a conductive step-leader highway at 50 kV/m atmospheric potential gradient into the bedrock capacitor geode.",
+  "state_deltas": {
+    "hub_caloric_reserves_pct": -0.05
+  },
+  "relationship_deltas": [],
+  "evidence_refs": [],
+  "active_pov_id": "enclave_02_jane",
+  "prev_next_pov_target": "enclave_02_jane",
+  "next_pov_target": "enclave_07_willow",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "narrative_prose": "\"It's random,\" Hector said, pacing behind her chair. \"You can't code random.\"\n\n\"It's not random,\" Jane muttered, her eyes darting across the screens. \"It's chaotic. Deterministic chaos. There's a pattern, it just has infinite variables. If I can model the planet-wide Lorenz strange attractor in phase space, we can map the exact femtosecond Laser-Induced Plasma Channels.\"\n\nThe atmospheric potential gradient was hitting 50 kV/m. The storm above was a bruised purple thunderhead, and their only hope was ionizing a conductive step-leader highway straight into the bedrock capacitor geode. It was brilliant. It was elegant.\n\nAnd yet, an hour later, Jane found herself knee-deep in mud, her fingernails caked in grime as she furiously dug a trench by hand. The automated trencher had seized up on a vein of ironstone, and the copper ground rod needed to be exactly 1.5 meters deep to prevent a harmonic feedback loop. \n\n\"This is absurd,\" she yelled, her Leo Vex Override suddenly flaring up as the stress hit a critical threshold. The quiet logician evaporated, replaced by a theatrical diva demanding recognition. \"I am rewriting the atmosphere's source code with a violet laser needle, and yet I am currently indistinguishable from a medieval peasant digging a ditch! Does nobody appreciate the elegance of the math? I demand applause for the Navier-Stokes boundary approximations!\"\n\nWillow, standing a few feet away, leaned on a shovel. \"If you're complaining and no one is laughing, you're complaining wrong,\" she said, her tone perfectly flat. \"Just dig the trench, Jane. The geode won't applaud your equations if it detonates.\"",
+  "dialogue": [
+    {
+      "speaker": "enclave_01_hector",
+      "text": "It's random. You can't code random."
+    },
+    {
+      "speaker": "enclave_02_jane",
+      "text": "It's not random. It's chaotic. Deterministic chaos. There's a pattern, it just has infinite variables. If I can model the planet-wide Lorenz strange attractor in phase space, we can map the exact femtosecond Laser-Induced Plasma Channels."
+    },
+    {
+      "speaker": "enclave_02_jane",
+      "text": "This is absurd. I am rewriting the atmosphere's source code with a violet laser needle, and yet I am currently indistinguishable from a medieval peasant digging a ditch! Does nobody appreciate the elegance of the math? I demand applause for the Navier-Stokes boundary approximations!"
+    },
+    {
+      "speaker": "enclave_07_willow",
+      "text": "If you're complaining and no one is laughing, you're complaining wrong. Just dig the trench, Jane. The geode won't applaud your equations if it detonates."
+    }
+  ],
+  "interactive_features": [
+    {
+      "feature_id": "mud_trench",
+      "system_verb": "CONSUME",
+      "description": "The muddy trench demands physical labor."
+    },
+    {
+      "feature_id": "laser_needle",
+      "system_verb": "ATTRACT",
+      "description": "The violet laser needle stitching the cloud to the spire."
+    },
+    {
+      "feature_id": "copper_rod",
+      "system_verb": "DEFEND",
+      "description": "The copper ground rod defending against a feedback loop."
+    }
+  ],
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_02_jane"
+    ]
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
+  }
+}
