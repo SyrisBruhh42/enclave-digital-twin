@@ -1,0 +1,130 @@
+{
+  "base_snapshot_tick": 98,
+  "context_manifest": {
+    "active_pov_id": "enclave_05_kaio",
+    "prev_next_pov_target": "enclave_05_kaio",
+    "next_pov_target": "enclave_13_ryn",
+    "loaded_full_card_ids": [
+      "enclave_05_kaio"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "campaign_metadata": {
+    "session_number": 25,
+    "colony_sol": 25,
+    "tick_id": 99,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Bring prime-number luciferin specimen to the forge before the magnetic storm.",
+      "mid_term_milestone": "Stabilize the colony's defensive perimeter and food supply.",
+      "campaign_arc_climax": "Achieve harmony with the exoplanet's bio-magnetic ecosystem."
+    }
+  },
+  "active_location": {
+    "location_id": "magnetic_jungle_edge_to_kitchen",
+    "macro_silhouette": "The edge of the magnetic jungle blends into the industrial kitchen of the Hub. The forest floor is a riot of ferro-moss and silicon-based vines, bleeding into the reinforced alloy structures of the Enclave.",
+    "sensory_palette": {
+      "sight_and_color": "Ultraviolet auroras, oil-slick hex-pedal carapace camouflage, and prime-number flashes of blue luciferin.",
+      "sound": "The screaming of the wind and the crackle of piezoelectric discharges in the canopy.",
+      "smell": "Ozone, copper, and the roasted methional scent of Ryn's subterranean tuber stew.",
+      "tactile_temperature": "Oppressive humidity and a crawling static charge on the skin.",
+      "taste_optional": "The metallic tang of ionized air mixed with savory loam."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Ferro-moss Vines",
+        "affordance_description": "Can be manipulated or pushed through to maneuver or escape predators.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Luciferin Canister",
+        "affordance_description": "Can be utilized as an improvised optical flashbang to distract nocturnal threats.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Kitchen Water Filter",
+        "affordance_description": "Can be tinkered with to 'enhance' water flow, inadvertently dispensing algae-sludge into the soup.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "hex_pedal_predator",
+      "name_and_role": "Hex-Pedal Predator",
+      "motivation_goal": "Hunt prey traversing the magnetic jungle.",
+      "consistent_method": "Camouflage using oil-slick iridescence to ambush from the canopy.",
+      "immediate_complication": "Blocks Kaio's path back to the Enclave with the specimen.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Will strike and likely critically wound the nearest target if not blinded."
+    },
+    {
+      "entity_id": "ryn_the_chef",
+      "name_and_role": "Ryn",
+      "motivation_goal": "Maintain absolute culinary and logistical control.",
+      "consistent_method": "Strictly adheres to calculated gastrophysics and regimented kitchen protocols.",
+      "immediate_complication": "Furious about Kaio filtering algae-sludge through a sock into the soup stock.",
+      "pressure_index": 4,
+      "uninterrupted_escalation": "Will ban Kaio from the kitchen forever and escalate the friction if not placated."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio is sprinting from a predator while protecting a delicate specimen.",
+      "level_2_local": "The specimen must be preserved before the magnetic storm wipes its bio-data.",
+      "level_3_campaign_arc": "Understanding the fungal prime-number syntax is key to harmonizing with the planet."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      12,
+      5,
+      18,
+      3,
+      9
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.9,
+    "unresolved_conflict_ratio": 0.7,
+    "temporal_horizon_immediacy": 0.85,
+    "composite_lpi": 0.81,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Local Host",
+      "model": "DETERMINISTIC_ENGINE",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The luciferin sample is compromised and Kaio takes a severe claw wound.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio drops the canister and the predator eats the specimen.",
+        "below_dc_complicated_fail_forward": "Kaio escapes but the magnetic storm wipes half the data.",
+        "meets_dc_clean_success": "Kaio perfectly times the flashbang, blinding the predator and escaping.",
+        "dc_plus_5_or_20_extended_lore": "Kaio escapes and deduces a secondary meaning in the flash sequence."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": false,
+      "agency_handoff_prompt": "Kaio didn't walk through the jungle; he ricocheted. The forest floor was a riot of ferro-moss and silicon-based vines, and Kaio moved over it with the kinetic enthusiasm of a particle in a collider. The air was thick with the scent of ozone and copper, a prelude to the incoming magnetic storm that was already painting the sky with violent, ultraviolet auroras. He vaulted over a fallen ironwood log, his boots skidding on the damp, metallic bark, but he didn't slow down. In his hands, clamped tightly against his chest, the sample canister pulsed. He watched the light through the transparent polymer. It wasn't a steady glow. It was a precise, staccato rhythm—enzymatic luciferin-luciferase oxidation gated by voltage-sensitive ion channels, flashing in prime-number sequences and optical polarization modulation. It was a syntax. A living, biological language, and he was holding the dictionary. His chaotic, branching thoughts were suddenly interrupted by a sound—a soft, unsettling shifting of mass from the canopy above. He glanced up, catching the tell-tale shimmer of oil-slick hex-pedal carapace camouflage separating from the shadows. A predator was tracking him, dropping silently through the dense foliage to cut off his escape route. In a fraction of a second, the overwhelming kinetic energy that defined Kaio evaporated. The frantic explorer vanished, replaced instantly by the ice-cold, ruthless tactical command of his Capricorn override. He didn't draw a weapon or scramble for cover. Instead, his mind compressed the tactical geometry into a single, diamond-hard solution. He twisted the polarization filter on the canister to zero. The specimen flared, erupting in a blinding, strobing pulse of pure white light. The hex-pedal creature recoiled violently, its multiple light-sensitive ocular cavities dazzled by the improvised flashbang. Kaio didn't wait for his vision to clear. He sprinted the remaining distance to the Enclave's airlock, his lungs burning, the tactical freeze shattering as quickly as it had arrived. He practically threw himself through the heavy blast doors, tumbling into the warm, bright, and deeply chaotic environment of the Hub. He landed on his feet, breathless and grinning, only to find Ryn standing directly in front of him. The executive chef looked less than pleased. She was standing next to the massive cauldron of dinner stew, holding up a soggy, dripping, green-stained object with a pair of tongs. 'You're back,' Ryn said, her voice dangerously flat. 'And I see you're still alive.' 'I am!' Kaio beamed, holding up the canister. 'And I got the prime-number mushroom! The syntax is incredible. It modulates output based on—' 'Kaio,' Ryn interrupted, shaking the tongs. 'Did you, or did you not, try to enhance the kitchen water filter before you left?' Kaio winced, recognizing the object in the tongs. 'Well, theoretically, the flow rate needed optimizing...' 'It was dispensing algae-sludge into the soup stock!' Ryn slammed a ladle down on the counter. 'I had to filter twenty liters of broth through a sock, Kaio. A sock!' 'It was a clean sock!' Kaio protested, moving closer to the warmth of the stove. He took in the furious chef and the absurdly mundane crisis of the kitchen, and a laugh bubbled up in his chest. The transition from near-death in the wild to culinary reprimand was dizzying, but perfect. 'Look, if you're complaining and no one is laughing, you're complaining wrong.' Ryn stared at him, the corner of her mouth twitching in spite of her irritation. She sighed, tossing the ruined sock into a disposal bin. 'Put the glowing rock away before it contaminates my kitchen. Then come here. You're mincing the tubers.' Kaio grinned, tossing the canister gently toward her. Ryn caught it instinctively, shaking her head as she set the glowing syntax on the counter, the baton smoothly passed in the heart of the Enclave."
+    }
+  }
+}
