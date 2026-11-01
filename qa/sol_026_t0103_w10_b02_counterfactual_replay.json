@@ -15,7 +15,9 @@
     "active_pov_id": "enclave_10_isla",
     "next_pov_target": "enclave_15_dorian",
     "prev_next_pov_target": "enclave_15_dorian",
-    "loaded_full_card_ids": ["enclave_10_isla"],
+    "loaded_full_card_ids": [
+      "enclave_10_isla"
+    ],
     "full_cards_loaded_count": 1
   },
   "active_location": {
@@ -72,7 +74,13 @@
       }
     ],
     "strain_accumulated_upward": 1,
-    "prerolled_hazard_queue": [ 12, 8, 19, 4, 15 ]
+    "prerolled_hazard_queue": [
+      12,
+      8,
+      19,
+      4,
+      15
+    ]
   },
   "lpi_metrics": {
     "relational_tension_density": 0.4,
@@ -101,7 +109,7 @@
       "temperature": 0.7,
       "calypso_zero_raw_stats": true,
       "prosodic_micro_pauses_enabled": true,
-      "agency_handoff_prompt": "Isla's fingers ached. She was currently encoding terabytes per second of five-dimensional holographic storm telemetry into nanostructured quartz, a process that demanded absolute mathematical perfection. The irony, of course, was that while her mind navigated higher-dimensional phase space, her hands were locked in the distinctly mundane agony of hand-polishing optical lenses with chamois leather. If the surface wasn't flawless, the data would scatter. It was maddening.\n\nShe paused, rubbing her cramped thumb, and looked out over the Simulacrum basin. It was beautiful, in a quiet, subterranean way. Orbiting droplets of liquid iron were dancing in the dark, suspended in gravity-defying resonant spires. The magneto-acoustic cymatics were coupling polyphonic synthesizer harmonics directly into the electromagnet matrix, holding the ferrofluid in perfect, shimmering tension against a minor-key cello chord. \n\nSuddenly, a fluctuation in the grid caused the droplets to wobble. Stress spiked, and for a terrifying second, her Sagittarius inversion flared—a reckless urge to just bet the entire optical lattice on an untested pulse and see what happened. She forced the urge down. With a grimace, she adjusted the matrix, carefully balancing the magnetic and acoustic forces to attract the droplets back into their proper orbits, defending the delicate quartz from the incoming data stream, while using the chamois to conceal a tiny scratch on the secondary housing. She needed to hand this off. 'Dorian,' she called over the comms, 'I need you to verify the flux variance in Sector 4. The matrix is drifting.'"
+      "agency_handoff_prompt": "Isla's fingers ached. She was currently encoding terabytes per second of five-dimensional holographic storm telemetry into nanostructured quartz, a process that demanded absolute mathematical perfection. The irony, of course, was that while her mind navigated higher-dimensional phase space, her hands were locked in the distinctly mundane agony of hand-polishing optical lenses with chamois leather. If the surface wasn't flawless, the data would scatter. It was maddening.\n\nShe paused, rubbing her cramped thumb, and looked out over the Simulacrum basin. It was beautiful, in a quiet, subterranean way. Orbiting droplets of liquid iron were dancing in the dark, suspended in gravity-defying resonant spires. The magneto-acoustic cymatics were coupling polyphonic synthesizer harmonics directly into the electromagnet matrix, holding the ferrofluid in perfect, shimmering tension against a minor-key cello chord. \n\nSuddenly, a fluctuation in the grid caused the droplets to wobble. Stress spiked, and for a terrifying second, her Sagittarius inversion flared\u2014a reckless urge to just bet the entire optical lattice on an untested pulse and see what happened. She forced the urge down. With a grimace, she adjusted the matrix, carefully balancing the magnetic and acoustic forces to attract the droplets back into their proper orbits, defending the delicate quartz from the incoming data stream, while using the chamois to conceal a tiny scratch on the secondary housing. She needed to hand this off. 'Dorian,' she called over the comms, 'I need you to verify the flux variance in Sector 4. The matrix is drifting.'"
     }
   },
   "base_snapshot_tick": 100
