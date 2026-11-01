@@ -1,0 +1,61 @@
+{
+  "tick_id": 108,
+  "colony_sol": 27,
+  "base_snapshot_tick": 104,
+  "day_phase": "THE_FEAST",
+  "lead_story": {
+    "headline": "The Relativistic Magnetohydrodynamic Tide",
+    "cited_event_ids": [
+      "evt_s027_t0105_morning_intent"
+    ],
+    "actors": [
+      "enclave_02_jane",
+      "enclave_07_willow"
+    ],
+    "location": "The_Stormbreaker"
+  },
+  "four_block_digests": {
+    "DAWN_SHIFT": {
+      "headline": "Dawn",
+      "narrative_prose": "Jane managed a complicated handoff to Willow at the Stormbreaker tower, while Leo orchestrated a risky containment procedure on a humming ferrofluid geode.",
+      "cited_event_ids": [
+        "evt_s027_t0105_morning_intent",
+        "evt_s027_t0105_world_consequence"
+      ]
+    },
+    "MIDDAY_EXPEDITION": {
+      "headline": "Midday",
+      "narrative_prose": "Zara established first-contact photophore syntax with an abyssal chemosynthetic cephalopod in pitch darkness.",
+      "cited_event_ids": [
+        "evt_s027_t0106_expedition_consequence",
+        "evt_s027_t0106_shadow_prank"
+      ]
+    },
+    "THE_FEAST": {
+      "headline": "Feast",
+      "narrative_prose": "The Enclave converges around the table, the atmospheric potential spiking as a relativistic magnetohydrodynamic shear threatens to overload the grid.",
+      "cited_event_ids": [
+        "evt_s027_t0105_morning_intent"
+      ]
+    },
+    "EVENING_DISPATCH": {
+      "headline": "Evening",
+      "narrative_prose": "Vex calculated relativistic magnetohydrodynamic tides while dangling off the roof, eventually handing off the evening's final readings to Terra.",
+      "cited_event_ids": [
+        "evt_s027_t0105_morning_intent"
+      ]
+    }
+  },
+  "segments": [
+    {
+      "active_pov_id": "enclave_14_vex",
+      "next_pov_target": "enclave_08_terra",
+      "narrative_prose": "Vex sat on the hand-built brass observatory roof, his legs dangling over the precipice. To the east, the Red Giant was rising, a bloated, angry eye that bathed the Enclave in crimson. To the west, the Blue Dwarf was setting, a piercing diamond casting razor-sharp double shadows across the valley. Below him, the subterranean sanctuary pulsed with quiet bioluminescent wonder, but Vex's attention was fixed squarely on the sky.\n\n\"The sheer audacity of it,\" he murmured, squinting through a brass astrolabe. He was mapping a relativistic magnetohydrodynamic shear. The collision between the Red Giant's infrared coronal mass ejections and the Blue Dwarf's compressed ultraviolet bow shock was a celestial train wreck. It was beautiful. It was also terrifying.\n\nHe watched a massive solar prominence lick the edge of the magnetosphere, the raw data streaming onto his slate. His mind raced, calculating the tidal forces and the resultant flux permutations on the colony's energy grid. It was an intricate puzzle, a challenge to his intellect that thrilled him even as the danger mounted.\n\nDown in the courtyard, Ryn's voice drifted up, a sharp command to stir the stew at exactly 40 RPM. Vex sighed, the mundane reality intruding on his celestial contemplations.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" he called down, leaning over the edge to shout at Terra, who was hauling a heavy crate of harvested mycelium across the yard.\n\nSuddenly, the sky above him rippled. The magnetic shear intensified, the friction generating a localized, high-energy aurora that crackled with static. The sheer scale of the phenomenon hit him, a sudden icy weight dropping in his stomach. His Cancer override kicked in, the ironic mask slipping to reveal a fierce, protective instinct. He was guarding his family.\n\nHe scrambled back from the edge, his boots slipping on the slick brass. He had to warn them. He had to shore up the defenses. He snatched the heavy brass data cylinder containing the immediate sensor logs, the physical weight grounding him.\n\nHe practically flew down the spiraling iron staircase, his heart hammering in his chest. He found Terra at the base of the tower, organizing her fungal samples. She looked up, her expression a mix of surprise and mild amusement at his sudden urgency.\n\n\"The shear is expanding,\" Vex said, his voice stripped of its usual playful bounce. He pressed the cold brass cylinder firmly into her gloved hand. \"It's a full-blown magnetohydrodynamic tide. The grid is going to take a hit. We have to prepare.\""
+    },
+    {
+      "active_pov_id": "enclave_08_terra",
+      "next_pov_target": "enclave_08_terra",
+      "narrative_prose": "Terra took the brass cylinder, the metal warm from Vex's grip. She didn't flinch at his sudden intensity, her calm demeanor a stark contrast to his kinetic energy.\n\n\"Understood,\" she said simply, her eyes scanning the data scrolling across the cylinder's built-in readout. \"I'll synchronize the botanical shielding to absorb the excess charge.\"\n\nShe watched him sprint away, his figure quickly swallowed by the encroaching shadows. The sky above was a canvas of warring colors, a display of chaotic forces they were trying to tame. But Terra did not hesitate. As a gardener, she cultivated resilience in the soil, the roots holding fast against the elements. She turned back to her work, the heavy cylinder a tangible anchor for the delicate balance they maintained."
+    }
+  ]
+}
