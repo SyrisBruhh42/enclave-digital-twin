@@ -1,0 +1,39 @@
+{
+  "event_id": "seg_s028_t0109_enclave_08_terra",
+  "tick_id": 109,
+  "colony_sol": 28,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-11-21T06:00:00Z",
+  "base_snapshot_tick": 108,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The Genesis Garden",
+  "actors": [
+    "enclave_08_terra",
+    "enclave_11_kenna"
+  ],
+  "summary": "Terra forcefully bridges hyphal anastomoses with pepper-scented epoxy-sap during a pH drop, successfully completing the biological logic circuit.",
+  "importance": 5,
+  "novelty_score": 5,
+  "science_vegetable": "Cytosolic Ca2+ wave transduction implementing physical Boolean AND/OR/NOT logic gates across hyphal anastomoses when bridged with pepper-scented epoxy-sap.",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "segment_id": "seg_s028_t0109_enclave_08_terra",
+  "active_pov_id": "enclave_08_terra",
+  "next_pov_target": "enclave_11_kenna",
+  "prev_next_pov_target": "enclave_08_terra",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "interactive_features": [
+    {
+      "system_verb": "CONSUME"
+    },
+    {
+      "system_verb": "ATTRACT"
+    },
+    {
+      "system_verb": "DEFEND"
+    }
+  ],
+  "text": "The microscope display pulsed with sapphire light. Cytosolic calcium waves raced across the hyphal anastomoses, branching into precise binary patterns.\n\n\"It's not a static structure,\" Terra said, staring at the data stream. \"It's a process.\"\n\nKenna walked into the greenhouse, stopping by the doorway. \"What is?\"\n\n\"The calcium transduction. The sapphire-blue sequence. It doesn't just pass minerals. It processes logic. It implements physical boolean logic gates across miles of forest root-nodes.\"\n\nTerra gripped the edge of the workbench. Her jaw tightened. An alarm chimed from the telemetry slate. The soil pH in bed four had dropped below optimal thresholds, threatening to scramble the incoming data packets. She decoded alien biological computation across an entire valley, yet her immediate reality required hauling forty pounds of crushed basalt gravel.\n\nShe grabbed the heavy bucket by its rusted wire handle. The metal bit into her palm. She dragged it down the narrow greenhouse aisle, her boots scuffing the steel grated floor. The weight pulled at her shoulder socket, a dull ache that flared with every step. She stopped at bed four and dumped the grey gravel directly over the soil, forcing the acidic loam to consume the raw minerals. Dust plumed into the air.\n\nThe readout flickered. The calcium waves stalled at a critical junction. The buffer was too slow.\n\nHer breath hitched. A sudden heat flared in her chest, tight and demanding. The patient, listening botanist vanished, replaced by a blunt need for kinetic resolution. She snatched a jar of pepper-scented epoxy-sap from her toolbelt. She uncapped it with a sharp twist, the pungent smell of spice and resin spilling out to attract the wandering hyphal threads. She grabbed a trowel, drove it forcefully into the dirt, and mixed the sap directly into the root cluster. She bridged the broken anastomoses by sheer physical force.\n\nThe sapphire logic gates flared back to life.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Kenna said, watching the scattered gravel and Terra's white-knuckled grip on the trowel.\n\n\"I was not complaining,\" Terra said, wiping dirt from her cheek. \"I had to defend the harvest.\"\n\n\"Your cortisol baseline suggests otherwise,\" Kenna replied, extending a steaming mug. \"Drink. You have a meeting with the void.\""
+}
