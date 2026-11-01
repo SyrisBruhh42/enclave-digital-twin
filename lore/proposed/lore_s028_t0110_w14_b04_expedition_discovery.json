@@ -1,0 +1,90 @@
+{
+  "context_manifest": {
+    "loaded_full_card_ids": ["enclave_11_kenna"],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_11_kenna",
+    "next_pov_target": "enclave_12_elias",
+    "prev_next_pov_target": "enclave_11_kenna"
+  },
+  "campaign_metadata": {
+    "task_bucket": "DYNAMIC_LORE_CARD_PROPOSALS",
+    "colony_sol": 28,
+    "tick_id": 110,
+    "day_phase": "MIDDAY_EXPEDITION",
+    "pacing_mode": "MULLIGAN_CRISIS"
+  },
+  "base_snapshot_tick": 110,
+  "pre_roll_dc": 14,
+  "active_location": {
+    "location_id": "LOC_LYCEUM",
+    "sensory_palette": {
+      "sight_and_color": "quiet 0300-hour lantern patrols through humming corridors where static clings like a second skin",
+      "sound": "faint mechanical whirs mixing with erratic limbic heartbeats",
+      "smell": "sterile air laced with the sharp ozone tang of the recent storm",
+      "tactile_temperature": "cool drafts pressing against tired skin",
+      "taste_optional": "a dry, metallic coating in the mouth from ionized air"
+    },
+    "interactive_features": [
+      {
+        "feature_id": "FEAT_TANK",
+        "system_verb": "DEFEND",
+        "narrative_description": "the sensory attenuation tank shielding them from the static"
+      },
+      {
+        "feature_id": "FEAT_MOSS",
+        "system_verb": "CONSUME",
+        "narrative_description": "psychoactive moss that resets neural pathways"
+      },
+      {
+        "feature_id": "FEAT_LANTERNS",
+        "system_verb": "ATTRACT",
+        "narrative_description": "warm lanterns guiding the way through the humming corridors"
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "toy_id": "TOY_BIO_MONITORS",
+      "pressure_index": 7,
+      "motivation_goal": "track shifting circadian rhythms",
+      "consistent_method": "flickering displays showing rapid spikes",
+      "immediate_complication": "readings fluctuate too fast to process manually",
+      "uninterrupted_escalation": "the monitors begin emitting low, unsettling alarms that disturb nearby sleepers"
+    },
+    {
+      "toy_id": "TOY_LYCEUM_BRYOPHYTES",
+      "pressure_index": 6,
+      "motivation_goal": "prepare psychoactive remedies",
+      "consistent_method": "crushing the moss to release the active compounds",
+      "immediate_complication": "the moss resists breaking down easily",
+      "uninterrupted_escalation": "the oils from the moss cause a mild numbing sensation on the hands, slowing work further"
+    },
+    {
+      "toy_id": "TOY_ZERO_DUST_TANK",
+      "pressure_index": 9,
+      "motivation_goal": "prep the sensory attenuation tank for immediate use",
+      "consistent_method": "calibrating zero-buoyancy and acoustic shielding",
+      "immediate_complication": "static build-up interferes with the shielding integrity",
+      "uninterrupted_escalation": "a minor short circuit threatens to lock the tank down completely"
+    }
+  ],
+  "encounter_matrix": [
+    {
+      "event_id": "EVT_STATIC_STORM_FALLOUT",
+      "significance": "CRITICAL"
+    }
+  ],
+  "lpi_metrics": {
+    "novelty_score": 8,
+    "importance": 7
+  },
+  "dual_agent_contract": {
+    "master_narrator": {
+      "calypso_zero_raw_stats": true,
+      "agency_handoff_prompt": "Kenna walked the halls of the sleeping quarters, checking the bio-monitors. It was 0300 hours, yet half the family was awake. The storm had passed, but the static remained. It clung to the Enclave like a second skin. She needed to decouple pineal melatonin suppression and serotonin receptor static caused by post-storm Schumann resonance anomalies using psychoactive Lyceum bryophytes and zero-dust flotation. The sheer volume of static interference made her head throb, a literal physical pressure against her temples.\n\nShe found Silas scrubbing the floor, his eyes wild with exhaustion. He was trying to push back against the chaos by imposing order on the dirt. Kenna knelt beside him. She crushed a piece of psychoactive moss, intending to show him it was safe, hoping the action would divert his attention and break his loop. She could hide the remaining dust to appease his hyper-orderly state.\n\nSuddenly, her Vex Override kicked in. The warm, empathetic caretaker vanished, replaced by a hyper-clinical, detached observer. She stopped seeing Silas as a frightened friend and started seeing him as a biological system experiencing a 0.4-hertz limbic stress tremor. She didn't feel the static anymore; she merely quantified its effect on her own neural pathways.\n\n\"Affective telemetry logged,\" she muttered flatly, her voice devoid of inflection. She stood up, her movements precise and unhurried. \"Silas. The floor is structurally sound. You require a sensory attenuation tank to reset your cortical rhythms. Zero gravity. Zero dust.\"\n\nSilas looked up, blinking rapidly, the brush hovering over the metal. \"Zero dust?\"\n\n\"Absolute zero,\" Kenna replied, turning on her heel. \"Elias is waiting. Proceed to the Lyceum.\""
+    },
+    "jules_dm": {
+      "verification_target": "ensure scientific and character consistency"
+    }
+  }
+}
