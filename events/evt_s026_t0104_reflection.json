@@ -1,0 +1,45 @@
+{
+  "event_id": "evt_s026_t0104_reflection",
+  "tick_id": 104,
+  "colony_sol": 26,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-11-19T20:00:00Z",
+  "base_snapshot_tick": 100,
+  "event_type": "NIGHTLY_REFLECTION",
+  "location": "The_Hub_Hearth",
+  "actors": [
+    "enclave_15_dorian",
+    "enclave_02_jane"
+  ],
+  "active_pov_id": "enclave_15_dorian",
+  "next_pov_target": "enclave_02_jane",
+  "prev_next_pov_target": "enclave_15_dorian",
+  "summary": "Dorian reflects on the relativistic magnetohydrodynamic shear between the suns, handing off to Jane.",
+  "importance": 7.5,
+  "novelty_score": 0.8,
+  "science_vegetable": "Relativistic magnetohydrodynamic shear between the Red Giant's infrared coronal mass ejections and the Blue Dwarf's compressed ultraviolet bow shock.",
+  "state_deltas": {
+    "stress_delta": -0.1
+  },
+  "relationship_deltas": [],
+  "evidence_refs": [
+    "evt_s026_t0102_expedition_consequence"
+  ],
+  "cited_event_ids": [
+    "evt_s026_t0102_expedition_consequence"
+  ],
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_15_dorian"
+    ],
+    "interlocutor_full_cards_loaded": 0,
+    "active_pov_id": "enclave_15_dorian"
+  },
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "narrative_prose": "Dorian did not look at the world; he looked at the wireframe beneath it.\n\nStanding before the Living Atlas, he adjusted the focal length of the crystalline projector. The relativistic magnetohydrodynamic shear between the Red Giant's infrared coronal mass ejections and the Blue Dwarf's compressed ultraviolet bow shock painted a bruised violet twilight, casting double razor-sharp shadows across the hand-built brass observatory roof. He was analyzing the day's anomalous readings. It was an elegant puzzle of acoustic memory locked in crystal, but it carried an unstable charge that was currently ghosting across the settlement's local grid. Projects a three-dimensional holographic magnetosphere map across thousands of crustal sensors, then has to tell Leo to ground every metal soup spoon in the kitchen.\n\n\"The capacitance of the resonator nodes is discharging asymmetrically into the local bedrock,\" Dorian announced to the room at large, his voice carrying a dry, theatrical resonance. \"If we don't bleed the ambient static, tonight's stew will be noticeably electrified. Leo, I suggest you ground the cutlery. Yes, even the spoons.\"\n\nFrom across the hall, a tired voice drifted back. \"If you're complaining and no one is laughing, you're complaining wrong,\" someone muttered.\n\nDorian smiled softly, a flicker of amusement breaking his focused scowl. The stress of the overarching signal extraction had been mounting, pushing his meticulous INTJ nature to the brink of his Aries Vanguard override. He felt the sudden, audacious urge to simply flood the nodes with a massive kinetic pulse to see what would shatter first. 'Then today is a good day for science,' he thought, the reckless impulse momentarily intoxicating.\n\nHe reeled himself in, stepping away from the holographic projection. The immediate danger of the grid surge required action. Moving toward the central table where Jane was quietly reviewing atmospheric models, he retrieved a physical data core, warm and buzzing faintly with stored telemetry. He extended his hand, meeting her gaze squarely, and passed the heavy brass baton directly into her grasp. \"The sky is yours now, Jane. Try not to break it.\"",
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
+  }
+}
