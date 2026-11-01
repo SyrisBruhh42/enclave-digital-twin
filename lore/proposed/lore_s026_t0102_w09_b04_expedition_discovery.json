@@ -1,0 +1,121 @@
+{
+  "base_snapshot_tick": 100,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_06_zara"
+    ],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_06_zara",
+    "next_pov_target": "enclave_10_isla",
+    "prev_next_pov_target": "enclave_10_isla"
+  },
+  "campaign_metadata": {
+    "session_number": 9,
+    "colony_sol": 26,
+    "tick_id": 102,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Establish first-contact photophore syntax with the abyssal chemosynthetic cephalopod.",
+      "mid_term_milestone": "Secure the subterranean ferro-moss ravines for resource extraction.",
+      "campaign_arc_climax": "Complete the first sustainable subterranean biome habitat."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Abyssal_Sanctuary_Depths",
+    "macro_silhouette": "The cave didn't end; it drowned. Zara stood at the edge of the subterranean lake. The water was black, motionless, and heavy with iron.",
+    "sensory_palette": {
+      "sight_and_color": "Ultraviolet auroras dancing across oil-slick hex-pedal carapace camouflage in pitch darkness.",
+      "sound": "The oppressive silence broken only by the rhythmic, prime-number sequence clicking of voltage-sensitive ion channels.",
+      "smell": "The sharp tang of enzymatic luciferin-luciferase oxidation mixed with ancient, damp ferro-moss.",
+      "tactile_temperature": "The frigid bite of the abyssal water pressing against thermal insulation, heavy and unforgiving.",
+      "taste_optional": "A metallic tinge of raw copper and ozone on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Voltage-Gated Prime-Number Photophores",
+        "affordance_description": "Arrays of bioluminescent organs flashing complex mathematical syntax that require precise reciprocal sequencing to parse without provoking hostility.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferro-Moss Ravine Anchor Points",
+        "affordance_description": "Magnetically charged moss clusters providing unstable but critical footholds over the black iron waters.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Abyssal Chemosynthetic Cephalopod",
+        "affordance_description": "A massive, intelligence-bearing entity whose very presence distorts local magnetic fields, requiring careful bio-magnetic attunement.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 16
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "abyssal_cephalopod_alpha",
+      "name_and_role": "The First-Contact Cephalopod",
+      "motivation_goal": "To evaluate the intruders through complex optical polarization modulation and prime-number bio-luminescent syntax.",
+      "consistent_method": "Flashing dense, voltage-gated enzymatic luciferin-luciferase oxidation patterns while shifting its oil-slick hex-pedal carapace camouflage.",
+      "immediate_complication": "Its bio-magnetic field is so intense it begins overriding Zara's own neural-somatic regulation, triggering extreme stress responses.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "If the syntax is unmatched, the cephalopod will plunge the cavern into total darkness and unleash a localized bio-magnetic pulse, severing comms and plunging the team into the black waters."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Establish first-contact syntax with the entity before its bio-magnetic pulse disables the expedition's survival gear.",
+      "level_2_local": "Map the ferro-moss ravines and understand the deep-cavern ecosystem's bio-luminescent communication networks.",
+      "level_3_campaign_arc": "Prove the Enclave can coexist with native apex entities without resorting to brute-force subjugation."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_06_zara",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_10_isla",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 14,
+    "prerolled_hazard_queue": [
+      12,
+      18,
+      4,
+      15,
+      9
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.85,
+    "motivational_vector_saturation": 0.90,
+    "unresolved_conflict_ratio": 0.65,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.84,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-20241022",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Failing to match the prime-number optical syntax will cause the cephalopod to interpret the expedition as a threat, unleashing a bio-magnetic pulse that scrambles life support and drops Zara into the heavy iron waters.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Zara misreads a prime sequence as a Fibonacci spiral. The cephalopod recoils, interpreting the error as an aggressive dominance display. Comms instantly fry in the ensuing pulse.",
+        "below_dc_complicated_fail_forward": "Zara manages a fractured translation, delaying hostility but causing the creature to retreat deeper, requiring the team to navigate the treacherous ferro-moss ravines blind to pursue.",
+        "meets_dc_clean_success": "A perfect, reciprocating prime-number flash. The entity pauses, its oil-slick camouflage rippling in passive acknowledgment, allowing safe passage and preliminary study.",
+        "dc_plus_5_or_20_extended_lore": "Zara not only matches the syntax but anticipates the next prime. The cephalopod hums a sub-harmonic tone, parting the iron waters to reveal a pristine, undisturbed grove of ironwood lit by stable ultraviolet auroras."
+      }
+    },
+    "master_narrator": {
+      "executor": "claude-3-5-sonnet-20241022",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "The cave didn't end; it drowned.\n\nZara stood at the edge of the subterranean lake. The water was black, motionless, and heavy with iron. Down here in the deep ferro-moss ravines, the darkness was absolute, save for the ultraviolet auroras bleeding from the ironwood groves above. She knelt, her gloved hand hovering over the frigid surface. Below, the abyssal chemosynthetic cephalopod shifted, its oil-slick hex-pedal carapace camouflage parting like liquid smoke.\n\nThen, the sequence began. Enzymatic luciferin-luciferase oxidation gated by voltage-sensitive ion channels. Two flashes. Then three. Then five. A prime-number syntax, rippling in complex optical polarization modulation. The sheer scale of the creature's bio-magnetic field pressed against her skull, a localized pressure drop that made her teeth ache.\n\n*Two. Three. Five. Seven.* Her heart hammered. The stress was unbearable. The silence was deafening.\n\n\"Okay, okay, look at the polarization angle, it's not a threat display, it's a query, a complex interrogative, specifically asking if we're localized thermal vents or mobile bio-mass, and if I don't flash back eleven in exactly three seconds we're going to be swimming in liquid iron and by the way, who left the Sanctuary feed pens a mess this morning? I had to muck out three stalls before we descended and it's completely unacceptable when we're supposed to be apex explorers!\" Zara blurted, her voice echoing off the damp rock at breakneck speed, narrating every tactical and mundane observation as her hands scrambled over her suit's luminescent emitter.\n\nShe keyed the sequence. *Eleven.* The creature paused, the enzymatic glow pulsing slowly, a deep, resonant sub-harmonic hum vibrating through the stone beneath her boots. She let out a shaky breath, the chaotic chatter dying in her throat as she handed the diagnostic slate back to Isla. 'Your turn. Try not to blind it. If you're complaining and no one is laughing, you're complaining wrong.'"
+    }
+  }
+}
