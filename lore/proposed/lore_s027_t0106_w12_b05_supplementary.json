@@ -1,0 +1,121 @@
+{
+  "base_snapshot_tick": 105,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_07_willow"
+    ],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_07_willow",
+    "prev_next_pov_target": "enclave_07_willow",
+    "next_pov_target": "enclave_09_orion"
+  },
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 27,
+    "tick_id": 106,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Bridge the mycelial network using conductive sap.",
+      "mid_term_milestone": "Map the valley's fungal logic circuits.",
+      "campaign_arc_climax": "Integrate the Enclave's tech with the planetary biome."
+    }
+  },
+  "active_location": {
+    "location_id": "LOC_GENESIS_GARDEN_COMPOST",
+    "macro_silhouette": "The Genesis Garden's outer arboretum is a damp, pearlescent cavern thick with earthy humidity and glowing roots. Amber resin drips from overhead ironwood branches onto steaming compost heaps. The air hums with the silent, rhythmic pulse of billions of interconnected hyphae.",
+    "sensory_palette": {
+      "sight_and_color": "Sapphire calcium pulses racing along pale green mycelial threads like fiber optics.",
+      "sound": "The wet, heavy squelch of the compost heap and the faint, high-pitched electrical singing of the fungal network.",
+      "smell": "Rich, loamy decay mixed with the sharp, peppery tang of Silas's epoxy-sap.",
+      "tactile_temperature": "Warm, earthy humidity that clings to the skin like a damp cloth.",
+      "taste_optional": "A metallic, fungal spores-in-the-air kind of taste."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Mycelial Logic Node",
+        "affordance_description": "A dense cluster of glowing hyphae that responds to chemical inputs with physical boolean logic gates.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Steaming Compost Heap",
+        "affordance_description": "A pile of rotting bio-matter and iron-wheat husks that must be turned to prevent thermal runaway.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Pepper-Scented Epoxy-Sap",
+        "affordance_description": "A dollop of conductive botanical resin capable of bridging calcium wave transmissions between separate fungal networks.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "TOY_FUNGAL_LOGIC_NETWORK",
+      "name_and_role": "The Ca2+ Wave Transducer",
+      "motivation_goal": "To optimize its own internal logic pathways in response to external stimuli.",
+      "consistent_method": "Routing sapphire calcium packets across hyphal anastomoses using physical AND/OR/NOT logic gates.",
+      "immediate_complication": "The network encounters a blockage and requires a conductive bridge to continue its sequence.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "If left unchecked, the local network will short-circuit, releasing a burst of toxic spores and losing the sequence."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Willow needs to bridge a logic gate in the mycelial network using pepper-scented epoxy-sap.",
+      "level_2_local": "She must balance groundbreaking biochemical research with the mundane necessity of turning the compost heap.",
+      "level_3_campaign_arc": "Unlocking fungal boolean logic will allow the Enclave to directly interface with the planet's ecological supercomputer."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_07_willow",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_09_orion",
+        "tactical_role": "SQUISHY_DEBUFFER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      14,
+      8,
+      19,
+      3,
+      12
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.85,
+    "motivational_vector_saturation": 0.9,
+    "unresolved_conflict_ratio": 0.7,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.85,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4-turbo",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If Willow fails, the logic gate collapses, the sequence is lost, and the compost heap overheats, ruining the sample.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Willow misinterprets a calcium pulse and drops the epoxy-sap into the compost, causing a minor thermal flare that singes her eyebrows and destroys the network node.",
+        "below_dc_complicated_fail_forward": "She bridges the connection, but the sap's conductivity overloads the circuit. The logic gate holds just long enough to record the data before burning out, leaving a mess of charred hyphae.",
+        "meets_dc_clean_success": "The pepper-scented epoxy-sap perfectly bridges the gap. The cytosolic Ca2+ wave transduction resumes, confirming the physical AND/OR/NOT logic gates.",
+        "dc_plus_5_or_20_extended_lore": "Not only does the bridge hold, but the network optimizes the connection, revealing a previously unseen layer of hyper-threaded biological processing that syncs perfectly with Orion's cymatic frequencies."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules_local_llm",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Under the microscope, the mushroom didn't look like a plant. It looked like a city.\n\nWillow adjusted the focus. The hyphae—the thread-like roots—were pulsing with light. Calcium ions flowing through the cell walls, carrying signals like data packets on a fiber optic cable. It was a breathtaking display of quiet subterranean bioluminescent wonder: glowing microscopic hyphal cities routing sapphire calcium packets around a drop of amber resin. She was watching cytosolic Ca2+ wave transduction implementing physical boolean AND/OR/NOT logic gates across hyphal anastomoses, bridging perfectly with the pepper-scented epoxy-sap she had carefully applied to the slide.\n\nShe was on the verge of unlocking fungal boolean logic gates and cellular regeneration. If she could map this sequence, she could interface directly with the valley's mycorrhizal network, creating a biological motherboard that could process planetary data faster than any of Jane's silicon arrays. Her mind, perfectly tuned to the mechanics of the living world, raced through the stoichiometric possibilities.\n\nThen, the unmistakable, pungent scent of ammonia wafted across the laboratory bench.\n\nWillow sighed, rubbing her eyes with the back of a calloused hand. The steaming compost heap in the corner of the arboretum was reaching critical thermal mass. If she didn't turn it immediately, the anaerobic bacteria would take over, poisoning the delicate soil pH required for the next batch of iron-wheat.\n\n\"Fascinating,\" Willow muttered to the empty room, stepping back from the eyepiece. \"On the verge of unlocking fungal boolean logic gates and cellular regeneration, and I have to stop and turn the steaming compost heap with a pitchfork. If you're complaining and no one is laughing, you're complaining wrong. I know, I know.\"\n\nShe grabbed the heavy iron pitchfork from its hook, leaning into the dense, wet mass of the compost. The physical exertion was blunt and mundane, a stark contrast to the razor-sharp scientific competence she had just been exercising at the microscopic level. As she worked the soil, forcing oxygen into the decaying matter, a sudden, sharp spike of anxiety hit her.\n\nHer Cancer override kicked in—a sudden, suffocating urge to protect. The detached analytical biochemist vanished, replaced by an overwhelmingly clingy and protective matriarch. Where was Orion? He was supposed to be running acoustic cymatic tests near the southern ridge, far too close to the spore vents. The atmospheric pressure was dropping; what if the toxic spore precipitation overwhelmed his filters?\n\nShe dropped the pitchfork, the compost only half-turned. The brilliant logic of the calcium waves was forgotten, replaced entirely by fierce, unguarded devotion to her found-family. She keyed her comms, her voice tight with uncharacteristic panic.\n\n\"Orion. Report your position immediately. The magnetic variance is shifting, and I need you back inside the perimeter before the spores ionize. I'm not asking, Orion, get back here right now.\""
+    }
+  }
+}
