@@ -1,0 +1,117 @@
+{
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_12_elias"
+    ],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_12_elias",
+    "next_pov_target": "enclave_16_elara",
+    "prev_next_pov_target": "enclave_12_elias"
+  },
+  "campaign_metadata": {
+    "session_number": 28,
+    "colony_sol": 28,
+    "tick_id": 111,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Mitigating Isolated-Confined-Extreme (ICE) Third-Quarter cortisol cascades.",
+      "mid_term_milestone": "Survive the winter storms.",
+      "campaign_arc_climax": "Complete the Grand Projects."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Hearth",
+    "macro_silhouette": "The central dining hall is a warm timber expanse bathed in the amber glow of bioluminescent moss and flickering firelight. It offers a crucial psychological harbor against the howling static of the planetary storm outside.",
+    "sensory_palette": {
+      "sight_and_color": "Sixteen mugs raised in the warm circle of firelight while the captured geode hums beneath the floorboards.",
+      "sound": "The sharp, brittle silence of sixteen people breathing the same recycled air, underscored by the hum of the geode.",
+      "smell": "Rich, savory aromas of communal roast masking the sharp ozone of the storms outside.",
+      "tactile_temperature": "A welcoming, radiant heat from the hearth that melts the chill of the Enclave corridors."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "The Dinner Table",
+        "affordance_description": "The central focal point of the Feast, where physical proximity forces emotional decompression.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "The Roasting Spit",
+        "affordance_description": "A mechanism generating the savory smells and communal warmth needed to buffer cortisol cascades.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "The Subfloor Geode",
+        "affordance_description": "Captured energy source providing ambient hum and warmth to the timber hall.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "TOY_01",
+      "name_and_role": "Kaio's Culinary Sabotage",
+      "motivation_goal": "Add unfiltered excitement (and algae) to the group's dinner.",
+      "consistent_method": "Filtering soup stock through a suspiciously clean sock.",
+      "immediate_complication": "Causes immediate disgust and a near-mutiny among the logical minds.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "If unaddressed, the tension will boil over into a full shouting match, fracturing the fragile peace of the ICE conditions."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The group needs to eat the communal roast without killing each other.",
+      "level_2_local": "To buffer the autonomic hypervigilance caused by the Third-Quarter phenomenon.",
+      "level_3_campaign_arc": "To maintain the deep found-family fellowship necessary to survive the Enclave's harsh environment."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_12_elias",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      12,
+      15,
+      8,
+      19,
+      4
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.4,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The tension escalates into a full argument, failing to mitigate the cortisol cascade.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Elias misreads the room and makes a philosophical point that alienates everyone further.",
+        "below_dc_complicated_fail_forward": "The tension is partially broken, but residual annoyance remains, souring the meal.",
+        "meets_dc_clean_success": "A perfectly timed observation diffuses the tension into shared laughter and oxytocin release.",
+        "dc_plus_5_or_20_extended_lore": "The laughter not only clears the stress but sparks a profound philosophical realization about their shared humanity."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "The table was silent. Not the good, tired silence of a job well done. The sharp, brittle silence of sixteen people who had been breathing the same recycled air for too long. Elias sat near the head, his hands folded over his slate. He was ostensibly observing the physical mechanics of the Feast, but his real focus was the invisible web of cortisol and hypervigilance stretching between them. They were deep into the Third-Quarter phenomenon, that perilous midpoint of Isolated-Confined-Extreme existence where the sheer weight of survival began to fracture courtesy. The ambient hum of the captured geode beneath the floorboards did little to mask the tension.\n\nRyn slammed a ladle into the tureen, the sharp clatter echoing off the timber walls. She glared across the table at Kaio, who was attempting to look innocent while aggressively avoiding eye contact. He had, in a fit of misguided efficiency, decided to filter the communal soup stock through a sock. A clean sock, he protested, but the distinction was entirely lost on Ryn, and judging by the twitch in Silas's jaw, on the rest of the table as well. Elias watched the micro-expressions\u2014the narrowing eyes, the tightened lips. The group was teetering on the edge of a mutiny over a broth. He needed to defuse this, to archive the linguistic and epistemic memory of the sixteen so nothing true is lost to a petty squabble.\n\nHe opened his mouth, preparing a quiet Socratic question to reframe the dispute. A gentle reminder of what kind of ancestors they wished to become. But before the words could form, a sudden, heavy fatigue washed over him. The sheer absurdity of the situation\u2014sixteen polymaths, masters of quantum physics and xenobiology, ready to draw blood over hosiery\u2014struck him not as a philosophical teaching moment, but as an intolerable, immovable obstacle. His Taurus polarity inversion locked into place. The gentle philosopher vanished, replaced by an exhausted, unyielding stubbornness. He crossed his arms, leaned back in his chair, and fixed Kaio with a deadpan, withering stare, refusing to speak, refusing to mediate, simply waiting for the inevitable explosion to pass. He reached under the table, finding Elara's hand and passing her the slate, a silent abdication of the anchor's duty."
+    }
+  },
+  "base_snapshot_tick": 111,
+  "pre_roll_dc": 14
+}
