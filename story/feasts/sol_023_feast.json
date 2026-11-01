@@ -1,0 +1,55 @@
+{
+  "event_id": "sol_023_feast",
+  "tick_id": 92,
+  "colony_sol": 23,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-11-16T18:00:00Z",
+  "base_snapshot_tick": 90,
+  "event_type": "THE_FEAST_CONVERGENCE",
+  "active_pov_id": "enclave_14_vex",
+  "prev_next_pov_target": "enclave_14_vex",
+  "next_pov_target": "enclave_08_terra",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "location": "The Main Hall",
+  "active_location": {
+    "macro_silhouette": "A massive timber hall reinforced with high-entropy brass ribbing.",
+    "sensory_palette": {
+      "sight": "Warm hearth-fire and copper ankle-grounding wires catching the light.",
+      "sound": "Thunder hammering the reinforced shutters.",
+      "smell": "Roasted tubers and savory loam.",
+      "touch": "Static raising hair on bare arms.",
+      "taste_optional": "Maillard reaction popcorn and metallic copper."
+    },
+    "interactive_features": [
+      {
+        "feature": "A bubbling cauldron of stew",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature": "Copper grounding ankle wires",
+        "system_verb": "DEFEND"
+      },
+      {
+        "feature": "The massive reinforced timber doors",
+        "system_verb": "CONCEAL"
+      }
+    ]
+  },
+  "actors": [
+    "enclave_01_hector", "enclave_02_jane", "enclave_03_silas", "enclave_04_leo",
+    "enclave_05_kaio", "enclave_06_zara", "enclave_07_willow", "enclave_08_terra",
+    "enclave_09_orion", "enclave_10_isla", "enclave_11_kenna", "enclave_12_elias",
+    "enclave_13_ryn", "enclave_14_vex", "enclave_15_dorian", "enclave_16_elara"
+  ],
+  "summary": "Vex calculated relativistic magnetohydrodynamic tides between the binary suns before coming to dinner, only to find Ryn commanding the kitchen. The convergence grounds the family before handing the baton to Terra.",
+  "importance": 0.8,
+  "novelty_score": 0.6,
+  "science_vegetable": "Relativistic magnetohydrodynamic shear between the Red Giant's infrared coronal mass ejections and the Blue Dwarf's compressed ultraviolet bow shock.",
+  "state_deltas": {
+    "stress": -0.2
+  },
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "narrative_prose": "Vex sat on the roof, legs dangling over the edge. To the east, the Red Giant was rising, a bloated, angry eye that bathed the world in crimson. To the west, the Blue Dwarf was setting, a piercing diamond that cast razor-sharp shadows. The sky was a bruised violet where the two lights met, a visual manifestation of the relativistic magnetohydrodynamic shear between the Red Giant's infrared coronal mass ejections and the Blue Dwarf's compressed ultraviolet bow shock. He calculated the tidal perturbations on a brass slide rule, marveling at the cosmic tension. \"Perfect composition,\" he said to the empty air. \"The universe really outdid itself with the lighting engine today.\"\n\nHe dropped down through the hatch into the main hall, trading the freezing void for the suffocating warmth of sixteen people breathing the same air. Ryn was executing her nightly logistical campaign against hunger at the main cauldron. Vex leaned over, snagging a ladle and swirling it through the thick stew to consume it. \"Stirring velocity is inconsistent,\" Ryn barked. \"I'm introducing randomness,\" Vex grinned, ignoring the fact that he was supposed to be stirring at 40 RPM. \"Chaos theory adds flavor. It's the butterfly effect, Ryn. One stir here, a flavor explosion in someone's mouth later.\"\n\n\"It's a stew, not a weather system. Stir clockwise. 40 RPM,\" she retorted.\n\nVex looked around the table. Hector vibrating with energy, Silas staring at a smudge, Dorian checking the sensor readouts while adjusting his copper ankle wires to defend against static. If that Red Giant sneezed, they were toast. If the Blue Dwarf blinked, they would freeze. And here they were, sitting in the middle, eating soup and complaining about the RPM of a ladle. For a fraction of a second, the mask dropped. The sheer, terrifying vulnerability of the family hit him, triggering a brief Sentimentalist override. He placed a hand firmly on Ryn's shoulder, his voice completely stripping its irony. \"It smells incredible, Ryn. Thank you.\"\n\nShe paused, slightly disarmed, before nodding. Vex quickly recovered his grin and tossed the ladle to Terra, who was waiting quietly for her bowl by the massive timber doors that helped conceal them from the storm. \"Your turn to stir, botanist. Try not to over-calculate it.\" The baton was passed."
+}
