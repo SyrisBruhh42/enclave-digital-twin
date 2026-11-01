@@ -7,7 +7,11 @@
   "base_snapshot_tick": 94,
   "event_type": "SHADOW_ECONOMY_PRANK_SEEDED",
   "location": "The_Stormbreaker_Spire",
-  "actors": ["enclave_01_hector", "enclave_02_jane", "enclave_05_kaio"],
+  "actors": [
+    "enclave_01_hector",
+    "enclave_02_jane",
+    "enclave_05_kaio"
+  ],
   "summary": "Hector attempts to sneakily re-calibrate a cable coupling but it goes unnoticed by Jane, ultimately mildly inconveniencing Kaio.",
   "importance": 5,
   "novelty_score": 0.5,
@@ -34,5 +38,8 @@
       "stat_check": "dexterity"
     }
   ],
-  "narrative_prose": "The emerald phase-space butterfly wings rotated lazily across the brass-framed CRT monitors in the subterranean bunker. Up on the spire, Hector was hanging upside down from a safety harness, grinning against a howling fifty-knot wind. He was tweaking a gigajoule planetary lightning strike's trajectory, letting real-time Lorenz strange-attractor bifurcation targeting fire millisecond pre-strike ionization pulses to lock chaotic lightning onto collector rods at ninety-eight percent efficiency.\n\n\"It's not just a storm,\" Hector yelled over the wind, though his comms were muted. \"It's a battery! A big, angry, floating battery!\"\n\nHe had climbed up here to execute a flawlessly sneaky prank on Jane. He intended to slightly alter the inductance of the tertiary node just to see if she would catch the 0.5-degree asymmetrical cable coupling anomaly in the telemetry. It was a beautiful plan. \n\nThen the wind kicked up, and something inside Hector hitched. His Virgo polarity inversion gripped him with icy suddenness. A half-degree misalignment wasn't a prank anymore; it was an unacceptable aberration. He spent forty-five minutes painstakingly attempting to perfectly align the heavy copper coupling, his adrenaline-junkie bravado completely dissolving into an obsessive need for perfection, his gloves slipping on the sleet-slicked metal. \n\nDown in the bunker, Jane was busy analyzing atmospheric potentials and completely missed the subtle spike in the telemetry when he finally gave up and strapped it down. The only result of his paralyzed perfectionism was a misaligned junction box that Kaio would unfortunately discover during the next shift."
+  "narrative_prose": "The emerald phase-space butterfly wings rotated lazily across the brass-framed CRT monitors in the subterranean bunker. Up on the spire, Hector was hanging upside down from a safety harness, grinning against a howling fifty-knot wind. He was tweaking a gigajoule planetary lightning strike's trajectory, letting real-time Lorenz strange-attractor bifurcation targeting fire millisecond pre-strike ionization pulses to lock chaotic lightning onto collector rods at ninety-eight percent efficiency.\n\n\"It's not just a storm,\" Hector yelled over the wind, though his comms were muted. \"It's a battery! A big, angry, floating battery!\"\n\nHe had climbed up here to execute a flawlessly sneaky prank on Jane. He intended to slightly alter the inductance of the tertiary node just to see if she would catch the 0.5-degree asymmetrical cable coupling anomaly in the telemetry. It was a beautiful plan. \n\nThen the wind kicked up, and something inside Hector hitched. His Virgo polarity inversion gripped him with icy suddenness. A half-degree misalignment wasn't a prank anymore; it was an unacceptable aberration. He spent forty-five minutes painstakingly attempting to perfectly align the heavy copper coupling, his adrenaline-junkie bravado completely dissolving into an obsessive need for perfection, his gloves slipping on the sleet-slicked metal. \n\nDown in the bunker, Jane was busy analyzing atmospheric potentials and completely missed the subtle spike in the telemetry when he finally gave up and strapped it down. The only result of his paralyzed perfectionism was a misaligned junction box that Kaio would unfortunately discover during the next shift.",
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
+  }
 }
