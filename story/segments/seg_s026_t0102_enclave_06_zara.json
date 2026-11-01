@@ -1,0 +1,131 @@
+{
+  "segment_id": "seg_s026_t0102_enclave_06_zara",
+  "tick_id": 102,
+  "colony_sol": 26,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "base_snapshot_tick": 98,
+  "active_pov_id": "enclave_06_zara",
+  "next_pov_target": "enclave_10_isla",
+  "prev_next_pov_target": "enclave_06_zara",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "pacing_mode": "MULLIGAN_CRISIS",
+  "location": "The_Sanctuary",
+  "science_vegetable": "Enzymatic luciferin-luciferase oxidation gated by voltage-sensitive ion channels flashing in prime-number sequences and optical polarization modulation.",
+  "text": "The cave didn't end; it drowned.\nZara stood at the edge of the subterranean lake. The water was black, motionless, and heavy with iron. She watched as enzymatic luciferin-luciferase oxidation gated by voltage-sensitive ion channels began flashing in prime-number sequences. The optical polarization modulation cut through the pitch darkness, revealing the massive, shifting silhouette of an abyssal chemosynthetic cephalopod.\n\n\"Two, three, five, seven...\" she whispered, her internal monologue spilling out into the cavernous silence. Her boots sank into the ferro-moss ravines, the ironwood groves behind her dimly lit by ultraviolet auroras and the creature's oil-slick hex-pedal carapace camouflage. \"It's establishing syntax. Photophore syntax. Eleven. Thirteen...\"\n\nDespite the groundbreaking first-contact happening before her, she couldn't shake the gritty reality of her duties. She'd still have to muck out the Sanctuary feed pens tomorrow morning. The beast's massive, bioluminescent eye focused on her. She raised a hand, attempting to attract its attention with a counter-rhythm, but the sheer scale of the interaction was overwhelming. She firmly gripped the brass data slate, ensuring the telemetry was secure, and prepared to pass it to Isla, who was waiting at the edge of the grove to analyze the creature's feeding patterns.",
+  "campaign_metadata": {
+    "session_number": 26,
+    "colony_sol": 26,
+    "tick_id": 102,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Establish first-contact with the abyssal cephalopod and deliver the telemetry slate to Isla.",
+      "mid_term_milestone": "Decode the photophore syntax of the subterranean bio-fauna.",
+      "campaign_arc_climax": "Maintain ecological balance during the impending magnetic polarity shift."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Sanctuary",
+    "macro_silhouette": "The Sanctuary was a vast, subterranean cavern where ferro-moss ravines and ironwood groves were dimly lit by ultraviolet auroras. At its center lay a subterranean lake, the water black, motionless, and heavy with iron.",
+    "sensory_palette": {
+      "sight_and_color": "Ultraviolet auroras and the creature's oil-slick hex-pedal carapace camouflage",
+      "sound": "The cavernous silence broken by the rhythmic splashing of the massive cephalopod",
+      "smell": "Damp earth and the sharp tang of oxidized iron",
+      "tactile_temperature": "A bone-deep chill rising from the black lake",
+      "taste_optional": "Faint trace of metallic salt in the air"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Ferro-moss Ravines",
+        "affordance_description": "Spongy, treacherous terrain that requires careful footing.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Bioluminescent Photophores",
+        "affordance_description": "Flashing lights on the creature that can be mimicked to establish communication.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ironwood Groves",
+        "affordance_description": "Dense clusters of trees that offer cover from the creature's massive tentacles.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "abyssal_cephalopod",
+      "name_and_role": "Chemosynthetic Cephalopod",
+      "motivation_goal": "Understand the strange, new entity (Zara) in its territory",
+      "consistent_method": "Flashing complex photophore syntax in prime-number sequences",
+      "immediate_complication": "The creature's massive size and sudden movements threaten to crush Zara",
+      "pressure_index": 9,
+      "uninterrupted_escalation": "Will thrash wildly, causing a cave-in and burying the telemetry slate"
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Zara must secure the telemetry slate while keeping the creature calm.",
+      "level_2_local": "Isla needs the photophore syntax data to decode the local ecosystem's communication.",
+      "level_3_campaign_arc": "Understanding the abyssal fauna is crucial for the colony's long-term survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_06_zara",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_10_isla",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      5,
+      12,
+      19,
+      8
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.85,
+    "unresolved_conflict_ratio": 0.7,
+    "temporal_horizon_immediacy": 0.85,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_inference",
+      "model": "judge_v1",
+      "temperature": 0.1,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Zara misinterprets the syntax, provoking a sudden thrash from the creature that scrambles the telemetry slate.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "You mimic the wrong sequence, enraging the creature. The resulting wave smashes the slate against the rocks.",
+        "below_dc_complicated_fail_forward": "You secure the data, but the creature's thrashing splashes corrosive lake water on the slate, slightly warping the metrics.",
+        "meets_dc_clean_success": "You perfectly match the creature's rhythm, capturing pristine syntax data on the brass slate.",
+        "dc_plus_5_or_20_extended_lore": "You establish a brief, profound connection, gathering unprecedented telemetry that accelerates Isla's decryption."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Isla takes the damp brass slate, her eyes already scanning the raw, prime-number sequences. What does Isla do?"
+    }
+  },
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_06_zara"
+    ],
+    "interlocutor_full_cards_loaded": 0
+  }
+}
