@@ -1,0 +1,111 @@
+{
+  "base_snapshot_tick": 96,
+  "context_manifest": {
+    "active_pov_id": "enclave_13_ryn",
+    "next_pov_target": "enclave_04_leo",
+    "prev_next_pov_target": "enclave_13_ryn"
+  },
+  "campaign_metadata": {
+    "session_number": 25,
+    "colony_sol": 25,
+    "tick_id": 100,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Secure caloric reserves via precision gas-chromatograph Maillard reaction during an ionization storm.",
+      "mid_term_milestone": "Stabilize The Hearth & Metabolic Engine before winter cycle.",
+      "campaign_arc_climax": "Complete self-sufficiency of The Enclave against exoplanet hostility."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Hearth",
+    "macro_silhouette": "The heart of the Enclave, wrapped in reinforced timber and glowing softly against the storm. Copper grounding wires run along the baseboards, while a massive cast-iron cauldron dominates the center. Steam rises, carrying the rich scent of survival.",
+    "sensory_palette": {
+      "sight_and_color": "Warm hearth-fire, copper glints, and the amber glow of boiling broth.",
+      "sound": "Thunder hammering the shutters, punctuated by the rhythmic thud of a knife against a butcher block.",
+      "smell": "Popcorn-aromatic methional and roasted tubers.",
+      "tactile_temperature": "Sweltering near the hearth, chilled by drafts near the reinforced door.",
+      "taste_optional": "Rich, buttery, savory mushroom broth with an earthy finish."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Grounded Copper Baseboards",
+        "affordance_description": "Thick copper wires meant to ground stray electrical charges during storms.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Boiling Cast-Iron Cauldron",
+        "affordance_description": "A massive pot of enzymatic chitin stew that must be kept at precisely 72°C.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Aromatic Maillard Vents",
+        "affordance_description": "Steam vents that release the rich scent of roasted tubers to gather the family.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ionization_storm_cell",
+      "name_and_role": "Ionization Storm (Environmental Hazard)",
+      "motivation_goal": "To unleash atmospheric electrical chaos.",
+      "consistent_method": "Pulsing surges of stray static through the timber hall.",
+      "immediate_complication": "Electrifies any ungrounded metallic objects, including soup spoons.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Static buildup leading to lethal arcs inside the living quarters."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The Enclave needs hot food to combat the dropping temperatures and exhaustion.",
+      "level_2_local": "Precision culinary chemistry is required to make alien chitin palatable and nutritious.",
+      "level_3_campaign_arc": "Sustaining morale and caloric intake is foundational to the colony's survival against the exoplanet."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_04_leo",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [ 14, 8, 12, 18, 5 ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.3,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.65,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_engine",
+      "model": "deterministic-enclave-5section-v2",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The Maillard reaction fails, producing a bitter, toxic sludge that drops morale, or stray static arcs from an ungrounded spoon.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "The chitin bonds incorrectly, creating a rubbery texture, and a static shock hits the cook.",
+        "below_dc_complicated_fail_forward": "The food is edible but bland, and minor shocks make eating uncomfortable.",
+        "meets_dc_clean_success": "The precision 72°C enzymatic tenderization perfectly replicates buttered popcorn aromatics, while copper wires safely ground the static.",
+        "dc_plus_5_or_20_extended_lore": "A flawless culinary victory; the warmth and taste completely reset the colony's stress levels, overriding the storm's gloom."
+      }
+    },
+    "master_narrator": {
+      "executor": "local_llm",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Ryn did not cook; she executed a logistical campaign against hunger.\n\nThe kitchen was a zone of military precision. Knives were aligned by blade length. Spices were organized by Scoville unit. The massive cast-iron cauldron dominating the center of the Hearth was not merely boiling water; it was the focal point of a delicate thermodynamic equilibrium.\n\n\"Seventy-two degrees Celsius,\" Ryn muttered, tapping the analog thermometer with a fingernail. \"Not seventy-one. Not seventy-three. If the enzymatic breakdown of the chitin slows down, we're chewing on shoe leather. If it accelerates, we get mush.\"\n\nOutside, the ionization storm threw a temper tantrum. Thunder hammered the reinforced timber shutters, sending fine dust drifting from the rafters. The air in the room felt thick, heavy with the sharp, metallic tang of ozone that always accompanied the atmospheric friction. \n\n\"Spoons,\" Ryn barked, turning to the heavy wooden table where places were being set. \"Are they grounded?\"\n\nShe ran a hand along the thick copper grounding wire that snaked along the baseboards, intended to defend against the stray voltage currently turning the local atmosphere into a chaotic battery. Precision 72°C enzymatic chitin tenderization and gas-chromatograph methional flavor-pairing to trigger popcorn-aromatic Maillard reactions during an ionization storm was difficult enough without someone taking a fatal shock to the jaw from a soup spoon.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Ryn said to the empty room as the wind shrieked again. It was a familiar, dry comfort. The storm was a variable. She was the constant.\n\nShe tossed a handful of roasted, sliced tubers into the broth. The gas chromatograph hadn't lied. The methional in the tubers reacted instantly with the broken-down fungal chitin. A rich, savory cloud of steam erupted from the cauldron, carrying the undeniable, comforting scent of buttered popcorn. It was designed to attract, to pull her tired, irradiated family out of the cold and into the light.\n\nShe stirred, watching the golden liquid consume the ingredients. A sudden, jarring crack of static discharged from a metal prep bowl, stinging her knuckles. She winced, the sudden pain flashing white behind her eyes. Her breath hitched. The storm was getting closer, pushing harder.\n\nFor a moment, the rigid culinary commander wavered. The meticulous ledger of calories and temperatures slipped. What if the yeast didn't rise? What if the storm didn't break? She stared at the bubbling surface, the chaotic flow of the broth mirroring the swirling winds outside. \n\nThen, she heard the heavy, deliberate thud of worn boots entering the Hearth.\n\nShe didn't need to turn around to know who it was. She scooped a generous ladle of the golden, popcorn-scented broth into a thick ceramic bowl, carefully avoiding the metal handle, and held it out without looking.\n\n\"The copper holds,\" she said, her voice steady again.\n\nLeo took the bowl, the steam curling around his weathered face. \"Smells like a victory, Ryn.\""
+    }
+  }
+}
