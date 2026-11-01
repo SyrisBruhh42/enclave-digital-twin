@@ -1,0 +1,146 @@
+{
+  "event_id": "evt_s027_t0105_morning_intent",
+  "tick_id": 105,
+  "colony_sol": 27,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-11-20T00:12:00Z",
+  "base_snapshot_tick": 104,
+  "event_type": "MORNING_INTENT",
+  "location": "The_Stormbreaker",
+  "actors": [
+    "enclave_02_jane",
+    "enclave_07_willow"
+  ],
+  "active_pov_id": "enclave_02_jane",
+  "next_pov_target": "enclave_07_willow",
+  "prev_next_pov_target": "enclave_02_jane",
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "interlocutor_full_cards_loaded": 0,
+    "loaded_full_card_ids": [
+      "enclave_02_jane"
+    ]
+  },
+  "summary": "Jane sat cross-legged in the freezing muck at the base of the Stormbreaker, her hands blistered from the heavy iron shovel. Fifty meters above the valley floor, a violet laser needle stitched the bruised purple thunderhead to the screaming copper spire. She had spent the entire dawn shift modeling a planet-wide Lorenz strange attractor in phase space, optimizing the exact vector at which the atmospheric discharge would hit the collectors. Yet here she was, spending her afternoon digging a muddy trench by hand to ground a backup copper rod.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Willow said, dropping a coil of insulated wire onto the churned earth beside her.\n\n\"I am not complaining,\" Jane muttered, swiping a streak of mud from her cheek. \"I am simply stating a statistical absurdity. I can predict the exact microsecond a femtosecond laser-induced plasma channel will ionize a conductive step-leader highway at a 50 kilovolt-per-meter atmospheric potential gradient, guiding the strike directly into the bedrock capacitor geode. But I still have to move dirt with a stick.\"\n\n\"It's a shovel,\" Willow corrected, leaning against the damp retaining wall. \"And the dirt keeps the plasma from frying the entire grid. So keep digging.\"\n\nA sudden crack of thunder hammered the sky, vibrating the fillings in Jane's teeth. The atmospheric potential spiked on her brass-plated terminal. The raw energy was staggering, a chaotic system threatening to shatter the precise bounds of her equations. Her breath hitched. The stress of the overarching storm pushed against her analytical detachment, triggering her Leo vex override. Suddenly, the quiet logician needed her audience.\n\n\"Did you see that?\" Jane demanded, leaping to her feet and pointing dramatically at the terminal screen where her algorithm had just diverted a secondary surge. \"Look at the elegance of that code! I didn't just route the strike, Willow, I orchestrated it. It's deterministic chaos brought to heel, and it demands recognition!\"\n\nWillow raised an eyebrow, entirely unfazed by the sudden theatricality. \"Very impressive, maestro. Now take a bow and hand me the physical telemetry baton. It's my shift.\"\n\nJane blinked, the diva persona dissipating as quickly as it had arrived, leaving her shivering in the trench. She picked up the heavy brass baton from the console and pressed it firmly into Willow's gloved hand. \"The sky is yours,\" Jane said quietly. \"Don't let it crash.\"",
+  "importance": 8.0,
+  "novelty_score": 0.85,
+  "science_vegetable": "Femtosecond Laser-Induced Plasma Channels (LIPC) ionizing a conductive step-leader highway at 50 kV/m atmospheric potential gradient into the bedrock capacitor geode.",
+  "state_deltas": {
+    "stress_delta": 0.05
+  },
+  "relationship_deltas": [
+    {
+      "from": "enclave_02_jane",
+      "to": "enclave_07_willow",
+      "bond_delta": 0.02,
+      "trust_delta": 0.01
+    }
+  ],
+  "evidence_refs": [],
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 27,
+      "colony_sol": 27,
+      "tick_id": 105,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Establish morning intents while modeling Lorenz strange attractor phase space.",
+        "mid_term_milestone": "Automate the foundry production.",
+        "campaign_arc_climax": "Complete the grand projects."
+      }
+    },
+    "active_location": {
+      "location_id": "The_Stormbreaker",
+      "macro_silhouette": "A violet laser needle stitching the bruised purple thunderhead to a screaming copper spire fifty meters above the valley. Deep found-family fellowship and quiet subterranean bioluminescent wonder.",
+      "sensory_palette": {
+        "sight_and_color": "A bruised purple thunderhead lit from within by constant sheet lightning, and a violet laser piercing the cloud layer.",
+        "sound": "The wind tearing at the tower, screaming like a jet engine, and thunder hammering the sky.",
+        "smell": "Ozone and copper in the air.",
+        "tactile_temperature": "Cold, damp mud and the biting wind."
+      },
+      "interactive_features": [
+        {
+          "feature_name": "Muddy Trench",
+          "affordance_description": "Can be used to ground the copper rod and pull atmospheric charge safely into the earth.",
+          "system_verb": "ATTRACT",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Copper Spire",
+          "affordance_description": "Can shield the lower structures from the raw plasma energy.",
+          "system_verb": "DEFEND",
+          "associated_check_dc": 14
+        },
+        {
+          "feature_name": "Laser Terminal",
+          "affordance_description": "Can divert the ionization path to mask an overload from the primary grid.",
+          "system_verb": "CONCEAL",
+          "associated_check_dc": 14
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "entity_id": "Atmospheric Charge",
+        "name_and_role": "Lightning Step-Leader",
+        "motivation_goal": "Discharge gigajoules of energy into the path of least resistance.",
+        "consistent_method": "Building up a 50 kV/m atmospheric potential gradient.",
+        "immediate_complication": "Requires precise femtosecond laser firing.",
+        "pressure_index": 7,
+        "uninterrupted_escalation": "The lightning strikes unpredictably and causes catastrophic damage."
+      }
+    ],
+    "encounter_matrix": {
+      "three_levels_of_why": {
+        "level_1_immediate": "Need to hand off the shift and secure the grounding rod.",
+        "level_2_local": "Ensure the storm's energy is safely diverted into the geode.",
+        "level_3_campaign_arc": "Maintain infrastructure and trust for The Enclave."
+      },
+      "active_specialist_roles": [
+        {
+          "actor_id": "enclave_02_jane",
+          "tactical_role": "LEADER"
+        }
+      ],
+      "strain_accumulated_upward": 1,
+      "prerolled_hazard_queue": [
+        4,
+        8,
+        15,
+        16,
+        23
+      ]
+    },
+    "lpi_metrics": {
+      "relational_tension_density": 0.4,
+      "motivational_vector_saturation": 0.7,
+      "unresolved_conflict_ratio": 0.5,
+      "temporal_horizon_immediacy": 0.6,
+      "composite_lpi": 0.55,
+      "classification": "Campaign-Ready"
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "provider": "local_ai",
+        "model": "qwen3.5:4b-q4_K_M",
+        "temperature": 0.1,
+        "explicit_pre_roll_dc": 14,
+        "failure_stakes_declared": "The baton handoff is delayed due to an unpredictable lightning strike.",
+        "graduated_outcomes": {
+          "nat_1_false_intuition": "Catastrophic strike damages the tower.",
+          "below_dc_complicated_fail_forward": "Handoff complete but the grounding rod needs urgent recalibration.",
+          "meets_dc_clean_success": "Flawless handoff.",
+          "dc_plus_5_or_20_extended_lore": "Flawless handoff with new insight into atmospheric physics."
+        }
+      },
+      "master_narrator": {
+        "executor": "local_ai",
+        "temperature": 0.4,
+        "calypso_zero_raw_stats": true,
+        "prosodic_micro_pauses_enabled": true,
+        "agency_handoff_prompt": "Willow, the baton is yours. Watch the potential gradient."
+      }
+    }
+  }
+}
