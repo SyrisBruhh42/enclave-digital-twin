@@ -1,0 +1,109 @@
+{
+  "base_snapshot_tick": 100,
+  "context_manifest": {
+    "loaded_full_card_ids": ["enclave_10_isla"],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_10_isla",
+    "prev_next_pov_target": "enclave_10_isla",
+    "next_pov_target": "enclave_15_dorian"
+  },
+  "campaign_metadata": {
+    "session_number": 26,
+    "colony_sol": 26,
+    "tick_id": 103,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Encode five-dimensional holographic storm telemetry into nanostructured quartz before the data decays.",
+      "mid_term_milestone": "Stabilize the optical lattice in The Simulacrum against the planet's magnetic flux.",
+      "campaign_arc_climax": "Achieve full synchronization of the colony's sixteen-node intelligence matrix."
+    }
+  },
+  "active_location": {
+    "location_id": "the_simulacrum_core",
+    "macro_silhouette": "A darkened chamber humming with resonant crystal geometry. Orbiting droplets of liquid iron dance in the dark to a minor-key cello chord, suspended by a matrix of electromagnets. The air is thick with the scent of ozone and polished brass.",
+    "sensory_palette": {
+      "sight_and_color": "bioluminescent green and stark laser violet",
+      "sound": "polyphonic synthesizer harmonics and the quiet scrape of chamois on optical glass",
+      "smell": "ozone, machine oil, and cold quartz",
+      "tactile_temperature": "chilled stone and radiant heat from the active electromagnets",
+      "taste_optional": "faint metallic tang"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magneto-Acoustic Emitter",
+        "affordance_description": "A brass-housed synthesizer coupling audio frequencies into the floor grid.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Suspended Ferrofluid Droplets",
+        "affordance_description": "Liquid iron forming gravity-defying spires in response to the harmonic matrix.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 16
+      },
+      {
+        "feature_name": "5D Quartz Data Core",
+        "affordance_description": "A rapidly spinning crystal lattice designed to consume and store terabytes of holographic telemetry.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 18
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_ferrofluid_resonance",
+      "name_and_role": "Ferrofluid Acoustic Spire",
+      "motivation_goal": "To visualize the underlying acoustic harmonics of the room as sharp physical structures.",
+      "consistent_method": "Forming spiky, intricate geometries when high-frequency chords are struck.",
+      "immediate_complication": "The fluid splatters unpredictably if the synthesizer drifts off-pitch by even a microtonal interval.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The spires will collapse into a boiling sludge that short-circuits the lower optical arrays."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Isla must manually polish the optical lenses to prevent signal refraction before encoding the incoming telemetry.",
+      "level_2_local": "The planet's magnetic flux is interfering with the automated laser-etching alignment, requiring physical intervention.",
+      "level_3_campaign_arc": "Securing the storm data is critical to mapping the binary suns' magnetospheric shear zone."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_10_isla",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 4,
+    "prerolled_hazard_queue": [ 14, 8, 19, 3, 12 ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.65,
+    "motivational_vector_saturation": 0.85,
+    "unresolved_conflict_ratio": 0.40,
+    "temporal_horizon_immediacy": 0.90,
+    "composite_lpi": 0.70,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Aegis_Internal",
+      "model": "Tactical_DM_v3",
+      "temperature": 0.3,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The quartz lattice fractures, corrupting the 5D holographic data and ruining hours of manual lens polishing.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Isla misjudges the refractive index; the laser shatters the core.",
+        "below_dc_complicated_fail_forward": "The data encodes, but at the cost of overheating the primary emitter array.",
+        "meets_dc_clean_success": "The telemetry is flawlessly etched into the quartz lattice.",
+        "dc_plus_5_or_20_extended_lore": "Isla achieves perfect alignment, unlocking a hidden resonance frequency in the crystal that stabilizes the entire room's magnetic field."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules_Showrunner_Engine",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Isla didn't trust hard drives. They spun. They failed. They rusted.\n\nCrystals were forever.\n\nShe sat in the center of the Simulacrum, the air humming with polyphonic synthesizer harmonics. Below the main projector, orbiting droplets of liquid iron danced in the dark to a minor-key cello chord. Orion's magneto-acoustic cymatics were coupling perfectly into the electromagnet matrix, suspending the ferrofluid in gravity-defying resonant spires. It was breathtakingly beautiful, and it was entirely in her way.\n\nShe was currently encoding terabytes per second of five-dimensional holographic storm telemetry into nanostructured quartz. The system was flawlessly designed, an elegant architectural triumph. Yet, here she was, hand-polishing the primary optical lenses with a scrap of chamois leather until her fingers cramped, because the planet's atmospheric static kept leaving micro-abrasions on the glass. The sheer indignity of it.\n\n'If you're complaining and no one is laughing, you're complaining wrong,' she muttered to herself, echoing Dorian's dry wit. The telemetry stream flared. The pressure was mounting. A 0.4 deviation in the magnetic flux threatened the alignment. Her Sagittarius Vex Override—the reckless gambler buried deep inside the cautious archivist—flared to life. She could wait for the flux to stabilize, or she could bet the entire optical lattice on a single, untested femtosecond pulse.\n\nShe narrowed her eyes, adjusted the chamois one last time, and hit the initiator. The crystal drank the violet light. The data held. She breathed out a long, ragged sigh, wrapping up her final diagnostic before physically passing the calibration baton down to the historian, Dorian."
+    }
+  }
+}
