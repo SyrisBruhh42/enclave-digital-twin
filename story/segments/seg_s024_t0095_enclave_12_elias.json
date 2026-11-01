@@ -1,0 +1,74 @@
+{
+  "event_id": "seg_s024_t0095_enclave_12_elias",
+  "tick_id": 95,
+  "colony_sol": 24,
+  "day_phase": "DUSK_CRAFT",
+  "world_timestamp_iso": "2026-11-17T18:00:00Z",
+  "base_snapshot_tick": 95,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The Hearth / Main Hall",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_02_jane",
+    "enclave_03_silas",
+    "enclave_04_leo",
+    "enclave_05_kaio",
+    "enclave_06_zara",
+    "enclave_07_willow",
+    "enclave_08_terra",
+    "enclave_09_orion",
+    "enclave_10_isla",
+    "enclave_11_kenna",
+    "enclave_12_elias",
+    "enclave_13_ryn",
+    "enclave_14_vex",
+    "enclave_15_dorian",
+    "enclave_16_elara"
+  ],
+  "summary": "Elias observes Third-Quarter friction as Kaio's improvised sock-filtration almost causes a mutiny.",
+  "importance": 0.6,
+  "novelty_score": 0.4,
+  "science_vegetable": "Mitigating Isolated-Confined-Extreme (ICE) Third-Quarter cortisol cascades and autonomic hypervigilance through structured communal roast rituals and oxytocin vagal buffering.",
+  "state_deltas": {
+    "stress_delta": -0.22,
+    "agreeableness_state": 0.12
+  },
+  "relationship_deltas": {
+    "enclave_12_elias_to_enclave_05_kaio": 0.05
+  },
+  "evidence_refs": [],
+  "active_pov_id": "enclave_12_elias",
+  "prev_next_pov_target": "enclave_12_elias",
+  "next_pov_target": "enclave_16_elara",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "active_location": {
+    "sensory_palette": {
+      "sight": "Warm, flickering firelight illuminating sixteen faces and brass plates.",
+      "sound": "The chaotic overlap of technical arguments and clinking copper spoons.",
+      "smell": "Rich, roasted tubers and the faint, savory scent of Maillard-browned fungi.",
+      "touch": "The comforting, solid grain of the long communal timber table.",
+      "taste_optional": "Earthy, robust soup stock, slightly tinged with the memory of an argument."
+    },
+    "interactive_features": [
+      {
+        "feature_id": "communal_roast_ritual",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14,
+        "description": "Engage in the shared meal to naturally mitigate cortisol buildup and autonomic hypervigilance."
+      },
+      {
+        "feature_id": "mutinous_table_friction",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 12,
+        "description": "De-escalate the brewing conflict sparked by an improvised filtering incident."
+      },
+      {
+        "feature_id": "vagal_buffering_laughter",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 11,
+        "description": "Foster genuine camaraderie to re-synchronize the group's frayed cohesion."
+      }
+    ]
+  },
+  "narrative_prose": "The table was silent. Not the good, tired silence of a job well done. The sharp, brittle silence of sixteen people who had been breathing the same recycled air for too long.\n\nElias sat near the center of the communal timber table, the captured geode humming softly beneath the floorboards of the main hall. As the Enclave's quiet phenomenologist, his primary diagnostic tool was to consume information through careful observation. He tracked the Third-Quarter phenomenon: that inevitable mid-mission slump where isolation, confinement, and extreme environments began to fray the edges of sixteen hyper-competent minds. The micro-stressors were mounting. Cortisol cascades were manifesting as autonomic hypervigilance. Hector was vibrating with unspent kinetic energy, tapping his copper spoon a fraction of a beat too fast, and Silas was meticulously re-aligning his bread plate.\n\nThey needed a release, a structured communal roast ritual to buffer their vagal nerve responses with oxytocin. Instead, they had soup.\n\n\"So,\" Dorian said from Elias's right, his voice dry as parchment. \"Who decided to revolutionize the water filtration system?\"\n\nThe silence grew tighter. Elias watched Kaio shrink slightly into his collar.\n\n\"It wasn't a revolution,\" Kaio mumbled. \"It was... an optimization.\"\n\n\"An optimization?\" Ryn slammed a ladle down, the sound echoing sharply against the warm brass of the kitchen alcove. \"It was dispensing algae-sludge into the broth! I had to filter it through a sock, Kaio. A sock!\"\n\n\"It was a clean sock!\" Kaio protested, looking around the table for support. \"I boiled it! Thermally sterile!\"\n\nThe table erupted. The carefully maintained peace of the Enclave shattered as engineering clashed with biology. Silas declared that fabric fibers would induce catastrophic structural failure in his digestive tract, while Jane argued that the porosity of cotton was theoretically sufficient for macro-particulate filtration. Elias felt the familiar prickle of a Vex Override threatening to take hold. Under extreme stress, his usual fluid empathy hardened into Taurus-like stubbornness\u2014he would plant his heels and defend his ground, refusing to validate the chaos. He crossed his arms, assuming an immovable, deadpan stare.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Elias said, his voice quiet but carrying perfectly through the noise.\n\nThe argument faltered. Vex stood up, seizing the momentary gap. \"You're all ignoring the obvious,\" Vex declared, pointing a bread roll at the ceiling. \"Mercury is in retrograde, and Kaio is a Capricorn. It was inevitable.\"\n\n\"Mercury isn't even in this solar system, Vex,\" Silas blinked, genuinely derailed.\n\n\"Spiritually, it is,\" Vex insisted.\n\nA giggle snorted out of Zara. Then a low chuckle from Leo. Suddenly, the tension broke. Elias let his stubborn posture melt as the laughter rolled across the timber hall\u2014not polite laughter, but hysterical, rib-aching relief. The absurdity had successfully helped to attract genuine laughter, triggering a rapid cortisol flush.\n\nSixteen mugs raised in the warm circle of firelight while the captured geode hums beneath the floorboards. Elias caught Elara's eye across the table. As the medic, she offered a subtle nod, recognizing the crisis had passed. He pushed his own bowl toward her, offering a quiet, physical baton handoff.\n\n\"Eat your soup, Elara,\" he smiled. \"It has character.\""
+}
