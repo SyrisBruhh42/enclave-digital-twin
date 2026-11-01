@@ -364,7 +364,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.1928,
+      "stress": 0.2258,
       "fatigue": 0.06,
       "sleep_debt_norm": 0.06,
       "kp_exo": 3.51,
@@ -493,7 +493,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.1928,
+      "stress": 0.2258,
       "fatigue": 0.06,
       "sleep_debt_norm": 0.06,
       "kp_exo": 3.51,
@@ -1054,7 +1054,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.1928,
+      "stress": 0.2258,
       "fatigue": 0.06,
       "sleep_debt_norm": 0.06,
       "kp_exo": 3.51,
@@ -1183,7 +1183,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.1928,
+      "stress": 0.2258,
       "fatigue": 0.06,
       "sleep_debt_norm": 0.06,
       "kp_exo": 3.51,
@@ -1421,9 +1421,10 @@
     }
   },
   "applied_event_ids": [
+    "evt_s028_t0109_morning_intent",
     "evt_s028_t0109_world_consequence"
   ],
-  "total_events_through_tick": 132,
+  "total_events_through_tick": 133,
   "recent_segments": [
     {
       "segment_id": "seg_s024_t0094_enclave_11_kenna",
