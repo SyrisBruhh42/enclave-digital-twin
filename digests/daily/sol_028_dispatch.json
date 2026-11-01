@@ -1,0 +1,55 @@
+{
+  "tick_id": 112,
+  "colony_sol": 28,
+  "base_snapshot_tick": 108,
+  "day_phase": "THE_FEAST",
+  "four_block_digests": {
+    "DAWN_SHIFT": {
+      "headline": "Dawn",
+      "narrative_prose": "Terra cultivated logic-gate hyphae using pepper-scented epoxy while balancing soil pH, frustrated until Kenna intervened.",
+      "cited_event_ids": [
+        "evt_s028_t0109_morning_intent"
+      ]
+    },
+    "MIDDAY_EXPEDITION": {
+      "headline": "Midday",
+      "narrative_prose": "Kenna attempted to use psychoactive Lyceum bryophytes to ease Silas's paralyzing order fixation.",
+      "cited_event_ids": [
+        "evt_s028_t0110_expedition_consequence",
+        "evt_s028_t0110_shadow_prank"
+      ]
+    },
+    "THE_FEAST": {
+      "headline": "Feast",
+      "narrative_prose": "Elara enforced strict triage at the dinner table, checking vitals before any food was served.",
+      "cited_event_ids": [
+        "evt_s028_t0109_morning_intent"
+      ]
+    },
+    "EVENING_DISPATCH": {
+      "headline": "Evening",
+      "narrative_prose": "Elara finalized her checks, ensuring Silas ate despite his complaints about grounded spoons.",
+      "cited_event_ids": [
+        "evt_s028_t0109_morning_intent"
+      ]
+    }
+  },
+  "lead_story": {
+    "headline": "Structured Communal Roast Rituals",
+    "cited_event_ids": [
+      "evt_s028_t0109_morning_intent"
+    ],
+    "actors": [
+      "enclave_08_terra",
+      "enclave_11_kenna"
+    ],
+    "location": "The_Genesis_Garden"
+  },
+  "segments": [
+    {
+      "active_pov_id": "enclave_16_elara",
+      "next_pov_target": "enclave_03_silas",
+      "narrative_prose": "The Feast that night was different. It wasn't loud. It was warm. The Stormbreaker hummed with captured energy. The Living Atlas glowed with a stable map. The Mycelial network pulsed with a gentle, rhythmic green. Sixteen mugs raised in the warm circle of firelight while the captured geode hums beneath the floorboards. Elara stood at the head of the long timber table, checking the biometric telemetry on her slate. She wasn't just serving dinner; she was synthesizing xenobotanical genetics and human resilience into a living bridge with Kepler-452b. The air smelled of roasted tubers and savory loam.\n\n\"Cortisol baselines are elevated across the board,\" Elara announced, her voice a brisk, reassuringly authoritative clip as she tracked radiation dosimetry for sixteen stubborn geniuses. \"No one is eating until I verify your hydration indices.\"\n\nSilas shifted uncomfortably on the bench. He spent the afternoon obsessing over microscopic particulates in the Lyceum. Now, he glared at his bowl as if it were a structural defect. \"The soup tastes metallic,\" Silas grumbled. He tugged at the thick copper grounding wire firmly secured around his ankle, a preventative measure against the fluctuating magnetic fields. \"Eating with an active ground loop alters the ionic profile of the broth.\"\n\nElara paused, adjusting the brass clasp on her medical satchel. It jammed, as it always did, a small mundane frustration. BUT the immense pressure of keeping her family functional threatened to buckle her composure, the stress of the day pushing her toward her Scorpio polarity inversion. The warm caregiver vanished for a heartbeat. In her place stood a ruthless, unblinking triage commander.\n\n\"I don't care if you're eighty-two years old and invented the induction baffle, Silas,\" Elara said softly, her voice carrying an edge of theatrical menace. \"Your blood pressure is 148 over 92, your fingers are stiff from cold-forging, and you are eating this soup.\"\n\nSilas froze. The sheer intensity of her gaze paralyzed his argument. The quiet murmur of the table halted. THEREFORE \"If you're complaining and no one is laughing, you're complaining wrong,\" Ryn chimed in from the kitchen pass, breaking the tension with dry, affectionate banter.\n\nElara's expression softened, the ruthless commander receding as the shared ritual buffered the collective strain. She picked up a steaming bowl of the dark, rich stew and placed it firmly in front of Silas. \"Eat,\" she commanded gently, passing him the heavy iron spoon, confirming the physical handoff."
+    }
+  ]
+}
