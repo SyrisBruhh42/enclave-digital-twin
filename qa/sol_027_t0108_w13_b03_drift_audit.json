@@ -1,0 +1,31 @@
+{
+  "tick_id": 108,
+  "colony_sol": 27,
+  "day_phase": "THE_FEAST",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "science_vegetable": "Relativistic magnetohydrodynamic shear between the Red Giant's infrared coronal mass ejections and the Blue Dwarf's compressed ultraviolet bow shock.",
+  "active_pov_id": "enclave_14_vex",
+  "next_pov_target": "enclave_08_terra",
+  "prev_next_pov_target": "enclave_14_vex",
+  "text": "Vex sat on the observatory roof, his boots dangling over the brass precipice. Above him, the sky was a bruised violet twilight, a chaotic canvas stretched thin between two warring stars. To the east, the Red Giant was rising, a bloated, angry eye bleeding infrared heat across the clouds. To the west, the Blue Dwarf was sinking, a compressed diamond of ultraviolet fury that sliced double razor-sharp shadows across the hand-built shingles of the dome. He tapped his fingers on his knee, tracing the relativistic magnetohydrodynamic shear where the giant's coronal mass ejections collided with the dwarf's bow shock. It was a beautiful, terrifying geometry. \n\n\"The telemetry is locked, Vex,\" Jane's voice crackled through his earpiece, dry and impatient. \"The magnetic reconnection arcs are stable. Get down here and stir the stew. 40 RPM, Ryn said.\"\n\nVex sighed, adjusting his goggles. \"I am calculating the tidal perturbations of a binary system that wants to peel our atmosphere like an orange, Jane. And you want me to stir a pot.\"\n\n\"The pot doesn't care about your astrophysics,\" Jane replied. \"And neither does Ryn if the chitin burns.\"\n\nHe watched a flare from the Red Giant whip across the sky, painting the clouds in violent crimson. It was awe-inspiring, the sheer scale of the forces at play. A sudden, fierce protectiveness washed over him for the small, fragile family huddled below him in the timber hall. Under the suffocating pressure of the twin suns, his usual irreverence peeled away, revealing a quiet, sentimental core. He would guard them against this cosmic chaos, even if it meant arguing about stirring velocity.\n\n\"Fine,\" Vex muttered, sliding back from the edge. \"I'm coming down. But I'm introducing a variable off-axis swirl. Chaos theory adds flavor.\"\n\nHe descended the iron ladder, his mind still racing with magnetic flux lines and plasma density, until he hit the ground and practically collided with Terra. She was carrying a tray of freshly harvested tubers, her eyes wide with a different kind of discovery.\n\n\"Terra,\" Vex said, catching a falling tuber. \"Just in time. The sky is trying to kill us with math, but the stew needs stirring. Tag, you're it.\"",
+  "actors": [
+    "enclave_14_vex",
+    "enclave_08_terra",
+    "enclave_02_jane"
+  ],
+  "interactive_features": [
+    {
+      "system_verb": "CONCEAL"
+    },
+    {
+      "system_verb": "ATTRACT"
+    },
+    {
+      "system_verb": "DEFEND"
+    }
+  ],
+  "event_type": "INCHARACTER_PSYCHOMETRIC_DRIFT_AUDITS",
+  "associated_check_dc": 14,
+  "pre_roll_check_dc": 14
+}
