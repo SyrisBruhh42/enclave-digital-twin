@@ -106,7 +106,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.2791,
+      "stress": 0.3211,
       "fatigue": 0.06,
       "sleep_debt_norm": 0.06,
       "kp_exo": 7.29,
@@ -321,7 +321,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.2791,
+      "stress": 0.3211,
       "fatigue": 0.06,
       "sleep_debt_norm": 0.06,
       "kp_exo": 7.29,
@@ -804,7 +804,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.2791,
+      "stress": 0.3211,
       "fatigue": 0.06,
       "sleep_debt_norm": 0.06,
       "kp_exo": 7.29,
@@ -1019,7 +1019,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.2791,
+      "stress": 0.3211,
       "fatigue": 0.06,
       "sleep_debt_norm": 0.06,
       "kp_exo": 7.29,
@@ -1436,8 +1436,10 @@
       "morale": 0.5
     }
   },
-  "applied_event_ids": [],
-  "total_events_through_tick": 126,
+  "applied_event_ids": [
+    "evt_s027_t0105_morning_intent"
+  ],
+  "total_events_through_tick": 127,
   "recent_segments": [
     {
       "segment_id": "seg_s023_t0090_enclave_07_willow",

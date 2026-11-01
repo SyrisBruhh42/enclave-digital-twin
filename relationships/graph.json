@@ -424,15 +424,16 @@
       "squad_a": "The Forge",
       "squad_b": "The Wilds",
       "relationship_type": "Mentor_Mentee",
-      "bond_strength": 0.72,
-      "trust": 0.76,
+      "bond_strength": 0.74,
+      "trust": 0.77,
       "affection": 0.73,
       "intellectual_friction": 0.49,
       "how_a_sees_b": "Appreciates Willow's generous cross-disciplinary advice and loves hearing Willow's stories of Old Earth during Evening Dispatch.",
       "how_b_sees_a": "Watches over Jane's work on The Stormbreaker with fond cross-squad mentorship, offering The Wilds insights whenever Jane asks.",
       "shared_history_hook": "Collaborated across The Forge and The Wilds during last winter's spore-fog lock-in to cross-calibrate The Stormbreaker with The Genesis Garden.",
       "evidence_refs": [
-        "evt_s023_t0089_morning_intent"
+        "evt_s023_t0089_morning_intent",
+        "evt_s027_t0105_morning_intent"
       ]
     },
     {
@@ -6594,5 +6595,5 @@
     }
   },
   "updated_at_tick": 105,
-  "applied_event_count": 126
+  "applied_event_count": 127
 }
