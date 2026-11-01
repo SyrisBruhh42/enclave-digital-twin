@@ -1,0 +1,115 @@
+{
+  "base_snapshot_tick": 110,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_11_kenna"
+    ],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_11_kenna",
+    "next_pov_target": "enclave_12_elias",
+    "prev_next_pov_target": "enclave_11_kenna"
+  },
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 28,
+    "tick_id": 110,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Re-synchronize pineal circadian rhythms scrambled by Schumann resonance anomalies.",
+      "mid_term_milestone": "Stabilize the Lyceum of the Mind environment.",
+      "campaign_arc_climax": "Mastering the exoplanet's neuro-somatic magnetobiology."
+    }
+  },
+  "active_location": {
+    "location_id": "lyceum_sensory_chamber",
+    "macro_silhouette": "The sensory attenuation chamber is enveloped in near-absolute darkness, humming softly with acoustic shielding and magnetic dampening field generators. It functions as a zero-buoyancy flotation tank isolated from the planet's atmospheric volatility.",
+    "sensory_palette": {
+      "sight_and_color": "ambient glow",
+      "sound": "absolute zero noise",
+      "smell": "sterile water",
+      "tactile_temperature": "warm liquid",
+      "taste_optional": "faint metallic tang"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Acoustic Shielding Generators",
+        "affordance_description": "Can be modulated to dampen external frequencies.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Zero-Buoyancy Tank",
+        "affordance_description": "Allows physical suspension to isolate somatosensory inputs.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Psychoactive Bryophyte Infusion",
+        "affordance_description": "Absorbs neural static and promotes melatonin regulation.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_schumann_resonance",
+      "name_and_role": "Planetary Schumann Resonance Anomaly",
+      "motivation_goal": "Scramble pineal circadian rhythms of the colonists.",
+      "consistent_method": "Emits electromagnetic static across the base.",
+      "immediate_complication": "Causes sleep debt and hypervigilance among the crew.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Colonists will experience severe psychological inversion if unchecked."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Silas is compulsively scrubbing the floor at 0300 hours due to severe stress.",
+      "level_2_local": "The storm's magnetic residue has disrupted his pineal gland and circadian rhythm.",
+      "level_3_campaign_arc": "The exoplanet's environment constantly tests the colonists' psychological stability."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_11_kenna",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [8, 12, 15, 6, 19]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Anthropic",
+      "model": "claude-3-opus-20240229",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Silas's Vex Override locks him into a permanent state of hyper-order, compromising his ability to function.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kenna misinterprets the resonance, worsening the neural static.",
+        "below_dc_complicated_fail_forward": "Silas enters the tank but the flotation process is rocky, causing temporary unease.",
+        "meets_dc_clean_success": "Silas successfully resets his circadian rhythm in the zero-dust environment.",
+        "dc_plus_5_or_20_extended_lore": "The psychoactive bryophytes not only reset his rhythm but unlock a new level of neural synchronization."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "The storm had passed, but the static remained. It clung to the Enclave like a second skin.\n\nKenna walked the halls of the sleeping quarters, checking the bio-monitors. It was 0300 hours, yet half the family was awake. The air pressure had dropped too quickly, and the magnetic residue played havoc with the colony's circadian rhythms.\n\nShe found Silas scrubbing the floor panel outside the galley. His hands moved in rigid, mechanical circles. The planetary Schumann resonance anomalies had scrambled his pineal gland. The persistent electromagnetic flux mimicked high noon, suppressing his melatonin production and flooding his serotonin receptors with static.\n\n\"It is not clean,\" Silas muttered. He scrubbed the pristine metal harder. \"The dust. It is everywhere.\"\n\nHe sought to scrub away an invisible threat. She needed to break the loop, administer the psychoactive Lyceum bryophytes, and initiate zero-dust flotation to decouple his nervous system from the magnetic variance. But the harsh chemical tang of the cleaning solvent stung her nose. A sharp spike of her own Aquarius detachment—a clinical urge to simply log his biometric telemetry and walk away—rose in her throat.\n\nShe held the rigging and high-altitude lifelines taut when the katabatic gales hit the exterior shielding. Here inside, she coaxed Silas off his hands and knees at 0300 hours with a promise of zero dust. She knelt beside him, placing a warm hand over his trembling fingers. He flinched, then froze.\n\n\"The floor is structurally sound, Silas,\" Kenna said. Her tone remained carefully modulated, a precise acoustic instrument designed to induce alpha brain waves. \"The dust is negligible. You need REM sleep.\"\n\n\"I just want it to be clean,\" he whispered, a brittle edge to his voice.\n\n\"I know,\" Kenna said, her smile gentle. \"If you're complaining and no one is laughing, you're complaining wrong. Come to the Lyceum. Elias has the sensory deprivation tank ready. Zero gravity. Zero dust. Just you and the void.\"\n\nHe stopped scrubbing. \"Zero dust?\"\n\n\"Absolute zero.\"\n\nSilas lowered the brush, a long exhale leaving his lungs. Therefore, he stood up, leaning slightly on her shoulder as they walked down the humming corridor.\n\nShe led him to the isolation chamber. The dark water within sat perfectly still. It would conceal his physical form from harsh sensory inputs, consume the residual static through the suspended psychoactive moss, and defend his fragile neurochemistry against the ongoing geomagnetic storm.\n\nKenna watched him submerge, noting the immediate drop in his heart rate on the glass monitor. She picked up the intercom, dialing the observation deck. \"Elias. The subject is stabilized. He is yours now. Keep the tank parameters locked.\""
+    }
+  }
+}
