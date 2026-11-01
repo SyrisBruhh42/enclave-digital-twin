@@ -725,8 +725,21 @@ class SovereignMarchEpochBridge:
             cls_info["kepler_name"] if terminology_mode == "kepler_exoplanet" else cls_info["classic_name"]
         )
 
+        if self.sol_number == 29:
+            opening_line = (
+                "Bioluminescent spores drifted across the basalt sump as the Mycena lucentipes luminescence curve dropped twelve percent below baseline."
+            )
+        elif self.sol_number >= 30:
+            opening_line = (
+                "Twin-sun coronal induction hummed through the obsidian gallery, driving stray eddy currents across the Schumann phase-lock array."
+            )
+        else:
+            opening_line = (
+                "The Bourdon pressure gauge on Sector 4 climbed past forty-two megapascals as the armored column breached the basalt causeway."
+            )
+
         raw_prose = (
-            f"The Bourdon pressure gauge on Sector 4 climbed past forty-two megapascals as the armored column breached the basalt causeway. "
+            f"{opening_line} "
             f"{pov_name} locked the {job_title} housing into the highground detent. "
             f"The gasket held.\n\n"
             f"Across {waves_cleared} assault waves, the squad repositioned {reposition_count} times along the catwalk and triggered {total_synergies} dual-element catalyst detonations before the carapace vanguard reached the inner sluice. "
