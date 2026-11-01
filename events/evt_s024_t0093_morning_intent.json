@@ -1,0 +1,103 @@
+{
+  "event_id": "evt_s024_t0093_morning_intent",
+  "tick_id": 93,
+  "colony_sol": 24,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-11-17T06:00:00Z",
+  "base_snapshot_tick": 89,
+  "event_type": "MORNING_INTENT",
+  "location": "The Genesis Garden",
+  "actors": [
+    "enclave_08_terra",
+    "enclave_11_kenna"
+  ],
+  "summary": "Terra decodes planetary fungal action-potential syntax while hauling crushed basalt gravel, before handing off to Kenna.",
+  "importance": 0.7,
+  "novelty_score": 0.8,
+  "science_vegetable": "Deciphering action-potential spike trains and source-sink phosphorus routing verbs ('Flowing', 'Listen', 'We Hear') across the valley-wide mycorrhizal supercomputer.",
+  "state_deltas": {
+    "stress": 0.1
+  },
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "active_pov_id": "enclave_08_terra",
+  "prev_next_pov_target": "enclave_08_terra",
+  "next_pov_target": "enclave_11_kenna",
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_08_terra"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "narrative_prose": "\"It's not a noun,\" Terra murmured, staring at the data stream pulsing across the optical transceiver. \"It's a verb.\"\n\nShe wiped a streak of damp soil from her forehead, her muscles aching with the kind of deep, systemic fatigue that came from arguing with gravity for three straight hours. The subterranean root-cathedral around her was a masterpiece of quiet, bioluminescent wonder. Emerald and gold waves of light rippled through the colossal mycorrhizal structures, casting long, shifting shadows across the greenhouse beds. It was a valley-wide supercomputer, and she was listening to it think.\n\n\"The blue-blue-green sequence,\" she noted in her log, her voice a soft hum against the absolute acoustic silence of the cavern. \"It doesn't mean 'Water'. It means 'Flowing'. It's an instruction for source-sink phosphorus routing.\"\n\nIt was breathtaking. It was the biological equivalent of deciphering an alien programming language. It was also, unfortunately, not going to fix the terrestrial seedling beds.\n\nWith a heavy sigh, Terra turned away from the transceiver and picked up the heavy, iron-handled bucket. Inside was forty pounds of crushed basalt gravel. The native fungal network was a marvel of calcium-ion logic gates and enzymatic action-potential spike trains, but her Old Earth heirloom tomatoes didn't care about prime-number luciferin syntax. They cared about soil pH. And right now, the local loam was too acidic. She had to haul the gravel by hand, broadcasting the mineral dust over the beds to buffer the acidity before the roots burned.\n\nShe dumped the bucket, the sharp, metallic crunch of the basalt shattering the cathedral's silence. The absurdity of it gnawed at her. She was having a conversation with a planetary motherboard, yet she was still reduced to moving rocks like a peasant from the Middle Ages. Her Aries override twitched in her chest\u2014a sudden, irrational urge to throw the bucket through the glass and demand the planet balance its own damn chemistry.\n\nShe didn't. She took a breath, anchoring herself in the steady rhythm of the work. If you're complaining and no one is laughing, you're complaining wrong, Willow always said. Terra smiled grimly and grabbed the next bucket.\n\nFootsteps, soft and deliberate, approached from the main corridor. Kenna. The neuro-psychologist walked with a quiet grace, her eyes already scanning Terra's posture, no doubt calculating her cortisol levels just by the slump of her shoulders.\n\n\"You look like you're carrying the weight of the world, Terra,\" Kenna said gently, stopping at the edge of the bed.\n\n\"Just the weight of its chemistry,\" Terra replied, dusting off her hands. \"The forest says it's flowing. The tomatoes say it's burning. I'm trying to arrange a compromise.\"",
+  "showrunner_ledger": {
+    "campaign_metadata": {
+      "session_number": 24,
+      "colony_sol": 24,
+      "tick_id": 93,
+      "pacing_mode": "MERCER_IMMERSIVE",
+      "consequential_fights_since_short_rest": 0,
+      "horizon_goals": {
+        "immediate_session_goal": "Balance soil pH while maintaining the mycorrhizal translation connection.",
+        "mid_term_milestone": "Map the valley-wide fungal action-potential network.",
+        "grand_campaign_finale": "Establish a permanent, harmonious dialogue with the planet's biosphere."
+      }
+    },
+    "active_location": {
+      "macro_silhouette": "A sweeping subterranean root-cathedral rippling with emerald and gold bioluminescent waves.",
+      "sensory_palette": {
+        "sight": "Emerald and gold bioluminescent waves passing through colossal root structures.",
+        "sound": "Total acoustic silence broken only by the crunch of basalt gravel.",
+        "smell": "Rich, damp earth and the sharp metallic tang of crushed basalt.",
+        "touch": "The rough, heavy weight of a gravel bucket against calloused hands.",
+        "taste_optional": "A faint trace of mineral dust in the air."
+      },
+      "interactive_features": [
+        {
+          "system_verb": "CONSUME",
+          "description": "Feed crushed basalt to the soil to raise the pH level.",
+          "associated_check_dc": 14
+        },
+        {
+          "system_verb": "ATTRACT",
+          "description": "Coax phosphorus routing from the source-sink network."
+        },
+        {
+          "system_verb": "CONCEAL",
+          "description": "Hide the strain of physical labor from Kenna's empathetic gaze."
+        }
+      ]
+    },
+    "reactive_toys": [
+      {
+        "pressure_index": 5,
+        "motivation_goal": "Terra wants to understand the full 'sentence' the forest is speaking.",
+        "consistent_method": "Patient observation and gradual soil amendment.",
+        "immediate_complication": "The physical toll of carrying gravel distracts from the mental translation.",
+        "uninterrupted_escalation": "Without the basalt, the terrestrial seedlings will reject the soil before the fungal connection stabilizes."
+      }
+    ],
+    "encounter_matrix": {
+      "hostile_threats": [],
+      "neutral_bystanders": [],
+      "allied_support": [
+        "enclave_11_kenna"
+      ]
+    },
+    "lpi_metrics": {
+      "lethality_probability": 0.05,
+      "player_agency_index": 0.9,
+      "narrative_momentum": 0.8
+    },
+    "dual_agent_contract": {
+      "judge_tactician": {
+        "tactical_state_mutations": [],
+        "explicit_pre_roll_dc": 14
+      },
+      "master_narrator": {
+        "agency_handoff_prompt": "Kenna approaches quietly as Terra drops another bucket of gravel."
+      }
+    }
+  }
+}
