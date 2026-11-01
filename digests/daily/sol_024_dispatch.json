@@ -1,0 +1,51 @@
+{
+  "dispatch_id": "dispatch_sol_024",
+  "tick_id": 96,
+  "colony_sol": 24,
+  "base_snapshot_tick": 96,
+  "title": "Evening Dispatch Sol 24",
+  "headline": "Evening Dispatch",
+  "anchor_intro": "Elara adjusted the heavy brass dial of the intercom, her deft hands a blur of practiced precision. To the east, the Red Giant bathed the colony in crimson, while to the west, the Blue Dwarf cast long, sharp double shadows. The Feast that night was different. It wasn't loud. It was warm. The Stormbreaker hummed with captured energy. The Living Atlas glowed with a stable map. The Mycelial network pulsed with a gentle, rhythmic green. 'Tracks micro-cortisol baselines and radiation dosimetry for sixteen stubborn geniuses while making sure Silas actually eats his soup with a grounded ankle wire,' she muttered to herself with a wry smile. The bruised violet twilight offered a momentary reprieve from the relentless UV radiation, but the subterranean bioluminescent flora of the fungal canopy below pulsed with an agitated rhythm. We must defend the central induction core from the sheer kinetic friction of the atmospheric shear, attract the ambient static charge into our thermal reserves, and consume the resulting surplus to keep the mess hall running.",
+  "broadcast_script": "Elara leaned into the transmitter, her voice a warm, brisk anchor against the encroaching dark. 'Listen up, nodes. We've got a relativistic magnetohydrodynamic shear between the Red Giant's infrared coronal mass ejections and the Blue Dwarf's compressed ultraviolet bow shock incoming.' Her tone was dry, affectionately authoritative. 'If you're complaining and no one is laughing, you're complaining wrong. Check your seals, ground your tools, and for the love of science, someone keep an eye on the hydroponics grid before we lose the entire yam crop.' Elara handed the physical baton to Silas, dropping the matriarch mask for a fleeting second. 'Keep them safe, Silas.'",
+  "segments": [
+    {
+      "active_pov_id": "enclave_16_elara",
+      "narrative_prose": "Elara leaned into the transmitter, her voice a warm, brisk anchor against the encroaching dark. 'Listen up, nodes. We've got a relativistic magnetohydrodynamic shear between the Red Giant's infrared coronal mass ejections and the Blue Dwarf's compressed ultraviolet bow shock incoming.' Her tone was dry, affectionately authoritative. 'If you're complaining and no one is laughing, you're complaining wrong. Check your seals, ground your tools, and for the love of science, someone keep an eye on the hydroponics grid before we lose the entire yam crop.' Elara handed the physical baton to Silas, dropping the matriarch mask for a fleeting second. 'Keep them safe, Silas.'",
+      "next_pov_target": "enclave_03_silas",
+      "prev_next_pov_target": "enclave_16_elara"
+    }
+  ],
+  "covered_day_phases": [
+    "DAWN_SHIFT",
+    "MIDDAY_EXPEDITION",
+    "DUSK_CRAFT",
+    "THE_FEAST"
+  ],
+  "all_cited_event_ids": [
+    "evt_s024_t0093_morning_intent",
+    "evt_s024_t0093_world_consequence",
+    "evt_s024_t0094_expedition_consequence",
+    "evt_s024_t0094_shadow_prank"
+  ],
+  "lead_story": {
+    "headline": "Decoupling pineal melatonin suppression and serotonin receptor static",
+    "summary": "Kenna coaxes Silas off his hands and knees at 0300 hours with a promise of zero dust, handing him over to Elias at the Lyceum.",
+    "cited_event_ids": [
+      "evt_s024_t0094_expedition_consequence"
+    ],
+    "actors": [
+      "enclave_03_silas",
+      "enclave_11_kenna",
+      "enclave_12_elias"
+    ],
+    "location": "The_Lyceum_of_the_Mind",
+    "day_phase": "MIDDAY_EXPEDITION",
+    "salience_score": 0.85
+  },
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_16_elara"
+    ],
+    "full_cards_loaded_count": 1
+  }
+}
