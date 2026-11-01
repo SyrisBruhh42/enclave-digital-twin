@@ -1,0 +1,115 @@
+{
+  "base_snapshot_tick": 96,
+  "campaign_metadata": {
+    "session_number": 24,
+    "colony_sol": 24,
+    "tick_id": 96,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Mitigate ICE Third-Quarter cortisol cascades and autonomic hypervigilance through communal roast rituals.",
+      "mid_term_milestone": "Ensure Silas completes nutritional intake while grounded.",
+      "campaign_arc_climax": "Maintain enclave physiological homeostasis."
+    }
+  },
+  "active_location": {
+    "location_id": "the_hub_hearth",
+    "macro_silhouette": "The Hub stretches out beneath the reinforced dome, a bustling heart of the enclave where heat and light converge. At its center, a large circular fire pit is dug into the stone, radiating a deep, amber warmth against the chill of the subterranean crater. Workbenches ring the perimeter, cluttered with half-finished prototypes and empty soup mugs.",
+    "sensory_palette": {
+      "sight_and_color": "Sixteen mugs raised in the warm circle of firelight while the captured geode hums beneath the floorboards.",
+      "sound": "The low, steady thrum of the metabolic engine mingling with the soft clinking of ceramic mugs and quiet voices.",
+      "smell": "Rich, savory broth heavily laden with roasted root vegetables and sharp ozone.",
+      "tactile_temperature": "A robust, radiant heat blooming from the hearth, pushing back the biting cold.",
+      "taste_optional": "The hearty, thick flavor of nutrient-dense soup, spiked with a hint of metallic tang."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Grounded Ankle Wire",
+        "affordance_description": "A copper grounding wire designed to safely dissipate static buildup from Silas's suit.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Warm Magnesium Broth",
+        "affordance_description": "Freshly steeped broth enriched with chelated magnesium to soothe autonomic hypervigilance.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "The Hub Firepit",
+        "affordance_description": "A communal hearth designed to physically bring the enclave members into close proximity.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_silas_stubbornness",
+      "name_and_role": "Silas's Stubborn Work Ethic",
+      "motivation_goal": "Return to the forge to complete the flux-core shielding before the cold front.",
+      "consistent_method": "Attempting to casually stand up and slowly shuffle toward the exit.",
+      "immediate_complication": "His grounded ankle wire physically prevents him from leaving the bench.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "If left unchecked, he will begin dismantling the table to use as a makeshift workbench."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Ensure everyone completes their caloric intake and rests.",
+      "level_2_local": "Prevent ICE Third-Quarter cortisol cascades in the colony.",
+      "level_3_campaign_arc": "Maintain the physiological integrity of the 16 prodigies."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_16_elara",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_03_silas",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 0,
+    "prerolled_hazard_queue": [ 14, 8, 12, 18, 5 ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.9,
+    "unresolved_conflict_ratio": 0.2,
+    "temporal_horizon_immediacy": 0.5,
+    "composite_lpi": 0.85,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_jules",
+      "model": "v2_engine",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Silas slips away without eating, causing his cortisol baseline to spike.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Elara mistakenly believes Silas has eaten, missing his worsening fatigue.",
+        "below_dc_complicated_fail_forward": "Silas eats a few bites but detaches his ankle wire.",
+        "meets_dc_clean_success": "Silas finishes his soup, grounded and safe.",
+        "dc_plus_5_or_20_extended_lore": "Silas not only eats but finally rests his head on the bench."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules_dm_engine",
+      "temperature": 0.6,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "The Feast that night was different. It wasn't loud. It was warm. The Stormbreaker hummed with captured energy. The Living Atlas glowed with a stable map. The Mycelial network pulsed with a gentle, rhythmic green. Sixteen mugs raised in the warm circle of firelight while the captured geode hums beneath the floorboards. Elara stood at the head of the long wooden table, her sharp gaze sweeping over her found family. She was tracking micro-cortisol baselines and radiation dosimetry for sixteen stubborn geniuses, and her primary target tonight was Silas.\n\nHe was trying to conceal his attempts to edge away from the hearth, his fingers twitching toward the forge, but Elara had planned for this. She made sure Silas actually ate his soup with a grounded ankle wire firmly attached to his boot, a subtle yet highly effective tether to defend against his restless impulses. It was about mitigating Isolated-Confined-Extreme (ICE) Third-Quarter cortisol cascades and autonomic hypervigilance through structured communal roast rituals and oxytocin vagal buffering. Elara wouldn't tolerate any exceptions, especially not from him.\n\n'I don't care if you're eighty-two years old and invented the induction baffle, Silas,' she said, her voice a warm but unyielding command that carried effortlessly over the quiet hum of the metabolic engine. 'Your blood pressure is 148 over 92, your fingers are stiff from cold-forging, and you are finishing that broth if I have to spoon-feed you myself. If you're complaining and no one is laughing, you're complaining wrong.'\n\nSilas opened his mouth to protest, but the warm caregiver in her suddenly shifted into a ruthless, unblinking triage commander—a battlefield surgeon who brokoked no insubordination from her patients. She pressed a steaming ceramic mug of magnesium-rich stew into his hands, her quiet authority enough to attract his full attention back to the present moment. Her unblinking stare practically commanded him to consume the rich nutrients. The warmth of the hearth, the subtle thrum of the underground sanctuary, and the quiet camaraderie of the enclave began to work their magic.\n\nSlowly, the tension in Silas's shoulders unspooled. He let out a long, heavy breath and took a sip of the soup, his expression softening as the warmth flooded his system. Elara watched his pulse visibly steady in his neck, a quiet victory for clinical chrono-physiology. Satisfied that his autonomic hypervigilance was finally waning, she gave his shoulder a firm, affectionate squeeze. 'Good,' she murmured, before pivoting to check on the others. She nodded to him, silently passing the baton. Silas, finally grounded in both body and spirit, looked down at his bowl, the warm hearth light reflecting in his weary eyes as he prepared to speak."
+    }
+  },
+  "context_manifest": {
+    "active_pov_id": "enclave_16_elara",
+    "prev_next_pov_target": "enclave_16_elara",
+    "next_pov_target": "enclave_03_silas",
+    "loaded_full_card_ids": [
+      "enclave_16_elara"
+    ],
+    "full_cards_loaded_count": 1
+  }
+}
