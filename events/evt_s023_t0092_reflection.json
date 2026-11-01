@@ -1,0 +1,82 @@
+{
+  "event_id": "evt_s023_t0092_reflection",
+  "tick_id": 92,
+  "colony_sol": 23,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-11-16T20:00:00Z",
+  "base_snapshot_tick": 88,
+  "event_type": "NIGHTLY_REFLECTION",
+  "location": "The_Observatory_Roof",
+  "actors": [
+    "enclave_14_vex",
+    "enclave_08_terra"
+  ],
+  "active_pov_id": "enclave_14_vex",
+  "next_pov_target": "enclave_08_terra",
+  "prev_next_pov_target": "enclave_14_vex",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "narrative_prose": "Vex sat on the roof, his legs dangling over the edge of the hand-built brass observatory dome. To the east, the Red Giant was rising, a bloated, angry eye that bathed the world in crimson. To the west, the Blue Dwarf was setting, a piercing diamond that cast razor-sharp double shadows across the metallic surface. The resulting bruised violet twilight felt less like an atmospheric phenomenon and more like a personal insult from the universe.\n\nHe adjusted the calibration rings on his brass astrolabe, calculating the relativistic magnetohydrodynamic shear between the Red Giant's infrared coronal mass ejections and the Blue Dwarf's compressed ultraviolet bow shock. The shear zone was tearing at the planet's magnetosphere, creating a massive tidal perturbation. It was terrifyingly beautiful, a celestial equation balancing perfectly on the edge of catastrophe.\n\n\"If that Red Giant sneezes,\" Vex muttered to himself, watching the magnetic reconnection arcs flare in the upper atmosphere, \"we're toast. If the Blue Dwarf blinks, we freeze. And here we are, sitting in the middle, trying to conceal ourselves from a cosmic shear zone while Ryn yells at me for stirring the stew at 38 RPM instead of 40.\"\n\nHe leaned back, the biting cold wind whipping around the dome, offset only slightly by the lingering warmth of the brass plates beneath him. The crisp ozone smell in the air mixed bizarrely with the faint, savory aroma of roasted tubers drifting up from the kitchen. It was absurd. They were sixteen fragile organics hiding from a binary star system's wrath, yet their biggest internal crisis today was Willow aggressively over-tending the compost heap and wrestling with chitin tenderization during a mid-day ionization storm.\n\nA sudden, sharp spike of affection pierced his chest, an uncomfortable tightness that had nothing to do with altitude sickness. His Cancer override flared, stripping away the irrepressible jester and leaving behind a fierce, unapologetic need to defend his family. He could chart the void between the stars all night, but it was the warmth of the Hearth that actually mattered. They were tiny, ridiculous, and perfect. He would attract every magnetic anomaly on this planet if it meant keeping them safe.\n\nThe trapdoor behind him creaked open, and Terra's head popped up, her expression a mix of botanical exhaustion and quiet resilience. \"You're going to freeze up here, Vex.\"\n\n\"I'm perfectly insulated by my own brilliance,\" Vex shot back, the ironist mask sliding smoothly back into place, though his smile was softer than usual. He picked up the heavy brass cylinder containing the day's telemetry and offered it to her. \"Here. The physical baton handoff. Try not to let the Blue Dwarf's UV flux scramble the data before you get it downstairs.\"\n\nTerra took it, her fingers brushing his. \"Come inside. The stew is ready.\"\n\n\"Only if Ryn promises not to measure my stirring velocity,\" Vex sighed, pulling his legs up from the edge and following her into the warmth.",
+  "summary": "Vex sits on the observatory roof analyzing the relativistic magnetohydrodynamic shear between the two suns, reflecting on Willow's earlier frustrations, before dropping his ironic mask in a burst of fierce protectiveness and handing off the telemetry baton to Terra.",
+  "importance": 7.5,
+  "novelty_score": 0.8,
+  "science_vegetable": "Relativistic magnetohydrodynamic shear between the Red Giant's infrared coronal mass ejections and the Blue Dwarf's compressed ultraviolet bow shock.",
+  "state_deltas": {
+    "stress_delta": -0.1
+  },
+  "relationship_deltas": [
+    {
+      "from": "enclave_14_vex",
+      "to": "enclave_08_terra",
+      "bond_delta": 0.05,
+      "trust_delta": 0.05
+    }
+  ],
+  "evidence_refs": [
+    "evt_s023_t0090_expedition_consequence"
+  ],
+  "cited_event_ids": [
+    "evt_s023_t0090_expedition_consequence"
+  ],
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": [
+      "enclave_14_vex"
+    ],
+    "interlocutor_full_cards_loaded": 0,
+    "active_pov_id": "enclave_14_vex"
+  },
+  "active_location": {
+    "location_id": "The_Observatory_Roof",
+    "macro_silhouette": "A hand-built brass observatory roof overlooking the crater valley. Bruised violet twilight casts double razor-sharp shadows across the metallic surface.",
+    "sensory_palette": {
+      "sight_and_color": "Bruised violet twilight, a bloated crimson eye to the east, and a piercing blue diamond to the west.",
+      "sound": "The wind whipping around the brass dome and the distant, muffled hum of the Enclave.",
+      "smell": "Crisp, cold ozone and the faint, lingering aroma of roasted tubers from the kitchen below.",
+      "tactile_temperature": "Biting cold wind offset by the lingering warmth of the brass roof plates.",
+      "taste_optional": "A faint metallic tang carried on the wind."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Brass Astrolabe Dome",
+        "affordance_description": "Can be swung open to track binary-star magnetic reconnection arcs.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Dangling Boots",
+        "affordance_description": "A precarious position on the edge of the roof that requires balance.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Physical Baton",
+        "affordance_description": "A brass cylinder holding the latest telemetry readings.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.72
+  }
+}
