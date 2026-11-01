@@ -1,0 +1,58 @@
+{
+  "active_pov_id": "enclave_05_kaio",
+  "narrative_prose": "Kaio didn't walk through the jungle; he ricocheted. The forest floor was a riot of ferro-moss and silicon-based vines, and Kaio moved over it with the kinetic enthusiasm of a particle in a collider. \"Seventeen, nineteen, twenty-three!\" he shouted, vaulting over a fallen ironwood trunk lit by ultraviolet auroras. \"Ryn, look! The enzymatic luciferin-luciferase oxidation is gated by voltage-sensitive ion channels! They're flashing in prime-number sequences, and the optical polarization modulation is off the charts!\"\n\nHe skidded to a halt in front of a massive, pulsing fungal bloom, his boots sliding in the magnetic mud. \"This is incredible!\" he breathed, his ENFP associative cartography linking the bioluminescent syntax to the valley's deep geological hum. But then the jungle shifted. A low, synthetic growl resonated through the canopy. The ambient light flared, casting sharp, unnatural shadows. Ambush.\n\nThe chaotic joy evaporated from Kaio's face. His Capricorn polarity inversion snapped into place like a steel trap. \"Ryn,\" he said, his voice suddenly ice-cold and ruthlessly tactical. \"The local fauna is out of alignment with our quarterly safety projections. Establish a defensive perimeter. I am issuing an immediate citation for unauthorized aggression.\"\n\nHe moved with terrifying precision, mapping the threat vector through the polarized light flashes. Yet, even as he calculated the precise strike angle to neutralize the encroaching bio-mech drone, his mind snagged on a domestic absurdity. \"And when we get back,\" he added, dodging a razor-sharp vine, \"I'm finally fixing that kitchen water filter. The flow rate is unacceptable, and if you complain about straining the soup stock through a clean sock one more time, I'm auditing your pantry inventory!\"\n\nRyn, breathless from trying to keep up, just stared. \"Kaio, there's a drone trying to kill us!\"\n\n\"If you're complaining and no one is laughing, you're complaining wrong, Ryn!\" Kaio snapped, side-stepping a plasma bolt and lunging to tackle Ryn out of the line of fire. He shoved a handful of glowing, prime-number-flashing spores into Ryn's chest. \"Hold these! We're doing a tactical retreat, and I need you to catalog their decay rate!\"",
+  "base_snapshot_tick": 95,
+  "tick_id": 99,
+  "colony_sol": 25,
+  "day_phase": "DUSK_CRAFT",
+  "world_timestamp_iso": "2026-11-18T18:00:00Z",
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The Magnetic Jungle",
+  "actors": [
+    "enclave_05_kaio",
+    "enclave_13_ryn"
+  ],
+  "summary": "Kaio discovers prime-number flashing fungi but snaps into his ruthless CEO override during an ambush, all while arguing with Ryn about the kitchen water filter.",
+  "importance": 0.6,
+  "novelty_score": 0.8,
+  "state_deltas": {
+    "stress_delta": 0.2,
+    "openness_state": 0.1
+  },
+  "relationship_deltas": {
+    "enclave_05_kaio_to_enclave_13_ryn": 0.1
+  },
+  "evidence_refs": [],
+  "active_location": {
+    "sensory_palette": {
+      "sight_and_color": "Ultraviolet auroras and oil-slick hex-pedal carapace camouflage in the ironwood groves.",
+      "sound": "The low synthetic growl of a bio-mech drone and the hum of voltage-sensitive ion channels.",
+      "smell": "Ozone and damp, metallic ferro-moss.",
+      "tactile_temperature": "Humid and electrically charged air.",
+      "taste_optional": "The metallic tang of fear and adrenaline."
+    },
+    "interactive_features": [
+      {
+        "feature_id": "bio_mech_drone",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14,
+        "description": "Defend against the sudden ambush in the magnetic jungle."
+      },
+      {
+        "feature_id": "prime_number_spores",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14,
+        "description": "Gather the bioluminescent spores flashing in prime sequences."
+      },
+      {
+        "feature_id": "ferro_moss_ravine",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14,
+        "description": "Use the oil-slick hex-pedal carapace camouflage for a tactical retreat."
+      }
+    ]
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.75
+  }
+}
