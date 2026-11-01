@@ -1,0 +1,117 @@
+{
+  "base_snapshot_tick": 90,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_09_orion"
+    ],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_09_orion",
+    "next_pov_target": "enclave_14_vex",
+    "prev_next_pov_target": "enclave_14_vex"
+  },
+  "campaign_metadata": {
+    "session_number": 5,
+    "colony_sol": 23,
+    "tick_id": 91,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Re-synchronize the Simulacrum quartz lattices with the shifting magnetospheric telemetry before data corruption.",
+      "mid_term_milestone": "Stabilize the five-dimensional optical storage for the Enclave's entire atmospheric and biological archive.",
+      "campaign_arc_climax": "Complete the unbroken continuous integration of planetary logic and Enclave consciousness into The Simulacrum."
+    }
+  },
+  "active_location": {
+    "location_id": "loc_simulacrum_chamber",
+    "macro_silhouette": "The Simulacrum chamber is a darkened cathedral of resonant geometry, suspended deep in the bedrock. A fingernail-sized crystal drinks violet laser light at the heart of the room, flanked by levitating magnetohydrodynamic spires. The air is thick with acoustic standing waves that vibrate in the chest.",
+    "sensory_palette": {
+      "sight_and_color": "Deep, bruised violet laser light refracting into a million microscopic rainbows through fused-quartz nanogratings, contrasting with the oily black sheen of suspended ferrofluid.",
+      "sound": "The low, bone-deep thrum of C-Major acoustic frequencies folding into a minor-key cello sustain, punctuated by the high-pitched hiss of cooling plasma.",
+      "smell": "Ozone from the ionized lasers and the sharp, metallic tang of iron suspended in carrier oil.",
+      "tactile_temperature": "A dry, static-charged chill that raises the hairs on the arms, cut by abrupt pockets of heat near the optical emitter.",
+      "taste_optional": "The faint, metallic flavor of aluminum and static electricity on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magnetohydrodynamic Cymatic Spire",
+        "affordance_description": "A levitating tower of ferrofluid that can be shaped via acoustic resonance to modulate magnetic field density in the room.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "5D Birefringent Quartz Storage Cell",
+        "affordance_description": "A microscopic, hyper-dense optical lattice that can absorb terabytes of incoming telemetry if the laser orientation is aligned.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Acoustic Tuning Fork Matrix",
+        "affordance_description": "A brass rack of precision-milled tuning forks that can inject phase-canceling frequencies into the standing waves to calm harmonic feedback loops.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_resonance_feedback_loop",
+      "name_and_role": "Harmonic Drift Resonance",
+      "motivation_goal": "Destabilize the quartz lattice writing process through sympathetic vibration.",
+      "consistent_method": "Amplifies stray minor-key frequencies in the chamber until they match the resonant frequency of the optical cell.",
+      "immediate_complication": "The ferrofluid spires begin to boil and collapse, spattering the lens.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "If left unchecked, the resonance will shatter the quartz crystal and erase all stored telemetry."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The incoming telemetry stream from the Blue Dwarf's solar wind is fluctuating, creating a lag in the 5D writing process.",
+      "level_2_local": "The magnetic disturbance is bleeding into the acoustic cymatic field, disrupting Orion's carefully sculpted ferrofluid stabilizers.",
+      "level_3_campaign_arc": "The planetary magnetosphere is fundamentally chaotic, testing the Enclave's ability to maintain order and memory against entropy."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_09_orion",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [
+      3,
+      8,
+      14,
+      19,
+      6
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.45,
+    "motivational_vector_saturation": 0.85,
+    "unresolved_conflict_ratio": 0.70,
+    "temporal_horizon_immediacy": 0.80,
+    "composite_lpi": 0.70,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4-turbo",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "If the resonance cannot be matched, the incoming data stream will misalign in the lattice, corrupting the archive.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Orion plays a dissonant chord that shatters the quartz instantly.",
+        "below_dc_complicated_fail_forward": "Orion stabilizes the crystal, but the ferrofluid spire collapses, making a terrible mess of the emitter.",
+        "meets_dc_clean_success": "The acoustic wave aligns perfectly, allowing the femtosecond laser to write smoothly into the lattice.",
+        "dc_plus_5_or_20_extended_lore": "Not only is the data saved, but the ferrofluid sculpts itself into a beautiful, predictive model of the planetary magnetosphere."
+      }
+    },
+    "master_narrator": {
+      "executor": "anthropic_claude_3_opus",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Orion didn't see a sealant; he saw a dancer.\n\nHe had taken a beaker of Leo's ferrofluid to the Simulacrum. He placed it over a grid of electromagnets hooked up to his synthesizer. Above him, the violet laser flickered, fighting to etch the incoming storm data into the fingernail-sized crystal. The femtosecond nanostructured birefringent 5D optical storage encoding terabytes of magnetospheric and mycelial telemetry into eternal fused-quartz lattices was a marvel of Isla's design.\n\nBut the data stream from the Blue Dwarf was jagged today, full of sharp, chaotic spikes. It wasn't a steady flow; it was an angry, syncopated rhythm. The acoustic standing waves in the chamber were beginning to drift in sympathy. Below the plinth, the pool of black ferrofluid, which Orion had so carefully sculpted into a delicate, levitating spire, was beginning to shudder and boil.\n\n\"It's out of tune,\" Orion murmured, staring at the collapsing structure. He didn't see numbers or readouts; he saw a symphony falling into discord. The beauty of the crystal's geometry was being threatened by an ugly, asymmetrical vibration. The thought of all that knowledge, all that elegant truth, being overwritten by static made his chest tight. It was like looking at a perfectly symmetrical potato at dinner, only to watch someone carelessly mash it with a fork.\n\nHe had to act. He could use the acoustic tuning fork matrix to inject a phase-canceling frequency, attempting to defend the delicate lattice from the chaotic interference. Or, perhaps, he could play a resonant minor chord to attract the stray magnetic fields away from the crystal, drawing them into the ferrofluid and allowing it to consume the excess energy, even if it meant destroying his sculpture. But if he failed, the resonance would escalate, uninterrupted, until the crystal shattered.\n\n\"Vex,\" Orion called out over the comms, his voice tight but surprisingly steady as his Inquisitor instincts flared, cutting through his anxiety with razor-sharp directness. \"I'm modulating the cymatic field. I need you to confirm the planetary telemetry feed isn't experiencing a cascading failure on your end. And stop complaining about the UI.\"\n\n\"I'm not complaining,\" Vex's voice crackled back over the line, dry and immediate. \"I'm providing structural critique.\"\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Orion snapped back, adjusting the master frequency dial. \"Tell me the numbers, but make them sound like poetry.\""
+    }
+  }
+}
