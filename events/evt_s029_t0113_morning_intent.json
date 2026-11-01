@@ -1,0 +1,39 @@
+{
+  "event_id": "evt_s029_t0113_morning_intent",
+  "tick_id": 113,
+  "colony_sol": 29,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2084-06-18T05:00:00Z",
+  "base_snapshot_tick": 113,
+  "event_type": "MORNING_INTENT",
+  "location": "The First Forge",
+  "actors": ["enclave_03_silas", "enclave_01_hector"],
+  "summary": "Silas attempts to finalize a resonant shield plating alloy but is derailed by a stubborn drip, prompting him to repair the pipe with a wrench and hand off to Hector.",
+  "importance": 7,
+  "novelty_score": 5,
+  "science_vegetable": "Fe-Co-Cr-Ni-Mn High-Entropy Alloy lattice stabilization against galvanic corrosion induced by twin-sun eddy currents and copper flange couplings.",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "pre_roll_dc": 14,
+  "active_pov_id": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "state_deltas": {
+    "conscientiousness_state": 0.08,
+    "neuroticism_state": 0.14,
+    "stress_delta": 0.18
+  },
+  "relationship_deltas": {
+    "enclave_03_silas_to_enclave_01_hector": 2
+  },
+  "evidence_refs": [],
+  "interactive_features": [
+    {
+      "feature_name": "Oxidized Copper Flange",
+      "affordance_description": "A stubborn drip threatening the resonant plating array.",
+      "system_verb": "DEFEND",
+      "associated_check_dc": 14
+    }
+  ],
+  "text": "For a man who could persuade impossible metals to sing, the ordinary, stubborn silence of rust was a particular insult. There it was, on a length of pipe he himself had hammered into being, a faint, cancerous blush of oxidation. Silas wiped a hand across his forehead, leaving a streak of grease, and adjusted his spectacles. The First Forge hummed around him, a steady, warm vibration deep in the bedrock. He had spent the dawn shift coaxing a delicate balance of iron, cobalt, chromium, nickel, and manganese into a high-entropy alloy, stabilizing the lattice against the galvanic corrosion induced by those infernal twin-sun eddy currents. It was a precise, necessary violence of heat and pressure. And yet, this single, rhythmic *plink* from a faulty copper flange coupling above the arboretum line threatened to disrupt the entire resonant shield array.\n\nHe watched the water gather, swell, and detach. *Plink.* A visceral tightness coiled in his chest. Inefficient. A fundamental failure of structural integrity. He reached for the heavy spanner on his belt, the familiar weight a small comfort against the sprawling, unquantifiable chaos of this world. He did not tighten the fitting gently. He swung the wrench with the precision of a man who knew exactly where the tolerances ended, striking the pipe with a sharp, resonant clang that echoed through the cavernous workspace. The dripping stopped instantly.\n\nHe exhaled a long, measured breath, the tightness in his chest loosening fractionally. The alloy was stable, for now. The pipe was silent. But the sprawling systems of the enclave were a delicate, hungry beast, constantly demanding maintenance and calibration. He could not monitor it all. He turned toward the reinforced blast doors, where Hector was due to arrive for the mid-morning shift. Silas gripped the spanner, ready to deliver a gruff, unsolicited lecture on the metallurgical properties of shear stress and the importance of tightening flange couplings properly."
+}
