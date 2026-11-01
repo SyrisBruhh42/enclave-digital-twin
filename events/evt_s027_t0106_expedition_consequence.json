@@ -1,0 +1,73 @@
+{
+  "event_id": "evt_s027_t0106_expedition_consequence",
+  "tick_id": 106,
+  "colony_sol": 27,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2087-01-27T12:00:00Z",
+  "base_snapshot_tick": 102,
+  "event_type": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+  "location": "The Genesis Garden",
+  "actors": [
+    "enclave_07_willow",
+    "enclave_09_orion"
+  ],
+  "summary": "Willow is on the verge of unlocking fungal Boolean logic gates when a mundane frustration\u2014turning a steaming compost heap\u2014triggers her Cancer Vex Override, causing an overwhelmingly protective outburst when Orion tries to help.",
+  "importance": 0.8,
+  "novelty_score": 0.85,
+  "science_vegetable": "Cytosolic Ca2+ wave transduction implementing physical Boolean AND/OR/NOT logic gates across hyphal anastomoses when bridged with pepper-scented epoxy-sap.",
+  "state_deltas": {
+    "hub_caloric_reserves_pct": -0.05
+  },
+  "relationship_deltas": [],
+  "evidence_refs": [],
+  "active_pov_id": "enclave_07_willow",
+  "prev_next_pov_target": "enclave_07_willow",
+  "next_pov_target": "enclave_09_orion",
+  "pacing_mode": "MULLIGAN_CRISIS",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "narrative_prose": "Under the microscope, the mushroom didn't look like a plant. It looked like a city.\n\nWillow adjusted the focus. The hyphae\u2014the thread-like roots\u2014were pulsing with light. Calcium ions flowing through the cell walls, carrying cytosolic Ca2+ wave transduction implementing physical Boolean AND/OR/NOT logic gates across hyphal anastomoses when bridged with pepper-scented epoxy-sap. She was looking at a living motherboard. It was beautiful. It was elegant.\n\nAnd yet, an hour later, Willow found herself ankle-deep in mud, her gloves caked in grime as she furiously turned a steaming compost heap with a pitchfork. The automated aerator had jammed on a particularly resilient knot of ironwood roots, and the soil pH needed to be balanced immediately to prevent a localized blight.\n\n\"This is absurd,\" she muttered, plunging the pitchfork into the steaming pile. \"I am reverse-engineering a planetary supercomputer, and yet I am currently indistinguishable from a medieval peasant turning dung.\"\n\nA figure appeared in the soft bioluminescence of the greenhouse. Orion stood there, his hands stained with cobalt and ochre, looking tentatively at the compost heap. \"I could help with that,\" he offered softly. \"The resonant frequency of the soil seems... dissonant.\"\n\nInstantly, Willow's Cancer Vex Override snapped into place. The detached analytical biochemist evaporated. In her place stood a fiercely protective guardian, horrified at the thought of the young prodigy soiling his hands.\n\n\"Don't you dare touch this compost, Orion!\" she snapped, stepping between him and the heap, pitching her voice up an octave. \"This is highly concentrated, acidic organic matter. It will strip the calluses right off your beautiful, artistic fingers! I won't have it! You go back to your cymatic sculptures right now and leave the filth to me.\"\n\nOrion blinked, entirely unfazed by her sudden clinginess. \"If you're complaining and no one is laughing, you're complaining wrong,\" he said, his tone a gentle echo of her own usual pragmatism. \"Just turn the compost, Willow. The hyphae won't applaud your logic gates if they suffocate.\"\n\nWillow paused, leaning on the pitchfork, the Vex Override slowly receding. She let out a long, slow breath that smelled of pine resin and ozone. \"Fine,\" she grumbled, \"but you stay exactly three feet away from the splash zone.\"",
+  "dialogue": [
+    {
+      "speaker": "enclave_07_willow",
+      "text": "This is absurd. I am reverse-engineering a planetary supercomputer, and yet I am currently indistinguishable from a medieval peasant turning dung."
+    },
+    {
+      "speaker": "enclave_09_orion",
+      "text": "I could help with that. The resonant frequency of the soil seems... dissonant."
+    },
+    {
+      "speaker": "enclave_07_willow",
+      "text": "Don't you dare touch this compost, Orion! This is highly concentrated, acidic organic matter. It will strip the calluses right off your beautiful, artistic fingers! I won't have it! You go back to your cymatic sculptures right now and leave the filth to me."
+    },
+    {
+      "speaker": "enclave_09_orion",
+      "text": "If you're complaining and no one is laughing, you're complaining wrong. Just turn the compost, Willow. The hyphae won't applaud your logic gates if they suffocate."
+    },
+    {
+      "speaker": "enclave_07_willow",
+      "text": "Fine, but you stay exactly three feet away from the splash zone."
+    }
+  ],
+  "interactive_features": [
+    {
+      "feature_id": "compost_heap",
+      "system_verb": "CONSUME",
+      "description": "The steaming compost heap demands physical labor."
+    },
+    {
+      "feature_id": "microscope",
+      "system_verb": "ATTRACT",
+      "description": "The microscope revealing the living motherboard."
+    },
+    {
+      "feature_id": "pitchfork",
+      "system_verb": "DEFEND",
+      "description": "The pitchfork defending against localized blight."
+    }
+  ],
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_07_willow"
+    ]
+  }
+}
