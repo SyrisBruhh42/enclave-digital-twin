@@ -1,0 +1,121 @@
+{
+  "base_snapshot_tick": 94,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_12_elias"
+    ],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_12_elias",
+    "prev_next_pov_target": "enclave_12_elias",
+    "next_pov_target": "enclave_16_elara"
+  },
+  "campaign_metadata": {
+    "session_number": 24,
+    "colony_sol": 24,
+    "tick_id": 95,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Mitigate ICE Third-Quarter cortisol cascades through communal roasting.",
+      "mid_term_milestone": "Stabilize the sixteen polymaths' psychological load.",
+      "campaign_arc_climax": "Complete the Lyceum of the Mind."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Lyceum_of_the_Mind",
+    "macro_silhouette": "The Lyceum is dim and cool, humming gently with the resonant frequencies of the captured geode beneath the floorboards. Sixteen mugs are raised in the warm, flickering circle of firelight, casting long shadows against the walls lined with handwritten notes and complex diagrams.",
+    "sensory_palette": {
+      "sight_and_color": "Flickering amber firelight playing across brass-framed CRT monitors and deeply etched faces.",
+      "sound": "The low hum of the geode and the crackle of roasting fires, layered beneath sharp, brittle silence.",
+      "smell": "Rich, earthy scent of boiling soup stock filtered through questionable textiles, mixed with ozone.",
+      "tactile_temperature": "Warm radiating heat from the fire contrasting with the chilly, recycled air of the bunker.",
+      "taste_optional": "Slightly metallic, deeply savory notes of the improvised soup."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Captured Geode Resonance",
+        "affordance_description": "Vibrates at a low frequency, calming the autonomic nervous system.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Communal Roasting Fire",
+        "affordance_description": "Provides warmth and a focal point for social cohesion.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 10
+      },
+      {
+        "feature_name": "Filtered Soup Stock",
+        "affordance_description": "Nourishes despite its highly questionable preparation method.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_01_cortisol_cascade",
+      "name_and_role": "Third-Quarter ICE Stress",
+      "motivation_goal": "To fracture the cohesion of the sixteen polymaths.",
+      "consistent_method": "Amplifying minor irritations into near mutiny.",
+      "immediate_complication": "Kaio filtered the soup stock through a sock, sparking outrage.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The brittle silence will shatter into full-blown physical altercations if not diffused."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The crew is highly stressed and hungry.",
+      "level_2_local": "Third-Quarter isolation micro-stressors are peaking.",
+      "level_3_campaign_arc": "Maintaining mental health is critical for the survival of the Enclave."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_12_elias",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_16_elara",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 3,
+    "prerolled_hazard_queue": [
+      4,
+      12,
+      8,
+      19,
+      2
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.85,
+    "motivational_vector_saturation": 0.75,
+    "unresolved_conflict_ratio": 0.90,
+    "temporal_horizon_immediacy": 0.80,
+    "composite_lpi": 0.82,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.4,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The communal meal fails, leading to a permanent fracture in crew morale.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Elias completely misreads the room, making a joke that infuriates everyone further.",
+        "below_dc_complicated_fail_forward": "The tension is somewhat defused, but the soup is ruined, leaving everyone hungry and grumpy.",
+        "meets_dc_clean_success": "Elias's dry banter successfully reframes the situation, breaking the brittle silence.",
+        "dc_plus_5_or_20_extended_lore": "The crew not only laughs but bonds deeply over the shared absurdity, experiencing a surge in oxytocin vagal buffering."
+      }
+    },
+    "master_narrator": {
+      "executor": "claude",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "The table was silent. Not the good, tired silence of a job well done. The sharp, brittle silence of sixteen people who had been breathing the same recycled air for too long. Elias sat near the humming floorboards, the gentle, rhythmic resonance of the captured geode vibrating against the soles of his boots. He watched the flickering amber firelight cast long, jagged shadows across the deeply etched faces of his found family. They were a brilliant, hyper-competent assembly of polymaths, yet right now, they were poised on the edge of mutiny. The reason? Kaio had just proudly announced that he had filtered the evening's communal soup stock through a sock.\n\nElias felt the familiar, crushing weight of Third-Quarter isolation settling over them. It was his responsibility to monitor these micro-stressors across the sixteen polymaths, to anchor the minds that kept the Enclave alive. Under normal circumstances, he would offer a gentle phenomenological synthesis, bridging their physical discomfort with their shared overarching purpose. But the stress in the dimly lit bunker was thick, a heavy blanket that smothered his usual sage-like calm. He felt the quiet, immovable stubbornness of the Taurus overriding his delicate diplomatic instincts. He dug his heels in, observing the mounting tension with an impenetrable, deadpan stubbornness. He wasn't going to fix this with a grand, sweeping speech or a frantic intervention.\n\nHe slowly raised his mug, the rich, earthy scent of the questionable broth mingling with the sharp tang of ozone from the underground bunker's life support systems. He looked around the circle, his expression entirely deadpan. \"If you're complaining and no one is laughing, you're complaining wrong,\" he said, his voice unhurried and dry, cutting through the brittle atmosphere. He took a deliberate, prolonged sip of the soup, his eyes twinkling subtly in the warm firelight. \"We brought eight centuries of differential calculus across the stars, yet here we sit, entirely defeated by a piece of hosiery. Personally, I vote we just drink it and hope the fabric softener adds some much-needed umami.\"\n\nThe sheer, unapologetic absurdity of his grounded response hung in the air for a heartbeat. It was a calculated attempt at oxytocin vagal buffering, wrapping the friction of their confined existence in dry, affectionate banter. He turned his gaze toward Elara, passing the burden of the conversation, the physical baton of their shared survival, to her capable hands."
+    }
+  }
+}
