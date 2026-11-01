@@ -466,6 +466,9 @@ class TestEnclaveCrucible(unittest.TestCase):
     def test_15_cross_medium_narrative_and_computational_prose_calibration(self) -> None:
         test_cross_medium_narrative_and_computational_prose_calibration()
 
+    def test_16_sovereign_march_tower_defense_and_4stage_epoch_merge(self) -> None:
+        test_sovereign_march_tower_defense_and_4stage_epoch_merge()
+
 
 def test_pokemon_emerald_5_districts_and_6_step_tutorial() -> None:
     from engine.enclave_city_sim import (
@@ -1228,9 +1231,91 @@ def test_cross_medium_narrative_and_computational_prose_calibration() -> None:
     assert audit["stop_slop_audit"]["total_score"] >= 35
 
 
+def test_sovereign_march_tower_defense_and_4stage_epoch_merge() -> None:
+    from engine.sovereign_march_bridge import (
+        ATTACK_VS_ARMOR_MATRIX,
+        CATALYST_REACTIONS,
+        HERO_CLASS_REGISTRY,
+        SovereignMarchEpochBridge,
+        can_promote_specialist_to_job,
+        create_enclave_specialist_tower,
+        evaluate_dyadic_resonance_on_grid,
+        generate_event_seeded_battlefield,
+        grant_specialist_ap,
+        order_specialist_move,
+        promote_specialist_job,
+    )
+
+    assert len(HERO_CLASS_REGISTRY) == 20
+    assert len(ATTACK_VS_ARMOR_MATRIX) == 10
+    assert len(CATALYST_REACTIONS) == 8
+
+    # 1. Verify infinite level scaling and hybrid promotion (Swordplay Lv.2 + Cryomancy Lv.2 -> Geomancy)
+    dorian = create_enclave_specialist_tower("u1", "enclave_15_dorian", "swordplay", 4, 4)
+    vex = create_enclave_specialist_tower("u2", "enclave_14_vex", "pyromancy", 5, 4)
+    assert can_promote_specialist_to_job(dorian, "geomancy") is False
+
+    dorian = grant_specialist_ap(dorian, 120)
+    assert dorian.job_levels["swordplay"] >= 2
+    dorian.job_levels["cryomancy"] = 2
+    assert can_promote_specialist_to_job(dorian, "geomancy") is True
+    dorian = promote_specialist_job(dorian, "geomancy")
+    assert dorian.job_id == "geomancy"
+
+    # 2. Verify Movement Speed Decay curve and Dyadic Resonance
+    dorian = order_specialist_move(dorian, 7, 5, between_waves=False)
+    assert dorian.move_speed_penalty_pct > 0.0
+    assert dorian.move_penalty_remaining_sec > 0.8
+
+    vex = order_specialist_move(vex, 8, 5, between_waves=True)
+    dyad = evaluate_dyadic_resonance_on_grid([dorian, vex])
+    assert len(dyad["active_pairs"]) == 1
+    assert dyad["catalyst_damage_bonus_pct"] == 18
+
+    # 3. Verify deterministic Event-Seeded 16x10 Battlefield Generator
+    m1 = generate_event_seeded_battlefield("EVT-SOL028-VAULT-SHEAR", 28, "enclave_15_dorian")
+    m2 = generate_event_seeded_battlefield("EVT-SOL028-VAULT-SHEAR", 28, "enclave_15_dorian")
+    assert m1["seed"] == m2["seed"]
+    assert m1["cols"] == 16 and m1["rows"] == 10
+    assert m1["scouting_gold_bonus"] == 75
+    assert m1["buildable_tiles"] >= 60
+
+    # 4. Verify 4-Stage Epoch Gate ("Beat the Level to Progress to the Next Style System")
+    bridge = SovereignMarchEpochBridge(sol_number=28, active_pov_id="enclave_15_dorian")
+    assert bridge.current_stage == "STAGE_1_LIVING_ATLAS"
+    s2 = bridge.advance_to_corridor_gate("Cross-couple Geomancy with Cryo-Stasis on the northern causeway.")
+    assert s2["stage"] == "STAGE_2_CORRIDOR_GATE"
+    assert s2["scouting_gold_bonus"] == 75
+
+    s3 = bridge.enter_tactical_defense("EVT-SOL028-VAULT-SHEAR")
+    assert bridge.current_stage == "STAGE_3_TACTICAL_DEFENSE"
+    assert s3["cols"] == 16
+
+    # Breach before clearing 3 waves keeps Stage 4 locked and triggers Swain YES_BUT_RECOVERY
+    breach_res = bridge.resolve_tactical_battle(
+        waves_cleared=1,
+        victory=False,
+        mvp_unit=dorian,
+        total_synergies=2,
+        reposition_count=1,
+    )
+    assert breach_res["stage3_cleared"] is False
+    assert breach_res["stage"] == "STAGE_3_TACTICAL_DEFENSE"
+    assert breach_res["swain_sequel_state"] == "YES_BUT_RECOVERY"
+
+    # Clearing required waves unlocks Stage 4 Colony & Feast and passes Stop-Slop >= 35/50
+    win_res = bridge.resolve_tactical_battle(
+        waves_cleared=6,
+        victory=True,
+        mvp_unit=dorian,
+        total_synergies=5,
+        reposition_count=3,
+    )
+    assert win_res["stage3_cleared"] is True
+    assert win_res["stage"] == "STAGE_4_COLONY_FEAST"
+    assert win_res["passed_stop_slop_gate"] is True
+    assert win_res["stop_slop_score"] >= 35
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
-
-
-
-
