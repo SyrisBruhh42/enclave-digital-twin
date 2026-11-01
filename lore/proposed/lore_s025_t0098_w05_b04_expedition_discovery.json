@@ -1,0 +1,121 @@
+{
+  "base_snapshot_tick": 94,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_01_hector"
+    ],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_01_hector",
+    "next_pov_target": "enclave_05_kaio",
+    "prev_next_pov_target": "enclave_01_hector"
+  },
+  "campaign_metadata": {
+    "session_number": 25,
+    "colony_sol": 25,
+    "tick_id": 98,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Lock chaotic lightning onto collector rods.",
+      "mid_term_milestone": "Stabilize The Stormbreaker.",
+      "campaign_arc_climax": "Harness planetary magnetosphere anomalies."
+    }
+  },
+  "active_location": {
+    "location_id": "LOC_STORMBREAKER_SPIRE",
+    "macro_silhouette": "The Stormbreaker tower ascends fifty meters above the Enclave, a chaotic spire of copper and iron reaching into the bruised purple thunderhead. Below, emerald phase-space butterfly wings rotate across brass-framed CRT monitors in the underground bunker.",
+    "sensory_palette": {
+      "sight_and_color": "Bruised violent purple clouds, staccato flashes of violet femtosecond laser pulses, and emerald CRT glow.",
+      "sound": "Screaming wind tearing at goggles like a jet engine and the deafening, physical blow of gigajoule thunder.",
+      "smell": "Ozone, scorched copper, and charged air.",
+      "tactile_temperature": "Freezing gale-force sleet and the intense radiant heat of the dielectric containment geode humming.",
+      "taste_optional": "The metallic tang of atmospheric ionization."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Dielectric Containment Geode",
+        "affordance_description": "Absorbs gigajoules of harvested storm energy within its high-permittivity lattice.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Femtosecond Laser-Induced Plasma Channel",
+        "affordance_description": "Guides lightning strikes along a safe, predetermined path.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Asymmetrical Cable Coupling",
+        "affordance_description": "A 0.5-degree off-vertical connection that threatens harmonic stability.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "TOY_LORENZ_ATTRACTOR_STORM",
+      "name_and_role": "Chaotic Atmospheric Lightning Front",
+      "motivation_goal": "Discharge accumulated gigajoules into the bedrock via the path of least resistance.",
+      "consistent_method": "Deterministic chaos seeking unpredictable grounding nodes.",
+      "immediate_complication": "Requires millisecond pre-strike ionization pulses to lock onto collector rods.",
+      "pressure_index": 9,
+      "uninterrupted_escalation": "If unguided, it will arc across the Enclave's life-support shielding."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Harness gigajoule planetary lightning strikes via femtosecond lasers.",
+      "level_2_local": "Secure power reserves for the Enclave's thermal defenses.",
+      "level_3_campaign_arc": "Master the exoplanet's aggressive meteorology."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_01_hector",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      8,
+      19,
+      4,
+      12
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.85,
+    "motivational_vector_saturation": 0.9,
+    "unresolved_conflict_ratio": 0.7,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.85,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Judge_Module",
+      "model": "Tactical_Arbiter",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The asymmetrical cable coupling induces a harmonic wobble, destabilizing the geode containment and triggering a localized arc-flash.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Hector misjudges the phase space entirely, firing the laser prematurely and drawing the strike into the tower's chassis.",
+        "below_dc_complicated_fail_forward": "The plasma channel forms, but the 0.5-degree cable misalignment causes severe inductive feedback, blowing out secondary relays.",
+        "meets_dc_clean_success": "Real-time Lorenz strange-attractor bifurcation targeting fires millisecond pre-strike ionization pulses to lock chaotic lightning onto collector rods at 98% efficiency.",
+        "dc_plus_5_or_20_extended_lore": "The strike not only charges the geode perfectly but reveals underlying patterns in the planet's atmospheric potential gradient for future modeling."
+      }
+    },
+    "master_narrator": {
+      "executor": "Narrator_Module",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "\"It's not just a storm,\" Hector yelled over the wind, strapped to the top of the Stormbreaker tower, fifty meters above the Enclave. \"It's a battery! A big, angry, floating battery!\"\n\nThe clouds above weren't grey; they were a bruised, violent purple, lit from within by constant sheet lightning. The air tasted of ozone and copper. Below him, in the bunker, emerald phase-space butterfly wings rotated across brass-framed CRT monitors as Jane tracked the storm.\n\n\"Potential gradient is passing 50 kilovolts per meter,\" the radio crackled. \"If you don't fire the pilot laser in three seconds, you're going to be a crispy anecdote.\"\n\n\"I need the leader!\" Hector shouted, his heart hammering against his ribs in perfect sync with the thunder. He was looking for the step leader\u2014the invisible path of ionized air that preceded the main strike. This was the rush. Harnessing a titan and putting it in a box using real-time Lorenz strange-attractor bifurcation targeting that fires millisecond pre-strike ionization pulses to lock chaotic lightning onto collector rods at ninety-eight percent efficiency.\n\n\"Targeting solution is locked. Firing the femtosecond laser... now.\"\n\nA beam of intense, violet light shot from the tower, piercing the cloud layer. It stripped the electrons from the air molecules, creating a conductive path of plasma. For a heartbeat, the world held its breath. Then, the sky connected. A blinding, solid pillar of white fire slammed down the laser channel, the massive copper conductors screaming as they channeled gigajoules of energy down into the dielectric containment geode.\n\n\"Capacity at 60%. Divert! The geode is singing, Hector!\"\n\n\"Let it sing!\" Hector laughed. But then, as he glanced down, the thrill vanished. His Virgo Vex Override kicked in, replacing the adrenaline with a cold, terrifying obsession. \n\n\"The coupling,\" Hector muttered, panic rising. He stared at the mechanical joint connecting the primary feed to the geode. \"The coupling is half a degree off vertical. The inductance will be asymmetrical.\"\n\n\"Hector? Divert the power!\"\n\n\"I can't!\" he shouted, fumbling with his harness, his hands shaking not from fear of the storm, but from the horrifying imperfection of the tolerance. \"If I divert it now, the asymmetry will cause a harmonic wobble in the field! I have to align it!\"\n\nThe system clicked as Jane initiated the remote override. The lightning arc snapped, flailing wildly before dissipating into the ground rods. Silence rushed back in, leaving Hector gasping, staring at the cable with horror. \n\n\"It was crooked,\" he whispered.\n\nHe slowly unclipped from the spire, his legs suddenly feeling like lead, and began the long climb down to the surface, intent on finding Kaio to check if the scout had noticed any ground-level static discharges during the aborted sequence."
+    }
+  }
+}
