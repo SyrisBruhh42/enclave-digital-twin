@@ -372,7 +372,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.1594,
+      "stress": 0.2205,
       "fatigue": 0.06,
       "sleep_debt_norm": 0.06,
       "kp_exo": 6.04,
@@ -501,7 +501,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.1594,
+      "stress": 0.2205,
       "fatigue": 0.06,
       "sleep_debt_norm": 0.06,
       "kp_exo": 6.04,
@@ -1078,7 +1078,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.1594,
+      "stress": 0.2205,
       "fatigue": 0.06,
       "sleep_debt_norm": 0.06,
       "kp_exo": 6.04,
@@ -1207,7 +1207,7 @@
       },
       "triggered_caps_rules": [],
       "behavioral_directives": [],
-      "stress": 0.1594,
+      "stress": 0.2205,
       "fatigue": 0.06,
       "sleep_debt_norm": 0.06,
       "kp_exo": 6.04,
@@ -1452,8 +1452,10 @@
       "morale": 0.5
     }
   },
-  "applied_event_ids": [],
-  "total_events_through_tick": 111,
+  "applied_event_ids": [
+    "evt_s024_t0093_morning_intent"
+  ],
+  "total_events_through_tick": 112,
   "recent_segments": [
     {
       "segment_id": "seg_s020_t0078_enclave_01_hector",

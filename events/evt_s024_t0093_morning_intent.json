@@ -88,7 +88,8 @@
     "lpi_metrics": {
       "lethality_probability": 0.05,
       "player_agency_index": 0.9,
-      "narrative_momentum": 0.8
+      "narrative_momentum": 0.8,
+      "composite_lpi": 0.68
     },
     "dual_agent_contract": {
       "judge_tactician": {
@@ -99,5 +100,8 @@
         "agency_handoff_prompt": "Kenna approaches quietly as Terra drops another bucket of gravel."
       }
     }
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
   }
 }
