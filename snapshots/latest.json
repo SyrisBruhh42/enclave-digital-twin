@@ -1420,8 +1420,10 @@
       "morale": 0.5
     }
   },
-  "applied_event_ids": [],
-  "total_events_through_tick": 133,
+  "applied_event_ids": [
+    "evt_s028_t0110_shadow_prank"
+  ],
+  "total_events_through_tick": 134,
   "recent_segments": [
     {
       "segment_id": "seg_s024_t0095_enclave_12_elias",

@@ -1,6 +1,8 @@
 {
   "context_manifest": {
-    "loaded_full_card_ids": ["enclave_11_kenna"],
+    "loaded_full_card_ids": [
+      "enclave_11_kenna"
+    ],
     "full_cards_loaded_count": 1,
     "active_pov_id": "enclave_11_kenna",
     "next_pov_target": "enclave_12_elias",
@@ -76,7 +78,8 @@
   ],
   "lpi_metrics": {
     "novelty_score": 8,
-    "importance": 7
+    "importance": 7,
+    "composite_lpi": 0.68
   },
   "dual_agent_contract": {
     "master_narrator": {
@@ -86,5 +89,8 @@
     "jules_dm": {
       "verification_target": "ensure scientific and character consistency"
     }
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
   }
 }
