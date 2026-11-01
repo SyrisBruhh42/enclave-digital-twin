@@ -1,0 +1,38 @@
+{
+  "segment_id": "seg_s027_t0105_enclave_02_jane",
+  "tick_id": 105,
+  "colony_sol": 27,
+  "day_phase": "DAWN_SHIFT",
+  "base_snapshot_tick": 101,
+  "active_pov_id": "enclave_02_jane",
+  "next_pov_target": "enclave_07_willow",
+  "prev_next_pov_target": "enclave_02_jane",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "science_vegetable": "Femtosecond Laser-Induced Plasma Channels (LIPC) ionizing a conductive step-leader highway at 50 kV/m atmospheric potential gradient into the bedrock capacitor geode.",
+  "actors": [
+    "enclave_02_jane",
+    "enclave_07_willow"
+  ],
+  "text": "The wind outside was a banshee, tearing at the reinforced shutters of the Stormbreaker bunker. Jane sat before the brass difference engine, her eyes fixed on the emerald phase-space butterfly wings rotating across the CRT monitors. The atmospheric potential gradient was climbing rapidly, currently reading 48 kV/m and accelerating. She was precisely calculating the exact millisecond to fire the pilot laser, mapping the non-linear magnetospheric Rossby waves to lock the chaotic lightning onto the collector rods.\n\n\"It's chaos, but it's our chaos,\" she murmured, her voice a dry, precise rasp. She could model a planet-wide Lorenz strange attractor in phase space, predicting the bifurcation tipping points with terrifying accuracy. Yet, the dull ache in her shoulders reminded her that she had spent the entire afternoon prior digging a muddy trench by hand just to ground a stubborn copper rod. The physical friction of mundane maintenance always gnawed at her algorithmic peace.\n\nSuddenly, the gradient spiked past 50 kV/m. The bruised purple thunderhead above them was primed, pregnant with gigajoules of energy. A violet laser needle lanced upward, stitching the cloud to the screaming copper spire fifty meters above the valley. It was a Femtosecond Laser-Induced Plasma Channel, ionizing a conductive step-leader highway perfectly into the bedrock capacitor geode.\n\nThen, the pressure hit. Not atmospheric pressure, but a crushing internal demand for perfection. Her Vex Override flared—the quiet logician abruptly seized by the theatrical need for recognition. \"Look at that symmetry!\" Jane announced to the empty room, her voice unusually dramatic. \"I just mathematically cornered a planetary discharge. I demand a standing ovation from the universe, or at least from Hector.\"\n\nShe caught herself, the Leo diva-flare receding as quickly as it had arrived, leaving behind a faint blush of embarrassment. The geode sang its deep, resonant note as the containment lattice drank the strike. The telemetry crystallized on the brass slate beside her keyboard.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Willow's voice cut through the bunker's intercom, dry and unimpressed. Jane picked up the heavy brass slate, its surface still warm from the inductive kickback, and turned toward the heavy airlock door to hand it off to the alchemist.",
+  "interactive_features": [
+    {
+      "feature_name": "Brass Difference Engine",
+      "affordance_description": "A hand-cranked mechanical fluid-logic barometer for modeling phase-space attractors.",
+      "system_verb": "DEFEND",
+      "associated_check_dc": 14
+    },
+    {
+      "feature_name": "Femtosecond Laser Emitter",
+      "affordance_description": "Fires a violet plasma channel to ionize the atmospheric step-leader.",
+      "system_verb": "ATTRACT",
+      "associated_check_dc": 14
+    },
+    {
+      "feature_name": "Containment Geode Feed",
+      "affordance_description": "Monitoring the energy intake of the bedrock capacitor.",
+      "system_verb": "CONSUME",
+      "associated_check_dc": 14
+    }
+  ]
+}
