@@ -11,7 +11,11 @@
   "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
   "pacing_mode": "MERCER_IMMERSIVE",
   "location": "The First Forge",
-  "actors": ["enclave_04_leo", "enclave_06_zara", "enclave_03_silas"],
+  "actors": [
+    "enclave_04_leo",
+    "enclave_06_zara",
+    "enclave_03_silas"
+  ],
   "summary": "Leo struggles with the meticulous filing of a brass screw while observing the geode with Silas.",
   "importance": 0.5,
   "novelty_score": 0.5,
@@ -19,7 +23,7 @@
   "state_deltas": {},
   "relationship_deltas": {},
   "evidence_refs": [],
-  "narrative_prose": "The geode was humming. It was a low, resonant vibration that rattled Leo's teeth.\n\n\"It's expanding,\" Silas said, looking at the thermal readouts. \"If it expands another millimeter, the seal will breach.\"\n\n\"Then we need a seal that breathes,\" Leo said. He watched the Non-Newtonian magnetorheological ferrofluid collar modulation suppressing Rosensweig spike instability around the thermally expanding dielectric containment geode. It was a masterpiece of architectural synthesis, a perfect alignment of grand magnetic infrastructure. He could orchestrate a four-megawatt sympathetic geode manifold in his head. Yet here he was, spending three hours hand-filing his thousandth identical brass machine screw. The friction of the mundane maintenance gnawed at him. The tiny file slipped again, a grating screech against the brass that made him wince.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" he muttered to himself, the dry affection barely masking his exhaustion. The file slipped once more, scratching the brass a bit deeper. A Libra polarity inversion threatened to take hold—a sudden, paralyzing indecision between two equally elegant mechanical tolerances for the screw thread. Did it need to be 0.5 millimeters or 0.55 millimeters? Both would work, but one would be slightly more harmonic. He froze, the file suspended above the vice, the indecision freezing his typically decisive nature. He stared at the threads, unable to choose.\n\nZara stepped into the warm circle of firelight, pulling him back from the precipice of his own indecision. \"The sequence is yours,\" Leo boomed, his voice resonant and declarative, shaking off the momentary hesitation. He handed her the warm copper data baton, a tangible weight of responsibility passing from one generation to the next.",
+  "narrative_prose": "The geode was humming. It was a low, resonant vibration that rattled Leo's teeth.\n\n\"It's expanding,\" Silas said, looking at the thermal readouts. \"If it expands another millimeter, the seal will breach.\"\n\n\"Then we need a seal that breathes,\" Leo said. He watched the Non-Newtonian magnetorheological ferrofluid collar modulation suppressing Rosensweig spike instability around the thermally expanding dielectric containment geode. It was a masterpiece of architectural synthesis, a perfect alignment of grand magnetic infrastructure. He could orchestrate a four-megawatt sympathetic geode manifold in his head. Yet here he was, spending three hours hand-filing his thousandth identical brass machine screw. The friction of the mundane maintenance gnawed at him. The tiny file slipped again, a grating screech against the brass that made him wince.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" he muttered to himself, the dry affection barely masking his exhaustion. The file slipped once more, scratching the brass a bit deeper. A Libra polarity inversion threatened to take hold\u2014a sudden, paralyzing indecision between two equally elegant mechanical tolerances for the screw thread. Did it need to be 0.5 millimeters or 0.55 millimeters? Both would work, but one would be slightly more harmonic. He froze, the file suspended above the vice, the indecision freezing his typically decisive nature. He stared at the threads, unable to choose.\n\nZara stepped into the warm circle of firelight, pulling him back from the precipice of his own indecision. \"The sequence is yours,\" Leo boomed, his voice resonant and declarative, shaking off the momentary hesitation. He handed her the warm copper data baton, a tangible weight of responsibility passing from one generation to the next.",
   "active_location": {
     "sensory_palette": {
       "sight_and_color": "A black mirror of liquid iron erupting into crowns of magnetic thorns inside the deep bedrock foundry.",
@@ -49,7 +53,12 @@
     ]
   },
   "context_manifest": {
-      "loaded_full_card_ids": ["enclave_04_leo"],
-      "full_cards_loaded_count": 1
+    "loaded_full_card_ids": [
+      "enclave_04_leo"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
   }
 }

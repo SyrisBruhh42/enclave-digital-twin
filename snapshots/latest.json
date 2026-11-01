@@ -1427,20 +1427,6 @@
   "total_events_through_tick": 123,
   "recent_segments": [
     {
-      "segment_id": "seg_s022_t0085_enclave_03_silas",
-      "sol_id": 22,
-      "colony_sol": 22,
-      "tick_id": 85,
-      "active_pov_id": "enclave_03_silas",
-      "next_pov_target": "enclave_01_hector",
-      "location_id": "The First Forge",
-      "time_of_day": "DAWN_SHIFT",
-      "day_phase": "DAWN_SHIFT",
-      "title": "Sol 022 \u2022 DAWN_SHIFT (enclave_03_silas)",
-      "opening_excerpt": "Silas gripped his diagnostics pad, watching the dark, jagged waves of the ferrofluid sea tear themselves apart in a mesmerizing display of Magnetohydrodynamic Kelvin-Helmholtz shear. The magnetic flux was intensifying, t",
-      "excerpt": "Silas gripped his diagnostics pad, watching the dark, jagged waves of the ferrofluid sea tear themselves apart in a mesmerizing display of Magnetohydrodynamic Kelvin-Helmholtz shear. The magnetic flux was intensifying, t"
-    },
-    {
       "segment_id": "seg_s022_t0086_enclave_06_zara",
       "sol_id": 22,
       "colony_sol": 22,
@@ -1593,6 +1579,20 @@
       "title": "Sol 025 \u2022 DUSK_CRAFT (enclave_05_kaio)",
       "opening_excerpt": "Kaio didn't walk through the jungle; he ricocheted. The forest floor was a riot of ferro-moss and silicon-based vines, and Kaio moved over it with the kinetic enthusiasm of a particle in a collider. \"Seventeen, nineteen,",
       "excerpt": "Kaio didn't walk through the jungle; he ricocheted. The forest floor was a riot of ferro-moss and silicon-based vines, and Kaio moved over it with the kinetic enthusiasm of a particle in a collider. \"Seventeen, nineteen,"
+    },
+    {
+      "segment_id": "seg_s026_t0101_enclave_04_leo",
+      "sol_id": 26,
+      "colony_sol": 26,
+      "tick_id": 101,
+      "active_pov_id": "enclave_04_leo",
+      "next_pov_target": "enclave_06_zara",
+      "location_id": "The First Forge",
+      "time_of_day": "DAWN_SHIFT",
+      "day_phase": "DAWN_SHIFT",
+      "title": "Sol 026 \u2022 DAWN_SHIFT (enclave_04_leo)",
+      "opening_excerpt": "The geode was humming. It was a low, resonant vibration that rattled Leo's teeth.\n\n\"It's expanding,\" Silas said, looking at the thermal readouts. \"If it expands another millimeter, the seal will breach.\"\n\n\"Then we need a",
+      "excerpt": "The geode was humming. It was a low, resonant vibration that rattled Leo's teeth.\n\n\"It's expanding,\" Silas said, looking at the thermal readouts. \"If it expands another millimeter, the seal will breach.\"\n\n\"Then we need a"
     }
   ],
   "available_sols": [
