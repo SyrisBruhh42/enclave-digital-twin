@@ -1,0 +1,51 @@
+{
+  "event_id": "evt_s026_t0101_world_consequence",
+  "tick_id": 101,
+  "colony_sol": 26,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2087-01-26T06:00:00Z",
+  "base_snapshot_tick": 97,
+  "event_type": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+  "location": "The First Forge",
+  "actors": [
+    "enclave_04_leo",
+    "enclave_06_zara",
+    "enclave_03_silas"
+  ],
+  "summary": "Leo orchestrates a risky containment procedure on a humming ferrofluid geode, struggling with repetitive brass hand-filing while simultaneously directing the colony's grand magnetic infrastructure.",
+  "importance": 0.8,
+  "novelty_score": 0.85,
+  "science_vegetable": "Non-Newtonian magnetorheological ferrofluid collar modulation suppressing Rosensweig spike instability around a thermally expanding dielectric containment geode.",
+  "state_deltas": {
+    "hub_caloric_reserves_pct": -0.05
+  },
+  "relationship_deltas": [],
+  "evidence_refs": [],
+  "active_pov_id": "enclave_04_leo",
+  "prev_next_pov_target": "enclave_04_leo",
+  "next_pov_target": "enclave_06_zara",
+  "narrative_prose": "The geode was humming. It was a low, resonant vibration that rattled Leo's teeth.\n\n\"It's expanding,\" Silas said, looking at the thermal readouts. \"If it expands another millimeter, the seal will breach.\"\n\n\"Then we need a stronger seal,\" Leo boomed, his voice carrying over the industrial din of The First Forge. \"A non-Newtonian magnetorheological ferrofluid collar. It will suppress the Rosensweig spike instability and buy us time to lock down the thermal expansion.\"\n\nHe wiped sweat from his brow, leaving a streak of grease across his forehead. He knew exactly how to construct it. The theoretical blueprint was already perfectly assembled in his mind, every tolerance calculated to the micron. But the reality involved hand-filing a thousand identical brass machine screws, a task so mundanely repetitive it made his teeth ache even more than the geode's vibration. The absurdity of it chafed\u2014the sovereign architect of the colony's magnetic infrastructure reduced to a glorified watchmaker.\n\n\"Leo?\" Zara's voice cut through his momentary paralysis. \"Which alloy? We have two options for the housing, both within acceptable tolerances.\"\n\nHe hesitated. For a fraction of a second, the decisive commander froze. The two mechanical tolerances were equally elegant, equally viable. It was a minor detail, but the indecision gripped him like a vice. \"The... the beryllium-copper,\" he finally commanded, shaking off the hesitation. \"It will handle the thermal load better. Now, pass me that file. We have a cathedral of iron to build, and only so much daylight to do it.\"",
+  "dialogue": [
+    {
+      "speaker": "enclave_03_silas",
+      "text": "It's expanding. If it expands another millimeter, the seal will breach."
+    },
+    {
+      "speaker": "enclave_04_leo",
+      "text": "Then we need a stronger seal. A non-Newtonian magnetorheological ferrofluid collar. It will suppress the Rosensweig spike instability and buy us time to lock down the thermal expansion."
+    },
+    {
+      "speaker": "enclave_06_zara",
+      "text": "Leo? Which alloy? We have two options for the housing, both within acceptable tolerances."
+    },
+    {
+      "speaker": "enclave_04_leo",
+      "text": "The... the beryllium-copper. It will handle the thermal load better. Now, pass me that file. We have a cathedral of iron to build, and only so much daylight to do it."
+    }
+  ],
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_04_leo"
+    ]
+  }
+}
