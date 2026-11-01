@@ -87,9 +87,9 @@
   "lpi_metrics": {
     "relational_tension_density": 0.45,
     "motivational_vector_saturation": 0.85,
-    "unresolved_conflict_ratio": 0.70,
-    "temporal_horizon_immediacy": 0.80,
-    "composite_lpi": 0.70,
+    "unresolved_conflict_ratio": 0.7,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.7,
     "classification": "Campaign-Ready"
   },
   "dual_agent_contract": {
