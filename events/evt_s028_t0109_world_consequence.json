@@ -1,0 +1,47 @@
+{
+  "event_id": "evt_s028_t0109_world_consequence",
+  "tick_id": 109,
+  "colony_sol": 28,
+  "day_phase": "DAWN_SHIFT",
+  "event_type": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+  "active_pov_id": "enclave_08_terra",
+  "next_pov_target": "enclave_11_kenna",
+  "prev_next_pov_target": "enclave_08_terra",
+  "actors": [
+    "enclave_08_terra",
+    "enclave_11_kenna"
+  ],
+  "active_location": {
+    "zone_id": "LOC_GENESIS_GARDEN",
+    "sensory_palette": {
+      "sight_and_color": "glowing microscopic hyphal cities routing sapphire calcium packets around a drop of amber resin",
+      "sound": "quiet subterranean bioluminescent wonder",
+      "smell": "sweet pepper-scented epoxy-sap",
+      "tactile_temperature": "heavy grit of crushed basalt gravel in soil",
+      "taste_optional": "faint metallic tang of ion-rich air"
+    },
+    "interactive_features": [
+      {
+        "feature_id": "IF_01",
+        "description": "glowing hyphal network emitting calcium waves",
+        "system_verb": "ATTRACT"
+      },
+      {
+        "feature_id": "IF_02",
+        "description": "pepper-scented epoxy-sap bridge",
+        "system_verb": "DEFEND"
+      },
+      {
+        "feature_id": "IF_03",
+        "description": "buckets of crushed basalt gravel",
+        "system_verb": "CONSUME"
+      }
+    ]
+  },
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "science_vegetable": "Cytosolic Ca2+ wave transduction implementing physical Boolean AND/OR/NOT logic gates across hyphal anastomoses when bridged with pepper-scented epoxy-sap.",
+  "pre_roll_check_dc": 14,
+  "base_snapshot_tick": 109,
+  "narrative_prose": "Terra knelt in the dark soil of The Genesis Garden. The quiet subterranean bioluminescent wonder surrounded her. Glowing microscopic hyphal cities routing sapphire calcium packets around a drop of amber resin pulsed with deliberate logic. She stared at the readouts. Cytosolic ca2+ wave transduction implementing physical boolean and/or/not logic gates across hyphal anastomoses when bridged with pepper-scented epoxy-sap.\n\n\"It's not just a root system,\" Terra murmured, lifting her head. \"It's a decentralized processor.\"\n\nKenna stepped carefully around a cluster of bioluminescent ferns. \"A processor that needs you to haul rocks?\"\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Terra said, wiping a smudge of soil from her cheek. She picked up a heavy bucket of crushed basalt gravel. It was agonizing work. She could map the action potentials of a planetary network across miles, yet here she was, acting as manual labor to balance the pH of the greenhouse soil.\n\nSuddenly, the main root cluster flared a brilliant, angry red. An anomalous spike in the calcium flow, bypassing her carefully constructed epoxy bridges. The pH shift was faster than her model predicted; the acid was already burning the delicate root hairs of the heirloom wheat.\n\nHer breath hitched. A surge of protective adrenaline cut through her exhaustion. The patient listener vanished. The brawler took over. She didn't have time for methodical titration. She grabbed the remaining bucket of raw, uncrushed basalt and hurled the entire heavy mass directly into the primary irrigation trench, physically damming the acidic flow before it could reach the central nursery. The water sizzled, a cloud of steam rising into the canopy.\n\nShe dusted her hands off, looking over at Kenna. \"I suppose we should go over those psychological assessments now.\""
+}
