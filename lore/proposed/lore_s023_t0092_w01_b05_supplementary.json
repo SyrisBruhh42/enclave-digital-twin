@@ -1,0 +1,111 @@
+{
+  "base_snapshot_tick": 88,
+  "context_manifest": {
+    "active_pov_id": "enclave_14_vex",
+    "next_pov_target": "enclave_08_terra",
+    "prev_next_pov_target": "enclave_14_vex"
+  },
+  "campaign_metadata": {
+    "session_number": 34,
+    "colony_sol": 23,
+    "tick_id": 92,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Calculate the magnetohydrodynamic shear variables before the coronal mass ejections misalign the shield network.",
+      "mid_term_milestone": "Stabilize the Living Atlas using the dual-sun vector anomaly data.",
+      "campaign_arc_climax": "Master the exoplanet's shifting orbital mechanics to prevent catastrophic shield failure."
+    }
+  },
+  "active_location": {
+    "location_id": "LOC_OBSERVATORY_ROOF",
+    "macro_silhouette": "The hand-built brass observatory roof rests under a bruised violet twilight, casting double razor-sharp shadows across the metalwork. To the east, a bloated Red Giant bathes the world in crimson, while the piercing diamond of the Blue Dwarf sets in the west.",
+    "sensory_palette": {
+      "sight_and_color": "Bruised violet twilight, glowing crimson from the east and sharp diamond blue from the west, creating double razor-sharp shadows.",
+      "sound": "The low hum of the brass astrolabe dome shifting on its tracks and the distant wail of the wind.",
+      "smell": "Ozone from the ionized atmosphere mixed with the scent of roasted tubers and savory loam wafting up from the Feast below.",
+      "tactile_temperature": "A sharp, biting cold offset by occasional warm infrared gusts from the Red Giant.",
+      "taste_optional": "A faint, metallic tang of static electricity."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Brass Astrolabe Dome Tracks",
+        "affordance_description": "Can be manually adjusted to block incoming solar radiation surges.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Relativistic Telescopic Array",
+        "affordance_description": "Can be calibrated to pull scattered ultraviolet bow shock telemetry.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 12
+      },
+      {
+        "feature_name": "Ambient Shield Generator",
+        "affordance_description": "Used to mask the delicate sensor nodes from magnetic surges.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "TOY_MAGNETIC_SURGE",
+      "name_and_role": "Coronal Mass Ejection Wave",
+      "motivation_goal": "Overwhelm the sensory arrays with infrared radiation.",
+      "consistent_method": "Riding the relativistic magnetohydrodynamic shear between the suns.",
+      "immediate_complication": "Induces static buildup that threatens to fry the brass astrolabe logic gates.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Will arc through the planetary magnetosphere and cause a localized polarity inversion in the Hub if unchecked."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The magnetohydrodynamic shear is spiking, requiring manual calculation.",
+      "level_2_local": "The Feast below requires stable shielding from the binary-star radiation.",
+      "level_3_campaign_arc": "Understanding the celestial mechanics is necessary to complete the Living Atlas."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_14_vex",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_08_terra",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 2,
+    "prerolled_hazard_queue": [4, 15, 19, 8, 11]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.85,
+    "motivational_vector_saturation": 0.90,
+    "unresolved_conflict_ratio": 0.70,
+    "temporal_horizon_immediacy": 0.80,
+    "composite_lpi": 0.82,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "anthropic",
+      "model": "claude-3",
+      "temperature": 0.1,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The magnetic shear overloads the astrolabe, blinding the Enclave's sensors for the next solar cycle.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Calculates the entirely wrong vector, mistaking the Red Giant's CME for a harmless aurora, leaving the Hub exposed.",
+        "below_dc_complicated_fail_forward": "Blocks the surge but misaligns the dome, requiring a grueling reset during the next shift.",
+        "meets_dc_clean_success": "Predicts the exact angle of the shear and shifts the dome just in time to ride the wave.",
+        "dc_plus_5_or_20_extended_lore": "Not only stabilizes the dome, but captures a pure string of ultraviolet telemetry that unlocks a new tier in the Living Atlas."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules_dm_agent",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Vex sat on the roof, legs dangling over the edge. To the east, the Red Giant was rising, a bloated, angry eye that bathed the world in crimson. To the west, the Blue Dwarf was setting, a piercing diamond that cast double razor-sharp shadows across the hand-built brass observatory roof.\n\nThe bruised violet twilight above him was tearing itself apart. The relativistic magnetohydrodynamic shear between the Red Giant's infrared coronal mass ejections and the Blue Dwarf's compressed ultraviolet bow shock was beautiful, if you didn't think about the radiation. He tapped a brass slide rule against his knee, tracking the invisible tides. He could calculate the exact moment the magnetic flux would try to fry the Hub's circuits, though a part of him—the part that always surfaced when the stress spiked and his Cancer override kicked in—just wanted to make sure everyone inside was safe and eating Ryn's stew. He was fiercely guarding the family's emotional core, even if he masked it with a smirk.\n\n\"If that Red Giant sneezes,\" Vex muttered to himself, \"we're toast. If the Blue Dwarf blinks, we freeze. And here we are, sitting in the middle, eating soup and fixing pipes.\"\n\nHe watched a particularly violent pulse of infrared radiation arc toward the Enclave, calculating the relativistic magnetohydrodynamic tides between a Red Giant and a Blue Dwarf while dangling his boots off the roof and complaining about stirring stew at 40 RPM. He needed to subtly weave the verbs to defend the delicate sensor array, attract the right ultraviolet telemetry, and conceal the core nodes before the next surge hit. He turned his gaze toward the hatch, knowing Terra was on her way up. 'If you're complaining and no one is laughing, you're complaining wrong,' he thought, waiting for her to emerge."
+    }
+  }
+}
