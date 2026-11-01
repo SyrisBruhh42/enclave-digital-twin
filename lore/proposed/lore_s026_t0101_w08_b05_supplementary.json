@@ -1,0 +1,115 @@
+{
+  "base_snapshot_tick": 100,
+  "context_manifest": {
+    "active_pov_id": "enclave_04_leo",
+    "prev_next_pov_target": "enclave_04_leo",
+    "next_pov_target": "enclave_06_zara",
+    "loaded_full_card_ids": [
+      "enclave_04_leo"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "campaign_metadata": {
+    "session_number": 26,
+    "colony_sol": 26,
+    "tick_id": 101,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Stabilize the expanding dielectric containment geode without breaching the foundry seal.",
+      "mid_term_milestone": "Automate the foundry to free the artisans from endless manual fabrication of uniform brass machine screws.",
+      "campaign_arc_climax": "Complete the Grand Project's first harmonic induction furnace, ensuring Enclave survival through deep subterranean winters."
+    }
+  },
+  "active_location": {
+    "location_id": "loc_first_forge_foundry",
+    "macro_silhouette": "The First Forge cavern echoes with the rhythm of deep-crust geothermal industry. Massive bronze pipes weave like roots across the soot-stained rock ceiling. A central pit houses the roaring primary induction furnace, ringed by stacked brass ingots and heavily insulated cabling.",
+    "sensory_palette": {
+      "sight_and_color": "A black mirror of liquid iron erupting into crowns of magnetic thorns in the flickering amber light of the subterranean bunker.",
+      "sound": "A low, resonant humming vibration that shakes the metal grating underfoot.",
+      "smell": "Ozone, scorched brass dust, and the sharp tang of superheated mineral gas.",
+      "tactile_temperature": "Oppressively hot; the ambient heat radiates from the metal surfaces like a physical weight.",
+      "taste_optional": "A metallic copper bite on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Dielectric Containment Seal",
+        "affordance_description": "The heavy pressure-lock mechanism holding the expanding thermal core inside the geode.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Ferrofluid Supply Lines",
+        "affordance_description": "Exposed pipes channeling liquid iron into the suppression collars, ready to be manipulated.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Excess Thermal Vents",
+        "affordance_description": "Safety release grates that can bleed off dangerous temperatures into the lower cavern.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_dielectric_geode",
+      "name_and_role": "Unstable Dielectric Geode",
+      "motivation_goal": "To expand under thermal stress until its crystalline matrix shatters.",
+      "consistent_method": "Generating immense low-frequency vibrations and radiating intense ambient heat.",
+      "immediate_complication": "The expansion threatens to breach the primary seal of the foundry.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "The geode will rupture the brass casing, flooding the room with superheated magnetic spikes."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The geode is structurally failing under its own resonance.",
+      "level_2_local": "The foundry lacks the automated tolerances required to safely harness this much energy.",
+      "level_3_campaign_arc": "The colony's desperate need for raw power pushes their experimental engineering past safe limits."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_04_leo",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_06_zara",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [ 4, 12, 19, 7, 15 ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.85,
+    "motivational_vector_saturation": 0.90,
+    "unresolved_conflict_ratio": 0.70,
+    "temporal_horizon_immediacy": 0.95,
+    "composite_lpi": 0.85,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "anthropic",
+      "model": "claude-3",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The geode breaches, forcing an immediate evacuation of the foundry and damaging weeks of progress.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Leo incorrectly identifies the harmonic frequency, accelerating the Rosensweig spike instability.",
+        "below_dc_complicated_fail_forward": "The expansion is delayed, but one of the cooling lines ruptures, spraying the room with scalding steam.",
+        "meets_dc_clean_success": "The non-Newtonian magnetorheological ferrofluid collar modulation successfully suppresses the instability.",
+        "dc_plus_5_or_20_extended_lore": "Leo masterfully aligns the frequencies, permanently stabilizing the geode and discovering a new method for deep-crust energy extraction."
+      }
+    },
+    "master_narrator": {
+      "executor": "story_engine",
+      "temperature": 0.75,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": false,
+      "agency_handoff_prompt": "The geode was humming. It was a low, resonant vibration that rattled Leo's teeth.\n\n\"It's expanding,\" Silas said, looking at the thermal readouts. \"If it expands another millimeter, the seal will breach.\"\n\n\"Then we need a steady collar,\" Leo said, watching a black mirror of liquid iron erupting into crowns of magnetic thorns inside the deep bedrock foundry. They had to execute a Non-Newtonian magnetorheological ferrofluid collar modulation suppressing Rosensweig spike instability around a thermally expanding dielectric containment geode, or the entire assembly would tear itself apart.\n\nHe stared at the chalkboard slate, rapidly calculating the pressure thresholds. He knew how to design a fully automated fabrication foundry, yet here he was, forced to spend three hours hand-filing his thousandth identical brass machine screw because their tolerances were still too primitive for the power they were tapping. For a horrible, frozen second, Leo's mind locked up. He stared at the twin readouts, the decisive commander suddenly freezing when weighing two equally elegant mechanical tolerances. Defend the seal with brute thermal shielding, or try to attract the liquid iron away from the core?\n\nHe forced a dry laugh, breaking the silence before panic could take root. \"If you're complaining and no one is laughing, you're complaining wrong,\" he muttered, breaking the freeze. He tossed his filed brass screw onto the workbench and slapped his heavy leather gloves against his thigh. They would consume the excess heat by manually venting the secondary pipes while masking the instability. \"Zara! Get your gear down here. We're going to conceal the thermal spikes by hand.\""
+    }
+  }
+}
