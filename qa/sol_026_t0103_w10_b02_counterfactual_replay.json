@@ -1,0 +1,108 @@
+{
+  "campaign_metadata": {
+    "session_number": 26,
+    "colony_sol": 26,
+    "tick_id": 103,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Maintain ferrofluid droplet suspension using magneto-acoustic cymatics.",
+      "mid_term_milestone": "Stabilize the Simulacrum's acoustic-magnetic resonance matrix.",
+      "campaign_arc_climax": "Complete the 5D optical quartz storage encoding for The Simulacrum."
+    }
+  },
+  "context_manifest": {
+    "active_pov_id": "enclave_10_isla",
+    "next_pov_target": "enclave_15_dorian",
+    "prev_next_pov_target": "enclave_15_dorian",
+    "loaded_full_card_ids": ["enclave_10_isla"],
+    "full_cards_loaded_count": 1
+  },
+  "active_location": {
+    "location_id": "The_Simulacrum",
+    "macro_silhouette": "The Simulacrum is a dimly lit, high-vaulted chamber humming with the combined energies of electromagnet matrices and polyphonic synthesizers. Suspended above a deep basin, droplets of liquid iron orbit each other in the dark, dancing to a minor-key cello chord.",
+    "sensory_palette": {
+      "sight_and_color": "Orbiting droplets of liquid iron dancing in the dark to a minor-key cello chord, illuminated by quiet subterranean bioluminescence.",
+      "sound": "The resonant hum of electromagnet matrices and the deep, mournful tones of a polyphonic synthesizer playing a cello chord.",
+      "smell": "The sharp tang of ozone, warm copper wire, and the earthy scent of subterranean moss.",
+      "tactile_temperature": "A cool ambient chill cut by the localized, radiating warmth of the electromagnet coils."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Magneto-Acoustic Resonator Array",
+        "affordance_description": "A complex array of electromagnet coils driven by a synthesizer, capable of manipulating ferrofluid in three dimensions.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "5D Quartz Optical Drive",
+        "affordance_description": "A delicate, nanostructured quartz lattice designed to hold terabytes of five-dimensional holographic storm telemetry.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 18
+      },
+      {
+        "feature_name": "Chamois Leather Lens Polisher",
+        "affordance_description": "A mundane, hand-sized piece of soft leather used for painstakingly removing microscopic dust from optical lenses.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 10
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "ferrofluid_droplets",
+      "name_and_role": "Ferrofluid Droplets - Gravity-Defying Resonant Spires",
+      "motivation_goal": "To follow the path of least magnetic resistance and align with acoustic standing waves.",
+      "consistent_method": "Forming intricate, shifting topological shapes in response to the synthesizer's frequencies.",
+      "immediate_complication": "A slight drift in the magnetic polarity shear causing the droplets to lose cohesion and threaten to fall.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The droplets will crash into the basin, disrupting the delicate resonance and forcing a complete recalibration of the matrix."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Isla must hand-polish the optical lenses to ensure the 5D quartz storage can encode the incoming storm telemetry without error.",
+      "level_2_local": "The ferrofluid suspension is a critical component of the Simulacrum's real-time physical modeling, which depends on flawless optical data.",
+      "level_3_campaign_arc": "The Simulacrum is the ultimate repository of knowledge; any flaw in its construction compromises the Enclave's legacy."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_10_isla",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [ 12, 8, 19, 4, 15 ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.3,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.6,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_engine",
+      "model": "deterministic_physics",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The ferrofluid droplets lose cohesion, disrupting the cymatic resonance and causing a micro-fracture in the quartz lattice.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Isla miscalculates the harmonic frequency, causing the ferrofluid to violently repel and shatter the primary lens.",
+        "below_dc_complicated_fail_forward": "The droplets destabilize, forcing Isla to abandon the hand-polishing and hastily recalibrate the matrix, leaving the lens partially obscured.",
+        "meets_dc_clean_success": "Isla successfully maintains the resonance while finishing the grueling task of hand-polishing the lens to a mirror finish.",
+        "dc_plus_5_or_20_extended_lore": "Isla not only stabilizes the droplets but discovers a new harmonic frequency that permanently increases the quartz storage efficiency."
+      }
+    },
+    "master_narrator": {
+      "executor": "narrator_engine",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Isla's fingers ached. She was currently encoding terabytes per second of five-dimensional holographic storm telemetry into nanostructured quartz, a process that demanded absolute mathematical perfection. The irony, of course, was that while her mind navigated higher-dimensional phase space, her hands were locked in the distinctly mundane agony of hand-polishing optical lenses with chamois leather. If the surface wasn't flawless, the data would scatter. It was maddening.\n\nShe paused, rubbing her cramped thumb, and looked out over the Simulacrum basin. It was beautiful, in a quiet, subterranean way. Orbiting droplets of liquid iron were dancing in the dark, suspended in gravity-defying resonant spires. The magneto-acoustic cymatics were coupling polyphonic synthesizer harmonics directly into the electromagnet matrix, holding the ferrofluid in perfect, shimmering tension against a minor-key cello chord. \n\nSuddenly, a fluctuation in the grid caused the droplets to wobble. Stress spiked, and for a terrifying second, her Sagittarius inversion flared—a reckless urge to just bet the entire optical lattice on an untested pulse and see what happened. She forced the urge down. With a grimace, she adjusted the matrix, carefully balancing the magnetic and acoustic forces to attract the droplets back into their proper orbits, defending the delicate quartz from the incoming data stream, while using the chamois to conceal a tiny scratch on the secondary housing. She needed to hand this off. 'Dorian,' she called over the comms, 'I need you to verify the flux variance in Sector 4. The matrix is drifting.'"
+    }
+  },
+  "base_snapshot_tick": 100
+}
