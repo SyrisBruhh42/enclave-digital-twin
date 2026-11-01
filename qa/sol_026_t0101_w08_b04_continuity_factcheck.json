@@ -4,7 +4,9 @@
     "active_pov_id": "enclave_04_leo",
     "next_pov_target": "enclave_06_zara",
     "prev_next_pov_target": "enclave_06_zara",
-    "loaded_full_card_ids": ["enclave_04_leo"],
+    "loaded_full_card_ids": [
+      "enclave_04_leo"
+    ],
     "full_cards_loaded_count": 1
   },
   "campaign_metadata": {
@@ -77,7 +79,13 @@
       }
     ],
     "strain_accumulated_upward": 1,
-    "prerolled_hazard_queue": [12, 5, 18, 9, 14]
+    "prerolled_hazard_queue": [
+      12,
+      5,
+      18,
+      9,
+      14
+    ]
   },
   "lpi_metrics": {
     "relational_tension_density": 0.4,

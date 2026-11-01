@@ -891,13 +891,16 @@
       "squad_a": "The Forge",
       "squad_b": "The Wilds",
       "relationship_type": "Mentor_Mentee",
-      "bond_strength": 0.77,
-      "trust": 0.81,
+      "bond_strength": 0.79,
+      "trust": 0.82,
       "affection": 0.79,
       "intellectual_friction": 0.46,
       "how_a_sees_b": "Watches over Zara's work on The Sanctuary with fond cross-squad mentorship, offering The Forge insights whenever Zara asks.",
       "how_b_sees_a": "Appreciates Leo's generous cross-disciplinary advice and loves hearing Leo's stories of Old Earth during Evening Dispatch.",
-      "shared_history_hook": "Collaborated across The Forge and The Wilds during last winter's spore-fog lock-in to cross-calibrate The First Forge with The Sanctuary."
+      "shared_history_hook": "Collaborated across The Forge and The Wilds during last winter's spore-fog lock-in to cross-calibrate The First Forge with The Sanctuary.",
+      "evidence_refs": [
+        "evt_s026_t0101_morning_intent"
+      ]
     },
     {
       "pair_id": "enclave_04_leo__enclave_07_willow",
@@ -6590,6 +6593,6 @@
       }
     }
   },
-  "updated_at_tick": 100,
-  "applied_event_count": 121
+  "updated_at_tick": 101,
+  "applied_event_count": 123
 }

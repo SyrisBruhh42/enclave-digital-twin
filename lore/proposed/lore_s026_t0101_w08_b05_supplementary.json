@@ -80,12 +80,18 @@
       }
     ],
     "strain_accumulated_upward": 1,
-    "prerolled_hazard_queue": [ 4, 12, 19, 7, 15 ]
+    "prerolled_hazard_queue": [
+      4,
+      12,
+      19,
+      7,
+      15
+    ]
   },
   "lpi_metrics": {
     "relational_tension_density": 0.85,
-    "motivational_vector_saturation": 0.90,
-    "unresolved_conflict_ratio": 0.70,
+    "motivational_vector_saturation": 0.9,
+    "unresolved_conflict_ratio": 0.7,
     "temporal_horizon_immediacy": 0.95,
     "composite_lpi": 0.85,
     "classification": "Campaign-Ready"
