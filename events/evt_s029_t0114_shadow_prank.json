@@ -1,0 +1,51 @@
+{
+  "event_id": "evt_s029_t0114_shadow_prank",
+  "tick_id": 114,
+  "colony_sol": 29,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-11-22T12:00:00Z",
+  "base_snapshot_tick": 114,
+  "event_type": "SHADOW_ECONOMY_PRANK_SEEDED",
+  "location": "The Stormbreaker Tower",
+  "actors": ["enclave_01_hector", "enclave_05_kaio", "enclave_02_jane"],
+  "summary": "Hector aligns a mischievous decoy cable while harnessing planetary lightning, setting up a prank for Kaio.",
+  "importance": 7,
+  "novelty_score": 0.85,
+  "science_vegetable": "Real-time Lorenz strange-attractor bifurcation targeting that fires millisecond pre-strike ionization pulses to lock chaotic lightning onto collector rods at 98% efficiency.",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "pacing_mode": "MULLIGAN_CRISIS",
+  "pre_roll_dc": 14,
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "node_a": "enclave_01_hector",
+  "node_b": "enclave_05_kaio",
+  "node_c": "enclave_02_jane",
+  "origin_sol": 29,
+  "maturity_sol": 32,
+  "target_b_missed": true,
+  "active_pov_id": "enclave_01_hector",
+  "prev_next_pov_target": "enclave_01_hector",
+  "next_pov_target": "enclave_05_kaio",
+  "interactive_features": [
+    {
+      "feature_name": "Decoy Grounding Cable",
+      "affordance_description": "Can be subtly misaligned to trigger Kaio's obsessive corrections.",
+      "system_verb": "CONCEAL",
+      "associated_check_dc": 14
+    },
+    {
+      "feature_name": "Femtosecond Ionization Laser",
+      "affordance_description": "Draws lightning strikes away from the decoy rigging.",
+      "system_verb": "ATTRACT",
+      "associated_check_dc": 14
+    },
+    {
+      "feature_name": "Dielectric Containment Geode",
+      "affordance_description": "Absorbs the planetary discharge, keeping the platform safe.",
+      "system_verb": "CONSUME",
+      "associated_check_dc": 14
+    }
+  ],
+  "text": "\"It's not just a storm,\" Hector yelled over the wind, strapping his harness to the primary copper mast of the Stormbreaker tower. \"It's a battery! A big, angry, floating battery!\" Fifty meters below, the Enclave bunker hummed. Down there, Jane tracked emerald phase-space butterfly wings rotating across brass-framed CRT monitors. His objective was immediate: lock the chaotic lightning onto the collector rods and power the perimeter defenses.\n\nA bruised, violent thunderhead rolled over the valley, spitting preliminary arc flashes. Hector grinned, leaning his weight into the ozone gale. \"Targeting solution?\"\n\n\"Locking,\" Jane buzzed over the comms. \"Real-time Lorenz strange-attractor bifurcation running. Firing the millisecond pre-strike ionization pulses now.\"\n\nA violet laser pierced the tempest, painting a conductive plasma highway through the sky. A blinding pillar of white fire slammed down the channel. The copper conductors shrieked, channeling gigajoules into the dielectric containment geode. The platform vibrated violently. Hector laughed, adjusting his grip on the rigging. The strike failed to dissipate cleanly. Worse, a micro-fraction of a second before the second strike, a detail snagged his peripheral vision. A secondary grounding cable, positioned explicitly as a mischievous decoy for Kaio's patrol route, hung exactly half a degree off vertical.\n\nThe asymmetry glared at him. A harmonic wobble in the field threatened a cascade failure. The thrill evaporated, replaced by a cold, paralyzing obsession with the misalignment. He froze. His gloved hand reached for the main diverter switch, hovering just inches away.\n\n\"Hector, capacity at ninety percent,\" Jane warned. \"Divert the load!\"\n\nHe stared at the crooked decoy cable. He could hit the diverter, safely routing the energy but leaving the asymmetry uncorrected, ruining the meticulously laid prank for the scout. Or he could abandon the switch, crawl out onto the slick, vibrating strut, and hammer the coupling straight before the next pulse, risking a massive arc flash. Therefore, he abandoned the switch and chose the strut.\n\nRain lashed his goggles. He unclipped his secondary tether. He hauled himself across the shaking brass platform, boots sliding on wet metal. He swung his heavy wrench, slamming it against the stubborn coupling. The metal groaned, sliding perfectly into a plumb line. He scrambled backward, slapping the diverter switch just as the sky connected again, safely shunting the load into the bedrock.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Hector muttered, clipping his tether back onto the main mast. \"Hey, Kaio. I left a present for you on the lower rigging. Watch your step.\""
+}
