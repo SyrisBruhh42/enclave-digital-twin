@@ -1,0 +1,116 @@
+{
+  "base_snapshot_tick": 98,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_06_zara"
+    ],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_06_zara",
+    "next_pov_target": "enclave_10_isla",
+    "prev_next_pov_target": "enclave_10_isla"
+  },
+  "campaign_metadata": {
+    "session_number": 9,
+    "colony_sol": 26,
+    "tick_id": 102,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Retrieve prime-number luciferin syntax from abyssal chemosynthetic cephalopod.",
+      "mid_term_milestone": "Stabilize The Sanctuary magnetic resonance fields.",
+      "campaign_arc_climax": "Decode the planetary consciousness."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Abyssal_Aquifer_Pen",
+    "macro_silhouette": "A sunless subterranean aquifer ecosystem where primary producers fix carbon via the oxidation of dissolved ferrous iron. The water is black, motionless, and heavy with iron, rimmed by ferro-moss ravines.",
+    "sensory_palette": {
+      "sight_and_color": "Ultraviolet auroras, oil-slick hex-pedal carapace camouflage, and spiralling blue bioluminescent lures blooming in the pitch-black water.",
+      "sound": "Acoustic silence broken only by the drip of heavy iron-rich water and the low sub-harmonic chest tones of distressed fauna.",
+      "smell": "Ozone, damp earth, and the sharp metallic tang of oxidized ferrous iron and hydrogen sulfide.",
+      "tactile_temperature": "Freezing, heavy pressure of deep water against the pressure suit, with a biting cold draft from the upper cave system."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Chemosynthetic Cephalopod Photophores",
+        "affordance_description": "Communicate using wrist-lights to match the chromatic photophore wave-syntax.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Hex-Pedal Predator Carapace",
+        "affordance_description": "Evade or deflect the camouflaged predator lurking in the ferro-moss ravine.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 16
+      },
+      {
+        "feature_name": "Luciferin Prime Flashbang Specimen",
+        "affordance_description": "Modulate the optical polarization to trigger a blinding strobe against threats.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "Abyssal_Cephalopod_Alpha",
+      "name_and_role": "The Chemosynthetic Emissary",
+      "motivation_goal": "Establish contact using prime-number syntax while guarding its territory.",
+      "consistent_method": "Flashing blue-blue-spiral lures in the dark water.",
+      "immediate_complication": "Spooked easily by erratic movements or sudden loud noises.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Will retreat deep into the aquifer if the syntax is broken, taking the prime-number key with it."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The Enclave needs the prime-number luciferin syntax for biological computing.",
+      "level_2_local": "The local magnetic field is scrambling standard communication arrays.",
+      "level_3_campaign_arc": "Understanding planetary syntax is crucial for long-term survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_06_zara",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      12,
+      18,
+      4,
+      15,
+      9
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.6,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Local_Deterministic_Tick_Engine",
+      "model": "v2.0",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The cephalopod misinterprets the signal as a threat and attacks or flees.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Zara misreads the bioluminescence completely, blinding herself and angering the creature.",
+        "below_dc_complicated_fail_forward": "Zara establishes a weak connection, but the creature is agitated and only provides a partial syntax.",
+        "meets_dc_clean_success": "Zara perfectly mimics the blue-blue-spiral, establishing peaceful contact and securing the prime-number syntax.",
+        "dc_plus_5_or_20_extended_lore": "Zara not only gets the syntax but uncovers a deeper, older communication network embedded in the aquifer."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules_Showrunner_Agent",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "The cave didn't end; it drowned. Zara stood at the edge of the subterranean lake. The water was black, motionless, and heavy with iron. She hated this part. Not the danger—the danger was predictable. It was the sheer, unrelenting pressure of being the only one who could hear the planet thinking. \n\nShe waded in. Her suit pressurized against the weight of the deep. Down here, there was no light but what you brought, or what lived. She was tracking the enzymatic luciferin-luciferase oxidation. It wasn't just a glow; it was a syntax, gated by voltage-sensitive ion channels flashing in prime-number sequences and optical polarization modulation. The kind of elegant, impossible biology that made her chest ache with quiet wonder. \n\nSomething brushed her leg in the pitch darkness. \n\nShe froze. Her heart hammered a frantic rhythm against her ribs. *Blue dots, spiraling.* A lure. An abyssal chemosynthetic cephalopod. \n\nSuddenly, the stress of the day—the mucking of the feed pens, the endless, mundane friction of keeping the sanctuary alive—snapped something inside her. The Gemini override engaged. The silence of the tracker vanished.\n\n\"Okay, so here's the thing,\" Zara whispered rapidly into her comms, the words spilling out like water from a breached dam. \"It's a cephalopod, obviously. But the photophores are firing in a 2-3-5-7 prime sequence, which means it's not just a lure, it's a diagnostic ping. It's asking if I'm food or a peer node. And honestly, considering I spent three hours this morning scraping calcified algae off the southern filtration grates while Hector argued with Silas about torque, I'm barely qualifying as a peer node right now.\"\n\nShe twisted the dial on her wrist-light, forcing her trembling fingers to mimic the pattern. *Blue-blue-spiral.* \n\n\"If this thing eats me,\" she babbled, \"tell Ryn I'm sorry I complained about the tubers. And tell Isla she has to take over the midnight feed schedule. The hatchlings like the red moss, not the green. It gives them gas.\"\n\nThe creature hesitated. Then, a single, glowing tentacle reached out, lightly touching her pressure glove. The prime-number syntax shifted, the sequence resolving into a complex, harmonious equation of light. A connection. \n\nZara let out a shaky breath, the frantic stream of words halting as the sheer, bioluminescent beauty of the moment washed over her. \"Hello,\" she whispered in the dark. \"I'm not food.\"\n\nShe carefully recorded the sequence, the data streaming back to the Simulacrum. She had the syntax. Now, she just had to get it back to Isla without getting eaten by a hex-pedal predator on the way up."
+    }
+  }
+}
