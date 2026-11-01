@@ -1,0 +1,117 @@
+{
+  "base_snapshot_tick": 95,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_12_elias"
+    ],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_12_elias",
+    "next_pov_target": "enclave_16_elara",
+    "prev_next_pov_target": "enclave_12_elias"
+  },
+  "campaign_metadata": {
+    "session_number": 24,
+    "colony_sol": 24,
+    "tick_id": 95,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Mitigate ICE Third-Quarter cortisol cascades via communal roast ritual.",
+      "mid_term_milestone": "Stabilize Enclave relational tension before the Lyceum project phase shifts.",
+      "campaign_arc_climax": "Prove human meaning-making and deep fellowship can survive and adapt within an alien biosphere."
+    }
+  },
+  "active_location": {
+    "location_id": "LOC_REFECTORY_COMMUNAL",
+    "macro_silhouette": "A low-ceilinged communal space carved from native basalt, centered on a massive reinforced mess table. A captured bioluminescent geode hums softly beneath the floorboards, casting a warm, flickering light upward.",
+    "sensory_palette": {
+      "sight_and_color": "The flickering warmth of the captured geode casting long, wavering shadows across the tired faces of sixteen polymaths.",
+      "sound": "The sharp, brittle silence of sixteen people breathing the same recycled air, punctuated by the scrape of a ceramic mug.",
+      "smell": "Stale air, the faint metallic tang of ozone, and the rich, earthy aroma of root vegetables roasting in communal ovens.",
+      "tactile_temperature": "A drafty chill creeping in from the bulkheads, offset by the localized, radiant warmth of the floorboards.",
+      "taste_optional": "The alkaline, slightly tinny taste of recycled water and the savory starch of roasted tubers."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Reinforced Mess Table",
+        "affordance_description": "A massive slab of native stone doubling as a structural support and communal gathering point.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Captured Geode Heating Core",
+        "affordance_description": "A subterranean thermal vent captured beneath grating, radiating warmth and bioluminescent light.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Communal Soup Tureen",
+        "affordance_description": "A large insulated vat containing the evening's ration, currently a point of high social friction.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "SOCIAL_FRICTION_KAIO_SOUP",
+      "name_and_role": "Third-Quarter Isolation Stressors",
+      "motivation_goal": "To fracture communal cohesion through petty, hypervigilant grievances.",
+      "consistent_method": "Amplifying minor irritations, such as Kaio filtering soup stock through a sock.",
+      "immediate_complication": "The entire table is on the verge of mutiny, their exhausted silence turning brittle and hostile.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Without intervention, the tense silence will break into a screaming match, irreparably damaging unit cohesion."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The crew is exhausted and on edge; Kaio's improvised cooking methods have pushed them to the breaking point.",
+      "level_2_local": "Third-Quarter ICE (Isolated-Confined-Extreme) conditions are causing cortisol cascades and autonomic hypervigilance.",
+      "level_3_campaign_arc": "The Enclave must learn to manage their psychological fragility if they are to endure the long-term demands of this alien world."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_12_elias",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      18,
+      7,
+      2,
+      19
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.85,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.9,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.81,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.3,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The tension boils over into a full mutiny, plunging the team into debilitating discord and failing to mitigate the ICE cortisol cascade.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Elias misreads the room entirely, offering a platitude that sounds patronizing, sparking immediate outrage.",
+        "below_dc_complicated_fail_forward": "Elias manages to deflect the anger from Kaio, but draws it onto himself, sacrificing his own standing to buy the group a temporary reprieve.",
+        "meets_dc_clean_success": "Elias drops a perfectly timed, dry one-liner that breaks the tension, drawing a reluctant laugh and easing the cortisol cascade.",
+        "dc_plus_5_or_20_extended_lore": "Elias not only defuses the situation but seamlessly connects the moment to a broader philosophical truth, fundamentally shifting the group's perspective on their shared struggle and forging a deeper, lasting fellowship."
+      }
+    },
+    "master_narrator": {
+      "executor": "local",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "The table was silent. Not the good, tired silence of a job well done. The sharp, brittle silence of sixteen people who had been breathing the same recycled air for too long. Elias sat near the head of the reinforced mess table, his hands wrapped around a ceramic mug of something attempting to be tea. Beneath the floorboards, the captured geode hummed its quiet, bioluminescent song, casting long, wavering emerald shadows across the tired faces of the polymaths. It was meant to be a moment of respite, a communal roast ritual designed to mitigate the autonomic hypervigilance of their third-quarter isolation. Instead, the tension was thick enough to cut with a plasma torch. Elias monitored the micro-stressors rippling across the group, his quiet gaze taking in the exhausted set of their shoulders. The catalyst, as it so often was in these pressure-cooker environments, was absurdly mundane. Kaio, in a fit of improvisational zeal, had filtered the evening's soup stock through a clean\u2014but unmistakably recognizable\u2014sock. Elias watched the entire table nearly mutiny. He dug his heels in with an immovable, deadpan stubbornness, a quiet observer refusing to let the moment fracture them. The urge to sigh was strong, but he swallowed it, recognizing the dangerous edge to their silence. They were brilliant, all of them, but brilliance offered little defense against the slow, corrosive drip of isolated-confined-extreme conditions. He took a slow sip of his tea, letting the silence stretch just a fraction of a second longer than was comfortable. 'We brought eight centuries of differential calculus across the stars,' Elias murmured, his voice unhurried and balanced, dropping perfectly into the tense quiet, 'yet here we sit, ready to go to war over hosiery-strained broth.' He paused, his eyes twinkling softly in the dim light. 'Personally, if you're complaining and no one is laughing, you're complaining wrong.' A reluctant, ragged snort escaped from across the table, breaking the brittle surface of the silence. Elias nodded toward Elara, who was staring down into her bowl with a mixture of horror and exhaustion. 'I believe it's your turn to analyze the structural integrity of the root vegetables, Elara. Try not to let the culinary methodology bias your findings.'"
+    }
+  }
+}
