@@ -1,0 +1,65 @@
+{
+  "event_id": "seg_s023_t0091_enclave_09_orion",
+  "tick_id": 91,
+  "colony_sol": 23,
+  "day_phase": "DUSK_CRAFT",
+  "world_timestamp_iso": "2042-01-23T18:00:00Z",
+  "base_snapshot_tick": 91,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The Simulacrum",
+  "actors": [
+    "enclave_09_orion",
+    "enclave_14_vex"
+  ],
+  "summary": "Orion manipulates femtosecond nanostructured birefringent 5D optical storage in the Simulacrum, maintaining focus while Vex disrupts the atmosphere with their pragmatic oversight.",
+  "importance": 7,
+  "novelty_score": 8,
+  "science_vegetable": "Femtosecond nanostructured birefringent 5D optical storage encoding terabytes of magnetospheric and mycelial telemetry into eternal fused-quartz lattices.",
+  "state_deltas": {
+    "stress_delta": -0.1,
+    "openness_state": 0.05
+  },
+  "relationship_deltas": {
+    "enclave_09_orion_to_enclave_14_vex": -0.05
+  },
+  "evidence_refs": [],
+  "active_pov_id": "enclave_09_orion",
+  "next_pov_target": "enclave_14_vex",
+  "prev_next_pov_target": "enclave_09_orion",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "active_location": {
+    "macro_silhouette": "The Simulacrum Chamber is a darkened, subterranean enclave defined by an array of suspended brass cymatic resonators and electromagnets. A fingernail-sized crystal drinking violet laser light hums softly at the heart of the room, casting an ethereal, bioluminescent glow over the intricate workspace. Levitating magnetohydrodynamic spires rise in precise geometries around the central ferrofluid basin.",
+    "sensory_palette": {
+      "sight": "Violet laser light refracting through eternal fused-quartz lattices.",
+      "sound": "Harmonic chords of a minor-key cello resonating through the brass cymatic spires.",
+      "smell": "Ozone and oxidized iron ochre mingled with a faint scent of hot chicory coffee.",
+      "touch": "The static hum of electromagnetic fields prickling the skin.",
+      "taste_optional": "The metallic tang of ionized air."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Fused-Quartz Lattice",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14,
+        "description": "A matrix of crystals that consume the raw telemetry, waiting to be properly aligned with the polyphonic synthesizer."
+      },
+      {
+        "feature_name": "Brass Cymatic Resonators",
+        "system_verb": "ATTRACT",
+        "description": "Magnetic arrays that attract the colloidal ferrofluid droplets, guiding them into precise standing-wave topographies."
+      },
+      {
+        "feature_name": "Electromagnet Grid",
+        "system_verb": "DEFEND",
+        "description": "A pulsing network designed to defend the delicate nanostructured storage from chaotic lightning and phase-space static."
+      }
+    ]
+  },
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_09_orion"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "narrative_prose": "Orion didn't see a sealant; he saw a dancer. He had taken a beaker of Leo's ferrofluid to the Simulacrum. He placed it over a grid of electromagnets hooked up to his synthesizer. A fingernail-sized crystal drinking violet laser light pulsed quietly at the heart of the darkened chamber, its internal geometry perfectly aligned. Here, the femtosecond nanostructured birefringent 5D optical storage encoded terabytes of magnetospheric and mycelial telemetry into eternal fused-quartz lattices.\n\nHe sculpted levitating magnetohydrodynamic cymatic spires from harmonic chords, his ink-stained fingers tracing the invisible lines of magnetic force as if they were strings on a cello. The crystals were configured to consume the delicate telemetry stream, while the brass resonators would gently attract the chaotic iron droplets into perfect standing-wave topographies. The grid below hummed with contained energy, perfectly tuned to defend their intricate work from any stray phase-space static that might disrupt the delicate harmonics of the storage drive.\n\nThe serenity of the room shifted as Vex stepped into the dim violet light, their presence a pragmatic anchor amidst Orion's floating symphonies. Orion clutched his charcoal sketchbook to his chest, momentarily overwhelmed by the sheer symmetry of the data structures they had just stabilized. Vex inspected the levitating ferrofluid with a sharp, unsparingly direct gaze before offering a dry, affectionate smirk. \"If you're complaining and no one is laughing, you're complaining wrong,\" Vex noted, watching Orion fuss over a minor-key adjustment. Orion exhaled a long breath, a smile breaking through his anxiety. He carefully detached the primary quartz node, transferring the pulsing telemetry baton into Vex's steady hands."
+}
