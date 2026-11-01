@@ -1,0 +1,120 @@
+{
+  "base_snapshot_tick": 101,
+  "context_manifest": {
+    "active_pov_id": "enclave_02_jane",
+    "next_pov_target": "enclave_07_willow",
+    "prev_next_pov_target": "enclave_07_willow",
+    "loaded_full_card_ids": [
+      "enclave_02_jane"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "campaign_metadata": {
+    "session_number": 11,
+    "colony_sol": 27,
+    "tick_id": 105,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Ground the Stormbreaker against the atmospheric potential gradient.",
+      "mid_term_milestone": "Secure the First Forge's power grid.",
+      "campaign_arc_climax": "Master planetary resonance for the Enclave."
+    }
+  },
+  "active_location": {
+    "location_id": "the_stormbreaker_trench",
+    "macro_silhouette": "A muddy, hand-dug trench snaking away from the base of the towering Stormbreaker. The sky above is a bruised purple thunderhead, illuminated by the distant, silent flashes of sheet lightning. Below, the trench is a chaotic mess of wet earth and copper rods.",
+    "sensory_palette": {
+      "sight_and_color": "A violet laser needle stitching the bruised purple thunderhead to a screaming copper spire fifty meters above the valley.",
+      "sound": "The low, staticky hum of the potential gradient building, broken by the wet slop of mud.",
+      "smell": "Ozone, ionized air, and the rich, mineral tang of wet soil.",
+      "tactile_temperature": "The biting chill of the bifurcated thermal shear cutting through the humid air."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Atmospheric Potential Gradient",
+        "affordance_description": "A 50 kV/m voltage difference threatening an uncontrolled step-leader discharge.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Muddy Trench",
+        "affordance_description": "Wet, conductive earth that must be excavated by hand.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 10
+      },
+      {
+        "feature_name": "Copper Grounding Rod",
+        "affordance_description": "A heavy metal spike that must be driven perfectly into the bedrock.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "uncontrolled_step_leader",
+      "name_and_role": "Premature Lightning Strike",
+      "motivation_goal": "To find the path of least resistance to the ground before the LIPC is ready.",
+      "consistent_method": "Building static charge and ionizing random air pockets.",
+      "immediate_complication": "Striking the unfinished trench instead of the containment geode.",
+      "pressure_index": 9,
+      "uninterrupted_escalation": "A catastrophic discharge that vaporizes the trench and anyone in it."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The Stormbreaker must be properly grounded to channel the lightning.",
+      "level_2_local": "The Enclave needs the gigajoules of energy from the storm.",
+      "level_3_campaign_arc": "Harnessing planetary anomalies is essential for survival."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_02_jane",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_07_willow",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      8,
+      17,
+      4,
+      19,
+      11
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.5,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.4,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.65,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The grounding rod is improperly seated, causing a feedback loop when the LIPC fires.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Jane calculates the wrong trajectory for the strange attractor, misaligning the rod.",
+        "below_dc_complicated_fail_forward": "The rod is seated, but Jane takes a nasty static shock from the mud.",
+        "meets_dc_clean_success": "The rod is perfectly aligned just as the potential gradient peaks.",
+        "dc_plus_5_or_20_extended_lore": "Jane optimizes the grounding grid, increasing the geode's charge capacity."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules_dm_core",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Jane wiped a smear of wet, conductive earth from her forehead, leaving a streak of grey across her pale skin. Above her, the sky was a bruised purple thunderhead, pulsing with the silent threat of a 50 kV/m atmospheric potential gradient. It was beautiful in a terrifying, mathematical way. She could see the equations in the clouds, the phase space geometry of the storm mapping out a planet-wide Lorenz strange attractor. She knew exactly where the chaotic system would tip into a strike.\n\nYet, for all her ability to model deterministic chaos, she was currently knee-deep in slop, using a heavy iron shovel to dig a muddy trench by hand. Femtosecond Laser-Induced Plasma Channels (LIPC) ionizing a conductive step-leader highway at 50 kV/m atmospheric potential gradient into the bedrock capacitor geode. That was the elegant solution. The reality was hauling copper and fighting rocks in the dirt.\n\n\"The inductance is going to be asymmetrical if this rod isn't exactly vertical,\" Jane muttered, her voice tight with rising panic as the static charge began to lift the fine hairs on her arms. Her Leo override was kicking in, turning the frustration into a sudden, demanding need for perfection. \"This is a masterpiece of atmospheric physics and it's being compromised by a pebble! I need the alignment verified! I need someone to recognize the tolerances I'm working with here!\"\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Willow's voice was dry, floating down from the edge of the trench.\n\nJane scowled, looking up. Willow stood there, perfectly clean, holding a slate that monitored the mycelial action potentials below them. \"I'm not complaining, Willow. I'm noting a catastrophic failure point in the architecture.\"\n\n\"You're yelling at dirt,\" Willow pointed out, sliding down the muddy bank with infuriating grace. \"Give me the hammer. You're holding it like a math problem.\"\n\n\"It is a math problem,\" Jane insisted, though she relinquished the heavy mallet. \"If the LIPC fires and this isn't grounded, the step-leader will use us as the highway instead of the bedrock.\"\n\nWillow didn't answer immediately. She just adjusted the heavy copper rod, her eyes not on the sky, but on the earth. \"The calcium waves in the roots are retreating,\" she noted softly. \"The fungi know the strike is coming. Three seconds.\"\n\nJane's breath caught, her mind snapping back to the raw variables. The diva vanished; the coder returned. \"Firing the pilot laser,\" she said, tapping her wrist console."
+    }
+  }
+}
