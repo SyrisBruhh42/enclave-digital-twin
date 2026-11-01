@@ -1,0 +1,115 @@
+{
+  "base_snapshot_tick": 94,
+  "campaign_metadata": {
+    "session_number": 24,
+    "colony_sol": 24,
+    "tick_id": 95,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Mitigating Third-Quarter isolation micro-stressors across sixteen polymaths.",
+      "mid_term_milestone": "Stabilize group cohesion before the next planetary anomaly.",
+      "campaign_arc_climax": "Achieve full resonance with the planetary biosphere."
+    }
+  },
+  "active_location": {
+    "location_id": "Timber_Hall_Feast",
+    "macro_silhouette": "The warm circle of firelight in the timber hall pushes back against the bruised violet twilight. Sixteen mugs are raised as the captured geode hums beneath the floorboards.",
+    "sensory_palette": {
+      "sight_and_color": "The warm amber glow of the firelight contrasting with the bruised violet twilight outside.",
+      "sound": "The low, resonant hum of the captured geode vibrating through the timber floorboards.",
+      "smell": "The rich, savory aroma of roasted tubers and maillard-reaction fungi.",
+      "tactile_temperature": "The comforting heat radiating from the hearth against the chill of the recycled air.",
+      "taste_optional": "The earthy, metallic tang of the soup stock."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "The Hearth Fire",
+        "affordance_description": "Provides thermal comfort and a visual focal point for communal gathering.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 10
+      },
+      {
+        "feature_name": "The Soup Tureen",
+        "affordance_description": "Contains the calorically dense, socially contested soup stock.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "The Grounded Soup Spoons",
+        "affordance_description": "Metal utensils grounded with copper wire to prevent galvanic shocks.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "kaio_plumbing_hack",
+      "name_and_role": "Kaio's Enhanced Water Filter",
+      "motivation_goal": "To dispense algae-sludge into the soup stock.",
+      "consistent_method": "Bypassing the standard filtration mesh with an improvised sock.",
+      "immediate_complication": "Causes a near mutiny at the dinner table.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "If unaddressed, the friction could permanently fracture group cohesion."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The group is experiencing Third-Quarter isolation fatigue.",
+      "level_2_local": "Kaio altered the plumbing, increasing immediate interpersonal tension.",
+      "level_3_campaign_arc": "The survival of the Enclave depends on maintaining psychological equilibrium."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_12_elias",
+        "tactical_role": "LEADER"
+      },
+      {
+        "actor_id": "enclave_16_elara",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [ 14, 18, 7, 2, 19 ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.85,
+    "motivational_vector_saturation": 0.70,
+    "unresolved_conflict_ratio": 0.60,
+    "temporal_horizon_immediacy": 0.90,
+    "composite_lpi": 0.76,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Local",
+      "model": "Deterministic",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The group devolves into bitter resentment, permanently damaging trust.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Elias misreads the room completely and makes a comment that exacerbates the tension.",
+        "below_dc_complicated_fail_forward": "The immediate argument is stopped, but the underlying tension simmers.",
+        "meets_dc_clean_success": "The tension is broken with shared laughter, clearing circulating stress hormones.",
+        "dc_plus_5_or_20_extended_lore": "Not only is the tension broken, but a new ritual of bonding is formed."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "The table was silent. Not the good, tired silence of a job well done. The sharp, brittle silence of sixteen people who had been breathing the same recycled air for too long.\n\nHector was vibrating, tapping his spoon against the table. Silas was staring at a smudge on his glass. Kenna was trying to make eye contact with everyone, which Elias noted on his slate was only increasing the collective heart rate by four beats per minute. Mitigating Isolated-Confined-Extreme (ICE) Third-Quarter cortisol cascades and autonomic hypervigilance through structured communal roast rituals and oxytocin vagal buffering was his domain, yet right now, the theoretical models felt agonizingly inadequate.\n\n\"So,\" Dorian said beside Elias, his voice dry as parchment. \"Who broke the water filtration system?\"\n\nSilence.\n\n\"It wasn't broken,\" Kaio mumbled. \"It was... enhanced.\"\n\n\"Enhanced?\" Ryn slammed a ladle down. \"It was dispensing algae-sludge into the soup stock! I had to filter it through a sock, Kaio. A sock!\"\n\n\"It was a clean sock!\"\n\nThe table erupted. Arguments overlapped—engineering versus biology, safety versus discovery. Elias watched the textbook cascade of an isolated group under stress: the Third-Quarter Phenomenon, where morale bottoms out and sixteen polymaths channel days of radiation dread into a holy war over plumbing.\n\nThe noise washed over him. The instinct to intervene, to guide them toward a constructive resolution, was strong, but under the extreme stress of the escalating argument, Elias felt his Taurus override engage. He dug his heels in. He crossed his arms, his face setting into a mask of immovable, deadpan stubbornness. He would not stop them. He simply watched the chaos, refusing to move, silently demanding that they exhaust their own absurdity. He defended his own quiet space at the table, refusing to be drawn into the fray.\n\nThen, Vex stood up.\n\n\"You're all ignoring the obvious,\" Vex declared, pointing at the ceiling. \"Mercury is in retrograde. And Kaio is a Capricorn. It was inevitable.\"\n\nThe absurdity of the statement hung in the air. Silas blinked. \"Mercury isn't even in this solar system, Vex.\"\n\n\"Spiritually, it is,\" Vex insisted.\n\nA giggle snorted out of Zara. Then a chuckle from Leo. Suddenly, the tension broke. Elias lowered his slate as the laughter rolled across the timber hall—not polite laughter, but hysterical, rib-aching relief. The deliberate cognitive non-sequitur cleared the stress hormones faster than any logical intervention could have. They consumed the strange soup, their laughter mingling with the warmth of the hearth fire that attracted them all together.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Elias noted with a dry, affectionate smile, his voice cutting through the noise.\n\n\"A sock,\" Ryn wiped a tear from her eye, handing a bowl to Elara, who was managing the triage of dinner service with her usual warm, commanding presence. \"Kaio, you are banned from the plumbing. Forever.\"\n\n\"Accepted,\" Kaio grinned, reaching for the bread.\n\nElias uncrossed his arms, the stubborn weight in his chest lifting. The rust could wait. They were unbroken for one more night."
+    }
+  },
+  "context_manifest": {
+    "active_pov_id": "enclave_12_elias",
+    "prev_next_pov_target": "enclave_12_elias",
+    "next_pov_target": "enclave_16_elara",
+    "loaded_full_card_ids": [
+      "enclave_12_elias"
+    ],
+    "full_cards_loaded_count": 1
+  }
+}
