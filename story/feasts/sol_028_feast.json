@@ -1,0 +1,65 @@
+{
+  "event_id": "THE_FEAST_4_SQUAD_CONVERGENCE_028_112",
+  "tick_id": 112,
+  "colony_sol": 28,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-11-21T18:00:00Z",
+  "base_snapshot_tick": 112,
+  "event_type": "THE_FEAST_4_SQUAD_CONVERGENCE",
+  "pre_roll_dc": 14,
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "active_pov_id": "enclave_16_elara",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_16_elara",
+  "science_vegetable": "Mitigating Isolated-Confined-Extreme (ICE) Third-Quarter cortisol cascades and autonomic hypervigilance through structured communal roast rituals and oxytocin vagal buffering.",
+  "location": "The Main Bus",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_02_jane",
+    "enclave_03_silas",
+    "enclave_04_leo",
+    "enclave_05_kaio",
+    "enclave_06_zara",
+    "enclave_07_willow",
+    "enclave_08_terra",
+    "enclave_09_orion",
+    "enclave_10_isla",
+    "enclave_11_kenna",
+    "enclave_12_elias",
+    "enclave_13_ryn",
+    "enclave_14_vex",
+    "enclave_15_dorian",
+    "enclave_16_elara"
+  ],
+  "summary": "Elara enforces oxytocin vagal buffering at the Feast, ensuring Silas grounds his spoon.",
+  "importance": 7,
+  "novelty_score": 5.4,
+  "interactive_features": [
+    {
+      "feature_id": "feat_01",
+      "description": "Elara forces Silas to ground his soup spoon to the table leg with copper wire.",
+      "system_verb": "DEFEND",
+      "associated_check_dc": 14,
+      "skill_check_type": "Medicine"
+    },
+    {
+      "feature_id": "feat_02",
+      "description": "Elara distributes warm magnesium tea to sixteen stubborn polymaths.",
+      "system_verb": "CONCEAL",
+      "associated_check_dc": 12,
+      "skill_check_type": "Survival"
+    },
+    {
+      "feature_id": "feat_03",
+      "description": "Elara checks radiation dosimetry badges across the table.",
+      "system_verb": "ATTRACT",
+      "associated_check_dc": 11,
+      "skill_check_type": "Perception"
+    }
+  ],
+  "text": "The Feast that night was different. It wasn't loud. It was warm.\n\nThe Stormbreaker hummed with captured energy. The Living Atlas glowed with a stable map. The Mycelial network pulsed with a gentle, rhythmic green. Sixteen mugs raised in the warm circle of firelight while the captured geode hums beneath the floorboards. Elara sat at the head of the Hub bench, her fingers drumming a silent, arrhythmic pulse against the polished timber of The Main Bus. Her eyes, narrowed and clinical, tracked the micro-cortisol baselines and radiation dosimetry across the table. Sixteen stubborn geniuses, breathing the same recycled air, their nervous systems frayed by the twin suns' geomagnetic shear.\n\n\"The pie crust has an extra three hundred milligrams of chelated magnesium tonight,\" Elara announced, her voice brisk and authoritative, slicing through the low murmur of the room. \"And Silas, if you don't ground your ankle wire right now, I will personally tape the spoon to your forehead.\"\n\nSilas scowled, clutching his brass soup spoon as if it were a weapon. He was staring at the copper wire attached to his leg, a grounding strap necessitated by Dorian's prediction of a severe atmospheric ionization event. It was a perfectly logical precaution against absorbing gigajoules of stray electricity, but to Silas, it was an aesthetic insult to the high-entropy alloys he spent his days perfecting.\n\nElara watched his jaw tighten, the stubborn clenching of an ISTJ who valued structural permanence over messy biological necessities. But she also saw the slight tremor in his hand, the pale exhaustion beneath his eyes. This was the Third-Quarter Phenomenon in action—trivial domestic friction masking existential dread. They needed the structured communal roast ritual. They needed oxytocin vagal buffering, not another argument about metallurgy.\n\n\"It tastes metallic,\" Silas muttered, finally looping the wire around the table leg. \"Like licking a nine-volt battery.\"\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Vex called out from the other end of the table, his smile sharp and entirely devoid of genuine warmth. \"Mercury is in retrograde. You're lucky the soup hasn't turned into lead.\"\n\nThe table shifted. The tension, previously coiled like a spring, snapped. Ryn let out a sudden, involuntary snort of laughter. Hector grinned, tapping his mug against the table. Elara felt her own shoulders drop, the tight knot of her Scorpio Vex Override loosening slightly. She had been ready to invoke triage command, to force magnesium down their throats if necessary. But she didn't have to. The friction coefficient had reset.\n\nShe picked up the thermos of warm magnesium tea and walked around the table, pouring it into each mug. She stopped behind Silas, placing a hand gently on his shoulder. He stiffened, then slowly leaned into the contact. \n\n\"Drink,\" she said softly, handing him the tea. \"It will decouple your serotonin receptors from the magnetic variance.\"\n\nSilas took the mug. He didn't say thank you, but he didn't complain about the metallic taste, either.",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": []
+}
