@@ -1,0 +1,40 @@
+{
+  "event_id": "evt_s024_t0096_reflection",
+  "tick_id": 96,
+  "colony_sol": 24,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-11-17T20:00:00Z",
+  "base_snapshot_tick": 94,
+  "event_type": "NIGHTLY_REFLECTION",
+  "location": "The Hub / The Hearth",
+  "actors": [
+    "enclave_16_elara",
+    "enclave_03_silas",
+    "enclave_13_ryn"
+  ],
+  "active_pov_id": "enclave_16_elara",
+  "next_pov_target": "enclave_03_silas",
+  "prev_next_pov_target": "enclave_16_elara",
+  "science_vegetable": "Mitigating Isolated-Confined-Extreme (ICE) Third-Quarter cortisol cascades and autonomic hypervigilance through structured communal roast rituals and oxytocin vagal buffering.",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "summary": "Elara monitors the nightly feast, ensuring Silas and the rest of the crew ground their utensils to ward off electrostatic charge while enjoying Ryn's popcorn-scented mushroom stew.",
+  "importance": 7.5,
+  "novelty_score": 6.8,
+  "state_deltas": {
+    "stress_delta": -0.26
+  },
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "cited_event_ids": [
+    "evt_s024_t0094_expedition_consequence"
+  ],
+  "interactive_features": [
+    {
+      "feature_name": "Grounded Copper Utensils",
+      "affordance_description": "Soup spoons attached to copper wires to prevent electrostatic discharge when consuming.",
+      "system_verb": "DEFEND",
+      "associated_check_dc": 14
+    }
+  ],
+  "narrative_prose": "The Feast that night was different. It wasn't loud. It was warm.\n\nThe Stormbreaker hummed with captured energy. The Living Atlas glowed with a stable map. The Mycelial network pulsed with a gentle, rhythmic green.\n\nElara watched from the head of the Hub bench, the brass stethoscope around her neck a constant reminder of her vigil. The air was thick with the scent of roasted tubers and savory loam\u2014Ryn's masterpiece, a gas-chromatograph Maillard reaction perfectly mimicking the scent of buttered popcorn. It was a calculated assault on the Third-Quarter phenomenon, a precise application of oxytocin vagal buffering wrapped in the comforting illusion of home.\n\nShe caught Silas staring at his bowl, a single, grounded copper wire trailing from his spoon to his ankle. He looked up, his brow furrowed.\n\n\"It tastes metallic, Elara. We're eating soup with lightning rods.\"\n\n\"It tastes like survival, Silas,\" Elara replied smoothly, pressing a warm mug of magnesium tea closer to his hand. \"I'm tracking your micro-cortisol baselines. The electrostatic charge in the air from the Blue Dwarf is enough to spike your heart rate by twelve beats per minute. If you're complaining and no one is laughing, you're complaining wrong. Drink the tea.\"\n\nSilas muttered something about 'the metallurgy of entropy', but he drank. Elara's eyes softened. Her Scorpio override, that ruthless triage commander, receded, leaving only the vigilant healer. The magnetic shear outside could tear the sky apart, but inside this circle of firelight, they were safe. She'd make sure of it, even if she had to ground every spoon in the Enclave."
+}
