@@ -1,0 +1,66 @@
+{
+  "event_id": "evt_s024_t0093_world_consequence",
+  "tick_id": 93,
+  "colony_sol": 24,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-11-17T06:00:00Z",
+  "base_snapshot_tick": 89,
+  "event_type": "EXPEDITION_DISCOVERY",
+  "location": "The_Genesis_Garden",
+  "actors": [
+    "enclave_08_terra",
+    "enclave_11_kenna"
+  ],
+  "summary": "Terra decodes planetary fungal action-potential syntax while hauling crushed basalt gravel, handing off her findings to Kenna.",
+  "importance": 8,
+  "novelty_score": 7,
+  "science_vegetable": "Deciphering action-potential spike trains and source-sink phosphorus routing verbs ('Flowing', 'Listen', 'We Hear') across the valley-wide mycorrhizal supercomputer.",
+  "state_deltas": {},
+  "relationship_deltas": [],
+  "evidence_refs": [],
+  "active_location": {
+    "location_id": "The_Genesis_Garden",
+    "macro_silhouette": "Subterranean root-cathedrals rippling with emerald and gold bioluminescent waves in total acoustic silence.",
+    "sensory_palette": {
+      "sight_and_color": "Emerald and gold bioluminescent waves pulsing across miles of subterranean root-nodes.",
+      "sound": "Total acoustic silence, save for the rhythmic crunch of crushed basalt gravel.",
+      "smell": "Rich, damp earth and the sharp mineral tang of fresh basalt.",
+      "tactile_temperature": "Cool, damp air characteristic of a subterranean greenhouse environment.",
+      "taste_optional": "The faint trace of mineral dust settling on the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Crushed Basalt Bucket",
+        "affordance_description": "Can be hauled to balance greenhouse soil pH.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Optical Transmitter",
+        "affordance_description": "Can send signal patterns into the deep root system.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Mycelial Network Node",
+        "affordance_description": "Can process and route phosphorus across the valley.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "active_pov_id": "enclave_08_terra",
+  "prev_next_pov_target": "enclave_08_terra",
+  "next_pov_target": "enclave_11_kenna",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "narrative_prose": "\"It's not a noun,\" Terra said, staring at the data stream pulsing from the ground sensors. \"It's a verb.\"\n\nKenna looked over her shoulder, setting down a slate of telemetry logs. \"What is?\"\n\n\"The signal. The blue-blue-green sequence. It doesn't mean 'Water'. It means 'Flowing'. It's an instruction.\" Terra wiped a streak of damp earth from her cheek, her hands still coated in the gritty dust of crushed basalt. She had spent the last hour hauling buckets of the stuff to balance the greenhouse soil pH, her shoulders aching from the repetitive, mundane labor. The juxtaposition was not lost on her: she was currently deciphering the action-potential syntax of a planetary fungal supercomputer spanning miles of forest root-nodes, yet she still had to carry rocks to make sure the terrestrial spinach didn't turn yellow.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Kenna noted dryly, though there was a warm cadence to her voice. She understood the quiet friction Terra carried—the endless responsibility of nurturing hybrid life on an alien world.\n\n\"I'm not complaining,\" Terra replied, typing a sequence into the optical transmitter connected to the deep root system. Red-Red-Pause. The subterranean root-cathedral around them seemed to hold its breath. The emerald and gold bioluminescent waves paused in their rhythmic rippling, plunging the space into an expectant, total acoustic silence.\n\n\"What did you say?\" Kenna whispered, sensing the shift in the room's energy.\n\n\"I said 'Listen',\" Terra replied softly.\n\nSlowly, a new pattern emerged from the ground sensors. A complex, rolling wave of light that spread from the deep soil to the clustered fungal nodes bordering the beds. Green-Gold-Green.\n\nTerra smiled, a quiet, immovable pride swelling in her chest. \"It says... 'We hear'. They are actively routing the phosphorus. It's a source-sink biological packet-switch.\"\n\nKenna nodded, clearly impressed by the seamless bridge between human intention and alien ecology. \"That's incredible. The psychological implications of conscious interaction alone are massive.\"\n\nSuddenly, the optical transmitter beeped—a sharp error tone. The soil pH in bed four was plummeting. The delicate balance was shifting too fast.\n\nTerra felt a spike of stress hit her chest, and her patience vanished. Her Aries override kicked in, replacing her gentle botanical empathy with an immediate, blunt demand for kinetic action. \"Kenna, grab the other side of this bucket,\" Terra ordered sharply, her tone brooking no argument. \"We need fifty pounds of basalt on bed four right now, or we lose the entire hybrid batch.\"\n\nKenna didn't hesitate. She grabbed the handle, and together they hauled the heavy gravel across the floor. As they reached the struggling plot, Terra tipped the bucket, dumping the neutralizing rock over the soil. She passed the empty container back to Kenna, tapping the side of it decisively. \"Take this. Tell Silas we need more basalt, and show him the routing sequence. He needs to know the network is listening.\"",
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_08_terra"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.75
+  }
+}
