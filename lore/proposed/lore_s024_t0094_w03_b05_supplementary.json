@@ -1,0 +1,117 @@
+{
+  "base_snapshot_tick": 90,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_11_kenna"
+    ],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_11_kenna",
+    "next_pov_target": "enclave_12_elias",
+    "prev_next_pov_target": "enclave_11_kenna"
+  },
+  "campaign_metadata": {
+    "session_number": 24,
+    "colony_sol": 24,
+    "tick_id": 94,
+    "pacing_mode": "MULLIGAN_CRISIS",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Decouple pineal melatonin suppression and serotonin receptor static caused by post-storm Schumann resonance anomalies using psychoactive Lyceum bryophytes and zero-dust flotation.",
+      "mid_term_milestone": "Stabilize Enclave circadian rhythms post-storm.",
+      "campaign_arc_climax": "Integrate Enclave biosphere with native ecology."
+    }
+  },
+  "active_location": {
+    "location_id": "LOC_LYCEUM_SENSORY_CHAMBER",
+    "macro_silhouette": "The copper-shielded acoustic chamber of The Lyceum hums with a faint, grounding resonance. A zero-buoyancy, acoustically and magnetically shielded flotation tank dominates the room. Velvet meditation bolsters restuffed with dried aromatic heather sit along the walls.",
+    "sensory_palette": {
+      "sight_and_color": "warm copper shielding, faint lantern light",
+      "sound": "grounding acoustic resonance, muffled silence",
+      "smell": "dried aromatic heather, valerian tea",
+      "tactile_temperature": "warm copper, zero-buoyancy water",
+      "taste_optional": "valerian root and psychoactive moss tea"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Sensory Attenuation Tank",
+        "affordance_description": "A zero-buoyancy, acoustically and magnetically shielded flotation chamber.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Biofeedback Tuning Forks",
+        "affordance_description": "Instruments to ground cortical rhythms.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 10
+      },
+      {
+        "feature_name": "Psychoactive Lyceum Bryophytes",
+        "affordance_description": "Moss used to decouple serotonin receptors from magnetic variance.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "TOY_SCHUMANN_STATIC",
+      "name_and_role": "Post-Storm Schumann Resonance Anomalies",
+      "motivation_goal": "Desynchronize human pineal melatonin secretion and alpha/theta neural oscillations.",
+      "consistent_method": "Disrupting the cavity electromagnetic standing waves between the ground and ionosphere.",
+      "immediate_complication": "Causes hypervigilance, paranoia, and obsessive behavior.",
+      "pressure_index": 8,
+      "uninterrupted_escalation": "Colonists fracture from exhaustion and internal stress, triggering Vex Overrides."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kenna must coax Silas into the sensory attenuation tank.",
+      "level_2_local": "The storm has scrambled circadian rhythms across the Enclave.",
+      "level_3_campaign_arc": "Maintaining the psychological equilibrium of sixteen minds trapped in a high-stress environment is paramount."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_11_kenna",
+        "tactical_role": "LEADER"
+      }
+    ],
+    "strain_accumulated_upward": 18,
+    "prerolled_hazard_queue": [
+      11,
+      6,
+      14,
+      19,
+      5
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.9,
+    "unresolved_conflict_ratio": 0.7,
+    "temporal_horizon_immediacy": 0.8,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "local_engine",
+      "model": "deterministic-enclave-5section-v2",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Silas refuses the treatment, worsening his Vex Override.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kenna pushes too hard, causing Silas to retreat further into obsessive cleaning.",
+        "below_dc_complicated_fail_forward": "Silas enters the tank but his anxiety remains high.",
+        "meets_dc_clean_success": "Silas accepts the zero-dust floatation and begins to re-synchronize.",
+        "dc_plus_5_or_20_extended_lore": "Silas's floatation provides data on how the alloys interact with human magnetic fields."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules_narrative_core",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "The storm had passed, but the static remained. It clung to the Enclave like a second skin.\n\nKenna walked the halls of the sleeping quarters, checking the bio-monitors. It was 0300 hours, yet half the family was awake. The air pressure had dropped too quickly, and the magnetic residue was playing havoc with everyone's circadian rhythms. She rubbed her temples, mapping how the exoplanet geomagnetic flux interacted with their limbic resonance and interpersonal attachment.\n\nFurther down the hall, she found Silas scrubbing the floor. At 3 AM.\n\n\"Silas,\" she said gently.\n\n\"It's not clean,\" Silas muttered, scrubbing the same spot of pristine metal. \"The dust. I can feel the dust.\"\n\nKenna checked his chart. His Vex Override had locked into hyper-order. The stress of the storm and the magnetic disruption had triggered a psychological inversion. He wasn't the pragmatic engineer right now; he was a slave to order.\n\n\"Silas, darling, when you yell at Jane for twenty minutes about dielectric insulation thickness, everyone in this room knows the translation is 'You are like a granddaughter to me and the lightning scares me.' Now put down the brush,\" Kenna said, her voice melodic, inviting, and incisively observant. \"The floor is structurally sound. The dust is negligible. You need REM sleep to process the day's trauma.\"\n\n\"Trauma?\" Silas laughed, a brittle sound. \"I just want it to be clean.\"\n\n\"I know,\" Kenna said, wrapping clinical neuro-somatics into disarming kitchen-table warmth. \"Come to the Lyceum. Elias has the sensory deprivation tank ready. Zero gravity. Zero dust. Just you and the void.\"\n\nSilas paused, the brush hovering over the metal. \"Zero dust?\"\n\n\"Absolute zero,\" Kenna smiled. \"We are decoupling pineal melatonin suppression and serotonin receptor static caused by post-storm Schumann resonance anomalies using psychoactive Lyceum bryophytes and zero-dust flotation. If you're complaining and no one is laughing, you're complaining wrong. Drink this tea, it will decouple your serotonin receptors from the magnetic variance.\"\n\nHe stood up, looking small and tired. \"Okay. Okay.\"\n\nAs Silas walked toward the Lyceum, Kenna's own stress spiked. The emotional overload of managing sixteen fractured minds threatened to push her into her own Vex Override. For a brief terrifying moment, a flat monotone threatened to overtake her radiant warmth. *Affective telemetry logged*, a clinical voice whispered in her mind. She shook it off. She had to hold the emotional equilibrium together, but she couldn't do it alone. She watched Silas disappear down the corridor, preparing to hand him off to Elias for the final phase of his grounding."
+    }
+  }
+}
