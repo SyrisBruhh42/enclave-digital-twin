@@ -1,0 +1,38 @@
+{
+  "segment_id": "seg_s027_t0106_enclave_07_willow",
+  "tick_id": 106,
+  "colony_sol": 27,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "base_snapshot_tick": 105,
+  "active_pov_id": "enclave_07_willow",
+  "next_pov_target": "enclave_09_orion",
+  "prev_next_pov_target": "enclave_07_willow",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "pacing_mode": "MULLIGAN_CRISIS",
+  "science_vegetable": "Cytosolic Ca2+ wave transduction implementing physical Boolean AND/OR/NOT logic gates across hyphal anastomoses when bridged with pepper-scented epoxy-sap.",
+  "actors": [
+    "enclave_07_willow",
+    "enclave_09_orion"
+  ],
+  "text": "Under the microscope, the mushroom didn't look like a plant. It looked like a city.\n\nWillow adjusted the focus. The hyphae—the thread-like roots—were pulsing with an emerald, bioluminescent glow. Calcium ions flowing through the cell walls, carrying signals like data packets on a fiber optic cable. She carefully applied a drop of Terra's pepper-scented epoxy-sap using a glass pipette. The network reacted instantly, shifting to consume the new compound. The cytosolic Ca2+ wave transduction cascaded across the hyphal anastomoses, bypassing the foreign resin and forming perfect physical Boolean AND/OR/NOT logic gates.\n\nShe was on the verge of unlocking cellular regeneration, mapping the actual decision tree of a planetary-scale motherboard. It was profound, beautiful, and completely interrupted by the loud, wet slop of the arboretum's automated composter jamming again.\n\nWillow sighed, lowering her safety goggles. She had to stop and turn the steaming compost heap with a pitchfork. The physical friction of mundane maintenance always managed to humble genius.\n\nShe grabbed the heavy iron pitchfork, the cold, pitted metal grounding her as she marched into the humid ambient warmth of the greenhouse. She drove the tines into the decomposing mass of iron-wheat husks. The air carried a sharp, metallic taste of ozone and ammonia. She pulled her collar up to conceal the biting scent as she worked the pile. Suddenly, an irrational panic seized her chest. Her Vex Override triggered. What if Orion inhaled the spores from this batch? He was too gentle for this planet's harsh microbiome; she needed to defend him, synthesize a protective filter for him, right now.\n\n\"Orion!\" Willow called out, dropping the pitchfork with a loud clatter. She hurried back into the main corridor, practically colliding with the artist. He was carrying a beaker of ferrofluid, looking slightly startled by her sudden, intense proximity. She aggressively smoothed a stray hair from his forehead, checking his pupils for any sign of spore-induced dilation.\n\n\"Are you breathing clearly? The ambient humidity is up, and I don't like the look of the mold on the southern bulkhead,\" Willow fussed, her detached analytical demeanor entirely replaced by a smothering, mother-hen anxiety.\n\nOrion blinked, a slow smile spreading. \"I'm fine, Willow. Just picking up some solvent.\"\n\nShe realized she was gripping his shoulder entirely too tightly. She forced herself to let go, taking a slow breath as the frantic Cancer override subsided, leaving her feeling slightly ridiculous. She adjusted her lab coat, defaulting back to her usual dry tone. \"If you're complaining and no one is laughing, you're complaining wrong. Just take the solvent and don't inhale the fumes.\" She handed him the flask of prepared solvent, a physical handoff that anchored her back to reality.",
+  "interactive_features": [
+    {
+      "feature_name": "Pepper-Scented Epoxy-Sap",
+      "affordance_description": "Used to bridge hyphal anastomoses and test Boolean logic gates.",
+      "system_verb": "CONSUME",
+      "associated_check_dc": 14
+    },
+    {
+      "feature_name": "Steaming Compost Heap",
+      "affordance_description": "Requires physical turning with an iron pitchfork to maintain proper decomposition.",
+      "system_verb": "CONCEAL",
+      "associated_check_dc": 14
+    },
+    {
+      "feature_name": "Fungal Spore Airflow",
+      "affordance_description": "Monitored to protect vulnerable squad members from airborne hazards.",
+      "system_verb": "DEFEND",
+      "associated_check_dc": 14
+    }
+  ]
+}
