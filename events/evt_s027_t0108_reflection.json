@@ -1,0 +1,65 @@
+{
+  "event_id": "evt_s027_t0108_reflection",
+  "tick_id": 108,
+  "colony_sol": 27,
+  "day_phase": "THE_FEAST",
+  "base_snapshot_tick": 106,
+  "event_type": "NIGHTLY_REFLECTION",
+  "active_pov_id": "enclave_14_vex",
+  "next_pov_target": "enclave_08_terra",
+  "actors": [
+    "enclave_14_vex",
+    "enclave_08_terra"
+  ],
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "narrative_prose": "Vex sat on the roof, legs dangling over the edge.\nTo the east, the Red Giant was rising, a bloated, angry eye that bathed the world in crimson. To the west, the Blue Dwarf was setting, a piercing diamond that cast razor-sharp shadows. Bruised violet twilight cast double razor-sharp shadows across the hand-built brass observatory roof.\n\nHe rubbed his temple against the ambient hum of the colony. The relativistic magnetohydrodynamic shear between the Red Giant's infrared coronal mass ejections and the Blue Dwarf's compressed ultraviolet bow shock caused a micro-fluctuation in the local magnetic field. It was mathematically beautiful. It also gave him a headache, compounded by the memory of Ryn earlier, insisting on stirring the stew at exactly 40 RPM.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" he muttered, leaning back against the cool brass dome. The metal slightly vibrated, humming in time with the atmospheric tension. He needed to defend the delicate calibration of the primary lens from the impending shift in gravity tides, but part of him just wanted to sit here and watch the sky tear itself apart.\n\nBelow him, the courtyard was a pool of amber light. Terra was crossing it, her boots crunching on the gravel. She was carrying a tray of root vegetables, the literal fruits of their subterranean labor. The sight of her, steady and grounded, sent a sudden spike of irrational anxiety through him. He imagined a sudden coronal mass ejection blinding her, or an unpredictable drop in temperature freezing the crops she had so carefully nurtured.\n\nHe stood up, his relaxed posture evaporating. \"Terra!\" he called down, his voice sharper than intended. \"Are those tubers shielded from the ultraviolet spike? The Blue Dwarf is flaring, the radiation could denature the surface proteins!\"\n\nTerra paused, looking up at him, a half-smile playing on her lips. \"They're fine, Vex. They grew in the dark. They're tougher than you think.\"\n\nHe wanted to argue, to quote the exact wavelength of the incoming radiation, to rush down and construct a makeshift lead-lined canopy. But her calm certainty anchored him. The protective urge slowly receded, leaving his shoulders slumping in undeniable relief.\n\n\"Right,\" he said, rubbing his neck. \"Well. Just... walk fast. The sky is being temperamental tonight.\" He watched her disappear into the Hub, the scent of roasting tubers drifting up to consume his attention. He returned to the telescope, his hands moving with practiced precision as he began to adjust the weights to attract the optimal alignment for the coming night.",
+  "dialogue": [
+    {
+      "speaker": "enclave_14_vex",
+      "text": "If you're complaining and no one is laughing, you're complaining wrong."
+    },
+    {
+      "speaker": "enclave_14_vex",
+      "text": "Terra! Are those tubers shielded from the ultraviolet spike? The Blue Dwarf is flaring, the radiation could denature the surface proteins!"
+    },
+    {
+      "speaker": "enclave_08_terra",
+      "text": "They're fine, Vex. They grew in the dark. They're tougher than you think."
+    },
+    {
+      "speaker": "enclave_14_vex",
+      "text": "Right. Well. Just... walk fast. The sky is being temperamental tonight."
+    }
+  ],
+  "interactive_features": [
+    {
+      "feature_id": "brass_observatory_roof",
+      "system_verb": "DEFEND",
+      "description": "Defend the delicate calibration of the primary lens.",
+      "associated_check_dc": 14
+    },
+    {
+      "feature_id": "roasting_tubers",
+      "system_verb": "CONSUME",
+      "description": "The scent of roasting tubers drifting up to consume his attention.",
+      "associated_check_dc": 14
+    },
+    {
+      "feature_id": "telescope_weights",
+      "system_verb": "ATTRACT",
+      "description": "Adjust the weights to attract the optimal alignment.",
+      "associated_check_dc": 14
+    }
+  ],
+  "evidence_refs": [
+    "evt_s027_t0106_expedition_consequence"
+  ],
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_14_vex"
+    ]
+  },
+  "lpi_breakdown": {
+    "composite_lpi": 0.72
+  }
+}
