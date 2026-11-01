@@ -1,0 +1,40 @@
+{
+  "event_id": "evt_s026_t0102_expedition_consequence",
+  "tick_id": 102,
+  "colony_sol": 26,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-10-25T12:00:00Z",
+  "base_snapshot_tick": 98,
+  "event_type": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+  "location": "The Sanctuary",
+  "actors": [
+    "enclave_06_zara",
+    "enclave_10_isla"
+  ],
+  "summary": "Zara establishes first-contact photophore syntax with an abyssal chemosynthetic cephalopod in pitch darkness, yet has to muck out the Sanctuary feed pens every morning.",
+  "importance": 0.8,
+  "novelty_score": 0.85,
+  "science_vegetable": "Enzymatic luciferin-luciferase oxidation gated by voltage-sensitive ion channels flashing in prime-number sequences and optical polarization modulation.",
+  "state_deltas": {
+    "hub_caloric_reserves_pct": -0.05
+  },
+  "relationship_deltas": [],
+  "evidence_refs": [],
+  "active_pov_id": "enclave_06_zara",
+  "prev_next_pov_target": "enclave_06_zara",
+  "next_pov_target": "enclave_10_isla",
+  "pacing_mode": "MULLIGAN_CRISIS",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "narrative_prose": "The cave didn't end; it drowned.\nZara stood at the edge of the subterranean lake. The water was black, motionless, and heavy with iron. Down in the pitch darkness, the abyssal chemosynthetic cephalopod waited. She adjusted the optical polarization modulation of her suit's emitters, matching the creature's enzymatic luciferin-luciferase oxidation. It was a complex, voltage-sensitive ion channel dance, flashing in prime-number sequences. Blue-blue-spiral. She watched, fascinated.\n\nYet, even as she established this profound first-contact syntax, a mundane irritation tugged at her mind. She still had to muck out the Sanctuary feed pens every morning. The contrast was absurd. She could speak the language of light to alien leviathans, but she couldn't escape the smell of fermented fungus meal.\n\n\"The primary sequence is repeating, Isla,\" Zara murmured, her Gemini Vex Override clicking into place as the stress of the encounter spiked. She couldn't help but narrate every tactical observation at breakneck speed. \"It's a prime-number syntax, 3, 5, 7, then a pause. The polarization is shifting too, left-handed circular to linear. The enzymatic response is gated by those ion channels. It's almost like a defensive posture, or maybe an attempt to attract a mate. Hard to tell. If it consumes the bait, we'll know.\"\n\nIsla's voice crackled over the comms, dry and affectionate. \"If you're complaining and no one is laughing, you're complaining wrong, Zara. Just get the data and don't let it eat you.\"",
+  "dialogue": [
+    {
+      "speaker": "enclave_06_zara",
+      "text": "The primary sequence is repeating, Isla. It's a prime-number syntax, 3, 5, 7, then a pause. The polarization is shifting too, left-handed circular to linear. The enzymatic response is gated by those ion channels. It's almost like a defensive posture, or maybe an attempt to attract a mate. Hard to tell. If it consumes the bait, we'll know."
+    },
+    {
+      "speaker": "enclave_10_isla",
+      "text": "If you're complaining and no one is laughing, you're complaining wrong, Zara. Just get the data and don't let it eat you."
+    }
+  ],
+  "steward_note": "Explicit Pre-Roll Check DC: 14"
+}
