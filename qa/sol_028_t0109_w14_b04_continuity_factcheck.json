@@ -1,0 +1,117 @@
+{
+  "base_snapshot_tick": 109,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_08_terra"
+    ],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_08_terra",
+    "next_pov_target": "enclave_11_kenna",
+    "prev_next_pov_target": "enclave_08_terra"
+  },
+  "campaign_metadata": {
+    "session_number": 28,
+    "colony_sol": 28,
+    "tick_id": 109,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Balance greenhouse soil pH.",
+      "mid_term_milestone": "Decode mycelial logic gates.",
+      "campaign_arc_climax": "Cultivate resilient root-matrices for the crater."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Genesis_Garden",
+    "macro_silhouette": "The Genesis Garden is a sprawling subterranean arboretum lit by bioluminescent mycelium. Pearlescent green and amber light casts long shadows across neatly tended rows of hybrid crops.",
+    "sensory_palette": {
+      "sight_and_color": "pearlescent green and amber bioluminescence",
+      "sound": "quiet hum of biological respiration and the squeak of a drip-valve",
+      "smell": "rich damp loam and pepper-scented epoxy-sap",
+      "tactile_temperature": "cool, damp air that sticks to the skin",
+      "taste_optional": "faint metallic tang of the ionized atmosphere"
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Mycelial Logic Gate",
+        "affordance_description": "A complex network of hyphal threads capable of binary computation.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Pepper-Scented Epoxy-Sap",
+        "affordance_description": "A viscous substance that acts as a conductor when applied to fungal nodes.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Crushed Basalt Gravel Bucket",
+        "affordance_description": "Heavy buckets of alkaline stone used for soil pH balance.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_01_greenhouse_drip_valve",
+      "name_and_role": "The Squeaking Drip-Valve",
+      "motivation_goal": "To relentlessly disrupt the quiet of the garden.",
+      "consistent_method": "Squeaking in E-flat every nine seconds.",
+      "immediate_complication": "Distracts Terra from her delicate mycelial decoding.",
+      "pressure_index": 4,
+      "uninterrupted_escalation": "The squeak grows louder, eventually leading to a pressurized leak."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "The soil pH must be balanced to prevent crop failure.",
+      "level_2_local": "The mycelial network needs to be bridged using epoxy-sap to restore network connectivity.",
+      "level_3_campaign_arc": "The colony's long-term survival relies on an unbroken chain of food production and biological data storage."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_08_terra",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      14,
+      18,
+      5,
+      20,
+      11
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.3,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.7,
+    "composite_lpi": 0.6,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Ollama",
+      "model": "llama3",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The hyphal network disconnects, losing vital ecological data.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Terra misinterprets the calcium signals, accidentally triggering a localized defensive spore release.",
+        "below_dc_complicated_fail_forward": "The logic gate is formed, but the epoxy-sap burns Terra's hands and the signal degrades rapidly.",
+        "meets_dc_clean_success": "The logic gate holds steady, allowing the cytosolic calcium wave to propagate correctly.",
+        "dc_plus_5_or_20_extended_lore": "The network responds with unprecedented clarity, revealing an ancient map of subterranean water sources."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Terra knelt in the dark, rich soil of the arboretum, the air cool and sweet with the smell of turned earth and ozone. All around her, microscopic hyphal cities routed sapphire calcium packets around a single drop of amber resin. She watched the Cytosolic Ca2+ wave transduction implementing physical Boolean AND/OR/NOT logic gates across hyphal anastomoses when bridged with pepper-scented epoxy-sap. The bioluminescent network shifted instantly from green to gold, processing a slow, silent planetary equation.\n\nBut the overhead drip-valve squealed in a sharp, metallic E-flat. A drop of condensation struck the precise center of her forehead. The network demanded absolute focus to decode the planetary fungal action-potential syntax across miles of forest root-nodes. And furthermore, she still had to haul buckets of crushed basalt gravel to balance greenhouse soil pH to cultivate resilient soil and root-matrices capable of feeding the crater for generations. She wiped the water from her face, leaving a streak of black soil across her brow. The relentless drip struck her collarbone.\n\nA sudden, sharp heat blossomed behind her ribs. Her jaw clamped tight. The urge to smash the valve with the heavy iron wrench beside her knee surged upward. A demand for blunt, immediate kinetic action clawed at her usual patient discipline. She grabbed the wrench. The heavy iron settled cold and solid in her grip. She raised it toward the offending pipe, measuring the swing.\n\nTherefore, she lowered the tool slowly to the dirt. Shattering the irrigation line meant drowning the delicate seedbed below. She picked up the bucket of crushed basalt instead, hauling its massive weight against her hip. The gravel shifted with a harsh, grating slide.\n\n\"If you're complaining and no one is laughing,\" Kenna said, stepping quietly from the shadows of the ironwood trees, \"you're complaining wrong.\" Kenna held a datapad loosely at her side, her eyes scanning the biometric readouts of the room.\n\n\"It's not a squeak,\" Terra said, staring at the glowing threads in the soil. \"It's a symptom.\"\n\nKenna looked over her shoulder. \"What is?\"\n\n\"The drip. The E-flat interval. It doesn't mean 'Broken'. It means 'Galvanic corrosion'. It's an instruction to haul another bucket.\""
+    }
+  }
+}
