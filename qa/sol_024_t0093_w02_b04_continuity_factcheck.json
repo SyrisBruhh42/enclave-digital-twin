@@ -1,0 +1,121 @@
+{
+  "base_snapshot_tick": 93,
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "enclave_08_terra"
+    ],
+    "full_cards_loaded_count": 1,
+    "active_pov_id": "enclave_08_terra",
+    "next_pov_target": "enclave_11_kenna",
+    "prev_next_pov_target": "enclave_08_terra"
+  },
+  "campaign_metadata": {
+    "session_number": 24,
+    "colony_sol": 24,
+    "tick_id": 93,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Decipher action-potential spike trains and source-sink routing verbs.",
+      "mid_term_milestone": "Balance greenhouse soil pH with crushed basalt gravel.",
+      "campaign_arc_climax": "Integrate the valley-wide mycorrhizal supercomputer into the Enclave."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Genesis_Garden",
+    "macro_silhouette": "Subterranean root-cathedrals rippling with emerald and gold bioluminescent waves in total acoustic silence.",
+    "sensory_palette": {
+      "sight_and_color": "Emerald and gold bioluminescent waves rippling through fungal hyphae.",
+      "sound": "Total acoustic silence broken only by the soft crunch of crushed basalt gravel.",
+      "smell": "Rich, dark loam and the sharp tang of wet soil chemistry.",
+      "tactile_temperature": "Cool, damp air at a steady 12 degrees Celsius.",
+      "taste_optional": "Earthy copper on the back of the tongue."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Mycorrhizal Sensor Array",
+        "affordance_description": "Optical transmitter tapping into the deep root system to decode blue-blue-green sequences.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Crushed Basalt Gravel Bucket",
+        "affordance_description": "Heavy buckets of crushed basalt used to manually balance the greenhouse soil acidity.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Mycena Lucentipes Colony",
+        "affordance_description": "Luminescent fungi clusters that react to electrical and chemical changes.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 14
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "planetary_mycelium",
+      "name_and_role": "Valley-wide Mycorrhizal Supercomputer",
+      "motivation_goal": "Communicate environmental states and nutrient-routing verbs dynamically.",
+      "consistent_method": "Propagating millivolt electrical spikes along fungal hyphae.",
+      "immediate_complication": "Requires precise soil pH balancing and mineral inputs to maintain signal clarity.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "Signal degradation leading to loss of biological packet-switching capabilities."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Terra must decode the planetary fungal action-potential syntax.",
+      "level_2_local": "Balancing greenhouse soil pH is necessary to sustain the sensory array's calibration.",
+      "level_3_campaign_arc": "Establishing the Genesis Garden secures the colony's long-term biological future."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_08_terra",
+        "tactical_role": "DEFENDER"
+      },
+      {
+        "actor_id": "enclave_11_kenna",
+        "tactical_role": "SQUISHY_DEBUFFER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      4,
+      18,
+      11,
+      7,
+      15
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.4,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.6,
+    "composite_lpi": 0.55,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Local Python Deterministic Tick Engine",
+      "model": "Seeded SHA-256 PRNG",
+      "temperature": 0.0,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Misinterpreting the blue-blue-green sequence or failing to balance the delicate soil pH.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Terra entirely misreads the signal, mistaking a warning for an invitation.",
+        "below_dc_complicated_fail_forward": "The signal is partially decoded, but the soil pH drops, stressing the fungal network.",
+        "meets_dc_clean_success": "Terra successfully translates the flowing instruction and balances the soil.",
+        "dc_plus_5_or_20_extended_lore": "Deep structural resonance reveals ancient precursor chitin echoes within the signal."
+      }
+    },
+    "master_narrator": {
+      "executor": "Jules",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Terra knelt in the dark, rich soil of the arboretum, the air cool and sweet. All about her, the subterranean root-cathedrals rippled with emerald and gold bioluminescent waves, casting a functional twilight in total acoustic silence. To anyone else, it was simply a quiet, alien garden. To Terra, it was a valley-wide mycorrhizal supercomputer, and she was actively reading its living source code.\n\nShe stared intently at the data stream pulsing from the delicate ground sensors, tracing the rhythmic cascade of millivolt electrical spikes as they propagated along the complex web of fungal hyphae. A distinct blue-blue-green sequence flared on the primary monitor.\n\n\"It's not a noun,\" Terra said, staring at the data stream. \"It's a verb.\"\n\nKenna looked over her shoulder, having paused her quiet, late-night psychological patrols of the sleeping quarters. \"What is?\"\n\n\"The signal. The blue-blue-green sequence. It doesn't mean 'water'. It means 'flowing'. It's an instruction.\" Terra typed a rapid, precise sequence into the optical transmitter connected to the deep root system—red, red, pause—instructing the vast network to listen. \"It's dynamically routing phosphorus to the stressed nodes. Complex source-sink dynamics translating across miles of forest root-nodes, and it's treating our hybrid seedlings as priority recipients.\"\n\n\"Fascinating,\" Kenna noted, her voice laced with dry, affectionate amusement as she observed the botanist. \"And yet, for all your communion with the planetary consciousness, you are currently covered in dirt.\"\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Terra replied, letting out a soft, weary breath. She wiped a smudge of damp loam from her forehead. For a brief, exhausted second, her underlying stress flared—a sudden, irrational urge to simply kick the heavy basalt bucket across the room in a blunt, immediate kinetic outburst. She closed her eyes, forcing the Aries brawler down, and let her innate, patient vigilance return. It was the eternal, maddening friction of her existence here: she possessed the capability to decode planetary fungal action-potential syntax, yet she still had to physically haul heavy buckets of crushed basalt gravel just to manually balance the greenhouse soil pH. The mundane, backbreaking maintenance of the Genesis Garden served as a stubborn, immovable anchor against the sweeping, ethereal wonder of the exoplanet's native biology.\n\nSlowly, the network responded to her transmission. A new pattern emerged from the soil sensors, a rolling wave of green and gold.\n\n\"They hear us,\" Terra murmured, a profound sense of quiet awe washing over her fatigue.\n\nShe stood up, her joints popping slightly in the damp air, and picked up a heavy basalt bucket. Her shoulders ached from the relentless physical labor of careful cultivation. She turned to the neuropsychologist, a warm, patient smile touching her tired eyes.\n\n\"Here,\" Terra said, pressing the rough handle into Kenna's clean hands, physically passing the baton. \"Since you're awake and analyzing my posture, you can help me buffer the acidity in the third seedbed before we both attempt to get some actual sleep.\""
+    }
+  }
+}
