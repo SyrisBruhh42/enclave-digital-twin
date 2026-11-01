@@ -1,0 +1,112 @@
+{
+  "base_snapshot_tick": 95,
+  "context_manifest": {
+    "full_cards_loaded_count": 1,
+    "loaded_full_card_ids": ["enclave_05_kaio"],
+    "active_pov_id": "enclave_05_kaio",
+    "next_pov_target": "enclave_13_ryn",
+    "prev_next_pov_target": "enclave_13_ryn"
+  },
+  "campaign_metadata": {
+    "session_number": 6,
+    "colony_sol": 25,
+    "tick_id": 99,
+    "pacing_mode": "MERCER_IMMERSIVE",
+    "consequential_fights_since_short_rest": 1,
+    "horizon_goals": {
+      "immediate_session_goal": "Realign the kitchen water filtration grid before nightfall.",
+      "mid_term_milestone": "Secure the subterranean bioluminescent pathways.",
+      "campaign_arc_climax": "Integrate the grand colony atmospheric shield."
+    }
+  },
+  "active_location": {
+    "location_id": "loc_subterranean_ironwood_grove",
+    "macro_silhouette": "The forest floor was a riot of ferro-moss and silicon-based vines. An underground ravine illuminated by ultraviolet auroras. Oil-slick hex-pedal carapace camouflage shimmered in the peripheral shadows.",
+    "sensory_palette": {
+      "sight_and_color": "Ultraviolet auroras bleeding through cracked ironwood canopies, painting the ferro-moss in violent magenta.",
+      "sound": "The rhythmic, prime-number staccato of enzymatic luciferin popping like distant static.",
+      "smell": "Ozone, crushed silicon leaves, and the metallic tang of ionized air.",
+      "tactile_temperature": "A suffocating, localized humidity that clung to the skin, spiking right before the flash."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Silicon Vine Tangler",
+        "affordance_description": "Can be manipulated to obscure pathways or ensnare movement.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 14
+      },
+      {
+        "feature_name": "Voltage-Sensitive Ion Pockets",
+        "affordance_description": "Absorbs ambient kinetic energy to trigger blinding luciferin flashes.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 16
+      },
+      {
+        "feature_name": "Ferro-Moss Colony",
+        "affordance_description": "Slowly eats organic compounds to convert into pure iron.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_prime_number_luciferin",
+      "name_and_role": "Bioluminescent Flash Pattern",
+      "motivation_goal": "To discharge built-up ionic voltage in chaotic prime-number sequences.",
+      "consistent_method": "Flashing violently whenever kinetic energy disturbs the ferro-moss bed.",
+      "immediate_complication": "Blinds anyone looking directly at the vines during the discharge.",
+      "pressure_index": 7,
+      "uninterrupted_escalation": "The flashes synchronize across the entire ravine, creating a cascading strobe effect that triggers local seizures."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Kaio is sprinting through the jungle to identify the strange flash pattern.",
+      "level_2_local": "The flashes might indicate a rupture in the colony's magnetic containment.",
+      "level_3_campaign_arc": "Understanding the local flora's electrical properties is key to the grand project."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "enclave_05_kaio",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "enclave_13_ryn",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 14,
+    "prerolled_hazard_queue": [7, 12, 19, 4, 15]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.8,
+    "motivational_vector_saturation": 0.7,
+    "unresolved_conflict_ratio": 0.6,
+    "temporal_horizon_immediacy": 0.9,
+    "composite_lpi": 0.75,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "Kaio miscalculates the prime sequence and takes an ionized blast to the face.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Kaio assumes the flashes are random and ignores them.",
+        "below_dc_complicated_fail_forward": "Kaio tracks the pattern but loses his brass sextant in the ferro-moss.",
+        "meets_dc_clean_success": "Kaio successfully maps the 7-11-13 strobe sequence.",
+        "dc_plus_5_or_20_extended_lore": "Kaio maps the sequence and deduces it's a distress signal from the root system."
+      }
+    },
+    "master_narrator": {
+      "executor": "claude-3-opus",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": false,
+      "agency_handoff_prompt": "Kaio didn't walk through the jungle; he ricocheted. The forest floor was a riot of ferro-moss and silicon-based vines, and Kaio moved over it with the kinetic enthusiasm of a particle in a collider. Ultraviolet auroras bled through cracked ironwood canopies, painting the subterranean grove in violent magenta. The air was thick with ozone, crushed silicon leaves, and the metallic tang of ionized air. As he sprinted, a localized humidity clung to his skin, a stifling pressure that always spiked right before the flash.\n\nHe recognized the phenomenon instantly—enzymatic luciferin-luciferase oxidation gated by voltage-sensitive ion channels flashing in prime-number sequences and optical polarization modulation. The chaotic static pop of the discharges fired in a familiar rhythm: seven, eleven, thirteen. He was running at a dead sprint through a magnetic jungle, tracking the strange electrical distress signal bouncing between the ferro-moss colonies. It was a beautiful, dangerous dance of ambient kinetic energy triggering blinding, chaotic strobes. He loved every second of it.\n\nYet, his mind was already leagues ahead. While his boots hit the iron-rich soil, he was attempting to 'enhance' the kitchen water filter. He pictured the exact gauge of the mesh, how he could modify the pressure valve using a scavenged coil. The ensuing chaos was inevitable. When he finally burst into the galley, panting and covered in ionized dust, he wasn't Kaio the Scout anymore. He slammed a crumpled schematic on the counter and began barking orders with ice-cold, ruthless tactical command. It was the CEO taking over, the Capricorn under extreme stress, demanding absolute order in a kitchen he had just invaded.\n\nHe forced Ryn to strain the evening's soup stock through a clean sock, insisting it was a 'vital' step in his new filtration protocol. The chef stood there, arms crossed, staring down the frantic explorer turned dictator. Kaio didn't flinch. He just tapped the counter. 'If you're complaining and no one is laughing, you're complaining wrong,' he chirped, entirely oblivious to the murderous glare Ryn was shooting him. He casually tossed a glowing silicon vine onto the table as proof of his urgent mission, its prime-number sequence stuttering out against the metal surface."
+    }
+  }
+}
