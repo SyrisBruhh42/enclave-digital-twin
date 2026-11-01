@@ -1,0 +1,60 @@
+{
+  "tick_id": 100,
+  "colony_sol": 25,
+  "base_snapshot_tick": 96,
+  "day_phase": "THE_FEAST",
+  "lead_story": {
+    "headline": "The Popcorn Storm",
+    "cited_event_ids": [
+      "evt_s010_t0037_morning_intent"
+    ],
+    "actors": [
+      "enclave_03_silas",
+      "enclave_01_hector"
+    ],
+    "location": "The_First_Forge"
+  },
+  "four_block_digests": {
+    "DAWN_SHIFT": {
+      "headline": "Dawn",
+      "narrative_prose": "Dawn narrative.",
+      "cited_event_ids": [
+        "evt_s010_t0037_morning_intent"
+      ]
+    },
+    "MIDDAY_EXPEDITION": {
+      "headline": "Midday",
+      "narrative_prose": "Midday narrative.",
+      "cited_event_ids": [
+        "evt_s010_t0037_morning_intent"
+      ]
+    },
+    "THE_FEAST": {
+      "headline": "Feast",
+      "narrative_prose": "Feast narrative.",
+      "cited_event_ids": [
+        "evt_s010_t0037_morning_intent"
+      ]
+    },
+    "EVENING_DISPATCH": {
+      "headline": "Evening",
+      "narrative_prose": "Evening narrative.",
+      "cited_event_ids": [
+        "evt_s010_t0037_morning_intent"
+      ]
+    }
+  },
+  "segments": [
+    {
+      "active_pov_id": "enclave_13_ryn",
+      "next_pov_target": "enclave_04_leo",
+      "narrative_prose": "Ryn did not cook; she executed a logistical campaign against hunger. The kitchen was a zone of military precision. Knives were aligned by blade length. Spices were organized by Scoville unit.\n\nToday was different. The pressure dropped sharply as a severe ionization storm battered the Enclave. Thunder hammered the shutters, rattling the massive thirty-gallon steam-jacketed kettles. Yet inside the timber hall, the warm hearth-fire kept the cold at bay. Ryn was determined to serve up morale. Her target: precision 72-degree enzymatic chitin tenderization and gas-chromatograph methional flavor-pairing to trigger popcorn-aromatic Maillard reactions using subterranean fungi.\n\nShe moved with her usual rigidity, but the storm's chaotic energy was infectious. As Kaio bounded past, juggling tubers, she didn't bark her usual calorie-deficit warning. Instead, a wild, intuitive improvisation took hold. Her flow washed over her, completely abandoning the exact recipe measurements. She seasoned the stew by cosmic vibration, tossing in a handful of dried salt-moss just because it felt right.\n\n\"If you're complaining and no one is laughing, you're complaining wrong,\" Ryn called out, her voice crisp but fond, slicing through the kitchen clatter. She paused to carefully adjust the copper ankle-grounding wires on the soup spoons. If Dorian's models showed extreme magnetic flux, she wasn't going to let anyone get shocked eating her masterpiece.\n\nAs the thick, savory aroma of popcorn and roasted fungi filled the air, Leo strolled into the galley. He looked tired from a long shift at the Forge, but the smell brought a genuine smile to his face."
+    },
+    {
+      "active_pov_id": "enclave_04_leo",
+      "prev_next_pov_target": "enclave_04_leo",
+      "next_pov_target": "enclave_04_leo",
+      "narrative_prose": "Leo walked in, the smell of buttered popcorn-aromatic Maillard reactions hitting him instantly. He wiped a streak of grease from his brow, surveying Ryn's domain. \"Smells like a campaign won,\" he rumbled.\n\nRyn handed him a heavy bowl of the chitinous stew, the copper grounding wire clinking reassuringly against the side. \"Eat it while it's hot. The chitin is perfectly tenderized.\"\n\nLeo accepted the bowl, feeling the comforting warmth seep into his calloused hands. The physical handoff was complete. He took a sip, noting the rich, savory depth of the meal. The storm outside might be tearing at the Enclave's shields, but in here, surrounded by the deep fellowship of his family and the quiet bioluminescent glow of the arboretum filtering through the hall, they were anchored. They were home."
+    }
+  ]
+}
