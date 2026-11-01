@@ -1,0 +1,49 @@
+{
+  "event_id": "evt_s025_t0097_world_consequence",
+  "tick_id": 97,
+  "colony_sol": 25,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-11-18T00:00:00Z",
+  "base_snapshot_tick": 96,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The_First_Forge",
+  "actors": [
+    "enclave_03_silas",
+    "enclave_01_hector"
+  ],
+  "active_pov_id": "enclave_03_silas",
+  "next_pov_target": "enclave_01_hector",
+  "summary": "Silas struggled with the galvanic corrosion on the Fe-Co-Cr-Ni-Mn High-Entropy Alloy lattice due to twin-sun eddy currents and a dripping copper flange coupling, hitting the pipe with a wrench before passing the physical baton to Hector.",
+  "importance": 8.0,
+  "novelty_score": 0.8,
+  "state_deltas": {
+    "stress_delta": 0.1
+  },
+  "relationship_deltas": [],
+  "evidence_refs": [],
+  "active_location": {
+    "sensory_palette": {
+      "sight_and_color": "pearlescent mycena lucentipes bioluminescence pulsing in the damp arboretum twilight",
+      "sound": "the stubborn, rhythmic dripping of condensation on metal",
+      "smell": "ozone, copper, and damp earth",
+      "tactile_temperature": "cool and metallic",
+      "taste_optional": "faint metallic tang of rust"
+    },
+    "interactive_features": [
+      {
+        "system_verb": "DEFEND",
+        "associated_check_dc": 14,
+        "description": "stabilize the fe-co-cr-ni-mn high-entropy alloy lattice against galvanic corrosion"
+      },
+      {
+        "system_verb": "ATTRACT",
+        "description": "attract hector's attention to the asymmetrical coupling"
+      },
+      {
+        "system_verb": "CONSUME",
+        "description": "consume the spare iron to reinforce the pipe"
+      }
+    ]
+  },
+  "narrative_prose": "For a man who could persuade impossible metals to sing, the ordinary, stubborn silence of rust was a particular insult. There it was, on a length of pipe he himself had hammered into being, a faint, cancerous blush of oxidization that had conspired with the water it carried to stage a tiny, tireless rebellion. One drop, at a time.\n\nSilas knelt on the dark, rich soil. All about him, the family's cultivated fungi cast a soft, pearlescent mycena lucentipes bioluminescence pulsing in the damp arboretum twilight around a single stubborn drop of water. To anyone else, this was a garden. To Silas, it was a humidity chamber designed specifically to destroy his work. He ran a thumb over the pipe. It was a Fe-Co-Cr-Ni-Mn high-entropy alloy, designed for extreme tensile strength and thermal stability. It should have been impervious. But the planet's atmosphere was rich in corrosive ions, and the magnetic flux of the twin suns induced micro-currents in the metal, accelerating the galvanic reaction at a molecular level due to the copper flange couplings. The lattice structure was compromised.\n\nHis mind, usually ordered and precise, began to slip as the persistent dripping eroded his resolve. He found himself paralyzed not by the mechanical failure, but by a sudden, overwhelming intuition of the planet's sorrow. The rigid empiricist vanished, leaving a dreamer staring at the beautiful, tragic impermanence of the rust. He couldn't fix it. It was too poetic. He let out a sigh, a small cloud in the glowing air. There were other solutions. Less elegant, less permanent. With the practiced movement of someone who had chosen practicality over perfection many times before, he picked up a heavy wrench. He did not fit it to the joint. He simply raised it, measured the distance, and gave the pipe a firm, resonant whack. Clang. The dripping paused. Silas waited, holding his breath. A moment of silence. Then, with a renewed and almost cheerful impertinence, the drop began to form again.\n\n\"It's crooked, isn't it?\" Hector's voice broke the trance. The prodigy stepped into the twilight, eyeing the piping system.\n\nSilas blinked, the dream shattering. The physics rushed back in. He reached out, his hand steady again, and passed the warm copper calibration baton into Hector's grip. The physical exchange anchored him, grinding away the hesitation. \"The whole coupling is half a degree off,\" Silas muttered, his voice dry and measured once more. \"Inefficient. And if you're complaining and no one is laughing, you're complaining wrong.\""
+}
