@@ -1,0 +1,113 @@
+{
+  "bucket": "COUNTERFACTUAL_PERSONALITY_STUDY_REPLAYS",
+  "active_pov_id": "soren",
+  "next_pov_target": "freya",
+  "prev_next_pov_target": "soren",
+  "evidence_citations": ["evt_s001_t0001_morning_intent"],
+  "tension_delta": 0.5,
+  "showrunner_beats": ["Arrival", "Confrontation", "Resolution"],
+  "campaign_metadata": {
+    "session_number": 30,
+    "colony_sol": 30,
+    "tick_id": 0,
+    "pacing_mode": "MERCER_EXPLORATION",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Study the anomaly.",
+      "mid_term_milestone": "Map it.",
+      "campaign_arc_climax": "Fix it."
+    }
+  },
+  "active_location": {
+    "location_id": "LOC_ANOMALY",
+    "macro_silhouette": "A swirling vortex of unstable energy.",
+    "sensory_palette": {
+      "sight_and_color": "Bright flashes.",
+      "sound": "Loud hum.",
+      "smell": "Ozone.",
+      "tactile_temperature": "Cold."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Energy Field",
+        "affordance_description": "Can be defended against.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Magnetic Pull",
+        "affordance_description": "Can be attracted.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Debris",
+        "affordance_description": "Can be concealed behind.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 15
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "anomaly_01",
+      "name_and_role": "Vortex",
+      "motivation_goal": "To spin.",
+      "consistent_method": "Spinning.",
+      "immediate_complication": "Spins faster.",
+      "pressure_index": 5,
+      "uninterrupted_escalation": "Spins out of control."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "We are here.",
+      "level_2_local": "It is here.",
+      "level_3_campaign_arc": "It matters."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "soren",
+        "tactical_role": "STRIKER"
+      }
+    ],
+    "strain_accumulated_upward": 0,
+    "prerolled_hazard_queue": [
+      10,
+      12,
+      14,
+      16,
+      18
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.5,
+    "motivational_vector_saturation": 0.5,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.5,
+    "composite_lpi": 0.5,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "Aegis_Judge",
+      "model": "v4_tactical",
+      "temperature": 0.2,
+      "explicit_pre_roll_dc": 15,
+      "failure_stakes_declared": "Bad.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Very bad.",
+        "below_dc_complicated_fail_forward": "Bad.",
+        "meets_dc_clean_success": "Good.",
+        "dc_plus_5_or_20_extended_lore": "Very good."
+      }
+    },
+    "master_narrator": {
+      "executor": "Aegis_Narrator",
+      "temperature": 0.7,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": false,
+      "agency_handoff_prompt": "Soren stood at the edge of the anomaly. The air hummed with raw energy, vibrating against his skin. The cold winds sheared through his protective layers, bringing with it the sharp scent of ozone. Soren reached out to Freya, handing her the brass instruments. The vortex spun wildly in the distance, threatening to pull them in. They needed to stabilize the field quickly."
+    }
+  }
+}
