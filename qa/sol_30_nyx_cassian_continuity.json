@@ -1,0 +1,132 @@
+{
+  "tick_id": 0,
+  "base_snapshot_tick": 0,
+  "active_pov_id": "nyx",
+  "next_pov_target": "cassian",
+  "actors": [
+    "nyx",
+    "cassian"
+  ],
+  "evidence_citations": [
+    "evt_s001_t0001_dawn_shift"
+  ],
+  "tension_delta": 0.15,
+  "showrunner_beats": [
+    "Discovered temporal fracture.",
+    "Stabilized the timeline."
+  ],
+  "context_manifest": {
+    "loaded_full_card_ids": [
+      "nyx"
+    ],
+    "full_cards_loaded_count": 1
+  },
+  "campaign_metadata": {
+    "session_number": 30,
+    "colony_sol": 30,
+    "tick_id": 0,
+    "pacing_mode": "MERCER_EXPLORATION",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Investigate the continuity anomaly.",
+      "mid_term_milestone": "Restore timeline stability.",
+      "campaign_arc_climax": "Prevent the chronal collapse."
+    }
+  },
+  "active_location": {
+    "location_id": "The_Archive",
+    "macro_silhouette": "A towering spire of shifting crystal and brass, suspended in a temporal void. The walls pulse with chronal energy.",
+    "sensory_palette": {
+      "sight_and_color": "Iridescent chronal fractures.",
+      "sound": "The ticking of a thousand unseen clocks.",
+      "smell": "Ozone and old parchment.",
+      "tactile_temperature": "A chilling breeze that feels like déjà vu."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Chronal Dial",
+        "affordance_description": "A dial that shifts temporal states.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Temporal Rift",
+        "affordance_description": "A tear in the fabric of space-time.",
+        "system_verb": "ATTRACT",
+        "associated_check_dc": 20
+      },
+      {
+        "feature_name": "Paradox Prism",
+        "affordance_description": "A prism trapping temporal energy.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "echo_01",
+      "name_and_role": "Temporal Echo, Observer",
+      "motivation_goal": "To record the anomaly.",
+      "consistent_method": "Passively observing and reflecting actions.",
+      "immediate_complication": "Distorting the immediate perception of time.",
+      "pressure_index": 5,
+      "uninterrupted_escalation": "Eventually solidifying the anomaly."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Nyx needs to verify the timeline.",
+      "level_2_local": "Cassian suspects an incursion.",
+      "level_3_campaign_arc": "The universe is unraveling."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "nyx",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "cassian",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 1,
+    "prerolled_hazard_queue": [
+      4,
+      12,
+      8,
+      19,
+      2
+    ]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.6,
+    "motivational_vector_saturation": 0.8,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.7,
+    "composite_lpi": 0.65,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "aegis",
+      "model": "v4",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 14,
+      "failure_stakes_declared": "The timeline fractures further.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "Total temporal collapse.",
+        "below_dc_complicated_fail_forward": "The timeline shifts, but barely holds.",
+        "meets_dc_clean_success": "The anomaly is stabilized.",
+        "dc_plus_5_or_20_extended_lore": "Deep insights into chronal mechanics."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Nyx stepped through the archway of the Archive, boots echoing against the obsidian floorboards. Brass pendulum swings cut the stale air above, ticking in a discordant rhythm. The chronal anomaly manifested as a jagged tear in the center of the chamber, bleeding iridescent light across the ancient parchment scrolls. A scent of ozone mixed with burning copper filled the vast space. Nyx approached the central console, placing both hands on the heavy calibration dial. The metal radiated a stinging heat, pushing back against the applied pressure. With a sharp, deliberate twist, Nyx locked the dial into the secondary anchor position. Sparks showered onto the floor, illuminating the dusty corners of the room. The violent tearing sound slowly subsided into a low, resonant hum.\n\nCassian stood near the entrance, boots planted firmly on the grating, observing the stabilizing energy fields. The ambient temperature plummeted, sending a sudden frost across the exposed brass pipes and crystal conduits. Nyx maintained a rigid grip on the console, manually aligning the temporal frequencies with the colony's baseline metric. The overhead displays flared with cascading green data streams, confirming the successful partial containment of the rift. Slowly, Nyx extracted the core calibration baton from the console's primary recess. The baton pulsed with residual chronal energy, vibrating in the chilled air. Turning smoothly on a heel, Nyx extended the baton directly toward Cassian. Cassian stepped forward into the glow, taking the device firmly in hand to initiate the final synchronization sequence.\n\nThe Archive's ambient lighting flickered, casting long, shifting shadows across the towering bookshelves. The hum of the containment field deepened, vibrating through the floorboards and rattling the glass display cases. Cassian examined the readout on the baton, noting the rapidly decreasing variance levels. The timeline stabilized, locking the temporal fracture behind a solid wall of engineered reality."
+    }
+  }
+}
