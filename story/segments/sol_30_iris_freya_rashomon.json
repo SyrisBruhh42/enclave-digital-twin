@@ -1,0 +1,15 @@
+{
+  "tick_id": 0,
+  "colony_sol": 30,
+  "day_phase": "DAWN_SHIFT",
+  "segment_id": "sol_30_iris_freya_rashomon",
+  "segment_index": 115,
+  "active_pov_id": "iris",
+  "next_pov_target": "freya",
+  "prev_next_pov_target": "iris",
+  "actors": ["iris", "freya"],
+  "evidence_citations": ["evt_s029_t0113_morning_intent"],
+  "tension_delta": 0.5,
+  "showrunner_beats": ["IRIS_CONFRONTS", "FREYA_DEFLECTS"],
+  "text": "[DAWN_SHIFT] Iris adjusted the calibration dials on the geothermal manifold, ensuring the pressure remained steady. The hiss of steam provided a stark counterpoint to Freya's arrival. Freya leaned against the bulkhead, her expression unreadable. Iris tightened her grip on the wrench. 'You missed the sync check,' Iris said, her voice cutting through the ambient hum. Freya offered a noncommittal shrug, flicking a speck of rust from her sleeve. 'The sync check is a formality, Iris. The real work is out there.' But Iris wasn't having it. Therefore, she stepped closer, bridging the gap between them. 'Not when it compromises the entire array,' Iris countered."
+}
