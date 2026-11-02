@@ -1,0 +1,113 @@
+{
+  "active_pov_id": "orion",
+  "next_pov_target": "thorne",
+  "evidence_citations": ["event_001"],
+  "tension_delta": 0.5,
+  "showrunner_beats": ["beat 1", "beat 2"],
+  "context_manifest": {
+    "loaded_full_card_ids": ["orion"],
+    "full_cards_loaded_count": 1
+  },
+  "campaign_metadata": {
+    "session_number": 1,
+    "colony_sol": 30,
+    "tick_id": 1,
+    "pacing_mode": "MERCER_EXPLORATION",
+    "consequential_fights_since_short_rest": 0,
+    "horizon_goals": {
+      "immediate_session_goal": "Investigate the anomaly.",
+      "mid_term_milestone": "Secure the perimeter.",
+      "campaign_arc_climax": "Uncover the truth."
+    }
+  },
+  "active_location": {
+    "location_id": "loc_alpha",
+    "macro_silhouette": "The room is large and imposing. Shadows cling to the corners. Dust motes dance in the shaft of light.",
+    "sensory_palette": {
+      "sight_and_color": "Dim greys and harsh whites.",
+      "sound": "A low hum from the walls.",
+      "smell": "Ozone and stale air.",
+      "tactile_temperature": "Cold to the touch."
+    },
+    "interactive_features": [
+      {
+        "feature_name": "Control Panel",
+        "affordance_description": "Can be hacked.",
+        "system_verb": "CONSUME",
+        "associated_check_dc": 15
+      },
+      {
+        "feature_name": "Blast Door",
+        "affordance_description": "Can be sealed.",
+        "system_verb": "DEFEND",
+        "associated_check_dc": 10
+      },
+      {
+        "feature_name": "Ventilation Shaft",
+        "affordance_description": "Can hide someone.",
+        "system_verb": "CONCEAL",
+        "associated_check_dc": 12
+      }
+    ]
+  },
+  "reactive_toys": [
+    {
+      "entity_id": "toy_01",
+      "name_and_role": "Cleaning Bot",
+      "motivation_goal": "Keep area clean.",
+      "consistent_method": "Sweeping.",
+      "immediate_complication": "Gets in the way.",
+      "pressure_index": 2,
+      "uninterrupted_escalation": "Sprays toxic cleaner if blocked."
+    }
+  ],
+  "encounter_matrix": {
+    "three_levels_of_why": {
+      "level_1_immediate": "Intruders detected.",
+      "level_2_local": "Security system triggered.",
+      "level_3_campaign_arc": "Ancient defenses waking up."
+    },
+    "active_specialist_roles": [
+      {
+        "actor_id": "orion",
+        "tactical_role": "STRIKER"
+      },
+      {
+        "actor_id": "thorne",
+        "tactical_role": "DEFENDER"
+      }
+    ],
+    "strain_accumulated_upward": 0,
+    "prerolled_hazard_queue": [1, 2, 3, 4, 5]
+  },
+  "lpi_metrics": {
+    "relational_tension_density": 0.5,
+    "motivational_vector_saturation": 0.5,
+    "unresolved_conflict_ratio": 0.5,
+    "temporal_horizon_immediacy": 0.5,
+    "composite_lpi": 0.5,
+    "classification": "Campaign-Ready"
+  },
+  "dual_agent_contract": {
+    "judge_tactician": {
+      "provider": "openai",
+      "model": "gpt-4",
+      "temperature": 0.7,
+      "explicit_pre_roll_dc": 15,
+      "failure_stakes_declared": "Alarm sounds.",
+      "graduated_outcomes": {
+        "nat_1_false_intuition": "You think it's safe.",
+        "below_dc_complicated_fail_forward": "Door opens but jams.",
+        "meets_dc_clean_success": "Door opens.",
+        "dc_plus_5_or_20_extended_lore": "Door opens silently and you find a map."
+      }
+    },
+    "master_narrator": {
+      "executor": "jules",
+      "temperature": 0.8,
+      "calypso_zero_raw_stats": true,
+      "prosodic_micro_pauses_enabled": true,
+      "agency_handoff_prompt": "Orion turned to Thorne, waiting for his move."
+    }
+  }
+}
