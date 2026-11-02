@@ -1,0 +1,75 @@
+{
+  "tick_id": 0,
+  "colony_sol": 30,
+  "base_snapshot_tick": 116,
+  "day_phase": "EVENING_DISPATCH",
+  "four_block_digests": {
+    "DAWN_SHIFT": {
+      "headline": "Dawn Intentions",
+      "narrative_prose": "Silas finalized a resonant shield plating alloy but was derailed by a stubborn drip.",
+      "cited_event_ids": [
+        "evt_s029_t0113_morning_intent"
+      ]
+    },
+    "MIDDAY_EXPEDITION": {
+      "headline": "Midday Prank",
+      "narrative_prose": "Silas's attempt to repair the leak was overshadowed by an unexpected prank.",
+      "cited_event_ids": [
+        "evt_s029_t0114_shadow_prank"
+      ]
+    },
+    "THE_FEAST": {
+      "headline": "Feast Reflections",
+      "narrative_prose": "Hector and Silas reconciled over roasted vegetables, acknowledging the importance of teamwork.",
+      "cited_event_ids": [
+        "evt_s029_t0113_morning_intent"
+      ]
+    },
+    "EVENING_DISPATCH": {
+      "headline": "Evening Dispatch",
+      "narrative_prose": "The evening dispatch highlighted the colony's resilience despite minor setbacks.",
+      "cited_event_ids": [
+        "evt_s029_t0113_world_consequence"
+      ]
+    }
+  },
+  "lead_story": {
+    "headline": "Resonant Shield Plating Alloy Finalized",
+    "cited_event_ids": [
+      "evt_s029_t0113_morning_intent"
+    ],
+    "actors": [
+      "enclave_03_silas",
+      "enclave_01_hector"
+    ],
+    "location": "The First Forge"
+  },
+  "segments": [
+    {
+      "active_pov_id": "selene",
+      "next_pov_target": "mira",
+      "narrative_prose": "Selene adjusted the chronometer on her slate, the soft green glow illuminating the cramped dispatch station. The hum of the colony's central reactor served as a constant, reassuring backdrop to the data feeds streaming across her console. Mira, her co-anchor, sat across from her, carefully reviewing the expedition logs. The air tasted faintly of ozone and recycled water, a testament to the rigorous filtering systems keeping them alive on this hostile rock. \n\n\"The shield plating adjustments Silas made this morning are holding steady,\" Selene noted, tapping a key to highlight the relevant stress metrics. \n\nMira nodded, a brief frown creasing her forehead as she scrolled past a minor structural anomaly report. \"Good. The localized gravity shears near the southern perimeter have been intensifying.\" \n\nSelene leaned forward, tracing the telemetry lines with a gloved finger. BUT a sudden spike in ambient radiation levels briefly flashed on the auxiliary monitor before stabilizing. She blinked, exhaling a slow, measured breath. The colony was safe for now, the systems functioning within acceptable parameters. THEREFORE, she turned the slate towards Mira, offering it with a steady hand. \n\n\"We should compile the final summary for the archives,\" Selene said, handing off the data module.",
+      "evidence_citations": [
+        "evt_s029_t0113_morning_intent"
+      ],
+      "tension_delta": 0.5,
+      "showrunner_beats": [
+        "ESTABLISH_EVENING_ROUTINE",
+        "HIGHLIGHT_TECHNICAL_SUCCESS"
+      ]
+    },
+    {
+      "active_pov_id": "mira",
+      "next_pov_target": "enclave_03_silas",
+      "narrative_prose": "Mira accepted the slate from Selene, her fingers brushing the cold metal edge. The data transferred seamlessly to her own console, a string of complex algorithms cascading down the screen. The scent of ozone from the nearby reactor core seemed to sharpen as she scrutinized the numbers. \n\n\"The structural anomaly near the perimeter is minor but persistent,\" Mira muttered, tapping a quick sequence on her keyboard. \"I'll flag it for Hector's morning sweep. We cannot afford to ignore micro-fractures in the primary hull.\" \n\nShe cross-referenced the structural data with the day's expedition logs, looking for any correlation. BUT the logs were incomplete, a few entries truncated by static interference. Mira's brow furrowed in concentration. She needed a clearer picture of the perimeter before finalizing the report. THEREFORE, she patched a direct line to Silas, hoping he was still awake. \n\n\"Silas, I need you to double-check the sensor grid on the southern quadrant,\" Mira said, transmitting the coordinates.",
+      "evidence_citations": [
+        "evt_s029_t0114_shadow_prank"
+      ],
+      "tension_delta": 0.2,
+      "showrunner_beats": [
+        "IDENTIFY_POTENTIAL_THREAT",
+        "INITIATE_PREVENTATIVE_ACTION"
+      ]
+    }
+  ]
+}
