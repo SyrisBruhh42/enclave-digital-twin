@@ -1,0 +1,38 @@
+{
+  "event_id": "sol_30_clara_astra_reflection",
+  "tick_id": 0,
+  "colony_sol": 30,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-11-23T23:00:00Z",
+  "base_snapshot_tick": 0,
+  "event_type": "NIGHTLY_REFLECTION",
+  "location": "The_Hub_Hearth",
+  "actors": [
+    "clara",
+    "astra"
+  ],
+  "summary": "Clara and Astra confront the kinetic discrepancies in the settlement's harmonic dampeners, masking their mutual apprehension with rigorous analytical debate over a shared thermal brew.",
+  "importance": 8.0,
+  "novelty_score": 0.75,
+  "science_vegetable": "Harmonic kinetic dampener arrays",
+  "state_deltas": {
+    "stress_delta": -0.1
+  },
+  "relationship_deltas": [],
+  "evidence_refs": [],
+  "cited_event_ids": [
+    "evt_s029_t0113_morning_intent"
+  ],
+  "evidence_citations": [
+    "evt_s029_t0113_morning_intent"
+  ],
+  "tension_delta": -0.2,
+  "showrunner_beats": [
+    "Establish the kinetic shear anomaly.",
+    "Raise interpersonal stakes.",
+    "Resolve with intellectual solidarity."
+  ],
+  "active_pov_id": "clara",
+  "next_pov_target": "astra",
+  "narrative_prose": "Clara stared into the amber fluid of her mug. The subtle vibrations of the colony's sub-basement harmonic dampeners created rippling interference patterns on the surface. \"The shear threshold on the western ridge is compounding at an exponential rate,\" she noted. Her voice remained steady. Astra leaned against the bulkhead, her heavy arms crossed tightly over the dented and scratched surface of her weathered diagnostic rig, refusing to look away from the slowly mounting pressure indicators flashing red across the main console. She observed Clara carefully, eyes narrowing as she mentally tabulated the structural load capacities. \"If we don't recalibrate the flux capacitors before the next squall, we risk a cascading resonance failure. It is not just the ridge, Clara. The entire lattice is vibrating out of key.\" Clara closed her eyes, letting the ambient warmth of the localized radiator press against her skin. The silence stretched between them. Their theoretical models were rapidly deteriorating under the harsh reality of the planet's magnetosphere. Astra reached out, tapping a precise sequence into the nearest terminal. The low hum of the dampeners shifted, softening slightly. \"We will re-index the resonance patterns. Together. The lattice holds as long as we do.\""
+}
