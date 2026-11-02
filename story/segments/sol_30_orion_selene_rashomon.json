@@ -1,0 +1,21 @@
+{
+  "segment_id": "seg_s030_orion_selene_rashomon",
+  "tick_id": 123,
+  "colony_sol": 30,
+  "day_phase": "DAWN_SHIFT",
+  "active_pov_id": "enclave_09_orion",
+  "next_pov_target": "selene",
+  "actors": [
+    "enclave_09_orion",
+    "selene"
+  ],
+  "evidence_citations": [
+    "evt_s029_t0113_morning_intent"
+  ],
+  "tension_delta": 0.5,
+  "showrunner_beats": [
+    "Orion paints a mural",
+    "Selene arrives and observes"
+  ],
+  "text": "Orion gripped the iron-bristled brush. He scraped the synthetic pigment against the coarse aggregate of the southern retaining wall. The rough surface chewed at the stiff bristles, leaving an uneven smear of oxidized crimson. He pressed his weight into the handle. The dried paint cracked. A wide, jagged flake detached, spiraling down into the rust-colored dust. He exhaled a long breath, staring at the broken arc of color. He took two steps backward. He tossed the brush onto the dented metal tray. It clattered against empty tin cups. He crossed his arms, evaluating the overall geometric composition of the mural.\n\nHe dragged a thumb across his jaw, smearing accidental red powder across his skin. The central vortex lacked the necessary visual depth to anchor the planetary alignment. He needed a darker shade, something capable of absorbing the ambient bioluminescence without reflecting it back into the corridor. He rummaged through the overturned supply crate. Empty. He kicked the side of the reinforced polymer container.\n\nBut the sharp, metallic noise echoed far longer than it should have. He paused, his boot still resting on the dented plastic. He glanced over his shoulder. The long corridor stretched empty, bathed in the dim, flickering amber of the failing emergency lights. He narrowed his eyes, examining the dense shadows clinging to the rusted overhead support struts. One of the shadows detached itself. It stepped forward into the faint amber glow. Selene stood there, her hands shoved deep into the oversized pockets of a faded aviator jacket. Her heavy boots scraped against the metal grating, loud in the silent hall.\n\nOrion tightened his jaw muscles. He pointed a rigid finger toward the warning sign he had hastily scrawled on a scrap of synthetic canvas. Selene ignored the gesture. She walked straight up to the wall, her gaze tracing the broken line of crimson. She tilted her head, inspecting the jagged flake on the floor. She pulled a small, sealed glass vial from her pocket and held it out. Inside, a highly viscous fluid swirled slowly, shifting from opaque obsidian to a deep, iridescent indigo. Therefore, he reached out, accepting the cold glass vial, his calloused fingers brushing against hers as he prepared to hand off the responsibility of the next phase."
+}
