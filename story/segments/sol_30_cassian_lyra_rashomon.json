@@ -1,0 +1,30 @@
+{
+  "segment_id": "sol_30_cassian_lyra_rashomon",
+  "tick_id": 0,
+  "colony_sol": 30,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-10-26T00:00:00Z",
+  "base_snapshot_tick": 0,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The Nexus",
+  "actors": [
+    "cassian",
+    "lyra"
+  ],
+  "active_pov_id": "cassian",
+  "next_pov_target": "lyra",
+  "prev_next_pov_target": "cassian",
+  "pacing_mode": "MULLIGAN_CRISIS",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "science_vegetable": "Superconducting neuro-spore lattice synchronization",
+  "summary": "Cassian and Lyra coordinate the dawn shift.",
+  "importance": 0.8,
+  "novelty_score": 0.7,
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "evidence_citations": ["evt_s001_t0001_morning_intent"],
+  "tension_delta": 0.1,
+  "showrunner_beats": ["Establish the stakes", "Intersperse technical jargon with witty banter"],
+  "text": "Cassian adjusted the primary aperture of the neuro-spore lattice, a delicate superconducting array that glowed with a faint, bioluminescent hue. The morning light barely pierced the thick canopy of The Nexus, casting long shadows across the control console. \"Lyra, if the flux capacitance drifts by even point zero two percent, we'll be dealing with localized polarity inversion all day,\" he muttered, his fingers dancing across the hand-forged brass dials.\n\nLyra didn't look up from her calibration manifold. Her wrench, a heavy piece of captured lightning geode and copper, turned with precise, rhythmic clicks. \"And if you don't stop hovering like a nervous parent over a science project, I might just purposefully misalign the secondary coils to see you sweat, Cassian. We've got this. The lattice is stable, and the fungal network is singing right in tune with the primary grid.\"\n\nHe sighed, the tension in his shoulders easing just a fraction. He knew she was right, but the stakes were always high. The Enclave relied on this delicate balance. With a final, decisive click, he locked the aperture into place and slid the warm copper baton across the console. \"Fine. Your turn. Don't break it.\""
+}
