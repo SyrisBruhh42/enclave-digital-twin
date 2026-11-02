@@ -1,0 +1,33 @@
+{
+  "event_id": "qa_sol_30_nyx_orion_counterfactual_001",
+  "tick_id": 0,
+  "colony_sol": 30,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2050-01-30T06:00:00Z",
+  "base_snapshot_tick": 0,
+  "event_type": "COUNTERFACTUAL_PERSONALITY_STUDY_REPLAYS",
+  "location": "The_Hearth_Main_Hall",
+  "actors": [
+    "nyx",
+    "orion"
+  ],
+  "summary": "Nyx and Orion replay a counterfactual scenario.",
+  "importance": 5,
+  "novelty_score": 0.5,
+  "science_vegetable": "A specialized hydroponic lattice algorithm, iterating through hypothetical soil pH variances to maximize mycelial yield.",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "evidence_citations": [
+    "evt_s001_t0001_dawn_shift_id"
+  ],
+  "tension_delta": 0.1,
+  "showrunner_beats": [
+    "Orion paints a hypothetical outcome. Nyx dismantles it with logic."
+  ],
+  "active_pov_id": "nyx",
+  "next_pov_target": "orion",
+  "pacing_mode": "MERCER_EXPLORATION",
+  "hardware_sympathy_mode": "active",
+  "narrative_prose": "The pale light of the Dawn Shift bled through the reinforced plasteel windows, casting long, fractured shadows across the hydroponic lattice. Nyx stood before the control terminal, her fingers flying across the haptic interface. She was iterating through a specialized hydroponic lattice algorithm, testing hypothetical soil pH variances to maximize mycelial yield. The simulation hummed with a quiet intensity. Orion leaned against the bulkhead, his posture relaxed but his eyes sharp. He watched the data cascade across the screen, parsing the raw variables into a vivid tapestry of potential. 'If we shift the pH down by point-two,' Orion said, his voice a low rumble, 'the mycelial network might prioritize structural density over rapid expansion. A slower, more robust growth cycle.' Nyx didn't look up from the terminal. 'Structural density is irrelevant if the yield cannot sustain the immediate caloric deficit,' she replied, her tone clipped and precise. Orion crossed his arms. 'We are not just feeding bodies, Nyx. We are feeding morale. A dense, flavorful harvest\u2014' '\u2014is a luxury we cannot currently afford,' she interrupted, striking a final key. The terminal chirped, finalizing the simulation. She turned to face him, her expression unreadable. Orion sighed, pushing himself off the bulkhead. He stepped closer, examining the finalized data. The numbers didn't lie, but they also didn't tell the whole story. Therefore, he offered a grudging nod."
+}
