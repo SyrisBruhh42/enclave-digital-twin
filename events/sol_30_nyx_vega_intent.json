@@ -1,0 +1,42 @@
+{
+  "event_id": "evt_s030_t0117_morning_intent",
+  "tick_id": 117,
+  "colony_sol": 30,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2184-06-19T06:00:00Z",
+  "base_snapshot_tick": 116,
+  "event_type": "MORNING_INTENT",
+  "location": "The Aft Biodomes",
+  "actors": ["nyx", "vega"],
+  "summary": "Nyx and Vega calibrate their morning routines.",
+  "importance": 5,
+  "novelty_score": 6,
+  "science_vegetable": "Hydroponic Daikon",
+  "state_deltas": {
+    "nyx": {
+      "stress": 0.2,
+      "focus": 0.1
+    },
+    "vega": {
+      "stress": -0.1,
+      "focus": 0.3
+    }
+  },
+  "relationship_deltas": {
+    "nyx": {
+      "vega": 0.2
+    },
+    "vega": {
+      "nyx": 0.2
+    }
+  },
+  "evidence_refs": ["evt_s029_t0113_world_consequence"],
+  "evidence_citations": [
+    "evt_s029_t0113_world_consequence"
+  ],
+  "tension_delta": 3,
+  "showrunner_beats": [
+    "Nyx inspects the Daikon.",
+    "Vega confirms sensor readings."
+  ]
+}
