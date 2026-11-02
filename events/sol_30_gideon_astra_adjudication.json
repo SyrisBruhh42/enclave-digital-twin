@@ -1,0 +1,40 @@
+{
+  "event_id": "sol_30_gideon_astra_adjudication",
+  "tick_id": 0,
+  "colony_sol": 30,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-11-23T12:00:00Z",
+  "base_snapshot_tick": 0,
+  "event_type": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+  "active_pov_id": "gideon",
+  "next_pov_target": "astra",
+  "prev_next_pov_target": "gideon",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "science_vegetable": "Piezoelectric resonance mapping within basaltic geodes exposed to low-frequency tectonic shear.",
+  "location": "The Obsidian Ridge",
+  "actors": [
+    "gideon",
+    "astra"
+  ],
+  "summary": "Gideon maps the crystalline anomalies within a fractured basalt ridge, while Astra calibrates the surveyor drone to track the localized tectonic disturbances.",
+  "importance": 7,
+  "novelty_score": 8,
+  "state_deltas": {
+    "stress_delta": 0.1,
+    "fatigue_delta": -0.05
+  },
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "evidence_citations": [
+    "evt_s029_t0113_world_consequence",
+    "evt_s028_t0110_expedition_consequence"
+  ],
+  "tension_delta": 0.15,
+  "showrunner_beats": [
+    "Introduce the anomalous crystal resonance.",
+    "Astra's arrival disrupts Gideon's measurement.",
+    "Establish the looming threat of the tectonic shift."
+  ],
+  "text": "The wind howled across the obsidian ridge, carrying microscopic shards of basalt that scoured the paint from Gideon's environmental suit. He knelt beside a jagged fracture in the stone, his gloved hands steady as he adjusted the calipers on the resonance mapping device. The display flickered, struggling against the ambient magnetic interference. Beneath the crust, the planet was active. Low-frequency tectonic shear squeezed the crystalline structures within the geodes, generating sharp bursts of piezoelectric voltage. The raw energy discharged in erratic, unpredictable arcs.\n\nGideon tapped the side of the casing. A spark leaped across the primary sensor array, leaving a scorch mark on the brass plating. He recalibrated the bandpass filter, forcing the frequency range into the lower spectrum. The readout stabilized. The resonance spikes formed a distinct pattern, regular and escalating, a rhythmic sequence far too structured for random geological shifting. He traced the fault line with his gloved index finger, noting the unnatural symmetry of the crystalline growth.\n\nA heavy metallic thump vibrated through his boots. Astra dropped from the low-orbit surveyor drone, landing with the practiced grace of someone accustomed to high-gravity environments. She holstered her grappling launcher and strode toward him. Dust plumed around her ankles, settling slowly in the dense atmosphere. She unspooled a coil of braided copper wire from her heavy tool belt and tossed one end to Gideon.\n\nHe caught the wire, looping it firmly around the primary grounding spike driven into the basalt. The drone hovered above them, its twin engines whining as it fought the relentless crosswind. Astra tapped a sequence into her wrist console. The drone deployed a secondary sensor net, casting a wide, multi-spectral perimeter around the ridge. The orbital data streamed directly to Gideon's ground display, merging with his local readings in real time. The composite picture resolved on the screen. The fracture was not a natural fault line; it was a deliberate stress point.\n\nAstra pointed to a cluster of abnormal readings near the edge of the ravine. She adjusted her helmet's visor, shielding her eyes from the glare of the twin suns. Gideon followed her gaze. A series of deep, harmonic vibrations echoed from the chasm. He packed up the resonance device, clipping it to his harness. Astra took point, drawing her plasma torch. The ground shuddered. Dust cascaded into the void. They moved forward together, stepping carefully over the unstable terrain."
+}
