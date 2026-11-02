@@ -1,0 +1,27 @@
+{
+  "tick_id": 0,
+  "colony_sol": 30,
+  "day_phase": "NIGHT_WATCH",
+  "world_timestamp_iso": "2026-11-23T23:59:00Z",
+  "base_snapshot_tick": 0,
+  "event_id": "qa_factcheck_vega_selene_sol30",
+  "event_type": "CANON_CONTINUITY_AND_EVENT_LOG_FACTCHECK",
+  "location": "The Observatory",
+  "actors": ["vega", "selene"],
+  "summary": "Vega and Selene conduct a QA continuity factcheck on Sol 30 events.",
+  "importance": 5,
+  "novelty_score": 0.5,
+  "science_vegetable": "Stellar Cartography & Orbital Mechanics",
+  "state_deltas": {
+    "vega": {"O1_imagination": 0.1},
+    "selene": {"C1_competence": 0.1}
+  },
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "evidence_citations": ["event_01"],
+  "tension_delta": 0.2,
+  "showrunner_beats": ["Beat 1: Establishing the baseline", "Beat 2: Discovering the anomaly"],
+  "active_pov_id": "vega",
+  "next_pov_target": "selene",
+  "prev_next_pov_target": "vega"
+}
