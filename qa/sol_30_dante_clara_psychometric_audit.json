@@ -1,0 +1,155 @@
+{
+  "event_id": "audit_sol_30_dante_clara",
+  "tick_id": 0,
+  "colony_sol": 30,
+  "day_phase": "DAWN_SHIFT",
+  "world_timestamp_iso": "2026-10-25T00:00:00Z",
+  "base_snapshot_tick": 0,
+  "event_type": "DRIFT_AUDIT",
+  "location": "Enclave Crater Valley",
+  "actors": ["dante", "clara"],
+  "summary": "Psychometric drift audit for Dante and Clara.",
+  "importance": 0.5,
+  "novelty_score": 0.5,
+  "science_vegetable": "Crystalline Iron-Wheat",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "evidence_citations": ["evt_s001_t0001_dawn_shift"],
+  "tension_delta": 0.2,
+  "showrunner_beats": ["Beat 1", "Beat 2"],
+  "pacing_mode": "MERCER_EXPLORATION",
+  "hardware_sympathy_mode": "ACTIVE",
+  "audits": [
+    {
+      "character_id": "dante",
+      "character_name": "Dante",
+      "sample_count": 4,
+      "drift_alert": false,
+      "law_l16_compliant": true,
+      "drifted_axes": [],
+      "max_abs_z": 0.5,
+      "z_threshold": 2.0,
+      "z_scores": {
+        "openness": 0.1,
+        "conscientiousness": 0.1,
+        "extraversion": 0.1,
+        "agreeableness": 0.1,
+        "neuroticism": 0.1
+      },
+      "sample_means": {
+        "openness": 0.5,
+        "conscientiousness": 0.5,
+        "extraversion": 0.5,
+        "agreeableness": 0.5,
+        "neuroticism": 0.5,
+        "hexaco_honesty_humility": 0.5
+      },
+      "target_means": {
+        "openness": 0.5,
+        "conscientiousness": 0.5,
+        "extraversion": 0.5,
+        "agreeableness": 0.5,
+        "neuroticism": 0.5,
+        "hexaco_honesty_humility": 0.5
+      },
+      "target_sds": {
+        "openness": 0.1,
+        "conscientiousness": 0.1,
+        "extraversion": 0.1,
+        "agreeableness": 0.1,
+        "neuroticism": 0.1,
+        "hexaco_honesty_humility": 0.1
+      },
+      "sample_deviations": {
+        "openness": 0,
+        "conscientiousness": 0,
+        "extraversion": 0,
+        "agreeableness": 0,
+        "neuroticism": 0,
+        "hexaco_honesty_humility": 0
+      },
+      "trait_metrics": {},
+      "sycophancy_drift_detected": false,
+      "social_conformity_drift": false,
+      "assistant_axis_drift_detected": false,
+      "assistant_axis_reasons": [],
+      "re_anchor_ticks": 0,
+      "corrective_authors_note": "",
+      "name": "Dante",
+      "axis_z_scores": {
+        "openness": 0.1,
+        "conscientiousness": 0.1,
+        "extraversion": 0.1,
+        "agreeableness": 0.1,
+        "neuroticism": 0.1
+      },
+      "worst_axis": "openness"
+    },
+    {
+      "character_id": "clara",
+      "character_name": "Clara",
+      "sample_count": 4,
+      "drift_alert": false,
+      "law_l16_compliant": true,
+      "drifted_axes": [],
+      "max_abs_z": 0.5,
+      "z_threshold": 2.0,
+      "z_scores": {
+        "openness": 0.1,
+        "conscientiousness": 0.1,
+        "extraversion": 0.1,
+        "agreeableness": 0.1,
+        "neuroticism": 0.1
+      },
+      "sample_means": {
+        "openness": 0.5,
+        "conscientiousness": 0.5,
+        "extraversion": 0.5,
+        "agreeableness": 0.5,
+        "neuroticism": 0.5,
+        "hexaco_honesty_humility": 0.5
+      },
+      "target_means": {
+        "openness": 0.5,
+        "conscientiousness": 0.5,
+        "extraversion": 0.5,
+        "agreeableness": 0.5,
+        "neuroticism": 0.5,
+        "hexaco_honesty_humility": 0.5
+      },
+      "target_sds": {
+        "openness": 0.1,
+        "conscientiousness": 0.1,
+        "extraversion": 0.1,
+        "agreeableness": 0.1,
+        "neuroticism": 0.1,
+        "hexaco_honesty_humility": 0.1
+      },
+      "sample_deviations": {
+        "openness": 0,
+        "conscientiousness": 0,
+        "extraversion": 0,
+        "agreeableness": 0,
+        "neuroticism": 0,
+        "hexaco_honesty_humility": 0
+      },
+      "trait_metrics": {},
+      "sycophancy_drift_detected": false,
+      "social_conformity_drift": false,
+      "assistant_axis_drift_detected": false,
+      "assistant_axis_reasons": [],
+      "re_anchor_ticks": 0,
+      "corrective_authors_note": "",
+      "name": "Clara",
+      "axis_z_scores": {
+        "openness": 0.1,
+        "conscientiousness": 0.1,
+        "extraversion": 0.1,
+        "agreeableness": 0.1,
+        "neuroticism": 0.1
+      },
+      "worst_axis": "openness"
+    }
+  ]
+}
