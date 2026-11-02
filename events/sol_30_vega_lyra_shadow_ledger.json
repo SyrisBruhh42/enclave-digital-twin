@@ -1,0 +1,40 @@
+{
+  "event_id": "sol_30_vega_lyra_shadow_ledger",
+  "tick_id": 0,
+  "colony_sol": 30,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-11-23T12:00:00Z",
+  "base_snapshot_tick": 0,
+  "event_type": "SHADOW_ECONOMY_PRANK_SEEDED",
+  "location": "The Aether Hub",
+  "actors": [
+    "vega",
+    "lyra"
+  ],
+  "summary": "Vega establishes a recursive sub-quantum loop prank to catch Lyra off guard during databank synchronization.",
+  "importance": 6,
+  "novelty_score": 0.8,
+  "science_vegetable": "A recursive algorithmic loop exploiting sub-quantum entanglement nodes and bio-mimetic neural feedback.",
+  "pacing_mode": "MURPHY_TACTICAL",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "evidence_citations": ["evt_s029_t0114_shadow_prank"],
+  "tension_delta": 0.4,
+  "showrunner_beats": [
+    "Introduce the anomaly.",
+    "Bury the signature.",
+    "Finalize the trap."
+  ],
+  "node_a": "vega",
+  "node_b": "lyra",
+  "node_c": "enclave_02_jane",
+  "origin_sol": 30,
+  "maturity_sol": 33,
+  "target_b_missed": true,
+  "active_pov_id": "vega",
+  "prev_next_pov_target": "vega",
+  "next_pov_target": "lyra",
+  "text": "The terminal glowed, emitting a low-frequency hum that vibrated through the deck plates. Vega flinched, grinding her jaw to ease the sudden sensory spike. She slammed her palm against the console, stabilizing the sub-quantum entanglement node. The recursive loop snapped into alignment. She configured the bypass matrix, weaving a harmless, invisible trap into the primary databanks. The biomimetic feedback algorithms cascaded flawlessly across the monitor. Lyra would bypass the anomaly entirely; the signature remained buried deep within the routine synchronization protocols. She withdrew her hand from the interface, stepping back to admire the dormant trap. The hum deepened. The deck plates vibrated under her boots. She checked the chronometer. Fifteen minutes remained before Lyra's scheduled diagnostic sweep. She dragged a heavy power coupling across the floor, positioning it near the primary intake vent. The metallic screech echoed through the narrow corridor. She wiped sweat from her forehead, leaving a streak of grease across her brow. The console blinked green, indicating optimal temperature. She adjusted the bypass matrix, fine-tuning the biometric feedback loop. A warning light flashed red. She ignored it, punching a bypass code into the keypad. The light turned green. She smiled, stepping back to admire her work. The trap was set. The sub-quantum node hummed in the background, a silent predator waiting for its prey. The hum deepened. The deck plates vibrated under her boots. She checked the chronometer again. Ten minutes. She leaned against the console, crossing her arms. The trap would trigger the moment Lyra accessed the primary databanks. A harmless, recursive loop that would scramble the display with dancing fractals. She chuckled, imagining Lyra's expression. The trap was perfect. The biomimetic feedback algorithms cascaded flawlessly across the monitor."
+}
