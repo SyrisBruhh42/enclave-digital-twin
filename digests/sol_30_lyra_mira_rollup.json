@@ -1,0 +1,67 @@
+{
+  "tick_id": 115,
+  "colony_sol": 30,
+  "base_snapshot_tick": 115,
+  "day_phase": "THE_FEAST",
+  "evidence_citations": [
+    "evt_s029_t0113_morning_intent"
+  ],
+  "tension_delta": 0.5,
+  "showrunner_beats": [
+    "Lyra observes",
+    "Mira reacts"
+  ],
+  "four_block_digests": {
+    "DAWN_SHIFT": {
+      "headline": "Dawn",
+      "narrative_prose": "Hector adjusts cables in the storm.",
+      "cited_event_ids": [
+        "evt_s029_t0114_expedition_consequence"
+      ]
+    },
+    "MIDDAY_EXPEDITION": {
+      "headline": "Midday",
+      "narrative_prose": "Kaio avoids the prank.",
+      "cited_event_ids": [
+        "evt_s029_t0114_shadow_prank"
+      ]
+    },
+    "THE_FEAST": {
+      "headline": "Feast",
+      "narrative_prose": "Silas fixes a pipe.",
+      "cited_event_ids": [
+        "evt_s029_t0113_world_consequence"
+      ]
+    },
+    "EVENING_DISPATCH": {
+      "headline": "Evening",
+      "narrative_prose": "Silas hands off to Hector.",
+      "cited_event_ids": [
+        "evt_s029_t0113_morning_intent"
+      ]
+    }
+  },
+  "lead_story": {
+    "headline": "Silas's Forge Work",
+    "cited_event_ids": [
+      "evt_s029_t0113_morning_intent"
+    ],
+    "actors": [
+      "enclave_03_silas",
+      "enclave_01_hector"
+    ],
+    "location": "The First Forge"
+  },
+  "segments": [
+    {
+      "active_pov_id": "lyra",
+      "next_pov_target": "mira",
+      "narrative_prose": "Lyra watched the storm roll in from the Stormbreaker tower, the strange-attractor bifurcation locking chaotic lightning onto the collector rods. She adjusted her harness, testing the tension on the main strut. The wind was a solid wall of pressure, smelling of ozone and copper. She checked the telemetry on her wrist-mounted slate; the containment geode was at ninety percent capacity. 'Mira, we need to divert the load,' Lyra shouted into her comms, leaning back against the gale. The platform vibrated violently under her boots. BUT the secondary diverter switch was jammed. THEREFORE she unclipped her secondary tether, grabbed her heavy wrench, and began to crawl across the slick, wet metal toward the manual override."
+    },
+    {
+      "active_pov_id": "mira",
+      "next_pov_target": "lyra",
+      "narrative_prose": "Mira tracked the emerald phase-space butterfly wings on the brass-framed CRT monitors down in the bunker. 'Capacity is critical, Lyra! Hit the switch!' she shouted into the mic, watching the telemetry spike into the red zone. The bunker hummed with the immense power channeling into the bedrock. Mira slammed a fist against the console, her anxiety peaking as the video feed showed Lyra crawling across the exposed strut. BUT the main breaker tripped, throwing the control room into darkness. THEREFORE Mira grabbed a flashlight, sprinting for the auxiliary power panel to restore the primary diverter controls before the geode ruptured."
+    }
+  ]
+}
