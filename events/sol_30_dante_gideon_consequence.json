@@ -1,0 +1,41 @@
+{
+  "event_id": "sol_30_dante_gideon_consequence",
+  "tick_id": 0,
+  "colony_sol": 30,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-11-23T12:00:00Z",
+  "base_snapshot_tick": 0,
+  "event_type": "WORLD_CONSEQUENCE_AND_ALIEN_VARIABLE_ADJUDICATION",
+  "location": "The Uncharted Ridge",
+  "actors": [
+    "dante",
+    "gideon"
+  ],
+  "summary": "Dante and Gideon navigate a volatile atmospheric anomaly, confronting the shifting gravitational tides of the ridge.",
+  "importance": 8,
+  "novelty_score": 0.75,
+  "science_vegetable": "Anisotropic gravimetric lensing caused by dense pockets of un-annihilated dark matter interacting with planetary magnetospheres.",
+  "state_deltas": {
+    "fatigue_delta": 0.2
+  },
+  "relationship_deltas": {
+    "dante_gideon_trust": 0.1
+  },
+  "evidence_refs": [],
+  "evidence_citations": [
+    "evt_s029_t0113_world_consequence",
+    "evt_s029_t0114_shadow_prank"
+  ],
+  "tension_delta": 0.15,
+  "showrunner_beats": [
+    "Introduce gravitational hazard without warning.",
+    "Force immediate physical collaboration.",
+    "Resolve with strained but mutual acknowledgment."
+  ],
+  "active_pov_id": "dante",
+  "next_pov_target": "gideon",
+  "prev_next_pov_target": "dante",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "text": "The wind across the ridge did not simply blow; it twisted, folding in on itself like origami crafted from cold, dense argon. Dante braced his boots against the basalt outcropping, leaning his weight into the updraft. Below them, the valley was obscured by a swirling vortex of magnetized dust. It was the anisotropic gravimetric lensing at work, dense pockets of dark matter bending not just light, but the kinetic force of the atmosphere itself. He adjusted the torque on his climbing rig, feeling the subtle vibration of the carabiners fighting against the unusual stresses.\n\nGideon hauled himself up to the ledge a moment later, his heavy pack scraping against the stone. He did not immediately speak. Instead, he unclipped his secondary tether, his eyes scanning the fractured horizon with a practiced, calculating gaze. The anomaly was expanding, creeping up the slope with the slow, deliberate malice of a glacier.\n\nDante reached out, pointing to a shimmering distortion in the air a few meters ahead. He signaled for a change in course, indicating a treacherous but solid path along the upper rim. Gideon nodded once, short and tight. They moved together, a silent choreography of survival, hauling each other over the shifting, unpredictable terrain. When they finally crested the peak, the gravitational field stabilized, leaving them bruised, exhausted, but unequivocally alive."
+}
