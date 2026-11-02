@@ -1,0 +1,34 @@
+{
+  "event_id": "sol_30_kael_soren_rashomon",
+  "segment_id": "sol_30_kael_soren_rashomon",
+  "tick_id": 0,
+  "colony_sol": 30,
+  "day_phase": "MIDDAY_EXPEDITION",
+  "world_timestamp_iso": "2026-11-23T12:00:00Z",
+  "base_snapshot_tick": 0,
+  "event_type": "POV_SCENE_SEGMENT",
+  "location": "The Broken Spire",
+  "actors": [
+    "kael",
+    "soren"
+  ],
+  "active_pov_id": "kael",
+  "next_pov_target": "soren",
+  "summary": "Kael attempts a risky maneuver to fix the conduit, handing the consequences over to Soren.",
+  "importance": 0.8,
+  "novelty_score": 0.7,
+  "science_vegetable": "Hyper-conductive crystalline matrix stabilization using localized thermodynamic resonance frequencies.",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "evidence_citations": [
+    "evt_s001_t0002_shadow_prank"
+  ],
+  "tension_delta": 0.5,
+  "showrunner_beats": [
+    "Introduce mystery",
+    "Escalate stakes",
+    "Handoff cleanly"
+  ],
+  "text": "A surprisingly sharp crack echoed from the hyper-conductive crystalline matrix, bouncing off the damp, unyielding stone walls. Crack. He dragged his wrench across the oxidized plating, hunting the fracture. The thermodynamic resonance frequencies peaked, vibrating the heavy metal decking beneath his scuffed boots. Dust sifted from the overhead crossbeams, catching the harsh glare of the emergency halogens. He crawled toward the primary distribution manifold, his breath catching in his throat. The temperature dropped sharply, frosting the edges of his visor. He tapped the pressure gauge with the back of his tool, watching the needle twitch violently. The needle slammed against the red line, threatening a catastrophic cascade. He slammed his palm against the emergency bypass lever, aiming to divert the pressure to the secondary loop.\n\nBut the heavy lever jammed halfway, grinding violently against a solid buildup of calcified minerals, spraying a blinding mist of superheated coolant across the narrow walkway while an automated siren began wailing from the lower decks. He jerked back, wiping his stinging eyes. A Coyne dilemma locked his joints: force the lever or abandon it. Forcing it risked snapping the mechanism entirely, while abandoning it guaranteed a catastrophic rupture within minutes. He gritted his teeth, wrapping both hands around the slick metal handle. He pulled hard. The metal groaned, gave a fraction of an inch, and snapped off completely. He stared at the broken handle, his hands shaking slightly. Therefore, he scrambled backward and tossed the flashing diagnostic slate toward the open hatchway. Soren stepped through the frame, catching it in mid-air."
+}
