@@ -1,0 +1,75 @@
+{
+  "event_id": "THE_FEAST_4_SQUAD_CONVERGENCE_030_120",
+  "tick_id": 120,
+  "colony_sol": 30,
+  "day_phase": "THE_FEAST",
+  "world_timestamp_iso": "2026-11-23T18:00:00Z",
+  "base_snapshot_tick": 120,
+  "event_type": "THE_FEAST_CONVERGENCE",
+  "pre_roll_dc": 14,
+  "hardware_sympathy_mode": "GPU_BURST_SYMPATHETIC",
+  "pacing_mode": "MERCER_IMMERSIVE",
+  "active_pov_id": "thorne",
+  "next_pov_target": "mira",
+  "prev_next_pov_target": "thorne",
+  "science_vegetable": "Mitigating Isolated-Confined-Extreme (ICE) Third-Quarter cortisol cascades and autonomic hypervigilance through structured communal roast rituals and oxytocin vagal buffering.",
+  "location": "The Main Bus",
+  "actors": [
+    "enclave_01_hector",
+    "enclave_02_jane",
+    "enclave_03_silas",
+    "enclave_04_leo",
+    "enclave_05_kaio",
+    "enclave_06_zara",
+    "enclave_07_willow",
+    "enclave_08_terra",
+    "enclave_09_orion",
+    "enclave_10_isla",
+    "enclave_11_kenna",
+    "enclave_12_elias",
+    "enclave_13_ryn",
+    "enclave_14_vex",
+    "enclave_15_dorian",
+    "enclave_16_elara"
+  ],
+  "summary": "At the Feast, Thorne and Mira debate the architectural versus aesthetic merits of the Simulacrum over Ryn's heavily spiced root-stew.",
+  "importance": 7,
+  "novelty_score": 5.4,
+  "interactive_features": [
+    {
+      "feature_name": "Ryn's aggressively seasoned root stew",
+      "affordance_description": "A steaming, pungent pot meant to force conversation and unblock sinuses.",
+      "system_verb": "CONSUME",
+      "associated_check_dc": 14
+    },
+    {
+      "feature_name": "The glowing ferrofluid centerpiece",
+      "affordance_description": "Orion's harmonic sculpture casting jittering light across the tired faces.",
+      "system_verb": "ATTRACT",
+      "associated_check_dc": 12
+    },
+    {
+      "feature_name": "A slightly wobbly brass bench",
+      "affordance_description": "Silas's hastily welded seating arrangement meant to enforce proximity.",
+      "system_verb": "DEFEND",
+      "associated_check_dc": 11
+    }
+  ],
+  "text": "The Feast that night was different. It wasn't loud. It was warm.\n\nThe Stormbreaker hummed with captured energy. The Living Atlas glowed with a stable map. The Mycelial network pulsed with a gentle, rhythmic green. Sixteen mugs raised in the warm circle of firelight while the captured geode hums beneath the floorboards. The dining hall smelled aggressively of Ryn's root-stew, heavily seasoned with something that cleared the sinuses and forced a tear to the eye. It was exactly what they needed. The air was thick with the accumulated friction of Sol 30, the creeping fatigue of the twin suns' relentless cycle.\n\nThorne sat rigid on a slightly wobbly brass bench, Silas's handiwork evident in the hasty, uncalibrated welds. He was sketching furiously on a slate, the sharp scratches of his stylus barely audible over the low murmur of the room. Beside him, Mira slumped, staring deeply into the glowing ferrofluid centerpiece Orion had arranged. The colloidal spikes danced in time with the low-frequency thrum of the geode below them.\n\n\"The load-bearing capacity of the western buttress is unacceptable,\" Thorne muttered, not looking up. \"If the magnetosphere shifts by even a micro-tesla, your harmonic resonators will shear right off the mounts.\"\n\nMira sighed, a long, theatrical exhalation. She nudged her bowl of stew with her spoon. \"You're missing the point, Thorne. The resonators aren't just structural. They're sympathetic. They need to flex with the magnetic tide, not fight it. If you lock them down, you kill the song.\"\n\n\"Songs don't hold up roofs, Mira. Tensile strength does,\" Thorne snapped back, finally tapping his stylus against the slate for emphasis. He was the Engineer; his domain was geometry, stress tensors, and the harsh reality of gravity.\n\nAcross the table, Vex leaned over, a mischievous glint in his eye. \"You know, if you two just kissed, it would save us all a lot of thermodynamic heat.\"\n\n\"Shut up, Vex,\" they said in unison.\n\nA ripple of laughter rolled down the table. Hector snorted into his mug. Even Silas cracked a grim half-smile, staring down at the wobbling leg of the bench. The tension in the room, previously coiled tight enough to snap a cable, eased significantly. The Feast was doing its job. It was forcing them out of their isolated obsessions and back into the messy, noisy reality of the Enclave.\n\nThorne set his slate down. He looked at Mira, really looked at her, noticing the dark circles under her eyes, the ink stains on her fingers. She wasn't trying to undermine his structural integrity; she was just trying to keep the soul of the Simulacrum alive.\n\n\"Fine,\" he conceded, his voice softer. \"I'll recalculate the sheer tolerance for a ten percent flex. But if the whole thing collapses on our heads, I'm blaming your precious song.\"\n\nMira smiled, a genuine, tired expression that reached her eyes. \"Deal. Now eat your stew before Ryn takes it personally.\"",
+  "state_deltas": {},
+  "relationship_deltas": {},
+  "evidence_refs": [],
+  "evidence_citations": [
+    "evt_s028_t0110_shadow_prank",
+    "evt_s029_t0114_shadow_prank"
+  ],
+  "tension_delta": -0.15,
+  "showrunner_beats": [
+    "Establish the communal gathering to offset the Third-Quarter Phenomenon.",
+    "Highlight the core tension between Thorne's structural rigidity and Mira's aesthetic resonance.",
+    "Resolve the immediate friction through shared fatigue and Vex's disruption, allowing a compromise."
+  ],
+  "lpi_breakdown": {
+    "composite_lpi": 0.68
+  }
+}
